@@ -1,0 +1,13 @@
+{
+  "name": "DGUVENLA",
+  "version": "0.1.0",
+  "description": "Put a description here",
+  "dependencies": {
+    "kbv.basis": "1.5.0",
+    "de.basisprofil.r4": "1.4.0",
+    "DGUV.Basis": "1.0.0"
+  },
+  "fhirVersions": [
+    "4.0.1"
+  ]
+}
