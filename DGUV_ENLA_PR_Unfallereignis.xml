@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://fhir.dguv.de/ENLA/AdverseEvent/DGUV-ENLA-PR-Unfallereignis" />
+  <name value="DGUV-ENLA-PR-Unfallereignis" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="AdverseEvent" />
+  <baseDefinition value="https://fhir.dguv.de/Basis/AdverseEvent/DGUV-Basis-PR-Unfallereignis" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="AdverseEvent.extension">
+      <path value="AdverseEvent.extension" />
+      <min value="2" />
+    </element>
+    <element id="AdverseEvent.extension:BeginnDerArbeitszeit">
+      <path value="AdverseEvent.extension" />
+      <sliceName value="BeginnDerArbeitszeit" />
+      <max value="0" />
+    </element>
+    <element id="AdverseEvent.extension:EndeDerArbeitszeit">
+      <path value="AdverseEvent.extension" />
+      <sliceName value="EndeDerArbeitszeit" />
+      <max value="0" />
+    </element>
+    <element id="AdverseEvent.extension:Unfallhergang">
+      <path value="AdverseEvent.extension" />
+      <sliceName value="Unfallhergang" />
+      <min value="1" />
+    </element>
+    <element id="AdverseEvent.extension:BeschwerdenKlagen">
+      <path value="AdverseEvent.extension" />
+      <sliceName value="BeschwerdenKlagen" />
+      <min value="1" />
+    </element>
+    <element id="AdverseEvent.identifier">
+      <path value="AdverseEvent.identifier" />
+      <max value="0" />
+    </element>
+    <element id="AdverseEvent.event">
+      <path value="AdverseEvent.event" />
+      <max value="0" />
+    </element>
+    <element id="AdverseEvent.subject.type">
+      <path value="AdverseEvent.subject.type" />
+      <max value="0" />
+    </element>
+    <element id="AdverseEvent.subject.identifier">
+      <path value="AdverseEvent.subject.identifier" />
+      <max value="0" />
+    </element>
+    <element id="AdverseEvent.subject.display">
+      <path value="AdverseEvent.subject.display" />
+      <max value="0" />
+    </element>
+    <element id="AdverseEvent.encounter">
+      <path value="AdverseEvent.encounter" />
+      <max value="0" />
+    </element>
+    <element id="AdverseEvent.detected">
+      <path value="AdverseEvent.detected" />
+      <max value="0" />
+    </element>
+    <element id="AdverseEvent.recordedDate">
+      <path value="AdverseEvent.recordedDate" />
+      <definition value="Datum und Uhrzeit zu dem der Patient in der stationären Behandlung eingetroffen ist." />
+      <min value="1" />
+    </element>
+    <element id="AdverseEvent.resultingCondition">
+      <path value="AdverseEvent.resultingCondition" />
+      <max value="0" />
+    </element>
+    <element id="AdverseEvent.location">
+      <path value="AdverseEvent.location" />
+      <max value="0" />
+    </element>
+    <element id="AdverseEvent.seriousness">
+      <path value="AdverseEvent.seriousness" />
+      <max value="0" />
+    </element>
+    <element id="AdverseEvent.severity">
+      <path value="AdverseEvent.severity" />
+      <max value="0" />
+    </element>
+    <element id="AdverseEvent.outcome">
+      <path value="AdverseEvent.outcome" />
+      <max value="0" />
+    </element>
+    <element id="AdverseEvent.recorder">
+      <path value="AdverseEvent.recorder" />
+      <max value="0" />
+    </element>
+    <element id="AdverseEvent.contributor">
+      <path value="AdverseEvent.contributor" />
+      <max value="0" />
+    </element>
+    <element id="AdverseEvent.suspectEntity">
+      <path value="AdverseEvent.suspectEntity" />
+      <max value="0" />
+    </element>
+    <element id="AdverseEvent.subjectMedicalHistory">
+      <path value="AdverseEvent.subjectMedicalHistory" />
+      <max value="0" />
+    </element>
+    <element id="AdverseEvent.referenceDocument">
+      <path value="AdverseEvent.referenceDocument" />
+      <max value="0" />
+    </element>
+    <element id="AdverseEvent.study">
+      <path value="AdverseEvent.study" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>
