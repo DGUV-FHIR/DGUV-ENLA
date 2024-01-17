@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson" />
+  <version value="1.0" />
+  <name value="DGUV-ENLA-PR-VersichertePerson" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Patient" />
+  <baseDefinition value="https://fhir.dguv.de/Basis/Patient/DGUV-Basis-PR-VersichertePerson" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Patient.extension">
+      <path value="Patient.extension" />
+      <min value="2" />
+    </element>
+    <element id="Patient.extension:nationality">
+      <path value="Patient.extension" />
+      <sliceName value="nationality" />
+      <min value="1" />
+    </element>
+    <element id="Patient.extension:nationality.extension">
+      <path value="Patient.extension.extension" />
+      <min value="1" />
+    </element>
+    <element id="Patient.extension:nationality.extension:code">
+      <path value="Patient.extension.extension" />
+      <sliceName value="code" />
+      <min value="1" />
+    </element>
+    <element id="Patient.extension:nationality.extension:period">
+      <path value="Patient.extension.extension" />
+      <sliceName value="period" />
+      <max value="0" />
+    </element>
+    <element id="Patient.extension:Beschaeftigung">
+      <path value="Patient.extension" />
+      <sliceName value="Beschaeftigung" />
+      <min value="1" />
+    </element>
+    <element id="Patient.extension:Beschaeftigung.extension">
+      <path value="Patient.extension.extension" />
+      <max value="2" />
+    </element>
+    <element id="Patient.identifier">
+      <path value="Patient.identifier" />
+      <max value="3" />
+    </element>
+    <element id="Patient.identifier:Patientennummer">
+      <path value="Patient.identifier" />
+      <sliceName value="Patientennummer" />
+      <max value="0" />
+    </element>
+    <element id="Patient.name:Name">
+      <path value="Patient.name" />
+      <sliceName value="Name" />
+    </element>
+    <element id="Patient.name:Name.given">
+      <path value="Patient.name.given" />
+      <min value="1" />
+    </element>
+    <element id="Patient.name:Name.period">
+      <path value="Patient.name.period" />
+      <max value="0" />
+    </element>
+    <element id="Patient.name:Geburtsname">
+      <path value="Patient.name" />
+      <sliceName value="Geburtsname" />
+      <max value="0" />
+    </element>
+    <element id="Patient.telecom">
+      <path value="Patient.telecom" />
+      <min value="1" />
+    </element>
+    <element id="Patient.birthDate.extension">
+      <path value="Patient.birthDate.extension" />
+      <max value="0" />
+    </element>
+    <element id="Patient.birthDate.extension:data_absent_reason">
+      <path value="Patient.birthDate.extension" />
+      <sliceName value="data_absent_reason" />
+      <max value="0" />
+    </element>
+    <element id="Patient.address:Strassenanschrift">
+      <path value="Patient.address" />
+      <sliceName value="Strassenanschrift" />
+    </element>
+    <element id="Patient.address:Strassenanschrift.use">
+      <path value="Patient.address.use" />
+      <fixedCode value="home" />
+    </element>
+    <element id="Patient.address:Strassenanschrift.type">
+      <path value="Patient.address.type" />
+      <fixedCode value="physical" />
+    </element>
+    <element id="Patient.address:Strassenanschrift.line">
+      <path value="Patient.address.line" />
+      <min value="2" />
+    </element>
+    <element id="Patient.address:Strassenanschrift.line.extension">
+      <path value="Patient.address.line.extension" />
+      <min value="2" />
+    </element>
+    <element id="Patient.address:Strassenanschrift.line.extension:Strasse">
+      <path value="Patient.address.line.extension" />
+      <sliceName value="Strasse" />
+      <min value="1" />
+    </element>
+    <element id="Patient.address:Strassenanschrift.line.extension:Hausnummer">
+      <path value="Patient.address.line.extension" />
+      <sliceName value="Hausnummer" />
+      <min value="1" />
+    </element>
+    <element id="Patient.address:Strassenanschrift.line.extension:Postfach">
+      <path value="Patient.address.line.extension" />
+      <sliceName value="Postfach" />
+      <max value="0" />
+    </element>
+    <element id="Patient.address:Strassenanschrift.city">
+      <path value="Patient.address.city" />
+      <min value="1" />
+    </element>
+    <element id="Patient.address:Strassenanschrift.state">
+      <path value="Patient.address.state" />
+      <max value="0" />
+    </element>
+    <element id="Patient.address:Strassenanschrift.postalCode">
+      <path value="Patient.address.postalCode" />
+      <min value="1" />
+    </element>
+    <element id="Patient.address:Strassenanschrift.country">
+      <path value="Patient.address.country" />
+      <min value="1" />
+    </element>
+    <element id="Patient.address:Strassenanschrift.period">
+      <path value="Patient.address.period" />
+      <max value="0" />
+    </element>
+    <element id="Patient.address:Postfach">
+      <path value="Patient.address" />
+      <sliceName value="Postfach" />
+      <max value="0" />
+    </element>
+    <element id="Patient.maritalStatus">
+      <path value="Patient.maritalStatus" />
+      <max value="0" />
+    </element>
+    <element id="Patient.multipleBirth[x]">
+      <path value="Patient.multipleBirth[x]" />
+      <max value="0" />
+    </element>
+    <element id="Patient.contact">
+      <path value="Patient.contact" />
+      <max value="0" />
+    </element>
+    <element id="Patient.communication">
+      <path value="Patient.communication" />
+      <max value="0" />
+    </element>
+    <element id="Patient.generalPractitioner">
+      <path value="Patient.generalPractitioner" />
+      <max value="0" />
+    </element>
+    <element id="Patient.link">
+      <path value="Patient.link" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>
