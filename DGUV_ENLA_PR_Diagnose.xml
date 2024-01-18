@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.dguv.de/ENLA/Diagnose//DGUV-ENLA-PR-Diagnose" />
+  <url value="https://fhir.dguv.de/ENLA/Diagnose/Condition/DGUV-ENLA-PR-Diagnose" />
   <name value="DGUV-ENLA-PR-Diagnose" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
