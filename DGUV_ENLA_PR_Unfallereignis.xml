@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="https://fhir.dguv.de/ENLA/AdverseEvent/DGUV-ENLA-PR-Unfallereignis" />
-  <name value="DGUV-ENLA-PR-Unfallereignis" />
+  <name value="DGUV_ENLA_PR_Unfallereignis" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
@@ -28,19 +28,33 @@
       <path value="AdverseEvent.extension" />
       <sliceName value="Unfallhergang" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="AdverseEvent.extension:BeschwerdenKlagen">
       <path value="AdverseEvent.extension" />
       <sliceName value="BeschwerdenKlagen" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="AdverseEvent.identifier">
       <path value="AdverseEvent.identifier" />
       <max value="0" />
     </element>
+    <element id="AdverseEvent.actuality">
+      <path value="AdverseEvent.actuality" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AdverseEvent.category">
+      <path value="AdverseEvent.category" />
+      <mustSupport value="true" />
+    </element>
     <element id="AdverseEvent.event">
       <path value="AdverseEvent.event" />
       <max value="0" />
+    </element>
+    <element id="AdverseEvent.subject">
+      <path value="AdverseEvent.subject" />
+      <mustSupport value="true" />
     </element>
     <element id="AdverseEvent.subject.type">
       <path value="AdverseEvent.subject.type" />
@@ -58,6 +72,10 @@
       <path value="AdverseEvent.encounter" />
       <max value="0" />
     </element>
+    <element id="AdverseEvent.date">
+      <path value="AdverseEvent.date" />
+      <mustSupport value="true" />
+    </element>
     <element id="AdverseEvent.detected">
       <path value="AdverseEvent.detected" />
       <max value="0" />
@@ -66,6 +84,7 @@
       <path value="AdverseEvent.recordedDate" />
       <definition value="Datum und Uhrzeit zu dem der Patient in der stationären Behandlung eingetroffen ist." />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="AdverseEvent.resultingCondition">
       <path value="AdverseEvent.resultingCondition" />
