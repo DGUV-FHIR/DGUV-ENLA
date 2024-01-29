@@ -94,13 +94,10 @@
       <sliceName value="data_absent_reason" />
       <max value="0" />
     </element>
-    <element id="Patient.address">
-      <path value="Patient.address" />
-      <mustSupport value="true" />
-    </element>
     <element id="Patient.address:Strassenanschrift">
       <path value="Patient.address" />
       <sliceName value="Strassenanschrift" />
+      <mustSupport value="true" />
     </element>
     <element id="Patient.address:Strassenanschrift.use">
       <path value="Patient.address.use" />
