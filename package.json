@@ -5,7 +5,7 @@
   "dependencies": {
     "kbv.basis": "1.5.0",
     "de.basisprofil.r4": "1.4.0",
-    "DGUV.Basis": "1.0.0"
+    "dguv.basis": "1.1.0"
   },
   "fhirVersions": [
     "4.0.1"

@@ -1,10 +1,10 @@
 {
-  "updated": "2024-01-12T10:45:30.3739654+01:00",
+  "updated": "2024-02-02T11:49:11.3745802+01:00",
   "dependencies": {
     "kbv.basis": "1.5.0",
     "de.basisprofil.r4": "1.4.0",
     "hl7.fhir.r4.core": "4.0.1",
-    "DGUV.Basis": "1.0.0"
+    "dguv.basis": "1.1.0"
   },
   "missing": {}
 }
