@@ -8,7 +8,7 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="Patient" />
-  <baseDefinition value="https://fhir.dguv.de/Basis/Patient/DGUV-Basis-PR-VersichertePerson" />
+  <baseDefinition value="https://fhir.dguv.de/Basis/Patient/DGUV-Basis-PR-VersichertePerson|1.1.0" />
   <derivation value="constraint" />
   <differential>
     <element id="Patient.extension">
