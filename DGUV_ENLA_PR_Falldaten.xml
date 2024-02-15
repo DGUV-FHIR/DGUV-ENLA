@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://fhir.dguv.de/ENLA/Encounter/DGUV-ENLA-PR-Falldaten" />
+  <name value="DGUV_ENLA_PR_Falldaten" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Encounter" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Encounter" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Encounter">
+      <path value="Encounter" />
+      <short value="Falldaten (Aufenhaltszeitraum, Entlassungsgrund und Aufnahmegrund)" />
+      <definition value="Dieses Profil enthält Informationen zum Aufenthaltszeitraum sowie Gründe für Aufnahme und Entlassung." />
+    </element>
+    <element id="Encounter.period.start">
+      <path value="Encounter.period.start" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.period.end">
+      <path value="Encounter.period.end" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization">
+      <path value="Encounter.hospitalization" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.hospitalization.preAdmissionIdentifier">
+      <path value="Encounter.hospitalization.preAdmissionIdentifier" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.hospitalization.origin">
+      <path value="Encounter.hospitalization.origin" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.hospitalization.admitSource">
+      <path value="Encounter.hospitalization.admitSource" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.dietPreference">
+      <path value="Encounter.hospitalization.dietPreference" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.hospitalization.specialCourtesy">
+      <path value="Encounter.hospitalization.specialCourtesy" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.hospitalization.specialArrangement">
+      <path value="Encounter.hospitalization.specialArrangement" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.hospitalization.destination">
+      <path value="Encounter.hospitalization.destination" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.hospitalization.dischargeDisposition">
+      <path value="Encounter.hospitalization.dischargeDisposition" />
+      <short value="Beschreibung des Entlassungsgrundes" />
+      <definition value="Beschreibung des Entlassungsgrund (nach Hause, in andere Rehabilitationsinstitution, etc.)." />
+      <min value="1" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="example" />
+        <description value="Entlassungsgrund" />
+        <valueSet value="https://simplifier.net/khe/kbv-vs-mio-khe-discharge-disposition" />
+      </binding>
+    </element>
+    <element id="Encounter.hospitalization.dischargeDisposition.coding">
+      <path value="Encounter.hospitalization.dischargeDisposition.coding" />
+      <short value="Codes zur Beschreibung von Entlassungsgrund" />
+      <definition value="Codes zur Beschreibung von Entlassungsgrund (nach Hause, in andere Rehabilitationsinstitution, etc.)." />
+      <min value="1" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <description value="Entlassungsgrund" />
+        <valueSet value="https://simplifier.net/khe/kbv-vs-mio-khe-discharge-disposition" />
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>
