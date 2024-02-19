@@ -1,10 +1,12 @@
 {
-  "updated": "2024-02-02T11:49:11.3745802+01:00",
+  "updated": "2024-02-16T09:25:23.8948893+01:00",
   "dependencies": {
     "kbv.basis": "1.5.0",
     "de.basisprofil.r4": "1.4.0",
     "hl7.fhir.r4.core": "4.0.1",
-    "dguv.basis": "1.1.0"
+    "dguv.basis": "1.1.0",
+    "de.medizininformatikinitiative.kerndatensatz.fall": "1.0.1",
+    "de.medizininformatikinitiative.kerndatensatz.meta": "1.0.3"
   },
   "missing": {}
 }

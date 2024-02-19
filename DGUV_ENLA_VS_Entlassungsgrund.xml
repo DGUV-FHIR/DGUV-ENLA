@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://fhir.dguv.de/ENLA/DGUV-ENLA-VS-Entlassungsgrund" />
+  <name value="DGUV_ENLA_VS_Entlassungsgrund" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="ValueSet" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/ValueSet" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="ValueSet.description">
+      <path value="ValueSet.description" />
+      <short value="Entlassungs-/Verlegungsgrund nach §21 KHEntgG" />
+    </element>
+    <element id="ValueSet.compose.include">
+      <path value="ValueSet.compose.include" />
+      <code>
+        <system value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/Entlassungsgrund" />
+      </code>
+    </element>
+  </differential>
+</StructureDefinition>
