@@ -1,0 +1,101 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="KBV-VS-MIO-KHE-Discharge-Disposition" />
+    <url value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_KHE_Discharge_Disposition" />
+    <version value="1.0.0" />
+    <name value="KBV_VS_MIO_KHE_Discharge_Disposition" />
+    <title value="Entlassungsgrund" />
+    <status value="draft" />
+    <experimental value="false" />
+    <publisher value="Kassen&#228;rztliche Bundesvereinigung (KBV)" />
+    <contact>
+        <telecom>
+            <system value="url" />
+            <value value="https://mio.kbv.de" />
+        </telecom>
+    </contact>
+    <description value="Dieses Valueset enth&#228;lt die Codes zur Beschreibung von Entlassungsgrund." />
+    <immutable value="false" />
+    <copyright value="Im folgenden Profil k&#246;nnen Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms&#174; (SNOMED CT&#174;) which is used by permission of SNOMED International. All rights reserved. SNOMED CT&#174;, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from LOINC (http://loinc.org). LOINC is copyright &#169; 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC&#174; is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright &#169; 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &quot;AS IS.&quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE." />
+    <compose>
+        <include>
+            <system value="http://terminology.hl7.org/CodeSystem/discharge-disposition" />
+            <version value="4.0.1" />
+            <concept>
+                <code value="home" />
+                <display value="Home" />
+            </concept>
+            <concept>
+                <code value="aadvice" />
+                <display value="Left against advice" />
+            </concept>
+            <concept>
+                <code value="other-hcf" />
+                <display value="Other healthcare facility" />
+            </concept>
+            <concept>
+                <code value="rehab" />
+                <display value="Rehabilitation" />
+            </concept>
+            <concept>
+                <code value="snf" />
+                <display value="Skilled nursing facility" />
+            </concept>
+            <concept>
+                <code value="hosp" />
+                <display value="Hospice" />
+            </concept>
+            <concept>
+                <code value="oth" />
+                <display value="Other" />
+            </concept>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="375c84ff-4b94-11ed-830f-005056adfc4e" />
+        <timestamp value="2022-10-14T09:45:47+02:00" />
+        <total value="7" />
+        <offset value="0" />
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/discharge-disposition" />
+            <version value="4.0.1" />
+            <code value="home" />
+            <display value="Home" />
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/discharge-disposition" />
+            <version value="4.0.1" />
+            <code value="aadvice" />
+            <display value="Left against advice" />
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/discharge-disposition" />
+            <version value="4.0.1" />
+            <code value="other-hcf" />
+            <display value="Other healthcare facility" />
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/discharge-disposition" />
+            <version value="4.0.1" />
+            <code value="rehab" />
+            <display value="Rehabilitation" />
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/discharge-disposition" />
+            <version value="4.0.1" />
+            <code value="snf" />
+            <display value="Skilled nursing facility" />
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/discharge-disposition" />
+            <version value="4.0.1" />
+            <code value="hosp" />
+            <display value="Hospice" />
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/discharge-disposition" />
+            <version value="4.0.1" />
+            <code value="oth" />
+            <display value="Other" />
+        </contains>
+    </expansion>
+</ValueSet>
