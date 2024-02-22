@@ -1,17 +1,26 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-    
-	<name value="DGUV_ENLA_VS_Entlassungsgrund" />
+    <id value="DGUV_ENLA_VS_Entlassungsgrund" />
+    <url value="https://fhir.dguv.de/ENLA/ValueSet/DGUV_ENLA_VS_Entlassungsgrund" />
+    <version value="1.0.0" />
+    <name value="DGUV_ENLA_VS_Entlassungsgrund" />
     <title value="Entlassungsgrund" />
     <status value="draft" />
-    <publisher value="DGUV (Deutsche Gesellschaft Unfallversicherung e.V." />
-   
+    <experimental value="false" />
+    <publisher value="DGUV (Deutsche Gesellschaft Unfallversicherung e.V.)" />
+    <contact>
+        <telecom>
+            <system value="url" />
+            <value value="https://www.dguv.de" />
+        </telecom>
+    </contact>
     <description value="Dieses Valueset enth&#228;lt die Codes zur Beschreibung von Entlassungs-/Verlegungsgrund nach §21 KHEntgG." />
+    <immutable value="false" />
+    <copyright value="Im folgenden Profil k&#246;nnen Codes aus den Codesystemen des Kerndatensatezs der Medizininformatik." />
     <compose>
         <include>
             <system value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/Entlassungsgrund" />
- 
-
-    <concept>
+            <version value="0.9" />
+             <concept>
         <code value="011" />
         <display value="Behandlung regul&#228;r beendet, arbeitsf&#228;hig entlassen" />
     </concept>
@@ -159,7 +168,7 @@
         <code value="29" />
         <display value="Behandlung regul&#228;r beendet, beatmet verlegt" />
     </concept>
-	
-	</include>
+        </include>
     </compose>
+    
 </ValueSet>
