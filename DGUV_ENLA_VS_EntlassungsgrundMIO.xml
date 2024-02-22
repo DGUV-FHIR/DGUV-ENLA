@@ -1,12 +1,12 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-    <id value="KBV-VS-MIO-KHE-Discharge-Disposition" />
-    <url value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_KHE_Discharge_Disposition" />
+    <id value="DGUV_ENLA_VS_Entlassungsgrund" />
+    <url value="https://fhir.dguv.de/ENLA/ValueSet/DGUV_ENLA_VS_Entlassungsgrund" />
     <version value="1.0.0" />
     <name value="DGUV_ENLA_VS_Entlassungsgrund" />
     <title value="Entlassungsgrund" />
     <status value="draft" />
     <experimental value="false" />
-    <publisher value="DGUV (Deutschen Gesellschaft Unfallversicherer e.V." />
+    <publisher value="DGUV (Deutschen Gesellschaft Unfallversicherung e.V." />
     <contact>
         <telecom>
             <system value="url" />
