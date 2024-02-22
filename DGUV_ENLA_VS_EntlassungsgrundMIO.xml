@@ -20,34 +20,154 @@
         <include>
             <system value="http://terminology.hl7.org/CodeSystem/discharge-disposition" />
             <version value="4.0.1" />
-            <concept>
-                <code value="home" />
-                <display value="Home" />
-            </concept>
-            <concept>
-                <code value="aadvice" />
-                <display value="Left against advice" />
-            </concept>
-            <concept>
-                <code value="other-hcf" />
-                <display value="Other healthcare facility" />
-            </concept>
-            <concept>
-                <code value="rehab" />
-                <display value="Rehabilitation" />
-            </concept>
-            <concept>
-                <code value="snf" />
-                <display value="Skilled nursing facility" />
-            </concept>
-            <concept>
-                <code value="hosp" />
-                <display value="Hospice" />
-            </concept>
-            <concept>
-                <code value="oth" />
-                <display value="Other" />
-            </concept>
+             <concept>
+        <code value="011" />
+        <display value="Behandlung regul&#228;r beendet, arbeitsf&#228;hig entlassen" />
+    </concept>
+    <concept>
+        <code value="012" />
+        <display value="Behandlung regul&#228;r beendet, arbeitsunf&#228;hig entlassen" />
+    </concept>
+    <concept>
+        <code value="019" />
+        <display value="Behandlung regul&#228;r beendet, keine Angabe" />
+    </concept>
+    <concept>
+        <code value="021" />
+        <display value="Behandlung regul&#228;r beendet, nachstation&#228;re Behandlung vorgesehen, arbeitsf&#228;hig entlassen" />
+    </concept>
+    <concept>
+        <code value="022" />
+        <display value="Behandlung regul&#228;r beendet, nachstation&#228;re Behandlung vorgesehen, arbeitsunf&#228;hig entlassen" />
+    </concept>
+    <concept>
+        <code value="029" />
+        <display value="Behandlung regul&#228;r beendet, nachstation&#228;re Behandlung vorgesehen, keine Angabe" />
+    </concept>
+    <concept>
+        <code value="031" />
+        <display value="Behandlung aus sonstigen Gr&#252;nden beendet, arbeitsf&#228;hig entlassen" />
+    </concept>
+    <concept>
+        <code value="032" />
+        <display value="Behandlung aus sonstigen Gr&#252;nden beendet, arbeitsunf&#228;hig entlassen" />
+    </concept>
+    <concept>
+        <code value="039" />
+        <display value="Behandlung aus sonstigen Gr&#252;nden beendet, keine Angabe" />
+    </concept>
+    <concept>
+        <code value="041" />
+        <display value="Behandlung gegen &#228;rztlichen Rat beendet, arbeitsf&#228;hig entlassen" />
+    </concept>
+    <concept>
+        <code value="042" />
+        <display value="Behandlung gegen &#228;rztlichen Rat beendet, arbeitsunf&#228;hig entlassen" />
+    </concept>
+    <concept>
+        <code value="049" />
+        <display value="Behandlung gegen &#228;rztlichen Rat beendet, keine Angabe" />
+    </concept>
+    <concept>
+        <code value="059" />
+        <display value="Zust&#228;ndigkeitswechsel des Kostentr&#228;gers" />
+    </concept>
+    <concept>
+        <code value="069" />
+        <display value="Verlegung in ein anderes Krankenhaus" />
+    </concept>
+    <concept>
+        <code value="079" />
+        <display value="Tod" />
+    </concept>
+    <concept>
+        <code value="089" />
+        <display value="Verlegung in ein anderes Krankenhaus im Rahmen einer Zusammenarbeit (&#167; 14 Abs. 5 Satz 2 BPflV in der am 31.12.2003 geltenden Fassung)" />
+    </concept>
+    <concept>
+        <code value="099" />
+        <display value="Entlassung in eine Rehabilitationseinrichtung" />
+    </concept>
+    <concept>
+        <code value="109" />
+        <display value="Entlassung in eine Pflegeeinrichtung" />
+    </concept>
+    <concept>
+        <code value="119" />
+        <display value="Entlassung in ein Hospiz" />
+    </concept>
+    <concept>
+        <code value="121" />
+        <display value="interne Verlegung, arbeitsf&#228;hig entlassen" />
+    </concept>
+    <concept>
+        <code value="13" />
+        <display value="externe Verlegung zur psychiatrischen Behandlung" />
+    </concept>
+    <concept>
+        <code value="14" />
+        <display value="Behandlung aus sonstigen Gr&#252;nden beendet, nachstation&#228;re Behandlung vorgesehen" />
+    </concept>
+    <concept>
+        <code value="15" />
+        <display value="Behandlung gegen &#228;rztlichen Rat beendet, nachstation&#228;re Behandlung vorgesehen" />
+    </concept>
+    <concept>
+        <code value="16" />
+        <display value="externe Verlegung mit R&#252;ckverlegung oder Wechsel zwischen den Entgeltbereichen der DRG-Fallpau- schalen, nach der BPflV oder f&#252;r besondere Einrichtungen nach &#167; 17b Abs. 1 Satz 15 KHG mit R&#252;ckverlegung" />
+    </concept>
+    <concept>
+        <code value="17" />
+        <display value="interne Verlegung mit Wechsel zwischen den Entgeltbereichen der DRG-Fallpauschalen, nach der BPflV oder f&#252;r besondere Einrichtungen nach &#167; 17b Abs. 1 Satz 15 KHG" />
+    </concept>
+    <concept>
+        <code value="18" />
+        <display value="R&#252;ckverlegung" />
+    </concept>
+    <concept>
+        <code value="19" />
+        <display value="Entlassung vor Wiederaufnahme mit Neueinstufung" />
+    </concept>
+    <concept>
+        <code value="20" />
+        <display value="Entlassung vor Wiederaufnahme mit Neueinstufung wegen Komplikation" />
+    </concept>
+    <concept>
+        <code value="21" />
+        <display value="Entlassung oder Verlegung mit nachfolgender Wiederaufnahme" />
+    </concept>
+    <concept>
+        <code value="22" />
+        <display value="Fallabschluss (interne Verlegung) bei Wechsel zwischen voll-, teilstation&#228;rer und stations&#228;quivalenter Behandlung" />
+    </concept>
+    <concept>
+        <code value="23" />
+        <display value="Beginn eines externen Aufenthalts mit Abwesenheit &#252;ber Mitternacht (BPflV-Bereich – f&#252;r verlegende Fachabteilung)" />
+    </concept>
+    <concept>
+        <code value="24" />
+        <display value="Beendigung eines externen Aufenthalts mit Abwesenheit &#252;ber Mitternacht (BPflV-Bereich – f&#252;r Pseudo-Fachabteilung 0003)" />
+    </concept>
+    <concept>
+        <code value="25" />
+        <display value="Entlassung zum Jahresende bei Aufnahme im Vorjahr (f&#252;r Zwecke der Abrechnung - &#167; 4 PEPPV)" />
+    </concept>
+    <concept>
+        <code value="26" />
+        <display value="Beginn eines Zeitraumes ohne direkten Patientenkontakt (stations&#228;quivalente Behandlung)" />
+    </concept>
+    <concept>
+        <code value="27" />
+        <display value="Beendigung eines Zeitraumes ohne direkten Patientenkontakt (stations&#228;quivalente Behandlung – f&#252;r Pseudo-Fachabteilung 0004)" />
+    </concept>
+    <concept>
+        <code value="28" />
+        <display value="Behandlung regul&#228;r beendet, beatmet entlassen" />
+    </concept>
+    <concept>
+        <code value="29" />
+        <display value="Behandlung regul&#228;r beendet, beatmet verlegt" />
+    </concept>
         </include>
     </compose>
     <expansion>
