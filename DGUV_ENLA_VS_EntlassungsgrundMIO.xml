@@ -170,52 +170,5 @@
     </concept>
         </include>
     </compose>
-    <expansion>
-        <identifier value="375c84ff-4b94-11ed-830f-005056adfc4e" />
-        <timestamp value="2022-10-14T09:45:47+02:00" />
-        <total value="7" />
-        <offset value="0" />
-        <contains>
-            <system value="http://terminology.hl7.org/CodeSystem/discharge-disposition" />
-            <version value="4.0.1" />
-            <code value="home" />
-            <display value="Home" />
-        </contains>
-        <contains>
-            <system value="http://terminology.hl7.org/CodeSystem/discharge-disposition" />
-            <version value="4.0.1" />
-            <code value="aadvice" />
-            <display value="Left against advice" />
-        </contains>
-        <contains>
-            <system value="http://terminology.hl7.org/CodeSystem/discharge-disposition" />
-            <version value="4.0.1" />
-            <code value="other-hcf" />
-            <display value="Other healthcare facility" />
-        </contains>
-        <contains>
-            <system value="http://terminology.hl7.org/CodeSystem/discharge-disposition" />
-            <version value="4.0.1" />
-            <code value="rehab" />
-            <display value="Rehabilitation" />
-        </contains>
-        <contains>
-            <system value="http://terminology.hl7.org/CodeSystem/discharge-disposition" />
-            <version value="4.0.1" />
-            <code value="snf" />
-            <display value="Skilled nursing facility" />
-        </contains>
-        <contains>
-            <system value="http://terminology.hl7.org/CodeSystem/discharge-disposition" />
-            <version value="4.0.1" />
-            <code value="hosp" />
-            <display value="Hospice" />
-        </contains>
-        <contains>
-            <system value="http://terminology.hl7.org/CodeSystem/discharge-disposition" />
-            <version value="4.0.1" />
-            <code value="oth" />
-            <display value="Other" />
-        </contains>
-    </expansion>
+    
 </ValueSet>
