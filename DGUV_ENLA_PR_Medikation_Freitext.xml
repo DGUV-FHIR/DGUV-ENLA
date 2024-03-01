@@ -7,6 +7,6 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="Medication" />
-  <baseDefinition value="https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Medication_FreeText" />
+  <baseDefinition value="https://gematik.de/fhir/isik/v3/Medikation/StructureDefinition/ISiKMedikament" />
   <derivation value="constraint" />
 </StructureDefinition>

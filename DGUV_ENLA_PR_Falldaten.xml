@@ -79,7 +79,7 @@
       <binding>
         <strength value="required" />
         <description value="Entlassungsgrund" />
-        <valueSet value="https://simplifier.net/khe/kbv-vs-mio-khe-discharge-disposition" />
+        <valueSet value="https://simplifier.net/dguv-enla/dguv_enla_vs_entlassungsgrund" />
       </binding>
     </element>
   </differential>
