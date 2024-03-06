@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://fhir.dguv.de/ENLA/MedicationStatement/DGUV-ENLA-PR-MedikationStatement-MedikationsInformation" />
+  <name value="DGUV_ENLA_PR_MedikationStatement_MedikationsInformation" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="MedicationStatement" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationStatement" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="MedicationStatement.medication[x]">
+      <path value="MedicationStatement.medication[x]" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.dguv.de/ENLA/Medication/DGUV_ENLA_PR_Medikation_Arzneimittel" />
+        <targetProfile value="https://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-Medikation-Rezeptur" />
+        <targetProfile value="https://fhir.dguv.de/ENLA/Medication/DGUV_ENLA_PR_Medikation_Wirkstoff" />
+      </type>
+    </element>
+    <element id="MedicationStatement.subject">
+      <path value="MedicationStatement.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson" />
+      </type>
+    </element>
+    <element id="MedicationStatement.dosage">
+      <path value="MedicationStatement.dosage" />
+      <slicing>
+        <discriminator>
+          <type value="exists" />
+          <path value="timing.code" />
+        </discriminator>
+        <discriminator>
+          <type value="exists" />
+          <path value="text" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema">
+      <path value="MedicationStatement.dosage" />
+      <sliceName value="vierTeiligesSchema" />
+      <max value="4" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema.sequence">
+      <path value="MedicationStatement.dosage.sequence" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema.text">
+      <path value="MedicationStatement.dosage.text" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema.additionalInstruction">
+      <path value="MedicationStatement.dosage.additionalInstruction" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema.patientInstruction">
+      <path value="MedicationStatement.dosage.patientInstruction" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema.timing">
+      <path value="MedicationStatement.dosage.timing" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema.timing.event">
+      <path value="MedicationStatement.dosage.timing.event" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema.timing.repeat">
+      <path value="MedicationStatement.dosage.timing.repeat" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema.timing.code">
+      <path value="MedicationStatement.dosage.timing.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema.timing.code.coding">
+      <path value="MedicationStatement.dosage.timing.code.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema.timing.code.coding.system">
+      <path value="MedicationStatement.dosage.timing.code.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema.timing.code.coding.version">
+      <path value="MedicationStatement.dosage.timing.code.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema.timing.code.coding.code">
+      <path value="MedicationStatement.dosage.timing.code.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema.timing.code.coding.display">
+      <path value="MedicationStatement.dosage.timing.code.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema.timing.code.text">
+      <path value="MedicationStatement.dosage.timing.code.text" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema.asNeeded[x]">
+      <path value="MedicationStatement.dosage.asNeeded[x]" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema.site">
+      <path value="MedicationStatement.dosage.site" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema.method">
+      <path value="MedicationStatement.dosage.method" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema.maxDosePerPeriod">
+      <path value="MedicationStatement.dosage.maxDosePerPeriod" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema.maxDosePerAdministration">
+      <path value="MedicationStatement.dosage.maxDosePerAdministration" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema.maxDosePerLifetime">
+      <path value="MedicationStatement.dosage.maxDosePerLifetime" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage:dosierungMittelsAnzahlUndFrequenz">
+      <path value="MedicationStatement.dosage" />
+      <sliceName value="dosierungMittelsAnzahlUndFrequenz" />
+    </element>
+    <element id="MedicationStatement.dosage:freitextDosierung">
+      <path value="MedicationStatement.dosage" />
+      <sliceName value="freitextDosierung" />
+    </element>
+  </differential>
+</StructureDefinition>

@@ -10,6 +10,15 @@
   <baseDefinition value="https://gematik.de/fhir/isik/v3/Medikation/StructureDefinition/ISiKMedikament" />
   <derivation value="constraint" />
   <differential>
+    <element id="Medication.code">
+      <path value="Medication.code" />
+      <min value="1" />
+    </element>
+    <element id="Medication.code.coding">
+      <path value="Medication.code.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
     <element id="Medication.code.coding:PZN">
       <path value="Medication.code.coding" />
       <sliceName value="PZN" />
@@ -28,12 +37,15 @@
     <element id="Medication.code.coding:verordnungskategorieCode">
       <path value="Medication.code.coding" />
       <sliceName value="verordnungskategorieCode" />
+      <min value="1" />
+      <max value="1" />
       <patternCoding>
         <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type" />
       </patternCoding>
     </element>
     <element id="Medication.code.coding:verordnungskategorieCode.system">
       <path value="Medication.code.coding.system" />
+      <min value="1" />
       <fixedUri value="https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type" />
     </element>
     <element id="Medication.code.coding:verordnungskategorieCode.version">
@@ -42,6 +54,7 @@
     </element>
     <element id="Medication.code.coding:verordnungskategorieCode.code">
       <path value="Medication.code.coding.code" />
+      <min value="1" />
       <fixedCode value="rezeptur" />
     </element>
     <element id="Medication.code.coding:verordnungskategorieCode.display">
@@ -51,6 +64,10 @@
     <element id="Medication.code.coding:verordnungskategorieCode.userSelected">
       <path value="Medication.code.coding.userSelected" />
       <max value="0" />
+    </element>
+    <element id="Medication.ingredient">
+      <path value="Medication.ingredient" />
+      <min value="1" />
     </element>
   </differential>
 </StructureDefinition>
