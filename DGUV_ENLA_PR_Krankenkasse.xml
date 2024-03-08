@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Krankenkasse" />
+  <name value="DGUV_ENLA_PR_Krankenkasse" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Organization" />
+  <baseDefinition value="https://fhir.dguv.de/Basis/Organization/DGUV-Basis-PR-Krankenkasse" />
+  <derivation value="constraint" />
+</StructureDefinition>
