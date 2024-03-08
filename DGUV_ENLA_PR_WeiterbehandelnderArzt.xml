@@ -9,4 +9,42 @@
   <type value="PractitionerRole" />
   <baseDefinition value="https://fhir.dguv.de/Basis/PractitionerRole/DGUV_Basis_PR_WeiterbehandelnderArzt" />
   <derivation value="constraint" />
+  <differential>
+    <element id="PractitionerRole.identifier">
+      <path value="PractitionerRole.identifier" />
+      <max value="0" />
+    </element>
+    <element id="PractitionerRole.practitioner">
+      <path value="PractitionerRole.practitioner" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.organization">
+      <path value="PractitionerRole.organization" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.location">
+      <path value="PractitionerRole.location" />
+      <max value="0" />
+    </element>
+    <element id="PractitionerRole.healthcareService">
+      <path value="PractitionerRole.healthcareService" />
+      <max value="0" />
+    </element>
+    <element id="PractitionerRole.availableTime">
+      <path value="PractitionerRole.availableTime" />
+      <max value="0" />
+    </element>
+    <element id="PractitionerRole.notAvailable">
+      <path value="PractitionerRole.notAvailable" />
+      <max value="0" />
+    </element>
+    <element id="PractitionerRole.availabilityExceptions">
+      <path value="PractitionerRole.availabilityExceptions" />
+      <max value="0" />
+    </element>
+    <element id="PractitionerRole.endpoint">
+      <path value="PractitionerRole.endpoint" />
+      <max value="0" />
+    </element>
+  </differential>
 </StructureDefinition>
