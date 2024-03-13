@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="https://fhir.dguv.de/ENLA/MedicationStatement/DGUV-ENLA-PR-MedikationStatement-MedikationsInformation" />
-  <name value="DGUV_ENLA_PR_MedikationStatement_MedikationsInformation" />
+  <name value="DGUV_ENLA_PR_MedicationStatement_MedikationsInformation" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
@@ -10,6 +10,10 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationStatement" />
   <derivation value="constraint" />
   <differential>
+    <element id="MedicationStatement.status">
+      <path value="MedicationStatement.status" />
+      <mustSupport value="true" />
+    </element>
     <element id="MedicationStatement.medication[x]">
       <path value="MedicationStatement.medication[x]" />
       <type>
@@ -21,6 +25,7 @@
         <targetProfile value="https://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-Medikation-Rezeptur" />
         <targetProfile value="https://fhir.dguv.de/ENLA/Medication/DGUV_ENLA_PR_Medikation_Wirkstoff" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="MedicationStatement.subject">
       <path value="MedicationStatement.subject" />
@@ -28,6 +33,11 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson" />
       </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.effective[x]">
+      <path value="MedicationStatement.effective[x]" />
+      <mustSupport value="true" />
     </element>
     <element id="MedicationStatement.dosage">
       <path value="MedicationStatement.dosage" />
@@ -89,22 +99,30 @@
       <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_KHE_Event_Timing" />
+      </binding>
     </element>
     <element id="MedicationStatement.dosage:vierTeiligesSchema.timing.code.coding.system">
       <path value="MedicationStatement.dosage.timing.code.coding.system" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="MedicationStatement.dosage:vierTeiligesSchema.timing.code.coding.version">
       <path value="MedicationStatement.dosage.timing.code.coding.version" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="MedicationStatement.dosage:vierTeiligesSchema.timing.code.coding.code">
       <path value="MedicationStatement.dosage.timing.code.coding.code" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="MedicationStatement.dosage:vierTeiligesSchema.timing.code.coding.display">
       <path value="MedicationStatement.dosage.timing.code.coding.display" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="MedicationStatement.dosage:vierTeiligesSchema.timing.code.text">
       <path value="MedicationStatement.dosage.timing.code.text" />
@@ -118,9 +136,120 @@
       <path value="MedicationStatement.dosage.site" />
       <max value="0" />
     </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema.route">
+      <path value="MedicationStatement.dosage.route" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema.route.coding">
+      <path value="MedicationStatement.dosage.route.coding" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_PS_Route_of_Administration" />
+      </binding>
+    </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema.route.coding.system">
+      <path value="MedicationStatement.dosage.route.coding.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema.route.coding.version">
+      <path value="MedicationStatement.dosage.route.coding.version" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema.route.coding.code">
+      <path value="MedicationStatement.dosage.route.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema.route.coding.display">
+      <path value="MedicationStatement.dosage.route.coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema.route.coding.userSelected">
+      <path value="MedicationStatement.dosage.route.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema.route.text">
+      <path value="MedicationStatement.dosage.route.text" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
     <element id="MedicationStatement.dosage:vierTeiligesSchema.method">
       <path value="MedicationStatement.dosage.method" />
       <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema.doseAndRate">
+      <path value="MedicationStatement.dosage.doseAndRate" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema.doseAndRate.type">
+      <path value="MedicationStatement.dosage.doseAndRate.type" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema.doseAndRate.dose[x]">
+      <path value="MedicationStatement.dosage.doseAndRate.dose[x]" />
+      <min value="1" />
+      <type>
+        <code value="Quantity" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema.doseAndRate.dose[x].comparator">
+      <path value="MedicationStatement.dosage.doseAndRate.dose[x].comparator" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema.doseAndRate.dose[x].system">
+      <path value="MedicationStatement.dosage.doseAndRate.dose[x].system" />
+      <fixedUri value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BMP_DOSIEREINHEIT" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema.doseAndRate.dose[x].code">
+      <path value="MedicationStatement.dosage.doseAndRate.dose[x].code" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_PS_S_BMP_DOSING_UNIT" />
+      </binding>
+    </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema.doseAndRate.rate[x]">
+      <path value="MedicationStatement.dosage.doseAndRate.rate[x]" />
+      <min value="1" />
+      <type>
+        <code value="Quantity" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema.doseAndRate.rate[x].value">
+      <path value="MedicationStatement.dosage.doseAndRate.rate[x].value" />
+      <min value="1" />
+      <fixedDecimal value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema.doseAndRate.rate[x].comparator">
+      <path value="MedicationStatement.dosage.doseAndRate.rate[x].comparator" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema.doseAndRate.rate[x].unit">
+      <path value="MedicationStatement.dosage.doseAndRate.rate[x].unit" />
+      <min value="1" />
+      <fixedString value="d" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema.doseAndRate.rate[x].system">
+      <path value="MedicationStatement.dosage.doseAndRate.rate[x].system" />
+      <min value="1" />
+      <fixedUri value="http://unitsofmeasure.org" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.dosage:vierTeiligesSchema.doseAndRate.rate[x].code">
+      <path value="MedicationStatement.dosage.doseAndRate.rate[x].code" />
+      <min value="1" />
+      <fixedCode value="d" />
+      <mustSupport value="true" />
     </element>
     <element id="MedicationStatement.dosage:vierTeiligesSchema.maxDosePerPeriod">
       <path value="MedicationStatement.dosage.maxDosePerPeriod" />
@@ -137,10 +266,194 @@
     <element id="MedicationStatement.dosage:dosierungMittelsAnzahlUndFrequenz">
       <path value="MedicationStatement.dosage" />
       <sliceName value="dosierungMittelsAnzahlUndFrequenz" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.dosage:dosierungMittelsAnzahlUndFrequenz.sequence">
+      <path value="MedicationStatement.dosage.sequence" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage:dosierungMittelsAnzahlUndFrequenz.text">
+      <path value="MedicationStatement.dosage.text" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage:dosierungMittelsAnzahlUndFrequenz.additionalInstruction">
+      <path value="MedicationStatement.dosage.additionalInstruction" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage:dosierungMittelsAnzahlUndFrequenz.patientInstruction">
+      <path value="MedicationStatement.dosage.patientInstruction" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.dosage:dosierungMittelsAnzahlUndFrequenz.timing">
+      <path value="MedicationStatement.dosage.timing" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage:dosierungMittelsAnzahlUndFrequenz.asNeeded[x]">
+      <path value="MedicationStatement.dosage.asNeeded[x]" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage:dosierungMittelsAnzahlUndFrequenz.site">
+      <path value="MedicationStatement.dosage.site" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage:dosierungMittelsAnzahlUndFrequenz.route">
+      <path value="MedicationStatement.dosage.route" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.dosage:dosierungMittelsAnzahlUndFrequenz.route.coding">
+      <path value="MedicationStatement.dosage.route.coding" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_PS_Route_of_Administration" />
+      </binding>
+    </element>
+    <element id="MedicationStatement.dosage:dosierungMittelsAnzahlUndFrequenz.route.coding.system">
+      <path value="MedicationStatement.dosage.route.coding.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.dosage:dosierungMittelsAnzahlUndFrequenz.route.coding.version">
+      <path value="MedicationStatement.dosage.route.coding.version" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.dosage:dosierungMittelsAnzahlUndFrequenz.route.coding.code">
+      <path value="MedicationStatement.dosage.route.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.dosage:dosierungMittelsAnzahlUndFrequenz.route.coding.display">
+      <path value="MedicationStatement.dosage.route.coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.dosage:dosierungMittelsAnzahlUndFrequenz.route.coding.userSelected">
+      <path value="MedicationStatement.dosage.route.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage:dosierungMittelsAnzahlUndFrequenz.method">
+      <path value="MedicationStatement.dosage.method" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage:dosierungMittelsAnzahlUndFrequenz.doseAndRate.dose[x]">
+      <path value="MedicationStatement.dosage.doseAndRate.dose[x]" />
+      <type>
+        <code value="Quantity" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.dosage:dosierungMittelsAnzahlUndFrequenz.doseAndRate.dose[x].system">
+      <path value="MedicationStatement.dosage.doseAndRate.dose[x].system" />
+      <fixedUri value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BMP_DOSIEREINHEIT" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.dosage:dosierungMittelsAnzahlUndFrequenz.doseAndRate.dose[x].code">
+      <path value="MedicationStatement.dosage.doseAndRate.dose[x].code" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_PS_S_BMP_DOSING_UNIT" />
+      </binding>
+    </element>
+    <element id="MedicationStatement.dosage:dosierungMittelsAnzahlUndFrequenz.doseAndRate.rate[x]">
+      <path value="MedicationStatement.dosage.doseAndRate.rate[x]" />
+      <type>
+        <code value="Quantity" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.dosage:dosierungMittelsAnzahlUndFrequenz.doseAndRate.rate[x].value">
+      <path value="MedicationStatement.dosage.doseAndRate.rate[x].value" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.dosage:dosierungMittelsAnzahlUndFrequenz.doseAndRate.rate[x].unit">
+      <path value="MedicationStatement.dosage.doseAndRate.rate[x].unit" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.dosage:dosierungMittelsAnzahlUndFrequenz.doseAndRate.rate[x].system">
+      <path value="MedicationStatement.dosage.doseAndRate.rate[x].system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.dosage:dosierungMittelsAnzahlUndFrequenz.doseAndRate.rate[x].code">
+      <path value="MedicationStatement.dosage.doseAndRate.rate[x].code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.dosage:dosierungMittelsAnzahlUndFrequenz.maxDosePerPeriod">
+      <path value="MedicationStatement.dosage.maxDosePerPeriod" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage:dosierungMittelsAnzahlUndFrequenz.maxDosePerAdministration">
+      <path value="MedicationStatement.dosage.maxDosePerAdministration" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage:dosierungMittelsAnzahlUndFrequenz.maxDosePerLifetime">
+      <path value="MedicationStatement.dosage.maxDosePerLifetime" />
+      <max value="0" />
     </element>
     <element id="MedicationStatement.dosage:freitextDosierung">
       <path value="MedicationStatement.dosage" />
       <sliceName value="freitextDosierung" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.dosage:freitextDosierung.sequence">
+      <path value="MedicationStatement.dosage.sequence" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage:freitextDosierung.text">
+      <path value="MedicationStatement.dosage.text" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.dosage:freitextDosierung.additionalInstruction">
+      <path value="MedicationStatement.dosage.additionalInstruction" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage:freitextDosierung.patientInstruction">
+      <path value="MedicationStatement.dosage.patientInstruction" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.dosage:freitextDosierung.timing">
+      <path value="MedicationStatement.dosage.timing" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage:freitextDosierung.asNeeded[x]">
+      <path value="MedicationStatement.dosage.asNeeded[x]" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage:freitextDosierung.site">
+      <path value="MedicationStatement.dosage.site" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage:freitextDosierung.route">
+      <path value="MedicationStatement.dosage.route" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage:freitextDosierung.method">
+      <path value="MedicationStatement.dosage.method" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage:freitextDosierung.doseAndRate">
+      <path value="MedicationStatement.dosage.doseAndRate" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage:freitextDosierung.maxDosePerPeriod">
+      <path value="MedicationStatement.dosage.maxDosePerPeriod" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage:freitextDosierung.maxDosePerAdministration">
+      <path value="MedicationStatement.dosage.maxDosePerAdministration" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.dosage:freitextDosierung.maxDosePerLifetime">
+      <path value="MedicationStatement.dosage.maxDosePerLifetime" />
+      <max value="0" />
     </element>
   </differential>
 </StructureDefinition>
