@@ -15,6 +15,50 @@
       <short value="Falldaten (Aufenhaltszeitraum, Entlassungsgrund und Aufnahmegrund)" />
       <definition value="Dieses Profil enthält Informationen zum Aufenthaltszeitraum sowie Gründe für Aufnahme und Entlassung." />
     </element>
+    <element id="Encounter.identifier">
+      <path value="Encounter.identifier" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.statusHistory">
+      <path value="Encounter.statusHistory" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.classHistory">
+      <path value="Encounter.classHistory" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.type">
+      <path value="Encounter.type" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.serviceType">
+      <path value="Encounter.serviceType" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.priority">
+      <path value="Encounter.priority" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.subject">
+      <path value="Encounter.subject" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.episodeOfCare">
+      <path value="Encounter.episodeOfCare" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.basedOn">
+      <path value="Encounter.basedOn" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.participant">
+      <path value="Encounter.participant" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.period">
+      <path value="Encounter.period" />
+      <mustSupport value="true" />
+    </element>
     <element id="Encounter.period.start">
       <path value="Encounter.period.start" />
       <min value="1" />
@@ -25,9 +69,30 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Encounter.length">
+      <path value="Encounter.length" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.reasonCode">
+      <path value="Encounter.reasonCode" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.reasonReference">
+      <path value="Encounter.reasonReference" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.diagnosis">
+      <path value="Encounter.diagnosis" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.account">
+      <path value="Encounter.account" />
+      <max value="0" />
+    </element>
     <element id="Encounter.hospitalization">
       <path value="Encounter.hospitalization" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Encounter.hospitalization.preAdmissionIdentifier">
       <path value="Encounter.hospitalization.preAdmissionIdentifier" />
@@ -41,6 +106,28 @@
       <path value="Encounter.hospitalization.admitSource" />
       <min value="1" />
       <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.admitSource.extension">
+      <path value="Encounter.hospitalization.admitSource.extension" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.hospitalization.admitSource.extension:Erstbehandlung">
+      <path value="Encounter.hospitalization.admitSource.extension" />
+      <sliceName value="Erstbehandlung" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-Erstbehandlung" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Encounter.hospitalization.reAdmission.extension:Folgebehandlung">
+      <path value="Encounter.hospitalization.reAdmission.extension" />
+      <sliceName value="Folgebehandlung" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-Folgebehandlung" />
+      </type>
+      <isModifier value="false" />
     </element>
     <element id="Encounter.hospitalization.dietPreference">
       <path value="Encounter.hospitalization.dietPreference" />
