@@ -107,10 +107,6 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Encounter.hospitalization.admitSource.extension">
-      <path value="Encounter.hospitalization.admitSource.extension" />
-      <min value="1" />
-    </element>
     <element id="Encounter.hospitalization.admitSource.extension:Erstbehandlung">
       <path value="Encounter.hospitalization.admitSource.extension" />
       <sliceName value="Erstbehandlung" />
