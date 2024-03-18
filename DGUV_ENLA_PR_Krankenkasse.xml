@@ -10,6 +10,10 @@
   <baseDefinition value="https://fhir.dguv.de/Basis/Organization/DGUV-Basis-PR-Krankenkasse" />
   <derivation value="constraint" />
   <differential>
+    <element id="Organization.extension">
+      <path value="Organization.extension" />
+      <mustSupport value="true" />
+    </element>
     <element id="Organization.identifier">
       <path value="Organization.identifier" />
       <mustSupport value="true" />

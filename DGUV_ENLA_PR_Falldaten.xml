@@ -107,23 +107,22 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Encounter.hospitalization.admitSource.extension:Erstbehandlung">
+    <element id="Encounter.hospitalization.admitSource.extension:GrundFolgebehandlung">
       <path value="Encounter.hospitalization.admitSource.extension" />
-      <sliceName value="Erstbehandlung" />
+      <sliceName value="GrundFolgebehandlung" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-Erstbehandlung" />
+        <profile value="https://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-GrundFolgebehandlung" />
       </type>
       <isModifier value="false" />
     </element>
-    <element id="Encounter.hospitalization.reAdmission.extension:Folgebehandlung">
-      <path value="Encounter.hospitalization.reAdmission.extension" />
-      <sliceName value="Folgebehandlung" />
-      <type>
-        <code value="Extension" />
-        <profile value="https://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-Folgebehandlung" />
-      </type>
-      <isModifier value="false" />
+    <element id="Encounter.hospitalization.admitSource.coding">
+      <path value="Encounter.hospitalization.admitSource.coding" />
+      <binding>
+        <strength value="required" />
+        <description value="Beschreibung der Aufnahmeart" />
+        <valueSet value="https://simplifier.net/dguv-enla/dguv_enla_vs_entlassungsgrund" />
+      </binding>
     </element>
     <element id="Encounter.hospitalization.dietPreference">
       <path value="Encounter.hospitalization.dietPreference" />
