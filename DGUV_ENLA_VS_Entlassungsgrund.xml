@@ -17,14 +17,20 @@
     <immutable value="false" />
     <copyright value="Im folgenden Profil k&#246;nnen Codes aus den Codesystemen des Kerndatensatezs der Medizininformatik." />
     <compose>
-        <include>
+		<include>
+		<system value="https://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Entlassungsgrund" />
+		<version value="1.0.0" />
+		<concept>
+        <code value="019" />
+        <display value="Behandlung regul&#228;r beendet - Entlassung nach Hause, keine Angabe" />
+    </concept>
+		</include>
+
+	   <include>
             <system value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/Entlassungsgrund" />
             <version value="0.9" />
             
-			<concept>
-        <code value="019" />
-        <display value="Behandlung regul&#228;r beendet, keine Angabe" />
-    </concept>
+			
           
     <concept>
         <code value="039" />

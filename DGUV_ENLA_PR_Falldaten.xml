@@ -110,19 +110,31 @@
     <element id="Encounter.hospitalization.admitSource.extension:GrundFolgebehandlung">
       <path value="Encounter.hospitalization.admitSource.extension" />
       <sliceName value="GrundFolgebehandlung" />
+      <short value="Grund der stationären Folgebehandlung" />
+      <definition value="Grund der stationären Folgebehandlung" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-GrundFolgebehandlung" />
       </type>
+      <mustSupport value="true" />
       <isModifier value="false" />
+    </element>
+    <element id="Encounter.hospitalization.admitSource.extension:GrundFolgebehandlung.value[x]">
+      <path value="Encounter.hospitalization.admitSource.extension.value[x]" />
+      <mustSupport value="true" />
     </element>
     <element id="Encounter.hospitalization.admitSource.coding">
       <path value="Encounter.hospitalization.admitSource.coding" />
+      <mustSupport value="true" />
       <binding>
         <strength value="required" />
         <description value="Beschreibung der Aufnahmeart" />
-        <valueSet value="https://simplifier.net/dguv-enla/dguv_enla_vs_entlassungsgrund" />
+        <valueSet value="https://simplifier.net/dguv-enla/dguv_enla_vs_aufnahmeart" />
       </binding>
+    </element>
+    <element id="Encounter.hospitalization.admitSource.coding.code">
+      <path value="Encounter.hospitalization.admitSource.coding.code" />
+      <mustSupport value="true" />
     </element>
     <element id="Encounter.hospitalization.dietPreference">
       <path value="Encounter.hospitalization.dietPreference" />
@@ -152,12 +164,29 @@
         <valueSet value="https://simplifier.net/khe/kbv-vs-mio-khe-discharge-disposition" />
       </binding>
     </element>
+    <element id="Encounter.hospitalization.dischargeDisposition.extension">
+      <path value="Encounter.hospitalization.dischargeDisposition.extension" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.dischargeDisposition.extension:GrundVerlegung">
+      <path value="Encounter.hospitalization.dischargeDisposition.extension" />
+      <sliceName value="GrundVerlegung" />
+      <short value="Eingabe für Verlegungsgrund" />
+      <definition value="Eingabe eines Freitextes, im Falle einer Ausbleibenden Entlassung nach Hause. In diesem Fall sollte ein Grund der Verlegung angegeben werden (z.B. Probleme bei häuslicher Versorgung, Schwere der Verletzung)." />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-GrundVerlegung" />
+      </type>
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>
     <element id="Encounter.hospitalization.dischargeDisposition.coding">
       <path value="Encounter.hospitalization.dischargeDisposition.coding" />
       <short value="Codes zur Beschreibung von Entlassungsgrund" />
       <definition value="Codes zur Beschreibung von Entlassungsgrund (nach Hause, in andere Rehabilitationsinstitution, etc.)." />
       <min value="1" />
       <max value="1" />
+      <mustSupport value="true" />
       <binding>
         <strength value="required" />
         <description value="Entlassungsgrund" />
