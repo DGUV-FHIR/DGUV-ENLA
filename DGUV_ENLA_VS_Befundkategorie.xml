@@ -1,0 +1,42 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="DGUV_ENLA_VS_BefundKategorie" />
+    <url value="https://fhir.dguv.de/ENLA/ValueSet/DGUV_ENLA_VS_BefundKategorie" />
+    <version value="1.0.0" />
+    <name value="DGUV_ENLA_VS_BefundKategorie" />
+    <title value="BefundKategorie" />
+    <status value="draft" />
+    <experimental value="false" />
+    <publisher value="DGUV (Deutsche Gesellschaft Unfallversicherung e.V.)" />
+    <contact>
+        <telecom>
+            <system value="url" />
+            <value value="https://www.dguv.de" />
+        </telecom>
+    </contact>
+    <description value="Dieses Valueset enth&#228;lt die Codes zur Beschreibung der Befundkategorien." />
+    <immutable value="false" />
+    <compose>
+		<include>
+		<system value="https://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-BefundKategorie" />
+		<version value="1.0.0" />
+	<concept>
+        <code value="Vital" />
+        <display value="Vitalbefunde" />
+    </concept>
+	<concept>
+        <code value="Röntgen" />
+        <display value="Röntgenbefunde" />
+    </concept>
+	<concept>
+        <code value="Labor" />
+        <display value="Laborbefunde" />
+    </concept>
+	<concept>
+        <code value="Andere" />
+        <display value="Andere Befundkategorien" />
+    </concept>
+		</include>
+
+    </compose>
+    
+</ValueSet>

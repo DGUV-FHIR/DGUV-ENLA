@@ -1,0 +1,34 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="DGUV_ENLA_CS_BefundKategorie" />
+    <url value="https://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-BefundKategorie" />
+    <version value="1.0.0" />
+    <name value="DGUV_ENLA_CS_Befundkategorie" />
+    <title value="Aufnahmeart" />
+    <status value="draft" />
+    <experimental value="false" />
+    <publisher value="DGUV (Deutsche Gesellschaft Unfallversicherung e.V.)" />
+    <contact>
+        <telecom>
+            <system value="url" />
+            <value value="https://www.dguv.de" />
+        </telecom>
+    </contact>
+    <description value="Dieses CodeSystem enth&#228;lt Codes zur Beschreibung der Befundkategorien." />
+    <immutable value="false" />        
+	<concept>
+        <code value="Vital" />
+        <display value="Vitalbefunde" />
+    </concept>
+	<concept>
+        <code value="Röntgen" />
+        <display value="Röntgenbefunde" />
+    </concept>
+	<concept>
+        <code value="Labor" />
+        <display value="Laborbefunde" />
+    </concept>
+	<concept>
+        <code value="Andere" />
+        <display value="Andere Befundkategorien" />
+    </concept>
+</CodeSystem>

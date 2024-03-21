@@ -19,6 +19,12 @@
       <path value="Observation.category" />
       <short value="Klassifikation des Befundtyps" />
       <definition value="Ein Code, der den generllen Typ des Befunds klassifiziert (z.B. Vitalparameter, Röntgenbefunde)." />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <description value="Codes zur Klassifizierung des Befundtyps" />
+        <valueSet value="https://fhir.dguv.de/ENLA/ValueSet/DGUV_ENLA_VS_Entlassungsgrund" />
+      </binding>
     </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />

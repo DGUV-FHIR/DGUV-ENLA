@@ -14,8 +14,7 @@
         </telecom>
     </contact>
     <description value="Dieses Valueset enth&#228;lt die Codes zur Beschreibung der Aufnahmeart." />
-    <immutable value="false" />
-    <compose>         
+    <immutable value="false" />        
 	<concept>
         <code value="EB" />
         <display value="Erstbehandlung" />
@@ -24,7 +23,5 @@
     <concept>
         <code value="FB" />
         <display value="Folgebehandlung" />
-    </concept>
-    </compose>
-    
+    </concept>   
 </CodeSystem>
