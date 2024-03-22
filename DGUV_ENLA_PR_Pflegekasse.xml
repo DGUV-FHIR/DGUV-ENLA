@@ -9,4 +9,20 @@
   <type value="Organization" />
   <baseDefinition value="https://fhir.dguv.de/Basis/Organization/DGUV-Basis-PR-Pflegekasse" />
   <derivation value="constraint" />
+  <differential>
+    <element id="Organization.identifier">
+      <path value="Organization.identifier" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.identifier:Institutionskennzeichen">
+      <path value="Organization.identifier" />
+      <sliceName value="Institutionskennzeichen" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.name">
+      <path value="Organization.name" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
 </StructureDefinition>
