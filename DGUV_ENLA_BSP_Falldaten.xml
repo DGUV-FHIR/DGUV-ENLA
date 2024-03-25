@@ -6,7 +6,7 @@
         <status value="generated" />
         --- We have skipped the narrative for better readability of the resource ---
     </text>
-    <status value"finished" />
+    <status value="finished" />
     <class>
         <system value="http://terminology.hl7.org/ValueSet/v3-ActEncounterCode" />
         <code value="IMP" />
