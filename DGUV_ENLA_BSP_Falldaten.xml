@@ -15,7 +15,7 @@
     <period>
         <start value="2023-04-14" />
         <end value="2023-05-01" />
-    <period/>
+    </period>
     <hospitalization>   
         <admitSource>
             <extension url="https://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-GrundFolgebehandlung">
@@ -26,6 +26,7 @@
                 <code value="FB" />
                 <display value="Folgebehandlung" />
             </coding>
+        </admitSource>
         <dischargeDisposition>
             <extension url="https://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-GrundVerlegung">
                 <valueString value="Schwere der Verletzung" />
@@ -35,6 +36,6 @@
                 <code value="099" />
                 <display value="Entlassung in eine Rehabilitationseinrichtung" />
             </coding>
-        <dischargeDisposition />
-       
+        </dischargeDisposition>
+    </hospitalization>   
 </Encounter>
