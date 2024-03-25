@@ -2,10 +2,6 @@
     <meta>
         <profile value="https://fhir.dguv.de/ENLA/Encounter/DGUV-ENLA-PR-Falldaten" />
     </meta>
-    <text>
-        <status value="generated" />
-        --- We have skipped the narrative for better readability of the resource ---
-    </text>
     <status value="finished" />
     <class>
         <system value="http://terminology.hl7.org/ValueSet/v3-ActEncounterCode" />
@@ -22,7 +18,7 @@
                 <valueString value="Erneute Beschwerden" />
             </extension>
             <coding>
-                <system value="https://simplifier.net/dguv-enla/dguv_enla_vs_aufnahmeart" />
+                <system value="https://fhir.dguv.de/ENLA/ValueSet/DGUV-ENLA-VS-Aufnahmeart" />
                 <code value="FB" />
                 <display value="Folgebehandlung" />
             </coding>
