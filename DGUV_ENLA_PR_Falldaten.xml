@@ -147,7 +147,7 @@
       <constraint>
         <key value="enc-1" />
         <severity value="error" />
-        <human value="Wenn Folgebehandlung (FB) dann muss Grund angegeben werden" />
+        <human value="ToDo: Wenn Folgebehandlung (FB) dann muss Grund angegeben werden" />
         <expression value="hospitalization.admitSource.extension('https://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-GrundFolgebehandlung').hasValue()" />
       </constraint>
       <mustSupport value="true" />

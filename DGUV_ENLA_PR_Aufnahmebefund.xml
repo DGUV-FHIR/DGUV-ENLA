@@ -23,11 +23,25 @@
       <binding>
         <strength value="required" />
         <description value="Codes zur Klassifizierung des Befundtyps" />
-        <valueSet value="https://fhir.dguv.de/ENLA/ValueSet/DGUV_ENLA_VS_Entlassungsgrund" />
+        <valueSet value="https://fhir.dguv.de/ENLA/ValueSet/DGUV_ENLA_VS_BefundKategorie" />
       </binding>
+    </element>
+    <element id="Observation.category.coding.system">
+      <path value="Observation.category.coding.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.category.coding.code">
+      <path value="Observation.category.coding.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.category.coding.display">
+      <path value="Observation.category.coding.display" />
+      <mustSupport value="true" />
     </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
+      <short value="Befundergebnis Narrativ" />
+      <definition value="Die Befundergebnisse des jeweiligen Befundes (z.B. Laborwerte oder Röntgenbefund)." />
       <min value="1" />
       <type>
         <code value="string" />
