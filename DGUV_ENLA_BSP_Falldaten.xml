@@ -18,7 +18,7 @@
                 <valueString value="Erneute Beschwerden" />
             </extension>
             <coding>
-                <system value="https://fhir.dguv.de/ENLA/ValueSet/DGUV-ENLA-VS-Aufnahmeart" />
+                <system value="https://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Aufnahmeart" />
                 <code value="FB" />
                 <display value="Folgebehandlung" />
             </coding>
@@ -28,7 +28,7 @@
                 <valueString value="Schwere der Verletzung" />
             </extension>
             <coding>
-                <system value="https://fhir.dguv.de/ENLA/ValueSet/DGUV_ENLA_VS_Entlassungsgrund" />
+                <system value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/Entlassungsgrund" />
                 <code value="099" />
                 <display value="Entlassung in eine Rehabilitationseinrichtung" />
             </coding>
