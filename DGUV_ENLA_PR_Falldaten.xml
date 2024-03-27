@@ -158,8 +158,11 @@
     <element id="Encounter.hospitalization.admitSource.coding.system">
       <path value="Encounter.hospitalization.admitSource.coding.system" />
       <min value="1" />
-      <fixedUri value="https://fhir.dguv.de/ENLA/ValueSet/DGUV-ENLA-VS-Aufnahmeart" />
       <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.dguv.de/ENLA/ValueSet/DGUV-ENLA-VS-Aufnahmeart" />
+      </binding>
     </element>
     <element id="Encounter.hospitalization.admitSource.coding.code">
       <path value="Encounter.hospitalization.admitSource.coding.code" />
