@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Aufnahmebefund" />
-  <name value="DGUV_ENLA_PR_Aufnahmebefund" />
+  <url value="https://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-ErhobenerBefund" />
+  <name value="DGUV_ENLA_PR_ErhobenerBefund" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
@@ -41,7 +41,7 @@
     <element id="Observation.code">
       <path value="Observation.code" />
       <fixedCodeableConcept>
-        <text value="Aufnahmebefund" />
+        <text value="ErhobenerBefund" />
       </fixedCodeableConcept>
       <mustSupport value="true" />
     </element>
