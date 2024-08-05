@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "description": "Put a description here",
   "dependencies": {
-    "de.basisprofil.r4": "1.4.0",
     "dguv.basis": "1.1.0",
     "de.medizininformatikinitiative.kerndatensatz.fall": "1.0.1",
-    "de.gematik.isik-medikation": "3.0.1"
+    "de.gematik.isik-medikation": "3.0.1",
+    "de.basisprofil.r4": "1.5.0"
   },
   "fhirVersions": [
     "4.0.1"
