@@ -1,0 +1,34 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="DGUV_ENLA_CS_BefundKategorie" />
+    <url value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-BefundKategorie" />
+    <version value="1.0.0" />
+    <name value="DGUV_ENLA_CS_Befundkategorie" />
+    <title value="Aufnahmeart" />
+    <status value="draft" />
+    <experimental value="false" />
+    <publisher value="DGUV (Deutsche Gesellschaft Unfallversicherung e.V.)" />
+    <contact>
+        <telecom>
+            <system value="url" />
+            <value value="https://www.dguv.de" />
+        </telecom>
+    </contact>
+    <description value="Dieses CodeSystem enth&#228;lt Codes zur Festlegung des Zeitrahmens der Befunderfassung (z.B. stationäre Aufnahme)." />
+    <immutable value="false" />        
+<concept>
+        <code value="Aufnahme" />
+        <display value="Aufnahmebefund" />
+    </concept>
+	<concept>
+        <code value="Entlass" />
+        <display value="Entlassungsbefund" />
+    </concept>
+	<concept>
+        <code value="Konsiliar" />
+        <display value="Konsiliarbefund" />
+    </concept>
+	<concept>
+        <code value="Erhoben" />
+        <display value="Erhobener Befund (während stationärer Aufnahme)" />
+    </concept>
+</CodeSystem>
