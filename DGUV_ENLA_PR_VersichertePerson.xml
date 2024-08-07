@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson" />
+  <url value="http://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson" />
   <version value="1.0" />
   <name value="DGUV_ENLA_PR_VersichertePerson" />
   <status value="draft" />
@@ -11623,7 +11623,7 @@
       </base>
       <type>
         <code value="ContactPoint" />
-        <profile value="https://fhir.dguv.de/Basis/ContactPoint/DGUV-Basis-PR-KontaktDaten" />
+        <profile value="http://fhir.dguv.de/Basis/ContactPoint/DGUV-Basis-PR-KontaktDaten" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -19874,6 +19874,10 @@
     <element id="Patient.telecom">
       <path value="Patient.telecom" />
       <min value="1" />
+      <type>
+        <code value="ContactPoint" />
+        <profile value="http://fhir.dguv.de/Basis/ContactPoint/DGUV-Basis-PR-KontaktDaten" />
+      </type>
       <mustSupport value="true" />
     </element>
     <element id="Patient.gender">

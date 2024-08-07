@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Entlassbefund" />
-  <name value="DGUV_ENLA_PR_Entlassbefund" />
+  <url value="http://fhir.dguv.de/Basis/Observation/DGUV_ENLA_PR_Befund" />
+  <name value="DGUV_ENLA_PR_Befund" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
@@ -711,8 +711,8 @@
       <definition value="Ein Code, der den generllen Typ des Befunds klassifiziert (z.B. Vitalparameter, Röntgenbefunde)." />
       <comment value="In addition to the required category valueset, this element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used at once.  The level of granularity is defined by the category concepts in the value set." />
       <requirements value="Used for filtering what observations are retrieved and displayed." />
-      <min value="0" />
-      <max value="*" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="Observation.category" />
         <min value="0" />
@@ -737,7 +737,7 @@
         </extension>
         <strength value="required" />
         <description value="Codes zur Klassifizierung des Befundtyps" />
-        <valueSet value="https://fhir.dguv.de/ENLA/ValueSet/DGUV_ENLA_VS_BefundKategorie" />
+        <valueSet value="http://fhir.dguv.de/ENLA/ValueSet/DGUV_ENLA_VS_BefundKategorie" />
       </binding>
       <mapping>
         <identity value="rim" />
@@ -856,8 +856,8 @@
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
-      <min value="0" />
-      <max value="*" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="CodeableConcept.coding" />
         <min value="0" />
@@ -879,7 +879,7 @@
       <isSummary value="true" />
       <binding>
         <strength value="required" />
-        <valueSet value="https://fhir.dguv.de/ENLA/ValueSet/DGUV_ENLA_VS_BefundKategorie" />
+        <valueSet value="http://fhir.dguv.de/ENLA/ValueSet/DGUV_ENLA_VS_BefundKategorie" />
       </binding>
       <mapping>
         <identity value="rim" />
@@ -1432,8 +1432,8 @@
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
-      <min value="1" />
-      <max value="1" />
+      <min value="0" />
+      <max value="*" />
       <base>
         <path value="CodeableConcept.coding" />
         <min value="0" />
@@ -1572,7 +1572,7 @@
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
       <comment value="The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously." />
       <requirements value="Need to be unambiguous about the source of the definition of the symbol." />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Coding.system" />
@@ -1669,7 +1669,6 @@
       <type>
         <code value="code" />
       </type>
-      <fixedCode value="Entlass" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -1717,7 +1716,6 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="Entlassungsbefund" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -2224,8 +2222,8 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="Observation.value[x]" />
-      <short value="Befundergebnis Narrativ" />
-      <definition value="Die Befundergebnisse des jeweiligen Befundes (z.B. Laborwerte oder Röntgenbefund)." />
+      <short value="Actual result" />
+      <definition value="The information determined as a result of making the observation, if the information has a simple value." />
       <comment value="An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below." />
       <requirements value="An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations." />
       <min value="1" />
@@ -4488,19 +4486,23 @@
       <path value="Observation.category" />
       <short value="Klassifikation des Befundtyps" />
       <definition value="Ein Code, der den generllen Typ des Befunds klassifiziert (z.B. Vitalparameter, Röntgenbefunde)." />
+      <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
         <description value="Codes zur Klassifizierung des Befundtyps" />
-        <valueSet value="https://fhir.dguv.de/ENLA/ValueSet/DGUV_ENLA_VS_BefundKategorie" />
+        <valueSet value="http://fhir.dguv.de/ENLA/ValueSet/DGUV_ENLA_VS_BefundKategorie" />
       </binding>
     </element>
     <element id="Observation.category.coding">
       <path value="Observation.category.coding" />
+      <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <valueSet value="https://fhir.dguv.de/ENLA/ValueSet/DGUV_ENLA_VS_BefundKategorie" />
+        <valueSet value="http://fhir.dguv.de/ENLA/ValueSet/DGUV_ENLA_VS_BefundKategorie" />
       </binding>
     </element>
     <element id="Observation.category.coding.system">
@@ -4529,8 +4531,6 @@
     </element>
     <element id="Observation.code.coding">
       <path value="Observation.code.coding" />
-      <min value="1" />
-      <max value="1" />
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
@@ -4539,26 +4539,21 @@
     </element>
     <element id="Observation.code.coding.system">
       <path value="Observation.code.coding.system" />
-      <min value="1" />
       <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-BefundZeitpunkt" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.code.coding.code">
       <path value="Observation.code.coding.code" />
       <min value="1" />
-      <fixedCode value="Entlass" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.code.coding.display">
       <path value="Observation.code.coding.display" />
       <min value="1" />
-      <fixedString value="Entlassungsbefund" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
-      <short value="Befundergebnis Narrativ" />
-      <definition value="Die Befundergebnisse des jeweiligen Befundes (z.B. Laborwerte oder Röntgenbefund)." />
       <min value="1" />
       <type>
         <code value="string" />

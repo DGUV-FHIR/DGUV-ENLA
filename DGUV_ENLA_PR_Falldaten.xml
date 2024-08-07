@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.dguv.de/ENLA/Encounter/DGUV-ENLA-PR-Falldaten" />
+  <url value="http://fhir.dguv.de/ENLA/Encounter/DGUV-ENLA-PR-Falldaten" />
   <name value="DGUV_ENLA_PR_Falldaten" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
@@ -3716,7 +3716,7 @@
         <severity value="error" />
         <human value="ToDo: Wenn Folgebehandlung (FB) dann muss Grund angegeben werden" />
         <expression value="hospitalization.admitSource.extension('https://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-GrundFolgebehandlung').hasValue()" />
-        <source value="https://fhir.dguv.de/ENLA/Encounter/DGUV-ENLA-PR-Falldaten" />
+        <source value="http://fhir.dguv.de/ENLA/Encounter/DGUV-ENLA-PR-Falldaten" />
       </constraint>
       <mustSupport value="true" />
       <mapping>
