@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://fhir.dguv.de/Basis/Observation//DGUV_ENLA_PR_Arbeitsfunfaehigkeit" />
+  <url value="http://fhir.dguv.de/Basis/Observation//DGUV-ENLA-PR-Arbeitsfunfaehigkeit" />
   <name value="DGUV_ENLA_PR_Arbeitsfunfaehigkeit" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />

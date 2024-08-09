@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://fhir.dguv.de/ENLA/Medication/DGUV_ENLA_PR_Medikation_Wirkstoff" />
+  <url value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-Medikation-Wirkstoff" />
   <name value="DGUV_ENLA_PR_Medikation_Wirkstoff" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />

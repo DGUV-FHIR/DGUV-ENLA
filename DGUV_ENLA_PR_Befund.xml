@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://fhir.dguv.de/Basis/Observation/DGUV_ENLA_PR_Befund" />
+  <url value="http://fhir.dguv.de/Basis/Observation/DGUV-ENLA-PR-Befund" />
   <name value="DGUV_ENLA_PR_Befund" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
