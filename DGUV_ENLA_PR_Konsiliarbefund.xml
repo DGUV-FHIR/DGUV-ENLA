@@ -3,6 +3,7 @@
   <url value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Konsiliarbefund" />
   <name value="DGUV_ENLA_PR_Konsiliarbefund" />
   <status value="draft" />
+  <description value="Dieses Profil bildet Konsiliarbefunde ab." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -3939,12 +3940,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ImagingStudy" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Media" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MolecularSequence" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/DocumentReference/DGUV-ENLA-PR-DokumentenReferenz" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -3963,6 +3959,7 @@
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Reference" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -4561,6 +4558,14 @@
       <min value="1" />
       <type>
         <code value="string" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.derivedFrom">
+      <path value="Observation.derivedFrom" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/DocumentReference/DGUV-ENLA-PR-DokumentenReferenz" />
       </type>
       <mustSupport value="true" />
     </element>

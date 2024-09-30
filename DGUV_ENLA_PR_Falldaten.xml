@@ -3,6 +3,7 @@
   <url value="http://fhir.dguv.de/ENLA/Encounter/DGUV-ENLA-PR-Falldaten" />
   <name value="DGUV_ENLA_PR_Falldaten" />
   <status value="draft" />
+  <description value="Dieses Profil bildet die allg. Daten zum stationären Aufenthalt ab." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
