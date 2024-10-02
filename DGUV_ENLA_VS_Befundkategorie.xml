@@ -1,6 +1,6 @@
 <ValueSet xmlns="http://hl7.org/fhir">
     <id value="DGUV_ENLA_VS_BefundKategorie" />
-    <url value="https://fhir.dguv.de/ENLA/ValueSet/DGUV_ENLA_VS_BefundKategorie" />
+    <url value="http://fhir.dguv.de/ENLA/ValueSet/DGUV_ENLA_VS_BefundKategorie" />
     <version value="1.0.0" />
     <name value="DGUV_ENLA_VS_BefundKategorie" />
     <title value="BefundKategorie" />
@@ -17,7 +17,7 @@
     <immutable value="false" />
     <compose>
 		<include>
-		<system value="https://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-BefundKategorie" />
+		<system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-BefundKategorie" />
 		<version value="1.0.0" />
 	<concept>
         <code value="Vital" />

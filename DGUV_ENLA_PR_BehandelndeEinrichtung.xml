@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Einrichtung" />
-  <name value="DGUV_ENLA_PR_Einrichtung" />
+  <url value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-BehandelndeEinrichtung" />
+  <name value="DGUV_ENLA_PR_BehandelndeEinrichtung" />
   <status value="draft" />
+  <description value="Dieses Profil bildet die behandelnde Einrichtung ab." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="Organization" />
-  <baseDefinition value="https://fhir.dguv.de/Basis/Organization/DGUV-Basis-PR-Einrichtung" />
+  <baseDefinition value="http://fhir.dguv.de/Basis/Organization/DGUV-Basis-PR-BehandelndeEinrichtung" />
   <derivation value="constraint" />
   <snapshot>
     <element id="Organization">
@@ -427,16 +428,16 @@
       <path value="Organization.identifier" />
       <slicing>
         <discriminator>
-          <type value="pattern" />
-          <path value="type" />
+          <type value="value" />
+          <path value="system" />
         </discriminator>
         <rules value="open" />
       </slicing>
       <short value="Identifies this organization  across multiple systems" />
       <definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems." />
       <requirements value="Organizations are known by a variety of ids. Some institutions maintain several, and most collect identifiers for exchange with other organizations concerning the organization." />
-      <min value="1" />
-      <max value="1" />
+      <min value="0" />
+      <max value="*" />
       <base>
         <path value="Organization.identifier" />
         <min value="0" />
@@ -455,7 +456,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -502,7 +502,7 @@
       <short value="Institutionskennzeichen (IKNR)" />
       <definition value="Als eindeutiges Merkmal zur Identifizierung von Vertragspartnern, die für die Sozialversicherungsträger Leistungen erbringen wird die IKNR durch die Arbeitsgemeinschaft Institutionskennzeichen vergeben." />
       <requirements value="Organizations are known by a variety of ids. Some institutions maintain several, and most collect identifiers for exchange with other organizations concerning the organization." />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Organization.identifier" />
@@ -523,7 +523,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -4960,7 +4959,7 @@
       <comment value="This active flag is not intended to be used to mark an organization as temporarily closed or under construction. Instead the Location(s) within the Organization should have the suspended status. If further details of the reason for the suspension are required, then an extension on this element should be used.&#xA;&#xA;This element is labeled as a modifier because it may be used to mark that the resource was created in error." />
       <requirements value="Need a flag to indicate a record is no longer to be used and should generally be hidden for the user in the UI." />
       <min value="0" />
-      <max value="0" />
+      <max value="1" />
       <base>
         <path value="Organization.active" />
         <min value="0" />
@@ -6385,7 +6384,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -6411,7 +6409,7 @@
       <comment value="There are no dates associated with the alias/historic names, as this is not intended to track when names were used, but to assist in searching so that older names can still result in identifying the organization." />
       <requirements value="Over time locations and organizations go through many changes and can be known by different names.&#xA;&#xA;For searching knowing previous names that the organization was known by can be very useful." />
       <min value="0" />
-      <max value="0" />
+      <max value="*" />
       <base>
         <path value="Organization.alias" />
         <min value="0" />
@@ -6459,7 +6457,7 @@
       </base>
       <type>
         <code value="ContactPoint" />
-        <profile value="https://fhir.dguv.de/Basis/ContactPoint/DGUV-Basis-PR-KontaktDaten" />
+        <profile value="http://fhir.dguv.de/Basis/ContactPoint/DGUV-Basis-PR-KontaktDaten" />
       </type>
       <condition value="ele-1" />
       <condition value="org-3" />
@@ -6860,8 +6858,8 @@
       <definition value="An address for the organization." />
       <comment value="Organization may have multiple addresses with different uses or applicable periods. The use code 'home' is not to be used." />
       <requirements value="May need to keep track of the organization's addresses for contacting, billing or reporting requirements." />
-      <min value="1" />
-      <max value="1" />
+      <min value="0" />
+      <max value="*" />
       <base>
         <path value="Organization.address" />
         <min value="0" />
@@ -6888,7 +6886,6 @@
         <xpath value="count(f:use[@value='home']) = 0" />
         <source value="http://hl7.org/fhir/StructureDefinition/Organization" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -6931,7 +6928,7 @@
       <definition value="Eine Adresse gemäß postalischer Konventionen (im Gegensatz zu bspw. GPS-Koordinaten). Die Adresse kann sowohl zur Zustellung von Postsendungen oder zum Aufsuchen von Orten, die keine gültige Postadresse haben, verwendet werden.&#xD;&#xA;&#xD;&#xA;Die verwendeten Extensions in diesem Profil bilden die Struktur der Adresse ab, wie sie im VSDM-Format der elektronischen Versichertenkarte verwendet wird.&#xD;&#xA;&#xD;&#xA;Insbesondere bei ausländischen Adresse oder Adressen, die nicht durch Einlesen einer elektronischen Versichertenkarte erfasst wurden, sind abweichende Strukturen möglich. Die Verwendung der Extensions ist nicht verpflichtend." />
       <comment value="Note: address is intended to describe postal addresses for administrative purposes, not to describe absolute geographical coordinates.  Postal addresses are often used as proxies for physical locations (also see the [Location](location.html#) resource)." />
       <requirements value="May need to keep track of the organization's addresses for contacting, billing or reporting requirements." />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Organization.address" />
@@ -7019,7 +7016,6 @@
         <expression value="extension('http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct').empty() or all(line contains extension('http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct').value.ofType(string))" />
         <source value="http://fhir.de/StructureDefinition/address-de-basis" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -7399,6 +7395,7 @@
       <type>
         <code value="code" />
       </type>
+      <fixedCode value="both" />
       <example>
         <label value="General" />
         <valueCode value="both" />
@@ -8775,7 +8772,7 @@
       <comment value="Note: address is intended to describe postal addresses for administrative purposes, not to describe absolute geographical coordinates.  Postal addresses are often used as proxies for physical locations (also see the [Location](location.html#) resource)." />
       <requirements value="May need to keep track of the organization's addresses for contacting, billing or reporting requirements." />
       <min value="0" />
-      <max value="0" />
+      <max value="1" />
       <base>
         <path value="Organization.address" />
         <min value="0" />
@@ -9241,6 +9238,7 @@
       <type>
         <code value="code" />
       </type>
+      <fixedCode value="postal" />
       <example>
         <label value="General" />
         <valueCode value="both" />
@@ -10681,7 +10679,7 @@
       <comment value="Where multiple contacts for the same purpose are provided there is a standard extension that can be used to determine which one is the preferred contact to use." />
       <requirements value="Need to keep track of assigned contact points within bigger organization." />
       <min value="0" />
-      <max value="0" />
+      <max value="*" />
       <base>
         <path value="Organization.contact" />
         <min value="0" />
@@ -10978,7 +10976,7 @@
       </base>
       <type>
         <code value="ContactPoint" />
-        <profile value="https://fhir.dguv.de/Basis/ContactPoint/DGUV-Basis-PR-KontaktDaten" />
+        <profile value="http://fhir.dguv.de/Basis/ContactPoint/DGUV-Basis-PR-KontaktDaten" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -11416,7 +11414,7 @@
       <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository." />
       <requirements value="Organizations have multiple systems that provide various services and need to be able to define the technical connection details for how to connect to them, and for what purpose." />
       <min value="0" />
-      <max value="0" />
+      <max value="*" />
       <base>
         <path value="Organization.endpoint" />
         <min value="0" />
@@ -11453,55 +11451,4 @@
       </mapping>
     </element>
   </snapshot>
-  <differential>
-    <element id="Organization.identifier">
-      <path value="Organization.identifier" />
-      <min value="1" />
-      <max value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.identifier:Institutionskennzeichen">
-      <path value="Organization.identifier" />
-      <sliceName value="Institutionskennzeichen" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.active">
-      <path value="Organization.active" />
-      <max value="0" />
-    </element>
-    <element id="Organization.name">
-      <path value="Organization.name" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.alias">
-      <path value="Organization.alias" />
-      <max value="0" />
-    </element>
-    <element id="Organization.address">
-      <path value="Organization.address" />
-      <min value="1" />
-      <max value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.address:Strassenanschrift">
-      <path value="Organization.address" />
-      <sliceName value="Strassenanschrift" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.address:Postfach">
-      <path value="Organization.address" />
-      <sliceName value="Postfach" />
-      <max value="0" />
-    </element>
-    <element id="Organization.contact">
-      <path value="Organization.contact" />
-      <max value="0" />
-    </element>
-    <element id="Organization.endpoint">
-      <path value="Organization.endpoint" />
-      <max value="0" />
-    </element>
-  </differential>
 </StructureDefinition>

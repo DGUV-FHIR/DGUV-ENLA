@@ -1,0 +1,26 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="DGUV_ENLA_CS_BedenkenTaetigkeit" />
+    <url value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-BedenkenTaetigkeit" />
+    <version value="1.0.0" />
+    <name value="DGUV_ENLA_CS_BedenkenTaetigkeit" />
+    <title value="Aufnahmeart" />
+    <status value="draft" />
+    <experimental value="false" />
+    <publisher value="DGUV (Deutsche Gesellschaft Unfallversicherung e.V.)" />
+    <contact>
+        <telecom>
+            <system value="url" />
+            <value value="https://www.dguv.de" />
+        </telecom>
+    </contact>
+    <description value="Dieses CodeSystem enth&#228;lt Codes zur Beschreibung der Bedenken zur Ausübung der Tätigkeit der Versicherten Person." />
+    <immutable value="false" />        
+	<concept>
+        <code value="Ja" />
+        <display value="Ja, es bestehen Bedenken bei der Ausführung der Tätigkeit der versicherten Person." />
+    </concept>
+	<concept>
+        <code value="Nein" />
+        <display value="Nein, es bestehen keine Bedenken bei der Ausführung der Tätigkeit der versicherten Person." />
+    </concept>
+</CodeSystem>

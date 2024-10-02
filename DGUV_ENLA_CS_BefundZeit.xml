@@ -13,22 +13,22 @@
             <value value="https://www.dguv.de" />
         </telecom>
     </contact>
-    <description value="Dieses CodeSystem enth&#228;lt Codes zur Beschreibung der Befundkategorien." />
+    <description value="Dieses CodeSystem enth&#228;lt Codes zur Festlegung des Zeitrahmens der Befunderfassung (z.B. stationäre Aufnahme)." />
     <immutable value="false" />        
-	<concept>
-        <code value="Vital" />
-        <display value="Vitalbefunde" />
+<concept>
+        <code value="Aufnahme" />
+        <display value="Aufnahmebefund" />
     </concept>
 	<concept>
-        <code value="Röntgen" />
-        <display value="Röntgenbefunde" />
+        <code value="Entlass" />
+        <display value="Entlassungsbefund" />
     </concept>
 	<concept>
-        <code value="Labor" />
-        <display value="Laborbefunde" />
+        <code value="Konsiliar" />
+        <display value="Konsiliarbefund" />
     </concept>
 	<concept>
-        <code value="Andere" />
-        <display value="Andere Befundkategorien" />
+        <code value="Erhoben" />
+        <display value="Erhobener Befund (während stationärer Aufnahme)" />
     </concept>
 </CodeSystem>
