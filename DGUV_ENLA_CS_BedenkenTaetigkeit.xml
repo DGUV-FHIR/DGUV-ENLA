@@ -23,4 +23,8 @@
         <code value="Nein" />
         <display value="Nein, es bestehen keine Bedenken bei der Ausführung der Tätigkeit der versicherten Person." />
     </concept>
+    <concept>
+        <code value="K.Beurteilung" />
+        <display value="Derzeit ist dies noch nicht zu beurteilen." />
+    </concept>
 </CodeSystem>
