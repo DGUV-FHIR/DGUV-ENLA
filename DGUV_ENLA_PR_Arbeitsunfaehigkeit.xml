@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Arbeitsunfaehigkeit" />
+  <name value="DGUV_ENLA_PR_Arbeitsunfaehigkeit" />
+  <title value="Dieses Profil beschreibt die Angaben zur Arbeits(un)fähigkeit." />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation.status">
+      <path value="Observation.status" />
+      <fixedCode value="final" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.code">
+      <path value="Observation.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.code.coding">
+      <path value="Observation.code.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Observation.code.coding.system">
+      <path value="Observation.code.coding.system" />
+      <min value="1" />
+      <binding>
+        <strength value="required" />
+        <description value="Arbeitsfaehigkeit" />
+        <valueSet value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-VS-Arbeitsfaehigkeit" />
+      </binding>
+    </element>
+    <element id="Observation.code.coding.code">
+      <path value="Observation.code.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Observation.code.coding.display">
+      <path value="Observation.code.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Observation.subject">
+      <path value="Observation.subject" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.effective[x]">
+      <path value="Observation.effective[x]" />
+      <short value="Start und Endzeit der Arbeitsunfähigkeit" />
+      <definition value="Hier kann hier angegeben werden, von wann und bis wann die Arbeitsunfähigkeitgültig ist." />
+      <type>
+        <code value="Period" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.effective[x].start">
+      <path value="Observation.effective[x].start" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.effective[x].end">
+      <path value="Observation.effective[x].end" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.value[x]">
+      <path value="Observation.value[x]" />
+      <short value="Länge der Arbeitsunfähigkeit/Länger als drei Monate" />
+      <type>
+        <code value="boolean" />
+      </type>
+      <constraint>
+        <key value="Zeitraum" />
+        <severity value="warning" />
+        <human value="WennCodeZeitraumAngabe" />
+      </constraint>
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>
