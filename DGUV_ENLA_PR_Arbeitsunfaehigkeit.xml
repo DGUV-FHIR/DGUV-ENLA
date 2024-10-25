@@ -47,33 +47,23 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
         <targetProfile value="http://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson" />
       </type>
       <mustSupport value="true" />
     </element>
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
-      <short value="Start und Endzeit der Arbeitsunfähigkeit" />
-      <definition value="Hier kann hier angegeben werden, von wann und bis wann die Arbeitsunfähigkeitgültig ist." />
+      <short value="Letzter Tag der Arbeitsunfähigkeit" />
+      <definition value="Hier kann angegeben werden, bis wann die Arbeitsunfähigkeit gültig ist." />
       <type>
-        <code value="Period" />
+        <code value="dateTime" />
       </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.effective[x].start">
-      <path value="Observation.effective[x].start" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.effective[x].end">
-      <path value="Observation.effective[x].end" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
-      <short value="Länge der Arbeitsunfähigkeit/Länger als drei Monate" />
+      <short value="Angabe, ob versicherte Person arbeitsunfähig (true) oder arbeitsfähig (false) ist." />
+      <min value="1" />
       <type>
         <code value="boolean" />
       </type>
