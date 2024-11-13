@@ -1,0 +1,34 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="DGUV_ENLA_CS_Arbeitsunfaehigkeit" />
+    <url value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Arbeitsunfaehigkeit" />
+    <version value="0.0.1" />
+    <name value="DGUV_ENLA_CS_Arbeitsunfaehigkeit" />
+    <title value="Arbeitsunfaehigkeit" />
+    <status value="draft" />
+    <experimental value="false" />
+    <publisher value="DGUV (Deutsche Gesellschaft Unfallversicherung e.V.)" />
+    <contact>
+        <telecom>
+            <system value="url" />
+            <value value="https://www.dguv.de" />
+        </telecom>
+    </contact>
+    <description value="Dieses CodeSystem enthaelt Codes zur Einschätzung der Arbeitsunfaehigkeit der Versicherten Person durch den behandelnden Arzt." />
+    <immutable value="false" />        
+	<concept>
+        <code value="A" />
+        <display value="Arbeitsfaehig." />
+    </concept>
+	<concept>
+        <code value="A" />
+        <display value="Arbeitsunfaehig." />
+    </concept>
+	<concept>
+        <code value="UD" />
+        <display value="Voraussichtlich länger als 6 Wochen arbeitsunfähig" />
+    </concept>
+    <concept>
+        <code value="UZ" />
+        <display value="Voraussichtlich länger als 3 Monate arbeitsunfähig" />
+    </concept>
+</CodeSystem>

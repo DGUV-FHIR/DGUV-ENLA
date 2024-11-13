@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Anamnesebeschreibung" />
+  <name value="DGUV_ENLA_PR_Anamnesebeschreibung" />
+  <title value="Dieses Profil beschreibt die Freitextbeschreibung der Anamnese." />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation.code">
+      <path value="Observation.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.code.coding.system">
+      <path value="Observation.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Protokolltyp" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.code.coding.code">
+      <path value="Observation.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="AB" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.code.coding.display">
+      <path value="Observation.code.coding.display" />
+      <min value="1" />
+      <fixedString value="Anamnesebeschreibung" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.value[x]">
+      <path value="Observation.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

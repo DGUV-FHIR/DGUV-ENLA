@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Arbeitsunfaehigkeit" />
+  <name value="DGUV_ENLA_PR_Arbeitsunfaehigkeit" />
+  <title value="Dieses Profil beschreibt die Angaben zur Arbeits(un)fähigkeit." />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation.extension">
+      <path value="Observation.extension" />
+      <min value="2" />
+      <max value="2" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.extension:BedenkenTaetigkeit">
+      <path value="Observation.extension" />
+      <sliceName value="BedenkenTaetigkeit" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-BedenkenTaetigkeit" />
+      </type>
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>
+    <element id="Observation.extension:BedenkenTaetigkeit.value[x]">
+      <path value="Observation.extension.value[x]" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.extension:BedenkenTaetigkeit.value[x].coding">
+      <path value="Observation.extension.value[x].coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.extension:BedenkenTaetigkeit.value[x].coding.system">
+      <path value="Observation.extension.value[x].coding.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.extension:BedenkenTaetigkeit.value[x].coding.code">
+      <path value="Observation.extension.value[x].coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.extension:BedenkenTaetigkeit.value[x].coding.display">
+      <path value="Observation.extension.value[x].coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.extension:BedenkenTaetigkeit.value[x].text">
+      <path value="Observation.extension.value[x].text" />
+      <short value="Auswahlbegründung" />
+      <definition value="Freitextbegründung für diese Auswahl, verpflichtend bei den Auswahlne &quot;Ja&quot; und &quot;Derzeit noch nicht zu beurteilen&quot;" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.extension:Wiedereingliederung">
+      <path value="Observation.extension" />
+      <sliceName value="Wiedereingliederung" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-Wiedereingliederung" />
+      </type>
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>
+    <element id="Observation.extension:Wiedereingliederung.value[x]">
+      <path value="Observation.extension.value[x]" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.extension:Wiedereingliederung.value[x].coding">
+      <path value="Observation.extension.value[x].coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.extension:Wiedereingliederung.value[x].coding.system">
+      <path value="Observation.extension.value[x].coding.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.extension:Wiedereingliederung.value[x].coding.code">
+      <path value="Observation.extension.value[x].coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.extension:Wiedereingliederung.value[x].coding.display">
+      <path value="Observation.extension.value[x].coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.extension:Wiedereingliederung.value[x].text">
+      <path value="Observation.extension.value[x].text" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.status">
+      <path value="Observation.status" />
+      <fixedCode value="final" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.code">
+      <path value="Observation.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.code.coding">
+      <path value="Observation.code.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Observation.code.coding.system">
+      <path value="Observation.code.coding.system" />
+      <min value="1" />
+      <binding>
+        <strength value="required" />
+        <description value="Arbeitsfaehigkeit" />
+        <valueSet value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-VS-Arbeitsfaehigkeit" />
+      </binding>
+    </element>
+    <element id="Observation.code.coding.code">
+      <path value="Observation.code.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Observation.code.coding.display">
+      <path value="Observation.code.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Observation.subject">
+      <path value="Observation.subject" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.effective[x]">
+      <path value="Observation.effective[x]" />
+      <short value="Letzter Tag der Arbeitsunfähigkeit" />
+      <definition value="Hier kann angegeben werden, bis wann die Arbeitsunfähigkeit gültig ist." />
+      <type>
+        <code value="dateTime" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.value[x]">
+      <path value="Observation.value[x]" />
+      <short value="anpassen: Angabe, ob versicherte Person arbeitsunfähig (true) oder arbeitsfähig (false) ist." />
+      <min value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <constraint>
+        <key value="Zeitraum" />
+        <severity value="warning" />
+        <human value="WennCodeZeitraumAngabe" />
+      </constraint>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.value[x].coding">
+      <path value="Observation.value[x].coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.value[x].coding.system">
+      <path value="Observation.value[x].coding.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Arbeitsunfaehigkeit" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.value[x].coding.code">
+      <path value="Observation.value[x].coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.value[x].coding.display">
+      <path value="Observation.value[x].coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

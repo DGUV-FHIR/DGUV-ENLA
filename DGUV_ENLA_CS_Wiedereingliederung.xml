@@ -1,9 +1,9 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
-    <id value="DGUV_ENLA_CS_BedenkenTaetigkeit" />
-    <url value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-BedenkenTaetigkeit" />
+    <id value="DGUV_ENLA_CS_Wiedereingliederung" />
+    <url value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Wiedereingliederung" />
     <version value="0.0.1" />
-    <name value="DGUV_ENLA_CS_BedenkenTaetigkeit" />
-    <title value="Bedenken bei der Ausfuehrung der bisherigen Taetigkeit" />
+    <name value="DGUV_ENLA_CS_Wiedereingliederung" />
+    <title value="Wiedereingliederung" />
     <status value="draft" />
     <experimental value="false" />
     <publisher value="DGUV (Deutsche Gesellschaft Unfallversicherung e.V.)" />
@@ -13,7 +13,7 @@
             <value value="https://www.dguv.de" />
         </telecom>
     </contact>
-    <description value="Dieses CodeSystem enth&#228;lt Codes zur Beschreibung der Bedenken zur Ausübung der Tätigkeit der Versicherten Person." />
+    <description value="Dieses CodeSystem enthaelt Codes zur Beschreibung der Bedenken zur Ausübung der Tätigkeit der Versicherten Person." />
     <immutable value="false" />        
 	<concept>
         <code value="Ja" />

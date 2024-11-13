@@ -1609,8 +1609,8 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="DocumentReference.content" />
-      <short value="Document referenced" />
-      <definition value="The document and format referenced. There may be multiple content element repetitions, each with a different format." />
+      <short value="Referenzierte Dokumente/Anhänge" />
+      <definition value="Das referenzierte Dokument oder Format z.B. für Befunde oder OP-Berichte." />
       <min value="1" />
       <max value="*" />
       <base>
@@ -2992,6 +2992,8 @@
     </element>
     <element id="DocumentReference.content">
       <path value="DocumentReference.content" />
+      <short value="Referenzierte Dokumente/Anhänge" />
+      <definition value="Das referenzierte Dokument oder Format z.B. für Befunde oder OP-Berichte." />
       <mustSupport value="true" />
     </element>
     <element id="DocumentReference.content.attachment">
