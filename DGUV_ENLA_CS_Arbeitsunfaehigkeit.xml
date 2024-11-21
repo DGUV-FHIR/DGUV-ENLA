@@ -16,19 +16,19 @@
     <description value="Dieses CodeSystem enthaelt Codes zur Einschätzung der Arbeitsunfaehigkeit der Versicherten Person durch den behandelnden Arzt." />
     <immutable value="false" />        
 	<concept>
-        <code value="A" />
+        <code value="AF" />
         <display value="Arbeitsfaehig." />
     </concept>
 	<concept>
-        <code value="A" />
+        <code value="AU" />
         <display value="Arbeitsunfaehig." />
     </concept>
 	<concept>
-        <code value="UD" />
+        <code value="AU6W" />
         <display value="Voraussichtlich länger als 6 Wochen arbeitsunfähig" />
     </concept>
     <concept>
-        <code value="UZ" />
+        <code value="AU3M" />
         <display value="Voraussichtlich länger als 3 Monate arbeitsunfähig" />
     </concept>
 </CodeSystem>

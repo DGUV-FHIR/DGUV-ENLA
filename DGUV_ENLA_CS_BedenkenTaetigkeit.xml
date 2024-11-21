@@ -3,7 +3,7 @@
     <url value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-BedenkenTaetigkeit" />
     <version value="0.0.1" />
     <name value="DGUV_ENLA_CS_BedenkenTaetigkeit" />
-    <title value="Bedenken bei der Ausfuehrung der bisherigen Taetigkeit" />
+    <title value="Bedenken bzgl. dauerhafter Ausfuehrung der bisherigen Taetigkeit" />
     <status value="draft" />
     <experimental value="false" />
     <publisher value="DGUV (Deutsche Gesellschaft Unfallversicherung e.V.)" />
@@ -13,15 +13,15 @@
             <value value="https://www.dguv.de" />
         </telecom>
     </contact>
-    <description value="Dieses CodeSystem enth&#228;lt Codes zur Beschreibung der Bedenken zur Ausübung der Tätigkeit der Versicherten Person." />
+    <description value="Dieses CodeSystem enthaelt Codes zur Beschreibung der Bedenken zur Ausuebung der Taetigkeit der Versicherten Person." />
     <immutable value="false" />        
 	<concept>
         <code value="Ja" />
-        <display value="Ja, es bestehen Bedenken bei der Ausführung der Tätigkeit der versicherten Person." />
+        <display value="Ja, es bestehen Bedenken, dass die versicherte Person ihre bisherige Taetigkeit dauerhaft wieder ausueben kann." />
     </concept>
 	<concept>
         <code value="Nein" />
-        <display value="Nein, es bestehen keine Bedenken bei der Ausführung der Tätigkeit der versicherten Person." />
+        <display value="Nein, es bestehen keine Bedenken, dass die versicherte Person ihre bisherige Taetigkeit dauerhaft wieder ausueben kann." />
     </concept>
     <concept>
         <code value="kB" />
