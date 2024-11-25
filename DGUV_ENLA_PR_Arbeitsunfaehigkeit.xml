@@ -2162,6 +2162,9 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+      <fixedCodeableConcept>
+        <text value="Arbeitsunfaehigkeit" />
+      </fixedCodeableConcept>
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -2314,7 +2317,7 @@
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="CodeableConcept.coding" />
@@ -2449,7 +2452,7 @@
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
       <comment value="The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously." />
       <requirements value="Need to be unambiguous about the source of the definition of the symbol." />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Coding.system" />
@@ -2470,9 +2473,8 @@
       </constraint>
       <isSummary value="true" />
       <binding>
-        <strength value="required" />
-        <description value="Arbeitsfaehigkeit" />
-        <valueSet value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-VS-Arbeitsfaehigkeit" />
+        <strength value="example" />
+        <description value="Observationtyp Arbeitsunfaehigkeit" />
       </binding>
       <mapping>
         <identity value="rim" />
@@ -2539,7 +2541,7 @@
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to refer to a particular code in the system." />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Coding.code" />
@@ -2585,7 +2587,7 @@
       <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Coding.display" />
@@ -4342,6 +4344,296 @@
         <map value="value:IVL_PQ.low" />
       </mapping>
     </element>
+    <element id="Observation.referenceRange.low.id">
+      <path value="Observation.referenceRange.low.id" />
+      <representation value="xmlAttr" />
+      <short value="Unique id for inter-element referencing" />
+      <definition value="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Element.id" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
+          <valueUrl value="string" />
+        </extension>
+        <code value="http://hl7.org/fhirpath/System.String" />
+      </type>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+    </element>
+    <element id="Observation.referenceRange.low.extension">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
+      <path value="Observation.referenceRange.low.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <description value="Extensions are always sliced by (at least) url" />
+        <rules value="open" />
+      </slicing>
+      <short value="Additional content defined by implementations" />
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
+      <alias value="extensions" />
+      <alias value="user content" />
+      <min value="0" />
+      <max value="*" />
+      <base>
+        <path value="Element.extension" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="Extension" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="Observation.referenceRange.low.value">
+      <path value="Observation.referenceRange.low.value" />
+      <short value="Numerical value (with implicit precision)" />
+      <definition value="The value of the measured amount. The value includes an implicit precision in the presentation of the value." />
+      <comment value="The implicit precision in the value should always be honored. Monetary values have their own rules for handling precision (refer to standard accounting text books)." />
+      <requirements value="Precision is handled implicitly in almost all cases of measurement." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Quantity.value" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="decimal" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="SN.2  / CQ - N/A" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="PQ.value, CO.value, MO.value, IVL.high or IVL.low depending on the value" />
+      </mapping>
+    </element>
+    <element id="Observation.referenceRange.low.comparator">
+      <path value="Observation.referenceRange.low.comparator" />
+      <short value="&lt; | &lt;= | &gt;= | &gt; - how to understand the value" />
+      <definition value="Not allowed to be used in this context" />
+      <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
+      <requirements value="Need a framework for handling measures where the value is &lt;5ug/L or &gt;400mg/L due to the limitations of measuring methodology." />
+      <min value="0" />
+      <max value="0" />
+      <base>
+        <path value="Quantity.comparator" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="code" />
+      </type>
+      <meaningWhenMissing value="If there is no comparator, then there is no modification of the value" />
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isModifier value="true" />
+      <isModifierReason value="This is labeled as &quot;Is Modifier&quot; because the comparator modifies the interpretation of the value significantly. If there is no comparator, then there is no modification of the value" />
+      <isSummary value="true" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="QuantityComparator" />
+        </extension>
+        <strength value="required" />
+        <description value="How the Quantity should be understood and represented." />
+        <valueSet value="http://hl7.org/fhir/ValueSet/quantity-comparator|4.0.1" />
+      </binding>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="SN.1  / CQ.1" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="IVL properties" />
+      </mapping>
+    </element>
+    <element id="Observation.referenceRange.low.unit">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Observation.referenceRange.low.unit" />
+      <short value="Unit representation" />
+      <definition value="A human-readable form of the unit." />
+      <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
+      <requirements value="There are many representations for units of measure and in many contexts, particular representations are fixed and required. I.e. mcg for micrograms." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Quantity.unit" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="string" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="(see OBX.6 etc.) / CQ.2" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="PQ.unit" />
+      </mapping>
+    </element>
+    <element id="Observation.referenceRange.low.system">
+      <path value="Observation.referenceRange.low.system" />
+      <short value="System that defines coded unit form" />
+      <definition value="The identification of the system that provides the coded form of the unit." />
+      <comment value="see http://en.wikipedia.org/wiki/Uniform_resource_identifier" />
+      <requirements value="Need to know the system that defines the coded form of the unit." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Quantity.system" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="uri" />
+      </type>
+      <condition value="ele-1" />
+      <condition value="qty-3" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="(see OBX.6 etc.) / CQ.2" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="CO.codeSystem, PQ.translation.codeSystem" />
+      </mapping>
+    </element>
+    <element id="Observation.referenceRange.low.code">
+      <path value="Observation.referenceRange.low.code" />
+      <short value="Coded form of the unit" />
+      <definition value="A computer processable form of the unit in some unit representation system." />
+      <comment value="The preferred system is UCUM, but SNOMED CT can also be used (for customary units) or ISO 4217 for currency.  The context of use may additionally require a code from a particular system." />
+      <requirements value="Need a computable form of the unit that is fixed across all forms. UCUM provides this for quantities, but SNOMED CT provides many units of interest." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Quantity.code" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="code" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="(see OBX.6 etc.) / CQ.2" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="PQ.code, MO.currency, PQ.translation.code" />
+      </mapping>
+    </element>
     <element id="Observation.referenceRange.high">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
         <valueCode value="normative" />
@@ -4410,6 +4702,296 @@
       <mapping>
         <identity value="rim" />
         <map value="value:IVL_PQ.high" />
+      </mapping>
+    </element>
+    <element id="Observation.referenceRange.high.id">
+      <path value="Observation.referenceRange.high.id" />
+      <representation value="xmlAttr" />
+      <short value="Unique id for inter-element referencing" />
+      <definition value="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Element.id" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
+          <valueUrl value="string" />
+        </extension>
+        <code value="http://hl7.org/fhirpath/System.String" />
+      </type>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+    </element>
+    <element id="Observation.referenceRange.high.extension">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
+      <path value="Observation.referenceRange.high.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <description value="Extensions are always sliced by (at least) url" />
+        <rules value="open" />
+      </slicing>
+      <short value="Additional content defined by implementations" />
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
+      <alias value="extensions" />
+      <alias value="user content" />
+      <min value="0" />
+      <max value="*" />
+      <base>
+        <path value="Element.extension" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="Extension" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="Observation.referenceRange.high.value">
+      <path value="Observation.referenceRange.high.value" />
+      <short value="Numerical value (with implicit precision)" />
+      <definition value="The value of the measured amount. The value includes an implicit precision in the presentation of the value." />
+      <comment value="The implicit precision in the value should always be honored. Monetary values have their own rules for handling precision (refer to standard accounting text books)." />
+      <requirements value="Precision is handled implicitly in almost all cases of measurement." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Quantity.value" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="decimal" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="SN.2  / CQ - N/A" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="PQ.value, CO.value, MO.value, IVL.high or IVL.low depending on the value" />
+      </mapping>
+    </element>
+    <element id="Observation.referenceRange.high.comparator">
+      <path value="Observation.referenceRange.high.comparator" />
+      <short value="&lt; | &lt;= | &gt;= | &gt; - how to understand the value" />
+      <definition value="Not allowed to be used in this context" />
+      <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
+      <requirements value="Need a framework for handling measures where the value is &lt;5ug/L or &gt;400mg/L due to the limitations of measuring methodology." />
+      <min value="0" />
+      <max value="0" />
+      <base>
+        <path value="Quantity.comparator" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="code" />
+      </type>
+      <meaningWhenMissing value="If there is no comparator, then there is no modification of the value" />
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isModifier value="true" />
+      <isModifierReason value="This is labeled as &quot;Is Modifier&quot; because the comparator modifies the interpretation of the value significantly. If there is no comparator, then there is no modification of the value" />
+      <isSummary value="true" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="QuantityComparator" />
+        </extension>
+        <strength value="required" />
+        <description value="How the Quantity should be understood and represented." />
+        <valueSet value="http://hl7.org/fhir/ValueSet/quantity-comparator|4.0.1" />
+      </binding>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="SN.1  / CQ.1" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="IVL properties" />
+      </mapping>
+    </element>
+    <element id="Observation.referenceRange.high.unit">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Observation.referenceRange.high.unit" />
+      <short value="Unit representation" />
+      <definition value="A human-readable form of the unit." />
+      <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
+      <requirements value="There are many representations for units of measure and in many contexts, particular representations are fixed and required. I.e. mcg for micrograms." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Quantity.unit" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="string" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="(see OBX.6 etc.) / CQ.2" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="PQ.unit" />
+      </mapping>
+    </element>
+    <element id="Observation.referenceRange.high.system">
+      <path value="Observation.referenceRange.high.system" />
+      <short value="System that defines coded unit form" />
+      <definition value="The identification of the system that provides the coded form of the unit." />
+      <comment value="see http://en.wikipedia.org/wiki/Uniform_resource_identifier" />
+      <requirements value="Need to know the system that defines the coded form of the unit." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Quantity.system" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="uri" />
+      </type>
+      <condition value="ele-1" />
+      <condition value="qty-3" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="(see OBX.6 etc.) / CQ.2" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="CO.codeSystem, PQ.translation.codeSystem" />
+      </mapping>
+    </element>
+    <element id="Observation.referenceRange.high.code">
+      <path value="Observation.referenceRange.high.code" />
+      <short value="Coded form of the unit" />
+      <definition value="A computer processable form of the unit in some unit representation system." />
+      <comment value="The preferred system is UCUM, but SNOMED CT can also be used (for customary units) or ISO 4217 for currency.  The context of use may additionally require a code from a particular system." />
+      <requirements value="Need a computable form of the unit that is fixed across all forms. UCUM provides this for quantities, but SNOMED CT provides many units of interest." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Quantity.code" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="code" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="(see OBX.6 etc.) / CQ.2" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="PQ.code, MO.currency, PQ.translation.code" />
       </mapping>
     </element>
     <element id="Observation.referenceRange.type">
@@ -5248,7 +5830,7 @@
         <min value="0" />
         <max value="*" />
       </base>
-      <contentReference value="#Observation.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
       <mapping>
         <identity value="v2" />
         <map value="OBX.7" />
@@ -5363,29 +5945,21 @@
     </element>
     <element id="Observation.code">
       <path value="Observation.code" />
+      <fixedCodeableConcept>
+        <text value="Arbeitsunfaehigkeit" />
+      </fixedCodeableConcept>
       <mustSupport value="true" />
     </element>
     <element id="Observation.code.coding">
       <path value="Observation.code.coding" />
-      <min value="1" />
       <max value="1" />
     </element>
     <element id="Observation.code.coding.system">
       <path value="Observation.code.coding.system" />
-      <min value="1" />
       <binding>
-        <strength value="required" />
-        <description value="Arbeitsfaehigkeit" />
-        <valueSet value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-VS-Arbeitsfaehigkeit" />
+        <strength value="example" />
+        <description value="Observationtyp Arbeitsunfaehigkeit" />
       </binding>
-    </element>
-    <element id="Observation.code.coding.code">
-      <path value="Observation.code.coding.code" />
-      <min value="1" />
-    </element>
-    <element id="Observation.code.coding.display">
-      <path value="Observation.code.coding.display" />
-      <min value="1" />
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
