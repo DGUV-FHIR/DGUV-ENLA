@@ -2569,7 +2569,7 @@
     </element>
     <element id="Observation.value[x].coding.code">
       <path value="Observation.value[x].coding.code" />
-      <short value="Symbol in syntax defined by the system" />
+      <short value="Kürzel der AU-Varianten" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to refer to a particular code in the system." />
@@ -2616,7 +2616,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Observation.value[x].coding.display" />
-      <short value="Representation defined by the system" />
+      <short value="Bezeichnung der AU-Varianten" />
       <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
@@ -5072,11 +5072,13 @@
     </element>
     <element id="Observation.value[x].coding.code">
       <path value="Observation.value[x].coding.code" />
+      <short value="Kürzel der AU-Varianten" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.value[x].coding.display">
       <path value="Observation.value[x].coding.display" />
+      <short value="Bezeichnung der AU-Varianten" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
