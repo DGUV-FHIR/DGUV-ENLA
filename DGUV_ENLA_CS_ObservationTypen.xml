@@ -1,0 +1,38 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="DGUV_ENLA_CS_ObservationTypen" />
+    <url value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-ObservationTypen" />
+    <version value="0.0.1" />
+    <name value="DGUV_ENLA_CS_ObservationTypen" />
+    <title value="ObservationTypen" />
+    <status value="draft" />
+    <experimental value="false" />
+    <publisher value="DGUV (Deutsche Gesellschaft Unfallversicherung e.V.)" />
+    <contact>
+        <telecom>
+            <system value="url" />
+            <value value="https://www.dguv.de" />
+        </telecom>
+    </contact>
+    <description value="Dieses CodeSystem enthaelt Codes zur differenzierteren Kennzeichnung von Profilen auf der Grundlage der Ressource Observation." />
+    <immutable value="false" />        
+	<concept>
+        <code value="AU" />
+        <display value="Arbeitsunfaehigkeit" />
+    </concept>
+	<concept>
+        <code value="PT" />
+        <display value="PrognoseWiederaufnahmeTaetigkeit" />
+    </concept>
+	<concept>
+        <code value="WE" />
+        <display value="Wiedereingliederung" />
+    </concept>
+    <concept>
+        <code value="RM" />
+        <display value="RehaMassnahmen" />
+    </concept>
+	<concept>
+        <code value="BM" />
+        <display value="besondereMassnahmen" />
+	</concept>
+</CodeSystem>
