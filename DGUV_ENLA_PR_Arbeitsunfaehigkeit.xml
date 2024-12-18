@@ -1158,7 +1158,7 @@
     </element>
     <element id="Observation.code.coding.code">
       <path value="Observation.code.coding.code" />
-      <short value="Symbol in syntax defined by the system" />
+      <short value="Kürzel für Observation Typ Arbeitsunfähigkeit" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to refer to a particular code in the system." />
@@ -1172,6 +1172,7 @@
       <type>
         <code value="code" />
       </type>
+      <fixedCode value="AU" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -1205,7 +1206,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Observation.code.coding.display" />
-      <short value="Representation defined by the system" />
+      <short value="Bezeichnung für Observation Typ Arbeitsunfähigkeit" />
       <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
@@ -1219,6 +1220,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="Arbeitsunfaehigkeit" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -1548,7 +1550,7 @@
       </extension>
       <path value="Observation.effective[x]" />
       <short value="Letzter Tag der Arbeitsunfähigkeit" />
-      <definition value="Hier wird der letzte Tag der Arbeitsunfähigkeit angegeben, nur wenn unter value[x] &quot;AUBIS&quot; bzw. &quot;Arbeitsunfaehig bis&quot; steht." />
+      <definition value="Hier wird der letzte Tag der Arbeitsunfähigkeit angegeben, nur wenn unter value[x].coding.code/display &quot;AUBIS&quot;/&quot;Arbeitsunfaehig bis&quot; steht." />
       <comment value="At least a date should be present unless this observation is a historical report.  For recording imprecise or &quot;fuzzy&quot; times (For example, a blood glucose measurement taken &quot;after breakfast&quot;) use the [Timing](datatypes.html#timing) datatype which allow the measurement to be tied to regular life events." />
       <requirements value="Knowing when an observation was deemed true is important to its relevance as well as determining trends." />
       <alias value="Occurrence" />
@@ -1716,7 +1718,7 @@
       </extension>
       <path value="Observation.value[x]" />
       <short value="Angabe über die Arbeits(un)fähigkeit der versicherten Person" />
-      <definition value="Angabe darüber, ob die versicherte Person &quot;Arbeitsfähig&quot;, &quot;Arbeitsunfähig bis&quot;, &quot;Arbeitsunfaehig mit flexibler Dauer&quot; oder &quot;Arbeitsunfaehig bis auf unbestimmte Zeit&quot;" />
+      <definition value="Angabe darüber, ob die versicherte Person &quot;Arbeitsfähig&quot;, &quot;Arbeitsunfähig bis&quot;, &quot;Arbeitsunfaehig mit flexibler Dauer&quot; oder &quot;Arbeitsunfaehig bis auf unbestimmte Zeit&quot; ist." />
       <comment value="An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below." />
       <requirements value="An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations." />
       <min value="1" />
@@ -1859,7 +1861,7 @@
       <path value="Observation.value[x].extension" />
       <sliceName value="Flexible_AU" />
       <short value="Flexible Angabe der AU-Dauer" />
-      <definition value="Flexible Angabe der AU-Dauer (Wert und Zeiteinheit), wenn kein konkretes Datum, sondern nur eine grobe Abschätzung genannt werden kann (AUFLEX)" />
+      <definition value="Flexible Angabe der AU-Dauer (Wert und Zeiteinheit), wenn kein konkretes Datum, sondern nur eine grobe Abschätzung genannt werden kann (AUFLEX)." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
@@ -2016,7 +2018,7 @@
       </extension>
       <path value="Observation.value[x].extension.value[x]" />
       <short value="Value of extension" />
-      <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
+      <definition value="Geschätzter Zeitraum für die Arbeitsunfähigkeit zum Entlassungszeitpunkt." />
       <min value="1" />
       <max value="1" />
       <base>
@@ -2129,7 +2131,7 @@
     <element id="Observation.value[x].extension:Flexible_AU.value[x].value">
       <path value="Observation.value[x].extension.value[x].value" />
       <short value="Numerical value (with implicit precision)" />
-      <definition value="The value of the measured amount. The value includes an implicit precision in the presentation of the value." />
+      <definition value="Dezimalzahl zur Quantifizierung geschätzten AU-Dauer." />
       <comment value="The implicit precision in the value should always be honored. Monetary values have their own rules for handling precision (refer to standard accounting text books)." />
       <requirements value="Precision is handled implicitly in almost all cases of measurement." />
       <min value="1" />
@@ -2222,7 +2224,7 @@
       </extension>
       <path value="Observation.value[x].extension.value[x].unit" />
       <short value="Zeiteinheit" />
-      <definition value="Zeiteinheit: Wochen oder Monate (vorgeschrieben über IG)" />
+      <definition value="Zeiteinheit: Wochen oder Monate (vorgeschrieben über IG)." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="There are many representations for units of measure and in many contexts, particular representations are fixed and required. I.e. mcg for micrograms." />
       <min value="1" />
@@ -2483,7 +2485,7 @@
     <element id="Observation.value[x].coding.system">
       <path value="Observation.value[x].coding.system" />
       <short value="AU-Varianten" />
-      <definition value="Einschätzung der Arbeitsunfaehigkeitsvarianten der versicherten Person durch den behandelnden Arzt" />
+      <definition value="Einschätzung der Arbeitsunfaehigkeitsvarianten der versicherten Person durch den behandelnden Arzt." />
       <comment value="The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously." />
       <requirements value="Need to be unambiguous about the source of the definition of the symbol." />
       <min value="1" />
@@ -2569,7 +2571,7 @@
     </element>
     <element id="Observation.value[x].coding.code">
       <path value="Observation.value[x].coding.code" />
-      <short value="Kürzel der AU-Varianten" />
+      <short value="Kürzel der AU-Variante" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to refer to a particular code in the system." />
@@ -2616,7 +2618,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Observation.value[x].coding.display" />
-      <short value="Bezeichnung der AU-Varianten" />
+      <short value="Bezeichnung der AU-Variante" />
       <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
@@ -4980,12 +4982,16 @@
     </element>
     <element id="Observation.code.coding.code">
       <path value="Observation.code.coding.code" />
+      <short value="Kürzel für Observation Typ Arbeitsunfähigkeit" />
       <min value="1" />
+      <fixedCode value="AU" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.code.coding.display">
       <path value="Observation.code.coding.display" />
+      <short value="Bezeichnung für Observation Typ Arbeitsunfähigkeit" />
       <min value="1" />
+      <fixedString value="Arbeitsunfaehigkeit" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.subject">
@@ -5000,7 +5006,7 @@
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
       <short value="Letzter Tag der Arbeitsunfähigkeit" />
-      <definition value="Hier wird der letzte Tag der Arbeitsunfähigkeit angegeben, nur wenn unter value[x] &quot;AUBIS&quot; bzw. &quot;Arbeitsunfaehig bis&quot; steht." />
+      <definition value="Hier wird der letzte Tag der Arbeitsunfähigkeit angegeben, nur wenn unter value[x].coding.code/display &quot;AUBIS&quot;/&quot;Arbeitsunfaehig bis&quot; steht." />
       <type>
         <code value="dateTime" />
       </type>
@@ -5009,7 +5015,7 @@
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
       <short value="Angabe über die Arbeits(un)fähigkeit der versicherten Person" />
-      <definition value="Angabe darüber, ob die versicherte Person &quot;Arbeitsfähig&quot;, &quot;Arbeitsunfähig bis&quot;, &quot;Arbeitsunfaehig mit flexibler Dauer&quot; oder &quot;Arbeitsunfaehig bis auf unbestimmte Zeit&quot;" />
+      <definition value="Angabe darüber, ob die versicherte Person &quot;Arbeitsfähig&quot;, &quot;Arbeitsunfähig bis&quot;, &quot;Arbeitsunfaehig mit flexibler Dauer&quot; oder &quot;Arbeitsunfaehig bis auf unbestimmte Zeit&quot; ist." />
       <min value="1" />
       <type>
         <code value="CodeableConcept" />
@@ -5030,7 +5036,7 @@
       <path value="Observation.value[x].extension" />
       <sliceName value="Flexible_AU" />
       <short value="Flexible Angabe der AU-Dauer" />
-      <definition value="Flexible Angabe der AU-Dauer (Wert und Zeiteinheit), wenn kein konkretes Datum, sondern nur eine grobe Abschätzung genannt werden kann (AUFLEX)" />
+      <definition value="Flexible Angabe der AU-Dauer (Wert und Zeiteinheit), wenn kein konkretes Datum, sondern nur eine grobe Abschätzung genannt werden kann (AUFLEX)." />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -5041,18 +5047,20 @@
     </element>
     <element id="Observation.value[x].extension:Flexible_AU.value[x]">
       <path value="Observation.value[x].extension.value[x]" />
+      <definition value="Geschätzter Zeitraum für die Arbeitsunfähigkeit zum Entlassungszeitpunkt." />
       <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.value[x].extension:Flexible_AU.value[x].value">
       <path value="Observation.value[x].extension.value[x].value" />
+      <definition value="Dezimalzahl zur Quantifizierung geschätzten AU-Dauer." />
       <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.value[x].extension:Flexible_AU.value[x].unit">
       <path value="Observation.value[x].extension.value[x].unit" />
       <short value="Zeiteinheit" />
-      <definition value="Zeiteinheit: Wochen oder Monate (vorgeschrieben über IG)" />
+      <definition value="Zeiteinheit: Wochen oder Monate (vorgeschrieben über IG)." />
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -5065,20 +5073,20 @@
     <element id="Observation.value[x].coding.system">
       <path value="Observation.value[x].coding.system" />
       <short value="AU-Varianten" />
-      <definition value="Einschätzung der Arbeitsunfaehigkeitsvarianten der versicherten Person durch den behandelnden Arzt" />
+      <definition value="Einschätzung der Arbeitsunfaehigkeitsvarianten der versicherten Person durch den behandelnden Arzt." />
       <min value="1" />
       <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Arbeitsunfaehigkeit" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.value[x].coding.code">
       <path value="Observation.value[x].coding.code" />
-      <short value="Kürzel der AU-Varianten" />
+      <short value="Kürzel der AU-Variante" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.value[x].coding.display">
       <path value="Observation.value[x].coding.display" />
-      <short value="Bezeichnung der AU-Varianten" />
+      <short value="Bezeichnung der AU-Variante" />
       <min value="1" />
       <mustSupport value="true" />
     </element>

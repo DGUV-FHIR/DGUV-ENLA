@@ -1157,7 +1157,7 @@
     </element>
     <element id="Observation.code.coding.code">
       <path value="Observation.code.coding.code" />
-      <short value="Code ObservationTyp" />
+      <short value="Kürzel für Observation Typ Wiedereingliederung" />
       <definition value="Code fuer ObservationTyp" />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to refer to a particular code in the system." />
@@ -1171,6 +1171,7 @@
       <type>
         <code value="code" />
       </type>
+      <fixedCode value="WE" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -1218,6 +1219,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="Wiedereingliederung" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -1547,7 +1549,7 @@
       </extension>
       <path value="Observation.effective[x]" />
       <short value="Erster Tag der Wiedereingliederung" />
-      <definition value="Hier wird der erste Tag der stufenweisen Wiedereinliederung angegeben, nur wenn unter value[x] &quot;Ja&quot; steht." />
+      <definition value="Hier wird der erste Tag der stufenweisen Wiedereinliederung angegeben, nur wenn unter value[x].coding.code &quot;Ja&quot; steht." />
       <comment value="At least a date should be present unless this observation is a historical report.  For recording imprecise or &quot;fuzzy&quot; times (For example, a blood glucose measurement taken &quot;after breakfast&quot;) use the [Timing](datatypes.html#timing) datatype which allow the measurement to be tied to regular life events." />
       <requirements value="Knowing when an observation was deemed true is important to its relevance as well as determining trends." />
       <alias value="Occurrence" />
@@ -1715,7 +1717,7 @@
       </extension>
       <path value="Observation.value[x]" />
       <short value="Erfordernis Wiedereingliederung" />
-      <definition value="Beschreibung der Erfordernis einer stufenweisen Wiedereingliederung" />
+      <definition value="Beschreibung der Erfordernis einer stufenweisen Wiedereingliederung." />
       <comment value="An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below." />
       <requirements value="An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations." />
       <min value="1" />
@@ -1986,7 +1988,7 @@
     <element id="Observation.value[x].coding.system">
       <path value="Observation.value[x].coding.system" />
       <short value="Wiedereingliederungsvarianten" />
-      <definition value="Mögliche Varianten bzgl. der Erfordernis einer stufenweisen Wiedereingliederung der versicherten Person" />
+      <definition value="Mögliche Varianten bzgl. der Erfordernis einer stufenweisen Wiedereingliederung der versicherten Person." />
       <comment value="The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously." />
       <requirements value="Need to be unambiguous about the source of the definition of the symbol." />
       <min value="1" />
@@ -2209,8 +2211,8 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Observation.value[x].text" />
-      <short value="Plain text representation of the concept" />
-      <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user." />
+      <short value="Grund Nicht-Beurteilbarkeit" />
+      <definition value="Hier wird ein Grund für die Nicht-Beurteilbarkeit angegeben, nur wenn unter value[x].coding.code/display &quot;kB&quot;/&quot;Arbeitsunfaehig bis&quot; steht." />
       <comment value="Very often the text is the same as a displayName of one of the codings." />
       <requirements value="The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source." />
       <min value="0" />
@@ -4484,9 +4486,10 @@
     </element>
     <element id="Observation.code.coding.code">
       <path value="Observation.code.coding.code" />
-      <short value="Code ObservationTyp" />
+      <short value="Kürzel für Observation Typ Wiedereingliederung" />
       <definition value="Code fuer ObservationTyp" />
       <min value="1" />
+      <fixedCode value="WE" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.code.coding.display">
@@ -4494,6 +4497,7 @@
       <short value="Bezeichnung ObservationTyp" />
       <definition value="Bezeichnung fuer ObservationTyp" />
       <min value="1" />
+      <fixedString value="Wiedereingliederung" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.subject">
@@ -4508,7 +4512,7 @@
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
       <short value="Erster Tag der Wiedereingliederung" />
-      <definition value="Hier wird der erste Tag der stufenweisen Wiedereinliederung angegeben, nur wenn unter value[x] &quot;Ja&quot; steht." />
+      <definition value="Hier wird der erste Tag der stufenweisen Wiedereinliederung angegeben, nur wenn unter value[x].coding.code &quot;Ja&quot; steht." />
       <type>
         <code value="dateTime" />
       </type>
@@ -4517,7 +4521,7 @@
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
       <short value="Erfordernis Wiedereingliederung" />
-      <definition value="Beschreibung der Erfordernis einer stufenweisen Wiedereingliederung" />
+      <definition value="Beschreibung der Erfordernis einer stufenweisen Wiedereingliederung." />
       <min value="1" />
       <type>
         <code value="CodeableConcept" />
@@ -4533,7 +4537,7 @@
     <element id="Observation.value[x].coding.system">
       <path value="Observation.value[x].coding.system" />
       <short value="Wiedereingliederungsvarianten" />
-      <definition value="Mögliche Varianten bzgl. der Erfordernis einer stufenweisen Wiedereingliederung der versicherten Person" />
+      <definition value="Mögliche Varianten bzgl. der Erfordernis einer stufenweisen Wiedereingliederung der versicherten Person." />
       <min value="1" />
       <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Wiedereingliederung" />
       <mustSupport value="true" />
@@ -4552,6 +4556,8 @@
     </element>
     <element id="Observation.value[x].text">
       <path value="Observation.value[x].text" />
+      <short value="Grund Nicht-Beurteilbarkeit" />
+      <definition value="Hier wird ein Grund für die Nicht-Beurteilbarkeit angegeben, nur wenn unter value[x].coding.code/display &quot;kB&quot;/&quot;Arbeitsunfaehig bis&quot; steht." />
       <mustSupport value="true" />
     </element>
   </differential>
