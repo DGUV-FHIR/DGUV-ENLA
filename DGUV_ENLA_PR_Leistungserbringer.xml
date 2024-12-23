@@ -428,8 +428,8 @@
       <short value="An identifier for the person as this agent" />
       <definition value="An identifier that applies to this person in this role." />
       <requirements value="Often, specific identities are assigned for the agent." />
-      <min value="0" />
-      <max value="*" />
+      <min value="1" />
+      <max value="4" />
       <base>
         <path value="Practitioner.identifier" />
         <min value="0" />
@@ -8151,6 +8151,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isModifier value="true" />
       <isModifierReason value="This is labeled as &quot;Is Modifier&quot; because applications should not mistake a temporary or old name etc.for a current/permanent one" />
       <isSummary value="true" />
@@ -8243,6 +8244,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -8383,6 +8385,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -8577,6 +8580,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -8779,6 +8783,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -8989,6 +8994,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -9478,7 +9484,7 @@
       <comment value="Names may be changed, or repudiated, or people may have different names in different contexts. Names may be divided into parts of different type that have variable significance depending on context, though the division into parts does not always matter. With personal names, the different parts may or may not be imbued with some implicit meaning; various cultures associate different importance with the name parts and the degree to which systems must care about name parts around the world varies widely." />
       <requirements value="The name(s) that a Practitioner is known by. Where there are multiple, the name that the practitioner is usually known as should be used in the display." />
       <min value="0" />
-      <max value="1" />
+      <max value="0" />
       <base>
         <path value="Practitioner.name" />
         <min value="0" />
@@ -18137,4 +18143,47 @@
       </mapping>
     </element>
   </snapshot>
+  <differential>
+    <element id="Practitioner.identifier">
+      <path value="Practitioner.identifier" />
+      <min value="1" />
+      <max value="4" />
+    </element>
+    <element id="Practitioner.name:Name">
+      <path value="Practitioner.name" />
+      <sliceName value="Name" />
+    </element>
+    <element id="Practitioner.name:Name.use">
+      <path value="Practitioner.name.use" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.name:Name.family">
+      <path value="Practitioner.name.family" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.name:Name.family.extension:namenszusatz">
+      <path value="Practitioner.name.family.extension" />
+      <sliceName value="namenszusatz" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.name:Name.family.extension:nachname">
+      <path value="Practitioner.name.family.extension" />
+      <sliceName value="nachname" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.name:Name.family.extension:vorsatzwort">
+      <path value="Practitioner.name.family.extension" />
+      <sliceName value="vorsatzwort" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.name:Name.given">
+      <path value="Practitioner.name.given" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.name:Geburtsname">
+      <path value="Practitioner.name" />
+      <sliceName value="Geburtsname" />
+      <max value="0" />
+    </element>
+  </differential>
 </StructureDefinition>
