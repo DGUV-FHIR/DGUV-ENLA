@@ -3,6 +3,7 @@
   <url value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-PrognoseWiederaufnahmeTaetigkeit" />
   <name value="DGUV_ENLA_PR_PrognoseWiederaufnahmeTaetigkeit" />
   <status value="draft" />
+  <description value="Dieses Profil bildet die Prognose darüber ab, inwiefern die versicherte Person ihre bisherige Tätigkeit dauerhaft wieder ausüben kann." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -1349,7 +1350,7 @@
       <definition value="The patient, or group of patients, location, or device this observation is about and into whose record the observation is placed. If the actual focus of the observation is different from the subject (or a sample of, part, or region of the subject), the `focus` element or the `code` itself specifies the actual focus of the observation." />
       <comment value="One would expect this element to be a cardinality of 1..1. The only circumstance in which the subject can be missing is when the observation is made by a device that does not know the patient. In this case, the observation SHALL be matched to a patient through some context/channel matching technique, and at this point, the observation should be updated." />
       <requirements value="Observations have no value if you don't know who or what they're about." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Observation.subject" />
@@ -1377,6 +1378,7 @@
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Reference" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -1716,7 +1718,7 @@
       </extension>
       <path value="Observation.value[x]" />
       <short value="Prognose Wiederaufnahme bisheriger Tätigkeit" />
-      <definition value="Prognose über die Wiederaufnahme der bisherigen beruflichen Tätigkeit der versicherten Person." />
+      <definition value="Prognose über die dauerhafte Wiederaufnahme der bisherigen beruflichen Tätigkeit der versicherten Person." />
       <comment value="An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below." />
       <requirements value="An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations." />
       <min value="1" />
@@ -2211,7 +2213,7 @@
       </extension>
       <path value="Observation.value[x].text" />
       <short value="Einschränkungen bei Wiederaufnahme Tätigkeit" />
-      <definition value="Hier werden die Einschränkungen bei Wiederaufnahme der bisherigen beruflichen Tätigkeit angegeben, aber nur wenn unter value[x] &quot;WAME&quot; steht." />
+      <definition value="Einschränkungen bei Wiederaufnahme der bisherigen beruflichen Tätigkeit, aber nur wenn unter value[x].code &quot;WAME&quot; steht." />
       <comment value="Very often the text is the same as a displayName of one of the codings." />
       <requirements value="The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source." />
       <min value="0" />
@@ -4499,10 +4501,12 @@
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
+      <min value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
@@ -4516,7 +4520,7 @@
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
       <short value="Prognose Wiederaufnahme bisheriger Tätigkeit" />
-      <definition value="Prognose über die Wiederaufnahme der bisherigen beruflichen Tätigkeit der versicherten Person." />
+      <definition value="Prognose über die dauerhafte Wiederaufnahme der bisherigen beruflichen Tätigkeit der versicherten Person." />
       <min value="1" />
       <type>
         <code value="CodeableConcept" />
@@ -4552,7 +4556,7 @@
     <element id="Observation.value[x].text">
       <path value="Observation.value[x].text" />
       <short value="Einschränkungen bei Wiederaufnahme Tätigkeit" />
-      <definition value="Hier werden die Einschränkungen bei Wiederaufnahme der bisherigen beruflichen Tätigkeit angegeben, aber nur wenn unter value[x] &quot;WAME&quot; steht." />
+      <definition value="Einschränkungen bei Wiederaufnahme der bisherigen beruflichen Tätigkeit, aber nur wenn unter value[x].code &quot;WAME&quot; steht." />
       <mustSupport value="true" />
     </element>
   </differential>
