@@ -1549,8 +1549,8 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="Observation.effective[x]" />
-      <short value="Erster Tag der Wiedereingliederung" />
-      <definition value="Hier wird der erste Tag der stufenweisen Wiedereinliederung angegeben, nur wenn unter value[x].coding.code &quot;Ja&quot; steht." />
+      <short value="Clinically relevant time/time-period for observation" />
+      <definition value="The time or time-period the observed value is asserted as being true. For biological subjects - e.g. human patients - this is usually called the &quot;physiologically relevant time&quot;. This is usually either the time of the procedure or of specimen collection, but very often the source of the date/time is not known, only the date/time itself." />
       <comment value="At least a date should be present unless this observation is a historical report.  For recording imprecise or &quot;fuzzy&quot; times (For example, a blood glucose measurement taken &quot;after breakfast&quot;) use the [Timing](datatypes.html#timing) datatype which allow the measurement to be tied to regular life events." />
       <requirements value="Knowing when an observation was deemed true is important to its relevance as well as determining trends." />
       <alias value="Occurrence" />
@@ -1564,6 +1564,15 @@
       <type>
         <code value="dateTime" />
       </type>
+      <type>
+        <code value="Period" />
+      </type>
+      <type>
+        <code value="Timing" />
+      </type>
+      <type>
+        <code value="instant" />
+      </type>
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -1573,7 +1582,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -2212,8 +2220,8 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Observation.value[x].text" />
-      <short value="Grund Nicht-Beurteilbarkeit" />
-      <definition value="Hier wird ein Grund für die Nicht-Beurteilbarkeit angegeben, nur wenn unter value[x].coding.code/display &quot;kB&quot;/&quot;Derzeit noch nicht zu beurteilen.&quot; steht." />
+      <short value="Plain text representation of the concept" />
+      <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user." />
       <comment value="Very often the text is the same as a displayName of one of the codings." />
       <requirements value="The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source." />
       <min value="0" />
@@ -2235,7 +2243,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -4510,15 +4517,6 @@
       </type>
       <mustSupport value="true" />
     </element>
-    <element id="Observation.effective[x]">
-      <path value="Observation.effective[x]" />
-      <short value="Erster Tag der Wiedereingliederung" />
-      <definition value="Hier wird der erste Tag der stufenweisen Wiedereinliederung angegeben, nur wenn unter value[x].coding.code &quot;Ja&quot; steht." />
-      <type>
-        <code value="dateTime" />
-      </type>
-      <mustSupport value="true" />
-    </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
       <short value="Erfordernis Wiedereingliederung" />
@@ -4553,12 +4551,6 @@
       <path value="Observation.value[x].coding.display" />
       <short value="Bezeichnung der Wiedereingliederungsvariante" />
       <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.value[x].text">
-      <path value="Observation.value[x].text" />
-      <short value="Grund Nicht-Beurteilbarkeit" />
-      <definition value="Hier wird ein Grund für die Nicht-Beurteilbarkeit angegeben, nur wenn unter value[x].coding.code/display &quot;kB&quot;/&quot;Derzeit noch nicht zu beurteilen.&quot; steht." />
       <mustSupport value="true" />
     </element>
   </differential>
