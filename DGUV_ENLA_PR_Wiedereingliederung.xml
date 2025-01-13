@@ -1084,7 +1084,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-ObservationTypen" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -1205,8 +1205,8 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Observation.code.coding.display" />
-      <short value="Bezeichnung ObservationTyp" />
-      <definition value="Bezeichnung fuer ObservationTyp" />
+      <short value="Bezeichnung Teilberichtstyp" />
+      <definition value="Bezeichnung für den gewählten Teilberichtstyp" />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
       <min value="1" />
@@ -4481,7 +4481,7 @@
       <short value="CodeSystem ObservationTypen" />
       <definition value="CodeSystem fuer ObservationTypen" />
       <min value="1" />
-      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-ObservationTypen" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.code.coding.code">
@@ -4494,8 +4494,8 @@
     </element>
     <element id="Observation.code.coding.display">
       <path value="Observation.code.coding.display" />
-      <short value="Bezeichnung ObservationTyp" />
-      <definition value="Bezeichnung fuer ObservationTyp" />
+      <short value="Bezeichnung Teilberichtstyp" />
+      <definition value="Bezeichnung für den gewählten Teilberichtstyp" />
       <min value="1" />
       <fixedString value="Wiedereingliederung" />
       <mustSupport value="true" />

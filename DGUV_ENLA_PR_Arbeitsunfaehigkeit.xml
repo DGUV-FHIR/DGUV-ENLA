@@ -1085,7 +1085,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-ObservationTypen" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -4977,7 +4977,7 @@
       <short value="CodeSystem ObservationTypen" />
       <definition value="CodeSystem fuer ObservationTypen" />
       <min value="1" />
-      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-ObservationTypen" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.code.coding.code">

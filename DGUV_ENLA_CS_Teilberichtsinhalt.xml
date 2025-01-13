@@ -1,9 +1,9 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
-    <id value="DGUV_ENLA_CS_ObservationTypen" />
-    <url value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-ObservationTypen" />
+    <id value="DGUV_ENLA_CS_Teilberichtsinhalt" />
+    <url value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
     <version value="0.0.1" />
-    <name value="DGUV_ENLA_CS_ObservationTypen" />
-    <title value="ObservationTypen" />
+    <name value="DGUV_ENLA_CS_Teilberichtsinhalt" />
+    <title value="Teilberichtsinhalt" />
     <status value="draft" />
     <experimental value="false" />
     <publisher value="DGUV (Deutsche Gesellschaft Unfallversicherung e.V.)" />
@@ -33,6 +33,6 @@
     </concept>
 	<concept>
         <code value="BM" />
-        <display value="besondereMassnahmen" />
+        <display value="BesondereMassnahmen" />
 	</concept>
 </CodeSystem>
