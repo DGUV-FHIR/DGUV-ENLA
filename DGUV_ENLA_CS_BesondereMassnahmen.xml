@@ -13,7 +13,7 @@
             <value value="https://www.dguv.de" />
         </telecom>
     </contact>
-    <description value="Dieses CodeSystem enthaelt besondere Massnahmen." />
+    <description value="Dieses CodeSystem enthält die Codes und Displays zur Beschreibung der zum Zeitpunkt der Entlassung aus der stationären Behandlung für die versicherte Person notwendigen besonderen Maßnahmen." />
     <immutable value="false" />        
 	<concept>
         <code value="xx" />
