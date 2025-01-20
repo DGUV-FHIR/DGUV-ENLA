@@ -772,7 +772,7 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="Observation.code" />
-      <short value="Profilkennzeichnung als Teilbericht des ENLA" />
+      <short value="Kennzeichnung des ENLA-Teilberichtsinhalts" />
       <definition value="Describes what was observed. Sometimes this is called the observation &quot;name&quot;." />
       <comment value="*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation." />
       <requirements value="Knowing what kind of observation is being made is essential to understanding the observation." />
@@ -1071,8 +1071,8 @@
     </element>
     <element id="Observation.code.coding.system">
       <path value="Observation.code.coding.system" />
-      <short value="CodeSystem ENLA-Teilberichtypen" />
-      <definition value="CodeSystem fuer ENLA-Teilberichtypen" />
+      <short value="CodeSystem für ENLA-Teilberichtsinhalte" />
+      <definition value="CodeSystem für ENLA-Teilberichtsinhalte" />
       <comment value="The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously." />
       <requirements value="Need to be unambiguous about the source of the definition of the symbol." />
       <min value="1" />
@@ -1158,7 +1158,7 @@
     </element>
     <element id="Observation.code.coding.code">
       <path value="Observation.code.coding.code" />
-      <short value="Kürzel für ENLA-Teilberichttyp Arbeitsunfähigkeit" />
+      <short value="Kürzel für ENLA-Teilberichtsinhalt Arbeitsunfähigkeit" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to refer to a particular code in the system." />
@@ -1206,7 +1206,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Observation.code.coding.display" />
-      <short value="Bezeichnung fürENLA-Teilberichttyp Arbeitsunfähigkeit" />
+      <short value="Bezeichnung für Teilberichtsinhalt Arbeitsunfähigkeit" />
       <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
@@ -1346,7 +1346,7 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="Observation.subject" />
-      <short value="Who and/or what the observation is about" />
+      <short value="Verweis auf betroffene versicherte Person" />
       <definition value="The patient, or group of patients, location, or device this observation is about and into whose record the observation is placed. If the actual focus of the observation is different from the subject (or a sample of, part, or region of the subject), the `focus` element or the `code` itself specifies the actual focus of the observation." />
       <comment value="One would expect this element to be a cardinality of 1..1. The only circumstance in which the subject can be missing is when the observation is made by a device that does not know the patient. In this case, the observation SHALL be matched to a patient through some context/channel matching technique, and at this point, the observation should be updated." />
       <requirements value="Observations have no value if you don't know who or what they're about." />
@@ -4964,7 +4964,7 @@
     </element>
     <element id="Observation.code">
       <path value="Observation.code" />
-      <short value="Profilkennzeichnung als Teilbericht des ENLA" />
+      <short value="Kennzeichnung des ENLA-Teilberichtsinhalts" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.code.coding">
@@ -4975,28 +4975,29 @@
     </element>
     <element id="Observation.code.coding.system">
       <path value="Observation.code.coding.system" />
-      <short value="CodeSystem ENLA-Teilberichtypen" />
-      <definition value="CodeSystem fuer ENLA-Teilberichtypen" />
+      <short value="CodeSystem für ENLA-Teilberichtsinhalte" />
+      <definition value="CodeSystem für ENLA-Teilberichtsinhalte" />
       <min value="1" />
       <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.code.coding.code">
       <path value="Observation.code.coding.code" />
-      <short value="Kürzel für ENLA-Teilberichttyp Arbeitsunfähigkeit" />
+      <short value="Kürzel für ENLA-Teilberichtsinhalt Arbeitsunfähigkeit" />
       <min value="1" />
       <fixedCode value="AU" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.code.coding.display">
       <path value="Observation.code.coding.display" />
-      <short value="Bezeichnung fürENLA-Teilberichttyp Arbeitsunfähigkeit" />
+      <short value="Bezeichnung für Teilberichtsinhalt Arbeitsunfähigkeit" />
       <min value="1" />
       <fixedString value="Arbeitsunfaehigkeit" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
+      <short value="Verweis auf betroffene versicherte Person" />
       <min value="1" />
       <type>
         <code value="Reference" />

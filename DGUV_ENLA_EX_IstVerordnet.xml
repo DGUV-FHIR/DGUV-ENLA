@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-FlexAU" />
-  <name value="DGUV_ENLA_EX_FlexAU" />
+  <url value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-IstVerordnet" />
+  <name value="DGUV_ENLA_EX_IstVerordnet" />
   <status value="draft" />
-  <description value="Flexible Angabe der geschätzen Arbeitsunfähigkeitsdauer" />
+  <description value="Kennzeichnung von Maßnahmen als verordnet / nicht verordnet" />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <context>
     <type value="element" />
-    <expression value="Observation.value[x]" />
+    <expression value="CodeableConcept.coding" />
   </context>
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
@@ -157,7 +157,7 @@
         </extension>
         <code value="http://hl7.org/fhirpath/System.String" />
       </type>
-      <fixedUri value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-FlexAU" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-IstVerordnet" />
       <mapping>
         <identity value="rim" />
         <map value="N/A" />
@@ -181,7 +181,7 @@
         <max value="1" />
       </base>
       <type>
-        <code value="Duration" />
+        <code value="boolean" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -205,12 +205,12 @@
   <differential>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-FlexAU" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-IstVerordnet" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
       <type>
-        <code value="Duration" />
+        <code value="boolean" />
       </type>
     </element>
   </differential>
