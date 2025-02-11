@@ -2,6 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-RehaMassnahmen" />
   <name value="DGUV_ENLA_PR_RehaMassnahmen" />
+  <title value="Reha-Maßnahmen" />
   <status value="draft" />
   <description value="Dieses Profil beschreibt die Erfordernis von Reha-Maßnahmen (z. B. Physiotherapie, EAP, ABMR, BGSW) für die versicherte Person zum Zeitpunkt der Entlassung aus der stationären Behandlung." />
   <fhirVersion value="4.0.1" />

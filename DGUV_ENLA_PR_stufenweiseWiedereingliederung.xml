@@ -2,6 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-stufenweiseWiedereingliederung" />
   <name value="DGUV_ENLA_PR_stufenweiseWiedereingliederung" />
+  <title value="Stufenweise Wiedereingliederung" />
   <status value="draft" />
   <description value="Dieses Profil bildet die Erfordernis einer stufenweisen Wiedereingliederung nach der Entlassung einer versicherten Person aus der stationären Behandlung ab." />
   <fhirVersion value="4.0.1" />

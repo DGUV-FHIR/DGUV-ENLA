@@ -2,6 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-PrognoseWiederaufnahmeTaetigkeit" />
   <name value="DGUV_ENLA_PR_PrognoseWiederaufnahmeTaetigkeit" />
+  <title value="Prognose Tätigkeitswiederaufnahme" />
   <status value="draft" />
   <description value="Dieses Profil bildet die Prognose darüber ab, inwiefern die versicherte Person ihre bisherige Tätigkeit dauerhaft wieder ausüben kann." />
   <fhirVersion value="4.0.1" />
