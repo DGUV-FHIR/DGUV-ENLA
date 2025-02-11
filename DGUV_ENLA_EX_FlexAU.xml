@@ -2,6 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-FlexAU" />
   <name value="DGUV_ENLA_EX_FlexAU" />
+  <title value="Erweiterung für flexibel geschätze Arbeitsunfähigkeitsdauer" />
   <status value="draft" />
   <description value="Flexible Angabe der geschätzen Arbeitsunfähigkeitsdauer" />
   <fhirVersion value="4.0.1" />

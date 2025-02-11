@@ -2,6 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-IstVerordnet" />
   <name value="DGUV_ENLA_EX_IstVerordnet" />
+  <title value="Erweiterung für Kennzeichnung als (nicht) verordnet" />
   <status value="draft" />
   <description value="Kennzeichnung von Maßnahmen als verordnet / nicht verordnet" />
   <fhirVersion value="4.0.1" />

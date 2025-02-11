@@ -2,6 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-Besonderheiten" />
   <name value="DGUV_ENLA_EX_Besonderheiten" />
+  <title value="Erweiterung für Besonderheiten im Behandlungsverlauf" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
