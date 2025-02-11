@@ -2,6 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://fhir.dguv.de/ENLA/Bundle/DGUV-ENLA-PR-Bundle" />
   <name value="DGUV_ENLA_PR_Bundle" />
+  <title value="ENLA-Bundle" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
