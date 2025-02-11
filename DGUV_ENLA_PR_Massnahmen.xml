@@ -2,6 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://fhir.dguv.de/ENLA/CarePlan/DGUV-ENLA-PR-Massnahmen" />
   <name value="DGUV_ENLA_PR_Massnahmen" />
+  <title value="Maßnahmen" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />

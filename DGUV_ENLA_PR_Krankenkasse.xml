@@ -2,6 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Krankenkasse.xml" />
   <name value="DGUV_ENLA_PR_Krankenkasse" />
+  <title value="Krankenkasse" />
   <status value="draft" />
   <description value="Dieses Profil bildet die Krankenkasse ab." />
   <fhirVersion value="4.0.1" />

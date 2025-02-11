@@ -2,6 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringer" />
   <name value="DGUV_ENLA_PR_Leistungserbringer" />
+  <title value="Leistungserbringer" />
   <status value="draft" />
   <description value="Dieses Profil bildet eine Person, die formell für die Erbringung von Gesundheitsdienstleistungen oder verwandten Dienstleistungen verantwortlich ist, ab." />
   <fhirVersion value="4.0.1" />

@@ -2,7 +2,9 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://fhir.dguv.de/ENLA/Organisation/DGUV-ENLA-Organisation-WeiterbehandelndeOrganisation" />
   <name value="DGUV_ENLA_Organisation_WeiterbehandelndeOrganisation" />
+  <title value="Weiterbehandelnde Organisation" />
   <status value="draft" />
+  <description value="Dieses Profil bildet die weiterbehandelnde Organisation ab." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
