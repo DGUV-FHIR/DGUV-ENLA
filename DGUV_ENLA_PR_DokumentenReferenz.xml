@@ -2,6 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://fhir.dguv.de/ENLA/DocumentReference/DGUV-ENLA-PR-DokumentenReferenz" />
   <name value="DGUV_ENLA_PR_DokumentenReferenz" />
+  <title value="Dokumentreferenzen" />
   <status value="draft" />
   <description value="Dieses Profil bildet zusäztlich zu übermittelnde Anhänge ab." />
   <fhirVersion value="4.0.1" />

@@ -2,6 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-ErhobenerBefund" />
   <name value="DGUV_ENLA_PR_ErhobenerBefund" />
+  <title value="Erhobener Befund" />
   <status value="draft" />
   <description value="Dieses Profil bildet während des Krankenhausaufenthalts erhobene Befunde ab." />
   <fhirVersion value="4.0.1" />
