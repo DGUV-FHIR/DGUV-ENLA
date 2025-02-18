@@ -376,6 +376,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -427,6 +428,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <isModifier value="false" />
       <mapping>
         <identity value="rim" />
@@ -4456,4 +4458,15 @@
       </mapping>
     </element>
   </snapshot>
+  <differential>
+    <element id="Condition.extension">
+      <path value="Condition.extension" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.extension:UnfallJargondiagnose">
+      <path value="Condition.extension" />
+      <sliceName value="UnfallJargondiagnose" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
 </StructureDefinition>
