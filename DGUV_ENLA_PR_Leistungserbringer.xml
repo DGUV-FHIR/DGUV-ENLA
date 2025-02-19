@@ -6507,6 +6507,7 @@
         <expression value="prefix.all($this.extension('http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier').empty() or $this.hasValue())" />
         <source value="http://fhir.de/StructureDefinition/humanname-de-basis" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -8016,6 +8017,7 @@
         <expression value="prefix.all($this.extension('http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier').empty() or $this.hasValue())" />
         <source value="http://fhir.de/StructureDefinition/humanname-de-basis" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -8512,7 +8514,7 @@
       <path value="Practitioner.name.family.extension.value[x]" />
       <short value="Namenszusatz" />
       <definition value="Namenszusatz zum Nachnamen z.B. Gräfin, Prinz oder Fürst" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Extension.value[x]" />
@@ -8531,6 +8533,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -8734,6 +8737,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -8937,6 +8941,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -18155,9 +18160,14 @@
       <path value="Practitioner.identifier" />
       <max value="4" />
     </element>
+    <element id="Practitioner.name">
+      <path value="Practitioner.name" />
+      <mustSupport value="true" />
+    </element>
     <element id="Practitioner.name:Name">
       <path value="Practitioner.name" />
       <sliceName value="Name" />
+      <mustSupport value="true" />
     </element>
     <element id="Practitioner.name:Name.use">
       <path value="Practitioner.name.use" />
@@ -18176,14 +18186,27 @@
       <sliceName value="namenszusatz" />
       <mustSupport value="true" />
     </element>
+    <element id="Practitioner.name:Name.family.extension:namenszusatz.value[x]">
+      <path value="Practitioner.name.family.extension.value[x]" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
     <element id="Practitioner.name:Name.family.extension:nachname">
       <path value="Practitioner.name.family.extension" />
       <sliceName value="nachname" />
       <mustSupport value="true" />
     </element>
+    <element id="Practitioner.name:Name.family.extension:nachname.value[x]">
+      <path value="Practitioner.name.family.extension.value[x]" />
+      <mustSupport value="true" />
+    </element>
     <element id="Practitioner.name:Name.family.extension:vorsatzwort">
       <path value="Practitioner.name.family.extension" />
       <sliceName value="vorsatzwort" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.name:Name.family.extension:vorsatzwort.value[x]">
+      <path value="Practitioner.name.family.extension.value[x]" />
       <mustSupport value="true" />
     </element>
     <element id="Practitioner.name:Name.given">
