@@ -7100,7 +7100,7 @@
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Element.extension" />
@@ -7127,6 +7127,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -7150,7 +7151,7 @@
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Element.extension" />
@@ -7178,6 +7179,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -7325,6 +7327,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -7828,6 +7831,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -8226,6 +8230,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -11522,7 +11527,19 @@
     </element>
     <element id="Organization.address:Strassenanschrift.extension">
       <path value="Organization.address.extension" />
+      <min value="1" />
       <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Strassenanschrift.extension:Stadtteil">
+      <path value="Organization.address.extension" />
+      <sliceName value="Stadtteil" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Strassenanschrift.extension:Stadtteil.value[x]">
+      <path value="Organization.address.extension.value[x]" />
+      <mustSupport value="true" />
     </element>
     <element id="Organization.address:Strassenanschrift.type">
       <path value="Organization.address.type" />
@@ -11546,6 +11563,10 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Organization.address:Strassenanschrift.line.extension:Strasse.value[x]">
+      <path value="Organization.address.line.extension.value[x]" />
+      <mustSupport value="true" />
+    </element>
     <element id="Organization.address:Strassenanschrift.line.extension:Hausnummer">
       <path value="Organization.address.line.extension" />
       <sliceName value="Hausnummer" />
@@ -11555,6 +11576,10 @@
     <element id="Organization.address:Strassenanschrift.line.extension:Adresszusatz">
       <path value="Organization.address.line.extension" />
       <sliceName value="Adresszusatz" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Strassenanschrift.line.extension:Adresszusatz.value[x]">
+      <path value="Organization.address.line.extension.value[x]" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.address:Strassenanschrift.city">
