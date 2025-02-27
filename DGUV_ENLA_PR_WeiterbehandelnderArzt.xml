@@ -4,12 +4,12 @@
   <name value="DGUV_ENLA_PR_WeiterbehandelnderArzt" />
   <title value="Weiterbehandelnder Arzt" />
   <status value="draft" />
-  <description value="Deses Profil bildet den Weiterbehandelnder Arzt (z. B. D-Arzt, Allgemeinarzt) ab." />
+  <description value="Dieses Profil bildet den weiterbehandelnden Arzt (z. B. D-Arzt, Allgemeinarzt) ab." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="PractitionerRole" />
-  <baseDefinition value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-WeiterbehandelnderArzt" />
+  <baseDefinition value="http://fhir.dguv.de/Basis/PractitionerRole/DGUV-Basis-PR-WeiterbehandelnderArzt" />
   <derivation value="constraint" />
   <snapshot>
     <element id="PractitionerRole">
@@ -608,7 +608,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://fhir.dguv.de/Basis/Practitioner/DGUV-Basis-PR-Leistungserbringer" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringer" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -909,7 +909,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://fhir.dguv.de/Basis/Organization/DGUV-Basis-PR-WeiterbehandelndeOrganisation" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-WeiterbehandelndeOrganisation" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -3601,7 +3601,7 @@
       <path value="PractitionerRole.practitioner" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://fhir.dguv.de/Basis/Practitioner/DGUV-Basis-PR-Leistungserbringer" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringer" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -3613,7 +3613,7 @@
       <path value="PractitionerRole.organization" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://fhir.dguv.de/Basis/Organization/DGUV-Basis-PR-WeiterbehandelndeOrganisation" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-WeiterbehandelndeOrganisation" />
       </type>
       <mustSupport value="true" />
     </element>
