@@ -401,6 +401,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <isModifier value="false" />
       <mapping>
         <identity value="rim" />
@@ -575,6 +576,7 @@
         <expression value="prefix.all($this.extension('http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier').empty() or $this.hasValue())" />
         <source value="http://fhir.de/StructureDefinition/humanname-de-basis" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -774,7 +776,7 @@
       <definition value="Der vollständige Familienname, einschließlich aller Vorsatz- und Zusatzwörter, mit Leerzeichen getrennt." />
       <comment value="Family Name may be decomposed into specific parts using extensions (de, nl, es related cultures)." />
       <alias value="surname" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="HumanName.family" />
@@ -793,6 +795,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -855,7 +858,7 @@
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="0" />
+      <min value="1" />
       <max value="*" />
       <base>
         <path value="Element.extension" />
@@ -882,6 +885,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -933,6 +937,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -1099,7 +1104,7 @@
       <comment value="If the person's surname has legally changed to become (or incorporate) the surname of the person's partner or spouse, this is the person's surname immediately prior to such change. Often this is the person's &quot;maiden name&quot;." />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Element.extension" />
@@ -1127,6 +1132,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -1278,6 +1284,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -1480,6 +1487,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -1519,7 +1527,7 @@
       <comment value="If only initials are recorded, they may be used in place of the full name parts. Initials may be separated into multiple given names but often aren't due to paractical limitations.  This element is not called &quot;first name&quot; since given names do not always come first." />
       <alias value="first name" />
       <alias value="middle name" />
-      <min value="0" />
+      <min value="1" />
       <max value="*" />
       <base>
         <path value="HumanName.given" />
@@ -1539,6 +1547,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -1582,6 +1591,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -1671,6 +1681,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -1722,6 +1733,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <isModifier value="false" />
       <mapping>
         <identity value="rim" />
@@ -1870,6 +1882,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="EntityNamePartQualifier" />
@@ -1935,6 +1948,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -2112,6 +2126,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -3280,6 +3295,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -8021,4 +8037,82 @@
       </mapping>
     </element>
   </snapshot>
+  <differential>
+    <element id="Organization.extension:Mitgliedsname">
+      <path value="Organization.extension" />
+      <sliceName value="Mitgliedsname" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.extension:Mitgliedsname.value[x]">
+      <path value="Organization.extension.value[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.extension:Mitgliedsname.value[x].family">
+      <path value="Organization.extension.value[x].family" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.extension:Mitgliedsname.value[x].family.extension">
+      <path value="Organization.extension.value[x].family.extension" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.extension:Mitgliedsname.value[x].family.extension:namenszusatz">
+      <path value="Organization.extension.value[x].family.extension" />
+      <sliceName value="namenszusatz" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.extension:Mitgliedsname.value[x].family.extension:nachname">
+      <path value="Organization.extension.value[x].family.extension" />
+      <sliceName value="nachname" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.extension:Mitgliedsname.value[x].family.extension:nachname.value[x]">
+      <path value="Organization.extension.value[x].family.extension.value[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.extension:Mitgliedsname.value[x].family.extension:vorsatzwort">
+      <path value="Organization.extension.value[x].family.extension" />
+      <sliceName value="vorsatzwort" />
+    </element>
+    <element id="Organization.extension:Mitgliedsname.value[x].family.extension:vorsatzwort.value[x]">
+      <path value="Organization.extension.value[x].family.extension.value[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.extension:Mitgliedsname.value[x].given">
+      <path value="Organization.extension.value[x].given" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.extension:Mitgliedsname.value[x].prefix">
+      <path value="Organization.extension.value[x].prefix" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.extension:Mitgliedsname.value[x].prefix.extension">
+      <path value="Organization.extension.value[x].prefix.extension" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.extension:Mitgliedsname.value[x].prefix.extension:prefix-qualifier">
+      <path value="Organization.extension.value[x].prefix.extension" />
+      <sliceName value="prefix-qualifier" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.extension:Mitgliedsname.value[x].prefix.extension:prefix-qualifier.value[x]">
+      <path value="Organization.extension.value[x].prefix.extension.value[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.extension:Mitgliedsname.value[x].suffix">
+      <path value="Organization.extension.value[x].suffix" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.identifier">
+      <path value="Organization.identifier" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.name">
+      <path value="Organization.name" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
 </StructureDefinition>
