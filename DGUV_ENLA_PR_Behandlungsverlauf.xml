@@ -3482,8 +3482,8 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="Observation.derivedFrom" />
-      <short value="Related measurements the observation is made from" />
-      <definition value="The target resource that represents a measurement from which this observation value is derived. For example, a calculated anion gap or a fetal measurement based on an ultrasound image." />
+      <short value="Referenz auf OP-Bericht" />
+      <definition value="Wenn vorhanden, OP-Bericht beifügen" />
       <comment value="All the reference choices that are listed in this element can represent clinical observations and other measurements that may be the source for a derived value.  The most common reference will be another Observation.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below." />
       <min value="0" />
       <max value="*" />
@@ -4080,6 +4080,8 @@
     </element>
     <element id="Observation.derivedFrom">
       <path value="Observation.derivedFrom" />
+      <short value="Referenz auf OP-Bericht" />
+      <definition value="Wenn vorhanden, OP-Bericht beifügen" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://fhir.dguv.de/ENLA/DocumentReference/DGUV-ENLA-PR-DokumentenReferenz" />
