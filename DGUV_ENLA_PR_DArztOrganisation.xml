@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-BehandelndeEinrichtung" />
-  <name value="DGUV_ENLA_PR_BehandelndeEinrichtung" />
-  <title value="Behandelnde Einrichtung" />
+  <url value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-DArztOrganisation" />
+  <name value="DGUV_ENLA_PR_DArztOrganisation" />
+  <title value="D-Arzt Organisation" />
   <status value="draft" />
-  <description value="Dieses Profil bildet die behandelnde Einrichtung ab." />
+  <description value="Dieses Profil stellt die Einrichtung dar, der der D-Arzt zugeordnet ist." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="Organization" />
-  <baseDefinition value="http://fhir.dguv.de/Basis/Organization/DGUV-Basis-PR-BehandelndeEinrichtung" />
+  <baseDefinition value="http://fhir.dguv.de/Basis/Organization/DGUV-Basis-PR-DArztOrganisation" />
   <derivation value="constraint" />
   <snapshot>
     <element id="Organization">
@@ -437,8 +437,8 @@
       <short value="Identifies this organization  across multiple systems" />
       <definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems." />
       <requirements value="Organizations are known by a variety of ids. Some institutions maintain several, and most collect identifiers for exchange with other organizations concerning the organization." />
-      <min value="0" />
-      <max value="*" />
+      <min value="1" />
+      <max value="5" />
       <base>
         <path value="Organization.identifier" />
         <min value="0" />
@@ -457,6 +457,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -503,7 +504,7 @@
       <short value="Institutionskennzeichen (IKNR)" />
       <definition value="Als eindeutiges Merkmal zur Identifizierung von Vertragspartnern, die für die Sozialversicherungsträger Leistungen erbringen wird die IKNR durch die Arbeitsgemeinschaft Institutionskennzeichen vergeben." />
       <requirements value="Organizations are known by a variety of ids. Some institutions maintain several, and most collect identifiers for exchange with other organizations concerning the organization." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Organization.identifier" />
@@ -524,6 +525,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -791,6 +793,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -844,6 +847,7 @@
         <expression value="matches('^[0-9]{9}$')" />
         <source value="http://fhir.de/StructureDefinition/identifier-iknr" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -6385,6 +6389,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -6449,7 +6454,7 @@
       <definition value="Details for all kinds of technology mediated contact points for a person or organization, including telephone, email, etc." />
       <comment value="The use code 'home' is not to be used. Note that these contacts are not the contact details of people who are employed by or represent the organization, but official contacts for the organization itself." />
       <requirements value="Human contact for the organization." />
-      <min value="0" />
+      <min value="1" />
       <max value="*" />
       <base>
         <path value="Organization.telecom" />
@@ -6486,6 +6491,7 @@
         <xpath value="count(f:use[@value='home']) = 0" />
         <source value="http://hl7.org/fhir/StructureDefinition/Organization" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -6620,6 +6626,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -6671,6 +6678,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -6859,8 +6867,8 @@
       <definition value="An address for the organization." />
       <comment value="Organization may have multiple addresses with different uses or applicable periods. The use code 'home' is not to be used." />
       <requirements value="May need to keep track of the organization's addresses for contacting, billing or reporting requirements." />
-      <min value="0" />
-      <max value="*" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="Organization.address" />
         <min value="0" />
@@ -6887,6 +6895,7 @@
         <xpath value="count(f:use[@value='home']) = 0" />
         <source value="http://hl7.org/fhir/StructureDefinition/Organization" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -6929,7 +6938,7 @@
       <definition value="Eine Adresse gemäß postalischer Konventionen (im Gegensatz zu bspw. GPS-Koordinaten). Die Adresse kann sowohl zur Zustellung von Postsendungen oder zum Aufsuchen von Orten, die keine gültige Postadresse haben, verwendet werden.&#xD;&#xA;&#xD;&#xA;Die verwendeten Extensions in diesem Profil bilden die Struktur der Adresse ab, wie sie im VSDM-Format der elektronischen Versichertenkarte verwendet wird.&#xD;&#xA;&#xD;&#xA;Insbesondere bei ausländischen Adresse oder Adressen, die nicht durch Einlesen einer elektronischen Versichertenkarte erfasst wurden, sind abweichende Strukturen möglich. Die Verwendung der Extensions ist nicht verpflichtend." />
       <comment value="Note: address is intended to describe postal addresses for administrative purposes, not to describe absolute geographical coordinates.  Postal addresses are often used as proxies for physical locations (also see the [Location](location.html#) resource)." />
       <requirements value="May need to keep track of the organization's addresses for contacting, billing or reporting requirements." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Organization.address" />
@@ -7017,6 +7026,7 @@
         <expression value="extension('http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct').empty() or all(line contains extension('http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct').value.ofType(string))" />
         <source value="http://fhir.de/StructureDefinition/address-de-basis" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -7090,8 +7100,8 @@
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="0" />
-      <max value="*" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -7117,6 +7127,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -7140,7 +7151,7 @@
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Element.extension" />
@@ -7168,6 +7179,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -7315,6 +7327,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -7410,6 +7423,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -7488,8 +7502,8 @@
       <short value="Straßenname mit Hausnummer oder Postfach sowie weitere Angaben zur Zustellung" />
       <definition value="Diese Komponente kann Straßennamen, Hausnummer, Appartmentnummer, Postfach, c/o sowie weitere Zustellungshinweise enthalten. Die Informationen können in mehrere line-Komponenten aufgeteilt werden.&#xD;&#xA;Bei Verwendung der Extensions, um Straße, Hausnnummer und Postleitzahl strukturiert zu übermitteln, müssen diese Informationen stets vollständig auch in der line-Komponente, die sie erweitern, enthalten sein, um es Systemen, die diese Extensions nicht verwenden zu ermöglichen, auf diese Informationen zugreifen zu können." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
-      <min value="0" />
-      <max value="3" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="Address.line" />
         <min value="0" />
@@ -7523,6 +7537,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -7589,8 +7604,8 @@
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="0" />
-      <max value="*" />
+      <min value="2" />
+      <max value="3" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -7616,6 +7631,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -7639,7 +7655,7 @@
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Element.extension" />
@@ -7667,6 +7683,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -7814,6 +7831,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -7837,7 +7855,7 @@
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Element.extension" />
@@ -7865,6 +7883,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -8063,6 +8082,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -8210,6 +8230,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -8446,7 +8467,7 @@
       <definition value="The name of the city, town, suburb, village or other community or delivery center." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <alias value="Municpality" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Address.city" />
@@ -8469,6 +8490,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -8592,7 +8614,7 @@
       <definition value="Postleitzahl gemäß der im jeweiligen Land gültigen Konventionen" />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <alias value="Zip" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Address.postalCode" />
@@ -8615,6 +8637,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -8773,7 +8796,7 @@
       <comment value="Note: address is intended to describe postal addresses for administrative purposes, not to describe absolute geographical coordinates.  Postal addresses are often used as proxies for physical locations (also see the [Location](location.html#) resource)." />
       <requirements value="May need to keep track of the organization's addresses for contacting, billing or reporting requirements." />
       <min value="0" />
-      <max value="1" />
+      <max value="0" />
       <base>
         <path value="Organization.address" />
         <min value="0" />
@@ -11452,4 +11475,127 @@
       </mapping>
     </element>
   </snapshot>
+  <differential>
+    <element id="Organization.identifier">
+      <path value="Organization.identifier" />
+      <min value="1" />
+      <max value="5" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.identifier:Institutionskennzeichen">
+      <path value="Organization.identifier" />
+      <sliceName value="Institutionskennzeichen" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.identifier:Institutionskennzeichen.system">
+      <path value="Organization.identifier.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.identifier:Institutionskennzeichen.value">
+      <path value="Organization.identifier.value" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.name">
+      <path value="Organization.name" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.telecom">
+      <path value="Organization.telecom" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.telecom.system">
+      <path value="Organization.telecom.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.telecom.value">
+      <path value="Organization.telecom.value" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address">
+      <path value="Organization.address" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Strassenanschrift">
+      <path value="Organization.address" />
+      <sliceName value="Strassenanschrift" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Strassenanschrift.extension">
+      <path value="Organization.address.extension" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Strassenanschrift.extension:Stadtteil">
+      <path value="Organization.address.extension" />
+      <sliceName value="Stadtteil" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Strassenanschrift.extension:Stadtteil.value[x]">
+      <path value="Organization.address.extension.value[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Strassenanschrift.type">
+      <path value="Organization.address.type" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Strassenanschrift.line">
+      <path value="Organization.address.line" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Strassenanschrift.line.extension">
+      <path value="Organization.address.line.extension" />
+      <min value="2" />
+      <max value="3" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Strassenanschrift.line.extension:Strasse">
+      <path value="Organization.address.line.extension" />
+      <sliceName value="Strasse" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Strassenanschrift.line.extension:Strasse.value[x]">
+      <path value="Organization.address.line.extension.value[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Strassenanschrift.line.extension:Hausnummer">
+      <path value="Organization.address.line.extension" />
+      <sliceName value="Hausnummer" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Strassenanschrift.line.extension:Adresszusatz">
+      <path value="Organization.address.line.extension" />
+      <sliceName value="Adresszusatz" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Strassenanschrift.line.extension:Adresszusatz.value[x]">
+      <path value="Organization.address.line.extension.value[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Strassenanschrift.city">
+      <path value="Organization.address.city" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Strassenanschrift.postalCode">
+      <path value="Organization.address.postalCode" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Postfach">
+      <path value="Organization.address" />
+      <sliceName value="Postfach" />
+      <max value="0" />
+    </element>
+  </differential>
 </StructureDefinition>

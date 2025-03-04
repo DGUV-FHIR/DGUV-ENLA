@@ -1,0 +1,33 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="DGUV_ENLA_CS_PrognoseWiederaufnahmeTaetigkeit" />
+  <url value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-PrognoseWiederaufnahmeTaetigkeit" />
+  <version value="0.0.1" />
+  <name value="DGUV_ENLA_CS_PrognoseWiederaufnahmeTaetigkeit" />
+  <title value="Prognose bzgl. Wiederaufnahme der bisherigen Taetigkeit" />
+  <status value="draft" />
+  <experimental value="false" />
+  <publisher value="DGUV (Deutsche Gesellschaft Unfallversicherung e.V.)" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="https://www.dguv.de" />
+    </telecom>
+  </contact>
+  <description value="Dieses CodeSystem enthaelt Codes zur Beschreibung der Prognose zur Wiederaufnahme der bisherigen beruflichen Taetigkeit der versicherten Person." />
+  <concept>
+    <code value="WAOE" />
+    <display value="Die bisherige Taetigkeit kann voraussichtlich ohne wesentliche Einschraenkungen ausgeuebt werden." />
+  </concept>
+  <concept>
+    <code value="WAME" />
+    <display value="Die bisherige Taetigkeit kann voraussichtlich mit Einschraenkungen ausgeuebt werden." />
+  </concept>
+  <concept>
+    <code value="WANM" />
+    <display value="Die bisherige Taetigkeit kann voraussichtlich nicht wiederaufgenommen werden." />
+  </concept>
+  <concept>
+    <code value="WAKB" />
+    <display value="Eine Prognose ueber die Wiederaufnahme der bisherige Taetigkeit ist derzeit nicht moeglich." />
+  </concept>
+</CodeSystem>

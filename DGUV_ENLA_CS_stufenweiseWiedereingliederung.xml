@@ -1,0 +1,29 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="DGUV_ENLA_CS_stufenweiseWiedereingliederung" />
+  <url value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-stufenweiseWiedereingliederung" />
+  <version value="0.0.1" />
+  <name value="DGUV_ENLA_CS_stufenweiseWiedereingliederung" />
+  <title value="stufenweiseWiedereingliederung" />
+  <status value="draft" />
+  <experimental value="false" />
+  <publisher value="DGUV (Deutsche Gesellschaft Unfallversicherung e.V.)" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="https://www.dguv.de" />
+    </telecom>
+  </contact>
+  <description value="Dieses CodeSystem enthaelt Codes zur Beschreibung der Erfordernis einer stufenweisen Wiedereingliederung." />
+  <concept>
+    <code value="Ja" />
+    <display value="Ja, es ist eine stufenweise Wiedereingliederung erforderlich." />
+  </concept>
+  <concept>
+    <code value="Nein" />
+    <display value="Nein, es ist keine stufenweise Wiedereingliederung erforderlich." />
+  </concept>
+  <concept>
+    <code value="kB" />
+    <display value="Derzeit noch nicht zu beurteilen." />
+  </concept>
+</CodeSystem>

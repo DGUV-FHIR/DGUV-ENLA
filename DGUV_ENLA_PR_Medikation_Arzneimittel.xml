@@ -2,6 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-Medikation-Arzneimittel" />
   <name value="DGUV_ENLA_PR_Medikation_Arzneimittel" />
+  <title value="Medikation Arzneimittel" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
@@ -1852,6 +1853,7 @@
       <type>
         <code value="code" />
       </type>
+      <fixedCode value="active" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -7956,6 +7958,10 @@
     <element id="Medication.code.text">
       <path value="Medication.code.text" />
       <min value="1" />
+    </element>
+    <element id="Medication.status">
+      <path value="Medication.status" />
+      <fixedCode value="active" />
     </element>
     <element id="Medication.form.coding:kbvDarreichungsform">
       <path value="Medication.form.coding" />

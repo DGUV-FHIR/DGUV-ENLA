@@ -2,6 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringer" />
   <name value="DGUV_ENLA_PR_Leistungserbringer" />
+  <title value="Leistungserbringer" />
   <status value="draft" />
   <description value="Dieses Profil bildet eine Person, die formell für die Erbringung von Gesundheitsdienstleistungen oder verwandten Dienstleistungen verantwortlich ist, ab." />
   <fhirVersion value="4.0.1" />
@@ -429,7 +430,7 @@
       <definition value="An identifier that applies to this person in this role." />
       <requirements value="Often, specific identities are assigned for the agent." />
       <min value="0" />
-      <max value="*" />
+      <max value="4" />
       <base>
         <path value="Practitioner.identifier" />
         <min value="0" />
@@ -6506,6 +6507,7 @@
         <expression value="prefix.all($this.extension('http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier').empty() or $this.hasValue())" />
         <source value="http://fhir.de/StructureDefinition/humanname-de-basis" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -8015,6 +8017,7 @@
         <expression value="prefix.all($this.extension('http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier').empty() or $this.hasValue())" />
         <source value="http://fhir.de/StructureDefinition/humanname-de-basis" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -8151,6 +8154,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isModifier value="true" />
       <isModifierReason value="This is labeled as &quot;Is Modifier&quot; because applications should not mistake a temporary or old name etc.for a current/permanent one" />
       <isSummary value="true" />
@@ -8243,6 +8247,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -8332,6 +8337,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -8383,6 +8389,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -8507,7 +8514,7 @@
       <path value="Practitioner.name.family.extension.value[x]" />
       <short value="Namenszusatz" />
       <definition value="Namenszusatz zum Nachnamen z.B. Gräfin, Prinz oder Fürst" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Extension.value[x]" />
@@ -8526,6 +8533,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -8577,6 +8585,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -8728,6 +8737,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -8779,6 +8789,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -8930,6 +8941,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -8989,6 +9001,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -9032,6 +9045,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -9121,6 +9135,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -9172,6 +9187,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <isModifier value="false" />
       <mapping>
         <identity value="rim" />
@@ -9320,6 +9336,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="EntityNamePartQualifier" />
@@ -9385,6 +9402,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -9478,7 +9496,7 @@
       <comment value="Names may be changed, or repudiated, or people may have different names in different contexts. Names may be divided into parts of different type that have variable significance depending on context, though the division into parts does not always matter. With personal names, the different parts may or may not be imbued with some implicit meaning; various cultures associate different importance with the name parts and the degree to which systems must care about name parts around the world varies widely." />
       <requirements value="The name(s) that a Practitioner is known by. Where there are multiple, the name that the practitioner is usually known as should be used in the display." />
       <min value="0" />
-      <max value="1" />
+      <max value="0" />
       <base>
         <path value="Practitioner.name" />
         <min value="0" />
@@ -10987,7 +11005,7 @@
       <comment value="Person may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently and to help with identification.  These typically will have home numbers, or mobile numbers that are not role specific." />
       <requirements value="Need to know how to reach a practitioner independent to any roles the practitioner may have." />
       <min value="0" />
-      <max value="*" />
+      <max value="0" />
       <base>
         <path value="Practitioner.telecom" />
         <min value="0" />
@@ -11389,7 +11407,7 @@
       <comment value="Note: address is intended to describe postal addresses for administrative purposes, not to describe absolute geographical coordinates.  Postal addresses are often used as proxies for physical locations (also see the [Location](location.html#) resource)." />
       <requirements value="The home/mailing address of the practitioner is often required for employee administration purposes, and also for some rostering services where the start point (practitioners home) can be used in calculations." />
       <min value="0" />
-      <max value="*" />
+      <max value="0" />
       <base>
         <path value="Practitioner.address" />
         <min value="0" />
@@ -16886,7 +16904,7 @@
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Needed to address the person correctly." />
       <min value="0" />
-      <max value="1" />
+      <max value="0" />
       <base>
         <path value="Practitioner.gender" />
         <min value="0" />
@@ -17248,7 +17266,7 @@
       <definition value="The date of birth for the practitioner." />
       <requirements value="Needed for identification." />
       <min value="0" />
-      <max value="1" />
+      <max value="0" />
       <base>
         <path value="Practitioner.birthDate" />
         <min value="0" />
@@ -18137,4 +18155,105 @@
       </mapping>
     </element>
   </snapshot>
+  <differential>
+    <element id="Practitioner.identifier">
+      <path value="Practitioner.identifier" />
+      <max value="4" />
+    </element>
+    <element id="Practitioner.name">
+      <path value="Practitioner.name" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.name:Name">
+      <path value="Practitioner.name" />
+      <sliceName value="Name" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.name:Name.use">
+      <path value="Practitioner.name.use" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.name:Name.family">
+      <path value="Practitioner.name.family" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.name:Name.family.extension">
+      <path value="Practitioner.name.family.extension" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.name:Name.family.extension:namenszusatz">
+      <path value="Practitioner.name.family.extension" />
+      <sliceName value="namenszusatz" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.name:Name.family.extension:namenszusatz.value[x]">
+      <path value="Practitioner.name.family.extension.value[x]" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.name:Name.family.extension:nachname">
+      <path value="Practitioner.name.family.extension" />
+      <sliceName value="nachname" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.name:Name.family.extension:nachname.value[x]">
+      <path value="Practitioner.name.family.extension.value[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.name:Name.family.extension:vorsatzwort">
+      <path value="Practitioner.name.family.extension" />
+      <sliceName value="vorsatzwort" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.name:Name.family.extension:vorsatzwort.value[x]">
+      <path value="Practitioner.name.family.extension.value[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.name:Name.given">
+      <path value="Practitioner.name.given" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.name:Name.prefix">
+      <path value="Practitioner.name.prefix" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.name:Name.prefix.extension">
+      <path value="Practitioner.name.prefix.extension" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.name:Name.prefix.extension:prefix-qualifier">
+      <path value="Practitioner.name.prefix.extension" />
+      <sliceName value="prefix-qualifier" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.name:Name.prefix.extension:prefix-qualifier.value[x]">
+      <path value="Practitioner.name.prefix.extension.value[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.name:Name.suffix">
+      <path value="Practitioner.name.suffix" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.name:Geburtsname">
+      <path value="Practitioner.name" />
+      <sliceName value="Geburtsname" />
+      <max value="0" />
+    </element>
+    <element id="Practitioner.telecom">
+      <path value="Practitioner.telecom" />
+      <max value="0" />
+    </element>
+    <element id="Practitioner.address">
+      <path value="Practitioner.address" />
+      <max value="0" />
+    </element>
+    <element id="Practitioner.gender">
+      <path value="Practitioner.gender" />
+      <max value="0" />
+    </element>
+    <element id="Practitioner.birthDate">
+      <path value="Practitioner.birthDate" />
+      <max value="0" />
+    </element>
+  </differential>
 </StructureDefinition>

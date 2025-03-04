@@ -2,6 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Konsiliarbefund" />
   <name value="DGUV_ENLA_PR_Konsiliarbefund" />
+  <title value="Konsiliarbefund" />
   <status value="draft" />
   <description value="Dieses Profil bildet Konsiliarbefunde ab." />
   <fhirVersion value="4.0.1" />

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-BehandelndeEinrichtung" />
-  <name value="DGUV_ENLA_PR_BehandelndeEinrichtung" />
-  <title value="Behandelnde Einrichtung" />
+  <url value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-WeiterbehandelndeOrganisation" />
+  <name value="DGUV_ENLA_PR_WeiterbehandelndeOrganisation" />
+  <title value="Weiterbehandelnde Organisation" />
   <status value="draft" />
-  <description value="Dieses Profil bildet die behandelnde Einrichtung ab." />
+  <description value="Dieses Profil bildet die weiterbehandelnde Organisation ab." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="Organization" />
-  <baseDefinition value="http://fhir.dguv.de/Basis/Organization/DGUV-Basis-PR-BehandelndeEinrichtung" />
+  <baseDefinition value="http://fhir.dguv.de/Basis/Organization/DGUV-Basis-PR-WeiterbehandelndeOrganisation" />
   <derivation value="constraint" />
   <snapshot>
     <element id="Organization">
@@ -5395,6 +5395,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -5437,6 +5438,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -5480,6 +5482,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -5526,6 +5529,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -5758,6 +5762,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -5800,6 +5805,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -5843,6 +5849,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -5889,6 +5896,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -6121,6 +6129,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -6163,6 +6172,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -6206,6 +6216,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -6252,6 +6263,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -6385,6 +6397,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -6859,8 +6872,8 @@
       <definition value="An address for the organization." />
       <comment value="Organization may have multiple addresses with different uses or applicable periods. The use code 'home' is not to be used." />
       <requirements value="May need to keep track of the organization's addresses for contacting, billing or reporting requirements." />
-      <min value="0" />
-      <max value="*" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="Organization.address" />
         <min value="0" />
@@ -11452,4 +11465,75 @@
       </mapping>
     </element>
   </snapshot>
+  <differential>
+    <element id="Organization.type.coding:IHE-Code">
+      <path value="Organization.type.coding" />
+      <sliceName value="IHE-Code" />
+    </element>
+    <element id="Organization.type.coding:IHE-Code.system">
+      <path value="Organization.type.coding.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.type.coding:IHE-Code.version">
+      <path value="Organization.type.coding.version" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.type.coding:IHE-Code.code">
+      <path value="Organization.type.coding.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.type.coding:IHE-Code.display">
+      <path value="Organization.type.coding.display" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.type.coding:HL7-Fachschluesselgruppe">
+      <path value="Organization.type.coding" />
+      <sliceName value="HL7-Fachschluesselgruppe" />
+    </element>
+    <element id="Organization.type.coding:HL7-Fachschluesselgruppe.system">
+      <path value="Organization.type.coding.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.type.coding:HL7-Fachschluesselgruppe.version">
+      <path value="Organization.type.coding.version" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.type.coding:HL7-Fachschluesselgruppe.code">
+      <path value="Organization.type.coding.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.type.coding:HL7-Fachschluesselgruppe.display">
+      <path value="Organization.type.coding.display" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.type.coding:HL7-Fachschluesselgruppe-erweitert">
+      <path value="Organization.type.coding" />
+      <sliceName value="HL7-Fachschluesselgruppe-erweitert" />
+    </element>
+    <element id="Organization.type.coding:HL7-Fachschluesselgruppe-erweitert.system">
+      <path value="Organization.type.coding.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.type.coding:HL7-Fachschluesselgruppe-erweitert.version">
+      <path value="Organization.type.coding.version" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.type.coding:HL7-Fachschluesselgruppe-erweitert.code">
+      <path value="Organization.type.coding.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.type.coding:HL7-Fachschluesselgruppe-erweitert.display">
+      <path value="Organization.type.coding.display" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.name">
+      <path value="Organization.name" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address">
+      <path value="Organization.address" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+  </differential>
 </StructureDefinition>

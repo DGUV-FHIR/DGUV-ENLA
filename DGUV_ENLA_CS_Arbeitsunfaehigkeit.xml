@@ -13,22 +13,22 @@
             <value value="https://www.dguv.de" />
         </telecom>
     </contact>
-    <description value="Dieses CodeSystem enthaelt Codes zur Einschätzung der Arbeitsunfaehigkeit der Versicherten Person durch den behandelnden Arzt." />
+    <description value="Dieses CodeSystem enthaelt Codes zur Einschätzung der Arbeitsunfaehigkeit der versicherten Person durch den behandelnden Arzt." />
     <immutable value="false" />        
 	<concept>
         <code value="AF" />
-        <display value="Arbeitsfaehig." />
+        <display value="Arbeitsfaehig" />
     </concept>
 	<concept>
-        <code value="AU" />
-        <display value="Arbeitsunfaehig." />
+        <code value="AUBIS" />
+        <display value="Arbeitsunfaehig bis" />
     </concept>
 	<concept>
-        <code value="AU6W" />
-        <display value="Voraussichtlich länger als 6 Wochen arbeitsunfähig" />
+        <code value="AUFLEX" />
+        <display value="Arbeitsunfaehig mit flexibler Dauer" />
     </concept>
     <concept>
-        <code value="AU3M" />
-        <display value="Voraussichtlich länger als 3 Monate arbeitsunfähig" />
+        <code value="AUUZ" />
+        <display value="Arbeitsunfaehig bis auf unbestimmte Zeit" />
     </concept>
 </CodeSystem>
