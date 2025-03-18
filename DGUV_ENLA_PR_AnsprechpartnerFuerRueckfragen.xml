@@ -316,7 +316,7 @@
       <alias value="extensions" />
       <alias value="user content" />
       <min value="0" />
-      <max value="*" />
+      <max value="1" />
       <base>
         <path value="DomainResource.extension" />
         <min value="0" />
@@ -342,6 +342,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -393,6 +394,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <isModifier value="false" />
       <mapping>
         <identity value="rim" />
@@ -447,8 +449,8 @@
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="0" />
-      <max value="*" />
+      <min value="1" />
+      <max value="2" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -474,6 +476,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -497,8 +500,8 @@
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="0" />
-      <max value="*" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -524,6 +527,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -667,6 +671,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -4329,6 +4334,33 @@
     </element>
   </snapshot>
   <differential>
+    <element id="PractitionerRole.extension">
+      <path value="PractitionerRole.extension" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.extension:NichtAerztlicherKontakt">
+      <path value="PractitionerRole.extension" />
+      <sliceName value="NichtAerztlicherKontakt" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.extension:NichtAerztlicherKontakt.extension">
+      <path value="PractitionerRole.extension.extension" />
+      <min value="1" />
+      <max value="2" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.extension:NichtAerztlicherKontakt.extension:NichtAerztlicherKontakt">
+      <path value="PractitionerRole.extension.extension" />
+      <sliceName value="NichtAerztlicherKontakt" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.extension:NichtAerztlicherKontakt.extension:NichtAerztlicherKontakt.value[x]">
+      <path value="PractitionerRole.extension.extension.value[x]" />
+      <mustSupport value="true" />
+    </element>
     <element id="PractitionerRole.practitioner">
       <path value="PractitionerRole.practitioner" />
       <type>
