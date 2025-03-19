@@ -1,5 +1,5 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
-    <id value="DGUV_ENLA_CS_Arbeitsunfaehigkeit" />
+    <id value="DGUV-ENLA-CS-Arbeitsunfaehigkeit" />
     <url value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Arbeitsunfaehigkeit" />
     <version value="0.0.1" />
     <name value="DGUV_ENLA_CS_Arbeitsunfaehigkeit" />
@@ -25,7 +25,7 @@
     </concept>
 	<concept>
         <code value="AUFLEX" />
-        <display value="Arbeitsunfaehig mit flexibler Dauer" />
+        <display value="Arbeitsunfaehig voraussichtliche Dauer" />
     </concept>
     <concept>
         <code value="AUUZ" />
