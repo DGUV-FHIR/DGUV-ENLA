@@ -795,6 +795,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -848,6 +849,7 @@
         <expression value="matches('^[0-9]{9}$')" />
         <source value="http://fhir.de/StructureDefinition/identifier-iknr" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -6393,10 +6395,19 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
+<<<<<<< HEAD
     <element id="Organization.identifier:Telematik-ID">
       <path value="Organization.identifier" />
       <sliceName value="Telematik-ID" />
       <max value="1" />
+=======
+    <element id="Organization.identifier:Institutionskennzeichen.system">
+      <path value="Organization.identifier.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.identifier:Institutionskennzeichen.value">
+      <path value="Organization.identifier.value" />
+>>>>>>> 69a8be32cf40709e0ac117c064ac31ee750d4e3f
       <mustSupport value="true" />
     </element>
     <element id="Organization.name">
