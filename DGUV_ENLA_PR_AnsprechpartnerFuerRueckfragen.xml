@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="DGUV-ENLA-PR-AnsprechpartnerFuerRueckfragen" />
   <url value="http://fhir.dguv.de/ENLA/PractitionerRole/DGUV-ENLA-PR-AnsprechpartnerFuerRueckfragen" />
   <name value="DGUV_ENLA_PR_AnsprechpartnerFuerRueckfragen" />
   <title value="Ansprechpartner für Rückfragen" />
   <status value="draft" />
-  <description value="Dieses Profil bildet  ...." />
+  <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
+  <description value="Dieses Profil bildet den ärztlichen oder nicht-ärztlichen Ansprechpartner für Rückfragen ab." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -650,8 +652,9 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="PractitionerRole.extension.extension.value[x]" />
-      <short value="Value of extension" />
+      <short value="Kennzeichnung als nicht-ärztlicher Kontakt" />
       <definition value="True=NichtAerztlicherKontakt" />
+      <comment value="True: NICHT-ärztlicher Kontakt" />
       <min value="1" />
       <max value="1" />
       <base>
@@ -722,6 +725,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -844,8 +848,9 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="PractitionerRole.extension.extension.value[x]" />
-      <short value="Value of extension" />
+      <short value="Konkrete Funktionseinheit des Ansprechpartners" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
+      <comment value="Funktionseinheit: z. B. Abteilung/Station/Sekretariat ..." />
       <min value="1" />
       <max value="1" />
       <base>
@@ -865,6 +870,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -1329,7 +1335,7 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="PractitionerRole.practitioner" />
-      <short value="Practitioner that is able to provide the defined services for the organization" />
+      <short value="Profiltyp für referenzierten Ansprechpartner" />
       <definition value="Practitioner that is able to provide the defined services for the organization." />
       <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository." />
       <min value="1" />
@@ -1457,7 +1463,7 @@
     </element>
     <element id="PractitionerRole.practitioner.reference">
       <path value="PractitionerRole.practitioner.reference" />
-      <short value="Literal reference, Relative, internal or absolute URL" />
+      <short value="Konkrete Referenz auf Ansprechpartner" />
       <definition value="A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources." />
       <comment value="Using absolute URLs provides a stable scalable approach suitable for a cloud/web context, while using relative/logical references provides a flexible approach suitable for use when trading across closed eco-system boundaries.   Absolute URLs do not need to point to a FHIR RESTful server, though this is the preferred approach. If the URL conforms to the structure &quot;/[type]/[id]&quot; then it should be assumed that the reference is to a FHIR RESTful server." />
       <min value="1" />
@@ -1630,9 +1636,9 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="PractitionerRole.organization" />
-      <short value="Organization where the roles are available" />
+      <short value="Mögliche Profiltypen referenzierter Organisationen" />
       <definition value="The organization where the Practitioner performs the roles associated." />
-      <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository." />
+      <comment value="Der (nicht-/)ärztlicheAnsprechpartner für Rückfragen kann sowohl einer DArzt-Organisation (z. B. behandelndes Krankenhaus) oder einer anderen Organisation (z. B. Gemeinschaftspraxis des D-Arztes) angehören. Für beide Fälle muss eine Referenzierung auf das jeweils passenden Organisationsprofil (“DGUV_ENLA_PR_DArztOrganisation” oder “DGUV_ENLA_PR_BehandelndeEinrichtung”) ermöglicht werden." />
       <min value="1" />
       <max value="1" />
       <base>
@@ -1643,6 +1649,7 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-DArztOrganisation" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-BehandelndeEinrichtung" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -1758,7 +1765,7 @@
     </element>
     <element id="PractitionerRole.organization.reference">
       <path value="PractitionerRole.organization.reference" />
-      <short value="Literal reference, Relative, internal or absolute URL" />
+      <short value="Konkrete Referenz auf Ansprechpartnerorganisation" />
       <definition value="A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources." />
       <comment value="Using absolute URLs provides a stable scalable approach suitable for a cloud/web context, while using relative/logical references provides a flexible approach suitable for use when trading across closed eco-system boundaries.   Absolute URLs do not need to point to a FHIR RESTful server, though this is the preferred approach. If the URL conforms to the structure &quot;/[type]/[id]&quot; then it should be assumed that the reference is to a FHIR RESTful server." />
       <min value="1" />
@@ -3503,6 +3510,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="Konkrete Verbindungsdaten" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -4359,10 +4367,24 @@
     </element>
     <element id="PractitionerRole.extension:NichtAerztlicherKontakt.extension:NichtAerztlicherKontakt.value[x]">
       <path value="PractitionerRole.extension.extension.value[x]" />
+      <short value="Kennzeichnung als nicht-ärztlicher Kontakt" />
+      <comment value="True: NICHT-ärztlicher Kontakt" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.extension:NichtAerztlicherKontakt.extension:Funktionseinheit">
+      <path value="PractitionerRole.extension.extension" />
+      <sliceName value="Funktionseinheit" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.extension:NichtAerztlicherKontakt.extension:Funktionseinheit.value[x]">
+      <path value="PractitionerRole.extension.extension.value[x]" />
+      <short value="Konkrete Funktionseinheit des Ansprechpartners" />
+      <comment value="Funktionseinheit: z. B. Abteilung/Station/Sekretariat ..." />
       <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.practitioner">
       <path value="PractitionerRole.practitioner" />
+      <short value="Profiltyp für referenzierten Ansprechpartner" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringer" />
@@ -4371,19 +4393,24 @@
     </element>
     <element id="PractitionerRole.practitioner.reference">
       <path value="PractitionerRole.practitioner.reference" />
+      <short value="Konkrete Referenz auf Ansprechpartner" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.organization">
       <path value="PractitionerRole.organization" />
+      <short value="Mögliche Profiltypen referenzierter Organisationen" />
+      <comment value="Der (nicht-/)ärztlicheAnsprechpartner für Rückfragen kann sowohl einer DArzt-Organisation (z. B. behandelndes Krankenhaus) oder einer anderen Organisation (z. B. Gemeinschaftspraxis des D-Arztes) angehören. Für beide Fälle muss eine Referenzierung auf das jeweils passenden Organisationsprofil (“DGUV_ENLA_PR_DArztOrganisation” oder “DGUV_ENLA_PR_BehandelndeEinrichtung”) ermöglicht werden." />
       <type>
         <code value="Reference" />
         <targetProfile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-DArztOrganisation" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-BehandelndeEinrichtung" />
       </type>
       <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.organization.reference">
       <path value="PractitionerRole.organization.reference" />
+      <short value="Konkrete Referenz auf Ansprechpartnerorganisation" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -4400,6 +4427,7 @@
     </element>
     <element id="PractitionerRole.telecom.value">
       <path value="PractitionerRole.telecom.value" />
+      <fixedString value="Konkrete Verbindungsdaten" />
       <mustSupport value="true" />
     </element>
   </differential>
