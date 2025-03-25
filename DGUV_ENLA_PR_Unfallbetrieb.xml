@@ -1874,6 +1874,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -2472,6 +2473,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -5848,6 +5850,7 @@
       <path value="Organization.address.line.extension" />
       <min value="2" />
       <max value="3" />
+      <mustSupport value="true" />
     </element>
     <element id="Organization.address:Strassenanschrift.line.extension:Strasse">
       <path value="Organization.address.line.extension" />
@@ -5868,6 +5871,10 @@
     <element id="Organization.address:Strassenanschrift.line.extension:Adresszusatz">
       <path value="Organization.address.line.extension" />
       <sliceName value="Adresszusatz" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Strassenanschrift.line.extension:Adresszusatz.value[x]">
+      <path value="Organization.address.line.extension.value[x]" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.address:Strassenanschrift.city">
