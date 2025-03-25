@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="DGUV-ENLA-PR-Arbeitsunfaehigkeit" />
   <url value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Arbeitsunfaehigkeit" />
   <name value="DGUV_ENLA_PR_Arbeitsunfaehigkeit" />
   <title value="Arbeitsunfähigkeit" />
   <status value="draft" />
-  <description value="Dieses Profil beschreibt die Einschätzung der Arbeitsunfähigkeit einer versicherten Person." />
+  <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
+  <description value="Dieses Profil beschreibt die Einschätzung der Arbeitsunfähigkeit der versicherten Person durch den behandelnden Arzt." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -1551,8 +1553,8 @@
       </extension>
       <path value="Observation.effective[x]" />
       <short value="Letzter Tag der Arbeitsunfähigkeit" />
-      <definition value="Hier wird der letzte Tag der Arbeitsunfähigkeit angegeben, nur wenn unter value[x].coding.code/display &quot;AUBIS&quot;/&quot;Arbeitsunfaehig bis&quot; steht." />
-      <comment value="At least a date should be present unless this observation is a historical report.  For recording imprecise or &quot;fuzzy&quot; times (For example, a blood glucose measurement taken &quot;after breakfast&quot;) use the [Timing](datatypes.html#timing) datatype which allow the measurement to be tied to regular life events." />
+      <definition value="The time or time-period the observed value is asserted as being true. For biological subjects - e.g. human patients - this is usually called the &quot;physiologically relevant time&quot;. This is usually either the time of the procedure or of specimen collection, but very often the source of the date/time is not known, only the date/time itself." />
+      <comment value="Letzter Tag der Arbeitsunfähigkeit; nur wenn value[x].coding.code/display = &quot;AUBIS&quot;/&quot;Arbeitsunfaehig bis&quot;" />
       <requirements value="Knowing when an observation was deemed true is important to its relevance as well as determining trends." />
       <alias value="Occurrence" />
       <min value="0" />
@@ -1719,8 +1721,8 @@
       </extension>
       <path value="Observation.value[x]" />
       <short value="Angabe über die Arbeitsunfähigkeit der versicherten Person" />
-      <definition value="Angabe darüber, ob die versicherte Person &quot;Arbeitsfähig&quot;, &quot;Arbeitsunfähig bis&quot;, &quot;Arbeitsunfaehig mit flexibler Dauer&quot; oder &quot;Arbeitsunfaehig bis auf unbestimmte Zeit&quot; ist." />
-      <comment value="An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below." />
+      <definition value="The information determined as a result of making the observation, if the information has a simple value." />
+      <comment value="Angabe darüber, ob die versicherte Person &quot;Arbeitsfaehig&quot; (AF), &quot;Arbeitsunfaehig bis&quot; (AUBIS), &quot;Arbeitsunfaehig voraussichtliche Dauer&quot; (AUFLEX) oder &quot;Arbeitsunfaehig bis auf unbestimmte Zeit&quot; (AUUZ) ist" />
       <requirements value="An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations." />
       <min value="1" />
       <max value="1" />
@@ -1861,9 +1863,9 @@
       </extension>
       <path value="Observation.value[x].extension" />
       <sliceName value="Flexible_AU" />
-      <short value="Flexible Angabe der AU-Dauer" />
-      <definition value="Flexible Angabe der AU-Dauer (Wert und Zeiteinheit), wenn kein konkretes Datum, sondern nur eine grobe Abschätzung genannt werden kann (AUFLEX)." />
-      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
+      <short value="Angabe der voraussichtlichen AU-Dauer" />
+      <definition value="Optional Extension Element - found in all resources." />
+      <comment value="Angabe der voraussichtlichen AU-Dauer (Wert und Zeiteinheit), wenn kein konkretes Datum, sondern nur eine grobe Abschätzung genannt werden kann (AUFLEX) und nur dann" />
       <alias value="extensions" />
       <alias value="user content" />
       <min value="0" />
@@ -2018,8 +2020,8 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="Observation.value[x].extension.value[x]" />
-      <short value="Value of extension" />
-      <definition value="Geschätzter Zeitraum für die Arbeitsunfähigkeit zum Entlassungszeitpunkt." />
+      <short value="Geschätzter Zeitraum für Arbeitsunfähigkeit zum Entlassungszeitpunkt" />
+      <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
       <min value="1" />
       <max value="1" />
       <base>
@@ -2224,9 +2226,9 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Observation.value[x].extension.value[x].unit" />
-      <short value="Zeiteinheit" />
-      <definition value="Zeiteinheit: Wochen oder Monate (vorgeschrieben über IG)." />
-      <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
+      <short value="Einheit des Zeitraums" />
+      <definition value="A human-readable form of the unit." />
+      <comment value="Als Zeiteinheit nur Wochen oder Monate verwenden" />
       <requirements value="There are many representations for units of measure and in many contexts, particular representations are fixed and required. I.e. mcg for micrograms." />
       <min value="1" />
       <max value="1" />
@@ -2574,7 +2576,7 @@
       <path value="Observation.value[x].coding.code" />
       <short value="Kürzel der AU-Variante" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
-      <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
+      <comment value="Bei &quot;AF&quot; (&quot;Arbeitsfaehig&quot;): KEINE Wiedereingliederung" />
       <requirements value="Need to refer to a particular code in the system." />
       <min value="1" />
       <max value="1" />
@@ -5009,7 +5011,7 @@
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
       <short value="Letzter Tag der Arbeitsunfähigkeit" />
-      <definition value="Hier wird der letzte Tag der Arbeitsunfähigkeit angegeben, nur wenn unter value[x].coding.code/display &quot;AUBIS&quot;/&quot;Arbeitsunfaehig bis&quot; steht." />
+      <comment value="Letzter Tag der Arbeitsunfähigkeit; nur wenn value[x].coding.code/display = &quot;AUBIS&quot;/&quot;Arbeitsunfaehig bis&quot;" />
       <type>
         <code value="dateTime" />
       </type>
@@ -5018,7 +5020,7 @@
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
       <short value="Angabe über die Arbeitsunfähigkeit der versicherten Person" />
-      <definition value="Angabe darüber, ob die versicherte Person &quot;Arbeitsfähig&quot;, &quot;Arbeitsunfähig bis&quot;, &quot;Arbeitsunfaehig mit flexibler Dauer&quot; oder &quot;Arbeitsunfaehig bis auf unbestimmte Zeit&quot; ist." />
+      <comment value="Angabe darüber, ob die versicherte Person &quot;Arbeitsfaehig&quot; (AF), &quot;Arbeitsunfaehig bis&quot; (AUBIS), &quot;Arbeitsunfaehig voraussichtliche Dauer&quot; (AUFLEX) oder &quot;Arbeitsunfaehig bis auf unbestimmte Zeit&quot; (AUUZ) ist" />
       <min value="1" />
       <type>
         <code value="CodeableConcept" />
@@ -5038,8 +5040,8 @@
     <element id="Observation.value[x].extension:Flexible_AU">
       <path value="Observation.value[x].extension" />
       <sliceName value="Flexible_AU" />
-      <short value="Flexible Angabe der AU-Dauer" />
-      <definition value="Flexible Angabe der AU-Dauer (Wert und Zeiteinheit), wenn kein konkretes Datum, sondern nur eine grobe Abschätzung genannt werden kann (AUFLEX)." />
+      <short value="Angabe der voraussichtlichen AU-Dauer" />
+      <comment value="Angabe der voraussichtlichen AU-Dauer (Wert und Zeiteinheit), wenn kein konkretes Datum, sondern nur eine grobe Abschätzung genannt werden kann (AUFLEX) und nur dann" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -5050,7 +5052,7 @@
     </element>
     <element id="Observation.value[x].extension:Flexible_AU.value[x]">
       <path value="Observation.value[x].extension.value[x]" />
-      <definition value="Geschätzter Zeitraum für die Arbeitsunfähigkeit zum Entlassungszeitpunkt." />
+      <short value="Geschätzter Zeitraum für Arbeitsunfähigkeit zum Entlassungszeitpunkt" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -5062,8 +5064,8 @@
     </element>
     <element id="Observation.value[x].extension:Flexible_AU.value[x].unit">
       <path value="Observation.value[x].extension.value[x].unit" />
-      <short value="Zeiteinheit" />
-      <definition value="Zeiteinheit: Wochen oder Monate (vorgeschrieben über IG)." />
+      <short value="Einheit des Zeitraums" />
+      <comment value="Als Zeiteinheit nur Wochen oder Monate verwenden" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -5084,6 +5086,7 @@
     <element id="Observation.value[x].coding.code">
       <path value="Observation.value[x].coding.code" />
       <short value="Kürzel der AU-Variante" />
+      <comment value="Bei &quot;AF&quot; (&quot;Arbeitsfaehig&quot;): KEINE Wiedereingliederung" />
       <min value="1" />
       <mustSupport value="true" />
     </element>

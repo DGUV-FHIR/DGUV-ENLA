@@ -1,34 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
-    <id value="DGUV_ENLA_CS_Arbeitsunfaehigkeit" />
-    <url value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Arbeitsunfaehigkeit" />
-    <version value="0.0.1" />
-    <name value="DGUV_ENLA_CS_Arbeitsunfaehigkeit" />
-    <title value="Arbeitsunfaehigkeit" />
-    <status value="draft" />
-    <experimental value="false" />
-    <publisher value="DGUV (Deutsche Gesellschaft Unfallversicherung e.V.)" />
-    <contact>
-        <telecom>
-            <system value="url" />
-            <value value="https://www.dguv.de" />
-        </telecom>
-    </contact>
-    <description value="Dieses CodeSystem enthaelt Codes zur Einschätzung der Arbeitsunfaehigkeit der versicherten Person durch den behandelnden Arzt." />
-    <immutable value="false" />        
-	<concept>
-        <code value="AF" />
-        <display value="Arbeitsfaehig" />
-    </concept>
-	<concept>
-        <code value="AUBIS" />
-        <display value="Arbeitsunfaehig bis" />
-    </concept>
-	<concept>
-        <code value="AUFLEX" />
-        <display value="Arbeitsunfaehig mit flexibler Dauer" />
-    </concept>
-    <concept>
-        <code value="AUUZ" />
-        <display value="Arbeitsunfaehig bis auf unbestimmte Zeit" />
-    </concept>
+  <id value="DGUV-ENLA-CS-Arbeitsunfaehigkeit" />
+  <url value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Arbeitsunfaehigkeit" />
+  <version value="0.0.1" />
+  <name value="DGUV_ENLA_CS_Arbeitsunfaehigkeit" />
+  <title value="Arbeitsunfaehigkeit" />
+  <status value="draft" />
+  <experimental value="false" />
+  <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="https://www.dguv.de" />
+    </telecom>
+  </contact>
+  <description value="Dieses CodeSystem enthaelt Codes zur Einschätzung der Arbeitsunfaehigkeit der versicherten Person durch den behandelnden Arzt." />
+  <content value="complete"/>
+  <concept>
+    <code value="AF" />
+    <display value="Arbeitsfaehig" />
+  </concept>
+  <concept>
+    <code value="AUBIS" />
+    <display value="Arbeitsunfaehig bis" />
+  </concept>
+  <concept>
+    <code value="AUFLEX" />
+    <display value="Arbeitsunfaehig voraussichtliche Dauer" />
+  </concept>
+  <concept>
+    <code value="AUUZ" />
+    <display value="Arbeitsunfaehig bis auf unbestimmte Zeit" />
+  </concept>
 </CodeSystem>
