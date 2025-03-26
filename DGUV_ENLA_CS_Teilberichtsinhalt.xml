@@ -34,5 +34,9 @@
 	<concept>
         <code value="BM" />
         <display value="BesondereMassnahmen" />
+		 </concept>
+	<concept>
+        <code value="TH" />
+        <display value="Therapien" />
 	</concept>
 </CodeSystem>
