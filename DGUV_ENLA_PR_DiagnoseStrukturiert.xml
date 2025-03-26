@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-Diagnose" />
-  <name value="DGUV_ENLA_PR_Diagnose" />
+  <id value="DGUV-ENLA-PR-DiagnoseStrukturiert" />
+  <url value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseStrukturiert" />
+  <name value="DGUV_ENLA_PR_DiagnoseStrukturiert" />
   <title value="Diagnose" />
   <status value="draft" />
+  <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
   <description value="Dieses Profil enthält diagnostisch relevante Informationen. Es können entweder Unfallabhängige oder Unfallunabhängige Informationen abgelegt werden." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
@@ -552,7 +554,7 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="Condition.extension.value[x]" />
-      <short value="Value of extension" />
+      <short value="Kennzeichnung als unfallabhängige Verletzungen" />
       <definition value="true = Dieses Profil bezieht sich auf die Feststellung und Beurteilung von Verletzungen, Schäden oder anderen gesundheitlichen Folgen, die als Ergebnis eines Unfalls aufgetreten sind.&#xD;&#xA;false = Dieses Profil bezieht sich auf NICHTunfallbedingte Verletzungen, Schäden oder andere Gesundheitsfolgen." />
       <comment value="true = Unfallabhängige &#xD;&#xA;false = Unfallunabhängige" />
       <min value="1" />
@@ -1024,7 +1026,7 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="Condition.code" />
-      <short value="Identification of the condition, problem or diagnosis" />
+      <short value="Diagnosecode" />
       <definition value="In diesem Element wird der Diagnosecode aufgeführt. Eine ICD-10 Codierung ist an dieser Stelle verpflichtent." />
       <comment value="Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination." />
       <requirements value="0..1 to account for primarily narrative only resources." />
@@ -4053,7 +4055,7 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="Condition.subject" />
-      <short value="Who has the condition?" />
+      <short value="Verweis auf betroffene versicherte Person" />
       <definition value="Indicates the patient or group who the condition record is associated with." />
       <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository." />
       <requirements value="Group is typically used for veterinary or public health use cases." />
@@ -4199,7 +4201,7 @@
     </element>
     <element id="Condition.subject.reference">
       <path value="Condition.subject.reference" />
-      <short value="Literal reference, Relative, internal or absolute URL" />
+      <short value="Konkreter Verweis auf versicherte Person" />
       <definition value="A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources." />
       <comment value="Using absolute URLs provides a stable scalable approach suitable for a cloud/web context, while using relative/logical references provides a flexible approach suitable for use when trading across closed eco-system boundaries.   Absolute URLs do not need to point to a FHIR RESTful server, though this is the preferred approach. If the URL conforms to the structure &quot;/[type]/[id]&quot; then it should be assumed that the reference is to a FHIR RESTful server." />
       <min value="1" />
@@ -5454,6 +5456,7 @@
     </element>
     <element id="Condition.extension:Unfalldiagnose.value[x]">
       <path value="Condition.extension.value[x]" />
+      <short value="Kennzeichnung als unfallabhängige Verletzungen" />
       <mustSupport value="true" />
     </element>
     <element id="Condition.clinicalStatus">
@@ -5470,6 +5473,7 @@
     </element>
     <element id="Condition.code">
       <path value="Condition.code" />
+      <short value="Diagnosecode" />
       <mustSupport value="true" />
     </element>
     <element id="Condition.code.coding">
@@ -5523,6 +5527,7 @@
     </element>
     <element id="Condition.subject">
       <path value="Condition.subject" />
+      <short value="Verweis auf betroffene versicherte Person" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson" />
@@ -5531,6 +5536,7 @@
     </element>
     <element id="Condition.subject.reference">
       <path value="Condition.subject.reference" />
+      <short value="Konkreter Verweis auf versicherte Person" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
