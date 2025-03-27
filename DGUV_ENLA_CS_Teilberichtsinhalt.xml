@@ -6,15 +6,14 @@
     <title value="Teilberichtsinhalt" />
     <status value="draft" />
     <experimental value="false" />
-    <publisher value="DGUV (Deutsche Gesellschaft Unfallversicherung e.V.)" />
+    <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
     <contact>
         <telecom>
             <system value="url" />
             <value value="https://www.dguv.de" />
         </telecom>
     </contact>
-    <description value="Dieses CodeSystem enthaelt Codes zur differenzierteren Kennzeichnung von Profilen auf der Grundlage der Ressource Observation." />
-    <immutable value="false" />        
+    <description value="Dieses CodeSystem enthält die Codes und Displays zur differenzierteren Kennzeichnung von Profilen auf der Grundlage der Ressource Observation." />       
 	<concept>
         <code value="AU" />
         <display value="Arbeitsunfaehigkeit" />
@@ -32,9 +31,17 @@
         <display value="RehaMassnahmen" />
     </concept>
 	<concept>
+        <code value="HEILM" />
+        <display value="Heilmittel" />
+	</concept>
+	<concept>
+        <code value="HILFSM" />
+        <display value="Hilfsmittel" />
+	</concept>
+	<concept>
         <code value="BM" />
         <display value="BesondereMassnahmen" />
-		 </concept>
+	</concept>
 	<concept>
         <code value="TH" />
         <display value="Therapien" />

@@ -1,0 +1,89 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="DGUV_ENLA_CS_Hilfsmittel" />
+  <url value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Hilfsmittel" />
+  <version value="0.0.1" />
+  <name value="DGUV_ENLA_CS_Hilfsmittel" />
+  <title value="Hilfsmittel" />
+  <status value="draft" />
+  <experimental value="false" />
+  <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="https://www.dguv.de" />
+    </telecom>
+  </contact>
+  <description value="Dieses CodeSystem enthält die Codes und Displays zur Beschreibung der zum Zeitpunkt der Entlassung aus der stationären Behandlung für die versicherte Person notwendigen Hilfsmittel." />
+  <concept>
+    <code value="PUEX" />
+    <display value="Prothesen der unteren Extremitäten" />
+  </concept>
+  <concept>
+    <code value="POEX" />
+    <display value="Prothesen der oberen Extremitäten" />
+  </concept>
+  <concept>
+    <code value="ORTHHM" />
+    <display value="Orthetische Hilfsmittel und Bandagen" />
+  </concept>
+  <concept>
+    <code value="HMKOMPR" />
+    <display value="Hilfsmittel zur Kompressionstherapie" />
+  </concept>
+  <concept>
+    <code value="OSCHUH" />
+    <display value="Orthopädische Schuhversorgung" />
+  </concept>
+  <concept>
+    <code value="HANDS" />
+    <display value="Handschuhe" />
+  </concept>
+  <concept>
+    <code value="KAUGS" />
+    <display value="Kunstaugen und Sehhilfen" />
+  </concept>
+  <concept>
+    <code value="BFH" />
+    <display value="Blindenführhund und fremde Führung" />
+  </concept>
+  <concept>
+    <code value="HSYS" />
+    <display value="Hörsysteme" />
+  </concept>
+  <concept>
+    <code value="ZERS" />
+    <display value="Zahnersatz" />
+  </concept>
+  <concept>
+    <code value="MHM" />
+    <display value="Medizinische Hilfsmittel" />
+  </concept>
+  <concept>
+    <code value="PHM" />
+    <display value="Pflegehilfsmittel" />
+  </concept>
+  <concept>
+    <code value="PVHM" />
+    <display value="Pflegeverbrauchshilfsmittel" />
+  </concept>
+  <concept>
+    <code value="GH" />
+    <display value="Gehhilfen" />
+  </concept>
+  <concept>
+    <code value="ROLLMOBI" />
+    <display value="Rollstühle und Mobilitätshilfen" />
+  </concept>
+  <concept>
+    <code value="KFZH" />
+    <display value="Kraftfahrzeughilfe im Rahmen der medizinischen Rehabilitation" />
+  </concept>
+  <concept>
+    <code value="LTEILHA" />
+    <display value="Leistungen zur Teilhabe am Arbeitsleben (einschl. schulische Rehabilitation)" />
+  </concept>
+  <concept>
+    <code value="HMTEILHL" />
+    <display value="Hilfsmittel zur Teilhabe am Leben in der Gemeinschaft" />
+  </concept>
+</CodeSystem>
