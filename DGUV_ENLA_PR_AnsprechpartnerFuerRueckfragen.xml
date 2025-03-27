@@ -317,7 +317,7 @@
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="DomainResource.extension" />
@@ -363,12 +363,12 @@
       </extension>
       <path value="PractitionerRole.extension" />
       <sliceName value="NichtAerztlicherKontakt" />
-      <short value="Angaben für nicht-ärztlichen Kontakt" />
+      <short value="Einordnung Ansprechpartner in ärztlich/nicht-ärztlich" />
       <definition value="Über dieses Element wird angegeben, ob es sich beim Ansprechpartner für Rückfragen um einen nicht ärztlichen Kontakt handelt (z.B. Rezeption, Vorzimmer, Patientenmanagement). Außerdem kann die genaue Funktionseinheit spezifiziert werden." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="DomainResource.extension" />
@@ -695,7 +695,7 @@
       <sliceName value="Funktionseinheit" />
       <short value="Funktionseinheit wie z.B. Abteilung/Station/Sekretariat" />
       <definition value="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
-      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
+      <comment value="Nur für nicht-ärztliche Ansprechpartner" />
       <alias value="extensions" />
       <alias value="user content" />
       <min value="0" />
@@ -850,7 +850,7 @@
       <path value="PractitionerRole.extension.extension.value[x]" />
       <short value="Konkrete Funktionseinheit des Ansprechpartners" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
-      <comment value="Freitext, weil existierendes CodeSystem für Ärzte für nicht-ärztliche Ansprechpartner nicht passend bzw. ausreichend. Funktionseinheiten für ärztliche Ansprechpartner (... .NichtAerztlicherKontak.value[x] = false) können über code und specialty gepflegt werden, müssen es aber nicht." />
+      <comment value="Freitext, weil existierendes CodeSystem - für Ärzte - nicht passend / ausreichend sind für nicht-ärztliche Ansprechpartner. Funktionseinheiten für ärztliche Ansprechpartner (... .NichtAerztlicherKontak.value[x] = false) können über code und specialty gepflegt werden, müssen es aber nicht." />
       <min value="1" />
       <max value="1" />
       <base>
@@ -4344,12 +4344,15 @@
   <differential>
     <element id="PractitionerRole.extension">
       <path value="PractitionerRole.extension" />
+      <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.extension:NichtAerztlicherKontakt">
       <path value="PractitionerRole.extension" />
       <sliceName value="NichtAerztlicherKontakt" />
+      <short value="Einordnung Ansprechpartner in ärztlich/nicht-ärztlich" />
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.extension:NichtAerztlicherKontakt.extension">
@@ -4374,12 +4377,13 @@
     <element id="PractitionerRole.extension:NichtAerztlicherKontakt.extension:Funktionseinheit">
       <path value="PractitionerRole.extension.extension" />
       <sliceName value="Funktionseinheit" />
+      <comment value="Nur für nicht-ärztliche Ansprechpartner" />
       <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.extension:NichtAerztlicherKontakt.extension:Funktionseinheit.value[x]">
       <path value="PractitionerRole.extension.extension.value[x]" />
       <short value="Konkrete Funktionseinheit des Ansprechpartners" />
-      <comment value="Freitext, weil existierendes CodeSystem für Ärzte für nicht-ärztliche Ansprechpartner nicht passend bzw. ausreichend. Funktionseinheiten für ärztliche Ansprechpartner (... .NichtAerztlicherKontak.value[x] = false) können über code und specialty gepflegt werden, müssen es aber nicht." />
+      <comment value="Freitext, weil existierendes CodeSystem - für Ärzte - nicht passend / ausreichend sind für nicht-ärztliche Ansprechpartner. Funktionseinheiten für ärztliche Ansprechpartner (... .NichtAerztlicherKontak.value[x] = false) können über code und specialty gepflegt werden, müssen es aber nicht." />
       <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.practitioner">

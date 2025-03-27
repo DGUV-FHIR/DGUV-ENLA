@@ -3,10 +3,10 @@
   <id value="DGUV-ENLA-PR-DiagnoseStrukturiert" />
   <url value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseStrukturiert" />
   <name value="DGUV_ENLA_PR_DiagnoseStrukturiert" />
-  <title value="Diagnose" />
+  <title value="Diagnose - strukturiert" />
   <status value="draft" />
   <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
-  <description value="Dieses Profil enthält diagnostisch relevante Informationen. Es können entweder Unfallabhängige oder Unfallunabhängige Informationen abgelegt werden." />
+  <description value="Dieses Profil enthält diagnostisch relevante Informationen ausschließlich in strukturierter Form. Es können entweder unfallabhängige oder unfallunabhängige Informationen abgelegt werden." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -397,8 +397,8 @@
       </extension>
       <path value="Condition.extension" />
       <sliceName value="Unfalldiagnose" />
-      <short value="Handelt es sich um Unfallabhängige oder Unfallunabhängige Daten?" />
-      <definition value="true = Unfallabhängige &#xD;&#xA;false = Unfallunabhängige" />
+      <short value="Einordnung der Diagnose als unfallabhängig oder unfallunabhängig" />
+      <definition value="true = unfallabhängig &#xD;&#xA;false = unfallunabhängig" />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
@@ -1027,7 +1027,7 @@
       </extension>
       <path value="Condition.code" />
       <short value="Diagnosecode" />
-      <definition value="In diesem Element wird der Diagnosecode aufgeführt. Eine ICD-10 Codierung ist an dieser Stelle verpflichtent." />
+      <definition value="ICD-10 Codierung an dieser Stelle verpflichtend, andere optional" />
       <comment value="Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination." />
       <requirements value="0..1 to account for primarily narrative only resources." />
       <alias value="type" />
@@ -1259,7 +1259,7 @@
       </extension>
       <path value="Condition.code.coding" />
       <sliceName value="ICD-10-GM" />
-      <short value="A reference to a code defined by a terminology system" />
+      <short value="Codierung in ICD-10" />
       <definition value="In Deutschland ist der ICD-Code das maßgebliche Code-System für die Abrechnung im ambulanten und stationären Bereich." />
       <comment value="Codes may be defined very casually in enumerations or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
@@ -2616,7 +2616,7 @@
     </element>
     <element id="Condition.code.coding:ICD-10-GM.system">
       <path value="Condition.code.coding.system" />
-      <short value="Canonische CodeSystem URL für ICD-10-GM" />
+      <short value="Menge möglicher ICD-10-GM-Codes" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
       <comment value="The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously." />
       <requirements value="Need to be unambiguous about the source of the definition of the symbol." />
@@ -2662,7 +2662,7 @@
     <element id="Condition.code.coding:ICD-10-GM.version">
       <path value="Condition.code.coding.version" />
       <short value="Die Jahresversion von ICD-10-GM. Angegeben wird immer die vierstellige Jahreszahl (z.B. &quot;2017&quot;)" />
-      <definition value="Bie Verwendung von ICD-10-GM ist die Angabe der Version zwingend erforderlich.&#xD;&#xA;Hierdurch wird der Tatsache Rechnung getragen, dass jede der jährlich neu erscheinenden Fassung von ICD-10-GM ein neues Codesystem darstellt." />
+      <definition value="Bei Verwendung von ICD-10-GM ist die Angabe der Version zwingend erforderlich.&#xD;&#xA;Hierdurch wird der Tatsache Rechnung getragen, dass jede der jährlich neu erscheinenden Fassung von ICD-10-GM ein neues Codesystem darstellt." />
       <comment value="Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date." />
       <min value="1" />
       <max value="1" />
@@ -2704,7 +2704,7 @@
     </element>
     <element id="Condition.code.coding:ICD-10-GM.code">
       <path value="Condition.code.coding.code" />
-      <short value="Der ICD-10-Code" />
+      <short value="Konkreter ICD-10-Code" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to refer to a particular code in the system." />
@@ -2762,7 +2762,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Condition.code.coding.display" />
-      <short value="Representation defined by the system" />
+      <short value="Konkreter ICD-10-Code-Beschreibung" />
       <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
@@ -5452,6 +5452,8 @@
     <element id="Condition.extension:Unfalldiagnose">
       <path value="Condition.extension" />
       <sliceName value="Unfalldiagnose" />
+      <short value="Einordnung der Diagnose als unfallabhängig oder unfallunabhängig" />
+      <definition value="true = unfallabhängig &#xD;&#xA;false = unfallunabhängig" />
       <mustSupport value="true" />
     </element>
     <element id="Condition.extension:Unfalldiagnose.value[x]">
@@ -5474,6 +5476,7 @@
     <element id="Condition.code">
       <path value="Condition.code" />
       <short value="Diagnosecode" />
+      <definition value="ICD-10 Codierung an dieser Stelle verpflichtend, andere optional" />
       <mustSupport value="true" />
     </element>
     <element id="Condition.code.coding">
@@ -5483,6 +5486,7 @@
     <element id="Condition.code.coding:ICD-10-GM">
       <path value="Condition.code.coding" />
       <sliceName value="ICD-10-GM" />
+      <short value="Codierung in ICD-10" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -5507,18 +5511,22 @@
     </element>
     <element id="Condition.code.coding:ICD-10-GM.system">
       <path value="Condition.code.coding.system" />
+      <short value="Menge möglicher ICD-10-GM-Codes" />
       <mustSupport value="true" />
     </element>
     <element id="Condition.code.coding:ICD-10-GM.version">
       <path value="Condition.code.coding.version" />
+      <definition value="Bei Verwendung von ICD-10-GM ist die Angabe der Version zwingend erforderlich.&#xD;&#xA;Hierdurch wird der Tatsache Rechnung getragen, dass jede der jährlich neu erscheinenden Fassung von ICD-10-GM ein neues Codesystem darstellt." />
       <mustSupport value="true" />
     </element>
     <element id="Condition.code.coding:ICD-10-GM.code">
       <path value="Condition.code.coding.code" />
+      <short value="Konkreter ICD-10-Code" />
       <mustSupport value="true" />
     </element>
     <element id="Condition.code.coding:ICD-10-GM.display">
       <path value="Condition.code.coding.display" />
+      <short value="Konkreter ICD-10-Code-Beschreibung" />
       <mustSupport value="true" />
     </element>
     <element id="Condition.bodySite">
