@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://example.org/fhir/StructureDefinition/DGUV-ENLA-EX-anzeigenameCode" />
-  <name value="DGUV_ENLA_EX_anzeigenameCode" />
+  <url value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-AnzeigenameDeutsch" />
+  <name value="DGUV_ENLA_EX_AnzeigenameDeutsch" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <context>
     <type value="element" />
-    <expression value="CodeableConcept" />
+    <expression value="MedicationStatement.dosage.timing.code.coding.display" />
   </context>
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
@@ -156,7 +156,7 @@
         </extension>
         <code value="http://hl7.org/fhirpath/System.String" />
       </type>
-      <fixedUri value="http://example.org/fhir/StructureDefinition/DGUV-ENLA-EX-anzeigenameCode" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-AnzeigenameDeutsch" />
       <mapping>
         <identity value="rim" />
         <map value="N/A" />
@@ -172,7 +172,7 @@
       <path value="Extension.value[x]" />
       <short value="Value of extension" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Extension.value[x]" />
@@ -204,11 +204,10 @@
   <differential>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://example.org/fhir/StructureDefinition/DGUV-ENLA-EX-anzeigenameCode" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-AnzeigenameDeutsch" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
-      <min value="1" />
       <type>
         <code value="string" />
       </type>
