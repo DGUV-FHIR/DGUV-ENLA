@@ -652,6 +652,7 @@
       <type>
         <code value="code" />
       </type>
+      <fixedCode value="final" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -5698,6 +5699,7 @@
   <differential>
     <element id="Observation.status">
       <path value="Observation.status" />
+      <fixedCode value="final" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.code">
