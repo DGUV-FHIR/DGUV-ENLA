@@ -3379,7 +3379,7 @@
       <path value="Patient.identifier.assigner" />
       <short value="Organization that issued id (may be just text)" />
       <definition value="Organization that issued/manages the identifier." />
-      <comment value="The Identifier.assigner may omit the .reference element and only contain a .display element reflecting the name or other textual information about the assigning organization." />
+      <comment value="Assigner bei PKV immer anzugeben, da Versichertennummer_PKV nicht mit Sicherheit eindeutig" />
       <min value="1" />
       <max value="1" />
       <base>
@@ -4169,12 +4169,12 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <short value="Personenname" />
+      <short value="Name der versicherten Person" />
       <definition value="Personenname mit in Deutschland üblichen Erweiterungen." />
       <comment value="Names may be changed, or repudiated, or people may have different names in different contexts. Names may be divided into parts of different type that have variable significance depending on context, though the division into parts does not always matter. With personal names, the different parts may or may not be imbued with some implicit meaning; various cultures associate different importance with the name parts and the degree to which systems must care about name parts around the world varies widely." />
       <requirements value="Need to be able to track the patient by multiple names. Examples are your official name and a partner name." />
       <min value="1" />
-      <max value="*" />
+      <max value="1" />
       <base>
         <path value="Patient.name" />
         <min value="0" />
@@ -6025,7 +6025,7 @@
       <alias value="extensions" />
       <alias value="user content" />
       <min value="1" />
-      <max value="*" />
+      <max value="3" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -6247,6 +6247,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -6450,6 +6451,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -6653,6 +6655,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -6712,6 +6715,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -7045,6 +7049,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="EntityNamePartQualifier" />
@@ -8855,7 +8860,7 @@
       <path value="Patient.telecom.system" />
       <short value="phone | fax | email | pager | url | sms | other" />
       <definition value="Telecommunications form for contact point - what communications system is required to make use of the contact." />
-      <comment value="Im ENLA soll an dcieser Stelle nur die Telefonnummer angegeben werden." />
+      <comment value="Im ENLA soll an dieser Stelle nur die Telefonnummer angegeben werden." />
       <min value="1" />
       <max value="1" />
       <base>
@@ -9402,6 +9407,7 @@
       <path value="Patient.gender.extension.value[x]" />
       <short value="Value of extension" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
+      <comment value="required; Value set reference: http://fhir.de/ValueSet/gender-other-de&#xD;&#xA;(D, X zusätzlich zu Standard: male, female, unknown)" />
       <min value="1" />
       <max value="1" />
       <base>
@@ -9604,7 +9610,7 @@
       <path value="Patient.birthDate.extension" />
       <sliceName value="data_absent_reason" />
       <short value="unknown | asked | temp | notasked | masked | unsupported | astext | error" />
-      <definition value="Grund, warum das Geburtsdatum nicht vorliegt" />
+      <definition value="Grund, warum das richtige Geburtsdatum nicht vorliegt" />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
@@ -9894,12 +9900,12 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <short value="An address for the individual" />
+      <short value="Adresse der versicherten Person" />
       <definition value="An address for the individual." />
       <comment value="Patient may have multiple addresses with different uses or applicable periods." />
       <requirements value="May need to keep track of patient addresses for contacting, billing or reporting requirements and also to help with identification." />
       <min value="1" />
-      <max value="*" />
+      <max value="2" />
       <base>
         <path value="Patient.address" />
         <min value="0" />
@@ -12362,11 +12368,11 @@
     </element>
     <element id="Patient.address:Postfach.line">
       <path value="Patient.address.line" />
-      <short value="Straßenname mit Hausnummer oder Postfach sowie weitere Angaben zur Zustellung" />
+      <short value="Postfach" />
       <definition value="Diese Komponente kann Straßennamen, Hausnummer, Appartmentnummer, Postfach, c/o sowie weitere Zustellungshinweise enthalten. Die Informationen können in mehrere line-Komponenten aufgeteilt werden.&#xD;&#xA;Bei Verwendung der Extensions, um Straße, Hausnnummer und Postleitzahl strukturiert zu übermitteln, müssen diese Informationen stets vollständig auch in der line-Komponente, die sie erweitern, enthalten sein, um es Systemen, die diese Extensions nicht verwenden zu ermöglichen, auf diese Informationen zugreifen zu können." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
-      <min value="0" />
-      <max value="3" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="Address.line" />
         <min value="0" />
@@ -12400,6 +12406,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -12466,8 +12473,8 @@
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="0" />
-      <max value="*" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -12493,6 +12500,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -13110,7 +13118,7 @@
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Element.extension" />
@@ -13138,6 +13146,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -13264,7 +13273,7 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="Patient.address.line.extension.value[x]" />
-      <short value="Value of extension" />
+      <short value="Konkrete Postfachnummer" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
       <min value="1" />
       <max value="1" />
@@ -13285,6 +13294,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -13319,11 +13329,11 @@
     </element>
     <element id="Patient.address:Postfach.city">
       <path value="Patient.address.city" />
-      <short value="Name of city, town etc." />
+      <short value="Name der Stadt" />
       <definition value="The name of the city, town, suburb, village or other community or delivery center." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <alias value="Municpality" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Address.city" />
@@ -13346,6 +13356,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -13469,7 +13480,7 @@
       <definition value="Postleitzahl gemäß der im jeweiligen Land gültigen Konventionen" />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <alias value="Zip" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Address.postalCode" />
@@ -13492,6 +13503,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -13538,6 +13550,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <binding>
         <strength value="preferred" />
@@ -17026,6 +17039,7 @@
     </element>
     <element id="Patient.identifier:Versichertennummer_PKV.assigner">
       <path value="Patient.identifier.assigner" />
+      <comment value="Assigner bei PKV immer anzugeben, da Versichertennummer_PKV nicht mit Sicherheit eindeutig" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.identifier:Versichertennummer_PKV.assigner.display">
@@ -17034,6 +17048,8 @@
     </element>
     <element id="Patient.name">
       <path value="Patient.name" />
+      <short value="Name der versicherten Person" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.name:Name">
@@ -17051,6 +17067,7 @@
     </element>
     <element id="Patient.name:Name.family.extension">
       <path value="Patient.name.family.extension" />
+      <max value="3" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.name:Name.family.extension:namenszusatz">
@@ -17058,14 +17075,30 @@
       <sliceName value="namenszusatz" />
       <mustSupport value="true" />
     </element>
+    <element id="Patient.name:Name.family.extension:namenszusatz.value[x]">
+      <path value="Patient.name.family.extension.value[x]" />
+      <mustSupport value="true" />
+    </element>
     <element id="Patient.name:Name.family.extension:nachname">
       <path value="Patient.name.family.extension" />
       <sliceName value="nachname" />
       <mustSupport value="true" />
     </element>
+    <element id="Patient.name:Name.family.extension:nachname.value[x]">
+      <path value="Patient.name.family.extension.value[x]" />
+      <mustSupport value="true" />
+    </element>
     <element id="Patient.name:Name.family.extension:vorsatzwort">
       <path value="Patient.name.family.extension" />
       <sliceName value="vorsatzwort" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name:Name.family.extension:vorsatzwort.value[x]">
+      <path value="Patient.name.family.extension.value[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name:Name.given">
+      <path value="Patient.name.given" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.name:Name.prefix">
@@ -17075,6 +17108,10 @@
     <element id="Patient.name:Name.prefix.extension:prefix-qualifier">
       <path value="Patient.name.prefix.extension" />
       <sliceName value="prefix-qualifier" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name:Name.prefix.extension:prefix-qualifier.value[x]">
+      <path value="Patient.name.prefix.extension.value[x]" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.name:Geburtsname">
@@ -17092,7 +17129,7 @@
     </element>
     <element id="Patient.telecom.system">
       <path value="Patient.telecom.system" />
-      <comment value="Im ENLA soll an dcieser Stelle nur die Telefonnummer angegeben werden." />
+      <comment value="Im ENLA soll an dieser Stelle nur die Telefonnummer angegeben werden." />
       <mustSupport value="true" />
     </element>
     <element id="Patient.telecom.value">
@@ -17115,6 +17152,7 @@
     </element>
     <element id="Patient.gender.extension:gender-amtlich.value[x]">
       <path value="Patient.gender.extension.value[x]" />
+      <comment value="required; Value set reference: http://fhir.de/ValueSet/gender-other-de&#xD;&#xA;(D, X zusätzlich zu Standard: male, female, unknown)" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.birthDate">
@@ -17130,7 +17168,7 @@
     <element id="Patient.birthDate.extension:data_absent_reason">
       <path value="Patient.birthDate.extension" />
       <sliceName value="data_absent_reason" />
-      <definition value="Grund, warum das Geburtsdatum nicht vorliegt" />
+      <definition value="Grund, warum das richtige Geburtsdatum nicht vorliegt" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.birthDate.extension:data_absent_reason.value[x]">
@@ -17140,6 +17178,8 @@
     </element>
     <element id="Patient.address">
       <path value="Patient.address" />
+      <short value="Adresse der versicherten Person" />
+      <max value="2" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.address:Strassenanschrift">
@@ -17236,6 +17276,45 @@
     </element>
     <element id="Patient.address:Postfach.type">
       <path value="Patient.address.type" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Postfach.line">
+      <path value="Patient.address.line" />
+      <short value="Postfach" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Postfach.line.extension">
+      <path value="Patient.address.line.extension" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Postfach.line.extension:Postfach">
+      <path value="Patient.address.line.extension" />
+      <sliceName value="Postfach" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Postfach.line.extension:Postfach.value[x]">
+      <path value="Patient.address.line.extension.value[x]" />
+      <short value="Konkrete Postfachnummer" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Postfach.city">
+      <path value="Patient.address.city" />
+      <short value="Name der Stadt" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Postfach.postalCode">
+      <path value="Patient.address.postalCode" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Postfach.country">
+      <path value="Patient.address.country" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.maritalStatus">
