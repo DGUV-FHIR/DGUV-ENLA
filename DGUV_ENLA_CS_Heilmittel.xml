@@ -1,0 +1,41 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="DGUV_ENLA_CS_Heilmittel" />
+  <url value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Heilmittel" />
+  <version value="0.0.1" />
+  <name value="DGUV_ENLA_CS_Heilmittel" />
+  <title value="Heilmittel" />
+  <status value="draft" />
+  <experimental value="false" />
+  <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="https://www.dguv.de" />
+    </telecom>
+  </contact>
+  <description value="Dieses CodeSystem enthält die Codes und Displays zur Beschreibung der zum Zeitpunkt der Entlassung aus der stationären Behandlung für die versicherte Person notwendigen Heilmittel." />
+  <concept>
+    <code value="PHYSIO" />
+    <display value="Physiotherapie" />
+  </concept>
+  <concept>
+    <code value="ERGO" />
+    <display value="Ergotherapie" />
+  </concept>
+  <concept>
+    <code value="LOGO" />
+    <display value="Logopädie" />
+  </concept>
+  <concept>
+    <code value="HANDT" />
+    <display value="Handtherapie" />
+  </concept>
+  <concept>
+    <code value="MTT" />
+    <display value="Medizinische Trainingstherapie" />
+  </concept>
+  <concept>
+    <code value="REHASP" />
+    <display value="Reha-Sport/Funktionstraining" />
+  </concept>
+</CodeSystem>

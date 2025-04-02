@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="DGUV-ENLA-PR-Unfallereignis" />
   <url value="http://fhir.dguv.de/ENLA/AdverseEvent/DGUV-ENLA-PR-Unfallereignis" />
   <name value="DGUV_ENLA_PR_Unfallereignis" />
   <title value="Unfallereignis" />
   <status value="draft" />
+  <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
   <description value="Dieses Profil bildet das Unfallereignis mit verschiedenen Informationskomponenten (Zeitpunkte, Unfallhergang, etc.) ab." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
@@ -4439,7 +4441,7 @@
       <comment value="For a discussion on the ways Observations can be assembled in groups together see [Notes](observation.html#notes) below." />
       <requirements value="Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable).   However, the reference range for the primary observation value is not inherited by the component values and is required when appropriate for each component observation." />
       <min value="4" />
-      <max value="6" />
+      <max value="4" />
       <base>
         <path value="Observation.component" />
         <min value="0" />
@@ -4937,7 +4939,7 @@
       <comment value="For a discussion on the ways Observations can be assembled in groups together see [Notes](observation.html#notes) below." />
       <requirements value="Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable).   However, the reference range for the primary observation value is not inherited by the component values and is required when appropriate for each component observation." />
       <min value="0" />
-      <max value="1" />
+      <max value="0" />
       <base>
         <path value="Observation.component" />
         <min value="0" />
@@ -4955,7 +4957,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -5135,7 +5136,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <isSummary value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -5898,7 +5898,7 @@
       <comment value="For a discussion on the ways Observations can be assembled in groups together see [Notes](observation.html#notes) below." />
       <requirements value="Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable).   However, the reference range for the primary observation value is not inherited by the component values and is required when appropriate for each component observation." />
       <min value="0" />
-      <max value="1" />
+      <max value="0" />
       <base>
         <path value="Observation.component" />
         <min value="0" />
@@ -5916,7 +5916,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -6096,7 +6095,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <isSummary value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -7815,7 +7813,7 @@
       </extension>
       <path value="Observation.component" />
       <sliceName value="BeschwerdenKlagen" />
-      <short value="Beschwerden bzw. Klagen" />
+      <short value="Beschwerden / Klagen bei Aufnahme, Anamnese" />
       <definition value="Vorgetragenen subjektiven Beschwerden der versicherten Person und/oder Angehörigen" />
       <comment value="For a discussion on the ways Observations can be assembled in groups together see [Notes](observation.html#notes) below." />
       <requirements value="Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable).   However, the reference range for the primary observation value is not inherited by the component values and is required when appropriate for each component observation." />
@@ -10766,17 +10764,13 @@
     <element id="Observation.component">
       <path value="Observation.component" />
       <min value="4" />
-      <max value="6" />
+      <max value="4" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.component:BeginnDerArbeitszeit">
       <path value="Observation.component" />
       <sliceName value="BeginnDerArbeitszeit" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.component:BeginnDerArbeitszeit.code">
-      <path value="Observation.component.code" />
-      <mustSupport value="true" />
+      <max value="0" />
     </element>
     <element id="Observation.component:BeginnDerArbeitszeit.code.coding">
       <path value="Observation.component.code.coding" />
@@ -10801,11 +10795,7 @@
     <element id="Observation.component:EndeDerArbeitszeit">
       <path value="Observation.component" />
       <sliceName value="EndeDerArbeitszeit" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.component:EndeDerArbeitszeit.code">
-      <path value="Observation.component.code" />
-      <mustSupport value="true" />
+      <max value="0" />
     </element>
     <element id="Observation.component:EndeDerArbeitszeit.code.coding">
       <path value="Observation.component.code.coding" />
@@ -10860,6 +10850,7 @@
     <element id="Observation.component:BeschwerdenKlagen">
       <path value="Observation.component" />
       <sliceName value="BeschwerdenKlagen" />
+      <short value="Beschwerden / Klagen bei Aufnahme, Anamnese" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
