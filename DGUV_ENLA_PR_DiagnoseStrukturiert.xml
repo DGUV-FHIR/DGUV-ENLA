@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="DGUV-ENLA-PR-DiagnoseStrukturiert" />
-  <url value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseStrukturiert" />
-  <name value="DGUV_ENLA_PR_DiagnoseStrukturiert" />
-  <title value="Diagnose - strukturiert" />
+  <id value="DGUV-ENLA-PR-DiagnoseStrukturiertObsol" />
+  <url value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseStrukturiertObsol" />
+  <name value="DGUV_ENLA_PR_DiagnoseStrukturiertObsol" />
+  <title value="Diagnose - strukturiert (obsolet)" />
   <status value="draft" />
   <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
   <description value="Dieses Profil enthält diagnostisch relevante Informationen ausschließlich in strukturierter Form. (Es können entweder unfallabhängige oder unfallunabhängige Informationen abgelegt werden.)" />
