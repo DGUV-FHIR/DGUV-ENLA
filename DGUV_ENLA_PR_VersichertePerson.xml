@@ -360,7 +360,7 @@
       </extension>
       <path value="Patient.extension" />
       <sliceName value="nationality" />
-      <short value="Staatsbürgerschaft" />
+      <short value="Staatsbürgerschaft der versicherten Person" />
       <definition value="Staatsbürgerschaft der Person, rechtlichen Zugehörigkeit zur Gemeinschaft (Rechtsgemeinschaft) von Bürgern eines Staates" />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
@@ -448,7 +448,7 @@
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="0" />
+      <min value="1" />
       <max value="2" />
       <base>
         <path value="Element.extension" />
@@ -494,12 +494,12 @@
       </extension>
       <path value="Patient.extension.extension" />
       <sliceName value="code" />
-      <short value="Nationality Code" />
+      <short value="Code der Nationalität" />
       <definition value="Code representing nationality of patient." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Element.extension" />
@@ -646,7 +646,7 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="Patient.extension.extension.value[x]" />
-      <short value="Value of extension" />
+      <short value="Angabe über die Nationalität der versicherten Person" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
       <min value="1" />
       <max value="1" />
@@ -769,7 +769,7 @@
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="CodeableConcept.coding" />
@@ -821,6 +821,307 @@
       <mapping>
         <identity value="orim" />
         <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" />
+      </mapping>
+    </element>
+    <element id="Patient.extension:nationality.extension:code.value[x].coding.id">
+      <path value="Patient.extension.extension.value[x].coding.id" />
+      <representation value="xmlAttr" />
+      <short value="Unique id for inter-element referencing" />
+      <definition value="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Element.id" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
+          <valueUrl value="string" />
+        </extension>
+        <code value="http://hl7.org/fhirpath/System.String" />
+      </type>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+    </element>
+    <element id="Patient.extension:nationality.extension:code.value[x].coding.extension">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
+      <path value="Patient.extension.extension.value[x].coding.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <description value="Extensions are always sliced by (at least) url" />
+        <rules value="open" />
+      </slicing>
+      <short value="Additional content defined by implementations" />
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
+      <alias value="extensions" />
+      <alias value="user content" />
+      <min value="0" />
+      <max value="*" />
+      <base>
+        <path value="Element.extension" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="Extension" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="Patient.extension:nationality.extension:code.value[x].coding.system">
+      <path value="Patient.extension.extension.value[x].coding.system" />
+      <short value="ValueSet mit Nationalitäten" />
+      <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
+      <comment value="The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously." />
+      <requirements value="Need to be unambiguous about the source of the definition of the symbol." />
+      <min value="1" />
+      <max value="1" />
+      <base>
+        <path value="Coding.system" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="uri" />
+      </type>
+      <fixedUri value="http://hl7.org/fhir/ValueSet/iso3166-1-2|4.0.1" />
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <mustSupport value="true" />
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="C*E.3" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="./codeSystem" />
+      </mapping>
+      <mapping>
+        <identity value="orim" />
+        <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
+      </mapping>
+    </element>
+    <element id="Patient.extension:nationality.extension:code.value[x].coding.version">
+      <path value="Patient.extension.extension.value[x].coding.version" />
+      <short value="Version of the system - if relevant" />
+      <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
+      <comment value="Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Coding.version" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="string" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="C*E.7" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="./codeSystemVersion" />
+      </mapping>
+      <mapping>
+        <identity value="orim" />
+        <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
+      </mapping>
+    </element>
+    <element id="Patient.extension:nationality.extension:code.value[x].coding.code">
+      <path value="Patient.extension.extension.value[x].coding.code" />
+      <short value="Kürzel der konkreten Nationalität" />
+      <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
+      <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
+      <requirements value="Need to refer to a particular code in the system." />
+      <min value="1" />
+      <max value="1" />
+      <base>
+        <path value="Coding.code" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="code" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <mustSupport value="true" />
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="C*E.1" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="./code" />
+      </mapping>
+      <mapping>
+        <identity value="orim" />
+        <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
+      </mapping>
+    </element>
+    <element id="Patient.extension:nationality.extension:code.value[x].coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Patient.extension.extension.value[x].coding.display" />
+      <short value="Bezeichnung der konkreten Nationalität" />
+      <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
+      <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
+      <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
+      <min value="1" />
+      <max value="1" />
+      <base>
+        <path value="Coding.display" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="string" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <mustSupport value="true" />
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="C*E.2 - but note this is not well followed" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="CV.displayName" />
+      </mapping>
+      <mapping>
+        <identity value="orim" />
+        <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
+      </mapping>
+    </element>
+    <element id="Patient.extension:nationality.extension:code.value[x].coding.userSelected">
+      <path value="Patient.extension.extension.value[x].coding.userSelected" />
+      <short value="If this coding was chosen directly by the user" />
+      <definition value="Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays)." />
+      <comment value="Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely." />
+      <requirements value="This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Coding.userSelected" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="boolean" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="Sometimes implied by being first" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="CD.codingRationale" />
+      </mapping>
+      <mapping>
+        <identity value="orim" />
+        <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
       </mapping>
     </element>
     <element id="Patient.extension:nationality.extension:code.value[x].text">
@@ -1344,11 +1645,11 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <short value="Ein Identifikator für den Patienten" />
-      <definition value="Ein Identifikator für den Patienten" />
-      <comment value="Kardinalität 1..3 (nicht 1..4), weil da sich VersichertenId_GKV und Versichertennummer_PKV gegenseitig ausschließen" />
+      <short value="Identifikator für die versicherte Person" />
+      <definition value="Ein Identifikator für die versicherte Person" />
+      <comment value="Kardinalität 0..3, da - 1. - im ENLA kein Identifikator zwingend ist und - 2. - sich VersichertenId_GKV und Versichertennummer_PKV gegenseitig ausschließen und somit max. 3 Identifikatoren angegeben werden können." />
       <requirements value="Patients are almost always assigned specific numerical identifiers." />
-      <min value="1" />
+      <min value="0" />
       <max value="3" />
       <base>
         <path value="Patient.identifier" />
@@ -1412,7 +1713,7 @@
       <path value="Patient.identifier" />
       <sliceName value="VersichertenId" />
       <short value="KVZ10-Versichertennummer" />
-      <definition value="An identifier - identifies some entity uniquely and unambiguously. Typically this is used for business identifiers." />
+      <definition value="VersichertenID (KVNR, Krankenversichertennummer)&#xA;Dies ist die eindeutige Identifikationsnummer einer versicherten Person im deutschen Gesundheitswesen.&#xA;Sie wird von der gematik für alle gesetzlich und privat Versicherten vergeben.&#xA;Diese Nummer bleibt in der Regel lebenslang konstant." />
       <comment value="Die als 'KVZ10' kodierte Versichertennummer gilt für alle Krankenversichertennummern, unabhängig, ob es sich um GKV, PKV oder Sonderkostenträger handelt." />
       <requirements value="Patients are almost always assigned specific numerical identifiers." />
       <min value="0" />
@@ -1615,7 +1916,7 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="Patient.identifier.type" />
-      <short value="Description of identifier" />
+      <short value="Kennzeichnung des Identifikators als Versichertennummer" />
       <definition value="A coded type for the identifier that can be used to determine which identifier to use for a specific purpose." />
       <comment value="This element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage.   Where the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type." />
       <requirements value="Allows users to make use of identifiers when the identifier system is not known." />
@@ -1926,8 +2227,9 @@
       </extension>
       <path value="Patient.identifier" />
       <sliceName value="VersichertenId_GKV" />
-      <short value="Identifikator-Profil für die Krankenversichertennummer" />
-      <definition value="Identifikator-Profil für die 10-stellige Krankenversichertennummer." />
+      <short value="Spezifische Versicherungsnummer innerhalb der gesetzlichen Krankenversicherung (GKV)" />
+      <definition value="Identifikator-Profil für die 10-stellige Krankenversichertennummer" />
+      <comment value="VersichertenID_GKV (GKV-spezifische Versichertennummer)&#xA;&#xA;Dies ist die spezifische Versicherungsnummer innerhalb der gesetzlichen Krankenversicherung (GKV).&#xA;Jede gesetzliche Krankenkasse kann eigene Nummern für ihre Versicherten führen.&#xA;Diese Nummer kann sich z. B. beim Wechsel der Krankenkasse ändern." />
       <requirements value="Patients are almost always assigned specific numerical identifiers." />
       <min value="0" />
       <max value="1" />
@@ -2129,7 +2431,7 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="Patient.identifier.type" />
-      <short value="Description of identifier" />
+      <short value="Kennzeichnung des Identifikators als Versichertennummer einer gesetzlichen Krankenversicherung" />
       <definition value="A coded type for the identifier that can be used to determine which identifier to use for a specific purpose." />
       <comment value="This element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage.   Where the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type." />
       <requirements value="Allows users to make use of identifiers when the identifier system is not known." />
@@ -2205,7 +2507,7 @@
     </element>
     <element id="Patient.identifier:VersichertenId_GKV.system">
       <path value="Patient.identifier.system" />
-      <short value="The namespace for the identifier value" />
+      <short value="Menge der verfügbaren KVZ10-Versichertennummern" />
       <definition value="Establishes the namespace for the value - that is, a URL that describes a set values that are unique." />
       <comment value="Identifier.system is always case sensitive." />
       <requirements value="There are many sets  of identifiers.  To perform matching of two identifiers, we need to know what set we're dealing with. The system identifies a particular set of unique identifiers." />
@@ -2254,7 +2556,7 @@
     </element>
     <element id="Patient.identifier:VersichertenId_GKV.value">
       <path value="Patient.identifier.value" />
-      <short value="The value that is unique" />
+      <short value="Konkrete KVZ10-Versichertennummer" />
       <definition value="The portion of the identifier typically relevant to the user and which is unique within the context of the system." />
       <comment value="If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](extension-rendered-value.html). Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe." />
       <min value="1" />
@@ -2440,8 +2742,9 @@
       </extension>
       <path value="Patient.identifier" />
       <sliceName value="Patientennummer" />
-      <short value="Identifikator für die Abbildung einer ID" />
+      <short value="Interne Nummer im Krankenhaus- oder Praxisverwaltungssystem" />
       <definition value="Ein Identifikator - Eindeutige und unmissverständliche Identifizierung einer Entität." />
+      <comment value="Jeder Patient bekommt eine interne Nummer im Krankenhaus- oder Praxisverwaltungssystem (KIS/PVS)." />
       <requirements value="Patients are almost always assigned specific numerical identifiers." />
       <min value="0" />
       <max value="1" />
@@ -2643,7 +2946,7 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="Patient.identifier.type" />
-      <short value="Description of identifier" />
+      <short value="Kennzeichnung des Identifikators als Patientennummer" />
       <definition value="A coded type for the identifier that can be used to determine which identifier to use for a specific purpose." />
       <comment value="This element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage.   Where the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type." />
       <requirements value="Allows users to make use of identifiers when the identifier system is not known." />
@@ -2712,7 +3015,7 @@
     </element>
     <element id="Patient.identifier:Patientennummer.system">
       <path value="Patient.identifier.system" />
-      <short value="The namespace for the identifier value" />
+      <short value="Menge der im Krankenhaus-/Praxisverwaltungssystem verfügbaren Patientennummern" />
       <definition value="Establishes the namespace for the value - that is, a URL that describes a set values that are unique." />
       <comment value="Identifier.system is always case sensitive." />
       <requirements value="There are many sets  of identifiers.  To perform matching of two identifiers, we need to know what set we're dealing with. The system identifies a particular set of unique identifiers." />
@@ -2760,7 +3063,7 @@
     </element>
     <element id="Patient.identifier:Patientennummer.value">
       <path value="Patient.identifier.value" />
-      <short value="The value that is unique" />
+      <short value="Konkrete Patientennummer" />
       <definition value="The portion of the identifier typically relevant to the user and which is unique within the context of the system." />
       <comment value="If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](extension-rendered-value.html). Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe." />
       <min value="1" />
@@ -2939,7 +3242,7 @@
       </extension>
       <path value="Patient.identifier" />
       <sliceName value="Versichertennummer_PKV" />
-      <short value="Identifikator-Profil für die Privatversichertennummer" />
+      <short value="Spezifische Versicherungsnummer innerhalb der privaten Krankenversicherung (PKV)" />
       <definition value="Identifikator-Profil für die Abbildung einer Privatversichertennummer." />
       <requirements value="Patients are almost always assigned specific numerical identifiers." />
       <min value="0" />
@@ -3143,7 +3446,7 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="Patient.identifier.type" />
-      <short value="Description of identifier" />
+      <short value="Kennzeichnung des Identifikators als Versichertennummer einer privaten Krankenversicherung" />
       <definition value="A coded type for the identifier that can be used to determine which identifier to use for a specific purpose." />
       <comment value="This element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage.   Where the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type." />
       <requirements value="Allows users to make use of identifiers when the identifier system is not known." />
@@ -3260,7 +3563,7 @@
     </element>
     <element id="Patient.identifier:Versichertennummer_PKV.value">
       <path value="Patient.identifier.value" />
-      <short value="The value that is unique" />
+      <short value="Konkrete Versichertennummer innerhalb der PKV" />
       <definition value="The portion of the identifier typically relevant to the user and which is unique within the context of the system." />
       <comment value="If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](extension-rendered-value.html). Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe." />
       <min value="1" />
@@ -5845,7 +6148,7 @@
     <element id="Patient.name:Name.use">
       <path value="Patient.name.use" />
       <short value="usual | official | temp | nickname | anonymous | old | maiden" />
-      <definition value="Identifies the purpose for this name." />
+      <definition value="Abgrenzung von offiziellem Namen , Künstlernamen usw. voneinander" />
       <comment value="Applications can assume that a name is current unless it explicitly says that it is temporary or old." />
       <requirements value="Allows the appropriate name for a particular context of use to be selected from among a set of names." />
       <min value="1" />
@@ -6226,9 +6529,9 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="Patient.name.family.extension.value[x]" />
-      <short value="Namenszusatz" />
+      <short value="Konkreter Namenszusatz" />
       <definition value="Namenszusatz zum Nachnamen z.B. Gräfin, Prinz oder Fürst" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Extension.value[x]" />
@@ -6430,7 +6733,7 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="Patient.name.family.extension.value[x]" />
-      <short value="Value of extension" />
+      <short value="Konkreter Nachname" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
       <min value="1" />
       <max value="1" />
@@ -6634,7 +6937,7 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="Patient.name.family.extension.value[x]" />
-      <short value="Value of extension" />
+      <short value="Konkretes Vorsatzwort" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
       <min value="1" />
       <max value="1" />
@@ -6695,8 +6998,8 @@
       <comment value="If only initials are recorded, they may be used in place of the full name parts. Initials may be separated into multiple given names but often aren't due to paractical limitations.  This element is not called &quot;first name&quot; since given names do not always come first." />
       <alias value="first name" />
       <alias value="middle name" />
-      <min value="0" />
-      <max value="*" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="HumanName.given" />
         <min value="0" />
@@ -6849,6 +7152,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -7028,7 +7332,7 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="Patient.name.prefix.extension.value[x]" />
-      <short value="Value of extension" />
+      <short value="Konkrete Spezialisierung der Präfixart" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
       <min value="1" />
       <max value="1" />
@@ -8713,7 +9017,7 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="Patient.telecom" />
-      <short value="Angaben zu bestehenden Kontaktmöglichkeiten (Telefon)" />
+      <short value="Angaben zu bestehenden Kontaktmöglichkeiten (Telefon) der versicherten Person" />
       <definition value="Details for all kinds of technology mediated contact points for a person or organization, including telephone, email, etc." />
       <comment value="A Patient may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently and also to help with identification. The address might not go directly to the individual, but may reach another party that is able to proxy for the patient (i.e. home phone, or pet owner's phone)." />
       <requirements value="People have (primary) ways to contact them in some way such as phone, email." />
@@ -9138,7 +9442,7 @@
           <valueBoolean value="true" />
         </extension>
         <strength value="required" />
-        <description value="The gender of a person used for administrative purposes." />
+        <description value="Geschlecht der versicherten Person für administrative Zwecke" />
         <valueSet value="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1" />
       </binding>
       <mapping>
@@ -9248,8 +9552,8 @@
       </extension>
       <path value="Patient.gender.extension" />
       <sliceName value="gender-amtlich" />
-      <short value="Optional Extensions Element" />
-      <definition value="Extension zur genaueren Differenzierung des administrativen Geschlechts." />
+      <short value="Genauere Differenzierung des administrativen Geschlechts" />
+      <definition value="Extension zur genaueren Differenzierung des administrativen Geschlechts" />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
@@ -9407,7 +9711,6 @@
       <path value="Patient.gender.extension.value[x]" />
       <short value="Value of extension" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
-      <comment value="required; Value set reference: http://fhir.de/ValueSet/gender-other-de&#xD;&#xA;(D, X zusätzlich zu Standard: male, female, unknown)" />
       <min value="1" />
       <max value="1" />
       <base>
@@ -9446,6 +9749,305 @@
       <mapping>
         <identity value="rim" />
         <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="Patient.gender.extension:gender-amtlich.value[x].id">
+      <path value="Patient.gender.extension.value[x].id" />
+      <representation value="xmlAttr" />
+      <short value="Unique id for inter-element referencing" />
+      <definition value="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Element.id" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
+          <valueUrl value="string" />
+        </extension>
+        <code value="http://hl7.org/fhirpath/System.String" />
+      </type>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+    </element>
+    <element id="Patient.gender.extension:gender-amtlich.value[x].extension">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
+      <path value="Patient.gender.extension.value[x].extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <description value="Extensions are always sliced by (at least) url" />
+        <rules value="open" />
+      </slicing>
+      <short value="Additional content defined by implementations" />
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
+      <alias value="extensions" />
+      <alias value="user content" />
+      <min value="0" />
+      <max value="*" />
+      <base>
+        <path value="Element.extension" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="Extension" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="Patient.gender.extension:gender-amtlich.value[x].system">
+      <path value="Patient.gender.extension.value[x].system" />
+      <short value="Identity of the terminology system" />
+      <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
+      <comment value="The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously." />
+      <requirements value="Need to be unambiguous about the source of the definition of the symbol." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Coding.system" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="uri" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="C*E.3" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="./codeSystem" />
+      </mapping>
+      <mapping>
+        <identity value="orim" />
+        <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
+      </mapping>
+    </element>
+    <element id="Patient.gender.extension:gender-amtlich.value[x].version">
+      <path value="Patient.gender.extension.value[x].version" />
+      <short value="Version of the system - if relevant" />
+      <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
+      <comment value="Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Coding.version" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="string" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="C*E.7" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="./codeSystemVersion" />
+      </mapping>
+      <mapping>
+        <identity value="orim" />
+        <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
+      </mapping>
+    </element>
+    <element id="Patient.gender.extension:gender-amtlich.value[x].code">
+      <path value="Patient.gender.extension.value[x].code" />
+      <short value="Konkreter Code aus gender-other-de" />
+      <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
+      <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
+      <requirements value="Need to refer to a particular code in the system." />
+      <min value="1" />
+      <max value="1" />
+      <base>
+        <path value="Coding.code" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="code" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <mustSupport value="true" />
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="C*E.1" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="./code" />
+      </mapping>
+      <mapping>
+        <identity value="orim" />
+        <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
+      </mapping>
+    </element>
+    <element id="Patient.gender.extension:gender-amtlich.value[x].display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Patient.gender.extension.value[x].display" />
+      <short value="Konkrete Bezeichnung aus gender-other-de" />
+      <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
+      <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
+      <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
+      <min value="1" />
+      <max value="1" />
+      <base>
+        <path value="Coding.display" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="string" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <mustSupport value="true" />
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="C*E.2 - but note this is not well followed" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="CV.displayName" />
+      </mapping>
+      <mapping>
+        <identity value="orim" />
+        <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
+      </mapping>
+    </element>
+    <element id="Patient.gender.extension:gender-amtlich.value[x].userSelected">
+      <path value="Patient.gender.extension.value[x].userSelected" />
+      <short value="If this coding was chosen directly by the user" />
+      <definition value="Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays)." />
+      <comment value="Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely." />
+      <requirements value="This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Coding.userSelected" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="boolean" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="Sometimes implied by being first" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="CD.codingRationale" />
+      </mapping>
+      <mapping>
+        <identity value="orim" />
+        <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
       </mapping>
     </element>
     <element id="Patient.gender.value">
@@ -9770,7 +10372,7 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="Patient.birthDate.extension.value[x]" />
-      <short value="Konkreter Grund für Abwesenheit des Geburtsdatums" />
+      <short value="Kürzel des konkreten Grundes für Fehlen des Geburtsdatums" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
       <min value="1" />
       <max value="1" />
@@ -16943,32 +17545,57 @@
     <element id="Patient.extension:nationality">
       <path value="Patient.extension" />
       <sliceName value="nationality" />
+      <short value="Staatsbürgerschaft der versicherten Person" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.extension:nationality.extension">
       <path value="Patient.extension.extension" />
+      <min value="1" />
       <max value="2" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.extension:nationality.extension:code">
       <path value="Patient.extension.extension" />
       <sliceName value="code" />
+      <short value="Code der Nationalität" />
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.extension:nationality.extension:code.value[x]">
       <path value="Patient.extension.extension.value[x]" />
+      <short value="Angabe über die Nationalität der versicherten Person" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.extension:nationality.extension:code.value[x].coding">
       <path value="Patient.extension.extension.value[x].coding" />
+      <min value="1" />
       <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.extension:nationality.extension:code.value[x].coding.system">
+      <path value="Patient.extension.extension.value[x].coding.system" />
+      <short value="ValueSet mit Nationalitäten" />
+      <min value="1" />
+      <fixedUri value="http://hl7.org/fhir/ValueSet/iso3166-1-2|4.0.1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.extension:nationality.extension:code.value[x].coding.code">
+      <path value="Patient.extension.extension.value[x].coding.code" />
+      <short value="Kürzel der konkreten Nationalität" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.extension:nationality.extension:code.value[x].coding.display">
+      <path value="Patient.extension.extension.value[x].coding.display" />
+      <short value="Bezeichnung der konkreten Nationalität" />
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.identifier">
       <path value="Patient.identifier" />
-      <definition value="Ein Identifikator für den Patienten" />
-      <comment value="Kardinalität 1..3 (nicht 1..4), weil da sich VersichertenId_GKV und Versichertennummer_PKV gegenseitig ausschließen" />
-      <min value="1" />
+      <short value="Identifikator für die versicherte Person" />
+      <definition value="Ein Identifikator für die versicherte Person" />
+      <comment value="Kardinalität 0..3, da - 1. - im ENLA kein Identifikator zwingend ist und - 2. - sich VersichertenId_GKV und Versichertennummer_PKV gegenseitig ausschließen und somit max. 3 Identifikatoren angegeben werden können." />
       <max value="3" />
       <mustSupport value="true" />
     </element>
@@ -16976,11 +17603,13 @@
       <path value="Patient.identifier" />
       <sliceName value="VersichertenId" />
       <short value="KVZ10-Versichertennummer" />
+      <definition value="VersichertenID (KVNR, Krankenversichertennummer)&#xA;Dies ist die eindeutige Identifikationsnummer einer versicherten Person im deutschen Gesundheitswesen.&#xA;Sie wird von der gematik für alle gesetzlich und privat Versicherten vergeben.&#xA;Diese Nummer bleibt in der Regel lebenslang konstant." />
       <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.identifier:VersichertenId.type">
       <path value="Patient.identifier.type" />
+      <short value="Kennzeichnung des Identifikators als Versichertennummer" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.identifier:VersichertenId.system">
@@ -16996,46 +17625,63 @@
     <element id="Patient.identifier:VersichertenId_GKV">
       <path value="Patient.identifier" />
       <sliceName value="VersichertenId_GKV" />
+      <short value="Spezifische Versicherungsnummer innerhalb der gesetzlichen Krankenversicherung (GKV)" />
+      <definition value="Identifikator-Profil für die 10-stellige Krankenversichertennummer" />
+      <comment value="VersichertenID_GKV (GKV-spezifische Versichertennummer)&#xA;&#xA;Dies ist die spezifische Versicherungsnummer innerhalb der gesetzlichen Krankenversicherung (GKV).&#xA;Jede gesetzliche Krankenkasse kann eigene Nummern für ihre Versicherten führen.&#xA;Diese Nummer kann sich z. B. beim Wechsel der Krankenkasse ändern." />
       <mustSupport value="true" />
     </element>
     <element id="Patient.identifier:VersichertenId_GKV.type">
       <path value="Patient.identifier.type" />
+      <short value="Kennzeichnung des Identifikators als Versichertennummer einer gesetzlichen Krankenversicherung" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.identifier:VersichertenId_GKV.system">
       <path value="Patient.identifier.system" />
+      <short value="Menge der verfügbaren KVZ10-Versichertennummern" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.identifier:VersichertenId_GKV.value">
       <path value="Patient.identifier.value" />
+      <short value="Konkrete KVZ10-Versichertennummer" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.identifier:Patientennummer">
       <path value="Patient.identifier" />
       <sliceName value="Patientennummer" />
+      <short value="Interne Nummer im Krankenhaus- oder Praxisverwaltungssystem" />
+      <comment value="Jeder Patient bekommt eine interne Nummer im Krankenhaus- oder Praxisverwaltungssystem (KIS/PVS)." />
       <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.identifier:Patientennummer.type">
       <path value="Patient.identifier.type" />
+      <short value="Kennzeichnung des Identifikators als Patientennummer" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.identifier:Patientennummer.system">
       <path value="Patient.identifier.system" />
+      <short value="Menge der im Krankenhaus-/Praxisverwaltungssystem verfügbaren Patientennummern" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.identifier:Patientennummer.value">
       <path value="Patient.identifier.value" />
+      <short value="Konkrete Patientennummer" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.identifier:Versichertennummer_PKV">
       <path value="Patient.identifier" />
       <sliceName value="Versichertennummer_PKV" />
+      <short value="Spezifische Versicherungsnummer innerhalb der privaten Krankenversicherung (PKV)" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.identifier:Versichertennummer_PKV.type">
       <path value="Patient.identifier.type" />
+      <short value="Kennzeichnung des Identifikators als Versichertennummer einer privaten Krankenversicherung" />
       <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:Versichertennummer_PKV.value">
+      <path value="Patient.identifier.value" />
+      <short value="Konkrete Versichertennummer innerhalb der PKV" />
     </element>
     <element id="Patient.identifier:Versichertennummer_PKV.assigner">
       <path value="Patient.identifier.assigner" />
@@ -17059,6 +17705,7 @@
     </element>
     <element id="Patient.name:Name.use">
       <path value="Patient.name.use" />
+      <definition value="Abgrenzung von offiziellem Namen , Künstlernamen usw. voneinander" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.name:Name.family">
@@ -17077,6 +17724,8 @@
     </element>
     <element id="Patient.name:Name.family.extension:namenszusatz.value[x]">
       <path value="Patient.name.family.extension.value[x]" />
+      <short value="Konkreter Namenszusatz" />
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.name:Name.family.extension:nachname">
@@ -17086,6 +17735,7 @@
     </element>
     <element id="Patient.name:Name.family.extension:nachname.value[x]">
       <path value="Patient.name.family.extension.value[x]" />
+      <short value="Konkreter Nachname" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.name:Name.family.extension:vorsatzwort">
@@ -17095,14 +17745,21 @@
     </element>
     <element id="Patient.name:Name.family.extension:vorsatzwort.value[x]">
       <path value="Patient.name.family.extension.value[x]" />
+      <short value="Konkretes Vorsatzwort" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.name:Name.given">
       <path value="Patient.name.given" />
+      <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.name:Name.prefix">
       <path value="Patient.name.prefix" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name:Name.prefix.extension">
+      <path value="Patient.name.prefix.extension" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.name:Name.prefix.extension:prefix-qualifier">
@@ -17112,6 +17769,7 @@
     </element>
     <element id="Patient.name:Name.prefix.extension:prefix-qualifier.value[x]">
       <path value="Patient.name.prefix.extension.value[x]" />
+      <short value="Konkrete Spezialisierung der Präfixart" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.name:Geburtsname">
@@ -17122,7 +17780,7 @@
     </element>
     <element id="Patient.telecom">
       <path value="Patient.telecom" />
-      <short value="Angaben zu bestehenden Kontaktmöglichkeiten (Telefon)" />
+      <short value="Angaben zu bestehenden Kontaktmöglichkeiten (Telefon) der versicherten Person" />
       <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
@@ -17140,6 +17798,10 @@
     <element id="Patient.gender">
       <path value="Patient.gender" />
       <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <description value="Geschlecht der versicherten Person für administrative Zwecke" />
+      </binding>
     </element>
     <element id="Patient.gender.extension">
       <path value="Patient.gender.extension" />
@@ -17148,11 +17810,24 @@
     <element id="Patient.gender.extension:gender-amtlich">
       <path value="Patient.gender.extension" />
       <sliceName value="gender-amtlich" />
+      <short value="Genauere Differenzierung des administrativen Geschlechts" />
+      <definition value="Extension zur genaueren Differenzierung des administrativen Geschlechts" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.gender.extension:gender-amtlich.value[x]">
       <path value="Patient.gender.extension.value[x]" />
-      <comment value="required; Value set reference: http://fhir.de/ValueSet/gender-other-de&#xD;&#xA;(D, X zusätzlich zu Standard: male, female, unknown)" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.gender.extension:gender-amtlich.value[x].code">
+      <path value="Patient.gender.extension.value[x].code" />
+      <short value="Konkreter Code aus gender-other-de" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.gender.extension:gender-amtlich.value[x].display">
+      <path value="Patient.gender.extension.value[x].display" />
+      <short value="Konkrete Bezeichnung aus gender-other-de" />
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.birthDate">
@@ -17173,7 +17848,7 @@
     </element>
     <element id="Patient.birthDate.extension:data_absent_reason.value[x]">
       <path value="Patient.birthDate.extension.value[x]" />
-      <short value="Konkreter Grund für Abwesenheit des Geburtsdatums" />
+      <short value="Kürzel des konkreten Grundes für Fehlen des Geburtsdatums" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.address">
