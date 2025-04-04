@@ -1,29 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
-  <id value="DGUV_ENLA_CS_stufenweiseWiedereingliederung" />
+  <id value="DGUV-ENLA-CS-stufenweiseWiedereingliederung" />
   <url value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-stufenweiseWiedereingliederung" />
   <version value="0.0.1" />
   <name value="DGUV_ENLA_CS_stufenweiseWiedereingliederung" />
-  <title value="stufenweiseWiedereingliederung" />
+  <title value="Stufenweise Wiedereingliederung - CS" />
   <status value="draft" />
   <experimental value="false" />
-  <publisher value="DGUV (Deutsche Gesellschaft Unfallversicherung e.V.)" />
+  <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
   <contact>
     <telecom>
       <system value="url" />
       <value value="https://www.dguv.de" />
     </telecom>
   </contact>
-  <description value="Dieses CodeSystem enthaelt Codes zur Beschreibung der Erfordernis einer stufenweisen Wiedereingliederung." />
-  <concept>
+  <description value="Dieses CodeSystem enthält Codes und Displays zur Beschreibung der Erfordernis einer stufenweisen Wiedereingliederung." />
+ <content value="complete"/>
+ <concept>
     <code value="Ja" />
-    <display value="Ja, es ist eine stufenweise Wiedereingliederung erforderlich." />
+    <display value="Ja, stufenweise Wiedereingliederung erforderlich" />
   </concept>
   <concept>
     <code value="Nein" />
-    <display value="Nein, es ist keine stufenweise Wiedereingliederung erforderlich." />
+    <display value="Nein, keine stufenweise Wiedereingliederung erforderlich" />
   </concept>
   <concept>
     <code value="kB" />
-    <display value="Derzeit noch nicht zu beurteilen." />
+    <display value="Derzeit noch nicht zu beurteilen" />
   </concept>
 </CodeSystem>
