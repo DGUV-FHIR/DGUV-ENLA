@@ -2227,9 +2227,8 @@
       </extension>
       <path value="Patient.identifier" />
       <sliceName value="VersichertenId_GKV" />
-      <short value="Spezifische Versicherungsnummer innerhalb der gesetzlichen Krankenversicherung (GKV)" />
-      <definition value="Identifikator-Profil für die 10-stellige Krankenversichertennummer" />
-      <comment value="VersichertenID_GKV (GKV-spezifische Versichertennummer)&#xA;&#xA;Dies ist die spezifische Versicherungsnummer innerhalb der gesetzlichen Krankenversicherung (GKV).&#xA;Jede gesetzliche Krankenkasse kann eigene Nummern für ihre Versicherten führen.&#xA;Diese Nummer kann sich z. B. beim Wechsel der Krankenkasse ändern." />
+      <short value="Versicherungsnummer innerhalb gesetzlicher Krankenversicherung" />
+      <definition value="Identifikator-Profil für die 10-stellige Krankenversichertennummer&#xD;&#xA;VersichertenID_GKV (GKV-spezifische Versichertennummer)&#xA;Dies ist die spezifische Versicherungsnummer innerhalb der gesetzlichen Krankenversicherung (GKV).&#xA;Jede gesetzliche Krankenkasse kann eigene Nummern für ihre Versicherten führen.&#xA;Diese Nummer kann sich z. B. beim Wechsel der Krankenkasse ändern." />
       <requirements value="Patients are almost always assigned specific numerical identifiers." />
       <min value="0" />
       <max value="1" />
@@ -2742,9 +2741,8 @@
       </extension>
       <path value="Patient.identifier" />
       <sliceName value="Patientennummer" />
-      <short value="Interne Nummer im Krankenhaus- oder Praxisverwaltungssystem" />
-      <definition value="Ein Identifikator - Eindeutige und unmissverständliche Identifizierung einer Entität." />
-      <comment value="Jeder Patient bekommt eine interne Nummer im Krankenhaus- oder Praxisverwaltungssystem (KIS/PVS)." />
+      <short value="Interne Nummer in Krankenhaus- oder Praxisverwaltungssystem" />
+      <definition value="Ein Identifikator - Eindeutige und unmissverständliche Identifizierung einer Entität.&#xD;&#xA;Jeder Patient bekommt eine interne Nummer im Krankenhaus- oder Praxisverwaltungssystem (KIS/PVS)." />
       <requirements value="Patients are almost always assigned specific numerical identifiers." />
       <min value="0" />
       <max value="1" />
@@ -3242,8 +3240,8 @@
       </extension>
       <path value="Patient.identifier" />
       <sliceName value="Versichertennummer_PKV" />
-      <short value="Spezifische Versicherungsnummer innerhalb der privaten Krankenversicherung (PKV)" />
-      <definition value="Identifikator-Profil für die Abbildung einer Privatversichertennummer." />
+      <short value="Spezifische Versicherungsnummer innerhalb privater Krankenversicherung" />
+      <definition value="Identifikator-Profil für die Abbildung einer Privatversichertennummer.&#xD;&#xA;Versichertennummer_PKV (PKV-spezifische Versichertennummer)" />
       <requirements value="Patients are almost always assigned specific numerical identifiers." />
       <min value="0" />
       <max value="1" />
@@ -3680,9 +3678,9 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="Patient.identifier.assigner" />
-      <short value="Organization that issued id (may be just text)" />
-      <definition value="Organization that issued/manages the identifier." />
-      <comment value="Assigner bei PKV immer anzugeben, da Versichertennummer_PKV nicht mit Sicherheit eindeutig" />
+      <short value="PKV-Versichertennummer ausgebende Stelle" />
+      <definition value="Assigner bei PKV immer anzugeben, da Versichertennummer_PKV nicht mit Sicherheit eindeutig" />
+      <comment value="The Identifier.assigner may omit the .reference element and only contain a .display element reflecting the name or other textual information about the assigning organization." />
       <min value="1" />
       <max value="1" />
       <base>
@@ -4378,7 +4376,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Patient.identifier.assigner.display" />
-      <short value="Text alternative for the resource" />
+      <short value="Konkrete Bezeichnung der PKV-Nr-ausgebenden Stelle" />
       <definition value="Plain text narrative that identifies the resource in addition to the resource reference." />
       <comment value="This is generally not the same as the Resource.text of the referenced resource.  The purpose is to identify what's being referenced, not to fully describe it." />
       <min value="1" />
@@ -17625,9 +17623,8 @@
     <element id="Patient.identifier:VersichertenId_GKV">
       <path value="Patient.identifier" />
       <sliceName value="VersichertenId_GKV" />
-      <short value="Spezifische Versicherungsnummer innerhalb der gesetzlichen Krankenversicherung (GKV)" />
-      <definition value="Identifikator-Profil für die 10-stellige Krankenversichertennummer" />
-      <comment value="VersichertenID_GKV (GKV-spezifische Versichertennummer)&#xA;&#xA;Dies ist die spezifische Versicherungsnummer innerhalb der gesetzlichen Krankenversicherung (GKV).&#xA;Jede gesetzliche Krankenkasse kann eigene Nummern für ihre Versicherten führen.&#xA;Diese Nummer kann sich z. B. beim Wechsel der Krankenkasse ändern." />
+      <short value="Versicherungsnummer innerhalb gesetzlicher Krankenversicherung" />
+      <definition value="Identifikator-Profil für die 10-stellige Krankenversichertennummer&#xD;&#xA;VersichertenID_GKV (GKV-spezifische Versichertennummer)&#xA;Dies ist die spezifische Versicherungsnummer innerhalb der gesetzlichen Krankenversicherung (GKV).&#xA;Jede gesetzliche Krankenkasse kann eigene Nummern für ihre Versicherten führen.&#xA;Diese Nummer kann sich z. B. beim Wechsel der Krankenkasse ändern." />
       <mustSupport value="true" />
     </element>
     <element id="Patient.identifier:VersichertenId_GKV.type">
@@ -17648,8 +17645,8 @@
     <element id="Patient.identifier:Patientennummer">
       <path value="Patient.identifier" />
       <sliceName value="Patientennummer" />
-      <short value="Interne Nummer im Krankenhaus- oder Praxisverwaltungssystem" />
-      <comment value="Jeder Patient bekommt eine interne Nummer im Krankenhaus- oder Praxisverwaltungssystem (KIS/PVS)." />
+      <short value="Interne Nummer in Krankenhaus- oder Praxisverwaltungssystem" />
+      <definition value="Ein Identifikator - Eindeutige und unmissverständliche Identifizierung einer Entität.&#xD;&#xA;Jeder Patient bekommt eine interne Nummer im Krankenhaus- oder Praxisverwaltungssystem (KIS/PVS)." />
       <max value="1" />
       <mustSupport value="true" />
     </element>
@@ -17671,7 +17668,8 @@
     <element id="Patient.identifier:Versichertennummer_PKV">
       <path value="Patient.identifier" />
       <sliceName value="Versichertennummer_PKV" />
-      <short value="Spezifische Versicherungsnummer innerhalb der privaten Krankenversicherung (PKV)" />
+      <short value="Spezifische Versicherungsnummer innerhalb privater Krankenversicherung" />
+      <definition value="Identifikator-Profil für die Abbildung einer Privatversichertennummer.&#xD;&#xA;Versichertennummer_PKV (PKV-spezifische Versichertennummer)" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.identifier:Versichertennummer_PKV.type">
@@ -17685,11 +17683,13 @@
     </element>
     <element id="Patient.identifier:Versichertennummer_PKV.assigner">
       <path value="Patient.identifier.assigner" />
-      <comment value="Assigner bei PKV immer anzugeben, da Versichertennummer_PKV nicht mit Sicherheit eindeutig" />
+      <short value="PKV-Versichertennummer ausgebende Stelle" />
+      <definition value="Assigner bei PKV immer anzugeben, da Versichertennummer_PKV nicht mit Sicherheit eindeutig" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.identifier:Versichertennummer_PKV.assigner.display">
       <path value="Patient.identifier.assigner.display" />
+      <short value="Konkrete Bezeichnung der PKV-Nr-ausgebenden Stelle" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.name">

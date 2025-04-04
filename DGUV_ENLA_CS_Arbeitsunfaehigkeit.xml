@@ -4,7 +4,7 @@
   <url value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Arbeitsunfaehigkeit" />
   <version value="0.0.1" />
   <name value="DGUV_ENLA_CS_Arbeitsunfaehigkeit" />
-  <title value="Arbeitsunfaehigkeit" />
+  <title value="Arbeitsunfaehigkeit - CS" />
   <status value="draft" />
   <experimental value="false" />
   <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
@@ -14,7 +14,7 @@
       <value value="https://www.dguv.de" />
     </telecom>
   </contact>
-  <description value="Dieses CodeSystem enthaelt Codes zur Einschätzung der Arbeitsunfaehigkeit der versicherten Person durch den behandelnden Arzt." />
+  <description value="Dieses CodeSystem enthält Codes und Displays zur Einschätzung der Arbeitsunfaehigkeit der versicherten Person durch den behandelnden Arzt." />
   <content value="complete"/>
   <concept>
     <code value="AF" />
