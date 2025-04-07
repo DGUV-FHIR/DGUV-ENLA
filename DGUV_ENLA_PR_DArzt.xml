@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="DGUV-ENLA-PR-DArzt" />
   <url value="http://fhir.dguv.de/ENLA/PractitionerRole/DGUV-ENLA-PR-DArzt" />
   <name value="DGUV_ENLA_PR_DArzt" />
   <title value="D-Arzt" />
   <status value="draft" />
+  <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
   <description value="Dieses Profil bildet den Durchgangsarzt ab." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
@@ -596,7 +598,7 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="PractitionerRole.practitioner" />
-      <short value="Practitioner that is able to provide the defined services for the organization" />
+      <short value="Profiltyp für referenzierten D-Arzt" />
       <definition value="Practitioner that is able to provide the defined services for the organization." />
       <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository." />
       <min value="1" />
@@ -724,7 +726,7 @@
     </element>
     <element id="PractitionerRole.practitioner.reference">
       <path value="PractitionerRole.practitioner.reference" />
-      <short value="Literal reference, Relative, internal or absolute URL" />
+      <short value="Referenz auf konkreten D-Arzt" />
       <definition value="A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources." />
       <comment value="Using absolute URLs provides a stable scalable approach suitable for a cloud/web context, while using relative/logical references provides a flexible approach suitable for use when trading across closed eco-system boundaries.   Absolute URLs do not need to point to a FHIR RESTful server, though this is the preferred approach. If the URL conforms to the structure &quot;/[type]/[id]&quot; then it should be assumed that the reference is to a FHIR RESTful server." />
       <min value="1" />
@@ -897,7 +899,7 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="PractitionerRole.organization" />
-      <short value="Organization where the roles are available" />
+      <short value="Profiltyp referenzierter D-Arzt-Organisation" />
       <definition value="The organization where the Practitioner performs the roles associated." />
       <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository." />
       <min value="1" />
@@ -1198,9 +1200,9 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="PractitionerRole.code" />
-      <short value="Beschreibung der Rolle in der Einrichtung" />
+      <short value="Rolle des D-Arztes in der Einrichtung" />
       <definition value="Roles which this practitioner is authorized to perform for the organization." />
-      <comment value="A person may have more than one role." />
+      <comment value="Die Rolle des D-Arztes in der Einrichtung spielt im ENLA keine Rolle." />
       <requirements value="Need to know what authority the practitioner has - what can they do?" />
       <min value="0" />
       <max value="*" />
@@ -1824,9 +1826,9 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="PractitionerRole.specialty" />
-      <short value="Specific specialty of the practitioner" />
+      <short value="KBV-Fachgruppe des D-Arztes" />
       <definition value="Specific specialty of the practitioner." />
-      <comment value="Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination." />
+      <comment value="Die KBV-Fachgruppe des D-Arztes spielt im ENLA keine Rolle." />
       <min value="0" />
       <max value="*" />
       <base>
@@ -2569,6 +2571,7 @@
       <path value="PractitionerRole.telecom" />
       <short value="Angaben zu bestehenden Kontaktmöglichkeiten. (Telefon, Fax, E-Mail usw.)" />
       <definition value="Details for all kinds of technology mediated contact points for a person or organization, including telephone, email, etc." />
+      <comment value="Angaben zu bestehenden Kontaktmöglichkeiten. (Telefon, Fax, E-Mail usw.) sollen nicht in DGUV_ENLA_PR_DArzt, sondern in DGUV_ENLA_PR_DArztOrganisation gemacht werden." />
       <requirements value="Often practitioners have a dedicated line for each location (or service) that they work at, and need to be able to define separate contact details for each of these." />
       <min value="0" />
       <max value="0" />
@@ -3599,6 +3602,7 @@
   <differential>
     <element id="PractitionerRole.practitioner">
       <path value="PractitionerRole.practitioner" />
+      <short value="Profiltyp für referenzierten D-Arzt" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringer" />
@@ -3607,11 +3611,13 @@
     </element>
     <element id="PractitionerRole.practitioner.reference">
       <path value="PractitionerRole.practitioner.reference" />
+      <short value="Referenz auf konkreten D-Arzt" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.organization">
       <path value="PractitionerRole.organization" />
+      <short value="Profiltyp referenzierter D-Arzt-Organisation" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-DArztOrganisation" />
@@ -3623,8 +3629,19 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="PractitionerRole.code">
+      <path value="PractitionerRole.code" />
+      <short value="Rolle des D-Arztes in der Einrichtung" />
+      <comment value="Die Rolle des D-Arztes in der Einrichtung spielt im ENLA keine Rolle." />
+    </element>
+    <element id="PractitionerRole.specialty">
+      <path value="PractitionerRole.specialty" />
+      <short value="KBV-Fachgruppe des D-Arztes" />
+      <comment value="Die KBV-Fachgruppe des D-Arztes spielt im ENLA keine Rolle." />
+    </element>
     <element id="PractitionerRole.telecom">
       <path value="PractitionerRole.telecom" />
+      <comment value="Angaben zu bestehenden Kontaktmöglichkeiten. (Telefon, Fax, E-Mail usw.) sollen nicht in DGUV_ENLA_PR_DArzt, sondern in DGUV_ENLA_PR_DArztOrganisation gemacht werden." />
       <max value="0" />
     </element>
   </differential>
