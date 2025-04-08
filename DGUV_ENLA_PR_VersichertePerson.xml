@@ -9173,6 +9173,7 @@
       <type>
         <code value="code" />
       </type>
+      <fixedCode value="phone" />
       <condition value="ele-1" />
       <condition value="cpt-2" />
       <constraint>
@@ -17788,6 +17789,7 @@
     <element id="Patient.telecom.system">
       <path value="Patient.telecom.system" />
       <comment value="Im ENLA soll an dieser Stelle nur die Telefonnummer angegeben werden." />
+      <fixedCode value="phone" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.telecom.value">
