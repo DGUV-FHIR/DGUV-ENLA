@@ -44,6 +44,10 @@
 	</concept>
 	<concept>
         <code value="TH" />
-        <display value="Therapien" />
+        <display value="Therapie" />
+	</concept>
+	<concept>
+        <code value="THE" />
+        <display value="Therapieempfehlung" />
 	</concept>
 </CodeSystem>

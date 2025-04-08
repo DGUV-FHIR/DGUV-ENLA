@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="DGUV-ENLA-PR-Therapien" />
-  <url value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Therapien" />
-  <name value="DGUV_ENLA_PR_Therapien" />
+  <id value="DGUV-ENLA-PR-Therapie" />
+  <url value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Therapie" />
+  <name value="DGUV_ENLA_PR_Therapie" />
   <title value="Therapien" />
   <status value="draft" />
   <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
-  <description value="Dieses Profil enthält die Beschreibung zu durchgeführten Therapie(n)" />
+  <description value="Dieses Profil enthält die Beschreibung zu durchgeführten Therapie" />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -1161,7 +1161,7 @@
     </element>
     <element id="Observation.code.coding.code">
       <path value="Observation.code.coding.code" />
-      <short value="Kürzel für ENLA-Teilberichtsinhalt Therapien" />
+      <short value="Kürzel für ENLA-Teilberichtsinhalt Therapie" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to refer to a particular code in the system." />
@@ -1209,7 +1209,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Observation.code.coding.display" />
-      <short value="Bezeichnung für Teilberichtsinhalt Therapien" />
+      <short value="Bezeichnung für Teilberichtsinhalt Therapie" />
       <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
@@ -1223,7 +1223,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="Therapien" />
+      <fixedString value="Therapie" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -4260,16 +4260,16 @@
     </element>
     <element id="Observation.code.coding.code">
       <path value="Observation.code.coding.code" />
-      <short value="Kürzel für ENLA-Teilberichtsinhalt Therapien" />
+      <short value="Kürzel für ENLA-Teilberichtsinhalt Therapie" />
       <min value="1" />
       <fixedCode value="TH" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.code.coding.display">
       <path value="Observation.code.coding.display" />
-      <short value="Bezeichnung für Teilberichtsinhalt Therapien" />
+      <short value="Bezeichnung für Teilberichtsinhalt Therapie" />
       <min value="1" />
-      <fixedString value="Therapien" />
+      <fixedString value="Therapie" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.subject">

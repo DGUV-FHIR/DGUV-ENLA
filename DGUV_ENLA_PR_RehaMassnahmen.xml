@@ -1889,7 +1889,7 @@
       <alias value="extensions" />
       <alias value="user content" />
       <min value="1" />
-      <max value="1" />
+      <max value="*" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -2593,6 +2593,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -3122,7 +3123,7 @@
       <alias value="extensions" />
       <alias value="user content" />
       <min value="0" />
-      <max value="*" />
+      <max value="0" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -5763,7 +5764,6 @@
     <element id="Observation.effective[x].extension">
       <path value="Observation.effective[x].extension" />
       <min value="1" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.effective[x].extension:Zeitpunkt">
@@ -5809,6 +5809,10 @@
       <path value="Observation.effective[x].extension.value[x].coding.display" />
       <short value="Bezeichnung der Varianten des Zeitpunktes" />
       <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.effective[x].extension:Zeitpunkt.value[x].text">
+      <path value="Observation.effective[x].extension.value[x].text" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.value[x]">
