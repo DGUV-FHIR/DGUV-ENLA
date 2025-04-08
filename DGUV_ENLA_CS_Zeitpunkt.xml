@@ -21,5 +21,9 @@
 	<concept>
         <code value="FESTZUL" />
         <display value="Durch Weiterbehandler festzulegen" />
+		</concept>
+	<concept>
+    <code value="AZPKT" />
+        <display value="Anderer Zeitpunkt" />
 	</concept>
 </CodeSystem>
