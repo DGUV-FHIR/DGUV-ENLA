@@ -1,53 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
-    <id value="DGUV_ENLA_CS_Teilberichtsinhalt" />
-    <url value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
-    <version value="0.0.1" />
-    <name value="DGUV_ENLA_CS_Teilberichtsinhalt" />
-    <title value="Teilberichtsinhalt" />
-    <status value="draft" />
-    <experimental value="false" />
-    <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
-    <contact>
-        <telecom>
-            <system value="url" />
-            <value value="https://www.dguv.de" />
-        </telecom>
-    </contact>
-    <description value="Dieses CodeSystem enthält die Codes und Displays zur differenzierteren Kennzeichnung von Profilen auf der Grundlage der Ressource Observation." />       
-	<concept>
-        <code value="AU" />
-        <display value="Arbeitsunfaehigkeit" />
-    </concept>
-	<concept>
-        <code value="PT" />
-        <display value="PrognoseWiederaufnahmeTaetigkeit" />
-    </concept>
-	<concept>
-        <code value="WE" />
-        <display value="Wiedereingliederung" />
-    </concept>
-    <concept>
-        <code value="RM" />
-        <display value="RehaMassnahmen" />
-    </concept>
-	<concept>
-        <code value="HEILM" />
-        <display value="Heilmittel" />
-	</concept>
-	<concept>
-        <code value="HILFSM" />
-        <display value="Hilfsmittel" />
-	</concept>
-	<concept>
-        <code value="BM" />
-        <display value="BesondereMassnahmen" />
-	</concept>
-	<concept>
-        <code value="TH" />
-        <display value="Therapie" />
-	</concept>
-	<concept>
-        <code value="THE" />
-        <display value="Therapieempfehlung" />
-	</concept>
+  <id value="DGUV-ENLA-CS-Teilberichtsinhalt" />
+  <url value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+  <version value="0.0.1" />
+  <name value="DGUV_ENLA_CS_Teilberichtsinhalt" />
+  <title value="Teilberichtsinhalt" />
+  <status value="draft" />
+  <experimental value="false" />
+  <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="https://www.dguv.de" />
+    </telecom>
+  </contact>
+  <description value="Dieses CodeSystem enthält die Codes und Displays zur differenzierteren Kennzeichnung von Profilen auf der Grundlage der Ressource Observation." />
+  <content value="complete" />
+  <concept>
+    <code value="AU" />
+    <display value="Arbeitsunfaehigkeit" />
+  </concept>
+  <concept>
+    <code value="PT" />
+    <display value="PrognoseWiederaufnahmeTaetigkeit" />
+  </concept>
+  <concept>
+    <code value="WE" />
+    <display value="Wiedereingliederung" />
+  </concept>
+  <concept>
+    <code value="RM" />
+    <display value="RehaMassnahmen" />
+  </concept>
+  <concept>
+    <code value="HEILM" />
+    <display value="Heilmittel" />
+  </concept>
+  <concept>
+    <code value="HILFSM" />
+    <display value="Hilfsmittel" />
+  </concept>
+  <concept>
+    <code value="BM" />
+    <display value="BesondereMassnahmen" />
+  </concept>
+  <concept>
+    <code value="TH" />
+    <display value="Therapie" />
+  </concept>
+  <concept>
+    <code value="THE" />
+    <display value="Therapieempfehlung" />
+  </concept>
 </CodeSystem>
