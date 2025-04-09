@@ -1,33 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
-    <id value="DGUV_ENLA_CS_RehaMassnahmen" />
-    <url value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-RehaMassnahmen" />
-    <version value="0.0.1" />
-    <name value="DGUV_ENLA_CS_RehaMassnahmen" />
-    <title value="RehaMassnahmen" />
-    <status value="draft" />
-    <experimental value="false" />
-    <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
-    <contact>
-        <telecom>
-            <system value="url" />
-            <value value="https://www.dguv.de" />
-        </telecom>
-    </contact>
-    <description value="Dieses CodeSystem enthält die Codes und Displays zur Beschreibung der zum Zeitpunkt der Entlassung aus der stationären Behandlung für die versicherte Person notwendigen Reha-Maßnahmen." />
-    <concept>
-        <code value="EAP" />
-        <display value="Erweiterte Ambulante Physiotherapie (EAP)" />
-    </concept>
-	<concept>
-        <code value="BGSW" />
-        <display value="Berufsgenossenschaftliche stationäre Weiterbehandlung (BGSW) muskuloskeletal oder neurologisch" />
-    </concept>
-	<concept>
-        <code value="ABMR" />
-        <display value="Arbeitsplatzbezogene Muskuloskeletale Rehabilitation (ABMR)" />
-    </concept>
-    <concept>
-        <code value="NR" />
-        <display value="Neurologische Reha Phase C/D" />
-    </concept>
+  <id value="DGUV-ENLA-CS-RehaMassnahmen" />
+  <url value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-RehaMassnahmen" />
+  <version value="0.0.1" />
+  <name value="DGUV_ENLA_CS_RehaMassnahmen" />
+  <title value="RehaMassnahmen" />
+  <status value="draft" />
+  <experimental value="false" />
+  <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="https://www.dguv.de" />
+    </telecom>
+  </contact>
+  <description value="Dieses CodeSystem enthält die Codes und Displays zur Beschreibung der zum Zeitpunkt der Entlassung aus der stationären Behandlung für die versicherte Person notwendigen Reha-Maßnahmen." />
+  <content value="complete" />
+  <concept>
+    <code value="EAP" />
+    <display value="Erweiterte Ambulante Physiotherapie (EAP)" />
+  </concept>
+  <concept>
+    <code value="BGSW" />
+    <display value="Berufsgenossenschaftliche stationäre Weiterbehandlung (BGSW) muskuloskeletal oder neurologisch" />
+  </concept>
+  <concept>
+    <code value="ABMR" />
+    <display value="Arbeitsplatzbezogene Muskuloskeletale Rehabilitation (ABMR)" />
+  </concept>
+  <concept>
+    <code value="NR" />
+    <display value="Neurologische Reha Phase C/D" />
+  </concept>
 </CodeSystem>

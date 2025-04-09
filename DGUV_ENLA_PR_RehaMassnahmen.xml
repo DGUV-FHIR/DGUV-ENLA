@@ -1889,7 +1889,7 @@
       <alias value="extensions" />
       <alias value="user content" />
       <min value="1" />
-      <max value="*" />
+      <max value="1" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -5764,6 +5764,7 @@
     <element id="Observation.effective[x].extension">
       <path value="Observation.effective[x].extension" />
       <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.effective[x].extension:Zeitpunkt">
