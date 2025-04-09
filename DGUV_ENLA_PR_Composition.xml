@@ -2107,7 +2107,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Composition.section">
+    <element id="Composition.section:StufenweiseWiedereingliederung">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
         <valueCode value="normative" />
       </extension>
@@ -2118,7 +2118,8 @@
         <valueString value="Section" />
       </extension>
       <path value="Composition.section" />
-      <short value="Composition is broken into sections" />
+      <sliceName value="StufenweiseWiedereingliederung" />
+      <short value="Teilbericht Freitextdiagnose" />
       <definition value="The root of the sections that make up the composition." />
       <min value="0" />
       <max value="*" />
@@ -2155,6 +2156,7 @@
         <xpath value="not(exists(f:emptyReason) and exists(f:entry))" />
         <source value="http://hl7.org/fhir/StructureDefinition/Composition" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -2168,7 +2170,7 @@
         <map value=".component.structuredBody.component.section" />
       </mapping>
     </element>
-    <element id="Composition.section.id">
+    <element id="Composition.section:StufenweiseWiedereingliederung.id">
       <path value="Composition.section.id" />
       <representation value="xmlAttr" />
       <short value="Unique id for inter-element referencing" />
@@ -2191,7 +2193,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Composition.section.extension">
+    <element id="Composition.section:StufenweiseWiedereingliederung.extension">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
         <valueCode value="normative" />
       </extension>
@@ -2248,7 +2250,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Composition.section.modifierExtension">
+    <element id="Composition.section:StufenweiseWiedereingliederung.modifierExtension">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
         <valueCode value="normative" />
       </extension>
@@ -2302,9 +2304,9 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Composition.section.title">
+    <element id="Composition.section:StufenweiseWiedereingliederung.title">
       <path value="Composition.section.title" />
-      <short value="Label for section (e.g. for ToC)" />
+      <short value="Überschrift des Teilberichts" />
       <definition value="The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents." />
       <comment value="The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents, it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element." />
       <requirements value="Section headings are often standardized for different types of documents.  They give guidance to humans on how the document is organized." />
@@ -2321,6 +2323,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="Diagnose (Freitext)" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -2343,7 +2346,7 @@
         <map value=".title" />
       </mapping>
     </element>
-    <element id="Composition.section.code">
+    <element id="Composition.section:StufenweiseWiedereingliederung.code">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
         <valueCode value="normative" />
       </extension>
@@ -2407,7 +2410,7 @@
         <map value=".code" />
       </mapping>
     </element>
-    <element id="Composition.section.author">
+    <element id="Composition.section:StufenweiseWiedereingliederung.author">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
         <valueCode value="normative" />
       </extension>
@@ -2473,7 +2476,7 @@
         <map value=".author.assignedAuthor" />
       </mapping>
     </element>
-    <element id="Composition.section.focus">
+    <element id="Composition.section:StufenweiseWiedereingliederung.focus">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
         <valueCode value="normative" />
       </extension>
@@ -2525,7 +2528,7 @@
         <map value=".subject? (CDA did not differentiate between subject and focus)" />
       </mapping>
     </element>
-    <element id="Composition.section.text">
+    <element id="Composition.section:StufenweiseWiedereingliederung.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
         <valueCode value="normative" />
       </extension>
@@ -2573,7 +2576,7 @@
         <map value=".text" />
       </mapping>
     </element>
-    <element id="Composition.section.mode">
+    <element id="Composition.section:StufenweiseWiedereingliederung.mode">
       <path value="Composition.section.mode" />
       <short value="working | snapshot | changes" />
       <definition value="How the entry list was prepared - whether it is a working list that is suitable for being maintained on an ongoing basis, or if it represents a snapshot of a list of items from another source, or whether it is a prepared list where items may be marked as added, modified or deleted." />
@@ -2623,7 +2626,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Composition.section.orderedBy">
+    <element id="Composition.section:StufenweiseWiedereingliederung.orderedBy">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
         <valueCode value="normative" />
       </extension>
@@ -2687,7 +2690,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Composition.section.entry">
+    <element id="Composition.section:StufenweiseWiedereingliederung.entry">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
         <valueCode value="normative" />
       </extension>
@@ -2698,8 +2701,8 @@
       <short value="A reference to data that supports this section" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
-      <min value="0" />
-      <max value="*" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="Composition.section.entry" />
         <min value="0" />
@@ -2707,7 +2710,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseFreitext" />
       </type>
       <condition value="ele-1" />
       <condition value="cmp-2" />
@@ -2727,6 +2730,7 @@
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Reference" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -2744,7 +2748,7 @@
         <map value=".entry" />
       </mapping>
     </element>
-    <element id="Composition.section.emptyReason">
+    <element id="Composition.section:StufenweiseWiedereingliederung.emptyReason">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
         <valueCode value="normative" />
       </extension>
@@ -2809,7 +2813,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Composition.section.section">
+    <element id="Composition.section:StufenweiseWiedereingliederung.section">
       <path value="Composition.section.section" />
       <short value="Nested Section" />
       <definition value="A nested sub-section within this section." />
@@ -2854,6 +2858,107 @@
     <element id="Composition.title">
       <path value="Composition.title" />
       <fixedString value="Entlassungsbericht aus stationärer Behandlung" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:DiagnoseFreitext">
+      <path value="Composition.section" />
+      <sliceName value="DiagnoseFreitext" />
+      <short value="Teilbericht Freitextdiagnose" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:DiagnoseFreitext.title">
+      <path value="Composition.section.title" />
+      <short value="Überschrift des Teilberichts" />
+      <fixedString value="Diagnose (Freitext)" />
+    </element>
+    <element id="Composition.section:DiagnoseFreitext.entry">
+      <path value="Composition.section.entry" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseFreitext" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:DiagnoseStrukturiert">
+      <path value="Composition.section" />
+      <sliceName value="DiagnoseStrukturiert" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Therapie">
+      <path value="Composition.section" />
+      <sliceName value="Therapie" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Unfallereignis">
+      <path value="Composition.section" />
+      <sliceName value="Unfallereignis" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Aufnahmebefunde">
+      <path value="Composition.section" />
+      <sliceName value="Aufnahmebefunde" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Behandlungsverlauf">
+      <path value="Composition.section" />
+      <sliceName value="Behandlungsverlauf" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassungsbefunde">
+      <path value="Composition.section" />
+      <sliceName value="Entlassungsbefunde" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Therapieempfehlung">
+      <path value="Composition.section" />
+      <sliceName value="Therapieempfehlung" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:WeiterbehandelnderArzt">
+      <path value="Composition.section" />
+      <sliceName value="WeiterbehandelnderArzt" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:WeiterbehandelndeOrganisation">
+      <path value="Composition.section" />
+      <sliceName value="WeiterbehandelndeOrganisation" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:RehaMassnahmen">
+      <path value="Composition.section" />
+      <sliceName value="RehaMassnahmen" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Heilmittel">
+      <path value="Composition.section" />
+      <sliceName value="Heilmittel" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Hilfsmittel">
+      <path value="Composition.section" />
+      <sliceName value="Hilfsmittel" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:BesondereMassnahmen">
+      <path value="Composition.section" />
+      <sliceName value="BesondereMassnahmen" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Arbeitsunfaehigkeit">
+      <path value="Composition.section" />
+      <sliceName value="Arbeitsunfaehigkeit" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:PrognoseWiederaufnahmeTaetigkeit">
+      <path value="Composition.section" />
+      <sliceName value="PrognoseWiederaufnahmeTaetigkeit" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StufenweiseWiedereingliederung">
+      <path value="Composition.section" />
+      <sliceName value="StufenweiseWiedereingliederung" />
       <mustSupport value="true" />
     </element>
   </differential>
