@@ -2881,6 +2881,27 @@
       </type>
       <mustSupport value="true" />
     </element>
+    <element id="Composition.section:DiagnoseFreitext:VersichertePerson">
+      <path value="Composition.section" />
+      <sliceName value="VersichertePerson" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:DiagnoseFreitext:Unfallbetrieb">
+      <path value="Composition.section" />
+      <sliceName value="Unfallbetrieb" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:DiagnoseFreitext:Falldaten">
+      <path value="Composition.section" />
+      <sliceName value="Falldaten" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
     <element id="Composition.section:DiagnoseFreitext:DiagnoseFreitext">
       <path value="Composition.section" />
       <sliceName value="DiagnoseFreitext" />
