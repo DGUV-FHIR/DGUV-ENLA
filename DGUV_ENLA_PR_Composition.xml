@@ -2121,8 +2121,8 @@
       <sliceName value="StufenweiseWiedereingliederung" />
       <short value="Teilbericht Freitextdiagnose" />
       <definition value="The root of the sections that make up the composition." />
-      <min value="0" />
-      <max value="*" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="Composition.section" />
         <min value="0" />
@@ -2881,84 +2881,150 @@
       </type>
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:DiagnoseStrukturiert">
+    <element id="Composition.section:DiagnoseFreitext:DiagnoseFreitext">
+      <path value="Composition.section" />
+      <sliceName value="DiagnoseFreitext" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:DiagnoseFreitext:DiagnoseStrukturiert">
       <path value="Composition.section" />
       <sliceName value="DiagnoseStrukturiert" />
+      <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:Therapie">
+    <element id="Composition.section:DiagnoseFreitext:Therapie">
       <path value="Composition.section" />
       <sliceName value="Therapie" />
+      <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:Unfallereignis">
+    <element id="Composition.section:DiagnoseFreitext:Unfallereignis">
       <path value="Composition.section" />
       <sliceName value="Unfallereignis" />
+      <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:Aufnahmebefunde">
+    <element id="Composition.section:DiagnoseFreitext:Aufnahmebefunde">
       <path value="Composition.section" />
       <sliceName value="Aufnahmebefunde" />
+      <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:Behandlungsverlauf">
+    <element id="Composition.section:DiagnoseFreitext:Behandlungsverlauf">
       <path value="Composition.section" />
       <sliceName value="Behandlungsverlauf" />
+      <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:Entlassungsbefunde">
+    <element id="Composition.section:DiagnoseFreitext:Entlassungsbefunde">
       <path value="Composition.section" />
       <sliceName value="Entlassungsbefunde" />
+      <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:Therapieempfehlung">
+    <element id="Composition.section:DiagnoseFreitext:Therapieempfehlung">
       <path value="Composition.section" />
       <sliceName value="Therapieempfehlung" />
+      <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:WeiterbehandelnderArzt">
+    <element id="Composition.section:DiagnoseFreitext:MedikationsInformation">
+      <path value="Composition.section" />
+      <sliceName value="MedikationsInformation" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:DiagnoseFreitext:MedikationWirkstoff">
+      <path value="Composition.section" />
+      <sliceName value="MedikationWirkstoff" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:DiagnoseFreitext:MedikationRezeptur">
+      <path value="Composition.section" />
+      <sliceName value="MedikationRezeptur" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:DiagnoseFreitext:MedikationArzneimittel">
+      <path value="Composition.section" />
+      <sliceName value="MedikationArzneimittel" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:DiagnoseFreitext:WeiterbehandelnderArzt">
       <path value="Composition.section" />
       <sliceName value="WeiterbehandelnderArzt" />
+      <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:WeiterbehandelndeOrganisation">
+    <element id="Composition.section:DiagnoseFreitext:WeiterbehandelndeOrganisation">
       <path value="Composition.section" />
       <sliceName value="WeiterbehandelndeOrganisation" />
+      <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:RehaMassnahmen">
+    <element id="Composition.section:DiagnoseFreitext:RehaMassnahmen">
       <path value="Composition.section" />
       <sliceName value="RehaMassnahmen" />
+      <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:Heilmittel">
+    <element id="Composition.section:DiagnoseFreitext:Heilmittel">
       <path value="Composition.section" />
       <sliceName value="Heilmittel" />
+      <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:Hilfsmittel">
+    <element id="Composition.section:DiagnoseFreitext:Hilfsmittel">
       <path value="Composition.section" />
       <sliceName value="Hilfsmittel" />
+      <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:BesondereMassnahmen">
+    <element id="Composition.section:DiagnoseFreitext:BesondereMassnahmen">
       <path value="Composition.section" />
       <sliceName value="BesondereMassnahmen" />
+      <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:Arbeitsunfaehigkeit">
+    <element id="Composition.section:DiagnoseFreitext:Arbeitsunfaehigkeit">
       <path value="Composition.section" />
       <sliceName value="Arbeitsunfaehigkeit" />
+      <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:PrognoseWiederaufnahmeTaetigkeit">
+    <element id="Composition.section:DiagnoseFreitext:PrognoseWiederaufnahmeTaetigkeit">
       <path value="Composition.section" />
       <sliceName value="PrognoseWiederaufnahmeTaetigkeit" />
+      <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:StufenweiseWiedereingliederung">
+    <element id="Composition.section:DiagnoseFreitext:StufenweiseWiedereingliederung">
       <path value="Composition.section" />
       <sliceName value="StufenweiseWiedereingliederung" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
   </differential>
