@@ -18,18 +18,18 @@
   <content value="complete"/>
   <concept>
     <code value="WAOE" />
-    <display value="Die bisherige Taetigkeit kann voraussichtlich ohne wesentliche Einschraenkungen ausgeuebt werden." />
+    <display value="Die bisherige Tätigkeit kann voraussichtlich ohne wesentliche Einschränkungen ausgeübt werden." />
   </concept>
   <concept>
     <code value="WAME" />
-    <display value="Die bisherige Taetigkeit kann voraussichtlich mit Einschraenkungen ausgeuebt werden." />
+    <display value="Die bisherige Tätigkeit kann voraussichtlich mit Einschränkungen ausgeübt werden." />
   </concept>
   <concept>
     <code value="WANM" />
-    <display value="Die bisherige Taetigkeit kann voraussichtlich nicht wiederaufgenommen werden." />
+    <display value="Die bisherige Tätigkeit kann voraussichtlich nicht wiederaufgenommen werden." />
   </concept>
   <concept>
     <code value="WAKB" />
-    <display value="Eine Prognose ueber die Wiederaufnahme der bisherigen Taetigkeit ist derzeit nicht moeglich." />
+    <display value="Eine Prognose über die Wiederaufnahme der bisherigen Tätigkeit ist derzeit nicht möglich." />
   </concept>
 </CodeSystem>
