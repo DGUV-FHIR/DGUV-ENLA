@@ -1382,6 +1382,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <binding>
         <strength value="required" />
         <valueSet value="http://fhir.de/ValueSet/icd-10-gm-mehrfachcodierungs-kennzeichen" />
@@ -1500,6 +1501,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -1585,6 +1587,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -1878,6 +1881,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <binding>
         <strength value="required" />
         <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_ICD_SEITENLOKALISATION" />
@@ -1996,6 +2000,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -2081,6 +2086,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -2402,6 +2408,7 @@
         <expression value="code!='Z' or (%resource.clinicalStatus.coding.where(code='resolved').exists() and %resource.verificationStatus.coding.where(code='confirmed').exists())" />
         <source value="http://fhir.de/StructureDefinition/icd-10-gm-diagnosesicherheit" />
       </constraint>
+      <mustSupport value="true" />
       <binding>
         <strength value="required" />
         <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_ICD_DIAGNOSESICHERHEIT" />
@@ -5009,14 +5016,42 @@
       <sliceName value="Mehrfachcodierungs-Kennzeichen" />
       <mustSupport value="true" />
     </element>
+    <element id="Condition.code.coding:ICD-10-GM.extension:Mehrfachcodierungs-Kennzeichen.value[x]">
+      <path value="Condition.code.coding.extension.value[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:ICD-10-GM.extension:Mehrfachcodierungs-Kennzeichen.value[x].system">
+      <path value="Condition.code.coding.extension.value[x].system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:ICD-10-GM.extension:Mehrfachcodierungs-Kennzeichen.value[x].code">
+      <path value="Condition.code.coding.extension.value[x].code" />
+      <mustSupport value="true" />
+    </element>
     <element id="Condition.code.coding:ICD-10-GM.extension:Seitenlokalisation">
       <path value="Condition.code.coding.extension" />
       <sliceName value="Seitenlokalisation" />
       <mustSupport value="true" />
     </element>
+    <element id="Condition.code.coding:ICD-10-GM.extension:Seitenlokalisation.value[x]">
+      <path value="Condition.code.coding.extension.value[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:ICD-10-GM.extension:Seitenlokalisation.value[x].system">
+      <path value="Condition.code.coding.extension.value[x].system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:ICD-10-GM.extension:Seitenlokalisation.value[x].code">
+      <path value="Condition.code.coding.extension.value[x].code" />
+      <mustSupport value="true" />
+    </element>
     <element id="Condition.code.coding:ICD-10-GM.extension:Diagnosesicherheit">
       <path value="Condition.code.coding.extension" />
       <sliceName value="Diagnosesicherheit" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:ICD-10-GM.extension:Diagnosesicherheit.value[x]">
+      <path value="Condition.code.coding.extension.value[x]" />
       <mustSupport value="true" />
     </element>
     <element id="Condition.code.coding:ICD-10-GM.system">
