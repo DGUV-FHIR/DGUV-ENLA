@@ -610,8 +610,8 @@
       <short value="Identifies this organization  across multiple systems" />
       <definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems." />
       <requirements value="Organizations are known by a variety of ids. Some institutions maintain several, and most collect identifiers for exchange with other organizations concerning the organization." />
-      <min value="1" />
-      <max value="*" />
+      <min value="0" />
+      <max value="2" />
       <base>
         <path value="Organization.identifier" />
         <min value="0" />
@@ -677,7 +677,7 @@
       <short value="Institutionskennzeichen (IKNR)" />
       <definition value="Als eindeutiges Merkmal zur Identifizierung von Vertragspartnern, die für die Sozialversicherungsträger Leistungen erbringen wird die IKNR durch die Arbeitsgemeinschaft Institutionskennzeichen vergeben." />
       <requirements value="Organizations are known by a variety of ids. Some institutions maintain several, and most collect identifiers for exchange with other organizations concerning the organization." />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Organization.identifier" />
@@ -1781,7 +1781,7 @@
     </element>
     <element id="Organization.name">
       <path value="Organization.name" />
-      <short value="Name used for the organization" />
+      <short value="Name des Unfallversicherungsträgers" />
       <definition value="A name associated with the organization." />
       <comment value="If the name of an organization changes, consider putting the old name in the alias column so that it can still be located through searches." />
       <requirements value="Need to use the name as the label of the organization." />
@@ -2284,7 +2284,7 @@
       <comment value="Organization may have multiple addresses with different uses or applicable periods. The use code 'home' is not to be used." />
       <requirements value="May need to keep track of the organization's addresses for contacting, billing or reporting requirements." />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <base>
         <path value="Organization.address" />
         <min value="0" />
@@ -3096,7 +3096,6 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -6576,13 +6575,12 @@
     </element>
     <element id="Organization.identifier">
       <path value="Organization.identifier" />
-      <min value="1" />
+      <max value="2" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.identifier:Institutionskennzeichen">
       <path value="Organization.identifier" />
       <sliceName value="Institutionskennzeichen" />
-      <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
@@ -6610,6 +6608,7 @@
     </element>
     <element id="Organization.name">
       <path value="Organization.name" />
+      <short value="Name des Unfallversicherungsträgers" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.telecom">
@@ -6627,7 +6626,6 @@
     </element>
     <element id="Organization.address">
       <path value="Organization.address" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.address:Strassenanschrift">
@@ -6657,7 +6655,6 @@
       <path value="Organization.address.line.extension" />
       <sliceName value="Strasse" />
       <min value="1" />
-      <mustSupport value="true" />
     </element>
     <element id="Organization.address:Strassenanschrift.line.extension:Strasse.value[x]">
       <path value="Organization.address.line.extension.value[x]" />

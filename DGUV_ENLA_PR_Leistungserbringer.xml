@@ -428,11 +428,11 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <short value="An identifier for the person as this agent" />
+      <short value="Identifikator für die Person des Leistungserbringers" />
       <definition value="An identifier that applies to this person in this role." />
       <requirements value="Often, specific identities are assigned for the agent." />
       <min value="0" />
-      <max value="4" />
+      <max value="3" />
       <base>
         <path value="Practitioner.identifier" />
         <min value="0" />
@@ -450,6 +450,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -493,7 +494,7 @@
       </extension>
       <path value="Practitioner.identifier" />
       <sliceName value="ANR" />
-      <short value="An identifier intended for computation" />
+      <short value="Identifier-Profil für die Abbildung einer lebenslangen Arztnummer des Leistungserbringers" />
       <definition value="An identifier - identifies some entity uniquely and unambiguously. Typically this is used for business identifiers." />
       <requirements value="Often, specific identities are assigned for the agent." />
       <min value="0" />
@@ -516,6 +517,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -688,7 +690,7 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="Practitioner.identifier.type" />
-      <short value="Description of identifier" />
+      <short value="Kennzeichnung des Identifikators als lebenslange Arztnummer" />
       <definition value="A coded type for the identifier that can be used to determine which identifier to use for a specific purpose." />
       <comment value="This element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage.   Where the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type." />
       <requirements value="Allows users to make use of identifiers when the identifier system is not known." />
@@ -717,6 +719,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -869,6 +872,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -981,7 +985,7 @@
     </element>
     <element id="Practitioner.identifier:ANR.type.coding.system">
       <path value="Practitioner.identifier.type.coding.system" />
-      <short value="Identity of the terminology system" />
+      <short value="Menge der verfügbaren Identifikatortypen" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
       <comment value="The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously." />
       <requirements value="Need to be unambiguous about the source of the definition of the symbol." />
@@ -1005,6 +1009,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -1067,7 +1072,7 @@
     </element>
     <element id="Practitioner.identifier:ANR.type.coding.code">
       <path value="Practitioner.identifier.type.coding.code" />
-      <short value="Symbol in syntax defined by the system" />
+      <short value="Kürzel des konkreten Identifikatortyps" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to refer to a particular code in the system." />
@@ -1091,6 +1096,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -1114,7 +1120,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Practitioner.identifier.type.coding.display" />
-      <short value="Representation defined by the system" />
+      <short value="Bezeichnung des konkreten Identifikatortyps" />
       <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
@@ -1138,6 +1144,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -1247,7 +1254,7 @@
     </element>
     <element id="Practitioner.identifier:ANR.system">
       <path value="Practitioner.identifier.system" />
-      <short value="The namespace for the identifier value" />
+      <short value="Menge der verfügbaren lebenslangen Arztnummern" />
       <definition value="Establishes the namespace for the value - that is, a URL that describes a set values that are unique." />
       <comment value="Identifier.system is always case sensitive." />
       <requirements value="There are many sets  of identifiers.  To perform matching of two identifiers, we need to know what set we're dealing with. The system identifies a particular set of unique identifiers." />
@@ -1275,6 +1282,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -1295,7 +1303,7 @@
     </element>
     <element id="Practitioner.identifier:ANR.value">
       <path value="Practitioner.identifier.value" />
-      <short value="The value that is unique" />
+      <short value="Konkrete lebenslange Arztnummer" />
       <definition value="The portion of the identifier typically relevant to the user and which is unique within the context of the system." />
       <comment value="If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](extension-rendered-value.html). Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe." />
       <min value="1" />
@@ -1328,6 +1336,7 @@
         <expression value="matches('^[0-9]{9}$')" />
         <source value="http://fhir.de/StructureDefinition/identifier-lanr" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -2146,7 +2155,7 @@
       <definition value="In diesem Element wird die einheitliche Fortbildungsnummer (EFN) dargestellt." />
       <requirements value="Often, specific identities are assigned for the agent." />
       <min value="0" />
-      <max value="1" />
+      <max value="0" />
       <base>
         <path value="Practitioner.identifier" />
         <min value="0" />
@@ -3784,7 +3793,7 @@
       </extension>
       <path value="Practitioner.identifier" />
       <sliceName value="ZANR" />
-      <short value="Identifier-Profil für die Abbildung einer lebenslangen Zahnarztnummer" />
+      <short value="Identifier-Profil für die Abbildung einer lebenslangen Zahnarztnummer des Leistungserbringers" />
       <definition value="In diesem Element wird die Zahnarztnummer analog zur ANR abgebildet." />
       <requirements value="Often, specific identities are assigned for the agent." />
       <min value="0" />
@@ -3807,6 +3816,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -3979,7 +3989,7 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="Practitioner.identifier.type" />
-      <short value="Description of identifier" />
+      <short value="Kennzeichnung des Identifikators als lebenslange Zahnarztnummer" />
       <definition value="A coded type for the identifier that can be used to determine which identifier to use for a specific purpose." />
       <comment value="This element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage.   Where the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type." />
       <requirements value="Allows users to make use of identifiers when the identifier system is not known." />
@@ -4007,6 +4017,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -4159,6 +4170,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -4271,7 +4283,7 @@
     </element>
     <element id="Practitioner.identifier:ZANR.type.coding.system">
       <path value="Practitioner.identifier.type.coding.system" />
-      <short value="Identity of the terminology system" />
+      <short value="Menge der verfügbaren Identifikatortypen" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
       <comment value="The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously." />
       <requirements value="Need to be unambiguous about the source of the definition of the symbol." />
@@ -4295,6 +4307,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -4357,7 +4370,7 @@
     </element>
     <element id="Practitioner.identifier:ZANR.type.coding.code">
       <path value="Practitioner.identifier.type.coding.code" />
-      <short value="Symbol in syntax defined by the system" />
+      <short value="Kürzel des konkreten Identifikatortyps" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to refer to a particular code in the system." />
@@ -4381,6 +4394,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -4404,7 +4418,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Practitioner.identifier.type.coding.display" />
-      <short value="Representation defined by the system" />
+      <short value="Bezeichnung des konkreten Identifikatortyps" />
       <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
@@ -4428,6 +4442,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -4537,7 +4552,7 @@
     </element>
     <element id="Practitioner.identifier:ZANR.system">
       <path value="Practitioner.identifier.system" />
-      <short value="The namespace for the identifier value" />
+      <short value="Menge der verfügbaren lebenslangen Zahnarztnummern" />
       <definition value="Establishes the namespace for the value - that is, a URL that describes a set values that are unique." />
       <comment value="Identifier.system is always case sensitive." />
       <requirements value="There are many sets  of identifiers.  To perform matching of two identifiers, we need to know what set we're dealing with. The system identifies a particular set of unique identifiers." />
@@ -4565,6 +4580,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -4585,7 +4601,7 @@
     </element>
     <element id="Practitioner.identifier:ZANR.value">
       <path value="Practitioner.identifier.value" />
-      <short value="The value that is unique" />
+      <short value="Konkrete lebenslange Zahnarztnummer" />
       <definition value="The portion of the identifier typically relevant to the user and which is unique within the context of the system." />
       <comment value="If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](extension-rendered-value.html). Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe." />
       <min value="1" />
@@ -4618,6 +4634,7 @@
         <expression value="matches('^[0-9]{9}$')" />
         <source value="http://fhir.de/StructureDefinition/identifier-zanr" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -5432,11 +5449,11 @@
       </extension>
       <path value="Practitioner.identifier" />
       <sliceName value="Telematik-ID" />
-      <short value="An identifier intended for computation" />
+      <short value="Identifier-Profil für die Abbildung einer Telematik-ID des Leistungserbringers" />
       <definition value="Bei der Telematik-ID handelt es sich um eine eindeutige elektronische Identität von Leistungserbringenden und medizinischen Institutionen in der Telematik-Infrastruktur." />
       <requirements value="Often, specific identities are assigned for the agent." />
       <min value="0" />
-      <max value="*" />
+      <max value="1" />
       <base>
         <path value="Practitioner.identifier" />
         <min value="0" />
@@ -5455,6 +5472,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -5626,7 +5644,7 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="Practitioner.identifier.type" />
-      <short value="Description of identifier" />
+      <short value="Kennzeichnung des Identifikators als Telematik-ID" />
       <definition value="A coded type for the identifier that can be used to determine which identifier to use for a specific purpose." />
       <comment value="This element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage.   Where the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type." />
       <requirements value="Allows users to make use of identifiers when the identifier system is not known." />
@@ -5655,6 +5673,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -5807,6 +5826,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -5919,7 +5939,7 @@
     </element>
     <element id="Practitioner.identifier:Telematik-ID.type.coding.system">
       <path value="Practitioner.identifier.type.coding.system" />
-      <short value="Identity of the terminology system" />
+      <short value="Menge der verfügbaren Identifikatortypen" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
       <comment value="The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously." />
       <requirements value="Need to be unambiguous about the source of the definition of the symbol." />
@@ -5943,6 +5963,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -6005,7 +6026,7 @@
     </element>
     <element id="Practitioner.identifier:Telematik-ID.type.coding.code">
       <path value="Practitioner.identifier.type.coding.code" />
-      <short value="Symbol in syntax defined by the system" />
+      <short value="Kürzel des konkreten Identifikatortyps" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to refer to a particular code in the system." />
@@ -6029,6 +6050,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -6052,7 +6074,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Practitioner.identifier.type.coding.display" />
-      <short value="Representation defined by the system" />
+      <short value="Bezeichnung des konkreten Identifikatortyps" />
       <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
@@ -6076,6 +6098,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -6185,7 +6208,7 @@
     </element>
     <element id="Practitioner.identifier:Telematik-ID.system">
       <path value="Practitioner.identifier.system" />
-      <short value="The namespace for the identifier value" />
+      <short value="Menge der verfügbaren Telematik-IDs" />
       <definition value="Establishes the namespace for the value - that is, a URL that describes a set values that are unique." />
       <comment value="Identifier.system is always case sensitive." />
       <requirements value="There are many sets  of identifiers.  To perform matching of two identifiers, we need to know what set we're dealing with. The system identifies a particular set of unique identifiers." />
@@ -6213,6 +6236,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -6233,7 +6257,7 @@
     </element>
     <element id="Practitioner.identifier:Telematik-ID.value">
       <path value="Practitioner.identifier.value" />
-      <short value="The value that is unique" />
+      <short value="Konkrete Telematik-ID" />
       <definition value="The portion of the identifier typically relevant to the user and which is unique within the context of the system." />
       <comment value="If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](extension-rendered-value.html). Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe." />
       <min value="1" />
@@ -6259,6 +6283,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -6457,12 +6482,12 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <short value="Personenname" />
+      <short value="Name der Leistungserbringerperson" />
       <definition value="Personenname mit in Deutschland üblichen Erweiterungen" />
       <comment value="Names may be changed, or repudiated, or people may have different names in different contexts. Names may be divided into parts of different type that have variable significance depending on context, though the division into parts does not always matter. With personal names, the different parts may or may not be imbued with some implicit meaning; various cultures associate different importance with the name parts and the degree to which systems must care about name parts around the world varies widely." />
       <requirements value="The name(s) that a Practitioner is known by. Where there are multiple, the name that the practitioner is usually known as should be used in the display." />
       <min value="1" />
-      <max value="*" />
+      <max value="1" />
       <base>
         <path value="Practitioner.name" />
         <min value="0" />
@@ -8133,7 +8158,7 @@
     <element id="Practitioner.name:Name.use">
       <path value="Practitioner.name.use" />
       <short value="usual | official | temp | nickname | anonymous | old | maiden" />
-      <definition value="Identifies the purpose for this name." />
+      <definition value="Abgrenzung von offiziellem Namen , Künstlernamen usw. voneinander" />
       <comment value="Applications can assume that a name is current unless it explicitly says that it is temporary or old." />
       <requirements value="Allows the appropriate name for a particular context of use to be selected from among a set of names." />
       <min value="1" />
@@ -8307,13 +8332,13 @@
         <description value="Extensions are always sliced by (at least) url" />
         <rules value="open" />
       </slicing>
-      <short value="Additional content defined by implementations" />
+      <short value="Weitere Differenzierung des vollständigen Familiennamens" />
       <definition value="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
       <min value="1" />
-      <max value="*" />
+      <max value="3" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -8514,7 +8539,7 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="Practitioner.name.family.extension.value[x]" />
-      <short value="Namenszusatz" />
+      <short value="Konkreter Namenszusatz" />
       <definition value="Namenszusatz zum Nachnamen z.B. Gräfin, Prinz oder Fürst" />
       <min value="1" />
       <max value="1" />
@@ -8718,7 +8743,7 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="Practitioner.name.family.extension.value[x]" />
-      <short value="Value of extension" />
+      <short value="Konkreter Nachname" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
       <min value="1" />
       <max value="1" />
@@ -8922,7 +8947,7 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="Practitioner.name.family.extension.value[x]" />
-      <short value="Value of extension" />
+      <short value="Konkretes Vorsatzwort" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
       <min value="1" />
       <max value="1" />
@@ -9025,7 +9050,7 @@
     <element id="Practitioner.name:Name.prefix">
       <path value="Practitioner.name.prefix" />
       <short value="Namensteile vor dem Vornamen" />
-      <definition value="Namensteile vor dem Vornamen, z.B. akademischer Titel." />
+      <definition value="Namensteile vor dem Vornamen, z.B. akademischer Titel" />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <min value="0" />
       <max value="*" />
@@ -9105,7 +9130,7 @@
         <description value="Extensions are always sliced by (at least) url" />
         <rules value="open" />
       </slicing>
-      <short value="Additional content defined by implementations" />
+      <short value="Weitere Differenzierung des Prefixes" />
       <definition value="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
@@ -9329,6 +9354,7 @@
       <type>
         <code value="code" />
       </type>
+      <fixedCode value="Konkrete Spezialisierung der Präfixart" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -9495,7 +9521,7 @@
       <sliceName value="Geburtsname" />
       <short value="Personenname" />
       <definition value="Personenname mit in Deutschland üblichen Erweiterungen" />
-      <comment value="Names may be changed, or repudiated, or people may have different names in different contexts. Names may be divided into parts of different type that have variable significance depending on context, though the division into parts does not always matter. With personal names, the different parts may or may not be imbued with some implicit meaning; various cultures associate different importance with the name parts and the degree to which systems must care about name parts around the world varies widely." />
+      <comment value="Der Geburtsname spielt hier keine Rolle." />
       <requirements value="The name(s) that a Practitioner is known by. Where there are multiple, the name that the practitioner is usually known as should be used in the display." />
       <min value="0" />
       <max value="0" />
@@ -11004,7 +11030,7 @@
       <path value="Practitioner.telecom" />
       <short value="Angaben zu bestehenden Kontaktmöglichkeiten. (Telefon, Fax, E-Mail usw.)" />
       <definition value="Details for all kinds of technology mediated contact points for a person or organization, including telephone, email, etc." />
-      <comment value="Person may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently and to help with identification.  These typically will have home numbers, or mobile numbers that are not role specific." />
+      <comment value="Diese Angaben sollen nur über DGUV_ENLA_PR_DArztOrganisation gepflegt werden." />
       <requirements value="Need to know how to reach a practitioner independent to any roles the practitioner may have." />
       <min value="0" />
       <max value="0" />
@@ -11406,7 +11432,7 @@
       </slicing>
       <short value="Eine Adresse gemäß postalischer Konventionen" />
       <definition value="Eine Adresse gemäß postalischer Konventionen (im Gegensatz zu bspw. GPS-Koordinaten). Die Adresse kann sowohl zur Zustellung von Postsendungen oder zum Aufsuchen von Orten, die keine gültige Postadresse haben, verwendet werden.&#xD;&#xA;&#xD;&#xA;Die verwendeten Extensions in diesem Profil bilden die Struktur der Adresse ab, wie sie im VSDM-Format der elektronischen Versichertenkarte verwendet wird.&#xD;&#xA;&#xD;&#xA;Insbesondere bei ausländischen Adresse oder Adressen, die nicht durch Einlesen einer elektronischen Versichertenkarte erfasst wurden, sind abweichende Strukturen möglich. Die Verwendung der Extensions ist nicht verpflichtend." />
-      <comment value="Note: address is intended to describe postal addresses for administrative purposes, not to describe absolute geographical coordinates.  Postal addresses are often used as proxies for physical locations (also see the [Location](location.html#) resource)." />
+      <comment value="Diese Angaben sollen nur über DGUV_ENLA_PR_DArztOrganisation gepflegt werden." />
       <requirements value="The home/mailing address of the practitioner is often required for employee administration purposes, and also for some rostering services where the start point (practitioners home) can be used in calculations." />
       <min value="0" />
       <max value="0" />
@@ -16903,7 +16929,7 @@
       <path value="Practitioner.gender" />
       <short value="male | female | other | unknown" />
       <definition value="Administrative Gender - the gender that the person is considered to have for administration and record keeping purposes." />
-      <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
+      <comment value="Angabe spielt hier keine Rolle." />
       <requirements value="Needed to address the person correctly." />
       <min value="0" />
       <max value="0" />
@@ -17266,6 +17292,7 @@
       <path value="Practitioner.birthDate" />
       <short value="The date  on which the practitioner was born" />
       <definition value="The date of birth for the practitioner." />
+      <comment value="Angabe spielt hier keine Rolle." />
       <requirements value="Needed for identification." />
       <min value="0" />
       <max value="0" />
@@ -18160,10 +18187,140 @@
   <differential>
     <element id="Practitioner.identifier">
       <path value="Practitioner.identifier" />
-      <max value="4" />
+      <short value="Identifikator für die Person des Leistungserbringers" />
+      <max value="3" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.identifier:ANR">
+      <path value="Practitioner.identifier" />
+      <sliceName value="ANR" />
+      <short value="Identifier-Profil für die Abbildung einer lebenslangen Arztnummer des Leistungserbringers" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.identifier:ANR.type">
+      <path value="Practitioner.identifier.type" />
+      <short value="Kennzeichnung des Identifikators als lebenslange Arztnummer" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.identifier:ANR.type.coding">
+      <path value="Practitioner.identifier.type.coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.identifier:ANR.type.coding.system">
+      <path value="Practitioner.identifier.type.coding.system" />
+      <short value="Menge der verfügbaren Identifikatortypen" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.identifier:ANR.type.coding.code">
+      <path value="Practitioner.identifier.type.coding.code" />
+      <short value="Kürzel des konkreten Identifikatortyps" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.identifier:ANR.type.coding.display">
+      <path value="Practitioner.identifier.type.coding.display" />
+      <short value="Bezeichnung des konkreten Identifikatortyps" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.identifier:ANR.system">
+      <path value="Practitioner.identifier.system" />
+      <short value="Menge der verfügbaren lebenslangen Arztnummern" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.identifier:ANR.value">
+      <path value="Practitioner.identifier.value" />
+      <short value="Konkrete lebenslange Arztnummer" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.identifier:EFN">
+      <path value="Practitioner.identifier" />
+      <sliceName value="EFN" />
+      <max value="0" />
+    </element>
+    <element id="Practitioner.identifier:ZANR">
+      <path value="Practitioner.identifier" />
+      <sliceName value="ZANR" />
+      <short value="Identifier-Profil für die Abbildung einer lebenslangen Zahnarztnummer des Leistungserbringers" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.identifier:ZANR.type">
+      <path value="Practitioner.identifier.type" />
+      <short value="Kennzeichnung des Identifikators als lebenslange Zahnarztnummer" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.identifier:ZANR.type.coding">
+      <path value="Practitioner.identifier.type.coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.identifier:ZANR.type.coding.system">
+      <path value="Practitioner.identifier.type.coding.system" />
+      <short value="Menge der verfügbaren Identifikatortypen" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.identifier:ZANR.type.coding.code">
+      <path value="Practitioner.identifier.type.coding.code" />
+      <short value="Kürzel des konkreten Identifikatortyps" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.identifier:ZANR.type.coding.display">
+      <path value="Practitioner.identifier.type.coding.display" />
+      <short value="Bezeichnung des konkreten Identifikatortyps" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.identifier:ZANR.system">
+      <path value="Practitioner.identifier.system" />
+      <short value="Menge der verfügbaren lebenslangen Zahnarztnummern" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.identifier:ZANR.value">
+      <path value="Practitioner.identifier.value" />
+      <short value="Konkrete lebenslange Zahnarztnummer" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.identifier:Telematik-ID">
+      <path value="Practitioner.identifier" />
+      <sliceName value="Telematik-ID" />
+      <short value="Identifier-Profil für die Abbildung einer Telematik-ID des Leistungserbringers" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.identifier:Telematik-ID.type">
+      <path value="Practitioner.identifier.type" />
+      <short value="Kennzeichnung des Identifikators als Telematik-ID" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.identifier:Telematik-ID.type.coding">
+      <path value="Practitioner.identifier.type.coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.identifier:Telematik-ID.type.coding.system">
+      <path value="Practitioner.identifier.type.coding.system" />
+      <short value="Menge der verfügbaren Identifikatortypen" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.identifier:Telematik-ID.type.coding.code">
+      <path value="Practitioner.identifier.type.coding.code" />
+      <short value="Kürzel des konkreten Identifikatortyps" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.identifier:Telematik-ID.type.coding.display">
+      <path value="Practitioner.identifier.type.coding.display" />
+      <short value="Bezeichnung des konkreten Identifikatortyps" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.identifier:Telematik-ID.system">
+      <path value="Practitioner.identifier.system" />
+      <short value="Menge der verfügbaren Telematik-IDs" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.identifier:Telematik-ID.value">
+      <path value="Practitioner.identifier.value" />
+      <short value="Konkrete Telematik-ID" />
+      <mustSupport value="true" />
     </element>
     <element id="Practitioner.name">
       <path value="Practitioner.name" />
+      <short value="Name der Leistungserbringerperson" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Practitioner.name:Name">
@@ -18173,6 +18330,7 @@
     </element>
     <element id="Practitioner.name:Name.use">
       <path value="Practitioner.name.use" />
+      <definition value="Abgrenzung von offiziellem Namen , Künstlernamen usw. voneinander" />
       <mustSupport value="true" />
     </element>
     <element id="Practitioner.name:Name.family">
@@ -18181,6 +18339,8 @@
     </element>
     <element id="Practitioner.name:Name.family.extension">
       <path value="Practitioner.name.family.extension" />
+      <short value="Weitere Differenzierung des vollständigen Familiennamens" />
+      <max value="3" />
       <mustSupport value="true" />
     </element>
     <element id="Practitioner.name:Name.family.extension:namenszusatz">
@@ -18190,6 +18350,7 @@
     </element>
     <element id="Practitioner.name:Name.family.extension:namenszusatz.value[x]">
       <path value="Practitioner.name.family.extension.value[x]" />
+      <short value="Konkreter Namenszusatz" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -18200,6 +18361,7 @@
     </element>
     <element id="Practitioner.name:Name.family.extension:nachname.value[x]">
       <path value="Practitioner.name.family.extension.value[x]" />
+      <short value="Konkreter Nachname" />
       <mustSupport value="true" />
     </element>
     <element id="Practitioner.name:Name.family.extension:vorsatzwort">
@@ -18209,6 +18371,7 @@
     </element>
     <element id="Practitioner.name:Name.family.extension:vorsatzwort.value[x]">
       <path value="Practitioner.name.family.extension.value[x]" />
+      <short value="Konkretes Vorsatzwort" />
       <mustSupport value="true" />
     </element>
     <element id="Practitioner.name:Name.given">
@@ -18217,10 +18380,12 @@
     </element>
     <element id="Practitioner.name:Name.prefix">
       <path value="Practitioner.name.prefix" />
+      <definition value="Namensteile vor dem Vornamen, z.B. akademischer Titel" />
       <mustSupport value="true" />
     </element>
     <element id="Practitioner.name:Name.prefix.extension">
       <path value="Practitioner.name.prefix.extension" />
+      <short value="Weitere Differenzierung des Prefixes" />
       <mustSupport value="true" />
     </element>
     <element id="Practitioner.name:Name.prefix.extension:prefix-qualifier">
@@ -18230,6 +18395,7 @@
     </element>
     <element id="Practitioner.name:Name.prefix.extension:prefix-qualifier.value[x]">
       <path value="Practitioner.name.prefix.extension.value[x]" />
+      <fixedCode value="Konkrete Spezialisierung der Präfixart" />
       <mustSupport value="true" />
     </element>
     <element id="Practitioner.name:Name.suffix">
@@ -18239,22 +18405,27 @@
     <element id="Practitioner.name:Geburtsname">
       <path value="Practitioner.name" />
       <sliceName value="Geburtsname" />
+      <comment value="Der Geburtsname spielt hier keine Rolle." />
       <max value="0" />
     </element>
     <element id="Practitioner.telecom">
       <path value="Practitioner.telecom" />
+      <comment value="Diese Angaben sollen nur über DGUV_ENLA_PR_DArztOrganisation gepflegt werden." />
       <max value="0" />
     </element>
     <element id="Practitioner.address">
       <path value="Practitioner.address" />
+      <comment value="Diese Angaben sollen nur über DGUV_ENLA_PR_DArztOrganisation gepflegt werden." />
       <max value="0" />
     </element>
     <element id="Practitioner.gender">
       <path value="Practitioner.gender" />
+      <comment value="Angabe spielt hier keine Rolle." />
       <max value="0" />
     </element>
     <element id="Practitioner.birthDate">
       <path value="Practitioner.birthDate" />
+      <comment value="Angabe spielt hier keine Rolle." />
       <max value="0" />
     </element>
   </differential>

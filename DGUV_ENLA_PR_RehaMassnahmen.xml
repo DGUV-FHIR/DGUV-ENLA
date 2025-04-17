@@ -1207,7 +1207,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Observation.code.coding.display" />
-      <short value="Bezeichnung für ENLA-Teilberichtsinhalt Reha-Maßnahmen" />
+      <short value="Bezeichnung für ENLA-Teilberichtsinhalt Reha-Massnahmen" />
       <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
@@ -2023,7 +2023,7 @@
       <alias value="extensions" />
       <alias value="user content" />
       <min value="0" />
-      <max value="*" />
+      <max value="0" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -2570,7 +2570,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Observation.effective[x].extension.value[x].text" />
-      <short value="Plain text representation of the concept" />
+      <short value="Freitext" />
       <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user." />
       <comment value="Very often the text is the same as a displayName of one of the codings." />
       <requirements value="The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source." />
@@ -2593,6 +2593,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -3122,7 +3123,7 @@
       <alias value="extensions" />
       <alias value="user content" />
       <min value="0" />
-      <max value="*" />
+      <max value="0" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -3447,7 +3448,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Observation.value[x].text" />
-      <short value="Plain text representation of the concept" />
+      <short value="Freitext" />
       <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user." />
       <comment value="Very often the text is the same as a displayName of one of the codings." />
       <requirements value="The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source." />
@@ -5730,7 +5731,7 @@
     </element>
     <element id="Observation.code.coding.display">
       <path value="Observation.code.coding.display" />
-      <short value="Bezeichnung für ENLA-Teilberichtsinhalt Reha-Maßnahmen" />
+      <short value="Bezeichnung für ENLA-Teilberichtsinhalt Reha-Massnahmen" />
       <min value="1" />
       <fixedString value="RehaMassnahmen" />
       <mustSupport value="true" />
@@ -5811,6 +5812,11 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Observation.effective[x].extension:Zeitpunkt.value[x].text">
+      <path value="Observation.effective[x].extension.value[x].text" />
+      <short value="Freitext" />
+      <mustSupport value="true" />
+    </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
       <short value="Angaben über notwendige Reha-Maßnahmen" />
@@ -5873,6 +5879,7 @@
     </element>
     <element id="Observation.value[x].text">
       <path value="Observation.value[x].text" />
+      <short value="Freitext" />
       <mustSupport value="true" />
     </element>
   </differential>

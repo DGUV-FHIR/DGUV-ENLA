@@ -1,25 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
-    <id value="DGUV_ENLA_CS_ZEITPUNKT" />
-    <url value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Zeitpunkt" />
-    <version value="0.0.1" />
-    <name value="DGUV_ENLA_CS_Zeitpunkt" />
-    <title value="Zeitpunkt" />
-    <status value="draft" />
-    <experimental value="false" />
-    <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
-    <contact>
-        <telecom>
-            <system value="url" />
-            <value value="https://www.dguv.de" />
-        </telecom>
-    </contact>
-    <description value="Dieses CodeSystem enthält die Codes und Displays zur Beschreibung der Startzeitpunkte der verschriebenen Maßnahmen." />       
-	<concept>
-        <code value="DIREKT" />
-        <display value="Direkt im Anschluss" />
-    </concept>
-	<concept>
-        <code value="FESTZUL" />
-        <display value="Durch Weiterbehandler festzulegen" />
-	</concept>
+  <id value="DGUV-ENLA-CS-ZEITPUNKT" />
+  <url value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Zeitpunkt" />
+  <version value="0.0.1" />
+  <name value="DGUV_ENLA_CS_Zeitpunkt" />
+  <title value="Zeitpunkt" />
+  <status value="draft" />
+  <experimental value="false" />
+  <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="https://www.dguv.de" />
+    </telecom>
+  </contact>
+  <description value="Dieses CodeSystem enthält die Codes und Displays zur Beschreibung der Startzeitpunkte der verschriebenen Maßnahmen." />
+  <content value="complete" />
+  <concept>
+    <code value="DIREKT" />
+    <display value="Direkt im Anschluss" />
+  </concept>
+  <concept>
+    <code value="FESTZUL" />
+    <display value="Durch Weiterbehandler festzulegen" />
+  </concept>
+  <concept>
+    <code value="AZPKT" />
+    <display value="Anderer Zeitpunkt" />
+  </concept>
 </CodeSystem>

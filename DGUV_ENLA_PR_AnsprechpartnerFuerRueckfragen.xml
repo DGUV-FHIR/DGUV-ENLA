@@ -3496,7 +3496,7 @@
     </element>
     <element id="PractitionerRole.telecom.value">
       <path value="PractitionerRole.telecom.value" />
-      <short value="The actual contact point details" />
+      <short value="Konkrete Verbindungsdaten" />
       <definition value="The actual contact point details, in a form that is meaningful to the designated communication system (i.e. phone number or email address)." />
       <comment value="Additional text data such as phone extension numbers, or notes about use of the contact are sometimes included in the value." />
       <requirements value="Need to support legacy numbers that are not in a tightly controlled format." />
@@ -3510,7 +3510,6 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="Konkrete Verbindungsdaten" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -4431,7 +4430,7 @@
     </element>
     <element id="PractitionerRole.telecom.value">
       <path value="PractitionerRole.telecom.value" />
-      <fixedString value="Konkrete Verbindungsdaten" />
+      <short value="Konkrete Verbindungsdaten" />
       <mustSupport value="true" />
     </element>
   </differential>

@@ -6,10 +6,15 @@
   <name value="DGUV_ENLA_CS_Formtexte" />
   <title value="Formtexte" />
   <status value="draft" />
-  <date value="2025-01" />
-  <publisher value="DGUV" />
+  <experimental value="false" />
+  <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="https://www.dguv.de" />
+    </telecom>
+  </contact>
   <description value="Formtexte" />
-  <caseSensitive value="true" />
   <content value="complete" />
   <concept>
     <code value="A 1162" />
@@ -25,7 +30,8 @@
   </concept>
   <concept>
     <code value="A 2206" />
-    <display value="Gutachtenauftrag zur Zusammenhangsfrage Arbeitsunfall"
+    <display value="Gutachtenauftrag zur Zusammenhangsfrage Arbeitsunfall" />
+  </concept>
   <concept>
     <code value="A 2208" />
     <display value="Gutachten Nachprüfung MdE - Psychische Gesundheitsstörungen" />
@@ -96,7 +102,7 @@
   </concept>
   <concept>
     <code value="A 6202-2113" />
-    <display value="Gutachtenauftrag BK 2113"  
+    <display value="Gutachtenauftrag BK 2113" />
   </concept>
   <concept>
     <code value="A 6202-4101-4102" />

@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
-  <id value="DGUV_ENLA_CS_Hilfsmittel" />
+  <id value="DGUV-ENLA-CS-Hilfsmittel" />
   <url value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Hilfsmittel" />
   <version value="0.0.1" />
   <name value="DGUV_ENLA_CS_Hilfsmittel" />
@@ -14,6 +15,7 @@
     </telecom>
   </contact>
   <description value="Dieses CodeSystem enthält die Codes und Displays zur Beschreibung der zum Zeitpunkt der Entlassung aus der stationären Behandlung für die versicherte Person notwendigen Hilfsmittel." />
+  <content value="complete" />
   <concept>
     <code value="PUEX" />
     <display value="Prothesen der unteren Extremitäten" />
