@@ -1801,7 +1801,7 @@
       <path value="Observation.effective[x]" />
       <short value="Letzter Tag der Arbeitsunfähigkeit" />
       <definition value="The time or time-period the observed value is asserted as being true. For biological subjects - e.g. human patients - this is usually called the &quot;physiologically relevant time&quot;. This is usually either the time of the procedure or of specimen collection, but very often the source of the date/time is not known, only the date/time itself." />
-      <comment value="Letzter Tag der Arbeitsunfähigkeit; nur wenn value[x].coding.code/display = &quot;AUBIS&quot;/&quot;Arbeitsunfaehig bis&quot;" />
+      <comment value="Letzter Tag der Arbeitsunfähigkeit; nur wenn value[x].coding.code/display = &quot;AUBIS&quot;/&quot;Arbeitsunfähig bis&quot;" />
       <requirements value="Knowing when an observation was deemed true is important to its relevance as well as determining trends." />
       <alias value="Occurrence" />
       <min value="0" />
@@ -1968,7 +1968,7 @@
       </extension>
       <path value="Observation.value[x]" />
       <short value="Arbeits(un)fähigkeit der versicherten Person" />
-      <definition value="Angabe darüber, ob die versicherte Person &quot;Arbeitsfaehig&quot; (AF), &quot;Arbeitsunfaehig bis&quot; (AUBIS), &quot;Arbeitsunfaehig voraussichtliche Dauer&quot; (AUFLEX) oder &quot;Arbeitsunfaehig bis auf unbestimmte Zeit&quot; (AUUZ) ist" />
+      <definition value="Angabe darüber, ob die versicherte Person &quot;Arbeitsfähig&quot; (AF), &quot;Arbeitsunfähig bis&quot; (AUBIS), &quot;Arbeitsunfähig voraussichtliche Dauer&quot; (AUFLEX) oder &quot;Arbeitsunfähig bis auf unbestimmte Zeit&quot; (AUUZ) ist" />
       <comment value="An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below." />
       <requirements value="An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations." />
       <min value="1" />
@@ -2112,7 +2112,7 @@
       <sliceName value="Flexible_AU" />
       <short value="Angabe der voraussichtlichen AU-Dauer" />
       <definition value="Optional Extension Element - found in all resources." />
-      <comment value="Angabe der voraussichtlichen AU-Dauer (Wert und Zeiteinheit), wenn kein konkretes Datum, sondern nur eine grobe Abschätzung genannt werden kann (AUFLEX) und nur dann" />
+      <comment value="Angabe der voraussichtlichen AU-Dauer (Wert und Zeiteinheit), wenn kein konkretes Datum, sondern nur eine grobe Abschätzung genannt werden kann (AUFLEX), also nur wenn in value[x].coding.code/display &quot;AUFLEX&quot;/&quot;Arbeitsunfähig voraussichtliche Dauer&quot; steht" />
       <alias value="extensions" />
       <alias value="user content" />
       <min value="0" />
@@ -5264,7 +5264,7 @@
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
       <short value="Letzter Tag der Arbeitsunfähigkeit" />
-      <comment value="Letzter Tag der Arbeitsunfähigkeit; nur wenn value[x].coding.code/display = &quot;AUBIS&quot;/&quot;Arbeitsunfaehig bis&quot;" />
+      <comment value="Letzter Tag der Arbeitsunfähigkeit; nur wenn value[x].coding.code/display = &quot;AUBIS&quot;/&quot;Arbeitsunfähig bis&quot;" />
       <type>
         <code value="dateTime" />
       </type>
@@ -5273,7 +5273,7 @@
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
       <short value="Arbeits(un)fähigkeit der versicherten Person" />
-      <definition value="Angabe darüber, ob die versicherte Person &quot;Arbeitsfaehig&quot; (AF), &quot;Arbeitsunfaehig bis&quot; (AUBIS), &quot;Arbeitsunfaehig voraussichtliche Dauer&quot; (AUFLEX) oder &quot;Arbeitsunfaehig bis auf unbestimmte Zeit&quot; (AUUZ) ist" />
+      <definition value="Angabe darüber, ob die versicherte Person &quot;Arbeitsfähig&quot; (AF), &quot;Arbeitsunfähig bis&quot; (AUBIS), &quot;Arbeitsunfähig voraussichtliche Dauer&quot; (AUFLEX) oder &quot;Arbeitsunfähig bis auf unbestimmte Zeit&quot; (AUUZ) ist" />
       <min value="1" />
       <type>
         <code value="CodeableConcept" />
@@ -5294,7 +5294,7 @@
       <path value="Observation.value[x].extension" />
       <sliceName value="Flexible_AU" />
       <short value="Angabe der voraussichtlichen AU-Dauer" />
-      <comment value="Angabe der voraussichtlichen AU-Dauer (Wert und Zeiteinheit), wenn kein konkretes Datum, sondern nur eine grobe Abschätzung genannt werden kann (AUFLEX) und nur dann" />
+      <comment value="Angabe der voraussichtlichen AU-Dauer (Wert und Zeiteinheit), wenn kein konkretes Datum, sondern nur eine grobe Abschätzung genannt werden kann (AUFLEX), also nur wenn in value[x].coding.code/display &quot;AUFLEX&quot;/&quot;Arbeitsunfähig voraussichtliche Dauer&quot; steht" />
       <max value="1" />
       <type>
         <code value="Extension" />

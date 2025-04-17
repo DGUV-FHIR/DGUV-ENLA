@@ -18,18 +18,18 @@
   <content value="complete"/>
   <concept>
     <code value="AF" />
-    <display value="Arbeitsfaehig" />
+    <display value="Arbeitsfähig" />
   </concept>
   <concept>
     <code value="AUBIS" />
-    <display value="Arbeitsunfaehig bis" />
+    <display value="Arbeitsunfähig bis" />
   </concept>
   <concept>
     <code value="AUFLEX" />
-    <display value="Arbeitsunfaehig voraussichtliche Dauer" />
+    <display value="Arbeitsunfähig voraussichtliche Dauer" />
   </concept>
   <concept>
     <code value="AUUZ" />
-    <display value="Arbeitsunfaehig bis auf unbestimmte Zeit" />
+    <display value="Arbeitsunfähig bis auf unbestimmte Zeit" />
   </concept>
 </CodeSystem>

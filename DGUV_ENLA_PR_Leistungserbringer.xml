@@ -9050,7 +9050,7 @@
     <element id="Practitioner.name:Name.prefix">
       <path value="Practitioner.name.prefix" />
       <short value="Namensteile vor dem Vornamen" />
-      <definition value="Namensteile vor dem Vornamen, z.B. akademischer Titel." />
+      <definition value="Namensteile vor dem Vornamen, z.B. akademischer Titel" />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <min value="0" />
       <max value="*" />
@@ -18380,6 +18380,7 @@
     </element>
     <element id="Practitioner.name:Name.prefix">
       <path value="Practitioner.name.prefix" />
+      <definition value="Namensteile vor dem Vornamen, z.B. akademischer Titel" />
       <mustSupport value="true" />
     </element>
     <element id="Practitioner.name:Name.prefix.extension">
