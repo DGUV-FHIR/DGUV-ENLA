@@ -6,6 +6,7 @@
   <title value="MedikationWirkstoff" />
   <status value="draft" />
   <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
+  <description value="Dieses Profil bildet den Wirkstoff eines Medikamentes ab." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -6073,7 +6074,7 @@
       <path value="Medication.ingredient.item[x].text" />
       <short value="Plain text representation of the concept" />
       <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user." />
-      <comment value="Very often the text is the same as a displayName of one of the codings." />
+      <comment value="Freitext: Hier soll der Name des Wirkstoffes eingetragen werden." />
       <requirements value="The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source." />
       <min value="0" />
       <max value="1" />
@@ -7569,6 +7570,14 @@
     <element id="Medication.ingredient">
       <path value="Medication.ingredient" />
       <min value="1" />
+    </element>
+    <element id="Medication.ingredient.item[x]:itemCodeableConcept">
+      <path value="Medication.ingredient.item[x]" />
+      <sliceName value="itemCodeableConcept" />
+    </element>
+    <element id="Medication.ingredient.item[x]:itemCodeableConcept.text">
+      <path value="Medication.ingredient.item[x].text" />
+      <comment value="Freitext: Hier soll der Name des Wirkstoffes eingetragen werden." />
     </element>
   </differential>
 </StructureDefinition>

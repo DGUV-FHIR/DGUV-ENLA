@@ -373,7 +373,7 @@
       <sliceName value="Mitgliedsname" />
       <short value="Mitgliedsname des Hauptversicherten" />
       <definition value="Bei einer Familienversicherung wird über dieses Attribut der Mitgliedsname des Hauptversicherten angegeben." />
-      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
+      <comment value="Name des Mitglieds bei der Krankenkasse: ausgefüllter Mitgliedsname bedeutet automatisch, dass die verunfallte Person beim Hauptversicherten familienversichert ist" />
       <alias value="extensions" />
       <alias value="user content" />
       <min value="0" />
@@ -1340,6 +1340,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -2466,6 +2467,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -2519,6 +2521,7 @@
         <expression value="matches('^[0-9]{9}$')" />
         <source value="http://fhir.de/StructureDefinition/identifier-iknr" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -2963,6 +2966,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -3009,6 +3013,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -5373,7 +5378,7 @@
     </element>
     <element id="Organization.address:Strassenanschrift.city">
       <path value="Organization.address.city" />
-      <short value="Name of city, town etc." />
+      <short value="Name der Stadt" />
       <definition value="The name of the city, town, suburb, village or other community or delivery center." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <alias value="Municpality" />
@@ -8071,6 +8076,7 @@
     <element id="Organization.extension:Mitgliedsname">
       <path value="Organization.extension" />
       <sliceName value="Mitgliedsname" />
+      <comment value="Name des Mitglieds bei der Krankenkasse: ausgefüllter Mitgliedsname bedeutet automatisch, dass die verunfallte Person beim Hauptversicherten familienversichert ist" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.extension:Mitgliedsname.id">
@@ -8109,6 +8115,7 @@
     <element id="Organization.extension:Mitgliedsname.value[x].family.extension:vorsatzwort">
       <path value="Organization.extension.value[x].family.extension" />
       <sliceName value="vorsatzwort" />
+      <mustSupport value="true" />
     </element>
     <element id="Organization.extension:Mitgliedsname.value[x].family.extension:vorsatzwort.value[x]">
       <path value="Organization.extension.value[x].family.extension.value[x]" />
@@ -8151,10 +8158,26 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Organization.identifier:Institutionskennzeichen.system">
+      <path value="Organization.identifier.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.identifier:Institutionskennzeichen.value">
+      <path value="Organization.identifier.value" />
+      <mustSupport value="true" />
+    </element>
     <element id="Organization.identifier:Telematik-ID">
       <path value="Organization.identifier" />
       <sliceName value="Telematik-ID" />
       <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.identifier:Telematik-ID.system">
+      <path value="Organization.identifier.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.identifier:Telematik-ID.value">
+      <path value="Organization.identifier.value" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.name">
@@ -8233,6 +8256,7 @@
     </element>
     <element id="Organization.address:Strassenanschrift.city">
       <path value="Organization.address.city" />
+      <short value="Name der Stadt" />
       <min value="1" />
       <mustSupport value="true" />
     </element>

@@ -6,7 +6,7 @@
   <title value="Therapien" />
   <status value="draft" />
   <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
-  <description value="Dieses Profil enthält die Beschreibung zu durchgeführten Therapie" />
+  <description value="Dieses Profil bildet die operative und konservative Therapie während der stationären Behandlung ab." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -1349,7 +1349,7 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="Observation.subject" />
-      <short value="Who and/or what the observation is about" />
+      <short value="Verweis auf betroffene versicherte Person" />
       <definition value="The patient, or group of patients, location, or device this observation is about and into whose record the observation is placed. If the actual focus of the observation is different from the subject (or a sample of, part, or region of the subject), the `focus` element or the `code` itself specifies the actual focus of the observation." />
       <comment value="One would expect this element to be a cardinality of 1..1. The only circumstance in which the subject can be missing is when the observation is made by a device that does not know the patient. In this case, the observation SHALL be matched to a patient through some context/channel matching technique, and at this point, the observation should be updated." />
       <requirements value="Observations have no value if you don't know who or what they're about." />
@@ -1975,8 +1975,8 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="Observation.value[x]" />
-      <short value="Actual result" />
-      <definition value="The information determined as a result of making the observation, if the information has a simple value." />
+      <short value="Freitext für operative und konservative Therapie" />
+      <definition value="Beschreibt die operative und konservative Therapie während der stationären Behandlung" />
       <comment value="An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below." />
       <requirements value="An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations." />
       <min value="1" />
@@ -4274,6 +4274,7 @@
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
+      <short value="Verweis auf betroffene versicherte Person" />
       <min value="1" />
       <type>
         <code value="Reference" />
@@ -4288,6 +4289,8 @@
     </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
+      <short value="Freitext für operative und konservative Therapie" />
+      <definition value="Beschreibt die operative und konservative Therapie während der stationären Behandlung" />
       <min value="1" />
       <type>
         <code value="string" />

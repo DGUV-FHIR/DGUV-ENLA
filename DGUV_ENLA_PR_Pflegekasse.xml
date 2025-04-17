@@ -609,6 +609,7 @@
       </slicing>
       <short value="Identifies this organization  across multiple systems" />
       <definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems." />
+      <comment value="Implizit: wenn “Pflegekasse” angegeben wird, dann bedeutet es, dass es ein Pflegeunfall war" />
       <requirements value="Organizations are known by a variety of ids. Some institutions maintain several, and most collect identifiers for exchange with other organizations concerning the organization." />
       <min value="0" />
       <max value="2" />
@@ -1781,7 +1782,7 @@
     </element>
     <element id="Organization.name">
       <path value="Organization.name" />
-      <short value="Name used for the organization" />
+      <short value="Name der Pflegekasse" />
       <definition value="A name associated with the organization." />
       <comment value="If the name of an organization changes, consider putting the old name in the alias column so that it can still be located through searches." />
       <requirements value="Need to use the name as the label of the organization." />
@@ -3876,7 +3877,7 @@
     </element>
     <element id="Organization.address:Strassenanschrift.city">
       <path value="Organization.address.city" />
-      <short value="Name of city, town etc." />
+      <short value="Name der Stadt" />
       <definition value="The name of the city, town, suburb, village or other community or delivery center." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <alias value="Municpality" />
@@ -6575,6 +6576,7 @@
     </element>
     <element id="Organization.identifier">
       <path value="Organization.identifier" />
+      <comment value="Implizit: wenn “Pflegekasse” angegeben wird, dann bedeutet es, dass es ein Pflegeunfall war" />
       <max value="2" />
       <mustSupport value="true" />
     </element>
@@ -6608,6 +6610,7 @@
     </element>
     <element id="Organization.name">
       <path value="Organization.name" />
+      <short value="Name der Pflegekasse" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.telecom">
@@ -6677,6 +6680,7 @@
     </element>
     <element id="Organization.address:Strassenanschrift.city">
       <path value="Organization.address.city" />
+      <short value="Name der Stadt" />
       <min value="1" />
       <mustSupport value="true" />
     </element>

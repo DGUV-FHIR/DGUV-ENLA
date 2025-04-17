@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="DGUV-ENLA-PR-MedikationsInformation" />
-  <url value="http://fhir.dguv.de/ENLA/MedicationStatement/DGUV-ENLA-PR-MedikationStatement-MedikationsInformation" />
-  <name value="DGUV_ENLA_PR_MedicationStatement_MedikationsInformation" />
-  <title value="Medikationsinformation" />
+  <url value="http://fhir.dguv.de/ENLA/MedicationStatement/DGUV-ENLA-PR-MedikationsInformation" />
+  <name value="DGUV_ENLA_PR_MedikationsInformation" />
+  <title value="MedikationsInformation" />
   <status value="draft" />
   <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
+  <description value="Dieses Profil bildet die Informationen zur Medikation ab, deren CodableConcept auf den drei Profilen “MedikationArzneimittel”, “MedikationRezeptur” und “MedikationWirkstoff” basiert." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -1078,7 +1079,7 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="MedicationStatement.subject" />
-      <short value="Who is/was taking  the medication" />
+      <short value="Verweis auf betroffene versicherte Person" />
       <definition value="The person, animal or group who is/was taking the medication." />
       <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository." />
       <min value="1" />
@@ -1453,7 +1454,7 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="MedicationStatement.effective[x]" />
-      <short value="The date/time or interval when the medication is/was/will be taken" />
+      <short value="Datum/Zeit/Intervall wenn Medikament eingenommen wurde/werden muss" />
       <definition value="The interval of time during which it is being asserted that the patient is/was/will be taking the medication (or was not taking, when the MedicationStatement.taken element is No)." />
       <comment value="This attribute reflects the period over which the patient consumed the medication and is expected to be populated on the majority of Medication Statements. If the medication is still being taken at the time the statement is recorded, the &quot;end&quot; date will be omitted.  The date/time attribute supports a variety of dates - year, year/month and exact date.  If something more than this is required, this should be conveyed as text." />
       <min value="0" />
@@ -2250,7 +2251,7 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="MedicationStatement.dosage.timing" />
-      <short value="When medication should be administered" />
+      <short value="Zeit, wann Medikament verabreicht werden soll" />
       <definition value="When medication should be administered." />
       <comment value="This attribute might not always be populated while the Dosage.text is expected to be populated.  If both are populated, then the Dosage.text should reflect the content of the Dosage.timing." />
       <requirements value="The timing schedule for giving the medication to the patient. This  data type allows many different expressions. For example: &quot;Every 8 hours&quot;; &quot;Three times a day&quot;; &quot;1/2 an hour before breakfast for 10 days from 23-Dec 2011:&quot;; &quot;15 Oct 2013, 17 Oct 2013 and 1 Nov 2013&quot;.  Sometimes, a rate can imply duration when expressed as total volume / duration (e.g.  500mL/2 hours implies a duration of 2 hours).  However, when rate doesn't imply duration (e.g. 250mL/hour), then the timing.repeat.duration is needed to convey the infuse over time period." />
@@ -8185,6 +8186,7 @@
     </element>
     <element id="MedicationStatement.subject">
       <path value="MedicationStatement.subject" />
+      <short value="Verweis auf betroffene versicherte Person" />
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson" />
@@ -8198,6 +8200,7 @@
     </element>
     <element id="MedicationStatement.effective[x]">
       <path value="MedicationStatement.effective[x]" />
+      <short value="Datum/Zeit/Intervall wenn Medikament eingenommen wurde/werden muss" />
       <mustSupport value="true" />
     </element>
     <element id="MedicationStatement.dosage">
@@ -8242,6 +8245,7 @@
     </element>
     <element id="MedicationStatement.dosage:strukturierteDosierung.timing">
       <path value="MedicationStatement.dosage.timing" />
+      <short value="Zeit, wann Medikament verabreicht werden soll" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
