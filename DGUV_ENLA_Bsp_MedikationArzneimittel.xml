@@ -1,0 +1,35 @@
+<Medication xmlns="http://hl7.org/fhir">
+    <id value="MedikationArzneimittel" />
+    <meta>
+        <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationArzneimittel" />
+    </meta>
+      <code>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+            <code value="XXX" />
+            <display value="Organization identifier" />
+        </coding>
+      </code>
+      <status value="xxx"/>
+      <manufacturer>
+        <display value="XXX"/>     
+      </manufacturer>
+      <form>
+        <coding>
+        <system value="XXX"/>
+        <version value="XXX"/>
+        <code value="XXX"/>
+        <display value="XXX"/>
+        </coding>
+      </form>
+      <amount>
+        <numerator>
+            <value value= "XXX"/>
+            <system value= "XXX"/>
+            <code value="XXX"/>
+        </numerator>
+      </amount>
+      <batch>
+        <IotNumber value="XXX"/>
+      </batch>
+</Medication>
