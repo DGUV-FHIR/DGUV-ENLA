@@ -1,0 +1,25 @@
+<Organization xmlns="http://hl7.org/fhir">
+    <id value="Betrieb-1" />
+    <meta>
+        <profile value="http://fhir.dguv.de/Enla/Organization/DGUV-Enla-PR-Unfallbetrieb" />
+    </meta>
+    <name value="Sankt Augustiner 6 Tage Rennen GmbH"/>
+    <telcom>
+        <system value="phone"/>
+        <value value="01761234"/>
+    </telcom>
+    <address>
+        <type value="both"/>
+        <line value="Johann-Lafer-Gasse 2">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                <valueString value="Johann-Lafer-Gasse"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                <valueString value="2"/>
+            </extension>
+        </line>
+        <city value="Sankt Augustin"/>
+        <postalCode value="53757"/>
+        <country value="DE"/>
+    </address>
+</Organization>

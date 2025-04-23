@@ -1,0 +1,58 @@
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="Arbeitsunfall-1"/>
+  <meta>
+    <profile value="http://fhir.dguv.de/Enla/Observation/DGUV-Enla-PR-Unfallereignis"/>
+  </meta>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-Verletzungsartenverzeichnis"/>
+      <code value="3.1S"/>
+      <display value="Verletzungen des Rückenmarks."/>
+    </coding>
+  </code>
+  <subject> 
+    <reference value="Patient/111" />
+  </subject>
+  <effectiveDateTime value="2025-11-02T13:00:00+00:00"/>
+  <component>
+    <code>
+      <coding>
+        <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-UnfallereignisComponents"/>
+        <code value="03"/>
+        <display value="Unfallhergang"/>
+      </coding>
+    </code>
+    <valueString value="Der Versicherte ist auf dem Weg zum Sechstagerennen mit seinem Motorrad mit einer geschätzten Geschwindigkeit von 60 km/h gegen eine Leitplanke gefahren"/>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-UnfallereignisComponents"/>
+        <code value="04"/>
+        <display value="Beschwerden/Klage"/>
+      </coding>
+    </code>
+    <valueString value="Starke Schmerzen rechter Oberschenkel, Gefühlsstörung im Fuss"/>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-UnfallereignisComponents"/>
+        <code value="05"/>
+        <display value="Beruf"/>
+      </coding>
+    </code>
+    <valueString value="Informatiker"/>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-UnfallereignisComponents"/>
+        <code value="06"/>
+        <display value="Beschaeftigungsbeginn"/>
+      </coding>
+    </code>
+    <valueDateTime value="2018-01-01"/>
+  </component>
+</Observation>

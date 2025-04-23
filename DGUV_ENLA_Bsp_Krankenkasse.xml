@@ -1,0 +1,44 @@
+<Organization xmlns="http://hl7.org/fhir">
+    <id value="Krankenkasse-1" />
+    <meta>
+        <profile value="http://fhir.dguv.de/Enla/Organization/DGUV-ENLA-PR-Krankenkasse" />
+    </meta>
+    <!--Bei einer Familienversicherung wird hier die hauptversicherte Person angegeben.-->
+    <extension url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-Mitgliedsname">          
+        <valueHumanName>
+            <family value="Farad" />
+            <given value="Friedrich" />
+        </valueHumanName>
+    </extension>
+    <!--IK-Nummer-->
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                <code value="XX"/>
+                <display value="Organization identifier" />
+             </coding>
+        </type>
+        <system value="http://fhir.de/sid/arge-ik/iknr"/>
+        <value value="107202793"/>
+    </identifier>
+    <name value="AOK Herzogtum Lauenburg"/>
+    <telcom>
+        <system value="phone"/>
+        <value value="01771234"/>
+    </telcom>
+    <address>
+        <type value="both"/>
+        <line value="Hauptstr. 91">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                <valueString value="Hauptstraße"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                <valueString value="91"/>
+            </extension>
+        </line>
+        <city value="Mölln"/>
+        <postalCode value="23879"/>
+        <country value="DE"/>
+    </address>
+</Organization>

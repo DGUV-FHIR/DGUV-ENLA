@@ -1,0 +1,36 @@
+<Organization xmlns="http://hl7.org/fhir">
+    <id value="Unfallversicherungstraeger-cf042e44-086a-4d51-9c77-172f9a972e3b" />
+    <meta>
+        <profile value="http://fhir.dguv.de/Enla/Organization/DGUV-Enla-PR-Unfallversicherungstraeger" />
+    </meta>
+    <!--   Institutionskennzeichen   -->
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+                <code value="XX" />
+                <display value="Organization identifier" />
+            </coding>
+        </type>
+        <system value="http://fhir.de/sid/arge-ik/iknr" />
+        <value value="121192344" />
+    </identifier>
+    <name value="BG Verwaltung Berlin" />
+    <telecom>
+		<system value="phone"/>
+		<value value="030 77003-0"/>
+	</telecom>
+    <address>
+        <type value="both" />
+        <line value="Markgrafenstraße 18">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                <valueString value="18" />
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                <valueString value="Markgrafenstraße." />
+            </extension>
+        </line>
+        <city value="Berlin" />
+        <postalCode value="10969" />
+    </address>
+</Organization>
