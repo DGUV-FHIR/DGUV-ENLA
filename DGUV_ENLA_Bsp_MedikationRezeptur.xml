@@ -5,31 +5,31 @@
     </meta>
       <code>
         <coding>
-            <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
-            <code value="XXX" />
-            <display value="Organization identifier" />
+            <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type" />
+            <code value="rezeptur" />
         </coding>
       </code>
-      <status value="xxx"/>
+      <status value="active"/>
       <manufacturer>
-        <display value="XXX"/>     
+        <display value="AbZ Pharma GmbH"/>     
       </manufacturer>
       <form>
         <coding>
-        <system value="XXX"/>
-        <version value="XXX"/>
-        <code value="XXX"/>
-        <display value="XXX"/>
+          <system value="http://standardterms.edqm.eu"/>
+          <version value=" 4.0.1"/>
+          <code value="10100500"/>
+          <display value="Concentrate for oral suspension"/>
         </coding>
       </form>
-      <amount>
-        <numerator>
-            <value value= "XXX"/>
-            <system value= "XXX"/>
-            <code value="XXX"/>
-        </numerator>
-      </amount>
+      <ingredient>
+        <item>
+          <coding>
+            <system value= "http://fhir.de/CodeSystem/ifa/pzn"/>
+            <code value="09999011"/>
+          </coding>
+        </item>
+      </ingredient>
       <batch>
-        <IotNumber value="XXX"/>
+        <lotNumber value="1234"/>
       </batch>
 </Medication>

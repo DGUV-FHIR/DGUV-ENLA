@@ -3,27 +3,34 @@
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/MedicationStatement/DGUV-ENLA-PR-MedikationsInformation" />
     </meta>
-    <status value="xxx"/>
+    <status value="active">
     <medication>
-        <reference value="XXX"/>     
+        <reference value="Medication/MedikationArzneimittel"/>     
     </medication>
     <subject>
-        <reference value="XXX"/>     
+        <reference value="Patient/VersichertePerson"/>     
     </subject>
-    <effective value="xxx"/>            
+    <effective value="2025-04-25"/>            
     <dosage>
         <timing>
             <code>
                 <coding>
-                    <system value="XXX"/>
-                    <version value="XXX"/>
-                    <code value="XXX"/>
-                    <display value="XXX"/>
-                        <extension url="http://hl7.org/fhir/StructureDefinition/XXX">
-                        <valueString value="XXX"/>
+                    <system value="http://hl7.org/fhir/event-timing"/>
+                    <version value="1.0"/>
+                    <code value="MORN"/>
+                    <display value="Morning"/>
+                        <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-AnzeigenameDeutsch">
+                        <valueString value="Morgens"/>
                         </extension>
-                        <extension url="http://hl7.org/fhir/StructureDefinition/XXX">
-                        <valueString value="XXX"/>
+                    </display>
+                </coding>
+                <coding>
+                    <system value="http://hl7.org/fhir/event-timing"/>
+                    <version value="1.0"/>
+                    <code value="EVE"/>
+                    <display value="Evening"/>
+                        <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-AnzeigenameDeutsch">
+                        <valueString value="Abends"/>
                         </extension>
                     </display>
                 </coding>
@@ -31,10 +38,10 @@
         </timing>
         <route>
             <coding>
-                    <system value="XXX"/>
-                    <version value="XXX"/>
-                    <code value="XXX"/>
-                    <display value="XXX"/>
+                    <system value="http://terminology.hl7.org/v2plusvocab/CodeSystem/RouteOfAdministrationV110"/>
+                    <version value="1.1.0"/>
+                    <code value="PO"/>
+                    <display value="Oral"/>
             </coding>
         </route>
     </dosage>

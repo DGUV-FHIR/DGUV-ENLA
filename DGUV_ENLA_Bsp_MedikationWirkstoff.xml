@@ -5,31 +5,22 @@
     </meta>
       <code>
         <coding>
-            <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
-            <code value="XXX" />
-            <display value="Organization identifier" />
+            <system value="http://fhir.de/CodeSystem/ifa/pzn" />
+            <code value="98765432" />
         </coding>
       </code>
-      <status value="xxx"/>
-      <manufacturer>
-        <display value="XXX"/>     
-      </manufacturer>
-      <form>
-        <coding>
-        <system value="XXX"/>
-        <version value="XXX"/>
-        <code value="XXX"/>
-        <display value="XXX"/>
-        </coding>
-      </form>
-      <amount>
-        <numerator>
-            <value value= "XXX"/>
-            <system value= "XXX"/>
-            <code value="XXX"/>
-        </numerator>
-      </amount>
+      <status value="active"/>
+      <ingredient>
+        <item>
+          <coding>
+           <system value="http://fhir.de/CodeSystem/ifa/pzn"/>
+           <version value="1.0"/>
+           <code value="98765432"/>
+           <display value="Paracetamol"/>
+         </coding>
+       </item>
+      </ingredient>
       <batch>
-        <IotNumber value="XXX"/>
+        <lotNumber value="1234"/>
       </batch>
 </Medication>

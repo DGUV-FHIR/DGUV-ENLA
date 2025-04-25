@@ -53,6 +53,6 @@
         <display value="Beschaeftigungsbeginn"/>
       </coding>
     </code>
-    <valueDateTime value="2018-01-01"/>
+    <valueDateTime value="2025-04-04"/>
   </component>
 </Observation>
