@@ -1455,7 +1455,7 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="MedicationStatement.effective[x]" />
-      <short value="Datum/Zeit/Intervall wenn Medikament eingenommen wurde/werden muss" />
+      <short value="The date/time or interval when the medication is/was/will be taken" />
       <definition value="The interval of time during which it is being asserted that the patient is/was/will be taking the medication (or was not taking, when the MedicationStatement.taken element is No)." />
       <comment value="This attribute reflects the period over which the patient consumed the medication and is expected to be populated on the majority of Medication Statements. If the medication is still being taken at the time the statement is recorded, the &quot;end&quot; date will be omitted.  The date/time attribute supports a variety of dates - year, year/month and exact date.  If something more than this is required, this should be conveyed as text." />
       <min value="0" />
@@ -1480,7 +1480,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -8198,11 +8197,6 @@
     <element id="MedicationStatement.subject.reference">
       <path value="MedicationStatement.subject.reference" />
       <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="MedicationStatement.effective[x]">
-      <path value="MedicationStatement.effective[x]" />
-      <short value="Datum/Zeit/Intervall wenn Medikament eingenommen wurde/werden muss" />
       <mustSupport value="true" />
     </element>
     <element id="MedicationStatement.dosage">
