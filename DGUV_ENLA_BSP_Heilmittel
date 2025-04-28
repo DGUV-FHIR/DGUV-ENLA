@@ -16,10 +16,19 @@
     </subject>
     <effective>
         <Timing>
-            <dayOfWeek value="mon">
+            <dayOfWeek value="Durch Weiterbehandler festzulegen">
         </Timing>
     </effective>
-
+    <value>  
+        <coding>
+                <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-IstVerordnet">
+                   <valueString value="true"/>
+                </extension>
+            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Heilmittel" />
+            <code value="PHYSIO" />
+            <display value="Physiotherapie" />
+        </coding>
+    </value>
 </Observation>
 
 
