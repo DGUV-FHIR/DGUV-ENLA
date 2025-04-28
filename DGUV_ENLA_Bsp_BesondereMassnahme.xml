@@ -1,0 +1,23 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="BesondereMassnahmen-1" />
+    <meta>
+        <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-BesondereMassnahmen" />
+    </meta>
+    <status value="final"/>
+    <code>  
+        <coding>
+            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+            <code value="BM" />
+            <display value="BesondereMassnahmen" />
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/12345"/>
+    </subject>
+    <effective>
+        <Timing>
+            <dayOfWeek value="Durch Weiterbehandler festzulegen">
+        </Timing>
+    </effective>
+    <value string="BesondereMassnahme"/> 
+</Observation>
