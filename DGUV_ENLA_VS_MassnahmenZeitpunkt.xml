@@ -1,0 +1,38 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="DGUV-ENLA-VS-MassnahmenZeitpunkt" />
+    <url value="http://fhir.dguv.de/ENLA/ValueSet/DGUV_ENLA_VS_MassnahmenZeitpunkt" />
+    <version value="1.0.0" />
+    <name value="DGUV_ENLA_VS_MassnahmenZeitpunkt" />
+    <title value="MaßnahmenZeitpunkt" />
+    <status value="draft" />
+    <experimental value="false" />
+    <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
+    <contact>
+        <telecom>
+            <system value="url" />
+            <value value="https://www.dguv.de" />
+        </telecom>
+    </contact>
+    <description value="Dieses Valueset enthaelt die Codes zur Beschreibung der Startzeitpunkte der Massnahmen." />
+	<content value="complete"/>
+    <compose>
+		<include>
+		<system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-MassnahmenZeitpunkt" />
+		<version value="1.0.0" />
+	<concept>
+        <code value="Direkt" />
+        <display value="Direkt im Anschluss" />
+    </concept>
+	<concept>
+        <code value="Festzul" />
+        <display value="Durch Weiterbehandler festzulegen" />
+    </concept>
+	<concept>
+        <code value="AZPKT" />
+        <display value="Anderer Zeitpunkt" />
+    </concept>
+	</include>
+
+    </compose>
+    
+</ValueSet>
