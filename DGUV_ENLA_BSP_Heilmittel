@@ -1,0 +1,26 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="Heilmittel-1" />
+    <meta>
+        <profile value="https://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Heilmittel" />
+    </meta>
+    <status value="final"/>
+    <code>  
+        <coding>
+            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+            <code value="HEILM" />
+            <display value="Heilmittel" />
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/12345"/>
+    </subject>
+    <effective>
+        <Timing>
+            <dayOfWeek value="mon">
+        </Timing>
+    </effective>
+
+</Observation>
+
+
+
