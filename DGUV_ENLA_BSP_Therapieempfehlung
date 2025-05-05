@@ -12,7 +12,7 @@
         </coding>
     </code>
     <subject>
-        <reference value="Patient/12345"/>
+        <reference value="Farad, Rudi/T995030511"/>
     </subject>
-    <value value="Schockwellentherapie" />
+    <value value="Regelmässige Wundkontrollen, im Bereich des linken Oberarmes empfehlen wir eine funktionelle lastfreie Behandlung für 6 Wochen postoperationem, etc." />
 </Observation>

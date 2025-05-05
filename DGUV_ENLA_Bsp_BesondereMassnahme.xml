@@ -12,12 +12,16 @@
         </coding>
     </code>
     <subject>
-        <reference value="Patient/12345"/>
+        <reference value="Farad, Rudi/T995030511"/>
     </subject>
     <effective>
-        <Timing>
-            <dayOfWeek value="Durch Weiterbehandler festzulegen">
-        </Timing>
+        <code>  
+            <coding>
+                <system value="http://fhir.dguv.de/ENLA/ValueSet/DGUV_ENLA_VS_MassnahmenZeitpunkt" />
+                <code value="Festzul" />
+                <display value="Durch Weiterbehandler festzulegen" />
+            </coding>
+        </code>
     </effective>
     <value string="BesondereMassnahme"/> 
 </Observation>

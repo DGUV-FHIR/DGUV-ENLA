@@ -12,7 +12,7 @@
         </coding>
     </code>
     <subject>
-        <reference value="Patient/12345"/>
+        <reference value="Farad, Rudi/T995030511"/>
     </subject>
     <effective>
         <Timing>
@@ -25,8 +25,9 @@
                    <valueString value="true"/>
                 </extension>
             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Hilfsmittel" />
-            <code value="PUEX" />
-            <display value="Prothesen der unteren Extremitaeten" />
+            <code value="PHM" />
+            <display value="Pflegehilfsmittel" />
         </coding>
-    </value>
+        </coding>
+    <value string="Aspen Collar, Wechselpolster für Collar-Bandage, bereits verordnet/">
 </Observation>
