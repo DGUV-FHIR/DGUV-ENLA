@@ -8158,7 +8158,7 @@
     <element id="Practitioner.name:Name.use">
       <path value="Practitioner.name.use" />
       <short value="usual | official | temp | nickname | anonymous | old | maiden" />
-      <definition value="Abgrenzung von offiziellem Namen , Künstlernamen usw. voneinander" />
+      <definition value="Abgrenzung von offiziellem Namen, Geburtsnamen, Künstlernamen usw. voneinander" />
       <comment value="Applications can assume that a name is current unless it explicitly says that it is temporary or old." />
       <requirements value="Allows the appropriate name for a particular context of use to be selected from among a set of names." />
       <min value="1" />
@@ -18330,7 +18330,7 @@
     </element>
     <element id="Practitioner.name:Name.use">
       <path value="Practitioner.name.use" />
-      <definition value="Abgrenzung von offiziellem Namen , Künstlernamen usw. voneinander" />
+      <definition value="Abgrenzung von offiziellem Namen, Geburtsnamen, Künstlernamen usw. voneinander" />
       <mustSupport value="true" />
     </element>
     <element id="Practitioner.name:Name.family">
