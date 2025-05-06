@@ -11273,7 +11273,7 @@
       </extension>
       <path value="Patient.address.line.extension" />
       <sliceName value="Strasse" />
-      <short value="Strassenname (ohne Hausnummer)" />
+      <short value="Straßenname (ohne Hausnummer)" />
       <definition value="Strassenname (ohne Hausnummer)&#xD;&#xA;Bei Angabe einer Strasse in dieser Extension muss diese auch in Address.line angegeben werden um die Interoperabilität mit Systemen zu gewährleisten, die diese Extension nicht verwenden." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
@@ -12778,7 +12778,7 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="Patient.address.extension.value[x]" />
-      <short value="Value of extension" />
+      <short value="Konkreter Name des Stadt- oder Ortsteils" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
       <min value="1" />
       <max value="1" />
@@ -17908,6 +17908,7 @@
     <element id="Patient.address:Strassenanschrift.line.extension:Strasse">
       <path value="Patient.address.line.extension" />
       <sliceName value="Strasse" />
+      <short value="Straßenname (ohne Hausnummer)" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -17957,6 +17958,14 @@
       <sliceName value="Postfach" />
       <short value="Postfachadresse" />
       <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Postfach.extension:Stadtteil">
+      <path value="Patient.address.extension" />
+      <sliceName value="Stadtteil" />
+    </element>
+    <element id="Patient.address:Postfach.extension:Stadtteil.value[x]">
+      <path value="Patient.address.extension.value[x]" />
+      <short value="Konkreter Name des Stadt- oder Ortsteils" />
     </element>
     <element id="Patient.address:Postfach.type">
       <path value="Patient.address.type" />
