@@ -7038,7 +7038,7 @@
     <element id="Patient.name:Name.prefix">
       <path value="Patient.name.prefix" />
       <short value="Namensteile vor dem Vornamen" />
-      <definition value="Namensteile vor dem Vornamen, z.B. akademischer Titel." />
+      <definition value="Namensteile vor dem Vornamen, z.B. akademischer Titel" />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <min value="0" />
       <max value="*" />
@@ -9411,7 +9411,7 @@
       <path value="Patient.gender" />
       <short value="männlich | weiblich | unbestimmt | divers" />
       <definition value="Administrative Gender - the gender that the patient is considered to have for administration and record keeping purposes." />
-      <comment value="Für die Geschlechtskennzeichen &quot;unbestimmt&quot; und &quot;divers&quot; ist der code &quot;other&quot; zu verwenden. Falls ein administratives Geschlecht 'divers' abzubilden ist (z.B. da dieses Geschlecht auf offiziellen Ausweisen eingetragen ist) muss eine Differenzierung zwischen 'other' und 'divers' als positiver Geschlechtseintrag erfolgen. Hierfür ist die 'other-amtlich'-Extension zu verwenden." />
+      <comment value="Für die Geschlechtskennzeichen &quot;unbestimmt&quot; und &quot;divers&quot; ist der code &quot;other&quot; zu verwenden. Falls ein administratives Geschlecht &quot;divers&quot; abzubilden ist (z. B. da dieses Geschlecht auf offiziellen Ausweisen eingetragen ist) muss eine Differenzierung zwischen &quot;other&quot; und &quot;divers&quot; als positiver Geschlechtseintrag erfolgen. Hierfür ist die &quot;gender-amtlich&quot;-Extension zu verwenden." />
       <requirements value="Needed for identification of the individual, in combination with (at least) name and birth date." />
       <min value="1" />
       <max value="1" />
@@ -17759,6 +17759,7 @@
     </element>
     <element id="Patient.name:Name.prefix">
       <path value="Patient.name.prefix" />
+      <definition value="Namensteile vor dem Vornamen, z.B. akademischer Titel" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.name:Name.prefix.extension">
@@ -17806,6 +17807,7 @@
     </element>
     <element id="Patient.gender">
       <path value="Patient.gender" />
+      <comment value="Für die Geschlechtskennzeichen &quot;unbestimmt&quot; und &quot;divers&quot; ist der code &quot;other&quot; zu verwenden. Falls ein administratives Geschlecht &quot;divers&quot; abzubilden ist (z. B. da dieses Geschlecht auf offiziellen Ausweisen eingetragen ist) muss eine Differenzierung zwischen &quot;other&quot; und &quot;divers&quot; als positiver Geschlechtseintrag erfolgen. Hierfür ist die &quot;gender-amtlich&quot;-Extension zu verwenden." />
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
