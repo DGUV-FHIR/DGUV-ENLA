@@ -2,6 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="https://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Hilfsmittel" />
   <name value="DGUV_ENLA_PR_Hilfsmittel" />
+  <title value="Hilfsmittel" />
   <status value="draft" />
   <description value="Dieses Profil bildet die erforderlichen Heilmittel ab." />
   <fhirVersion value="4.0.1" />
