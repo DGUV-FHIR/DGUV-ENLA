@@ -8,9 +8,9 @@
         <reference value="Medication/MedikationArzneimittel"/>     
     </medication>
     <subject>
-        <reference value="Patient/VersichertePerson"/>     
+        <reference value="Farad, Rudi/T995030511"/>     
     </subject>
-    <effective value="2025-04-25"/>            
+          
     <dosage>
         <timing>
             <code>
@@ -24,17 +24,7 @@
                         </extension>
                     </display>
                 </coding>
-                <coding>
-                    <system value="http://hl7.org/fhir/event-timing"/>
-                    <version value="1.0"/>
-                    <code value="EVE"/>
-                    <display value="Evening"/>
-                        <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-AnzeigenameDeutsch">
-                        <valueString value="Abends"/>
-                        </extension>
-                    </display>
-                </coding>
-             </code>
+            </code>
         </timing>
         <route>
             <coding>

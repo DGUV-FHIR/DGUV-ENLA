@@ -1,14 +1,14 @@
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="Heilmittel-1" />
+    <id value="BesondereMassnahmen-1" />
     <meta>
-        <profile value="https://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Heilmittel" />
+        <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-BesondereMassnahmen" />
     </meta>
     <status value="final"/>
     <code>  
         <coding>
             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
-            <code value="HEILM" />
-            <display value="Heilmittel" />
+            <code value="BM" />
+            <display value="BesondereMassnahmen" />
         </coding>
     </code>
     <subject>
@@ -23,14 +23,5 @@
             </coding>
         </code>
     </effective>
-    <value>  
-        <coding>
-                <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-IstVerordnet">
-                   <valueString value="true"/>
-                </extension>
-            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Heilmittel" />
-            <code value="PHYSIO" />
-            <display value="Physiotherapie" />
-        </coding>
-    </value>
+    <value string="BesondereMassnahme"/> 
 </Observation>

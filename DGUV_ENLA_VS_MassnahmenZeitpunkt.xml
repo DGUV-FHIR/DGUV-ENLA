@@ -28,7 +28,7 @@
         <display value="Durch Weiterbehandler festzulegen" />
     </concept>
 	<concept>
-        <code value="AZPKT" />
+        <code value="Azpkt" />
         <display value="Anderer Zeitpunkt" />
     </concept>
 	</include>
