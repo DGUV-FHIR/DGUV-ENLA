@@ -7620,7 +7620,7 @@
       <alias value="extensions" />
       <alias value="user content" />
       <min value="2" />
-      <max value="*" />
+      <max value="3" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -7664,7 +7664,7 @@
       </extension>
       <path value="Organization.address.line.extension" />
       <sliceName value="Strasse" />
-      <short value="Strassenname (ohne Hausnummer)" />
+      <short value="Straßenname (ohne Hausnummer)" />
       <definition value="Strassenname (ohne Hausnummer)&#xD;&#xA;Bei Angabe einer Strasse in dieser Extension muss diese auch in Address.line angegeben werden um die Interoperabilität mit Systemen zu gewährleisten, die diese Extension nicht verwenden." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
@@ -8699,6 +8699,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <binding>
         <strength value="preferred" />
@@ -11638,10 +11639,12 @@
     <element id="Organization.address:Strassenanschrift.line.extension">
       <path value="Organization.address.line.extension" />
       <min value="2" />
+      <max value="3" />
     </element>
     <element id="Organization.address:Strassenanschrift.line.extension:Strasse">
       <path value="Organization.address.line.extension" />
       <sliceName value="Strasse" />
+      <short value="Straßenname (ohne Hausnummer)" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -11680,6 +11683,10 @@
     <element id="Organization.address:Strassenanschrift.postalCode">
       <path value="Organization.address.postalCode" />
       <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Strassenanschrift.country">
+      <path value="Organization.address.country" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.address:Postfach">
