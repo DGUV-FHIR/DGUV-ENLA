@@ -3,7 +3,7 @@
   <id value="DGUV-ENLA-PR-Therapie" />
   <url value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Therapie" />
   <name value="DGUV_ENLA_PR_Therapie" />
-  <title value="Therapien" />
+  <title value="Therapie" />
   <status value="draft" />
   <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
   <description value="Dieses Profil bildet die operative und konservative Therapie während der stationären Behandlung ab." />

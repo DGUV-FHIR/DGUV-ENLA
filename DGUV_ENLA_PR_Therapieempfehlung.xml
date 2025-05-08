@@ -3,6 +3,7 @@
   <id value="DGUV-ENLA-PR-Therapieempfehlung" />
   <url value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Therapieempfehlung" />
   <name value="DGUV_ENLA_PR_Therapieempfehlung" />
+  <title value="Therapieempfehlung" />
   <status value="draft" />
   <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
   <description value="Dieses Profil bildet die Empfehlungen für weitere therapeutische und diagnostische Maßnahmen wie regelmäßige Wundkontrolle, kardiologische Kontrolle, Konsiliaruntersuchungen etc. ab." />

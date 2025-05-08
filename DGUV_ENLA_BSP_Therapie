@@ -12,7 +12,7 @@
         </coding>
     </code>
     <subject>
-        <reference value="Patient/12345"/>
+        <reference value="Farad, Rudi/T995030511"/>
     </subject>
-    <value value="Krankengymnastik" />
+    <value value="neurologisches und inneres konsil" />
 </Observation>

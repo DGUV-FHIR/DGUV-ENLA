@@ -6,20 +6,20 @@
       <code>
         <coding>
             <system value="http://fhir.de/CodeSystem/ifa/pzn" />
-            <code value="01016055" />
+            <code value="04823572" />
         </coding>
-        <text value="IBUPROFEN AbZ 200 mg Filmtabletten 50 St" />
+        <text value="ACC long 600mg" />
       </code>
       <status value="active"/>
       <manufacturer>
-        <display value="AbZ Pharma GmbH"/>     
+        <display value="Hexal AG"/>     
       </manufacturer>
       <form>
         <coding>
           <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM"/>
           <version value="1.15"/>
-          <code value="TAB"/>
-          <display value="Tabletten"/>
+          <code value="BTA"/>
+          <display value="Brausetabletten"/>
         </coding>
       </form>
       <batch>

@@ -7,14 +7,14 @@
   <code>
     <coding>
       <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-Verletzungsartenverzeichnis"/>
-      <code value="3.1S"/>
-      <display value="Verletzungen des Rückenmarks."/>
+      <code value="10.1V"/>
+      <display value="chwere Verletzungen und Verletzungskombinationen (Polytrauma) mit einem Injury Severity Score (ISS) zwischen 16 und 24."/>
     </coding>
   </code>
   <subject> 
-    <reference value="Patient/111" />
+    <reference value="Farad, Rudi/T995030511" />
   </subject>
-  <effectiveDateTime value="2025-11-02T13:00:00+00:00"/>
+  <effectiveDateTime value="2018-08-24T13:00:00+00:00"/>
   <component>
     <code>
       <coding>
@@ -43,7 +43,7 @@
         <display value="Beruf"/>
       </coding>
     </code>
-    <valueString value="Informatiker"/>
+    <valueString value="Schrittmacher"/>
   </component>
   <component>
     <code>
@@ -53,6 +53,6 @@
         <display value="Beschaeftigungsbeginn"/>
       </coding>
     </code>
-    <valueDateTime value="2025-04-04"/>
+    <valueDateTime value="2021-04-01"/>
   </component>
 </Observation>
