@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
   <id value="DGUV-ENLA-CS-BefundKategorie" />
   <url value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-BefundKategorie" />
@@ -14,6 +15,7 @@
     </telecom>
   </contact>
   <description value="Dieses CodeSystem enthält Codes zur Festlegung des Zeitrahmens der Befunderfassung (z.B. stationäre Aufnahme)." />
+  <content value="complete"/>
   <concept>
     <code value="Aufnahme" />
     <display value="Aufnahmebefund" />

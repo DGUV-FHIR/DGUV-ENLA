@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
-    <id value="DGUV_ENLA_CS_BefundKategorie" />
-    <url value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-BefundKategorie" />
-    <version value="1.0.0" />
-    <name value="DGUV_ENLA_CS_Befundkategorie" />
-    <title value="BefundKategorien - CS" />
-    <status value="draft" />
-    <experimental value="false" />
-    <publisher value="DGUV (Deutsche Gesellschaft Unfallversicherung e.V.)" />
-    <contact>
-        <telecom>
-            <system value="url" />
-            <value value="https://www.dguv.de" />
-        </telecom>
-    </contact>
-    <description value="Dieses CodeSystem enthält Codes zur Beschreibung der Befundkategorien." />
-    <content value="complete" />        
-	<concept>
-        <code value="sozialanamnese" />
-        <display value="Sozialanamnese" />
-		<definition value="Die Beobachtungen zur Sozialanamnese ergeben sich aus der beruflichen, persönlichen (z. B. Lebensstil) und sozialen Vorgeschichte des Patienten sowie aus gesundheitlichen Risikofaktoren und Beschreibungen des Umfeldes." />
-    </concept>
-	<concept>
-        <code value="vitalparameter" />
-        <display value="Vitalparameter" />
-		<definition value="Klinische Beobachtungen, die die grundlegenden Körperfunktionen messen, wie z. B. Blutdruck, Herzfrequenz, Atemfrequenz, Körpergröße, Gewicht, Body-Mass-Index, Kopfumfang, Pulsoximetrie, Temperatur und Körperoberfläche." />
-    </concept>
-	<concept>
-        <code value="radiologischediagnostik" />
-        <display value="Radiologische Diagnostik" />
-		<definition value="Beobachtungen, die durch bildgebende Prozeduren erzeugt werden. Der Umfang umfasst Beobachtungen aus Röntgenaufnahmen, Ultraschall, CT, MRT, Angiographie, Echokardiographie und Nuklearmedizin." />
-    </concept>
-	<concept>
-        <code value="labormedizinischediagnostik" />
-        <display value="Labormedizinische Diagnostik" />
-		<definition value="Die Ergebnisse von Beobachtungen, die durch Laboruntersuchungen erzeugt werden. Laborergebnisse werden typischerweise von Laboren geliefert, die analytische Dienstleistungen in Bereichen wie Chemie, Hämatologie, Serologie, Histologie, Zytologie, anatomische Pathologie, Mikrobiologie und/oder Virologie anbieten. Diese Beobachtungen basieren auf der Analyse von Proben, die vom Patienten entnommen und ins Labor geschickt wurden." />
-    </concept>
-	<concept>
-        <code value="prozeduren" />
-        <display value="Prozeduren" />
-		<definition value="Beobachtungen, die durch andere Prozeduren erzeugt werden. Diese Kategorie umfasst Beobachtungen, die aus interventionellen und nicht-interventionellen Prozeduren resultieren, mit Ausnahme von Labor- und bildgebenden Prozeduren (z. B. Kardiologie-Katheterisation, Endoskopie, Elektrophysiologie usw.). Prozedurenergebnisse werden typischerweise von einem Kliniker erstellt, um detailliertere Informationen über die während einer Prozedur vorgenommenen Beobachtungen bereitzustellen, wie z. B. wenn ein Gastroenterologe die Größe eines Polypen beschreibt, der während einer Koloskopie beobachtet wurde." />
-    </concept>
-	<concept>
-        <code value="umfrage" />
-        <display value="Umfrage" />
-		<definition value="Beobachtungen, die durch Bewertungsinstrumente/Umfrageinstrumente erstellt werden (z. B. Apgar-Scores, Montreal Cognitive Assessment (MoCA))." />
-    </concept>
-	<concept>
-        <code value="untersuchung" />
-        <display value="Untersuchung" />
-		<definition value="Beobachtungen, die durch Befunde einer körperlichen Untersuchung erzeugt werden, einschließlich direkter Beobachtungen durch einen Kliniker und der Verwendung einfacher Instrumente sowie der Ergebnisse einfacher Manöver, die direkt am Körper des Patienten durchgeführt werden." />
-    </concept>
-	<concept>
-        <code value="therapie" />
-        <display value="Therapie" />
-		<definition value="Beobachtungen, die durch nicht-interventionelle Behandlungsprotokolle erzeugt werden (z. B. berufliche Therapie, physikalische Therapie, Strahlentherapie, Ernährungs- und medikamentöse Therapie)." />
-    </concept>
+  <id value="DGUV-ENLA-CS-BefundKategorie" />
+  <url value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-BefundKategorie" />
+  <version value="1.0.0" />
+  <name value="DGUV_ENLA_CS_Befundkategorie" />
+  <title value="BefundKategorien - CS" />
+  <status value="draft" />
+  <experimental value="false" />
+  <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="https://www.dguv.de" />
+    </telecom>
+  </contact>
+  <description value="Dieses CodeSystem enthält Codes zur Beschreibung der Befundkategorien." />
+  <content value="complete" />
+  <concept>
+    <code value="sozialanamnese" />
+    <display value="Sozialanamnese" />
+    <definition value="Die Beobachtungen zur Sozialanamnese ergeben sich aus der beruflichen, persönlichen (z. B. Lebensstil) und sozialen Vorgeschichte des Patienten sowie aus gesundheitlichen Risikofaktoren und Beschreibungen des Umfeldes." />
+  </concept>
+  <concept>
+    <code value="vitalparameter" />
+    <display value="Vitalparameter" />
+    <definition value="Klinische Beobachtungen, die die grundlegenden Körperfunktionen messen, wie z. B. Blutdruck, Herzfrequenz, Atemfrequenz, Körpergröße, Gewicht, Body-Mass-Index, Kopfumfang, Pulsoximetrie, Temperatur und Körperoberfläche." />
+  </concept>
+  <concept>
+    <code value="radiologischediagnostik" />
+    <display value="Radiologische Diagnostik" />
+    <definition value="Beobachtungen, die durch bildgebende Prozeduren erzeugt werden. Der Umfang umfasst Beobachtungen aus Röntgenaufnahmen, Ultraschall, CT, MRT, Angiographie, Echokardiographie und Nuklearmedizin." />
+  </concept>
+  <concept>
+    <code value="labormedizinischediagnostik" />
+    <display value="Labormedizinische Diagnostik" />
+    <definition value="Die Ergebnisse von Beobachtungen, die durch Laboruntersuchungen erzeugt werden. Laborergebnisse werden typischerweise von Laboren geliefert, die analytische Dienstleistungen in Bereichen wie Chemie, Hämatologie, Serologie, Histologie, Zytologie, anatomische Pathologie, Mikrobiologie und/oder Virologie anbieten. Diese Beobachtungen basieren auf der Analyse von Proben, die vom Patienten entnommen und ins Labor geschickt wurden." />
+  </concept>
+  <concept>
+    <code value="prozeduren" />
+    <display value="Prozeduren" />
+    <definition value="Beobachtungen, die durch andere Prozeduren erzeugt werden. Diese Kategorie umfasst Beobachtungen, die aus interventionellen und nicht-interventionellen Prozeduren resultieren, mit Ausnahme von Labor- und bildgebenden Prozeduren (z. B. Kardiologie-Katheterisation, Endoskopie, Elektrophysiologie usw.). Prozedurenergebnisse werden typischerweise von einem Kliniker erstellt, um detailliertere Informationen über die während einer Prozedur vorgenommenen Beobachtungen bereitzustellen, wie z. B. wenn ein Gastroenterologe die Größe eines Polypen beschreibt, der während einer Koloskopie beobachtet wurde." />
+  </concept>
+  <concept>
+    <code value="umfrage" />
+    <display value="Umfrage" />
+    <definition value="Beobachtungen, die durch Bewertungsinstrumente/Umfrageinstrumente erstellt werden (z. B. Apgar-Scores, Montreal Cognitive Assessment (MoCA))." />
+  </concept>
+  <concept>
+    <code value="untersuchung" />
+    <display value="Untersuchung" />
+    <definition value="Beobachtungen, die durch Befunde einer körperlichen Untersuchung erzeugt werden, einschließlich direkter Beobachtungen durch einen Kliniker und der Verwendung einfacher Instrumente sowie der Ergebnisse einfacher Manöver, die direkt am Körper des Patienten durchgeführt werden." />
+  </concept>
+  <concept>
+    <code value="therapie" />
+    <display value="Therapie" />
+    <definition value="Beobachtungen, die durch nicht-interventionelle Behandlungsprotokolle erzeugt werden (z. B. berufliche Therapie, physikalische Therapie, Strahlentherapie, Ernährungs- und medikamentöse Therapie)." />
+  </concept>
 </CodeSystem>
