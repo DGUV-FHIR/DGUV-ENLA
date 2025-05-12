@@ -106,6 +106,7 @@
         </extension>
         <code value="http://hl7.org/fhirpath/System.String" />
       </type>
+      <mustSupport value="true" />
       <isSummary value="true" />
     </element>
     <element id="PractitionerRole.meta">
@@ -4341,6 +4342,10 @@
     </element>
   </snapshot>
   <differential>
+    <element id="PractitionerRole.id">
+      <path value="PractitionerRole.id" />
+      <mustSupport value="true" />
+    </element>
     <element id="PractitionerRole.extension">
       <path value="PractitionerRole.extension" />
       <min value="1" />

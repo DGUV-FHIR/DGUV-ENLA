@@ -114,6 +114,7 @@
         </extension>
         <code value="http://hl7.org/fhirpath/System.String" />
       </type>
+      <mustSupport value="true" />
       <isSummary value="true" />
     </element>
     <element id="Organization.meta">
@@ -11493,6 +11494,10 @@
     </element>
   </snapshot>
   <differential>
+    <element id="Organization.id">
+      <path value="Organization.id" />
+      <mustSupport value="true" />
+    </element>
     <element id="Organization.identifier">
       <path value="Organization.identifier" />
       <min value="1" />

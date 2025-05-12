@@ -114,6 +114,7 @@
         </extension>
         <code value="http://hl7.org/fhirpath/System.String" />
       </type>
+      <mustSupport value="true" />
       <isSummary value="true" />
     </element>
     <element id="Organization.meta">
@@ -11492,6 +11493,10 @@
     </element>
   </snapshot>
   <differential>
+    <element id="Organization.id">
+      <path value="Organization.id" />
+      <mustSupport value="true" />
+    </element>
     <element id="Organization.identifier">
       <path value="Organization.identifier" />
       <comment value="Alle Identifier im Profil “DGUV_ENLA_PR_BehandelndeEinrichtung” sind nur optional, da auf dieses Profil nur aus der Organisation von “DGUV_ENLA_PR_AnsprechpartnerFuerRueckfragen“ heraus referenziert wird und diese für die Rechnungsstellung irrelevant ist." />

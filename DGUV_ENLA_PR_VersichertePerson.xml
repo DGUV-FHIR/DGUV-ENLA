@@ -103,6 +103,7 @@
         </extension>
         <code value="http://hl7.org/fhirpath/System.String" />
       </type>
+      <mustSupport value="true" />
       <isSummary value="true" />
     </element>
     <element id="Patient.meta">
@@ -17538,6 +17539,10 @@
     </element>
   </snapshot>
   <differential>
+    <element id="Patient.id">
+      <path value="Patient.id" />
+      <mustSupport value="true" />
+    </element>
     <element id="Patient.extension">
       <path value="Patient.extension" />
       <mustSupport value="true" />

@@ -106,6 +106,7 @@
         </extension>
         <code value="http://hl7.org/fhirpath/System.String" />
       </type>
+      <mustSupport value="true" />
       <isSummary value="true" />
     </element>
     <element id="Practitioner.meta">
@@ -18185,6 +18186,10 @@
     </element>
   </snapshot>
   <differential>
+    <element id="Practitioner.id">
+      <path value="Practitioner.id" />
+      <mustSupport value="true" />
+    </element>
     <element id="Practitioner.identifier">
       <path value="Practitioner.identifier" />
       <short value="Identifikator für die Person des Leistungserbringers" />
