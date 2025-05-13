@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="DGUV-ENLA-EX-AnzeigenameDeutsch" />
   <url value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-AnzeigenameDeutsch" />
   <name value="DGUV_ENLA_EX_AnzeigenameDeutsch" />
+  <title value="Anzeige in deutscher Sprache (Erweiterung)" />
   <status value="draft" />
+  <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
+  <description value="Möglichkeit zur zusätzlichen Ausgabe einer Anzeige in deutscher Sprache" />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
