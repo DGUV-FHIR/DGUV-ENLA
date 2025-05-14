@@ -6,7 +6,7 @@
   <title value="Grund einer Folgebehandlung (Erweiterung)" />
   <status value="draft" />
   <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
-  <description value="Möglichkeit zur zusätzlichen Ausgabe des Grundes einer Folgebehandlung" />
+  <description value="Möglichkeit zur zusätzlichen Angabe des Grundes einer Folgebehandlung" />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />

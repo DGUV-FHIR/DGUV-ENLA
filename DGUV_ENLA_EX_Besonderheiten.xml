@@ -6,7 +6,7 @@
   <title value="Besonderheiten im Behandlungsverlauf (Erweiterung)" />
   <status value="draft" />
   <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
-  <description value="Möglichkeit, Besonderheiten im Verhandlungsverlauf - wie z. B. Komplikationen oder psychische Gesundheitsbeeinträchtigungen - als Freitext zu formulieren." />
+  <description value="Möglichkeit, zusätzlich Besonderheiten im Behandlungsverlauf - wie z. B. Komplikationen oder psychische Gesundheitsbeeinträchtigungen - als Freitext zu formulieren" />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
