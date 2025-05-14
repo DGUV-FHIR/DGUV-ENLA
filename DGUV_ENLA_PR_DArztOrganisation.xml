@@ -114,6 +114,7 @@
         </extension>
         <code value="http://hl7.org/fhirpath/System.String" />
       </type>
+      <mustSupport value="true" />
       <isSummary value="true" />
     </element>
     <element id="Organization.meta">
@@ -8700,6 +8701,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <binding>
         <strength value="preferred" />
@@ -11492,6 +11494,10 @@
     </element>
   </snapshot>
   <differential>
+    <element id="Organization.id">
+      <path value="Organization.id" />
+      <mustSupport value="true" />
+    </element>
     <element id="Organization.identifier">
       <path value="Organization.identifier" />
       <min value="1" />
@@ -11685,6 +11691,10 @@
     <element id="Organization.address:Strassenanschrift.postalCode">
       <path value="Organization.address.postalCode" />
       <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Strassenanschrift.country">
+      <path value="Organization.address.country" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.address:Postfach">

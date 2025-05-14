@@ -1,0 +1,36 @@
+<Organization xmlns="http://hl7.org/fhir">
+    <id value="Pflegekasse-1" />
+    <meta>
+        <profile value="http://fhir.dguv.de/Enla/Organization/DGUV-Enla-PR-Pflegekasse" />
+    </meta>
+      <identifier>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+                <code value="XX" />
+                <display value="Organization identifier" />
+            </coding>
+        </type>
+        <system value="http://fhir.de/sid/arge-ik/iknr" />
+        <value value="999999999" />
+    </identifier>
+    <name value="Pflegekasse Nord-Ostwestfalen Süd"/>
+    <telcom>
+        <system value="phone"/>
+        <value value="01751234"/>
+    </telcom>
+    <address>
+        <type value="both"/>
+        <line value="Nebenstr. 82">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                <valueString value="Nebenstraße"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                <valueString value="82"/>
+            </extension>
+        </line>
+        <city value="Mölln"/>
+        <postalCode value="23879"/>
+        <country value="DE"/>
+    </address>
+</Organization>

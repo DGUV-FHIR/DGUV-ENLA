@@ -1,0 +1,38 @@
+<MedicationStatement xmlns="http://hl7.org/fhir">
+    <id value="MedikationsInformation" />
+    <meta>
+        <profile value="http://fhir.dguv.de/ENLA/MedicationStatement/DGUV-ENLA-PR-MedikationsInformation" />
+    </meta>
+    <status value="active">
+    <medication>
+        <reference value="Medication/MedikationArzneimittel"/>     
+    </medication>
+    <subject>
+        <reference value="Farad, Rudi/T995030511"/>     
+    </subject>
+          
+    <dosage>
+        <timing>
+            <code>
+                <coding>
+                    <system value="http://hl7.org/fhir/event-timing"/>
+                    <version value="1.0"/>
+                    <code value="MORN"/>
+                    <display value="Morning"/>
+                        <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-AnzeigenameDeutsch">
+                        <valueString value="Morgens"/>
+                        </extension>
+                    </display>
+                </coding>
+            </code>
+        </timing>
+        <route>
+            <coding>
+                    <system value="http://terminology.hl7.org/v2plusvocab/CodeSystem/RouteOfAdministrationV110"/>
+                    <version value="1.1.0"/>
+                    <code value="PO"/>
+                    <display value="Oral"/>
+            </coding>
+        </route>
+    </dosage>
+</MedicationStatement>

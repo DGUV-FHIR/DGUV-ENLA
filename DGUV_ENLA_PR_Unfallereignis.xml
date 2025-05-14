@@ -131,6 +131,7 @@
         </extension>
         <code value="http://hl7.org/fhirpath/System.String" />
       </type>
+      <mustSupport value="true" />
       <isSummary value="true" />
     </element>
     <element id="Observation.meta">
@@ -10689,6 +10690,10 @@
     </element>
   </snapshot>
   <differential>
+    <element id="Observation.id">
+      <path value="Observation.id" />
+      <mustSupport value="true" />
+    </element>
     <element id="Observation.status">
       <path value="Observation.status" />
       <mustSupport value="true" />

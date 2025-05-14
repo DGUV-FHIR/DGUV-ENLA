@@ -101,6 +101,7 @@
         </extension>
         <code value="http://hl7.org/fhirpath/System.String" />
       </type>
+      <mustSupport value="true" />
       <isSummary value="true" />
     </element>
     <element id="Encounter.meta">
@@ -5420,6 +5421,10 @@
       <path value="Encounter" />
       <short value="Falldaten (Aufenhaltszeitraum, Entlassungsgrund und Aufnahmegrund)" />
       <definition value="Dieses Profil enthält Informationen zum Aufenthaltszeitraum sowie Gründe für Aufnahme und Entlassung." />
+    </element>
+    <element id="Encounter.id">
+      <path value="Encounter.id" />
+      <mustSupport value="true" />
     </element>
     <element id="Encounter.identifier">
       <path value="Encounter.identifier" />

@@ -140,6 +140,7 @@
         </extension>
         <code value="http://hl7.org/fhirpath/System.String" />
       </type>
+      <mustSupport value="true" />
       <isSummary value="true" />
     </element>
     <element id="Condition.meta">
@@ -4955,6 +4956,10 @@
     </element>
   </snapshot>
   <differential>
+    <element id="Condition.id">
+      <path value="Condition.id" />
+      <mustSupport value="true" />
+    </element>
     <element id="Condition.identifier">
       <path value="Condition.identifier" />
       <max value="0" />

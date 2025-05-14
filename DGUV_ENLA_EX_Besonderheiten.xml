@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="DGUV-ENLA-EX-Besonderheiten" />
   <url value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-Besonderheiten" />
   <name value="DGUV_ENLA_EX_Besonderheiten" />
-  <title value="Erweiterung für Besonderheiten im Behandlungsverlauf" />
+  <title value="Besonderheiten im Behandlungsverlauf (Erweiterung)" />
   <status value="draft" />
+  <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
+  <description value="Möglichkeit, zusätzlich Besonderheiten im Behandlungsverlauf - wie z. B. Komplikationen oder psychische Gesundheitsbeeinträchtigungen - als Freitext zu formulieren" />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
@@ -103,7 +106,7 @@
       <alias value="extensions" />
       <alias value="user content" />
       <min value="0" />
-      <max value="*" />
+      <max value="0" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -203,6 +206,10 @@
     </element>
   </snapshot>
   <differential>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <max value="0" />
+    </element>
     <element id="Extension.url">
       <path value="Extension.url" />
       <fixedUri value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-Besonderheiten" />

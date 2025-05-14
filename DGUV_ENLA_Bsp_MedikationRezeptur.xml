@@ -1,0 +1,35 @@
+<Medication xmlns="http://hl7.org/fhir">
+    <id value="MedikationRezeptur" />
+    <meta>
+        <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationRezeptur" />
+    </meta>
+      <code>
+        <coding>
+            <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type" />
+            <code value="rezeptur" />
+        </coding>
+      </code>
+      <status value="active"/>
+      <manufacturer>
+        <display value="AbZ Pharma GmbH"/>     
+      </manufacturer>
+      <form>
+        <coding>
+          <system value="http://standardterms.edqm.eu"/>
+          <version value=" 4.0.1"/>
+          <code value="10100500"/>
+          <display value="Concentrate for oral suspension"/>
+        </coding>
+      </form>
+      <ingredient>
+        <item>
+          <coding>
+            <system value= "http://fhir.de/CodeSystem/ifa/pzn"/>
+            <code value="09999011"/>
+          </coding>
+        </item>
+      </ingredient>
+      <batch>
+        <lotNumber value="1234"/>
+      </batch>
+</Medication>

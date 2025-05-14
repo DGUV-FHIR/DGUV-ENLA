@@ -2579,6 +2579,7 @@
       <type>
         <code value="uri" />
       </type>
+      <fixedUri value="http://standardterms.edqm.eu" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -7961,6 +7962,14 @@
       <path value="Medication.code.text" />
       <short value="Arzneimittelname / Handelsname" />
       <min value="1" />
+    </element>
+    <element id="Medication.form.coding:EDQM">
+      <path value="Medication.form.coding" />
+      <sliceName value="EDQM" />
+    </element>
+    <element id="Medication.form.coding:EDQM.system">
+      <path value="Medication.form.coding.system" />
+      <fixedUri value="http://standardterms.edqm.eu" />
     </element>
     <element id="Medication.form.coding:kbvDarreichungsform">
       <path value="Medication.form.coding" />

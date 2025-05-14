@@ -1,22 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
-    <id value="DGUV_ENLA_CS_Entlassungsgrund" />
-    <url value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Entlassungsgrund" />
-    <version value="1.0.0" />
-    <name value="DGUV_ENLA_CS_Entlassungsgrund" />
-    <title value="Aufnahmeart" />
-    <status value="draft" />
-    <experimental value="false" />
-    <publisher value="DGUV (Deutsche Gesellschaft Unfallversicherung e.V.)" />
-    <contact>
-        <telecom>
-            <system value="url" />
-            <value value="https://www.dguv.de" />
-        </telecom>
-    </contact>
-    <description value="Dieses CodeSystem enth&#228;lt einen Code zur Beschreibung des Entlassungsgrund &quot;Entlassung nach Hause&quot; - eine Anpassung des Entlassungs-/Verlegungsgrundes &quot;019 - Behandlung regulär beendet, keine Angabe&quot; nach §21 KHEntgG." />
-    <immutable value="false" />
-	<concept>
-        <code value="019" />
-        <display value="Behandlung regul&#228;r beendet - Entlassung nach Hause, keine Angabe" />
-    </concept>    
+  <id value="DGUV-ENLA-CS-Entlassungsgrund" />
+  <url value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Entlassungsgrund" />
+  <version value="1.0.0" />
+  <name value="DGUV_ENLA_CS_Entlassungsgrund" />
+  <title value="Aufnahmeart" />
+  <status value="draft" />
+  <experimental value="false" />
+  <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="https://www.dguv.de" />
+    </telecom>
+  </contact>
+  <description value="Dieses CodeSystem enthält einen Code zur Beschreibung des Entlassungsgrund &quot;Entlassung nach Hause&quot; - eine Anpassung des Entlassungs-/Verlegungsgrundes &quot;019 - Behandlung regulär beendet, keine Angabe&quot; nach §21 KHEntgG." />
+  <content value="complete"/>
+  <concept>
+    <code value="019" />
+    <display value="Behandlung regulär beendet - Entlassung nach Hause, keine Angabe" />
+  </concept>
 </CodeSystem>

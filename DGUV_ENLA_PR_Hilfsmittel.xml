@@ -2,7 +2,9 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="https://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Hilfsmittel" />
   <name value="DGUV_ENLA_PR_Hilfsmittel" />
+  <title value="Hilfsmittel" />
   <status value="draft" />
+  <description value="Dieses Profil bildet die erforderlichen Heilmittel ab." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -127,6 +129,7 @@
         </extension>
         <code value="http://hl7.org/fhirpath/System.String" />
       </type>
+      <mustSupport value="true" />
       <isSummary value="true" />
     </element>
     <element id="Observation.meta">
@@ -1812,16 +1815,7 @@
         <max value="1" />
       </base>
       <type>
-        <code value="dateTime" />
-      </type>
-      <type>
-        <code value="Period" />
-      </type>
-      <type>
         <code value="Timing" />
-      </type>
-      <type>
-        <code value="instant" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -1899,8 +1893,8 @@
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="1" />
-      <max value="1" />
+      <min value="0" />
+      <max value="*" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -1935,30 +1929,30 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.effective[x].extension:Zeitpunkt">
+    <element id="Observation.effective[x].modifierExtension">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
         <valueCode value="normative" />
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
         <valueCode value="4.0.0" />
       </extension>
-      <path value="Observation.effective[x].extension" />
-      <sliceName value="Zeitpunkt" />
-      <short value="Optional Extensions Element" />
-      <definition value="Optional Extension Element - found in all resources." />
+      <path value="Observation.effective[x].modifierExtension" />
+      <short value="Extensions that cannot be ignored even if unrecognized" />
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.&#xA;&#xA;Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
+      <requirements value="Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](extensibility.html#modifierExtension)." />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="1" />
-      <max value="1" />
+      <alias value="modifiers" />
+      <min value="0" />
+      <max value="*" />
       <base>
-        <path value="Element.extension" />
+        <path value="BackboneElement.modifierExtension" />
         <min value="0" />
         <max value="*" />
       </base>
       <type>
         <code value="Extension" />
-        <profile value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-Zeitpunkt" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -1977,8 +1971,9 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
-      <mustSupport value="true" />
-      <isModifier value="false" />
+      <isModifier value="true" />
+      <isModifierReason value="Modifier extensions are expected to modify the meaning or interpretation of the element that contains them" />
+      <isSummary value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -1988,8 +1983,154 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.effective[x].extension:Zeitpunkt.id">
-      <path value="Observation.effective[x].extension.id" />
+    <element id="Observation.effective[x].event">
+      <path value="Observation.effective[x].event" />
+      <short value="When the event occurs" />
+      <definition value="Identifies specific times when the event occurs." />
+      <requirements value="In a Medication Administration Record, for instance, you need to take a general specification, and turn it into a precise specification." />
+      <min value="0" />
+      <max value="*" />
+      <base>
+        <path value="Timing.event" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="dateTime" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="QLIST&lt;TS&gt;" />
+      </mapping>
+    </element>
+    <element id="Observation.effective[x].repeat">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
+      <path value="Observation.effective[x].repeat" />
+      <short value="When the event is to occur" />
+      <definition value="A set of rules that describe when the event is scheduled." />
+      <requirements value="Many timing schedules are determined by regular repetitions." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Timing.repeat" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="Element" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <constraint>
+        <key value="tim-9" />
+        <severity value="error" />
+        <human value="If there's an offset, there must be a when (and not C, CM, CD, CV)" />
+        <expression value="offset.empty() or (when.exists() and ((when in ('C' | 'CM' | 'CD' | 'CV')).not()))" />
+        <xpath value="not(exists(f:offset)) or exists(f:when)" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Timing" />
+      </constraint>
+      <constraint>
+        <key value="tim-5" />
+        <severity value="error" />
+        <human value="period SHALL be a non-negative value" />
+        <expression value="period.exists() implies period &gt;= 0" />
+        <xpath value="f:period/@value &gt;= 0 or not(f:period/@value)" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Timing" />
+      </constraint>
+      <constraint>
+        <key value="tim-6" />
+        <severity value="error" />
+        <human value="If there's a periodMax, there must be a period" />
+        <expression value="periodMax.empty() or period.exists()" />
+        <xpath value="not(exists(f:periodMax)) or exists(f:period)" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Timing" />
+      </constraint>
+      <constraint>
+        <key value="tim-7" />
+        <severity value="error" />
+        <human value="If there's a durationMax, there must be a duration" />
+        <expression value="durationMax.empty() or duration.exists()" />
+        <xpath value="not(exists(f:durationMax)) or exists(f:duration)" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Timing" />
+      </constraint>
+      <constraint>
+        <key value="tim-8" />
+        <severity value="error" />
+        <human value="If there's a countMax, there must be a count" />
+        <expression value="countMax.empty() or count.exists()" />
+        <xpath value="not(exists(f:countMax)) or exists(f:count)" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Timing" />
+      </constraint>
+      <constraint>
+        <key value="tim-1" />
+        <severity value="error" />
+        <human value="if there's a duration, there needs to be duration units" />
+        <expression value="duration.empty() or durationUnit.exists()" />
+        <xpath value="not(exists(f:duration)) or exists(f:durationUnit)" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Timing" />
+      </constraint>
+      <constraint>
+        <key value="tim-10" />
+        <severity value="error" />
+        <human value="If there's a timeOfDay, there cannot be a when, or vice versa" />
+        <expression value="timeOfDay.empty() or when.empty()" />
+        <xpath value="not(exists(f:timeOfDay)) or not(exists(f:when))" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Timing" />
+      </constraint>
+      <constraint>
+        <key value="tim-2" />
+        <severity value="error" />
+        <human value="if there's a period, there needs to be period units" />
+        <expression value="period.empty() or periodUnit.exists()" />
+        <xpath value="not(exists(f:period)) or exists(f:periodUnit)" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Timing" />
+      </constraint>
+      <constraint>
+        <key value="tim-4" />
+        <severity value="error" />
+        <human value="duration SHALL be a non-negative value" />
+        <expression value="duration.exists() implies duration &gt;= 0" />
+        <xpath value="f:duration/@value &gt;= 0 or not(f:duration/@value)" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Timing" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="Implies PIVL or EIVL" />
+      </mapping>
+    </element>
+    <element id="Observation.effective[x].repeat.id">
+      <path value="Observation.effective[x].repeat.id" />
       <representation value="xmlAttr" />
       <short value="Unique id for inter-element referencing" />
       <definition value="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." />
@@ -2011,158 +2152,14 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Observation.effective[x].extension:Zeitpunkt.extension">
+    <element id="Observation.effective[x].repeat.extension">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
         <valueCode value="normative" />
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
         <valueCode value="4.0.0" />
       </extension>
-      <path value="Observation.effective[x].extension.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <description value="Extensions are always sliced by (at least) url" />
-        <rules value="open" />
-      </slicing>
-      <short value="Additional content defined by implementations" />
-      <definition value="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
-      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
-      <alias value="extensions" />
-      <alias value="user content" />
-      <min value="0" />
-      <max value="0" />
-      <base>
-        <path value="Element.extension" />
-        <min value="0" />
-        <max value="*" />
-      </base>
-      <type>
-        <code value="Extension" />
-      </type>
-      <condition value="ele-1" />
-      <constraint>
-        <key value="ele-1" />
-        <severity value="error" />
-        <human value="All FHIR elements must have a @value or children" />
-        <expression value="hasValue() or (children().count() &gt; id.count())" />
-        <xpath value="@value|f:*|h:div" />
-        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
-      </constraint>
-      <constraint>
-        <key value="ext-1" />
-        <severity value="error" />
-        <human value="Must have either extensions or value[x], not both" />
-        <expression value="extension.exists() != value.exists()" />
-        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
-        <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
-      </constraint>
-      <mapping>
-        <identity value="rim" />
-        <map value="n/a" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
-        <map value="N/A" />
-      </mapping>
-    </element>
-    <element id="Observation.effective[x].extension:Zeitpunkt.url">
-      <path value="Observation.effective[x].extension.url" />
-      <representation value="xmlAttr" />
-      <short value="identifies the meaning of the extension" />
-      <definition value="Source of the definition for the extension code - a logical name or a URL." />
-      <comment value="The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension." />
-      <min value="1" />
-      <max value="1" />
-      <base>
-        <path value="Extension.url" />
-        <min value="1" />
-        <max value="1" />
-      </base>
-      <type>
-        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
-          <valueUrl value="uri" />
-        </extension>
-        <code value="http://hl7.org/fhirpath/System.String" />
-      </type>
-      <fixedUri value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-Zeitpunkt" />
-      <mapping>
-        <identity value="rim" />
-        <map value="N/A" />
-      </mapping>
-    </element>
-    <element id="Observation.effective[x].extension:Zeitpunkt.value[x]">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
-      <path value="Observation.effective[x].extension.value[x]" />
-      <short value="Value of extension" />
-      <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
-      <min value="1" />
-      <max value="1" />
-      <base>
-        <path value="Extension.value[x]" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <condition value="ele-1" />
-      <constraint>
-        <key value="ele-1" />
-        <severity value="error" />
-        <human value="All FHIR elements must have a @value or children" />
-        <expression value="hasValue() or (children().count() &gt; id.count())" />
-        <xpath value="@value|f:*|h:div" />
-        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
-      </constraint>
-      <mustSupport value="true" />
-      <mapping>
-        <identity value="rim" />
-        <map value="n/a" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
-        <map value="N/A" />
-      </mapping>
-    </element>
-    <element id="Observation.effective[x].extension:Zeitpunkt.value[x].id">
-      <path value="Observation.effective[x].extension.value[x].id" />
-      <representation value="xmlAttr" />
-      <short value="Unique id for inter-element referencing" />
-      <definition value="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." />
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="Element.id" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
-          <valueUrl value="string" />
-        </extension>
-        <code value="http://hl7.org/fhirpath/System.String" />
-      </type>
-      <mapping>
-        <identity value="rim" />
-        <map value="n/a" />
-      </mapping>
-    </element>
-    <element id="Observation.effective[x].extension:Zeitpunkt.value[x].extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
-      <path value="Observation.effective[x].extension.value[x].extension" />
+      <path value="Observation.effective[x].repeat.extension" />
       <slicing>
         <discriminator>
           <type value="value" />
@@ -2212,14 +2209,704 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.effective[x].extension:Zeitpunkt.value[x].coding">
+    <element id="Observation.effective[x].repeat.bounds[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
         <valueCode value="normative" />
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
         <valueCode value="4.0.0" />
       </extension>
-      <path value="Observation.effective[x].extension.value[x].coding" />
+      <path value="Observation.effective[x].repeat.bounds[x]" />
+      <short value="Length/Range of lengths, or (Start and/or end) limits" />
+      <definition value="Either a duration for the length of the timing schedule, a range of possible length, or outer bounds for start and/or end limits of the timing schedule." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Timing.repeat.bounds[x]" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="Duration" />
+      </type>
+      <type>
+        <code value="Range" />
+      </type>
+      <type>
+        <code value="Period" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="IVL(TS) used in a QSI" />
+      </mapping>
+    </element>
+    <element id="Observation.effective[x].repeat.count">
+      <path value="Observation.effective[x].repeat.count" />
+      <short value="Number of times to repeat" />
+      <definition value="A total count of the desired number of repetitions across the duration of the entire timing specification. If countMax is present, this element indicates the lower bound of the allowed range of count values." />
+      <comment value="If you have both bounds and count, then this should be understood as within the bounds period, until count times happens." />
+      <requirements value="Repetitions may be limited by end time or total occurrences." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Timing.repeat.count" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="positiveInt" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="PIVL.count" />
+      </mapping>
+    </element>
+    <element id="Observation.effective[x].repeat.countMax">
+      <path value="Observation.effective[x].repeat.countMax" />
+      <short value="Maximum number of times to repeat" />
+      <definition value="If present, indicates that the count is a range - so to perform the action between [count] and [countMax] times." />
+      <comment value="32 bit number; for values larger than this, use decimal" />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Timing.repeat.countMax" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="positiveInt" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="PIVL.count" />
+      </mapping>
+    </element>
+    <element id="Observation.effective[x].repeat.duration">
+      <path value="Observation.effective[x].repeat.duration" />
+      <short value="How long when it happens" />
+      <definition value="How long this thing happens for when it happens. If durationMax is present, this element indicates the lower bound of the allowed range of the duration." />
+      <comment value="For some events the duration is part of the definition of the event (e.g. IV infusions, where the duration is implicit in the specified quantity and rate). For others, it's part of the timing specification (e.g. exercise)." />
+      <requirements value="Some activities are not instantaneous and need to be maintained for a period of time." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Timing.repeat.duration" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="decimal" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="PIVL.phase" />
+      </mapping>
+    </element>
+    <element id="Observation.effective[x].repeat.durationMax">
+      <path value="Observation.effective[x].repeat.durationMax" />
+      <short value="How long when it happens (Max)" />
+      <definition value="If present, indicates that the duration is a range - so to perform the action between [duration] and [durationMax] time length." />
+      <comment value="For some events the duration is part of the definition of the event (e.g. IV infusions, where the duration is implicit in the specified quantity and rate). For others, it's part of the timing specification (e.g. exercise)." />
+      <requirements value="Some activities are not instantaneous and need to be maintained for a period of time." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Timing.repeat.durationMax" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="decimal" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="PIVL.phase" />
+      </mapping>
+    </element>
+    <element id="Observation.effective[x].repeat.durationUnit">
+      <path value="Observation.effective[x].repeat.durationUnit" />
+      <short value="s | min | h | d | wk | mo | a - unit of time (UCUM)" />
+      <definition value="The units of time for the duration, in UCUM units." />
+      <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Timing.repeat.durationUnit" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="code" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="UnitsOfTime" />
+        </extension>
+        <strength value="required" />
+        <description value="A unit of time (units from UCUM)." />
+        <valueSet value="http://hl7.org/fhir/ValueSet/units-of-time|4.0.1" />
+      </binding>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="PIVL.phase.unit" />
+      </mapping>
+    </element>
+    <element id="Observation.effective[x].repeat.frequency">
+      <path value="Observation.effective[x].repeat.frequency" />
+      <short value="Event occurs frequency times per period" />
+      <definition value="The number of times to repeat the action within the specified period. If frequencyMax is present, this element indicates the lower bound of the allowed range of the frequency." />
+      <comment value="32 bit number; for values larger than this, use decimal" />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Timing.repeat.frequency" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="positiveInt" />
+      </type>
+      <meaningWhenMissing value="If no frequency is stated, the assumption is that the event occurs once per period, but systems SHOULD always be specific about this" />
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="PIVL.phase" />
+      </mapping>
+    </element>
+    <element id="Observation.effective[x].repeat.frequencyMax">
+      <path value="Observation.effective[x].repeat.frequencyMax" />
+      <short value="Event occurs up to frequencyMax times per period" />
+      <definition value="If present, indicates that the frequency is a range - so to repeat between [frequency] and [frequencyMax] times within the period or period range." />
+      <comment value="32 bit number; for values larger than this, use decimal" />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Timing.repeat.frequencyMax" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="positiveInt" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="PIVL.phase" />
+      </mapping>
+    </element>
+    <element id="Observation.effective[x].repeat.period">
+      <path value="Observation.effective[x].repeat.period" />
+      <short value="Event occurs frequency times per period" />
+      <definition value="Indicates the duration of time over which repetitions are to occur; e.g. to express &quot;3 times per day&quot;, 3 would be the frequency and &quot;1 day&quot; would be the period. If periodMax is present, this element indicates the lower bound of the allowed range of the period length." />
+      <comment value="Do not use an IEEE type floating point type, instead use something that works like a true decimal, with inbuilt precision (e.g. Java BigInteger)" />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Timing.repeat.period" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="decimal" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="PIVL.phase" />
+      </mapping>
+    </element>
+    <element id="Observation.effective[x].repeat.periodMax">
+      <path value="Observation.effective[x].repeat.periodMax" />
+      <short value="Upper limit of period (3-4 hours)" />
+      <definition value="If present, indicates that the period is a range from [period] to [periodMax], allowing expressing concepts such as &quot;do this once every 3-5 days." />
+      <comment value="Do not use an IEEE type floating point type, instead use something that works like a true decimal, with inbuilt precision (e.g. Java BigInteger)" />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Timing.repeat.periodMax" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="decimal" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="PIVL.phase" />
+      </mapping>
+    </element>
+    <element id="Observation.effective[x].repeat.periodUnit">
+      <path value="Observation.effective[x].repeat.periodUnit" />
+      <short value="s | min | h | d | wk | mo | a - unit of time (UCUM)" />
+      <definition value="The units of time for the period in UCUM units." />
+      <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Timing.repeat.periodUnit" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="code" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="UnitsOfTime" />
+        </extension>
+        <strength value="required" />
+        <description value="A unit of time (units from UCUM)." />
+        <valueSet value="http://hl7.org/fhir/ValueSet/units-of-time|4.0.1" />
+      </binding>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="PIVL.phase.unit" />
+      </mapping>
+    </element>
+    <element id="Observation.effective[x].repeat.dayOfWeek">
+      <path value="Observation.effective[x].repeat.dayOfWeek" />
+      <short value="mon | tue | wed | thu | fri | sat | sun" />
+      <definition value="If one or more days of week is provided, then the action happens only on the specified day(s)." />
+      <comment value="If no days are specified, the action is assumed to happen every day as otherwise specified. The elements frequency and period cannot be used as well as dayOfWeek." />
+      <min value="0" />
+      <max value="*" />
+      <base>
+        <path value="Timing.repeat.dayOfWeek" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="code" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="DayOfWeek" />
+        </extension>
+        <strength value="required" />
+        <valueSet value="http://hl7.org/fhir/ValueSet/days-of-week|4.0.1" />
+      </binding>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+    </element>
+    <element id="Observation.effective[x].repeat.timeOfDay">
+      <path value="Observation.effective[x].repeat.timeOfDay" />
+      <short value="Time of day for action" />
+      <definition value="Specified time of day for action to take place." />
+      <comment value="When time of day is specified, it is inferred that the action happens every day (as filtered by dayofWeek) on the specified times. The elements when, frequency and period cannot be used as well as timeOfDay." />
+      <min value="0" />
+      <max value="*" />
+      <base>
+        <path value="Timing.repeat.timeOfDay" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="time" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+    </element>
+    <element id="Observation.effective[x].repeat.when">
+      <path value="Observation.effective[x].repeat.when" />
+      <short value="Code for time period of occurrence" />
+      <definition value="An approximate time period during the day, potentially linked to an event of daily living that indicates when the action should occur." />
+      <comment value="When more than one event is listed, the event is tied to the union of the specified events." />
+      <requirements value="Timings are frequently determined by occurrences such as waking, eating and sleep." />
+      <min value="0" />
+      <max value="*" />
+      <base>
+        <path value="Timing.repeat.when" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="code" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="EventTiming" />
+        </extension>
+        <strength value="required" />
+        <description value="Real world event relating to the schedule." />
+        <valueSet value="http://hl7.org/fhir/ValueSet/event-timing|4.0.1" />
+      </binding>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="EIVL.event" />
+      </mapping>
+    </element>
+    <element id="Observation.effective[x].repeat.offset">
+      <path value="Observation.effective[x].repeat.offset" />
+      <short value="Minutes from event (before or after)" />
+      <definition value="The number of minutes from the event. If the event code does not indicate whether the minutes is before or after the event, then the offset is assumed to be after the event." />
+      <comment value="32 bit number; for values larger than this, use decimal" />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Timing.repeat.offset" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="unsignedInt" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="EIVL.offset" />
+      </mapping>
+    </element>
+    <element id="Observation.effective[x].code">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
+      <path value="Observation.effective[x].code" />
+      <short value="Direkt | Festzul | Azpkt |" />
+      <definition value="A code for the timing schedule (or just text in code.text). Some codes such as BID are ubiquitous, but many institutions define their own additional codes. If a code is provided, the code is understood to be a complete statement of whatever is specified in the structured timing data, and either the code or the data may be used to interpret the Timing, with the exception that .repeat.bounds still applies over the code (and is not contained in the code)." />
+      <comment value="BID etc. are defined as 'at institutionally specified times'. For example, an institution may choose that BID is &quot;always at 7am and 6pm&quot;.  If it is inappropriate for this choice to be made, the code BID should not be used. Instead, a distinct organization-specific code should be used in place of the HL7-defined BID code and/or a structured representation should be used (in this case, specifying the two event times)." />
+      <min value="1" />
+      <max value="1" />
+      <base>
+        <path value="Timing.code" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <mustSupport value="true" />
+      <isSummary value="true" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="TimingAbbreviation" />
+        </extension>
+        <strength value="required" />
+        <description value="Code for a known / defined timing pattern." />
+        <valueSet value="http://fhir.dguv.de/ENLA/ValueSet/DGUV_ENLA_VS_MassnahmenZeitpunkt" />
+      </binding>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="CE/CNE/CWE" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="CD" />
+      </mapping>
+      <mapping>
+        <identity value="orim" />
+        <map value="fhir:CodeableConcept rdfs:subClassOf dt:CD" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="QSC.code" />
+      </mapping>
+    </element>
+    <element id="Observation.effective[x].code.id">
+      <path value="Observation.effective[x].code.id" />
+      <representation value="xmlAttr" />
+      <short value="Unique id for inter-element referencing" />
+      <definition value="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Element.id" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
+          <valueUrl value="string" />
+        </extension>
+        <code value="http://hl7.org/fhirpath/System.String" />
+      </type>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+    </element>
+    <element id="Observation.effective[x].code.extension">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
+      <path value="Observation.effective[x].code.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <description value="Extensions are always sliced by (at least) url" />
+        <rules value="open" />
+      </slicing>
+      <short value="Additional content defined by implementations" />
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
+      <alias value="extensions" />
+      <alias value="user content" />
+      <min value="0" />
+      <max value="*" />
+      <base>
+        <path value="Element.extension" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="Extension" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="Observation.effective[x].code.coding">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
+      <path value="Observation.effective[x].code.coding" />
       <short value="Code defined by a terminology system" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
@@ -2274,8 +2961,8 @@
         <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" />
       </mapping>
     </element>
-    <element id="Observation.effective[x].extension:Zeitpunkt.value[x].coding.id">
-      <path value="Observation.effective[x].extension.value[x].coding.id" />
+    <element id="Observation.effective[x].code.coding.id">
+      <path value="Observation.effective[x].code.coding.id" />
       <representation value="xmlAttr" />
       <short value="Unique id for inter-element referencing" />
       <definition value="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." />
@@ -2297,14 +2984,14 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Observation.effective[x].extension:Zeitpunkt.value[x].coding.extension">
+    <element id="Observation.effective[x].code.coding.extension">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
         <valueCode value="normative" />
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
         <valueCode value="4.0.0" />
       </extension>
-      <path value="Observation.effective[x].extension.value[x].coding.extension" />
+      <path value="Observation.effective[x].code.coding.extension" />
       <slicing>
         <discriminator>
           <type value="value" />
@@ -2354,9 +3041,9 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.effective[x].extension:Zeitpunkt.value[x].coding.system">
-      <path value="Observation.effective[x].extension.value[x].coding.system" />
-      <short value="CodeSystem mit Varianten des Zeitpunktes" />
+    <element id="Observation.effective[x].code.coding.system">
+      <path value="Observation.effective[x].code.coding.system" />
+      <short value="Identity of the terminology system" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
       <comment value="The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously." />
       <requirements value="Need to be unambiguous about the source of the definition of the symbol." />
@@ -2370,7 +3057,6 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Zeitpunkt" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -2399,8 +3085,8 @@
         <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
       </mapping>
     </element>
-    <element id="Observation.effective[x].extension:Zeitpunkt.value[x].coding.version">
-      <path value="Observation.effective[x].extension.value[x].coding.version" />
+    <element id="Observation.effective[x].code.coding.version">
+      <path value="Observation.effective[x].code.coding.version" />
       <short value="Version of the system - if relevant" />
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
       <comment value="Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date." />
@@ -2441,9 +3127,9 @@
         <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
       </mapping>
     </element>
-    <element id="Observation.effective[x].extension:Zeitpunkt.value[x].coding.code">
-      <path value="Observation.effective[x].extension.value[x].coding.code" />
-      <short value="Kürzel der Varianten des Zeitpunktes" />
+    <element id="Observation.effective[x].code.coding.code">
+      <path value="Observation.effective[x].code.coding.code" />
+      <short value="Symbol in syntax defined by the system" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to refer to a particular code in the system." />
@@ -2485,11 +3171,11 @@
         <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
       </mapping>
     </element>
-    <element id="Observation.effective[x].extension:Zeitpunkt.value[x].coding.display">
+    <element id="Observation.effective[x].code.coding.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
-      <path value="Observation.effective[x].extension.value[x].coding.display" />
+      <path value="Observation.effective[x].code.coding.display" />
       <short value="Representation defined by the system" />
       <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
@@ -2504,7 +3190,6 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="Bezeichnung der Varianten des Zeitpunktes" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -2533,8 +3218,8 @@
         <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
       </mapping>
     </element>
-    <element id="Observation.effective[x].extension:Zeitpunkt.value[x].coding.userSelected">
-      <path value="Observation.effective[x].extension.value[x].coding.userSelected" />
+    <element id="Observation.effective[x].code.coding.userSelected">
+      <path value="Observation.effective[x].code.coding.userSelected" />
       <short value="If this coding was chosen directly by the user" />
       <definition value="Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays)." />
       <comment value="Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely." />
@@ -2576,12 +3261,12 @@
         <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
       </mapping>
     </element>
-    <element id="Observation.effective[x].extension:Zeitpunkt.value[x].text">
+    <element id="Observation.effective[x].code.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
-      <path value="Observation.effective[x].extension.value[x].text" />
-      <short value="Freitext" />
+      <path value="Observation.effective[x].code.text" />
+      <short value="Plain text representation of the concept" />
       <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user." />
       <comment value="Very often the text is the same as a displayName of one of the codings." />
       <requirements value="The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source." />
@@ -5687,6 +6372,10 @@
     </element>
   </snapshot>
   <differential>
+    <element id="Observation.id">
+      <path value="Observation.id" />
+      <mustSupport value="true" />
+    </element>
     <element id="Observation.status">
       <path value="Observation.status" />
       <fixedCode value="final" />
@@ -5748,61 +6437,44 @@
       <path value="Observation.effective[x]" />
       <short value="Beginn" />
       <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.effective[x].extension">
-      <path value="Observation.effective[x].extension" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Observation.effective[x].extension:Zeitpunkt">
-      <path value="Observation.effective[x].extension" />
-      <sliceName value="Zeitpunkt" />
-      <min value="1" />
-      <max value="1" />
       <type>
-        <code value="Extension" />
-        <profile value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-Zeitpunkt" />
-      </type>
-      <mustSupport value="true" />
-      <isModifier value="false" />
-    </element>
-    <element id="Observation.effective[x].extension:Zeitpunkt.value[x]">
-      <path value="Observation.effective[x].extension.value[x]" />
-      <min value="1" />
-      <type>
-        <code value="CodeableConcept" />
+        <code value="Timing" />
       </type>
       <mustSupport value="true" />
     </element>
-    <element id="Observation.effective[x].extension:Zeitpunkt.value[x].coding">
-      <path value="Observation.effective[x].extension.value[x].coding" />
+    <element id="Observation.effective[x].code">
+      <path value="Observation.effective[x].code" />
+      <short value="Direkt | Festzul | Azpkt |" />
+      <min value="1" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://fhir.dguv.de/ENLA/ValueSet/DGUV_ENLA_VS_MassnahmenZeitpunkt" />
+      </binding>
+    </element>
+    <element id="Observation.effective[x].code.coding">
+      <path value="Observation.effective[x].code.coding" />
       <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Observation.effective[x].extension:Zeitpunkt.value[x].coding.system">
-      <path value="Observation.effective[x].extension.value[x].coding.system" />
-      <short value="CodeSystem mit Varianten des Zeitpunktes" />
-      <min value="1" />
-      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Zeitpunkt" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.effective[x].extension:Zeitpunkt.value[x].coding.code">
-      <path value="Observation.effective[x].extension.value[x].coding.code" />
-      <short value="Kürzel der Varianten des Zeitpunktes" />
+    <element id="Observation.effective[x].code.coding.system">
+      <path value="Observation.effective[x].code.coding.system" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Observation.effective[x].extension:Zeitpunkt.value[x].coding.display">
-      <path value="Observation.effective[x].extension.value[x].coding.display" />
+    <element id="Observation.effective[x].code.coding.code">
+      <path value="Observation.effective[x].code.coding.code" />
       <min value="1" />
-      <fixedString value="Bezeichnung der Varianten des Zeitpunktes" />
       <mustSupport value="true" />
     </element>
-    <element id="Observation.effective[x].extension:Zeitpunkt.value[x].text">
-      <path value="Observation.effective[x].extension.value[x].text" />
-      <short value="Freitext" />
+    <element id="Observation.effective[x].code.coding.display">
+      <path value="Observation.effective[x].code.coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.effective[x].code.text">
+      <path value="Observation.effective[x].code.text" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.value[x]">

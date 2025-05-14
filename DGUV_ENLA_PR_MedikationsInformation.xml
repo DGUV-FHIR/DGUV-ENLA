@@ -103,6 +103,7 @@
         </extension>
         <code value="http://hl7.org/fhirpath/System.String" />
       </type>
+      <mustSupport value="true" />
       <isSummary value="true" />
     </element>
     <element id="MedicationStatement.meta">
@@ -792,9 +793,9 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.dguv.de/ENLA/Medication/DGUV_ENLA_PR_Medikation_Arzneimittel" />
-        <targetProfile value="https://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-Medikation-Rezeptur" />
-        <targetProfile value="https://fhir.dguv.de/ENLA/Medication/DGUV_ENLA_PR_Medikation_Wirkstoff" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationArzneimittel" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Medication/DGUV_ENLA_PR_Medikation_Wirkstoff" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationRezeptur" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -1454,7 +1455,7 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="MedicationStatement.effective[x]" />
-      <short value="Datum/Zeit/Intervall wenn Medikament eingenommen wurde/werden muss" />
+      <short value="The date/time or interval when the medication is/was/will be taken" />
       <definition value="The interval of time during which it is being asserted that the patient is/was/will be taking the medication (or was not taking, when the MedicationStatement.taken element is No)." />
       <comment value="This attribute reflects the period over which the patient consumed the medication and is expected to be populated on the majority of Medication Statements. If the medication is still being taken at the time the statement is recorded, the &quot;end&quot; date will be omitted.  The date/time attribute supports a variety of dates - year, year/month and exact date.  If something more than this is required, this should be conveyed as text." />
       <min value="0" />
@@ -1479,7 +1480,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -3356,7 +3356,7 @@
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
       <min value="1" />
-      <max value="1" />
+      <max value="*" />
       <base>
         <path value="CodeableConcept.coding" />
         <min value="0" />
@@ -3376,10 +3376,6 @@
       </constraint>
       <mustSupport value="true" />
       <isSummary value="true" />
-      <binding>
-        <strength value="required" />
-        <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_KHE_Event_Timing" />
-      </binding>
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -3505,6 +3501,7 @@
       <type>
         <code value="uri" />
       </type>
+      <fixedUri value="http://hl7.org/fhir/event-timing" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -8164,6 +8161,10 @@
     </element>
   </snapshot>
   <differential>
+    <element id="MedicationStatement.id">
+      <path value="MedicationStatement.id" />
+      <mustSupport value="true" />
+    </element>
     <element id="MedicationStatement.status">
       <path value="MedicationStatement.status" />
       <mustSupport value="true" />
@@ -8173,9 +8174,9 @@
       <short value="Welche Medikamente genommen wurden" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.dguv.de/ENLA/Medication/DGUV_ENLA_PR_Medikation_Arzneimittel" />
-        <targetProfile value="https://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-Medikation-Rezeptur" />
-        <targetProfile value="https://fhir.dguv.de/ENLA/Medication/DGUV_ENLA_PR_Medikation_Wirkstoff" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationArzneimittel" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Medication/DGUV_ENLA_PR_Medikation_Wirkstoff" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationRezeptur" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -8196,11 +8197,6 @@
     <element id="MedicationStatement.subject.reference">
       <path value="MedicationStatement.subject.reference" />
       <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="MedicationStatement.effective[x]">
-      <path value="MedicationStatement.effective[x]" />
-      <short value="Datum/Zeit/Intervall wenn Medikament eingenommen wurde/werden muss" />
       <mustSupport value="true" />
     </element>
     <element id="MedicationStatement.dosage">
@@ -8270,16 +8266,12 @@
     <element id="MedicationStatement.dosage:strukturierteDosierung.timing.code.coding">
       <path value="MedicationStatement.dosage.timing.code.coding" />
       <min value="1" />
-      <max value="1" />
       <mustSupport value="true" />
-      <binding>
-        <strength value="required" />
-        <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_KHE_Event_Timing" />
-      </binding>
     </element>
     <element id="MedicationStatement.dosage:strukturierteDosierung.timing.code.coding.system">
       <path value="MedicationStatement.dosage.timing.code.coding.system" />
       <min value="1" />
+      <fixedUri value="http://hl7.org/fhir/event-timing" />
       <mustSupport value="true" />
     </element>
     <element id="MedicationStatement.dosage:strukturierteDosierung.timing.code.coding.version">
