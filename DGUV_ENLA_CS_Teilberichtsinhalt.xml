@@ -52,4 +52,8 @@
     <code value="THE" />
     <display value="Therapieempfehlung" />
   </concept>
+  <concept>
+    <code value="DS" />
+    <display value="Datenschutz" />
+  </concept>
 </CodeSystem>
