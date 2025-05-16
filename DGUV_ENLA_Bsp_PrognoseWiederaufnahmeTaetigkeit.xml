@@ -1,0 +1,24 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="PrognoseWiederaufnahmeTaetigkeit-WANM" />
+    <meta>
+        <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-PrognoseWiederaufnahmeTaetigkeit" />
+    </meta>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+            <code value="PT" />
+            <display value="PrognoseWiederaufnahmeTaetigkeit" />
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/T37501234" />
+    </subject>
+    <valueCodeableConcept>
+        <coding>
+            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-PrognoseWiederaufnahmeTaetigkeit" />
+            <code value="WANM" />
+            <display value="Die bisherige Tätigkeit kann voraussichtlich nicht wiederaufgenommen werden." />
+        </coding>    
+    </valueCodeableConcept>
+</Observation>
