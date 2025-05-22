@@ -56,4 +56,8 @@
     <code value="DS" />
     <display value="Datenschutz" />
   </concept>
+  <concept>
+    <code value="BV" />
+    <display value="Behandlungsverlauf" />
+  </concept>
 </CodeSystem>
