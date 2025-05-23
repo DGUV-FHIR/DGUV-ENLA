@@ -1222,7 +1222,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="BesondereMassnahmen" />
+      <fixedString value="BesondereMaßnahmen" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -5719,7 +5719,7 @@
       <path value="Observation.code.coding.display" />
       <short value="Bezeichnung für Teilberichtsinhalt Besondere Maßnahmen" />
       <min value="1" />
-      <fixedString value="BesondereMassnahmen" />
+      <fixedString value="BesondereMaßnahmen" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.subject">

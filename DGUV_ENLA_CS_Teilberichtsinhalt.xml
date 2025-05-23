@@ -18,11 +18,11 @@
   <content value="complete" />
   <concept>
     <code value="AU" />
-    <display value="Arbeitsunfaehigkeit" />
+    <display value="Arbeitsunfähigkeit" />
   </concept>
   <concept>
     <code value="PT" />
-    <display value="PrognoseWiederaufnahmeTaetigkeit" />
+    <display value="PrognoseWiederaufnahmeTätigkeit" />
   </concept>
   <concept>
     <code value="WE" />
@@ -30,7 +30,7 @@
   </concept>
   <concept>
     <code value="RM" />
-    <display value="RehaMassnahmen" />
+    <display value="RehaMaßnahmen" />
   </concept>
   <concept>
     <code value="HEILM" />
@@ -42,7 +42,7 @@
   </concept>
   <concept>
     <code value="BM" />
-    <display value="BesondereMassnahmen" />
+    <display value="BesondereMaßnahmen" />
   </concept>
   <concept>
     <code value="TH" />
