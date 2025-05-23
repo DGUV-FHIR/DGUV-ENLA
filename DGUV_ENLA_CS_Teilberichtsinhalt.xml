@@ -60,4 +60,16 @@
     <code value="BV" />
     <display value="Behandlungsverlauf" />
   </concept>
+  <concept>
+    <code value="Aufnahme" />
+    <display value="Aufnahmebefund" />
+  </concept>
+  <concept>
+    <code value="Entlass" />
+    <display value="Entlassungsbefund" />
+  </concept>
+  <concept>
+    <code value="Konsiliar" />
+    <display value="Konsiliarbefund" />
+  </concept>
 </CodeSystem>
