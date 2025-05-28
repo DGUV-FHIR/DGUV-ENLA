@@ -18,11 +18,11 @@
   <content value="complete" />
   <concept>
     <code value="AU" />
-    <display value="Arbeitsunfaehigkeit" />
+    <display value="Arbeitsunfähigkeit" />
   </concept>
   <concept>
     <code value="PT" />
-    <display value="PrognoseWiederaufnahmeTaetigkeit" />
+    <display value="PrognoseWiederaufnahmeTätigkeit" />
   </concept>
   <concept>
     <code value="WE" />
@@ -30,7 +30,7 @@
   </concept>
   <concept>
     <code value="RM" />
-    <display value="RehaMassnahmen" />
+    <display value="RehaMaßnahmen" />
   </concept>
   <concept>
     <code value="HEILM" />
@@ -42,7 +42,7 @@
   </concept>
   <concept>
     <code value="BM" />
-    <display value="BesondereMassnahmen" />
+    <display value="BesondereMaßnahmen" />
   </concept>
   <concept>
     <code value="TH" />
@@ -51,5 +51,25 @@
   <concept>
     <code value="THE" />
     <display value="Therapieempfehlung" />
+  </concept>
+  <concept>
+    <code value="DS" />
+    <display value="Datenschutz" />
+  </concept>
+  <concept>
+    <code value="BV" />
+    <display value="Behandlungsverlauf" />
+  </concept>
+  <concept>
+    <code value="Aufnahme" />
+    <display value="Aufnahmebefund" />
+  </concept>
+  <concept>
+    <code value="Entlass" />
+    <display value="Entlassungsbefund" />
+  </concept>
+  <concept>
+    <code value="Konsiliar" />
+    <display value="Konsiliarbefund" />
   </concept>
 </CodeSystem>

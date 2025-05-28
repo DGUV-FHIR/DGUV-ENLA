@@ -1222,7 +1222,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="RehaMassnahmen" />
+      <fixedString value="RehaMaßnahmen" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -6407,7 +6407,7 @@
       <path value="Observation.code.coding.display" />
       <short value="Bezeichnung für ENLA-Teilberichtsinhalt Reha-Massnahmen" />
       <min value="1" />
-      <fixedString value="RehaMassnahmen" />
+      <fixedString value="RehaMaßnahmen" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.subject">

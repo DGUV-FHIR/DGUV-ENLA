@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="DGUV-ENLA-PR-Unfallereignis" />
-  <url value="http://fhir.dguv.de/ENLA/AdverseEvent/DGUV-ENLA-PR-Unfallereignis" />
+  <url value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Unfallereignis" />
   <name value="DGUV_ENLA_PR_Unfallereignis" />
   <title value="Unfallereignis" />
   <status value="draft" />

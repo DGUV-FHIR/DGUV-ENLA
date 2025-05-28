@@ -1224,7 +1224,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="PrognoseWiederaufnahmeTaetigkeit" />
+      <fixedString value="PrognoseWiederaufnahmeTätigkeit" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -4759,7 +4759,7 @@
       <path value="Observation.code.coding.display" />
       <short value="Konkrete Bezeichnung für ENLA-Teilberichtsinhalt" />
       <min value="1" />
-      <fixedString value="PrognoseWiederaufnahmeTaetigkeit" />
+      <fixedString value="PrognoseWiederaufnahmeTätigkeit" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.subject">

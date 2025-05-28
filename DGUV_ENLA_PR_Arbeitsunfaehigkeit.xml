@@ -1224,7 +1224,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="Arbeitsunfaehigkeit" />
+      <fixedString value="Arbeitsunfähigkeit" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -2200,7 +2200,7 @@
       <alias value="extensions" />
       <alias value="user content" />
       <min value="0" />
-      <max value="*" />
+      <max value="0" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -5247,7 +5247,7 @@
       <path value="Observation.code.coding.display" />
       <short value="Konkrete Bezeichnung für ENLA-Teilberichtsinhalt" />
       <min value="1" />
-      <fixedString value="Arbeitsunfaehigkeit" />
+      <fixedString value="Arbeitsunfähigkeit" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.subject">
