@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="DGUV-ENLA-PR-Behandlungsverlauf" />
   <url value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Behandlungsverlauf" />
   <name value="DGUV_ENLA_PR_Behandlungsverlauf" />
   <title value="Behandlungsverlauf" />
   <status value="draft" />
-  <description value="Dieses Profil beschreibt den Behandlungsverlauf." />
+  <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
+  <description value="Behandlungsverlauf, inkl. Besonderheiten, die während der Behandlung aufgetreten sind" />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -387,8 +389,8 @@
       </extension>
       <path value="Observation.extension" />
       <sliceName value="BesonderheitenBehandlungsverlauf" />
-      <short value="Optional Extensions Element" />
-      <definition value="Optional Extension Element - found in all resources." />
+      <short value="Besonderheiten im Behandlungsverlauf" />
+      <definition value="Unfallunabhängige Sachverhalte, die möglicherweise den Heilverlauf beeinflussen könnten, z. B. bestimmte Medikamente" />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
@@ -420,6 +422,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <isModifier value="false" />
       <mapping>
         <identity value="rim" />
@@ -4433,10 +4436,13 @@
     <element id="Observation.extension:BesonderheitenBehandlungsverlauf">
       <path value="Observation.extension" />
       <sliceName value="BesonderheitenBehandlungsverlauf" />
+      <short value="Besonderheiten im Behandlungsverlauf" />
+      <definition value="Unfallunabhängige Sachverhalte, die möglicherweise den Heilverlauf beeinflussen könnten, z. B. bestimmte Medikamente" />
       <type>
         <code value="Extension" />
         <profile value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-Besonderheiten" />
       </type>
+      <mustSupport value="true" />
       <isModifier value="false" />
     </element>
     <element id="Observation.extension:BesonderheitenBehandlungsverlauf.value[x]">

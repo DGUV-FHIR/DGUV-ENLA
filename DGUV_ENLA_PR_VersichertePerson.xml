@@ -1713,9 +1713,9 @@
       </extension>
       <path value="Patient.identifier" />
       <sliceName value="VersichertenId" />
-      <short value="KVZ10-Versichertennummer" />
-      <definition value="VersichertenID (KVNR, Krankenversichertennummer)&#xA;Dies ist die eindeutige Identifikationsnummer einer versicherten Person im deutschen Gesundheitswesen.&#xA;Sie wird von der gematik für alle gesetzlich und privat Versicherten vergeben.&#xA;Diese Nummer bleibt in der Regel lebenslang konstant." />
-      <comment value="Die als 'KVZ10' kodierte Versichertennummer gilt für alle Krankenversichertennummern, unabhängig, ob es sich um GKV, PKV oder Sonderkostenträger handelt." />
+      <short value="Lebenslange Krankenversichertennummer" />
+      <definition value="An identifier - identifies some entity uniquely and unambiguously. Typically this is used for business identifiers." />
+      <comment value="Die als 'KVZ10' kodierte Versichertennummer ist der 10-stellige, unveränderbare Teil der Versichertennummer, der lesbar auf die Elektronische Gesundheitskarte aufgedruckt ist. Er gilt für alle Krankenversichertennummern, unabhängig davon, ob es sich um GKV, PKV oder Sonderkostenträger handelt." />
       <requirements value="Patients are almost always assigned specific numerical identifiers." />
       <min value="0" />
       <max value="1" />
@@ -1919,7 +1919,7 @@
       <path value="Patient.identifier.type" />
       <short value="Kennzeichnung des Identifikators als Versichertennummer" />
       <definition value="A coded type for the identifier that can be used to determine which identifier to use for a specific purpose." />
-      <comment value="This element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage.   Where the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type." />
+      <comment value="Hier ist stets der Code KVZ10 aus dem CodeSystem http://fhir.de/CodeSystem/identifier-type-de-basis anzugeben.&#xD;&#xA;Begründung Pflichtfeld: type dient der Unterscheidung verschiedener Identifier-Typen" />
       <requirements value="Allows users to make use of identifiers when the identifier system is not known." />
       <min value="1" />
       <max value="1" />
@@ -1995,7 +1995,7 @@
       <path value="Patient.identifier.system" />
       <short value="Menge der verfügbaren KVZ10-Versichertennummern" />
       <definition value="Establishes the namespace for the value - that is, a URL that describes a set values that are unique." />
-      <comment value="Identifier.system is always case sensitive." />
+      <comment value="Hier ist stets der Wert http://fhir.de/sid/gkv/kvid-10 anzugeben.&#xD;&#xA;Begründung Pflichtfeld: system stellt in Kombination mit value die Eindeutigkeit eines Identifiers sicher." />
       <requirements value="There are many sets  of identifiers.  To perform matching of two identifiers, we need to know what set we're dealing with. The system identifies a particular set of unique identifiers." />
       <min value="1" />
       <max value="1" />
@@ -2044,7 +2044,7 @@
       <path value="Patient.identifier.value" />
       <short value="Konkrete KVZ10-Versichertennummer" />
       <definition value="The portion of the identifier typically relevant to the user and which is unique within the context of the system." />
-      <comment value="If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](extension-rendered-value.html). Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe." />
+      <comment value="Der 10-stellige, unveränderbare Teil der Versichertennummer" />
       <min value="1" />
       <max value="1" />
       <base>
@@ -2228,8 +2228,9 @@
       </extension>
       <path value="Patient.identifier" />
       <sliceName value="VersichertenId_GKV" />
-      <short value="Versicherungsnummer innerhalb gesetzlicher Krankenversicherung" />
-      <definition value="Identifikator-Profil für die 10-stellige Krankenversichertennummer&#xD;&#xA;VersichertenID_GKV (GKV-spezifische Versichertennummer)&#xA;Dies ist die spezifische Versicherungsnummer innerhalb der gesetzlichen Krankenversicherung (GKV).&#xA;Jede gesetzliche Krankenkasse kann eigene Nummern für ihre Versicherten führen.&#xA;Diese Nummer kann sich z. B. beim Wechsel der Krankenkasse ändern." />
+      <short value="Gesetzliche Krankenversichertennummer" />
+      <definition value="An identifier - identifies some entity uniquely and unambiguously. Typically this is used for business identifiers." />
+      <comment value="WARNUNG: Die Verwendung der 'GKV'-Kodierung einer Versichertennummer ist abgekündigt, da die lebenslange Versichertennummer ab 2024 auch für PKV oder Sonderkostenträger eingeführt wird. Bitte statt dessen künftig den 'VersichertenId'-Slice verwenden." />
       <requirements value="Patients are almost always assigned specific numerical identifiers." />
       <min value="0" />
       <max value="1" />
@@ -2433,7 +2434,7 @@
       <path value="Patient.identifier.type" />
       <short value="Kennzeichnung des Identifikators als Versichertennummer einer gesetzlichen Krankenversicherung" />
       <definition value="A coded type for the identifier that can be used to determine which identifier to use for a specific purpose." />
-      <comment value="This element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage.   Where the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type." />
+      <comment value="Hier ist stets der Code GKV aus dem CodeSystem http://fhir.de/CodeSystem/identifier-type-de-basis anzugeben.&#xD;&#xA;Begründung Pflichtfeld: type dient der Unterscheidung verschiedener Identifier-Typen" />
       <requirements value="Allows users to make use of identifiers when the identifier system is not known." />
       <min value="1" />
       <max value="1" />
@@ -2509,7 +2510,7 @@
       <path value="Patient.identifier.system" />
       <short value="Menge der verfügbaren KVZ10-Versichertennummern" />
       <definition value="Establishes the namespace for the value - that is, a URL that describes a set values that are unique." />
-      <comment value="Identifier.system is always case sensitive." />
+      <comment value="Hier ist stets der Wert http://fhir.de/sid/gkv/kvid-10 anzugeben.&#xD;&#xA;Begründung Pflichtfeld: system stellt in Kombination mit value die Eindeutigkeit eines Identifiers sicher." />
       <requirements value="There are many sets  of identifiers.  To perform matching of two identifiers, we need to know what set we're dealing with. The system identifies a particular set of unique identifiers." />
       <min value="1" />
       <max value="1" />
@@ -2558,7 +2559,7 @@
       <path value="Patient.identifier.value" />
       <short value="Konkrete KVZ10-Versichertennummer" />
       <definition value="The portion of the identifier typically relevant to the user and which is unique within the context of the system." />
-      <comment value="If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](extension-rendered-value.html). Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe." />
+      <comment value="Enthält den eigentlichen Wert des Identifiers.&#xD;&#xA;Begründung Pflichtfeld: Ist der Wert nicht bekannt, sollte der gesamte Slice weggelassen werden." />
       <min value="1" />
       <max value="1" />
       <base>
@@ -2742,8 +2743,9 @@
       </extension>
       <path value="Patient.identifier" />
       <sliceName value="Patientennummer" />
-      <short value="Interne Nummer in Krankenhaus- oder Praxisverwaltungssystem" />
-      <definition value="Ein Identifikator - Eindeutige und unmissverständliche Identifizierung einer Entität.&#xD;&#xA;Jeder Patient bekommt eine interne Nummer im Krankenhaus- oder Praxisverwaltungssystem (KIS/PVS)." />
+      <short value="Organisationsinterner Patienten-Identifier (PID)" />
+      <definition value="Ein Identifikator - Eindeutige und unmissverständliche Identifizierung einer Entität." />
+      <comment value="Organisationsintere Patienten-Identifier werden von z.B. von KIS-Systemen vergeben und dienen innerhalb einer Einreichtung meist als primäres Identifikationsmerkmal für Patienten, u.A. in der HL7 V2-Kommunikation." />
       <requirements value="Patients are almost always assigned specific numerical identifiers." />
       <min value="0" />
       <max value="1" />
@@ -2947,7 +2949,7 @@
       <path value="Patient.identifier.type" />
       <short value="Kennzeichnung des Identifikators als Patientennummer" />
       <definition value="A coded type for the identifier that can be used to determine which identifier to use for a specific purpose." />
-      <comment value="This element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage.   Where the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type." />
+      <comment value="Hier ist stets der Code MR aus dem CodeSystem http://terminology.hl7.org/CodeSystem/v2-0203 anzugeben.&#xD;&#xA;Begründung Pflichtfeld: type dient der Unterscheidung verschiedener Identifier-Typen" />
       <requirements value="Allows users to make use of identifiers when the identifier system is not known." />
       <min value="1" />
       <max value="1" />
@@ -3016,7 +3018,7 @@
       <path value="Patient.identifier.system" />
       <short value="Menge der im Krankenhaus-/Praxisverwaltungssystem verfügbaren Patientennummern" />
       <definition value="Establishes the namespace for the value - that is, a URL that describes a set values that are unique." />
-      <comment value="Identifier.system is always case sensitive." />
+      <comment value="Hier ist stets der eindeutige Name (URL) des Namensraums anzugeben, aus dem der Identifier stammt. Hinweise zur Festlegung der URLs für lokale Namensräume sind in den Deutschen Basisprofilen beschrieben.&#xD;&#xA;Begründung Pflichtfeld: system stellt in Kombination mit value die Eindeutigkeit eines Identifiers sicher." />
       <requirements value="There are many sets  of identifiers.  To perform matching of two identifiers, we need to know what set we're dealing with. The system identifies a particular set of unique identifiers." />
       <min value="1" />
       <max value="1" />
@@ -3064,7 +3066,7 @@
       <path value="Patient.identifier.value" />
       <short value="Konkrete Patientennummer" />
       <definition value="The portion of the identifier typically relevant to the user and which is unique within the context of the system." />
-      <comment value="If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](extension-rendered-value.html). Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe." />
+      <comment value="Enthält den eigentlichen Wert des Identifiers.&#xD;&#xA;Begründung Pflichtfeld: Ist der Wert nicht bekannt, sollte der gesamte Slice weggelassen werden." />
       <min value="1" />
       <max value="1" />
       <base>
@@ -3241,8 +3243,9 @@
       </extension>
       <path value="Patient.identifier" />
       <sliceName value="Versichertennummer_PKV" />
-      <short value="Spezifische Versicherungsnummer innerhalb privater Krankenversicherung" />
-      <definition value="Identifikator-Profil für die Abbildung einer Privatversichertennummer.&#xD;&#xA;Versichertennummer_PKV (PKV-spezifische Versichertennummer)" />
+      <short value="Private Krankenversichertennummer" />
+      <definition value="An identifier - identifies some entity uniquely and unambiguously. Typically this is used for business identifiers." />
+      <comment value="Für Privatpatienten, die noch nicht über eine lebenslange, unveränderliche Krankenversichertennummer (KVNR) verfügen, können bis auf weiteres noch die versicherungsspezifischen PKV-Nummern angegeben werden. Da bei diesen der Bezeichner des vom Kostenträger verwendeten Namensraums meist nicht ermittelt werden kann, ist statt dessen der Name des Kostenträgers in assigner anzugeben." />
       <requirements value="Patients are almost always assigned specific numerical identifiers." />
       <min value="0" />
       <max value="1" />
@@ -3391,7 +3394,7 @@
       <path value="Patient.identifier.use" />
       <short value="usual | official | temp | secondary | old (If known)" />
       <definition value="The purpose of this identifier." />
-      <comment value="Applications can assume that an identifier is permanent unless it explicitly says that it is temporary." />
+      <comment value="Verwendungszeck des Identifiers. Hier ist stets der Wert secondary anzugeben." />
       <requirements value="Allows the appropriate identifier for a particular context of use to be selected from among a set of identifiers." />
       <min value="0" />
       <max value="1" />
@@ -3447,7 +3450,7 @@
       <path value="Patient.identifier.type" />
       <short value="Kennzeichnung des Identifikators als Versichertennummer einer privaten Krankenversicherung" />
       <definition value="A coded type for the identifier that can be used to determine which identifier to use for a specific purpose." />
-      <comment value="This element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage.   Where the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type." />
+      <comment value="Hier ist stets der Code PKV aus dem CodeSystem http://fhir.de/CodeSystem/identifier-type-de-basis anzugeben.&#xD;&#xA;Begründung Pflichtfeld: type dient der Unterscheidung verschiedener Identifier-Typen" />
       <requirements value="Allows users to make use of identifiers when the identifier system is not known." />
       <min value="1" />
       <max value="1" />
@@ -3541,7 +3544,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="false" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -3564,7 +3566,7 @@
       <path value="Patient.identifier.value" />
       <short value="Konkrete Versichertennummer innerhalb der PKV" />
       <definition value="The portion of the identifier typically relevant to the user and which is unique within the context of the system." />
-      <comment value="If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](extension-rendered-value.html). Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe." />
+      <comment value="Enthält den eigentlichen Wert des Identifiers.&#xD;&#xA;Begründung Pflichtfeld: Ist der Wert nicht bekannt, sollte der gesamte Slice weggelassen werden." />
       <min value="1" />
       <max value="1" />
       <base>
@@ -3588,7 +3590,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -4379,7 +4380,7 @@
       <path value="Patient.identifier.assigner.display" />
       <short value="Konkrete Bezeichnung der PKV-Nr-ausgebenden Stelle" />
       <definition value="Plain text narrative that identifies the resource in addition to the resource reference." />
-      <comment value="This is generally not the same as the Resource.text of the referenced resource.  The purpose is to identify what's being referenced, not to fully describe it." />
+      <comment value="Name des Kostenträgers, aus dessen Nummernkreis die PKV-Nummer stammt." />
       <min value="1" />
       <max value="1" />
       <base>
@@ -17607,8 +17608,6 @@
     <element id="Patient.identifier:VersichertenId">
       <path value="Patient.identifier" />
       <sliceName value="VersichertenId" />
-      <short value="KVZ10-Versichertennummer" />
-      <definition value="VersichertenID (KVNR, Krankenversichertennummer)&#xA;Dies ist die eindeutige Identifikationsnummer einer versicherten Person im deutschen Gesundheitswesen.&#xA;Sie wird von der gematik für alle gesetzlich und privat Versicherten vergeben.&#xA;Diese Nummer bleibt in der Regel lebenslang konstant." />
       <max value="1" />
       <mustSupport value="true" />
     </element>
@@ -17630,8 +17629,6 @@
     <element id="Patient.identifier:VersichertenId_GKV">
       <path value="Patient.identifier" />
       <sliceName value="VersichertenId_GKV" />
-      <short value="Versicherungsnummer innerhalb gesetzlicher Krankenversicherung" />
-      <definition value="Identifikator-Profil für die 10-stellige Krankenversichertennummer&#xD;&#xA;VersichertenID_GKV (GKV-spezifische Versichertennummer)&#xA;Dies ist die spezifische Versicherungsnummer innerhalb der gesetzlichen Krankenversicherung (GKV).&#xA;Jede gesetzliche Krankenkasse kann eigene Nummern für ihre Versicherten führen.&#xA;Diese Nummer kann sich z. B. beim Wechsel der Krankenkasse ändern." />
       <mustSupport value="true" />
     </element>
     <element id="Patient.identifier:VersichertenId_GKV.type">
@@ -17652,9 +17649,6 @@
     <element id="Patient.identifier:Patientennummer">
       <path value="Patient.identifier" />
       <sliceName value="Patientennummer" />
-      <short value="Interne Nummer in Krankenhaus- oder Praxisverwaltungssystem" />
-      <definition value="Ein Identifikator - Eindeutige und unmissverständliche Identifizierung einer Entität.&#xD;&#xA;Jeder Patient bekommt eine interne Nummer im Krankenhaus- oder Praxisverwaltungssystem (KIS/PVS)." />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.identifier:Patientennummer.type">
@@ -17669,14 +17663,11 @@
     </element>
     <element id="Patient.identifier:Patientennummer.value">
       <path value="Patient.identifier.value" />
-      <short value="Konkrete Patientennummer" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.identifier:Versichertennummer_PKV">
       <path value="Patient.identifier" />
       <sliceName value="Versichertennummer_PKV" />
-      <short value="Spezifische Versicherungsnummer innerhalb privater Krankenversicherung" />
-      <definition value="Identifikator-Profil für die Abbildung einer Privatversichertennummer.&#xD;&#xA;Versichertennummer_PKV (PKV-spezifische Versichertennummer)" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.identifier:Versichertennummer_PKV.type">

@@ -173,8 +173,8 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="Extension.value[x]" />
-      <short value="Formtextübergreifende besondere Bemerkungen" />
-      <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
+      <short value="Sonstige Bemerkungen zum stationären Entlassbericht" />
+      <definition value="Sonstige Bemerkungen, z. B. Beratungsbedarf durch Reha-Management des UV-Trägers, Schul- und Schulsportfähigkeit, Kontextfaktoren, besondere Umstände" />
       <min value="0" />
       <max value="1" />
       <base>
@@ -215,7 +215,8 @@
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
-      <short value="Formtextübergreifende besondere Bemerkungen" />
+      <short value="Sonstige Bemerkungen zum stationären Entlassbericht" />
+      <definition value="Sonstige Bemerkungen, z. B. Beratungsbedarf durch Reha-Management des UV-Trägers, Schul- und Schulsportfähigkeit, Kontextfaktoren, besondere Umstände" />
       <type>
         <code value="string" />
       </type>

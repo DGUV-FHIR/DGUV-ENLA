@@ -324,7 +324,7 @@
       <alias value="extensions" />
       <alias value="user content" />
       <min value="1" />
-      <max value="1" />
+      <max value="*" />
       <base>
         <path value="DomainResource.extension" />
         <min value="0" />
@@ -360,7 +360,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Composition.extension:BesondereBemerkungen">
+    <element id="Composition.extension:SonstigeBemerkungen">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
         <valueCode value="normative" />
       </extension>
@@ -368,9 +368,9 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="Composition.extension" />
-      <sliceName value="BesondereBemerkungen" />
-      <short value="ENLA übergreifende besondere Bemerkungen" />
-      <definition value="Optional Extension Element - found in all resources." />
+      <sliceName value="SonstigeBemerkungen" />
+      <short value="Sonstige Bemerkungen zum stationären Entlassbericht" />
+      <definition value="Sonstige Bemerkungen, z. B. Beratungsbedarf durch Reha-Management des UV-Trägers, Schul- und Schulsportfähigkeit, Kontextfaktoren, besondere Umstände" />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
@@ -383,7 +383,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-BesondereBemerkungen" />
+        <profile value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-SonstigeBemerkungen" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -413,7 +413,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Composition.extension:BesondereBemerkungen.id">
+    <element id="Composition.extension:SonstigeBemerkungen.id">
       <path value="Composition.extension.id" />
       <representation value="xmlAttr" />
       <short value="Unique id for inter-element referencing" />
@@ -436,7 +436,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Composition.extension:BesondereBemerkungen.extension">
+    <element id="Composition.extension:SonstigeBemerkungen.extension">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
         <valueCode value="normative" />
       </extension>
@@ -493,7 +493,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Composition.extension:BesondereBemerkungen.url">
+    <element id="Composition.extension:SonstigeBemerkungen.url">
       <path value="Composition.extension.url" />
       <representation value="xmlAttr" />
       <short value="identifies the meaning of the extension" />
@@ -512,13 +512,13 @@
         </extension>
         <code value="http://hl7.org/fhirpath/System.String" />
       </type>
-      <fixedUri value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-BesondereBemerkungen" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-SonstigeBemerkungen" />
       <mapping>
         <identity value="rim" />
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Composition.extension:BesondereBemerkungen.value[x]">
+    <element id="Composition.extension:SonstigeBemerkungen.value[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
         <valueCode value="normative" />
       </extension>
@@ -526,8 +526,8 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="Composition.extension.value[x]" />
-      <short value="Konkrete ENLA übergreifende besondere Bemerkungen" />
-      <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
+      <short value="Sonstige Bemerkungen zum stationären Entlassbericht" />
+      <definition value="Sonstige Bemerkungen, z. B. Beratungsbedarf durch Reha-Management des UV-Trägers, Schul- und Schulsportfähigkeit, Kontextfaktoren, besondere Umstände" />
       <min value="0" />
       <max value="1" />
       <base>
@@ -38159,25 +38159,24 @@
     <element id="Composition.extension">
       <path value="Composition.extension" />
       <min value="1" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.extension:BesondereBemerkungen">
+    <element id="Composition.extension:SonstigeBemerkungen">
       <path value="Composition.extension" />
-      <sliceName value="BesondereBemerkungen" />
-      <short value="ENLA übergreifende besondere Bemerkungen" />
+      <sliceName value="SonstigeBemerkungen" />
+      <short value="Sonstige Bemerkungen zum stationären Entlassbericht" />
+      <definition value="Sonstige Bemerkungen, z. B. Beratungsbedarf durch Reha-Management des UV-Trägers, Schul- und Schulsportfähigkeit, Kontextfaktoren, besondere Umstände" />
       <min value="1" />
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-BesondereBemerkungen" />
+        <profile value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-SonstigeBemerkungen" />
       </type>
       <mustSupport value="true" />
       <isModifier value="false" />
     </element>
-    <element id="Composition.extension:BesondereBemerkungen.value[x]">
+    <element id="Composition.extension:SonstigeBemerkungen.value[x]">
       <path value="Composition.extension.value[x]" />
-      <short value="Konkrete ENLA übergreifende besondere Bemerkungen" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.type">
