@@ -323,8 +323,8 @@
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="0" />
-      <max value="*" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="DomainResource.extension" />
         <min value="0" />
@@ -350,6 +350,204 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="Composition.extension:BesondereBemerkungen">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
+      <path value="Composition.extension" />
+      <sliceName value="BesondereBemerkungen" />
+      <short value="ENLA übergreifende besondere Bemerkungen" />
+      <definition value="Optional Extension Element - found in all resources." />
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
+      <alias value="extensions" />
+      <alias value="user content" />
+      <min value="1" />
+      <max value="1" />
+      <base>
+        <path value="DomainResource.extension" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="Extension" />
+        <profile value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-BesondereBemerkungen" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
+      </constraint>
+      <mustSupport value="true" />
+      <isModifier value="false" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="Composition.extension:BesondereBemerkungen.id">
+      <path value="Composition.extension.id" />
+      <representation value="xmlAttr" />
+      <short value="Unique id for inter-element referencing" />
+      <definition value="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Element.id" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
+          <valueUrl value="string" />
+        </extension>
+        <code value="http://hl7.org/fhirpath/System.String" />
+      </type>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+    </element>
+    <element id="Composition.extension:BesondereBemerkungen.extension">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
+      <path value="Composition.extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <description value="Extensions are always sliced by (at least) url" />
+        <rules value="open" />
+      </slicing>
+      <short value="Additional content defined by implementations" />
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
+      <alias value="extensions" />
+      <alias value="user content" />
+      <min value="0" />
+      <max value="0" />
+      <base>
+        <path value="Element.extension" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="Extension" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="Composition.extension:BesondereBemerkungen.url">
+      <path value="Composition.extension.url" />
+      <representation value="xmlAttr" />
+      <short value="identifies the meaning of the extension" />
+      <definition value="Source of the definition for the extension code - a logical name or a URL." />
+      <comment value="The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension." />
+      <min value="1" />
+      <max value="1" />
+      <base>
+        <path value="Extension.url" />
+        <min value="1" />
+        <max value="1" />
+      </base>
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
+          <valueUrl value="uri" />
+        </extension>
+        <code value="http://hl7.org/fhirpath/System.String" />
+      </type>
+      <fixedUri value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-BesondereBemerkungen" />
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="Composition.extension:BesondereBemerkungen.value[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
+      <path value="Composition.extension.value[x]" />
+      <short value="Konkrete ENLA übergreifende besondere Bemerkungen" />
+      <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Extension.value[x]" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="string" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -4429,7 +4627,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Unfallversicherungstraeger" />
       </type>
       <condition value="ele-1" />
       <condition value="cmp-2" />
@@ -5404,7 +5602,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Krankenkasse" />
       </type>
       <condition value="ele-1" />
       <condition value="cmp-2" />
@@ -6379,7 +6577,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-VersicherungsVerhaeltnis" />
       </type>
       <condition value="ele-1" />
       <condition value="cmp-2" />
@@ -7354,7 +7552,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Pflegekasse" />
       </type>
       <condition value="ele-1" />
       <condition value="cmp-2" />
@@ -8329,7 +8527,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Unfallbetrieb" />
       </type>
       <condition value="ele-1" />
       <condition value="cmp-2" />
@@ -23929,7 +24127,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/PractitionerRole/DGUV-ENLA-PR-WeiterbehandelnderArzt" />
       </type>
       <condition value="ele-1" />
       <condition value="cmp-2" />
@@ -24904,7 +25102,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-WeiterbehandelndeOrganisation" />
       </type>
       <condition value="ele-1" />
       <condition value="cmp-2" />
@@ -25879,7 +26077,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-RehaMassnahmen" />
       </type>
       <condition value="ele-1" />
       <condition value="cmp-2" />
@@ -26854,7 +27052,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+        <targetProfile value="https://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Heilmittel" />
       </type>
       <condition value="ele-1" />
       <condition value="cmp-2" />
@@ -27829,7 +28027,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+        <targetProfile value="https://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Hilfsmittel" />
       </type>
       <condition value="ele-1" />
       <condition value="cmp-2" />
@@ -28804,7 +29002,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-BesondereMassnahmen" />
       </type>
       <condition value="ele-1" />
       <condition value="cmp-2" />
@@ -29779,7 +29977,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Arbeitsunfaehigkeit" />
       </type>
       <condition value="ele-1" />
       <condition value="cmp-2" />
@@ -30754,7 +30952,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-PrognoseWiederaufnahmeTaetigkeit" />
       </type>
       <condition value="ele-1" />
       <condition value="cmp-2" />
@@ -31729,7 +31927,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-stufenweiseWiedereingliederung" />
       </type>
       <condition value="ele-1" />
       <condition value="cmp-2" />
@@ -32704,7 +32902,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Datenschutz" />
       </type>
       <condition value="ele-1" />
       <condition value="cmp-2" />
@@ -33679,7 +33877,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/PractitionerRole/DGUV-ENLA-PR-DArzt" />
       </type>
       <condition value="ele-1" />
       <condition value="cmp-2" />
@@ -34654,7 +34852,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-DArztOrganisation" />
       </type>
       <condition value="ele-1" />
       <condition value="cmp-2" />
@@ -35629,7 +35827,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringer" />
       </type>
       <condition value="ele-1" />
       <condition value="cmp-2" />
@@ -36604,7 +36802,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-BehandelndeEinrichtung" />
       </type>
       <condition value="ele-1" />
       <condition value="cmp-2" />
@@ -37579,7 +37777,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/PractitionerRole/DGUV-ENLA-PR-AnsprechpartnerFuerRueckfragen" />
       </type>
       <condition value="ele-1" />
       <condition value="cmp-2" />
@@ -37958,6 +38156,30 @@
       <path value="Composition.id" />
       <mustSupport value="true" />
     </element>
+    <element id="Composition.extension">
+      <path value="Composition.extension" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.extension:BesondereBemerkungen">
+      <path value="Composition.extension" />
+      <sliceName value="BesondereBemerkungen" />
+      <short value="ENLA übergreifende besondere Bemerkungen" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-BesondereBemerkungen" />
+      </type>
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>
+    <element id="Composition.extension:BesondereBemerkungen.value[x]">
+      <path value="Composition.extension.value[x]" />
+      <short value="Konkrete ENLA übergreifende besondere Bemerkungen" />
+      <mustSupport value="true" />
+    </element>
     <element id="Composition.type">
       <path value="Composition.type" />
       <short value="Kennzeichnung Composition als Krankenhausentlassbericht" />
@@ -38056,6 +38278,10 @@
       <short value="Verweis auf das ENLA-Profil Unfallversicherungsträger" />
       <min value="1" />
       <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Unfallversicherungstraeger" />
+      </type>
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:Unfallversicherungstraeger.entry.reference">
@@ -38075,6 +38301,10 @@
       <short value="Verweis auf das ENLA-Profil Krankenkasse" />
       <min value="1" />
       <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Krankenkasse" />
+      </type>
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:Krankenkasse.entry.reference">
@@ -38098,6 +38328,10 @@
       <short value="Verweis auf das ENLA-Profil Versicherungsverhältnis" />
       <min value="1" />
       <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-VersicherungsVerhaeltnis" />
+      </type>
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:Versicherungsverhaeltnis.entry.reference">
@@ -38118,6 +38352,10 @@
       <short value="Verweis auf das ENLA-Profil Pflegekasse" />
       <min value="1" />
       <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Pflegekasse" />
+      </type>
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:Pflegekasse.entry.reference">
@@ -38138,6 +38376,10 @@
       <short value="Verweis auf das ENLA-Profil Unfallbetrieb" />
       <min value="1" />
       <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Unfallbetrieb" />
+      </type>
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:Unfallbetrieb.entry.reference">
@@ -38519,6 +38761,10 @@
       <short value="Verweis auf das ENLA-Profil WeiterbehandelnderArzt" />
       <min value="1" />
       <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/PractitionerRole/DGUV-ENLA-PR-WeiterbehandelnderArzt" />
+      </type>
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:WeiterbehandelnderArzt.entry.reference">
@@ -38539,6 +38785,10 @@
       <short value="Verweis auf das ENLA-Profil WeiterbehandelndeOrganisation" />
       <min value="1" />
       <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-WeiterbehandelndeOrganisation" />
+      </type>
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:WeiterbehandelndeOrganisation.entry.reference">
@@ -38559,6 +38809,10 @@
       <short value="Verweis auf das ENLA-Profil RehaMassnahmen" />
       <min value="1" />
       <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-RehaMassnahmen" />
+      </type>
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:RehaMassnahmen.entry.reference">
@@ -38579,6 +38833,10 @@
       <short value="Verweis auf das ENLA-Profil Heilmittel" />
       <min value="1" />
       <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Heilmittel" />
+      </type>
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:Heilmittel.entry.reference">
@@ -38599,6 +38857,10 @@
       <short value="Verweis auf das konkrete ENLA-Profil Hilfsmittel" />
       <min value="1" />
       <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Hilfsmittel" />
+      </type>
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:Hilfsmittel.entry.reference">
@@ -38619,6 +38881,10 @@
       <short value="Verweis auf das ENLA-Profil BesondereMassnahmen" />
       <min value="1" />
       <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-BesondereMassnahmen" />
+      </type>
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:BesondereMassnahmen.entry.reference">
@@ -38639,6 +38905,10 @@
       <short value="Verweis auf das ENLA-Profil Arbeitsunfaehigkeit" />
       <min value="1" />
       <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Arbeitsunfaehigkeit" />
+      </type>
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:Arbeitsunfaehigkeit.entry.reference">
@@ -38659,6 +38929,10 @@
       <short value="Verweis auf das ENLA-Profil PrognoseWiederaufnahmeTaetigkeit" />
       <min value="1" />
       <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-PrognoseWiederaufnahmeTaetigkeit" />
+      </type>
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:PrognoseWiederaufnahmeTaetigkeit.entry.reference">
@@ -38679,6 +38953,10 @@
       <short value="Verweis auf das ENLA-Profil StufenweiseWiedereingliederung" />
       <min value="1" />
       <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-stufenweiseWiedereingliederung" />
+      </type>
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:StufenweiseWiedereingliederung.entry.reference">
@@ -38699,6 +38977,10 @@
       <short value="Verweis auf das ENLA-Profil Datenschutz" />
       <min value="1" />
       <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Datenschutz" />
+      </type>
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:Datenschutz.entry.reference">
@@ -38719,6 +39001,10 @@
       <short value="Verweis auf das ENLA-Profil DArzt" />
       <min value="1" />
       <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/PractitionerRole/DGUV-ENLA-PR-DArzt" />
+      </type>
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:DArzt.entry.reference">
@@ -38739,6 +39025,10 @@
       <short value="Verweis auf das ENLA-Profil DArztOrganisation" />
       <min value="1" />
       <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-DArztOrganisation" />
+      </type>
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:DArztOrganisation.entry.reference">
@@ -38759,6 +39049,10 @@
       <short value="Verweis auf das ENLA-Profil Leistungserbringer" />
       <min value="1" />
       <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringer" />
+      </type>
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:Leistungserbringer.entry.reference">
@@ -38779,6 +39073,10 @@
       <short value="Verweis auf das ENLA-Profil BehandelndeEinrichtung" />
       <min value="1" />
       <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-BehandelndeEinrichtung" />
+      </type>
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:BehandelndeEinrichtung.entry.reference">
@@ -38799,6 +39097,10 @@
       <short value="Verweis auf das ENLA-Profil AnsprechpartnerFuerRueckfragen" />
       <min value="1" />
       <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/PractitionerRole/DGUV-ENLA-PR-AnsprechpartnerFuerRueckfragen" />
+      </type>
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:AnsprechpartnerFuerRueckfragen.entry.reference">
