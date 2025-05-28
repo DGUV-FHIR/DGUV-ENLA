@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="DGUV-ENLA-EX-BesondereBemerkungen" />
-  <url value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-BesondereBemerkungen" />
-  <name value="DGUV_ENLA_EX_BesondereBemerkungen" />
+  <id value="DGUV-ENLA-EX-SonstigeBemerkungen" />
+  <url value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-SonstigeBemerkungen" />
+  <name value="DGUV_ENLA_EX_SonstigeBemerkungen" />
   <status value="draft" />
   <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
-  <description value="Diese Extension ermöglicht in einem String die Angabe von formtextübergreifenden besonderen Bemerkungen." />
+  <description value="Sonstige Bemerkungen, z. B. Beratungsbedarf durch Reha-Management des UV-Trägers, Schul- und Schulsportfähigkeit, Kontextfaktoren, besondere Umstände" />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
@@ -159,7 +159,7 @@
         </extension>
         <code value="http://hl7.org/fhirpath/System.String" />
       </type>
-      <fixedUri value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-BesondereBemerkungen" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-SonstigeBemerkungen" />
       <mapping>
         <identity value="rim" />
         <map value="N/A" />
@@ -211,7 +211,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-BesondereBemerkungen" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-SonstigeBemerkungen" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
