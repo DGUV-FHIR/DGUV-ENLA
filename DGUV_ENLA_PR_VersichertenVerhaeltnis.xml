@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="DGUV-ENLA-PR-VersichertenVerhaeltnis" />
+  <url value="https://fhir.dguv.de/ENLA/Coverage/DGUV_ENLA_PR_VersichertenVerhaeltnis" />
+  <version value="0.0.2" />
+  <name value="DGUV_ENLA_PR_VersichertenVerhaeltnis" />
+  <status value="draft" />
+  <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Coverage" />
+  <baseDefinition value="http://fhir.dguv.de/Basis/Coverage/DGUV-Basis-PR-VersichertenVerhaeltnis" />
+  <derivation value="constraint" />
+</StructureDefinition>
