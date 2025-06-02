@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.dguv.de/ENLA/Observation/DGUV_ENLA_PR_Datenschutz" />
+  <url value="https://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Datenschutz" />
   <name value="DGUV_ENLA_PR_Datenschutz" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
