@@ -8,7 +8,7 @@
         <coding>
             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
             <code value="BM" />
-            <display value="BesondereMassnahmen" />
+            <display value="BesondereMaßnahmen" />
         </coding>
     </code>
     <subject>
