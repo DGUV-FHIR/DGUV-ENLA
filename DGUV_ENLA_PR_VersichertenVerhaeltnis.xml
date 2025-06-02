@@ -12,4 +12,56 @@
   <type value="Coverage" />
   <baseDefinition value="http://fhir.dguv.de/Basis/Coverage/DGUV-Basis-PR-VersichertenVerhaeltnis" />
   <derivation value="constraint" />
+  <differential>
+    <element id="Coverage.extension">
+      <path value="Coverage.extension" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.extension:Familienversicherung">
+      <path value="Coverage.extension" />
+      <sliceName value="Familienversicherung" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.extension:Familienversicherung.extension:Familienversichert">
+      <path value="Coverage.extension.extension" />
+      <sliceName value="Familienversichert" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.extension:Familienversicherung.extension:Mitgliedsname">
+      <path value="Coverage.extension.extension" />
+      <sliceName value="Mitgliedsname" />
+      <short value="Name des Mitglieds bei der Krankenkasse" />
+      <definition value="Auszufüllen, wenn die verunfallte Person selbst nicht die versicherte Person ist." />
+    </element>
+    <element id="Coverage.beneficiary">
+      <path value="Coverage.beneficiary" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.beneficiary.reference">
+      <path value="Coverage.beneficiary.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.payor">
+      <path value="Coverage.payor" />
+      <short value="Kostenträger ist der Unfallversicherungsträger" />
+      <definition value="Die Kosten der Behandlung werden werden zum Zeitpunkt der Erstellung des ENLA dem jeweiligen Unfallversicherungsträger in Rechnung gestellt." />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Unfallversicherungstraeger" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.payor.reference">
+      <path value="Coverage.payor.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
 </StructureDefinition>
