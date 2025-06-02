@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="DGUV-ENLA-PR-VersichertenVerhaeltnis" />
-  <url value="https://fhir.dguv.de/ENLA/Coverage/DGUV_ENLA_PR_VersichertenVerhaeltnis" />
+  <url value="https://fhir.dguv.de/ENLA/Coverage/DGUV-ENLA-PR-VersichertenVerhaeltnis" />
   <version value="0.0.2" />
   <name value="DGUV_ENLA_PR_VersichertenVerhaeltnis" />
   <status value="draft" />
