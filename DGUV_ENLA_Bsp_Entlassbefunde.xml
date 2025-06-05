@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Observation xmlns="http://hl7.org/fhir">
     <meta>
-        <profile value="https://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Entlassbefunde" />
+        <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Entlassbefunde" />
     </meta>
     <id value="DGUV-ENLA-Bsp-Entlassbefunde" />
     <status value="final" />
