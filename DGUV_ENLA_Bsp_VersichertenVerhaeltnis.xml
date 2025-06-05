@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Coverage xmlns="http://hl7.org/fhir">
+    <meta>
+        <profile value="http://fhir.dguv.de/ENLA/Coverage/DGUV-ENLA-PR-VersichertenVerhaeltnis" />
+    </meta>
     <extension  url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-Familienversicherung">
             <extension url="Familienversichert">
                 <valueBoolean value="true" />
             </extension>
-            <extension url="Mitgliedsname">
+            <extension url="Mitgliedsname">  
                 <valueString value="Rudi Fahrad" />
             </extension>
     </extension>
