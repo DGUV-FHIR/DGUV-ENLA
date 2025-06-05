@@ -16,7 +16,7 @@
     </subject>
     <effective>
         <Timing>
-            <dayOfWeek value="Durch Weiterbehandler festzulegen">
+            <dayOfWeek value="Durch Weiterbehandler festzulegen" />
         </Timing>
     </effective>
     <value>  
@@ -28,6 +28,6 @@
             <code value="PHM" />
             <display value="Pflegehilfsmittel" />
         </coding>
-        </coding>
-    <value string="Aspen Collar, Wechselpolster für Collar-Bandage, bereits verordnet/">
+    </value>
+    <value string="Aspen Collar, Wechselpolster für Collar-Bandage, bereits verordnet" />
 </Observation>
