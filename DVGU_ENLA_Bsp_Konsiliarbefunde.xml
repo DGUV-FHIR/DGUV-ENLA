@@ -3,7 +3,7 @@
     <meta>
         <profile value="https://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Konsiliarbefunde" />
     </meta>
-    <id value="DGUV-ENLA-Bsp-Konsiliarbefunde" />
+    <id value="Konsiliarbefunde" />
     <status value="final" />
     <category>
         <coding>
