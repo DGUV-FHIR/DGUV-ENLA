@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Entlassbefunde" />
   <name value="DGUV_ENLA_PR_Entlassbefunde" />
-  <title value="Entlassbefund" />
+  <title value="Entlassbefunde" />
   <status value="draft" />
   <description value="Dieses Profil bildet Entlassbefunde ab." />
   <fhirVersion value="4.0.1" />
