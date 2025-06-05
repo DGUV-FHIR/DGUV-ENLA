@@ -4,10 +4,10 @@
         <profile value="http://fhir.dguv.de/Enla/Organization/DGUV-Enla-PR-Unfallbetrieb" />
     </meta>
     <name value="Sankt Augustiner 6 Tage Rennen GmbH"/>
-    <telcom>
+    <telecom>
         <system value="phone"/>
         <value value="01761234"/>
-    </telcom>
+    </telecom>
     <address>
         <type value="both"/>
         <line value="Johann-Lafer-Gasse 2">
