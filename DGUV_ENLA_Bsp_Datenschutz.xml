@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Observation xmlns="http://hl7.org/fhir">
     <id value="Datenschutz" />
-    <!--meta>
+    <meta>
         <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Datenschutz" />
-    </meta-->
+    </meta>
     <status value="final"/>
     <code>
         <text value="Datenschutz" />
