@@ -8,7 +8,7 @@
         <coding>
             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
             <code value="PT" />
-            <display value="PrognoseWiederaufnahmeTaetigkeit" />
+            <display value="PrognoseWiederaufnahmeTätigkeit" />
         </coding>
     </code>
     <subject>
