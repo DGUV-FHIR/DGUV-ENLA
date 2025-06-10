@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="DGUV-ENLA-Bsp-Behandlungsverlauf" />
+    <meta>
+        <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Behandlungsverlauf" />
+    </meta>
+    <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-Besonderheiten">
+        <valueString value="Komplikation" />
+    </extension>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+            <code value="BV" />
+            <display value="Behandlungsverlauf" />
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/T37501234" />
+    </subject>
+    <performer>
+        <reference value="DArzt/gh45434" />
+    </performer>
+    <valueString value="Freitext" />
+</Observation>

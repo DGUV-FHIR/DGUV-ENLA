@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="Datenschutz" />
+    <meta>
+        <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Datenschutz" />
+    </meta>
+    <status value="final"/>
+    <code>
+        <text value="Datenschutz" />
+    </code>
+    <subject>
+        <reference value="Patient/VersichertePerson-1"/>
+    </subject>
+    <performer>
+        <reference value="Performer/DArzt"/>
+    </performer>
+    <valueBoolean value="false" />
+</Observation>

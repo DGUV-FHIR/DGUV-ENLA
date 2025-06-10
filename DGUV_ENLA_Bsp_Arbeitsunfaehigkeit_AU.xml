@@ -9,7 +9,7 @@
       <coding>
           <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
           <code value="AU" />
-          <display value="Arbeitsunfaehigkeit" />
+          <display value="Arbeitsunfähigkeit" />
       </coding>
   </code>
   <subject>
@@ -21,7 +21,7 @@
     <coding>
         <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Arbeitsunfaehigkeit" />
         <code value="AUBIS" />
-        <display value="Arbeitsunfaehig bis" />
+        <display value="Arbeitsunfähig bis" />
     </coding>
   </valueCodeableConcept>
 </Observation>

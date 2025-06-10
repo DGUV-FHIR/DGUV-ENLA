@@ -1,7 +1,7 @@
 <Organization xmlns="http://hl7.org/fhir">
     <id value="Pflegekasse-1" />
     <meta>
-        <profile value="http://fhir.dguv.de/Enla/Organization/DGUV-Enla-PR-Pflegekasse" />
+        <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Pflegekasse" />
     </meta>
       <identifier>
         <type>
@@ -15,10 +15,10 @@
         <value value="999999999" />
     </identifier>
     <name value="Pflegekasse Nord-Ostwestfalen Süd"/>
-    <telcom>
+    <telecom>
         <system value="phone"/>
         <value value="01751234"/>
-    </telcom>
+    </telecom>
     <address>
         <type value="both"/>
         <line value="Nebenstr. 82">

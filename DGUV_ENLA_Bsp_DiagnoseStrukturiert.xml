@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Condition xmlns="http://hl7.org/fhir">
+    <id value="Strukturiert-ENLA"/>
+    <meta>
+        <profile value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseStrukturiert"/>
+    </meta>
+    <code>
+        <coding>
+            <system value="http://fhir.de/CodeSystem/bfarm/icd-10-gm"/>
+            <version value="2019"/>
+            <code value="S06.0"/>
+            <display value="Gehirnerschütterung"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/T37501234"/>
+    </subject>
+</Condition>

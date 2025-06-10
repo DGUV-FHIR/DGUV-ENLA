@@ -1,7 +1,7 @@
 <Organization xmlns="http://hl7.org/fhir">
     <id value="Krankenkasse-1" />
     <meta>
-        <profile value="http://fhir.dguv.de/Enla/Organization/DGUV-ENLA-PR-Krankenkasse" />
+        <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Krankenkasse" />
     </meta>
     <!--Bei einer Familienversicherung wird hier die hauptversicherte Person angegeben.-->
     <extension url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-Mitgliedsname">          
@@ -23,10 +23,10 @@
         <value value="107202793"/>
     </identifier>
     <name value="AOK Herzogtum Lauenburg"/>
-    <telcom>
+    <telecom>
         <system value="phone"/>
         <value value="01771234"/>
-    </telcom>
+    </telecom>
     <address>
         <type value="both"/>
         <line value="Hauptstr. 91">

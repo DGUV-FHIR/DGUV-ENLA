@@ -3,7 +3,7 @@
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/MedicationStatement/DGUV-ENLA-PR-MedikationsInformation" />
     </meta>
-    <status value="active">
+    <status value="active" />
     <medication>
         <reference value="Medication/MedikationArzneimittel"/>     
     </medication>
@@ -18,7 +18,7 @@
                     <system value="http://hl7.org/fhir/event-timing"/>
                     <version value="1.0"/>
                     <code value="MORN"/>
-                    <display value="Morning"/>
+                    <display value="Morning">
                         <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-AnzeigenameDeutsch">
                         <valueString value="Morgens"/>
                         </extension>

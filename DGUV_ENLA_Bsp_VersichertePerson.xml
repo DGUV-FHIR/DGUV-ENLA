@@ -1,11 +1,8 @@
 <Patient xmlns="http://hl7.org/fhir">
-       <meta>
+    <meta>
         <profile value="https://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson" />
     </meta>
-    <text>
-        <status value="generated" />
-        --- We have skipped the narrative for better readability of the resource ---
-    </text>
+    <status value="final" />
     <extension url="http://hl7.org/fhir/StructureDefinition/patient-nationality">
         <extension url="code">
             <url value="code" />
@@ -32,11 +29,12 @@
             </extension>
         </family>
         <given value="Rudi" />
-        <prefix value="Prof. Dr." />
+        <prefix value="Prof. Dr.">
             <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
                 <valueCoding>
                     <code value="AC" />
                 </valueCoding>
+            </extension>    
         </prefix>
     </name>
     <telecom>

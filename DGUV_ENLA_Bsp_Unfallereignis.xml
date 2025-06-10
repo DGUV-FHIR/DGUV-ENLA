@@ -1,14 +1,14 @@
 <Observation xmlns="http://hl7.org/fhir">
   <id value="Arbeitsunfall-1"/>
   <meta>
-    <profile value="http://fhir.dguv.de/Enla/Observation/DGUV-Enla-PR-Unfallereignis"/>
+    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Unfallereignis"/>
   </meta>
   <status value="final"/>
   <code>
     <coding>
       <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-Verletzungsartenverzeichnis"/>
       <code value="10.1V"/>
-      <display value="chwere Verletzungen und Verletzungskombinationen (Polytrauma) mit einem Injury Severity Score (ISS) zwischen 16 und 24."/>
+      <display value="Schwere Verletzungen und Verletzungskombinationen (Polytrauma) mit einem Injury Severity Score (ISS) zwischen 16 und 24."/>
     </coding>
   </code>
   <subject> 
@@ -30,7 +30,7 @@
       <coding>
         <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-UnfallereignisComponents"/>
         <code value="04"/>
-        <display value="Beschwerden/Klage"/>
+        <display value="Beschwerden/Klagen"/>
       </coding>
     </code>
     <valueString value="Starke Schmerzen rechter Oberschenkel, Gefühlsstörung im Fuss"/>
@@ -50,7 +50,7 @@
       <coding>
         <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-UnfallereignisComponents"/>
         <code value="06"/>
-        <display value="Beschaeftigungsbeginn"/>
+        <display value="Beschäftigungsbeginn"/>
       </coding>
     </code>
     <valueDateTime value="2021-04-01"/>
