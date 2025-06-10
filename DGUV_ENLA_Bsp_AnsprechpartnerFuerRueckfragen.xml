@@ -1,7 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <PractitionerRole xmlns="http://hl7.org/fhir">
-    <id value="Ansprechpartner-fuer-Rueckfragen-NLA-NAE"/>
+    <id value="DGUV-ENLA-Bsp-AnsprechpartnerFuerRueckfragen"/>
     <meta>
-        <profile value="http://fhir.dguv.de/ENLA/PractitionerRole/DGUV-Basis-PR-AnsprechpartnerFuerRueckfragen" />
+        <profile value="http://fhir.dguv.de/ENLA/PractitionerRole/DGUV-ENLA-PR-AnsprechpartnerFuerRueckfragen" />
     </meta>
     <extension url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-NichtAerztlicherAnsprechpartner">
         <extension url="NichtAerztlicherKontakt">          

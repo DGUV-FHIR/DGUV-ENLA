@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
  <Condition xmlns="http://hl7.org/fhir">
-    <id value="Freitext-ENLA"/>
+    <id value="DGUV-ENLA-PR-DiagnoseFreitext"/>
     <meta>
-        <profile value="http://fhir.dguv.de/Basis/Condition/DGUV-ENLA-PR-DiagnoseFreitext"/>
+        <profile value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseFreitext"/>
     </meta>
     <extension url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-Frakturklassifikation">
         <extension url="Fraktur">

@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <Medication xmlns="http://hl7.org/fhir">
-    <id value="MedikationArzneimittel" />
+    <id value="DGUV-ENLA-Bsp-MedikationArzneimittel" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationArzneimittel" />
     </meta>
@@ -16,7 +17,7 @@
       </manufacturer>
       <form>
         <coding>
-          <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM"/>
+          <system value="http://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM"/>
           <version value="1.15"/>
           <code value="BTA"/>
           <display value="Brausetabletten"/>

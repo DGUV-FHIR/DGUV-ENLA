@@ -1,11 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <Medication xmlns="http://hl7.org/fhir">
-    <id value="MedikationRezeptur" />
+    <id value="DGUV-ENLA-Bsp-MedikationRezeptur" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationRezeptur" />
     </meta>
       <code>
         <coding>
-            <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type" />
+            <system value="http://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type" />
             <code value="rezeptur" />
         </coding>
       </code>

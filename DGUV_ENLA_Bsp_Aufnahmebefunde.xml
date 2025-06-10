@@ -1,6 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <Encounter xmlns="http://hl7.org/fhir">
+<id value="Falldaten-ENLA"  />
     <meta>
-        <profile value="https://fhir.dguv.de/ENLA/Encounter/DGUV-ENLA-PR-Falldaten" />
+        <profile value="http://fhir.dguv.de/ENLA/Encounter/DGUV-ENLA-PR-Falldaten" />
     </meta>
     <status value="finished" />
     <class>

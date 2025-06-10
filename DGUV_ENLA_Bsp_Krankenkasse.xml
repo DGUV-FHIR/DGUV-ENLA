@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <Organization xmlns="http://hl7.org/fhir">
-    <id value="Krankenkasse-1" />
+    <id value="DGUV-ENLA-Bsp-Krankenkasse" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Krankenkasse" />
     </meta>

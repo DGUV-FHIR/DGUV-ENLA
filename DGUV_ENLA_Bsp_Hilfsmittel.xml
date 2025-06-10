@@ -1,7 +1,7 @@
 <Observation xmlns="http://hl7.org/fhir">
     <id value="DGUV-ENLA-Bsp-Hilfsmittel" />
     <meta>
-        <profile value="https://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Hilfsmittel" />
+        <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Hilfsmittel" />
     </meta>
     <status value="final"/>
     <code>  
