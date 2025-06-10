@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="PrognoseWiederaufnahmeTaetigkeit-WANM" />
+    <id value="DGUV-ENLA-Bsp-PrognoseWiederaufnahmeTaetigkeit" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-PrognoseWiederaufnahmeTaetigkeit" />
     </meta>

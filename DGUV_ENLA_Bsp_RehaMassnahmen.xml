@@ -1,7 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="RehaMassnahmen-1" />
+    <id value="DGUV-ENLA-Bsp-RehaMassnahmen" />
     <meta>
-        <profile value="https://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-RehaMassnahmen" />
+        <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-RehaMassnahmen" />
     </meta>
     <status value="final"/>
     <code>  

@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <Medication xmlns="http://hl7.org/fhir">
-    <id value="MedikationWirkstoff" />
+    <id value="DGUV-ENLA-Bsp-MedikationWirkstoff" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationWirkstoff" />
     </meta>

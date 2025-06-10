@@ -1,7 +1,7 @@
 <PractitionerRole xmlns="http://hl7.org/fhir">
-  <id value="DArzt-Rolle-Arzt-1"/>
+  <id value="DGUV-ENLA-PR-DArzt"/>
   <meta>
-    <profile value="http://fhir.dguv.de/Basis/PractitionerRole/DGUV-Basis-PR-DArzt" />
+    <profile value="http://fhir.dguv.de/Basis/PractitionerRole/DGUV-ENLA-PR-DArzt" />
   </meta>
   <practitioner>
     <reference value="Practitioner/Arzt-1" />
