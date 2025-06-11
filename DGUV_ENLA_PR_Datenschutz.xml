@@ -131,7 +131,7 @@
         </extension>
         <code value="http://hl7.org/fhirpath/System.String" />
       </type>
-      <fixedString value="DGUV_ENLA_PR_Datenschutz" />
+      <mustSupport value="true" />
       <isSummary value="true" />
     </element>
     <element id="Observation.meta">
@@ -3247,7 +3247,7 @@
   <differential>
     <element id="Observation.id">
       <path value="Observation.id" />
-      <fixedString value="DGUV_ENLA_PR_Datenschutz" />
+      <mustSupport value="true" />
     </element>
     <element id="Observation.status">
       <path value="Observation.status" />
