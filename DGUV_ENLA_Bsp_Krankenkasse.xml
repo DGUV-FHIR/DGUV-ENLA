@@ -5,12 +5,12 @@
         <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Krankenkasse" />
     </meta>
     <!--Bei einer Familienversicherung wird hier die hauptversicherte Person angegeben.-->
-    <extension url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-Mitgliedsname">          
+    <!--extension url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-Mitgliedsname">          
         <valueHumanName>
             <family value="Farad" />
             <given value="Friedrich" />
         </valueHumanName>
-    </extension>
+    </extension -->
     <!--IK-Nummer-->
     <identifier>
         <type>
