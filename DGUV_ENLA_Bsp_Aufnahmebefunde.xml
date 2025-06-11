@@ -1,39 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Encounter xmlns="http://hl7.org/fhir">
-<id value="Falldaten-ENLA"  />
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="DGUV-ENLA-Bsp-Aufnahmebefunde" />
     <meta>
-        <profile value="http://fhir.dguv.de/ENLA/Encounter/DGUV-ENLA-PR-Falldaten" />
+        <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Aufnahmebefunde" />
     </meta>
-    <status value="finished" />
-    <class>
-        <system value="http://terminology.hl7.org/ValueSet/v3-ActEncounterCode" />
-        <code value="IMP" />
-        <display value="inpatient encounter" />
-    </class>
-    <period>
-        <start value="2023-04-14" />
-        <end value="2023-05-01" />
-    </period>
-    <hospitalization>   
-        <admitSource>
-            <extension url="https://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-GrundFolgebehandlung">
-                <valueString value="Erneute Beschwerden" />
-            </extension>
-            <coding>
-                <system value="https://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Aufnahmeart" />
-                <code value="FB" />
-                <display value="Folgebehandlung" />
-            </coding>
-        </admitSource>
-        <dischargeDisposition>
-            <extension url="https://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-GrundVerlegung">
-                <valueString value="Schwere der Verletzung" />
-            </extension>
-            <coding>
-                <system value="https://www.medizininformatik-initiative.de/fhir/core/modul-fall/CodeSystem/Entlassungsgrund" />
-                <code value="099" />
-                <display value="Entlassung in eine Rehabilitationseinrichtung" />
-            </coding>
-        </dischargeDisposition>
-    </hospitalization>   
-</Encounter>
+    <status value="final" />
+    <category>
+        <coding>
+            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-BefundKategorie" />
+                <code value="vitalparameter" />
+                <display value="Vitalparameter" />
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+            <code value="Aufnahme" />
+            <display value="Aufnahmebefund" />
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/T37501234" />
+    </subject>
+    <valueString value="Befundergebnis" />
+</Observation>
