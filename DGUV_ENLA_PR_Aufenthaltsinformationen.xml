@@ -23,6 +23,7 @@
     </element>
     <element id="Encounter.identifier">
       <path value="Encounter.identifier" />
+      <short value="Identifier bildet die Fallnummer ab" />
       <max value="1" />
       <type>
         <code value="Identifier" />
@@ -168,7 +169,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <description value="Beschreibung der Aufnahmeart" />
+        <description value="Beschreibung der Aufnahmeart (Erstbehandlung (EB), Folgebehandlung (FB))" />
         <valueSet value="https://fhir.dguv.de/ENLA/ValueSet/DGUV-ENLA-VS-Aufnahmeart" />
       </binding>
     </element>
@@ -205,8 +206,8 @@
     </element>
     <element id="Encounter.hospitalization.dischargeDisposition">
       <path value="Encounter.hospitalization.dischargeDisposition" />
-      <short value="Beschreibung des Entlassungsgrundes" />
-      <definition value="Beschreibung des Entlassungsgrund (nach Hause, in andere Rehabilitationsinstitution, etc.)." />
+      <short value="Beschreibung des Entlassungs- oder Verlegungsgrunds" />
+      <definition value="Beschreibung des Entlassungsgrunds (nach Hause, in andere Rehabilitationsinstitution, etc.)" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -233,16 +234,18 @@
       <binding>
         <strength value="required" />
         <description value="Entlassungsgrund" />
-        <valueSet value="https://fhir.dguv.de/ENLA/ValueSet/DGUV_ENLA_VS_Entlassungsgrund" />
+        <valueSet value="http://fhir.dguv.de/ENLA/ValueSet/DGUV-ENLA-VS-EntlassungsVerlegungsgrund" />
       </binding>
     </element>
     <element id="Encounter.hospitalization.dischargeDisposition.coding.system">
       <path value="Encounter.hospitalization.dischargeDisposition.coding.system" />
       <min value="1" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-EntlassungsVerlegungsgrund" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.hospitalization.dischargeDisposition.coding.code">
       <path value="Encounter.hospitalization.dischargeDisposition.coding.code" />
+      <short value="Numerisches Kürzel für den Entlassungs- oder Verlegungsgrund" />
       <min value="1" />
       <mustSupport value="true" />
     </element>

@@ -103,6 +103,7 @@
         </extension>
         <code value="http://hl7.org/fhirpath/System.String" />
       </type>
+      <mustSupport value="true" />
       <isSummary value="true" />
     </element>
     <element id="Coverage.meta">
@@ -3134,6 +3135,10 @@
     </element>
   </snapshot>
   <differential>
+    <element id="Coverage.id">
+      <path value="Coverage.id" />
+      <mustSupport value="true" />
+    </element>
     <element id="Coverage.extension">
       <path value="Coverage.extension" />
       <mustSupport value="true" />
