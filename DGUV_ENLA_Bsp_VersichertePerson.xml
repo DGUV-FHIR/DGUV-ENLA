@@ -10,7 +10,8 @@
       <h1>Hier finden Sie ein Beispiel einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
     </div>
   </text>
-  <extension url="http://hl7.org/fhir/ValueSet/iso3166-1-2">      
+  <extension url="http://hl7.org/fhir/StructureDefinition/patient-nationality">
+  <!--extension url="http://hl7.org/fhir/ValueSet/iso3166-1-2" -->      
     <extension url="code" >
         <valueCodeableConcept>
           <coding>
