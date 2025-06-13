@@ -15,14 +15,14 @@
     <subject>
         <reference value="Farad, Rudi/T995030511"/>
     </subject>
-    <effective>
-        <code>  
+    <effectiveTiming>
+        <code value="http://fhir.dguv.de/ENLA/CodingSystem/DGUV_ENLA_CS_MassnahmenZeitpunkt">  
             <coding>
                 <system value="http://fhir.dguv.de/ENLA/ValueSet/DGUV_ENLA_VS_MassnahmenZeitpunkt" />
                 <code value="Festzul" />
                 <display value="Durch Weiterbehandler festzulegen" />
             </coding>
         </code>
-    </effective>
-    <value string="BesondereMassnahme"/> 
+    </effectiveTiming>
+    <valueString value="BesondereMassnahme"/> 
 </Observation>
