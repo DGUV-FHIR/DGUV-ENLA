@@ -103,6 +103,7 @@
         </extension>
         <code value="http://hl7.org/fhirpath/System.String" />
       </type>
+      <mustSupport value="true" />
       <isSummary value="true" />
     </element>
     <element id="Coverage.meta">
@@ -293,8 +294,8 @@
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="0" />
-      <max value="*" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="DomainResource.extension" />
         <min value="0" />
@@ -333,12 +334,12 @@
     <element id="Coverage.extension:Familienversicherung">
       <path value="Coverage.extension" />
       <sliceName value="Familienversicherung" />
-      <short value="Optional Extensions Element" />
+      <short value="Beschreibung des Patientenverhältnisses zur Versicherung" />
       <definition value="Optional Extension Element - found in all resources." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="DomainResource.extension" />
@@ -599,6 +600,7 @@
       <path value="Coverage.extension.extension.value[x]" />
       <short value="Kennzeichnung als familien- (true) oder selbstversichert (false)" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
+      <comment value="Wenn hier &quot;true&quot; eingetragen ist, muss in Mitgliedsname.value[x] der Name des eigentlich Versicherten angegeben werden." />
       <min value="1" />
       <max value="1" />
       <base>
@@ -618,6 +620,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -662,6 +665,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -774,7 +778,8 @@
       <path value="Coverage.extension.extension.value[x]" />
       <short value="Name des Versicherten bei Familien(mit)versicherung des Patienten" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
-      <min value="0" />
+      <comment value="Nur wenn in Familienversichert.value[x] &quot;true&quot; eingetragen ist, muss hier zwingend der Name des eigentlich Versicherten angegeben werden" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Extension.value[x]" />
@@ -793,6 +798,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -1423,7 +1429,7 @@
     </element>
     <element id="Coverage.beneficiary">
       <path value="Coverage.beneficiary" />
-      <short value="Plan beneficiary" />
+      <short value="Verweis auf Patient / versorgte Person" />
       <definition value="The party who benefits from the insurance coverage; the patient when products and/or services are provided." />
       <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository." />
       <requirements value="This is the party who receives treatment for which the costs are reimbursed under the coverage." />
@@ -1566,7 +1572,7 @@
     </element>
     <element id="Coverage.beneficiary.reference">
       <path value="Coverage.beneficiary.reference" />
-      <short value="Literal reference, Relative, internal or absolute URL" />
+      <short value="Konkreter Verweis auf Patient / versorgte Person" />
       <definition value="A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources." />
       <comment value="Using absolute URLs provides a stable scalable approach suitable for a cloud/web context, while using relative/logical references provides a flexible approach suitable for use when trading across closed eco-system boundaries.   Absolute URLs do not need to point to a FHIR RESTful server, though this is the preferred approach. If the URL conforms to the structure &quot;/[type]/[id]&quot; then it should be assumed that the reference is to a FHIR RESTful server." />
       <min value="1" />
@@ -1883,8 +1889,8 @@
     </element>
     <element id="Coverage.payor">
       <path value="Coverage.payor" />
-      <short value="Kostenträger ist der Unfallversicherungsträger" />
-      <definition value="Die Kosten der Behandlung werden werden zum Zeitpunkt der Erstellung des ENLA dem jeweiligen Unfallversicherungsträger in Rechnung gestellt." />
+      <short value="Verweis auf den Unfallversicherungsträger als Kostenträger" />
+      <definition value="Die Kosten der Behandlung werden zum Zeitpunkt der Erstellung des ENLA dem jeweiligen Unfallversicherungsträger in Rechnung gestellt." />
       <comment value="May provide multiple identifiers such as insurance company identifier or business identifier (BIN number).&#xA;For selfpay it may provide multiple paying persons and/or organizations." />
       <requirements value="Need to identify the issuer to target for claim processing and for coordination of benefit processing." />
       <min value="1" />
@@ -2018,7 +2024,7 @@
     </element>
     <element id="Coverage.payor.reference">
       <path value="Coverage.payor.reference" />
-      <short value="Literal reference, Relative, internal or absolute URL" />
+      <short value="Konkreter Verweis auf den Unfallversicherungsträger als Kostenträger" />
       <definition value="A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources." />
       <comment value="Using absolute URLs provides a stable scalable approach suitable for a cloud/web context, while using relative/logical references provides a flexible approach suitable for use when trading across closed eco-system boundaries.   Absolute URLs do not need to point to a FHIR RESTful server, though this is the preferred approach. If the URL conforms to the structure &quot;/[type]/[id]&quot; then it should be assumed that the reference is to a FHIR RESTful server." />
       <min value="1" />
@@ -3134,13 +3140,21 @@
     </element>
   </snapshot>
   <differential>
+    <element id="Coverage.id">
+      <path value="Coverage.id" />
+      <mustSupport value="true" />
+    </element>
     <element id="Coverage.extension">
       <path value="Coverage.extension" />
+      <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Coverage.extension:Familienversicherung">
       <path value="Coverage.extension" />
       <sliceName value="Familienversicherung" />
+      <short value="Beschreibung des Patientenverhältnisses zur Versicherung" />
+      <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
@@ -3149,14 +3163,27 @@
       <sliceName value="Familienversichert" />
       <mustSupport value="true" />
     </element>
+    <element id="Coverage.extension:Familienversicherung.extension:Familienversichert.value[x]">
+      <path value="Coverage.extension.extension.value[x]" />
+      <comment value="Wenn hier &quot;true&quot; eingetragen ist, muss in Mitgliedsname.value[x] der Name des eigentlich Versicherten angegeben werden." />
+      <mustSupport value="true" />
+    </element>
     <element id="Coverage.extension:Familienversicherung.extension:Mitgliedsname">
       <path value="Coverage.extension.extension" />
       <sliceName value="Mitgliedsname" />
       <short value="Name des Mitglieds bei der Krankenkasse" />
       <definition value="Auszufüllen, wenn die verunfallte Person selbst nicht die versicherte Person ist." />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.extension:Familienversicherung.extension:Mitgliedsname.value[x]">
+      <path value="Coverage.extension.extension.value[x]" />
+      <comment value="Nur wenn in Familienversichert.value[x] &quot;true&quot; eingetragen ist, muss hier zwingend der Name des eigentlich Versicherten angegeben werden" />
+      <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Coverage.beneficiary">
       <path value="Coverage.beneficiary" />
+      <short value="Verweis auf Patient / versorgte Person" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson" />
@@ -3165,13 +3192,14 @@
     </element>
     <element id="Coverage.beneficiary.reference">
       <path value="Coverage.beneficiary.reference" />
+      <short value="Konkreter Verweis auf Patient / versorgte Person" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Coverage.payor">
       <path value="Coverage.payor" />
-      <short value="Kostenträger ist der Unfallversicherungsträger" />
-      <definition value="Die Kosten der Behandlung werden werden zum Zeitpunkt der Erstellung des ENLA dem jeweiligen Unfallversicherungsträger in Rechnung gestellt." />
+      <short value="Verweis auf den Unfallversicherungsträger als Kostenträger" />
+      <definition value="Die Kosten der Behandlung werden zum Zeitpunkt der Erstellung des ENLA dem jeweiligen Unfallversicherungsträger in Rechnung gestellt." />
       <max value="1" />
       <type>
         <code value="Reference" />
@@ -3181,6 +3209,7 @@
     </element>
     <element id="Coverage.payor.reference">
       <path value="Coverage.payor.reference" />
+      <short value="Konkreter Verweis auf den Unfallversicherungsträger als Kostenträger" />
       <min value="1" />
       <mustSupport value="true" />
     </element>

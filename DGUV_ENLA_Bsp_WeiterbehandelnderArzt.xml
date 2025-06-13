@@ -1,47 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Organization xmlns="http://hl7.org/fhir">
-    <id value="DGUV-ENLA-Bsp-WeiterbehandelnderArzt" />
+<PractitionerRole xmlns="http://hl7.org/fhir">
+    <id value="DGUV-ENLA-Bsp-WeiterbehandelnderArzt"/>
     <meta>
-        <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-WeiterbehandelnderArzt" />
+        <profile value="http://fhir.dguv.de/ENLA/PractitionerRole/DGUV-ENLA-PR-WeiterbehandelnderArzt" />
     </meta>
-    <identifier>
-        <type>
-            <coding>
-                <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
-                <code value="XX" />
-                <display value="Organization identifier" />
-            </coding>
-        </type>
-        <system value="http://fhir.de/sid/arge-ik/iknr" />
-        <value value="123456789" />
-    </identifier>
-    <!--identifier>
-        <type>
-            <coding>
-                <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_ENLA_identifier_type|1.7.0" />
-                <code value="KSN" />
-            </coding>
-        </type>
-        <system value="http://fhir.de/sid/dkgev/standortnummer" />
-        <value value="243234999" />
-    </identifier-->
-    <name value="Unfallkrankenhaus Berlin"/>
-    <telecom>
-        <system value="phone"/>
-        <value value="+1-1234565789"/>
-    </telecom>
-    <address>
-        <type value="both"/>
-        <line value="Musterstraße 1">
-            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
-                <valueString value="Musterstraße"/>
-            </extension>
-            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
-                <valueString value="1"/>
-            </extension>
-        </line>
-        <city value="Berlin"/>
-        <postalCode value="11111"/>
-        <country value="DE"/>
-    </address>
-</Organization>
+    <practitioner>
+        <reference value="Practitioner/Arzt-14" />
+    </practitioner>
+    <organization>
+        <reference value="Organization/WeiterbehandelndeOrganisation-cf042e44-086a-4d51-9c77-172f9a972e3b" />
+    </organization>
+    <code>
+        <coding>
+            <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_Base_Role_Care" />
+            <version value="1.6.0"/>
+            <code value="FA" />
+            <display value="Fachärztin/-arzt" />
+        </coding>
+    </code>
+    <specialty>
+        <coding>
+            <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BAR2_ARZTNRFACHGRUPPE" />
+            <version value="1.03"/>
+            <code value="57" />
+            <display value="Physikalische und Rehabilitative Medizin/Physiotherapie" />
+        </coding>
+    </specialty>
+</PractitionerRole>

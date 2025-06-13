@@ -8,6 +8,17 @@
         <type>
             <coding>
                 <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+                <code value="BSNR" />
+                <display value="Primary physician office number" />
+            </coding>
+        </type>
+        <system value="https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR" />
+        <value value="012300004" />
+    </identifier>
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
                 <code value="XX" />
                 <display value="Organization identifier" />
             </coding>
@@ -15,33 +26,36 @@
         <system value="http://fhir.de/sid/arge-ik/iknr" />
         <value value="123456789" />
     </identifier>
-    <!--identifier>
-        <type>
-            <coding>
-                <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_ENLA_identifier_type|1.7.0" />
-                <code value="KSN" />
-            </coding>
-        </type>
-        <system value="http://fhir.de/sid/dkgev/standortnummer" />
-        <value value="243234999" />
-    </identifier-->
-    <name value="Unfallkrankenhaus Berlin"/>
+    <name value="Praxis Dr. med. Hans Peter Haas" />
     <telecom>
-        <system value="phone"/>
-        <value value="+1-1234565789"/>
-    </telecom>
+		<system value="phone"/>
+		<value value="0049 458 66 888"/>
+	</telecom>
     <address>
-        <type value="both"/>
-        <line value="Musterstraße 1">
-            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
-                <valueString value="Musterstraße"/>
-            </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct">
+            <valueString value="Mitte" />
+        </extension>
+        <type value="both" />
+        <line value="Musterstr. 99">
             <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
-                <valueString value="1"/>
+                <valueString value="99" />
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                <valueString value="Musterstr." />
             </extension>
         </line>
-        <city value="Berlin"/>
-        <postalCode value="11111"/>
-        <country value="DE"/>
+        <line value="Mitte" />
+        <city value="Dortmund" />
+        <postalCode value="44227" />
+        <country value="DE" />
+    </address>
+    <address>
+        <type value="postal" />
+        <line value="45678">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox">
+                <valueString value="45678" />
+            </extension>
+        </line>
+        <city value="Dortmund" />
     </address>
 </Organization>
