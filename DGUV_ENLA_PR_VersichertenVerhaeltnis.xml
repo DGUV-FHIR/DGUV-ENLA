@@ -1158,6 +1158,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isModifier value="true" />
       <isModifierReason value="This element is labelled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid" />
       <isSummary value="true" />
@@ -3179,6 +3180,10 @@
       <path value="Coverage.extension.extension.value[x]" />
       <comment value="Nur wenn in Familienversichert.value[x] &quot;true&quot; eingetragen ist, muss hier zwingend der Name des eigentlich Versicherten angegeben werden" />
       <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.status">
+      <path value="Coverage.status" />
       <mustSupport value="true" />
     </element>
     <element id="Coverage.beneficiary">
