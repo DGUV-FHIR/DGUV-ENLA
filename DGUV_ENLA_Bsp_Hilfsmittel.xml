@@ -15,20 +15,23 @@
     <subject>
         <reference value="Farad, Rudi/T995030511"/>
     </subject>
-    <effective>
-        <Timing>
-            <dayOfWeek value="Durch Weiterbehandler festzulegen" />
-        </Timing>
-    </effective>
-    <value>  
+    <effectiveTiming>
+        <code  value="http://fhir.dguv.de/ENLA/CodingSystem/DGUV_ENLA_CS_MassnahmenZeitpunkt">
+            <coding>
+                <system value="http://fhir.dguv.de/ENLA/ValueSet/DGUV_ENLA_VS_MassnahmenZeitpunkt" />
+                <code value="Festzul" />
+                <display value="Durch Weiterbehandler festzulegen" />
+            </coding>
+        </code>
+    </effectiveTiming>
+    <valueCodeableConcept>  
         <coding>
             <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-IstVerordnet">
-                <valueString value="true"/>
+                <valueBoolean value="true"/>
             </extension>
             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Hilfsmittel" />
             <code value="PHM" />
             <display value="Pflegehilfsmittel" />
         </coding>
-    </value>
-    <value string="Aspen Collar, Wechselpolster für Collar-Bandage, bereits verordnet" />
+    </valueCodeableConcept>
 </Observation>

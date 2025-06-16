@@ -23,12 +23,12 @@
         </coding>
       </form>
       <ingredient>
-        <item>
+        <itemCodeableConcept>
           <coding>
             <system value= "http://fhir.de/CodeSystem/ifa/pzn"/>
             <code value="09999011"/>
           </coding>
-        </item>
+        </itemCodeableConcept>
       </ingredient>
       <batch>
         <lotNumber value="1234"/>
