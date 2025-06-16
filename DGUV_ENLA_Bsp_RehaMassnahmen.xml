@@ -9,13 +9,13 @@
         <coding>
             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
             <code value="RM" />
-            <display value="RehaMassnahmen" />
+            <display value="RehaMaßnahmen" />
         </coding>
     </code>
     <subject>
         <reference value="Farad, Rudi/T995030511"/>
     </subject>
-    <effective>
+    <effectiveTiming>
         <code>  
             <coding>
                 <system value="http://fhir.dguv.de/ENLA/ValueSet/DGUV_ENLA_VS_MassnahmenZeitpunkt" />
@@ -23,15 +23,15 @@
                 <display value="Durch Weiterbehandler festzulegen" />
             </coding>
         </code>
-    </effective>
-    <value>  
+    </effectiveTiming>
+    <valueCodeableConcept>  
         <coding>
                 <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-IstVerordnet">
-                   <valueString value="true"/>
+                   <valueBoolean value="true"/>
                 </extension>
             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-RehaMassnahmen" />
             <code value="EAP" />
             <display value="Erweiterte Ambulante Physiotherapie (EAP)" />
         </coding>
-    </value>
+    </valueCodeableConcept>
 </Observation>
