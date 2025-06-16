@@ -12,14 +12,14 @@
       </code>
       <status value="active"/>
       <ingredient>
-        <item>
+        <itemCodeableConcept>
           <coding>
            <system value="http://fhir.de/CodeSystem/ifa/pzn"/>
            <version value="1.0"/>
            <code value="98765432"/>
            <display value="Paracetamol"/>
          </coding>
-       </item>
+       </itemCodeableConcept>
       </ingredient>
       <batch>
         <lotNumber value="1234"/>
