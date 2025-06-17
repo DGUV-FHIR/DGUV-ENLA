@@ -12,7 +12,7 @@
                 <display value="Lifelong physician number" />
             </coding>
         </type>
-        <system value="https://fhir.kbv.de/NamingSystem/KBV_NS_Base_ANR" />
+        <system value="https://fhir.kbv.de/NamingSystem/KBV-NS-Base-ANR" />
         <value value="123456799" />
     </identifier>
     <name>
