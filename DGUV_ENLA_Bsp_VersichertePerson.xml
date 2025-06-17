@@ -11,7 +11,7 @@
     </div>
   </text>
   <extension url="http://hl7.org/fhir/StructureDefinition/patient-nationality">
-  <!--extension url="http://hl7.org/fhir/ValueSet/iso3166-1-2" -->      
+  <!--extension url="http://hl7.org/fhir/ValueSet/iso3166-1-2|4.0.1" -->      
     <extension url="code" >
         <valueCodeableConcept>
           <coding>

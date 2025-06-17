@@ -600,7 +600,7 @@
       <path value="Observation.status" />
       <short value="registered | preliminary | final | amended +" />
       <definition value="The status of the result value." />
-      <comment value="Fixed value = “final”, sobald dem Datenschutz zugestimmt wurde." />
+      <comment value="Zu entfernen (auch in Basis_PR_Datenschutz): Fixed value = “final”, sobald dem Datenschutz zugestimmt wurde." />
       <requirements value="Need to track the status of individual results. Some results are finalized before the whole report is finalized." />
       <min value="1" />
       <max value="1" />
@@ -612,6 +612,7 @@
       <type>
         <code value="code" />
       </type>
+      <fixedCode value="final" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -1725,7 +1726,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -1792,7 +1792,7 @@
     </element>
     <element id="Observation.performer">
       <path value="Observation.performer" />
-      <short value="Verweis auf Leistungserbringer" />
+      <short value="Verweis auf Datenschutzhinweisgeber" />
       <definition value="Who was responsible for asserting the observed value as &quot;true&quot;." />
       <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository." />
       <requirements value="May give a degree of confidence in the observation and also indicates where follow-up questions should be directed." />
@@ -3680,8 +3680,8 @@
       <short value="Related measurements the observation is made from" />
       <definition value="The target resource that represents a measurement from which this observation value is derived. For example, a calculated anion gap or a fetal measurement based on an ultrasound image." />
       <comment value="All the reference choices that are listed in this element can represent clinical observations and other measurements that may be the source for a derived value.  The most common reference will be another Observation.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below." />
-      <min value="1" />
-      <max value="1" />
+      <min value="0" />
+      <max value="*" />
       <base>
         <path value="Observation.derivedFrom" />
         <min value="0" />
@@ -3713,7 +3713,6 @@
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Reference" />
       </constraint>
-      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -4176,7 +4175,7 @@
         <min value="0" />
         <max value="*" />
       </base>
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
+      <contentReference value="#Observation.referenceRange" />
       <mapping>
         <identity value="v2" />
         <map value="OBX.7" />
@@ -4194,6 +4193,8 @@
     </element>
     <element id="Observation.status">
       <path value="Observation.status" />
+      <comment value="Zu entfernen (auch in Basis_PR_Datenschutz): Fixed value = “final”, sobald dem Datenschutz zugestimmt wurde." />
+      <fixedCode value="final" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.code">
@@ -4242,12 +4243,9 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Observation.effective[x]">
-      <path value="Observation.effective[x]" />
-      <mustSupport value="true" />
-    </element>
     <element id="Observation.performer">
       <path value="Observation.performer" />
+      <short value="Verweis auf Datenschutzhinweisgeber" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringer" />
@@ -4263,12 +4261,6 @@
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
       <short value="Kennzeichen bzgl. Datenschutzhinweisgebung" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.derivedFrom">
-      <path value="Observation.derivedFrom" />
-      <min value="1" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
   </differential>

@@ -1,36 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
-    <id value="DGUV_ENLA_VS_Aufnahmeart" />
-    <url value="http://fhir.dguv.de/ENLA/ValueSet/DGUV-ENLA-VS-Aufnahmeart" />
-    <version value="1.0.0" />
-    <name value="DGUV_ENLA_VS_Aufnahmeart" />
-    <title value="Entlassungsgrund" />
-    <status value="draft" />
-    <experimental value="false" />
-    <publisher value="DGUV (Deutsche Gesellschaft Unfallversicherung e.V.)" />
-    <contact>
-        <telecom>
-            <system value="url" />
-            <value value="https://www.dguv.de" />
-        </telecom>
-    </contact>
-    <description value="Dieses Valueset enth&#228;lt die Codes zur Beschreibung der Aufnahmeart." />
-    <immutable value="false" />
-    <compose>
-        <include>
-            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Aufnahmeart" />
-            <version value="0.9" />
-            
-			<concept>
+  <id value="DGUV-ENLA-VS-Aufnahmeart" />
+  <url value="http://fhir.dguv.de/ENLA/ValueSet/DGUV-ENLA-VS-Aufnahmeart" />
+  <version value="1.0.0" />
+  <name value="DGUV_ENLA_VS_Aufnahmeart" />
+  <title value="Aufnahmeart" />
+  <status value="draft" />
+  <experimental value="false" />
+  <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="https://www.dguv.de" />
+    </telecom>
+  </contact>
+  <description value="Dieses Valueset enthält die Codes zur Beschreibung der Aufnahmeart." />
+  <compose>
+    <include>
+      <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Aufnahmeart" />
+      <version value="0.9" />
+      <concept>
         <code value="EB" />
         <display value="Erstbehandlung" />
-    </concept>
-          
-    <concept>
+      </concept>
+      <concept>
         <code value="FB" />
         <display value="Folgebehandlung" />
-    </concept>
-    
-        </include>
-    </compose>
-    
+      </concept>
+    </include>
+  </compose>
 </ValueSet>

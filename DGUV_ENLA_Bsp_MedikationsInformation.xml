@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MedicationStatement xmlns="http://hl7.org/fhir">
-    <id value="DGUV-ENLA-PR-MedikationsInformation" />
+    <id value="DGUV-ENLA-Bsp-MedikationsInformation" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/MedicationStatement/DGUV-ENLA-PR-MedikationsInformation" />
     </meta>

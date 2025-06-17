@@ -15,23 +15,23 @@
     <subject>
         <reference value="Farad, Rudi/T995030511"/>
     </subject>
-    <effective>
-        <code>  
+    <effectiveTiming>
+        <code  value="http://fhir.dguv.de/ENLA/CodingSystem/DGUV-ENLA-CS-MassnahmenZeitpunkt">
             <coding>
-                <system value="http://fhir.dguv.de/ENLA/ValueSet/DGUV_ENLA_VS_MassnahmenZeitpunkt" />
+                <system value="http://fhir.dguv.de/ENLA/ValueSet/DGUV-ENLA-VS-MassnahmenZeitpunkt" />
                 <code value="Festzul" />
                 <display value="Durch Weiterbehandler festzulegen" />
             </coding>
         </code>
-    </effective>
-    <value>  
+    </effectiveTiming>
+    <valueCodeableConcept>  
         <coding>
             <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-IstVerordnet">
-                <valueString value="true"/>
+                <valueBoolean value="true"/>
             </extension>
             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Heilmittel" />
             <code value="PHYSIO" />
             <display value="Physiotherapie" />
         </coding>
-    </value>
+    </valueCodeableConcept>
 </Observation>
