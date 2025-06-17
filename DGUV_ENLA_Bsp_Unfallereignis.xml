@@ -41,7 +41,7 @@
       <coding>
         <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-UnfallereignisComponents"/>
         <code value="05"/>
-        <display value="Beruf"/>
+        <display value="Beschäftigt als"/>
       </coding>
     </code>
     <valueString value="Schrittmacher"/>
