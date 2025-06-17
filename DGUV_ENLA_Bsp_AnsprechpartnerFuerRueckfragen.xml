@@ -18,4 +18,8 @@
     <organization>
         <reference value="Organization/BehandelndeEinrichtung-234" />
     </organization>
+    <telecom>
+        <system value="phone"/>
+        <value value="+1-1234565789"/>
+    </telecom>
 </PractitionerRole>
