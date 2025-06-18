@@ -404,7 +404,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <short value="Identifies this organization  across multiple systems" />
+      <short value="Identifikator für die Krankenkasse" />
       <definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems." />
       <requirements value="Organizations are known by a variety of ids. Some institutions maintain several, and most collect identifiers for exchange with other organizations concerning the organization." />
       <min value="0" />
@@ -649,7 +649,7 @@
     </element>
     <element id="Organization.identifier:Institutionskennzeichen.type">
       <path value="Organization.identifier.type" />
-      <short value="Description of identifier" />
+      <short value="Kennzeichnung Identifikator als Institutionskennzeichen (IKNR)" />
       <definition value="A coded type for the identifier that can be used to determine which identifier to use for a specific purpose." />
       <comment value="This element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage.   Where the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type." />
       <requirements value="Allows users to make use of identifiers when the identifier system is not known." />
@@ -802,6 +802,10 @@
       <type>
         <code value="Coding" />
       </type>
+      <patternCoding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+        <code value="XX" />
+      </patternCoding>
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -918,7 +922,7 @@
     </element>
     <element id="Organization.identifier:Institutionskennzeichen.type.coding.system">
       <path value="Organization.identifier.type.coding.system" />
-      <short value="Identity of the terminology system" />
+      <short value="Genutztes Terminologiesystem" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
       <comment value="The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously." />
       <requirements value="Need to be unambiguous about the source of the definition of the symbol." />
@@ -932,6 +936,7 @@
       <type>
         <code value="uri" />
       </type>
+      <patternUri value="http://terminology.hl7.org/CodeSystem/v2-0203" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -1004,7 +1009,7 @@
     </element>
     <element id="Organization.identifier:Institutionskennzeichen.type.coding.code">
       <path value="Organization.identifier.type.coding.code" />
-      <short value="Symbol in syntax defined by the system" />
+      <short value="Code für Identifikatortyp" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to refer to a particular code in the system." />
@@ -1018,6 +1023,7 @@
       <type>
         <code value="code" />
       </type>
+      <patternCode value="XX" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -1183,7 +1189,7 @@
     </element>
     <element id="Organization.identifier:Institutionskennzeichen.system">
       <path value="Organization.identifier.system" />
-      <short value="The namespace for the identifier value" />
+      <short value="Menge möglicher IKNRs" />
       <definition value="Establishes the namespace for the value - that is, a URL that describes a set values that are unique." />
       <comment value="Identifier.system is always case sensitive." />
       <requirements value="There are many sets  of identifiers.  To perform matching of two identifiers, we need to know what set we're dealing with. The system identifies a particular set of unique identifiers." />
@@ -1232,7 +1238,7 @@
     </element>
     <element id="Organization.identifier:Institutionskennzeichen.value">
       <path value="Organization.identifier.value" />
-      <short value="The value that is unique" />
+      <short value="Konkrete IKNR" />
       <definition value="The portion of the identifier typically relevant to the user and which is unique within the context of the system." />
       <comment value="If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](extension-rendered-value.html). Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe." />
       <min value="1" />
@@ -1400,7 +1406,7 @@
     <element id="Organization.identifier:Telematik-ID">
       <path value="Organization.identifier" />
       <sliceName value="Telematik-ID" />
-      <short value="An identifier intended for computation" />
+      <short value="Identifikationsnummer in Telematikinfrastruktur" />
       <definition value="An identifier - identifies some entity uniquely and unambiguously. Typically this is used for business identifiers." />
       <requirements value="Organizations are known by a variety of ids. Some institutions maintain several, and most collect identifiers for exchange with other organizations concerning the organization." />
       <min value="0" />
@@ -1584,7 +1590,7 @@
     </element>
     <element id="Organization.identifier:Telematik-ID.type">
       <path value="Organization.identifier.type" />
-      <short value="Description of identifier" />
+      <short value="Kennzeichnung Identifikator als Identifikationsnummer in Telematikinfrastruktur" />
       <definition value="A coded type for the identifier that can be used to determine which identifier to use for a specific purpose." />
       <comment value="This element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage.   Where the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type." />
       <requirements value="Allows users to make use of identifiers when the identifier system is not known." />
@@ -6927,6 +6933,7 @@
     </element>
     <element id="Organization.identifier">
       <path value="Organization.identifier" />
+      <short value="Identifikator für die Krankenkasse" />
       <max value="2" />
       <mustSupport value="true" />
     </element>
@@ -6938,6 +6945,7 @@
     </element>
     <element id="Organization.identifier:Institutionskennzeichen.type">
       <path value="Organization.identifier.type" />
+      <short value="Kennzeichnung Identifikator als Institutionskennzeichen (IKNR)" />
       <min value="1" />
       <patternCodeableConcept>
         <coding>
@@ -6950,34 +6958,46 @@
       <path value="Organization.identifier.type.coding" />
       <min value="1" />
       <max value="1" />
+      <patternCoding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+        <code value="XX" />
+      </patternCoding>
       <mustSupport value="true" />
     </element>
     <element id="Organization.identifier:Institutionskennzeichen.type.coding.system">
       <path value="Organization.identifier.type.coding.system" />
+      <short value="Genutztes Terminologiesystem" />
       <min value="1" />
+      <patternUri value="http://terminology.hl7.org/CodeSystem/v2-0203" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.identifier:Institutionskennzeichen.type.coding.code">
       <path value="Organization.identifier.type.coding.code" />
+      <short value="Code für Identifikatortyp" />
       <min value="1" />
+      <patternCode value="XX" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.identifier:Institutionskennzeichen.system">
       <path value="Organization.identifier.system" />
+      <short value="Menge möglicher IKNRs" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.identifier:Institutionskennzeichen.value">
       <path value="Organization.identifier.value" />
+      <short value="Konkrete IKNR" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.identifier:Telematik-ID">
       <path value="Organization.identifier" />
       <sliceName value="Telematik-ID" />
+      <short value="Identifikationsnummer in Telematikinfrastruktur" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.identifier:Telematik-ID.type">
       <path value="Organization.identifier.type" />
+      <short value="Kennzeichnung Identifikator als Identifikationsnummer in Telematikinfrastruktur" />
       <min value="1" />
       <patternCodeableConcept>
         <coding>
