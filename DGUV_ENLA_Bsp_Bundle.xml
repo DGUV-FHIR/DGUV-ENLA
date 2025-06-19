@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bundle xmlns="http://hl7.org/fhir">
+    <id value="DGUV-ENLA-Bsp-Bundle" />
+    <meta>
+        <profile value="http://fhir.dguv.de/ENLA/Bundle/DGUV-ENLA-PR-Bundle" />
+    </meta>
+    <type value="document" />
+    <timestamp value="2025-06-10T12:00:00+01:00" />
+    <entry>
+        <resource>
+            <SonstigeBemerkungen>
+
+            </SonstigeBemerkungen>
+        </resource>
+    </entry>
+    <signature>
+    </signature>
+</Bundle>
