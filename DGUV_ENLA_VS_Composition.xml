@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="DGUV-ENLA-VS-Composition" />
+  <url value="http://fhir.dguv.de/ENLA/ValueSet/DGUV-ENLA-VS-Composition" />
+  <version value="1.0.0" />
+  <name value="DGUV_ENLA_VS_Composition" />
+  <title value="Composition" />
+  <status value="draft" />
+  <experimental value="false" />
+  <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="https://www.dguv.de" />
+    </telecom>
+  </contact>
+  <description value="Dieses Valueset enthält die Codes zur Diskriminierung der Dokumente in der Composition." />
+  <compose>
+    <include>
+        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Composition" />
+        <version value="0.1" />
+        <concept>
+            <code value="Unfallversicherungstraeger" />
+            <display value="Dokument Unfallversicherungstraeger" />
+        </concept>
+        <concept>
+            <code value="Krankenkasse" />
+            <display value="Krankenkasse" />
+        </concept>
+        <concept>
+            <code value="VersicherungsVerhaeltnis" />
+            <display value="VersicherungsVerhaeltnis" />
+        </concept>
+        <concept>
+            <code value="Pflegekasse" />
+            <display value="Pflegekasse" />
+        </concept>
+        <concept>
+            <code value="Unfallbetrieb" />
+            <display value="Unfallbetrieb" />
+        </concept>
+        <concept>
+            <code value="DiagnoseFreitext" />
+            <display value="DiagnoseFreitext" />
+        </concept>
+        <concept>
+            <code value="DiagnoseStrukturiert" />
+            <display value="DiagnoseStrukturiert" />
+        </concept>
+        <concept>
+            <code value="Therapie" />
+            <display value="Therapie" />
+        </concept>
+        <concept>
+            <code value="Unfallereignis" />
+            <display value="Unfallereignis" />
+        </concept>
+        <concept>
+            <code value="Aufnahmebefunde" />
+            <display value="Aufnahmebefunde" />
+        </concept>
+        <concept>
+            <code value="Behandlungsverlauf" />
+            <display value="Behandlungsverlauf" />
+        </concept>
+        <concept>
+            <code value="Konsiliarbefunde" />
+            <display value="Konsiliarbefunde" />
+        </concept>
+        <concept>
+            <code value="Entlassbefunde" />
+            <display value="Entlassbefunde" />
+        </concept>
+        <concept>
+            <code value="DokumentenReferenz" />
+            <display value="DokumentenReferenz" />
+        </concept>
+        <concept>
+            <code value="Therapieempfehlung" />
+            <display value="Therapieempfehlung" />
+        </concept>
+        <concept>
+            <code value="MedikationsInformation" />
+            <display value="MedikationsInformation" />
+        </concept>
+        <concept>
+            <code value="MedikationWirkstoff" />
+            <display value="MedikationWirkstoff" />
+        </concept>
+        <concept>
+            <code value="MedikationRezeptur" />
+            <display value="MedikationRezeptur" />
+        </concept>
+        <concept>
+            <code value="MedikationArzneimittel" />
+            <display value="MedikationArzneimittel" />
+        </concept>
+        <concept>
+            <code value="WeiterbehandelnderArzt" />
+            <display value="WeiterbehandelnderArzt" />
+        </concept>
+        <concept>
+            <code value="WeiterbehandelndeOrganisation" />
+            <display value="WeiterbehandelndeOrganisation" />
+        </concept>
+        <concept>
+            <code value="RehaMassnahmen" />
+            <display value="RehaMassnahmen" />
+        </concept>
+        <concept>
+            <code value="Heilmittel" />
+            <display value="Heilmittel" />
+        </concept>
+        <concept>
+            <code value="Hilfsmittel" />
+            <display value="Hilfsmittel" />
+        </concept>
+        <concept>
+            <code value="besonderemassnahmen" />
+            <display value="BesondereMassnahmen" />
+        </concept>
+        <concept>
+            <code value="Arbeitsunfaehigkeit" />
+            <display value="Arbeitsunfaehigkeit" />
+        </concept>
+        <concept>
+            <code value="PrognoseWiederaufnahmeTaetigkeit" />
+            <display value="PrognoseWiederaufnahmeTaetigkeit" />
+        </concept>
+        <concept>
+            <code value="stufenweiseWiedereingliederung" />
+            <display value="stufenweiseWiedereingliederung" />
+        </concept>
+        <concept>
+            <code value="Datenschutz" />
+            <display value="Datenschutz" />
+        </concept>
+        <concept>
+            <code value="DArzt" />
+            <display value="DArzt" />
+        </concept>
+        <concept>
+            <code value="DArztOrganisation" />
+            <display value="DArztOrganisation" />
+        </concept>
+        <concept>
+            <code value="Leistungserbringer" />
+            <display value="Leistungserbringer" />
+        </concept>
+        <concept>
+            <code value="BehandelndeEinrichtung" />
+            <display value="BehandelndeEinrichtung" />
+        </concept>
+        <concept>
+            <code value="AnsprechpartnerFuerRueckfragen" />
+            <display value="AnsprechpartnerFuerRueckfragen" />
+        </concept>
+    </include>
+  </compose>
+</ValueSet>
