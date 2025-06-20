@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
-  <id value="DGUV-ENLA-VS-Aufnahmeart" />
-  <url value="http://fhir.dguv.de/ENLA/ValueSet/DGUV-ENLA-VS-Aufnahmeart" />
+  <id value="DGUV-ENLA-VS-Composition" />
+  <url value="http://fhir.dguv.de/ENLA/ValueSet/DGUV-ENLA-VS-Composition" />
   <version value="1.0.0" />
-  <name value="DGUV_ENLA_VS_Aufnahmeart" />
-  <title value="Aufnahmeart" />
+  <name value="DGUV_ENLA_VS_Composition" />
+  <title value="Composition" />
   <status value="draft" />
   <experimental value="false" />
   <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
@@ -14,11 +14,11 @@
       <value value="https://www.dguv.de" />
     </telecom>
   </contact>
-  <description value="Dieses Valueset enthält die Codes zur Beschreibung der Aufnahmeart." />
+  <description value="Dieses Valueset enthält die Codes zur Diskriminierung der Dokumente in der Composition." />
   <compose>
     <include>
-      <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Aufnahmeart" />
-      <version value="0.9" />
+        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Composition" />
+        <version value="1.0.0" />
     </include>
   </compose>
 </ValueSet>

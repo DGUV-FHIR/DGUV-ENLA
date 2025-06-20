@@ -19,18 +19,19 @@
     <subject>
         <reference value="aperson/431924348" />
     </subject>
+    <date value="2025-06-10T11:50:00+01:00" />
     <author>
         <reference value="Ersteller Entlassbericht/4324321" />
     </author>
     <title value="Mein neuer Entlassbericht" />
-    <section value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Unfallversicherungstraeger">
+    <section>
         <entry>
-            <reference value="#Unfallversicherungstraeger" />
+            <reference value="Unfallversicherungstraeger" />
         </entry>
     </section>
-    <section value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Krankenkasse">
-        <entry >
-            <reference value="#Krankenkasse" />
+    <section> 
+        <entry value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Krankenkasse">
+            <reference value="Krankenkasse" />
         </entry>
     </section>
     <section>
