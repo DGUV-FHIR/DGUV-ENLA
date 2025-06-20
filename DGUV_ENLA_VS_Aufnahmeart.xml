@@ -19,14 +19,6 @@
     <include>
       <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Aufnahmeart" />
       <version value="0.9" />
-      <concept>
-        <code value="EB" />
-        <display value="Erstbehandlung" />
-      </concept>
-      <concept>
-        <code value="FB" />
-        <display value="Folgebehandlung" />
-      </concept>
     </include>
   </compose>
 </ValueSet>
