@@ -8,9 +8,25 @@
     <timestamp value="2025-06-10T12:00:00+01:00" />
     <entry>
         <resource>
-            <SonstigeBemerkungen>
-
-            </SonstigeBemerkungen>
+            <extension>
+                <SonstigeBemerkungen>
+                    <url value="" />
+                </SonstigeBemerkungen>
+            </extension>
+            <status value"preliminary" />
+            <type>
+                <coding>
+                    <sytem value="" />
+                    <code value="" />
+                    <display value="" />
+                </coding>
+            </type>
+            <subject>
+                <reference value="" />
+            </subject>
+            <date value="2025-06-10T11:40:00+01:00" />
+            <author value="" />
+            <title value="" />
         </resource>
     </entry>
     <signature>
