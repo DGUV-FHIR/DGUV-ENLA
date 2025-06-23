@@ -600,7 +600,7 @@
       <path value="Observation.status" />
       <short value="registered | preliminary | final | amended +" />
       <definition value="The status of the result value." />
-      <comment value="Zu entfernen (auch in Basis_PR_Datenschutz): Fixed value = “final”, sobald dem Datenschutz zugestimmt wurde." />
+      <comment value="Fixed value = “final”, weil ein Entlassungsbericht (ENLA) nach seiner Erstellung nicht mehr geändert wird." />
       <requirements value="Need to track the status of individual results. Some results are finalized before the whole report is finalized." />
       <min value="1" />
       <max value="1" />
@@ -4175,7 +4175,7 @@
         <min value="0" />
         <max value="*" />
       </base>
-      <contentReference value="#Observation.referenceRange" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Observation#Observation.referenceRange" />
       <mapping>
         <identity value="v2" />
         <map value="OBX.7" />
@@ -4193,7 +4193,7 @@
     </element>
     <element id="Observation.status">
       <path value="Observation.status" />
-      <comment value="Zu entfernen (auch in Basis_PR_Datenschutz): Fixed value = “final”, sobald dem Datenschutz zugestimmt wurde." />
+      <comment value="Fixed value = “final”, weil ein Entlassungsbericht (ENLA) nach seiner Erstellung nicht mehr geändert wird." />
       <fixedCode value="final" />
       <mustSupport value="true" />
     </element>

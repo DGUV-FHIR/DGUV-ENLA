@@ -805,6 +805,7 @@
       <patternCoding>
         <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
         <code value="XX" />
+        <display value="Organization identifier" />
       </patternCoding>
       <condition value="ele-1" />
       <constraint>
@@ -1057,7 +1058,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Organization.identifier.type.coding.display" />
-      <short value="Representation defined by the system" />
+      <short value="Bezeichnung für Identifikatortyp" />
       <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
@@ -1071,6 +1072,7 @@
       <type>
         <code value="string" />
       </type>
+      <patternString value="Organization identifier" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -1080,6 +1082,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -1743,6 +1746,11 @@
       <type>
         <code value="Coding" />
       </type>
+      <patternCoding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+        <code value="PRN" />
+        <display value="Provider number" />
+      </patternCoding>
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -1859,7 +1867,7 @@
     </element>
     <element id="Organization.identifier:Telematik-ID.type.coding.system">
       <path value="Organization.identifier.type.coding.system" />
-      <short value="Identity of the terminology system" />
+      <short value="Genutztes Terminologiesystem" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
       <comment value="The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously." />
       <requirements value="Need to be unambiguous about the source of the definition of the symbol." />
@@ -1873,6 +1881,7 @@
       <type>
         <code value="uri" />
       </type>
+      <patternUri value="http://terminology.hl7.org/CodeSystem/v2-0203" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -1945,7 +1954,7 @@
     </element>
     <element id="Organization.identifier:Telematik-ID.type.coding.code">
       <path value="Organization.identifier.type.coding.code" />
-      <short value="Symbol in syntax defined by the system" />
+      <short value="Code für Identifikatortyp" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to refer to a particular code in the system." />
@@ -1959,6 +1968,7 @@
       <type>
         <code value="code" />
       </type>
+      <patternCode value="PRN" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -1992,7 +2002,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Organization.identifier.type.coding.display" />
-      <short value="Representation defined by the system" />
+      <short value="Bezeichnung für Identifikatortyp" />
       <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
@@ -2006,6 +2016,7 @@
       <type>
         <code value="string" />
       </type>
+      <patternString value="Provider number" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -2015,6 +2026,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -2124,7 +2136,7 @@
     </element>
     <element id="Organization.identifier:Telematik-ID.system">
       <path value="Organization.identifier.system" />
-      <short value="The namespace for the identifier value" />
+      <short value="Menge möglicher Telematik-IDs" />
       <definition value="Establishes the namespace for the value - that is, a URL that describes a set values that are unique." />
       <comment value="Identifier.system is always case sensitive." />
       <requirements value="There are many sets  of identifiers.  To perform matching of two identifiers, we need to know what set we're dealing with. The system identifies a particular set of unique identifiers." />
@@ -2173,7 +2185,7 @@
     </element>
     <element id="Organization.identifier:Telematik-ID.value">
       <path value="Organization.identifier.value" />
-      <short value="The value that is unique" />
+      <short value="Konkrete Telematik-ID" />
       <definition value="The portion of the identifier typically relevant to the user and which is unique within the context of the system." />
       <comment value="If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](extension-rendered-value.html). Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe." />
       <min value="1" />
@@ -2531,7 +2543,7 @@
       <path value="Organization.telecom" />
       <short value="Angaben zu bestehenden Kontaktmöglichkeiten. (Telefon, Fax, E-Mail usw.)" />
       <definition value="Details for all kinds of technology mediated contact points for a person or organization, including telephone, email, etc." />
-      <comment value="The use code 'home' is not to be used. Note that these contacts are not the contact details of people who are employed by or represent the organization, but official contacts for the organization itself." />
+      <comment value="Basis-Profil wird beim Typ nicht durch ein ENLA-Profil ersetzt, da es sich hier nur um ein erweitertes Attribut handelt." />
       <requirements value="Human contact for the organization." />
       <min value="0" />
       <max value="1" />
@@ -2728,7 +2740,7 @@
     </element>
     <element id="Organization.telecom.value">
       <path value="Organization.telecom.value" />
-      <short value="The actual contact point details" />
+      <short value="Konkrete Kontaktdaten" />
       <definition value="The actual contact point details, in a form that is meaningful to the designated communication system (i.e. phone number or email address)." />
       <comment value="Additional text data such as phone extension numbers, or notes about use of the contact are sometimes included in the value." />
       <requirements value="Need to support legacy numbers that are not in a tightly controlled format." />
@@ -6961,6 +6973,7 @@
       <patternCoding>
         <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
         <code value="XX" />
+        <display value="Organization identifier" />
       </patternCoding>
       <mustSupport value="true" />
     </element>
@@ -6976,6 +6989,12 @@
       <short value="Code für Identifikatortyp" />
       <min value="1" />
       <patternCode value="XX" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.identifier:Institutionskennzeichen.type.coding.display">
+      <path value="Organization.identifier.type.coding.display" />
+      <short value="Bezeichnung für Identifikatortyp" />
+      <patternString value="Organization identifier" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.identifier:Institutionskennzeichen.system">
@@ -7010,24 +7029,41 @@
       <path value="Organization.identifier.type.coding" />
       <min value="1" />
       <max value="1" />
+      <patternCoding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+        <code value="PRN" />
+        <display value="Provider number" />
+      </patternCoding>
       <mustSupport value="true" />
     </element>
     <element id="Organization.identifier:Telematik-ID.type.coding.system">
       <path value="Organization.identifier.type.coding.system" />
+      <short value="Genutztes Terminologiesystem" />
       <min value="1" />
+      <patternUri value="http://terminology.hl7.org/CodeSystem/v2-0203" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.identifier:Telematik-ID.type.coding.code">
       <path value="Organization.identifier.type.coding.code" />
+      <short value="Code für Identifikatortyp" />
       <min value="1" />
+      <patternCode value="PRN" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.identifier:Telematik-ID.type.coding.display">
+      <path value="Organization.identifier.type.coding.display" />
+      <short value="Bezeichnung für Identifikatortyp" />
+      <patternString value="Provider number" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.identifier:Telematik-ID.system">
       <path value="Organization.identifier.system" />
+      <short value="Menge möglicher Telematik-IDs" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.identifier:Telematik-ID.value">
       <path value="Organization.identifier.value" />
+      <short value="Konkrete Telematik-ID" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.name">
@@ -7036,6 +7072,7 @@
     </element>
     <element id="Organization.telecom">
       <path value="Organization.telecom" />
+      <comment value="Basis-Profil wird beim Typ nicht durch ein ENLA-Profil ersetzt, da es sich hier nur um ein erweitertes Attribut handelt." />
       <max value="1" />
       <mustSupport value="true" />
     </element>
@@ -7045,6 +7082,7 @@
     </element>
     <element id="Organization.telecom.value">
       <path value="Organization.telecom.value" />
+      <short value="Konkrete Kontaktdaten" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.address">
