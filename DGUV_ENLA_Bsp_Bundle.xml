@@ -13,20 +13,27 @@
                     <url value="" />
                 </SonstigeBemerkungen>
             </extension>
-            <status value"preliminary" />
+            <status value="preliminary" />
             <type>
                 <coding>
-                    <sytem value="" />
-                    <code value="" />
-                    <display value="" />
+                    <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-Formtexte" />
+                    <code value="F 2102" />
+                    <display value="DAV" />  
                 </coding>
             </type>
             <subject>
-                <reference value="" />
+                <reference value="Patient/4213443" />
             </subject>
             <date value="2025-06-10T11:40:00+01:00" />
             <author value="" />
-            <title value="" />
+            <title value="Entlassbericht zum Fall ..." />
+            <code value="Unfallversicherungstraeger" />
+            <section>
+                <entry value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Unfallversicherungstraeger">
+                <!--reference value="#DGUV-ENLA-Bsp-Unfallversicherungstraeger.xml" /-->
+                <reference value="Observation/Unfallversicherungstraeger" /> 
+            </entry>
+            </section>
         </resource>
     </entry>
     <signature>
