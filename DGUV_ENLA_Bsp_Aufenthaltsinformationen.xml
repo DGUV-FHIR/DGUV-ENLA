@@ -14,8 +14,8 @@
         <reference value="Patient/T37501234" />
     </subject>
     <period>
-        <start value="" />
-        <end value="" />
+        <start value="2024-06-10T12:00:00+01:00" />
+        <end value="2024-06-17T12:00:00+01:00" />
     </period>
     <hospitalization>
         <admitSource>
