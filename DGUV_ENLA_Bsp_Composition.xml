@@ -4,8 +4,7 @@
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Composition/DGUV-ENLA-PR-Composition" />
     </meta>
-    <extension>
-        <url value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-SonstigeBemerkungen" />        
+    <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-SonstigeBemerkungen">    
         <valueString value="Die sonstige Bemerkung." />
     </extension>
     <status value="preliminary" />
@@ -13,21 +12,22 @@
         <coding>
             <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-Formtexte" />
             <code value="F 2102" />
-            <display value="DAV" />        
+            <display value="Entlassungsbericht aus stationärer Behandlung (DAV/VAV/SAV)" />        
         </coding>
     </type>
     <subject>
-        <reference value="aperson/431924348" />
+        <reference value="Patient/431924348" />
     </subject>
+    <date value="2025-06-10T12:00:00+01:00" />
     <author>
         <reference value="Ersteller Entlassbericht/4324321" />
     </author>
     <title value="Mein neuer Entlassbericht" />
     <section>
-        <code value="Unfallversicherungstraeger" />
-        <entry value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Unfallversicherungstraeger">
+        <title value="Unfallversicherungstraeger" />
+        <entry>
             <!--reference value="#DGUV-ENLA-Bsp-Unfallversicherungstraeger.xml" /-->
-            <reference value="Observation/Unfallversicherungstraeger" /> 
+            <reference value="Observation/Unfallversicherungstraeger" />
         </entry>
     </section>
 </Composition>
