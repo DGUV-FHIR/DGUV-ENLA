@@ -2,7 +2,7 @@
 <DocumentReference xmlns="http://hl7.org/fhir">
   <id value="DGUV-ENLA-Bsp-DokumentenReferenz" />
   <meta>
-    <profile value="http://fhir.dguv.de/ENLA/DocumentReferenz/DGUV-ENLA-PR-DokumentenReferenz"/>
+    <profile value="http://fhir.dguv.de/ENLA/DocumentReference/DGUV-ENLA-PR-DokumentenReferenz"/>
   </meta>
   <status value="current" />
   <subject>
@@ -10,8 +10,8 @@
   </subject>
   <content>
     <attachment>
-      <contentType value="Binary" />
-      <data url="example.xml" />
+      <contentType value="Base64BinaryType" />
+      <data url="Bsp_Dokument_PDF.xml" />
     </attachment>
   </content>
 </DocumentReference>

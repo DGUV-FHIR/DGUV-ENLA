@@ -15,7 +15,6 @@
     </telecom>
   </contact>
   <description value="Dieses CodeSystem enthält einen Code zur Beschreibung des Entlassungsgrund &quot;Entlassung nach Hause&quot; - eine Anpassung des Entlassungs-/Verlegungsgrundes &quot;019 - Behandlung regulär beendet, keine Angabe&quot; nach §21 KHEntgG sowie §301 Abs. 1 Satz 1 SGB V." />
-  <content value="complete" />
   <concept>
     <code value="01" />
     <display value="Behandlung regulär beendet" />

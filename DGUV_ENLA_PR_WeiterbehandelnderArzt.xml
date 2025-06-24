@@ -106,6 +106,7 @@
         </extension>
         <code value="http://hl7.org/fhirpath/System.String" />
       </type>
+      <mustSupport value="true" />
       <isSummary value="true" />
     </element>
     <element id="PractitionerRole.meta">
@@ -678,7 +679,7 @@
       <short value="Literal reference, Relative, internal or absolute URL" />
       <definition value="A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources." />
       <comment value="Using absolute URLs provides a stable scalable approach suitable for a cloud/web context, while using relative/logical references provides a flexible approach suitable for use when trading across closed eco-system boundaries.   Absolute URLs do not need to point to a FHIR RESTful server, though this is the preferred approach. If the URL conforms to the structure &quot;/[type]/[id]&quot; then it should be assumed that the reference is to a FHIR RESTful server." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Reference.reference" />
@@ -961,7 +962,7 @@
       <short value="Literal reference, Relative, internal or absolute URL" />
       <definition value="A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources." />
       <comment value="Using absolute URLs provides a stable scalable approach suitable for a cloud/web context, while using relative/logical references provides a flexible approach suitable for use when trading across closed eco-system boundaries.   Absolute URLs do not need to point to a FHIR RESTful server, though this is the preferred approach. If the URL conforms to the structure &quot;/[type]/[id]&quot; then it should be assumed that the reference is to a FHIR RESTful server." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Reference.reference" />
@@ -1142,6 +1143,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -1286,6 +1288,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -1342,6 +1345,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <binding>
         <strength value="required" />
@@ -1475,6 +1479,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -1517,6 +1522,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -1560,6 +1566,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -1606,6 +1613,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -1737,6 +1745,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -1881,6 +1890,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -1937,6 +1947,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <binding>
         <strength value="required" />
@@ -2113,6 +2124,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -2156,6 +2168,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -2202,6 +2215,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -2447,6 +2461,7 @@
         <xpath value="not(exists(f:value)) or exists(f:system)" />
         <source value="http://hl7.org/fhir/StructureDefinition/ContactPoint" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -2568,6 +2583,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -2619,6 +2635,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -3386,6 +3403,10 @@
     </element>
   </snapshot>
   <differential>
+    <element id="PractitionerRole.id">
+      <path value="PractitionerRole.id" />
+      <mustSupport value="true" />
+    </element>
     <element id="PractitionerRole.practitioner">
       <path value="PractitionerRole.practitioner" />
       <type>
@@ -3396,6 +3417,7 @@
     </element>
     <element id="PractitionerRole.practitioner.reference">
       <path value="PractitionerRole.practitioner.reference" />
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.organization">
@@ -3408,6 +3430,73 @@
     </element>
     <element id="PractitionerRole.organization.reference">
       <path value="PractitionerRole.organization.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.code">
+      <path value="PractitionerRole.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.code.coding">
+      <path value="PractitionerRole.code.coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.code.coding:RolleInDerEinrichtung">
+      <path value="PractitionerRole.code.coding" />
+      <sliceName value="RolleInDerEinrichtung" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.code.coding:RolleInDerEinrichtung.system">
+      <path value="PractitionerRole.code.coding.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.code.coding:RolleInDerEinrichtung.version">
+      <path value="PractitionerRole.code.coding.version" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.code.coding:RolleInDerEinrichtung.code">
+      <path value="PractitionerRole.code.coding.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.code.coding:RolleInDerEinrichtung.display">
+      <path value="PractitionerRole.code.coding.display" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.specialty">
+      <path value="PractitionerRole.specialty" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.specialty.coding">
+      <path value="PractitionerRole.specialty.coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.specialty.coding:KBV-Fachgruppe">
+      <path value="PractitionerRole.specialty.coding" />
+      <sliceName value="KBV-Fachgruppe" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.specialty.coding:KBV-Fachgruppe.version">
+      <path value="PractitionerRole.specialty.coding.version" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.specialty.coding:KBV-Fachgruppe.code">
+      <path value="PractitionerRole.specialty.coding.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.specialty.coding:KBV-Fachgruppe.display">
+      <path value="PractitionerRole.specialty.coding.display" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.telecom">
+      <path value="PractitionerRole.telecom" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.telecom.system">
+      <path value="PractitionerRole.telecom.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.telecom.value">
+      <path value="PractitionerRole.telecom.value" />
       <mustSupport value="true" />
     </element>
   </differential>

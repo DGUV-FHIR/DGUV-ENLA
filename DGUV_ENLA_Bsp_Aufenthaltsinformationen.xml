@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Encounter xmlns="http://hl7.org/fhir">
+    <id value="DGUV-ENLA-Bsp-Aufenthaltsinformationen" />
+    <meta>
+        <profile value="http://fhir.dguv.de/ENLA/Encounter/DGUV-ENLA-PR-Aufenthaltsinformationen" />
+    </meta>
+    <status value="finished" />
+    <class value="">
+        <system value="" />
+        <code value="" />
+        <display value="" />
+    </class>
+    <subject>
+        <reference value="Patient/T37501234" />
+    </subject>
+    <period>
+        <start value="2024-06-10T12:00:00+01:00" />
+        <end value="2024-06-17T12:00:00+01:00" />
+    </period>
+    <hospitalization>
+        <admitSource>
+            <coding>
+                <system value="" />
+                <code value="" />
+                <display value="" />
+            </coding>
+        </admitSource>
+        <dischargeDisposition>
+            <coding>
+                <system value="" />
+                <code value="" />
+                <display value="" />
+            </coding>
+        </dischargeDisposition>
+    </hospitalization>
+</Encounter>

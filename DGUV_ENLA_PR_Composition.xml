@@ -3086,7 +3086,7 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="entry.reference" />
+          <path value="title" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -3741,7 +3741,7 @@
         <min value="0" />
         <max value="*" />
       </base>
-      <contentReference value="#Composition.section" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Composition#Composition.section" />
       <condition value="cmp-1" />
       <mapping>
         <identity value="rim" />
@@ -3950,6 +3950,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="Unfallversicherungstraeger" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -4853,6 +4854,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="Krankenkasse" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -5755,6 +5757,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="VersicherungsVerhaeltnis" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -6658,6 +6661,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="Pflegekasse" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -7561,6 +7565,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="Unfallbetrieb" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -8464,6 +8469,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="Aufenthaltsinformationen" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -9367,6 +9373,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="DiagnoseFreitext" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -10270,6 +10277,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="DiagnoseStrukturiert" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -11173,6 +11181,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="Therapie" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -12076,6 +12085,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="Unfallereignis" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -12979,6 +12989,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="Aufnahmebefunde" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -13882,6 +13893,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="Behandlungsverlauf" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -14785,6 +14797,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="Konsiliarbefunde" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -15688,6 +15701,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="Entlassbefunde" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -16591,6 +16605,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="DokumentenReferenz" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -17494,6 +17509,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="Therapieempfehlung" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -18397,6 +18413,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="MedikationsInformation" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -19300,6 +19317,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="MedikationWirkstoff" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -20203,6 +20221,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="MedikationRezeptur" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -21106,6 +21125,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="MedikationArzneimittel" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -22009,6 +22029,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="MedikationArzneimittel" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -22253,6 +22274,7 @@
       <type>
         <code value="code" />
       </type>
+      <fixedCode value="WeiterbehandelndeOrganisation" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -22912,6 +22934,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="WeiterbehandelnderArzt" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -23815,6 +23838,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="RehaMassnahmen" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -24718,6 +24742,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="Heilmittel" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -25621,6 +25646,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="Hilfsmittel" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -26524,6 +26550,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="BesondereMassnahmen" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -27427,6 +27454,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="Arbeitsunfaehigkeit" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -28330,6 +28358,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="PrognoseWiederaufnahmeTaetigkeit" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -29233,6 +29262,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="stufenweiseWiedereingliederung" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -30136,6 +30166,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="Datenschutz" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -31039,6 +31070,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="DArzt" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -31942,6 +31974,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="DArztOrganisation" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -32845,6 +32878,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="Leistungserbringer" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -33748,6 +33782,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="BehandelndeEinrichtung" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -34651,6 +34686,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="AnsprechpartnerFuerRueckfragen" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -35462,7 +35498,7 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="entry.reference" />
+          <path value="title" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -35475,6 +35511,10 @@
       <sliceName value="Unfallversicherungstraeger" />
       <max value="1" />
       <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Unfallversicherungstraeger.title">
+      <path value="Composition.section.title" />
+      <fixedString value="Unfallversicherungstraeger" />
     </element>
     <element id="Composition.section:Unfallversicherungstraeger.entry">
       <path value="Composition.section.entry" />
@@ -35498,6 +35538,10 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Composition.section:Krankenkasse.title">
+      <path value="Composition.section.title" />
+      <fixedString value="Krankenkasse" />
+    </element>
     <element id="Composition.section:Krankenkasse.entry">
       <path value="Composition.section.entry" />
       <short value="Verweis auf das ENLA-Profil Krankenkasse" />
@@ -35518,6 +35562,10 @@
       <sliceName value="Versicherungsverhaeltnis" />
       <max value="1" />
       <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Versicherungsverhaeltnis.title">
+      <path value="Composition.section.title" />
+      <fixedString value="VersicherungsVerhaeltnis" />
     </element>
     <element id="Composition.section:Versicherungsverhaeltnis.entry">
       <path value="Composition.section.entry" />
@@ -35542,6 +35590,10 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Composition.section:Pflegekasse.title">
+      <path value="Composition.section.title" />
+      <fixedString value="Pflegekasse" />
+    </element>
     <element id="Composition.section:Pflegekasse.entry">
       <path value="Composition.section.entry" />
       <short value="Verweis auf das ENLA-Profil Pflegekasse" />
@@ -35565,6 +35617,10 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Composition.section:Unfallbetrieb.title">
+      <path value="Composition.section.title" />
+      <fixedString value="Unfallbetrieb" />
+    </element>
     <element id="Composition.section:Unfallbetrieb.entry">
       <path value="Composition.section.entry" />
       <short value="Verweis auf das ENLA-Profil Unfallbetrieb" />
@@ -35587,6 +35643,10 @@
       <sliceName value="Aufenthaltsinformationen" />
       <max value="1" />
       <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Aufenthaltsinformationen.title">
+      <path value="Composition.section.title" />
+      <fixedString value="Aufenthaltsinformationen" />
     </element>
     <element id="Composition.section:Aufenthaltsinformationen.entry">
       <path value="Composition.section.entry" />
@@ -35612,6 +35672,10 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Composition.section:DiagnoseFreitext.title">
+      <path value="Composition.section.title" />
+      <fixedString value="DiagnoseFreitext" />
+    </element>
     <element id="Composition.section:DiagnoseFreitext.entry">
       <path value="Composition.section.entry" />
       <short value="Verweis auf das ENLA-Profil DiagnoseFreitext" />
@@ -35634,6 +35698,10 @@
       <sliceName value="DiagnoseStrukturiert" />
       <max value="1" />
       <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:DiagnoseStrukturiert.title">
+      <path value="Composition.section.title" />
+      <fixedString value="DiagnoseStrukturiert" />
     </element>
     <element id="Composition.section:DiagnoseStrukturiert.entry">
       <path value="Composition.section.entry" />
@@ -35658,6 +35726,10 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Composition.section:Therapie.title">
+      <path value="Composition.section.title" />
+      <fixedString value="Therapie" />
+    </element>
     <element id="Composition.section:Therapie.entry">
       <path value="Composition.section.entry" />
       <short value="Verweis auf das ENLA-Profil Therapie" />
@@ -35680,6 +35752,10 @@
       <sliceName value="Unfallereignis" />
       <max value="1" />
       <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Unfallereignis.title">
+      <path value="Composition.section.title" />
+      <fixedString value="Unfallereignis" />
     </element>
     <element id="Composition.section:Unfallereignis.entry">
       <path value="Composition.section.entry" />
@@ -35704,6 +35780,10 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Composition.section:Aufnahmebefunde.title">
+      <path value="Composition.section.title" />
+      <fixedString value="Aufnahmebefunde" />
+    </element>
     <element id="Composition.section:Aufnahmebefunde.entry">
       <path value="Composition.section.entry" />
       <short value="Verweis auf das ENLA-Profil Aufnahmebefunde" />
@@ -35726,6 +35806,10 @@
       <sliceName value="Behandlungsverlauf" />
       <max value="1" />
       <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Behandlungsverlauf.title">
+      <path value="Composition.section.title" />
+      <fixedString value="Behandlungsverlauf" />
     </element>
     <element id="Composition.section:Behandlungsverlauf.entry">
       <path value="Composition.section.entry" />
@@ -35750,6 +35834,10 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Composition.section:Konsiliarbefunde.title">
+      <path value="Composition.section.title" />
+      <fixedString value="Konsiliarbefunde" />
+    </element>
     <element id="Composition.section:Konsiliarbefunde.entry">
       <path value="Composition.section.entry" />
       <short value="Verweis auf das ENLA-Profil Konsiliarbefunde" />
@@ -35772,6 +35860,10 @@
       <sliceName value="Entlassbefunde" />
       <max value="1" />
       <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassbefunde.title">
+      <path value="Composition.section.title" />
+      <fixedString value="Entlassbefunde" />
     </element>
     <element id="Composition.section:Entlassbefunde.entry">
       <path value="Composition.section.entry" />
@@ -35796,6 +35888,10 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Composition.section:Dokumentenreferenz.title">
+      <path value="Composition.section.title" />
+      <fixedString value="DokumentenReferenz" />
+    </element>
     <element id="Composition.section:Dokumentenreferenz.entry">
       <path value="Composition.section.entry" />
       <short value="Verweis auf das ENLA-Profil Dokumentenreferenz" />
@@ -35818,6 +35914,10 @@
       <sliceName value="Therapieempfehlung" />
       <max value="1" />
       <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Therapieempfehlung.title">
+      <path value="Composition.section.title" />
+      <fixedString value="Therapieempfehlung" />
     </element>
     <element id="Composition.section:Therapieempfehlung.entry">
       <path value="Composition.section.entry" />
@@ -35842,6 +35942,10 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Composition.section:MedikationsInformation.title">
+      <path value="Composition.section.title" />
+      <fixedString value="MedikationsInformation" />
+    </element>
     <element id="Composition.section:MedikationsInformation.entry">
       <path value="Composition.section.entry" />
       <short value="Verweis auf das ENLA-Profil MedikationsInformation" />
@@ -35864,6 +35968,10 @@
       <sliceName value="MedikationWirkstoff" />
       <max value="1" />
       <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:MedikationWirkstoff.title">
+      <path value="Composition.section.title" />
+      <fixedString value="MedikationWirkstoff" />
     </element>
     <element id="Composition.section:MedikationWirkstoff.entry">
       <path value="Composition.section.entry" />
@@ -35888,6 +35996,10 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Composition.section:MedikationRezeptur.title">
+      <path value="Composition.section.title" />
+      <fixedString value="MedikationRezeptur" />
+    </element>
     <element id="Composition.section:MedikationRezeptur.entry">
       <path value="Composition.section.entry" />
       <short value="Verweis auf das ENLA-Profil MedikationRezeptur" />
@@ -35910,6 +36022,10 @@
       <sliceName value="MedikationArzneimittel" />
       <max value="1" />
       <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:MedikationArzneimittel.title">
+      <path value="Composition.section.title" />
+      <fixedString value="MedikationArzneimittel" />
     </element>
     <element id="Composition.section:MedikationArzneimittel.entry">
       <path value="Composition.section.entry" />
@@ -35934,6 +36050,14 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Composition.section:WeiterbehandelnderArzt.title">
+      <path value="Composition.section.title" />
+      <fixedString value="MedikationArzneimittel" />
+    </element>
+    <element id="Composition.section:WeiterbehandelnderArzt.mode">
+      <path value="Composition.section.mode" />
+      <fixedCode value="WeiterbehandelndeOrganisation" />
+    </element>
     <element id="Composition.section:WeiterbehandelnderArzt.entry">
       <path value="Composition.section.entry" />
       <short value="Verweis auf das ENLA-Profil WeiterbehandelnderArzt" />
@@ -35956,6 +36080,10 @@
       <sliceName value="WeiterbehandelndeOrganisation" />
       <max value="1" />
       <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:WeiterbehandelndeOrganisation.title">
+      <path value="Composition.section.title" />
+      <fixedString value="WeiterbehandelnderArzt" />
     </element>
     <element id="Composition.section:WeiterbehandelndeOrganisation.entry">
       <path value="Composition.section.entry" />
@@ -35980,6 +36108,10 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Composition.section:RehaMassnahmen.title">
+      <path value="Composition.section.title" />
+      <fixedString value="RehaMassnahmen" />
+    </element>
     <element id="Composition.section:RehaMassnahmen.entry">
       <path value="Composition.section.entry" />
       <short value="Verweis auf das ENLA-Profil RehaMassnahmen" />
@@ -36002,6 +36134,10 @@
       <sliceName value="Heilmittel" />
       <max value="1" />
       <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Heilmittel.title">
+      <path value="Composition.section.title" />
+      <fixedString value="Heilmittel" />
     </element>
     <element id="Composition.section:Heilmittel.entry">
       <path value="Composition.section.entry" />
@@ -36026,6 +36162,10 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Composition.section:Hilfsmittel.title">
+      <path value="Composition.section.title" />
+      <fixedString value="Hilfsmittel" />
+    </element>
     <element id="Composition.section:Hilfsmittel.entry">
       <path value="Composition.section.entry" />
       <short value="Verweis auf das konkrete ENLA-Profil Hilfsmittel" />
@@ -36048,6 +36188,10 @@
       <sliceName value="BesondereMassnahmen" />
       <max value="1" />
       <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:BesondereMassnahmen.title">
+      <path value="Composition.section.title" />
+      <fixedString value="BesondereMassnahmen" />
     </element>
     <element id="Composition.section:BesondereMassnahmen.entry">
       <path value="Composition.section.entry" />
@@ -36072,6 +36216,10 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Composition.section:Arbeitsunfaehigkeit.title">
+      <path value="Composition.section.title" />
+      <fixedString value="Arbeitsunfaehigkeit" />
+    </element>
     <element id="Composition.section:Arbeitsunfaehigkeit.entry">
       <path value="Composition.section.entry" />
       <short value="Verweis auf das ENLA-Profil Arbeitsunfaehigkeit" />
@@ -36094,6 +36242,10 @@
       <sliceName value="PrognoseWiederaufnahmeTaetigkeit" />
       <max value="1" />
       <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:PrognoseWiederaufnahmeTaetigkeit.title">
+      <path value="Composition.section.title" />
+      <fixedString value="PrognoseWiederaufnahmeTaetigkeit" />
     </element>
     <element id="Composition.section:PrognoseWiederaufnahmeTaetigkeit.entry">
       <path value="Composition.section.entry" />
@@ -36118,6 +36270,10 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Composition.section:StufenweiseWiedereingliederung.title">
+      <path value="Composition.section.title" />
+      <fixedString value="stufenweiseWiedereingliederung" />
+    </element>
     <element id="Composition.section:StufenweiseWiedereingliederung.entry">
       <path value="Composition.section.entry" />
       <short value="Verweis auf das ENLA-Profil StufenweiseWiedereingliederung" />
@@ -36140,6 +36296,10 @@
       <sliceName value="Datenschutz" />
       <max value="1" />
       <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Datenschutz.title">
+      <path value="Composition.section.title" />
+      <fixedString value="Datenschutz" />
     </element>
     <element id="Composition.section:Datenschutz.entry">
       <path value="Composition.section.entry" />
@@ -36164,6 +36324,10 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Composition.section:DArzt.title">
+      <path value="Composition.section.title" />
+      <fixedString value="DArzt" />
+    </element>
     <element id="Composition.section:DArzt.entry">
       <path value="Composition.section.entry" />
       <short value="Verweis auf das ENLA-Profil DArzt" />
@@ -36186,6 +36350,10 @@
       <sliceName value="DArztOrganisation" />
       <max value="1" />
       <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:DArztOrganisation.title">
+      <path value="Composition.section.title" />
+      <fixedString value="DArztOrganisation" />
     </element>
     <element id="Composition.section:DArztOrganisation.entry">
       <path value="Composition.section.entry" />
@@ -36210,6 +36378,10 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Composition.section:Leistungserbringer.title">
+      <path value="Composition.section.title" />
+      <fixedString value="Leistungserbringer" />
+    </element>
     <element id="Composition.section:Leistungserbringer.entry">
       <path value="Composition.section.entry" />
       <short value="Verweis auf das ENLA-Profil Leistungserbringer" />
@@ -36233,6 +36405,10 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Composition.section:BehandelndeEinrichtung.title">
+      <path value="Composition.section.title" />
+      <fixedString value="BehandelndeEinrichtung" />
+    </element>
     <element id="Composition.section:BehandelndeEinrichtung.entry">
       <path value="Composition.section.entry" />
       <short value="Verweis auf das ENLA-Profil BehandelndeEinrichtung" />
@@ -36255,6 +36431,10 @@
       <sliceName value="AnsprechpartnerFuerRueckfragen" />
       <max value="1" />
       <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:AnsprechpartnerFuerRueckfragen.title">
+      <path value="Composition.section.title" />
+      <fixedString value="AnsprechpartnerFuerRueckfragen" />
     </element>
     <element id="Composition.section:AnsprechpartnerFuerRueckfragen.entry">
       <path value="Composition.section.entry" />

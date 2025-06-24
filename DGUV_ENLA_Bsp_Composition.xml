@@ -4,8 +4,7 @@
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Composition/DGUV-ENLA-PR-Composition" />
     </meta>
-    <extension>
-        <url value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-SonstigeBemerkungen" />        
+    <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-SonstigeBemerkungen">    
         <valueString value="Die sonstige Bemerkung." />
     </extension>
     <status value="preliminary" />
@@ -13,185 +12,22 @@
         <coding>
             <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-Formtexte" />
             <code value="F 2102" />
-            <display value="DAV" />        
+            <display value="Entlassungsbericht aus stationärer Behandlung (DAV/VAV/SAV)" />        
         </coding>
     </type>
     <subject>
-        <reference value="aperson/431924348" />
+        <reference value="Patient/431924348" />
     </subject>
-    <date value="2025-06-10T11:50:00+01:00" />
+    <date value="2025-06-10T12:00:00+01:00" />
     <author>
         <reference value="Ersteller Entlassbericht/4324321" />
     </author>
     <title value="Mein neuer Entlassbericht" />
     <section>
+        <title value="Unfallversicherungstraeger" />
         <entry>
-            <reference value="Unfallversicherungstraeger" />
-        </entry>
-    </section>
-    <section> 
-        <entry value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Krankenkasse">
-            <reference value="Krankenkasse" />
-        </entry>
-    </section>
-    <section>
-        <entry value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-VersicherungsVerhaeltnis">
-            <reference value="traeger.xml" />
-        </entry>
-    </section>
-    <section>
-        <entry value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Pflegekasse">
-            <reference value="traeger.xml" />
-        </entry>
-    </section>
-    <section>
-        <entry value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Unfallbetrieb">
-            <reference value="traeger.xml" />
-        </entry>
-    </section>
-    <section>    
-        <entry value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseFreitext">
-            <reference value="traeger.xml" />
-        </entry>
-    </section>
-    <section>
-        <entry value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseStrukturiert">
-            <reference value="traeger.xml" />
-        </entry>
-    </section>
-    <section>
-        <entry value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Therapie">
-            <reference value="traeger.xml" />
-        </entry>
-    </section>
-    <section>
-        <entry value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Unfallereignis">
-            <reference value="traeger.xml" />
-        </entry>
-    </section>
-    <section>
-        <entry value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Aufnahmebefunde">
-            <reference value="traeger.xml" />
-        </entry>
-    </section>
-    <section>
-        <entry value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Behandlungsverlauf">
-            <reference value="traeger.xml" />
-        </entry>
-    </section>
-    <section>
-        <entry value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Konsiliarbefunde">
-            <reference value="traeger.xml" />
-        </entry>
-    </section>
-    <section>
-        <entry value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Entlassbefunde">
-            <reference value="traeger.xml" />
-        </entry>
-    </section>
-    <section>
-        <entry value="http://fhir.dguv.de/ENLA/DocumentReference/DGUV-ENLA-PR-DokumentenReferenz">
-            <reference value="traeger.xml" />
-        </entry>
-    </section>
-    <section>
-        <entry value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Therapieempfehlung">
-            <reference value="traeger.xml" />
-        </entry>
-    </section>
-    <section>
-        <entry value="http://fhir.dguv.de/ENLA/MedicationStatement/DGUV-ENLA-PR-MedikationsInformation">
-            <reference value="traeger.xml" />
-        </entry>
-    </section>
-    <section>
-        <entry value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationWirkstoff">
-            <reference value="traeger.xml" />
-        </entry>
-    </section>
-    <section>
-        <entry value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationRezeptur">
-            <reference value="traeger.xml" />
-        </entry>
-    </section>
-    <section>
-        <entry value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationArzneimittel">
-            <reference value="traeger.xml" />
-        </entry>
-    </section>
-    <section>
-        <entry value="http://fhir.dguv.de/ENLA/PractitionerRole/DGUV-ENLA-PR-WeiterbehandelnderArzt">
-            <reference value="traeger.xml" />
-        </entry>
-    </section>
-    <section>
-        <entry value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-WeiterbehandelndeOrganisation">
-            <reference value="traeger.xml" />
-        </entry>
-    </section>
-    <section>
-        <entry value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-RehaMassnahmen">
-            <reference value="traeger.xml" />
-        </entry>
-    </section>
-    <section>
-        <entry value="https://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Heilmittel">
-            <reference value="traeger.xml" />
-        </entry>
-    </section>
-    <section>
-        <entry value="https://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Hilfsmittel">
-            <reference value="traeger.xml" />
-        </entry>
-    </section>
-    <section>
-        <entry value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-BesondereMassnahmene">
-            <reference value="traeger.xml" />
-        </entry>
-    </section>
-    <section>
-        <entry value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Arbeitsunfaehigkeit">
-            <reference value="traeger.xml" />
-        </entry>
-    </section>
-    <section>
-        <entry value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-PrognoseWiederaufnahmeTaetigkeit">
-            <reference value="traeger.xml" />
-        </entry>
-    </section>
-    <section>
-        <entry value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-stufenweiseWiedereingliederung">
-            <reference value="traeger.xml" />
-        </entry>
-    </section>
-    <section>
-        <entry value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Datenschutz">
-            <reference value="traeger.xml" />
-        </entry>
-    </section>
-    <section>
-        <entry value="http://fhir.dguv.de/ENLA/PractitionerRole/DGUV-ENLA-PR-DArzt">
-            <reference value="traeger.xml" />
-        </entry>
-    </section>
-    <section>
-        <entry value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-DArztOrganisation">
-            <reference value="traeger.xml" />
-        </entry>
-    </section>
-    <section>
-        <entry value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringer">
-            <reference value="traeger.xml" />
-        </entry>
-    </section>
-    <section>
-        <entry value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-BehandelndeEinrichtung">
-            <reference value="traeger.xml" />
-        </entry>
-    </section>
-    <section>
-        <entry value="http://fhir.dguv.de/ENLA/PractitionerRole/DGUV-ENLA-PR-AnsprechpartnerFuerRueckfragen">
-            <reference value="traeger.xml" />
+            <!--reference value="#DGUV-ENLA-Bsp-Unfallversicherungstraeger.xml" /-->
+            <reference value="Observation/Unfallversicherungstraeger" />
         </entry>
     </section>
 </Composition>
