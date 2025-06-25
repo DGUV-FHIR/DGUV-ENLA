@@ -85,7 +85,7 @@
        </entry>
    </section>
    <section>
-       <title value="Observation/Behandlungsverlauf" />
+       <title value="Behandlungsverlauf" />
        <entry>
            <reference value="Observation/Behandlungsverlauf" />
        </entry>
