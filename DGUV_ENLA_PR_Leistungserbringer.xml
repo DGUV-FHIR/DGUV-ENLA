@@ -110,12 +110,6 @@
       <isSummary value="true" />
     </element>
     <element id="Practitioner.meta">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.meta" />
       <short value="Metadata about the resource" />
       <definition value="The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource." />
@@ -211,9 +205,6 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="Language" />
         </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true" />
-        </extension>
         <strength value="preferred" />
         <description value="A human language." />
         <valueSet value="http://hl7.org/fhir/ValueSet/languages" />
@@ -224,12 +215,6 @@
       </mapping>
     </element>
     <element id="Practitioner.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.text" />
       <short value="Text summary of the resource, for human interpretation" />
       <definition value="A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it &quot;clinically safe&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety." />
@@ -298,12 +283,6 @@
       </mapping>
     </element>
     <element id="Practitioner.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.extension" />
       <slicing>
         <discriminator>
@@ -355,12 +334,6 @@
       </mapping>
     </element>
     <element id="Practitioner.modifierExtension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.modifierExtension" />
       <slicing>
         <discriminator>
@@ -415,12 +388,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier" />
       <slicing>
         <discriminator>
@@ -487,12 +454,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:ANR">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier" />
       <sliceName value="ANR" />
       <short value="Identifier-Profil für die Abbildung einer lebenslangen Arztnummer des Leistungserbringers" />
@@ -577,12 +538,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:ANR.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.extension" />
       <slicing>
         <discriminator>
@@ -684,12 +639,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:ANR.type">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.type" />
       <short value="Kennzeichnung des Identifikators als lebenslange Arztnummer" />
       <definition value="A coded type for the identifier that can be used to determine which identifier to use for a specific purpose." />
@@ -725,9 +674,6 @@
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="IdentifierType" />
-        </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true" />
         </extension>
         <strength value="extensible" />
         <description value="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose." />
@@ -782,12 +728,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:ANR.type.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.type.extension" />
       <slicing>
         <discriminator>
@@ -839,12 +779,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:ANR.type.coding">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.type.coding" />
       <short value="Code defined by a terminology system" />
       <definition value="A reference to a code defined by a terminology system." />
@@ -928,12 +862,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:ANR.type.coding.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.type.coding.extension" />
       <slicing>
         <discriminator>
@@ -1357,12 +1285,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:ANR.period">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.period" />
       <short value="Time period when id is/was valid for use" />
       <definition value="Time period during which identifier is/was valid for use." />
@@ -1421,12 +1343,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:ANR.assigner">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.assigner" />
       <short value="Organization that issued id (may be just text)" />
       <definition value="Organization that issued/manages the identifier." />
@@ -1505,12 +1421,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:ANR.assigner.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.assigner.extension" />
       <slicing>
         <discriminator>
@@ -1639,12 +1549,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:ANR.assigner.identifier">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.assigner.identifier" />
       <short value="Logical reference, when literal reference is not known" />
       <definition value="An identifier for the target resource. This is used when there is no way to reference the other resource directly, either because the entity it represents is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference." />
@@ -1714,12 +1618,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:ANR.assigner.identifier.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.assigner.identifier.extension" />
       <slicing>
         <discriminator>
@@ -1820,12 +1718,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:ANR.assigner.identifier.type">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.assigner.identifier.type" />
       <short value="Description of identifier" />
       <definition value="A coded type for the identifier that can be used to determine which identifier to use for a specific purpose." />
@@ -1854,9 +1746,6 @@
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="IdentifierType" />
-        </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true" />
         </extension>
         <strength value="extensible" />
         <description value="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose." />
@@ -1982,12 +1871,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:ANR.assigner.identifier.period">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.assigner.identifier.period" />
       <short value="Time period when id is/was valid for use" />
       <definition value="Time period during which identifier is/was valid for use." />
@@ -2046,12 +1929,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:ANR.assigner.identifier.assigner">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.assigner.identifier.assigner" />
       <short value="Organization that issued id (may be just text)" />
       <definition value="Organization that issued/manages the identifier." />
@@ -2144,12 +2021,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:EFN">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier" />
       <sliceName value="EFN" />
       <short value="Identifier-Profil für die Abbildung der Einheitlichen Fortbildungsnummer (EFN)" />
@@ -2233,12 +2104,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:EFN.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.extension" />
       <slicing>
         <discriminator>
@@ -2340,12 +2205,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:EFN.type">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.type" />
       <short value="Description of identifier" />
       <definition value="A coded type for the identifier that can be used to determine which identifier to use for a specific purpose." />
@@ -2380,9 +2239,6 @@
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="IdentifierType" />
-        </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true" />
         </extension>
         <strength value="extensible" />
         <description value="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose." />
@@ -2437,12 +2293,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:EFN.type.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.type.extension" />
       <slicing>
         <discriminator>
@@ -2494,12 +2344,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:EFN.type.coding">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.type.coding" />
       <short value="Code defined by a terminology system" />
       <definition value="A reference to a code defined by a terminology system." />
@@ -2582,12 +2426,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:EFN.type.coding.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.type.coding.extension" />
       <slicing>
         <discriminator>
@@ -2999,12 +2837,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:EFN.period">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.period" />
       <short value="Time period when id is/was valid for use" />
       <definition value="Time period during which identifier is/was valid for use." />
@@ -3063,12 +2895,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:EFN.assigner">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.assigner" />
       <short value="Organization that issued id (may be just text)" />
       <definition value="Organization that issued/manages the identifier." />
@@ -3147,12 +2973,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:EFN.assigner.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.assigner.extension" />
       <slicing>
         <discriminator>
@@ -3281,12 +3101,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:EFN.assigner.identifier">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.assigner.identifier" />
       <short value="Logical reference, when literal reference is not known" />
       <definition value="An identifier for the target resource. This is used when there is no way to reference the other resource directly, either because the entity it represents is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference." />
@@ -3356,12 +3170,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:EFN.assigner.identifier.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.assigner.identifier.extension" />
       <slicing>
         <discriminator>
@@ -3462,12 +3270,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:EFN.assigner.identifier.type">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.assigner.identifier.type" />
       <short value="Description of identifier" />
       <definition value="A coded type for the identifier that can be used to determine which identifier to use for a specific purpose." />
@@ -3496,9 +3298,6 @@
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="IdentifierType" />
-        </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true" />
         </extension>
         <strength value="extensible" />
         <description value="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose." />
@@ -3624,12 +3423,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:EFN.assigner.identifier.period">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.assigner.identifier.period" />
       <short value="Time period when id is/was valid for use" />
       <definition value="Time period during which identifier is/was valid for use." />
@@ -3688,12 +3481,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:EFN.assigner.identifier.assigner">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.assigner.identifier.assigner" />
       <short value="Organization that issued id (may be just text)" />
       <definition value="Organization that issued/manages the identifier." />
@@ -3786,12 +3573,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:ZANR">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier" />
       <sliceName value="ZANR" />
       <short value="Identifier-Profil für die Abbildung einer lebenslangen Zahnarztnummer des Leistungserbringers" />
@@ -3876,12 +3657,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:ZANR.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.extension" />
       <slicing>
         <discriminator>
@@ -3983,12 +3758,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:ZANR.type">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.type" />
       <short value="Kennzeichnung des Identifikators als lebenslange Zahnarztnummer" />
       <definition value="A coded type for the identifier that can be used to determine which identifier to use for a specific purpose." />
@@ -4023,9 +3792,6 @@
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="IdentifierType" />
-        </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true" />
         </extension>
         <strength value="extensible" />
         <description value="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose." />
@@ -4080,12 +3846,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:ZANR.type.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.type.extension" />
       <slicing>
         <discriminator>
@@ -4137,12 +3897,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:ZANR.type.coding">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.type.coding" />
       <short value="Code defined by a terminology system" />
       <definition value="A reference to a code defined by a terminology system." />
@@ -4226,12 +3980,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:ZANR.type.coding.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.type.coding.extension" />
       <slicing>
         <discriminator>
@@ -4655,12 +4403,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:ZANR.period">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.period" />
       <short value="Time period when id is/was valid for use" />
       <definition value="Time period during which identifier is/was valid for use." />
@@ -4719,12 +4461,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:ZANR.assigner">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.assigner" />
       <short value="Organization that issued id (may be just text)" />
       <definition value="Organization that issued/manages the identifier." />
@@ -4803,12 +4539,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:ZANR.assigner.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.assigner.extension" />
       <slicing>
         <discriminator>
@@ -4937,12 +4667,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:ZANR.assigner.identifier">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.assigner.identifier" />
       <short value="Logical reference, when literal reference is not known" />
       <definition value="An identifier for the target resource. This is used when there is no way to reference the other resource directly, either because the entity it represents is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference." />
@@ -5012,12 +4736,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:ZANR.assigner.identifier.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.assigner.identifier.extension" />
       <slicing>
         <discriminator>
@@ -5118,12 +4836,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:ZANR.assigner.identifier.type">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.assigner.identifier.type" />
       <short value="Description of identifier" />
       <definition value="A coded type for the identifier that can be used to determine which identifier to use for a specific purpose." />
@@ -5152,9 +4864,6 @@
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="IdentifierType" />
-        </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true" />
         </extension>
         <strength value="extensible" />
         <description value="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose." />
@@ -5280,12 +4989,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:ZANR.assigner.identifier.period">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.assigner.identifier.period" />
       <short value="Time period when id is/was valid for use" />
       <definition value="Time period during which identifier is/was valid for use." />
@@ -5344,12 +5047,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:ZANR.assigner.identifier.assigner">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.assigner.identifier.assigner" />
       <short value="Organization that issued id (may be just text)" />
       <definition value="Organization that issued/manages the identifier." />
@@ -5442,12 +5139,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:Telematik-ID">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier" />
       <sliceName value="Telematik-ID" />
       <short value="Identifier-Profil für die Abbildung einer Telematik-ID des Leistungserbringers" />
@@ -5532,12 +5223,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:Telematik-ID.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.extension" />
       <slicing>
         <discriminator>
@@ -5638,12 +5323,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:Telematik-ID.type">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.type" />
       <short value="Kennzeichnung des Identifikators als Telematik-ID" />
       <definition value="A coded type for the identifier that can be used to determine which identifier to use for a specific purpose." />
@@ -5679,9 +5358,6 @@
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="IdentifierType" />
-        </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true" />
         </extension>
         <strength value="extensible" />
         <description value="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose." />
@@ -5736,12 +5412,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:Telematik-ID.type.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.type.extension" />
       <slicing>
         <discriminator>
@@ -5793,12 +5463,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:Telematik-ID.type.coding">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.type.coding" />
       <short value="Code defined by a terminology system" />
       <definition value="A reference to a code defined by a terminology system." />
@@ -5882,12 +5546,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:Telematik-ID.type.coding.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.type.coding.extension" />
       <slicing>
         <discriminator>
@@ -6304,12 +5962,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:Telematik-ID.period">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.period" />
       <short value="Time period when id is/was valid for use" />
       <definition value="Time period during which identifier is/was valid for use." />
@@ -6368,12 +6020,6 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier:Telematik-ID.assigner">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.identifier.assigner" />
       <short value="Organization that issued id (may be just text)" />
       <definition value="Organization that issued/manages the identifier." />
@@ -6469,12 +6115,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name" />
       <slicing>
         <discriminator>
@@ -6590,12 +6230,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.extension" />
       <slicing>
         <discriminator>
@@ -6805,12 +6439,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name.family.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.family.extension" />
       <slicing>
         <discriminator>
@@ -6862,12 +6490,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name.family.extension:namenszusatz">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.family.extension" />
       <sliceName value="namenszusatz" />
       <short value="Namenszusatz gemäß VSDM (Versichertenstammdatenmanagement, &quot;eGK&quot;)" />
@@ -6936,12 +6558,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name.family.extension:namenszusatz.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.family.extension.extension" />
       <slicing>
         <discriminator>
@@ -7018,12 +6634,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name.family.extension:namenszusatz.value[x]">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.family.extension.value[x]" />
       <short value="Namenszusatz" />
       <definition value="Namenszusatz zum Nachnamen z.B. Gräfin, Prinz oder Fürst" />
@@ -7056,12 +6666,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name.family.extension:nachname">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.family.extension" />
       <sliceName value="nachname" />
       <short value="Nachname ohne Vor- und Zusätze" />
@@ -7138,12 +6742,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name.family.extension:nachname.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.family.extension.extension" />
       <slicing>
         <discriminator>
@@ -7220,12 +6818,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name.family.extension:nachname.value[x]">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.family.extension.value[x]" />
       <short value="Value of extension" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
@@ -7258,12 +6850,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name.family.extension:vorsatzwort">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.family.extension" />
       <sliceName value="vorsatzwort" />
       <short value="Vorsatzwort" />
@@ -7340,12 +6926,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name.family.extension:vorsatzwort.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.family.extension.extension" />
       <slicing>
         <discriminator>
@@ -7422,12 +7002,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name.family.extension:vorsatzwort.value[x]">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.family.extension.value[x]" />
       <short value="Value of extension" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
@@ -7594,12 +7168,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name.prefix.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.prefix.extension" />
       <slicing>
         <discriminator>
@@ -7651,12 +7219,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name.prefix.extension:prefix-qualifier">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.prefix.extension" />
       <sliceName value="prefix-qualifier" />
       <short value="LS | AC | NB | PR | HON | BR | AD | SP | MID | CL | IN | VV" />
@@ -7730,12 +7292,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name.prefix.extension:prefix-qualifier.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.prefix.extension.extension" />
       <slicing>
         <discriminator>
@@ -7812,12 +7368,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name.prefix.extension:prefix-qualifier.value[x]">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.prefix.extension.value[x]" />
       <short value="Value of extension" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
@@ -7920,12 +7470,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name.period">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.period" />
       <short value="Time period when name was/is in use" />
       <definition value="Indicates the period of time when this name was valid for the named person." />
@@ -7985,12 +7529,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name:Name">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name" />
       <sliceName value="Name" />
       <short value="Personenname" />
@@ -8100,12 +7638,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name:Name.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.extension" />
       <slicing>
         <discriminator>
@@ -8318,12 +7850,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name:Name.family.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.family.extension" />
       <slicing>
         <discriminator>
@@ -8376,12 +7902,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name:Name.family.extension:namenszusatz">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.family.extension" />
       <sliceName value="namenszusatz" />
       <short value="Namenszusatz gemäß VSDM (Versichertenstammdatenmanagement, &quot;eGK&quot;)" />
@@ -8451,12 +7971,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name:Name.family.extension:namenszusatz.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.family.extension.extension" />
       <slicing>
         <discriminator>
@@ -8533,12 +8047,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name:Name.family.extension:namenszusatz.value[x]">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.family.extension.value[x]" />
       <short value="Konkreter Namenszusatz" />
       <definition value="Namenszusatz zum Nachnamen z.B. Gräfin, Prinz oder Fürst" />
@@ -8572,12 +8080,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name:Name.family.extension:nachname">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.family.extension" />
       <sliceName value="nachname" />
       <short value="Nachname ohne Vor- und Zusätze" />
@@ -8655,12 +8157,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name:Name.family.extension:nachname.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.family.extension.extension" />
       <slicing>
         <discriminator>
@@ -8737,12 +8233,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name:Name.family.extension:nachname.value[x]">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.family.extension.value[x]" />
       <short value="Konkreter Nachname" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
@@ -8776,12 +8266,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name:Name.family.extension:vorsatzwort">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.family.extension" />
       <sliceName value="vorsatzwort" />
       <short value="Vorsatzwort" />
@@ -8859,12 +8343,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name:Name.family.extension:vorsatzwort.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.family.extension.extension" />
       <slicing>
         <discriminator>
@@ -8941,12 +8419,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name:Name.family.extension:vorsatzwort.value[x]">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.family.extension.value[x]" />
       <short value="Konkretes Vorsatzwort" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
@@ -9116,12 +8588,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name:Name.prefix.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.prefix.extension" />
       <slicing>
         <discriminator>
@@ -9174,12 +8640,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name:Name.prefix.extension:prefix-qualifier">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.prefix.extension" />
       <sliceName value="prefix-qualifier" />
       <short value="LS | AC | NB | PR | HON | BR | AD | SP | MID | CL | IN | VV" />
@@ -9254,12 +8714,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name:Name.prefix.extension:prefix-qualifier.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.prefix.extension.extension" />
       <slicing>
         <discriminator>
@@ -9336,14 +8790,8 @@
       </mapping>
     </element>
     <element id="Practitioner.name:Name.prefix.extension:prefix-qualifier.value[x]">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.prefix.extension.value[x]" />
-      <short value="Value of extension" />
+      <short value="Konkrete Spezialisierung der Präfixart" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
       <min value="1" />
       <max value="1" />
@@ -9355,7 +8803,6 @@
       <type>
         <code value="code" />
       </type>
-      <fixedCode value="Konkrete Spezialisierung der Präfixart" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -9447,12 +8894,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name:Name.period">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.period" />
       <short value="Time period when name was/is in use" />
       <definition value="Indicates the period of time when this name was valid for the named person." />
@@ -9512,12 +8953,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name:Geburtsname">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name" />
       <sliceName value="Geburtsname" />
       <short value="Personenname" />
@@ -9626,12 +9061,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name:Geburtsname.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.extension" />
       <slicing>
         <discriminator>
@@ -9842,12 +9271,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name:Geburtsname.family.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.family.extension" />
       <slicing>
         <discriminator>
@@ -9899,12 +9322,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name:Geburtsname.family.extension:namenszusatz">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.family.extension" />
       <sliceName value="namenszusatz" />
       <short value="Namenszusatz gemäß VSDM (Versichertenstammdatenmanagement, &quot;eGK&quot;)" />
@@ -9973,12 +9390,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name:Geburtsname.family.extension:namenszusatz.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.family.extension.extension" />
       <slicing>
         <discriminator>
@@ -10055,12 +9466,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name:Geburtsname.family.extension:namenszusatz.value[x]">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.family.extension.value[x]" />
       <short value="Namenszusatz" />
       <definition value="Namenszusatz zum Nachnamen z.B. Gräfin, Prinz oder Fürst" />
@@ -10093,12 +9498,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name:Geburtsname.family.extension:nachname">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.family.extension" />
       <sliceName value="nachname" />
       <short value="Nachname ohne Vor- und Zusätze" />
@@ -10175,12 +9574,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name:Geburtsname.family.extension:nachname.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.family.extension.extension" />
       <slicing>
         <discriminator>
@@ -10257,12 +9650,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name:Geburtsname.family.extension:nachname.value[x]">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.family.extension.value[x]" />
       <short value="Value of extension" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
@@ -10295,12 +9682,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name:Geburtsname.family.extension:vorsatzwort">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.family.extension" />
       <sliceName value="vorsatzwort" />
       <short value="Vorsatzwort" />
@@ -10377,12 +9758,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name:Geburtsname.family.extension:vorsatzwort.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.family.extension.extension" />
       <slicing>
         <discriminator>
@@ -10459,12 +9834,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name:Geburtsname.family.extension:vorsatzwort.value[x]">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.family.extension.value[x]" />
       <short value="Value of extension" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
@@ -10631,12 +10000,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name:Geburtsname.prefix.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.prefix.extension" />
       <slicing>
         <discriminator>
@@ -10688,12 +10051,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name:Geburtsname.prefix.extension:prefix-qualifier">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.prefix.extension" />
       <sliceName value="prefix-qualifier" />
       <short value="LS | AC | NB | PR | HON | BR | AD | SP | MID | CL | IN | VV" />
@@ -10767,12 +10124,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name:Geburtsname.prefix.extension:prefix-qualifier.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.prefix.extension.extension" />
       <slicing>
         <discriminator>
@@ -10849,12 +10200,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name:Geburtsname.prefix.extension:prefix-qualifier.value[x]">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.prefix.extension.value[x]" />
       <short value="Value of extension" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
@@ -10957,12 +10302,6 @@
       </mapping>
     </element>
     <element id="Practitioner.name:Geburtsname.period">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.name.period" />
       <short value="Time period when name was/is in use" />
       <definition value="Indicates the period of time when this name was valid for the named person." />
@@ -11022,12 +10361,6 @@
       </mapping>
     </element>
     <element id="Practitioner.telecom">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.telecom" />
       <short value="Angaben zu bestehenden Kontaktmöglichkeiten. (Telefon, Fax, E-Mail usw.)" />
       <definition value="Details for all kinds of technology mediated contact points for a person or organization, including telephone, email, etc." />
@@ -11115,12 +10448,6 @@
       </mapping>
     </element>
     <element id="Practitioner.telecom.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.telecom.extension" />
       <slicing>
         <discriminator>
@@ -11353,12 +10680,6 @@
       </mapping>
     </element>
     <element id="Practitioner.telecom.period">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.telecom.period" />
       <short value="Time period when the contact point was/is in use" />
       <definition value="Time period when the contact point was/is in use." />
@@ -11417,12 +10738,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address" />
       <slicing>
         <discriminator>
@@ -11568,12 +10883,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.extension" />
       <slicing>
         <discriminator>
@@ -11625,12 +10934,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address.extension:Stadtteil">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.extension" />
       <sliceName value="Stadtteil" />
       <short value="Stadt- oder Ortsteil" />
@@ -11703,12 +11006,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address.extension:Stadtteil.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.extension.extension" />
       <slicing>
         <discriminator>
@@ -11785,12 +11082,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address.extension:Stadtteil.value[x]">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.extension.value[x]" />
       <short value="Value of extension" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
@@ -12066,12 +11357,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address.line.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.line.extension" />
       <slicing>
         <discriminator>
@@ -12123,12 +11408,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address.line.extension:Strasse">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.line.extension" />
       <sliceName value="Strasse" />
       <short value="Strassenname (ohne Hausnummer)" />
@@ -12201,12 +11480,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address.line.extension:Strasse.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.line.extension.extension" />
       <slicing>
         <discriminator>
@@ -12283,12 +11556,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address.line.extension:Strasse.value[x]">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.line.extension.value[x]" />
       <short value="Value of extension" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
@@ -12321,12 +11588,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address.line.extension:Hausnummer">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.line.extension" />
       <sliceName value="Hausnummer" />
       <short value="Hausnummer" />
@@ -12399,12 +11660,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address.line.extension:Hausnummer.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.line.extension.extension" />
       <slicing>
         <discriminator>
@@ -12481,12 +11736,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address.line.extension:Hausnummer.value[x]">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.line.extension.value[x]" />
       <short value="Value of extension" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
@@ -12519,12 +11768,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address.line.extension:Adresszusatz">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.line.extension" />
       <sliceName value="Adresszusatz" />
       <short value="Adresszusatz" />
@@ -12597,12 +11840,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address.line.extension:Adresszusatz.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.line.extension.extension" />
       <slicing>
         <discriminator>
@@ -12679,12 +11916,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address.line.extension:Adresszusatz.value[x]">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.line.extension.value[x]" />
       <short value="Value of extension" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
@@ -12717,12 +11948,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address.line.extension:Postfach">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.line.extension" />
       <sliceName value="Postfach" />
       <short value="Postfach" />
@@ -12795,12 +12020,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address.line.extension:Postfach.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.line.extension.extension" />
       <slicing>
         <discriminator>
@@ -12877,12 +12096,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address.line.extension:Postfach.value[x]">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.line.extension.value[x]" />
       <short value="Value of extension" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
@@ -13185,12 +12398,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address.period">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.period" />
       <short value="Time period when address was/is in use" />
       <definition value="Time period when address was/is in use." />
@@ -13257,12 +12464,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address:Strassenanschrift">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address" />
       <sliceName value="Strassenanschrift" />
       <short value="Eine Adresse gemäß postalischer Konventionen" />
@@ -13402,12 +12603,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address:Strassenanschrift.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.extension" />
       <slicing>
         <discriminator>
@@ -13459,12 +12654,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address:Strassenanschrift.extension:Stadtteil">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.extension" />
       <sliceName value="Stadtteil" />
       <short value="Stadt- oder Ortsteil" />
@@ -13537,12 +12726,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address:Strassenanschrift.extension:Stadtteil.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.extension.extension" />
       <slicing>
         <discriminator>
@@ -13619,12 +12802,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address:Strassenanschrift.extension:Stadtteil.value[x]">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.extension.value[x]" />
       <short value="Value of extension" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
@@ -13901,12 +13078,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address:Strassenanschrift.line.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.line.extension" />
       <slicing>
         <discriminator>
@@ -13958,12 +13129,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address:Strassenanschrift.line.extension:Strasse">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.line.extension" />
       <sliceName value="Strasse" />
       <short value="Strassenname (ohne Hausnummer)" />
@@ -14036,12 +13201,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address:Strassenanschrift.line.extension:Strasse.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.line.extension.extension" />
       <slicing>
         <discriminator>
@@ -14118,12 +13277,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address:Strassenanschrift.line.extension:Strasse.value[x]">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.line.extension.value[x]" />
       <short value="Value of extension" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
@@ -14156,12 +13309,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address:Strassenanschrift.line.extension:Hausnummer">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.line.extension" />
       <sliceName value="Hausnummer" />
       <short value="Hausnummer" />
@@ -14234,12 +13381,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address:Strassenanschrift.line.extension:Hausnummer.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.line.extension.extension" />
       <slicing>
         <discriminator>
@@ -14316,12 +13457,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address:Strassenanschrift.line.extension:Hausnummer.value[x]">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.line.extension.value[x]" />
       <short value="Value of extension" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
@@ -14354,12 +13489,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address:Strassenanschrift.line.extension:Adresszusatz">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.line.extension" />
       <sliceName value="Adresszusatz" />
       <short value="Adresszusatz" />
@@ -14432,12 +13561,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address:Strassenanschrift.line.extension:Adresszusatz.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.line.extension.extension" />
       <slicing>
         <discriminator>
@@ -14514,12 +13637,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address:Strassenanschrift.line.extension:Adresszusatz.value[x]">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.line.extension.value[x]" />
       <short value="Value of extension" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
@@ -14552,12 +13669,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address:Strassenanschrift.line.extension:Postfach">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.line.extension" />
       <sliceName value="Postfach" />
       <short value="Postfach" />
@@ -14630,12 +13741,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address:Strassenanschrift.line.extension:Postfach.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.line.extension.extension" />
       <slicing>
         <discriminator>
@@ -14712,12 +13817,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address:Strassenanschrift.line.extension:Postfach.value[x]">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.line.extension.value[x]" />
       <short value="Value of extension" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
@@ -15020,12 +14119,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address:Strassenanschrift.period">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.period" />
       <short value="Time period when address was/is in use" />
       <definition value="Time period when address was/is in use." />
@@ -15092,12 +14185,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address:Postfach">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address" />
       <sliceName value="Postfach" />
       <short value="Eine Adresse gemäß postalischer Konventionen" />
@@ -15237,12 +14324,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address:Postfach.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.extension" />
       <slicing>
         <discriminator>
@@ -15294,12 +14375,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address:Postfach.extension:Stadtteil">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.extension" />
       <sliceName value="Stadtteil" />
       <short value="Stadt- oder Ortsteil" />
@@ -15372,12 +14447,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address:Postfach.extension:Stadtteil.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.extension.extension" />
       <slicing>
         <discriminator>
@@ -15454,12 +14523,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address:Postfach.extension:Stadtteil.value[x]">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.extension.value[x]" />
       <short value="Value of extension" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
@@ -15736,12 +14799,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address:Postfach.line.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.line.extension" />
       <slicing>
         <discriminator>
@@ -15793,12 +14850,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address:Postfach.line.extension:Strasse">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.line.extension" />
       <sliceName value="Strasse" />
       <short value="Strassenname (ohne Hausnummer)" />
@@ -15871,12 +14922,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address:Postfach.line.extension:Strasse.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.line.extension.extension" />
       <slicing>
         <discriminator>
@@ -15953,12 +14998,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address:Postfach.line.extension:Strasse.value[x]">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.line.extension.value[x]" />
       <short value="Value of extension" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
@@ -15991,12 +15030,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address:Postfach.line.extension:Hausnummer">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.line.extension" />
       <sliceName value="Hausnummer" />
       <short value="Hausnummer" />
@@ -16069,12 +15102,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address:Postfach.line.extension:Hausnummer.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.line.extension.extension" />
       <slicing>
         <discriminator>
@@ -16151,12 +15178,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address:Postfach.line.extension:Hausnummer.value[x]">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.line.extension.value[x]" />
       <short value="Value of extension" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
@@ -16189,12 +15210,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address:Postfach.line.extension:Adresszusatz">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.line.extension" />
       <sliceName value="Adresszusatz" />
       <short value="Adresszusatz" />
@@ -16267,12 +15282,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address:Postfach.line.extension:Adresszusatz.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.line.extension.extension" />
       <slicing>
         <discriminator>
@@ -16349,12 +15358,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address:Postfach.line.extension:Adresszusatz.value[x]">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.line.extension.value[x]" />
       <short value="Value of extension" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
@@ -16387,12 +15390,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address:Postfach.line.extension:Postfach">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.line.extension" />
       <sliceName value="Postfach" />
       <short value="Postfach" />
@@ -16465,12 +15462,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address:Postfach.line.extension:Postfach.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.line.extension.extension" />
       <slicing>
         <discriminator>
@@ -16547,12 +15538,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address:Postfach.line.extension:Postfach.value[x]">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.line.extension.value[x]" />
       <short value="Value of extension" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
@@ -16855,12 +15840,6 @@
       </mapping>
     </element>
     <element id="Practitioner.address:Postfach.period">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.address.period" />
       <short value="Time period when address was/is in use" />
       <definition value="Time period when address was/is in use." />
@@ -16956,9 +15935,6 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="AdministrativeGender" />
         </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true" />
-        </extension>
         <strength value="required" />
         <description value="The gender of a person used for administrative purposes." />
         <valueSet value="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1" />
@@ -17004,12 +15980,6 @@
       </mapping>
     </element>
     <element id="Practitioner.gender.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.gender.extension" />
       <slicing>
         <discriminator>
@@ -17061,12 +16031,6 @@
       </mapping>
     </element>
     <element id="Practitioner.gender.extension:gender-amtlich">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.gender.extension" />
       <sliceName value="gender-amtlich" />
       <short value="Optional Extensions Element" />
@@ -17136,12 +16100,6 @@
       </mapping>
     </element>
     <element id="Practitioner.gender.extension:gender-amtlich.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.gender.extension.extension" />
       <slicing>
         <discriminator>
@@ -17218,12 +16176,6 @@
       </mapping>
     </element>
     <element id="Practitioner.gender.extension:gender-amtlich.value[x]">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.gender.extension.value[x]" />
       <short value="Value of extension" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
@@ -17356,12 +16308,6 @@
       </mapping>
     </element>
     <element id="Practitioner.birthDate.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.birthDate.extension" />
       <slicing>
         <discriminator>
@@ -17413,12 +16359,6 @@
       </mapping>
     </element>
     <element id="Practitioner.birthDate.extension:data_absent_reason">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.birthDate.extension" />
       <sliceName value="data_absent_reason" />
       <short value="unknown | asked | temp | notasked | masked | unsupported | astext | error" />
@@ -17492,12 +16432,6 @@
       </mapping>
     </element>
     <element id="Practitioner.birthDate.extension:data_absent_reason.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.birthDate.extension.extension" />
       <slicing>
         <discriminator>
@@ -17574,12 +16508,6 @@
       </mapping>
     </element>
     <element id="Practitioner.birthDate.extension:data_absent_reason.value[x]">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.birthDate.extension.value[x]" />
       <short value="Value of extension" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
@@ -17605,9 +16533,6 @@
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="DataAbsentReason" />
-        </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true" />
         </extension>
         <strength value="required" />
         <description value="Used to specify why the normally expected content of the data element is missing." />
@@ -17645,12 +16570,6 @@
       </type>
     </element>
     <element id="Practitioner.photo">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.photo" />
       <short value="Image of the person" />
       <definition value="Image of the person." />
@@ -17705,12 +16624,6 @@
       </mapping>
     </element>
     <element id="Practitioner.qualification">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.qualification" />
       <short value="Certification, licenses, or training pertaining to the provision of care" />
       <definition value="The official certifications, training, and licenses that authorize or otherwise pertain to the provision of care by the practitioner.  For example, a medical license issued by a medical board authorizing the practitioner to practice medicine within a certian locality." />
@@ -17774,12 +16687,6 @@
       </mapping>
     </element>
     <element id="Practitioner.qualification.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.qualification.extension" />
       <slicing>
         <discriminator>
@@ -17831,12 +16738,6 @@
       </mapping>
     </element>
     <element id="Practitioner.qualification.modifierExtension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.qualification.modifierExtension" />
       <short value="Extensions that cannot be ignored even if unrecognized" />
       <definition value="May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.&#xA;&#xA;Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)." />
@@ -17885,12 +16786,6 @@
       </mapping>
     </element>
     <element id="Practitioner.qualification.identifier">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.qualification.identifier" />
       <short value="An identifier for this qualification for the practitioner" />
       <definition value="An identifier that applies to this person's qualification in this role." />
@@ -17936,12 +16831,6 @@
       </mapping>
     </element>
     <element id="Practitioner.qualification.code">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.qualification.code" />
       <short value="Coded representation of the qualification" />
       <definition value="Coded representation of the qualification." />
@@ -17999,12 +16888,6 @@
       </mapping>
     </element>
     <element id="Practitioner.qualification.period">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.qualification.period" />
       <short value="Period during which the qualification is valid" />
       <definition value="Period during which the qualification is valid." />
@@ -18059,12 +16942,6 @@
       </mapping>
     </element>
     <element id="Practitioner.qualification.issuer">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.qualification.issuer" />
       <short value="Organization that regulates and issues the qualification" />
       <definition value="Organization that regulates and issues the qualification." />
@@ -18111,12 +16988,6 @@
       </mapping>
     </element>
     <element id="Practitioner.communication">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Practitioner.communication" />
       <short value="A language the practitioner can use in patient communication" />
       <definition value="A language the practitioner can use in patient communication." />
@@ -18147,9 +17018,6 @@
         </extension>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="Language" />
-        </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true" />
         </extension>
         <strength value="preferred" />
         <description value="A human language." />
@@ -18400,7 +17268,7 @@
     </element>
     <element id="Practitioner.name:Name.prefix.extension:prefix-qualifier.value[x]">
       <path value="Practitioner.name.prefix.extension.value[x]" />
-      <fixedCode value="Konkrete Spezialisierung der Präfixart" />
+      <short value="Konkrete Spezialisierung der Präfixart" />
       <mustSupport value="true" />
     </element>
     <element id="Practitioner.name:Name.suffix">
