@@ -18,7 +18,7 @@
     <effectiveTiming>
         <code>  
             <coding>
-                <system value="http://fhir.dguv.de/ENLA/ValueSet/DGUV_ENLA_VS_MassnahmenZeitpunkt" />
+                <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-MassnahmenZeitpunkt" />
                 <code value="Festzul" />
                 <display value="Durch Weiterbehandler festzulegen" />
             </coding>
