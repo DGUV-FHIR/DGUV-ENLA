@@ -1696,11 +1696,7 @@
       <path value="MedicationStatement.dosage" />
       <slicing>
         <discriminator>
-          <type value="exists" />
-          <path value="timing.code" />
-        </discriminator>
-        <discriminator>
-          <type value="exists" />
+          <type value="value" />
           <path value="text" />
         </discriminator>
         <rules value="closed" />
@@ -1947,8 +1943,8 @@
       <definition value="Free text dosage instructions e.g. SIG." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Free text dosage instructions can be used for cases where the instructions are too complex to code.  The content of this attribute does not include the name or description of the medication. When coded instructions are present, the free text instructions may still be present for display to humans taking or administering the medication. It is expected that the text instructions will always be populated.  If the dosage.timing attribute is also populated, then the dosage.text should reflect the same information as the timing.  Additional information about administration or preparation of the medication should be included as text." />
-      <min value="0" />
-      <max value="0" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="Dosage.text" />
         <min value="0" />
@@ -1957,6 +1953,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="Strukturierte Dosierung" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -1966,6 +1963,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -7727,11 +7725,7 @@
       <path value="MedicationStatement.dosage" />
       <slicing>
         <discriminator>
-          <type value="exists" />
-          <path value="timing.code" />
-        </discriminator>
-        <discriminator>
-          <type value="exists" />
+          <type value="value" />
           <path value="text" />
         </discriminator>
         <rules value="closed" />
@@ -7753,7 +7747,9 @@
     </element>
     <element id="MedicationStatement.dosage:strukturierteDosierung.text">
       <path value="MedicationStatement.dosage.text" />
-      <max value="0" />
+      <min value="1" />
+      <fixedString value="Strukturierte Dosierung" />
+      <mustSupport value="true" />
     </element>
     <element id="MedicationStatement.dosage:strukturierteDosierung.additionalInstruction">
       <path value="MedicationStatement.dosage.additionalInstruction" />
