@@ -3933,14 +3933,14 @@
     </element>
     <element id="Composition.section:Unfallversicherungstraeger.title">
       <path value="Composition.section.title" />
-      <short value="Label for section (e.g. for ToC)" />
+      <short value="Kriterium für section-Diskriminator" />
       <definition value="The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents." />
       <comment value="The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents, it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element." />
       <requirements value="Section headings are often standardized for different types of documents.  They give guidance to humans on how the document is organized." />
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -3960,6 +3960,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -4837,14 +4838,14 @@
     </element>
     <element id="Composition.section:Krankenkasse.title">
       <path value="Composition.section.title" />
-      <short value="Label for section (e.g. for ToC)" />
+      <short value="Kriterium für section-Diskriminator" />
       <definition value="The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents." />
       <comment value="The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents, it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element." />
       <requirements value="Section headings are often standardized for different types of documents.  They give guidance to humans on how the document is organized." />
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -4864,6 +4865,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -5559,12 +5561,12 @@
         <map value=".component.section" />
       </mapping>
     </element>
-    <element id="Composition.section:Versicherungsverhaeltnis">
+    <element id="Composition.section:VersichertenVerhaeltnis">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
       </extension>
       <path value="Composition.section" />
-      <sliceName value="Versicherungsverhaeltnis" />
+      <sliceName value="VersichertenVerhaeltnis" />
       <short value="Composition is broken into sections" />
       <definition value="The root of the sections that make up the composition." />
       <min value="0" />
@@ -5616,7 +5618,7 @@
         <map value=".component.structuredBody.component.section" />
       </mapping>
     </element>
-    <element id="Composition.section:Versicherungsverhaeltnis.id">
+    <element id="Composition.section:VersichertenVerhaeltnis.id">
       <path value="Composition.section.id" />
       <representation value="xmlAttr" />
       <short value="Unique id for inter-element referencing" />
@@ -5639,7 +5641,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Composition.section:Versicherungsverhaeltnis.extension">
+    <element id="Composition.section:VersichertenVerhaeltnis.extension">
       <path value="Composition.section.extension" />
       <slicing>
         <discriminator>
@@ -5690,7 +5692,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Composition.section:Versicherungsverhaeltnis.modifierExtension">
+    <element id="Composition.section:VersichertenVerhaeltnis.modifierExtension">
       <path value="Composition.section.modifierExtension" />
       <short value="Extensions that cannot be ignored even if unrecognized" />
       <definition value="May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.&#xA;&#xA;Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)." />
@@ -5738,16 +5740,16 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Composition.section:Versicherungsverhaeltnis.title">
+    <element id="Composition.section:VersichertenVerhaeltnis.title">
       <path value="Composition.section.title" />
-      <short value="Label for section (e.g. for ToC)" />
+      <short value="Kriterium für section-Diskriminator" />
       <definition value="The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents." />
       <comment value="The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents, it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element." />
       <requirements value="Section headings are often standardized for different types of documents.  They give guidance to humans on how the document is organized." />
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -5757,7 +5759,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="VersicherungsVerhaeltnis" />
+      <fixedString value="VersichertenVerhaeltnis" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -5767,6 +5769,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -5780,7 +5783,7 @@
         <map value=".title" />
       </mapping>
     </element>
-    <element id="Composition.section:Versicherungsverhaeltnis.code">
+    <element id="Composition.section:VersichertenVerhaeltnis.code">
       <path value="Composition.section.code" />
       <short value="Classification of section (recommended)" />
       <definition value="A code identifying the kind of content contained within the section. This must be consistent with the section title." />
@@ -5838,7 +5841,7 @@
         <map value=".code" />
       </mapping>
     </element>
-    <element id="Composition.section:Versicherungsverhaeltnis.author">
+    <element id="Composition.section:VersichertenVerhaeltnis.author">
       <path value="Composition.section.author" />
       <short value="Who and/or what authored the section" />
       <definition value="Identifies who is responsible for the information in this section, not necessarily who typed it in." />
@@ -5898,7 +5901,7 @@
         <map value=".author.assignedAuthor" />
       </mapping>
     </element>
-    <element id="Composition.section:Versicherungsverhaeltnis.focus">
+    <element id="Composition.section:VersichertenVerhaeltnis.focus">
       <path value="Composition.section.focus" />
       <short value="Who/what the section is about, when it is not about the subject of composition" />
       <definition value="The actual focus of the section when it is not the subject of the composition, but instead represents something or someone associated with the subject such as (for a patient subject) a spouse, parent, fetus, or donor. If not focus is specified, the focus is assumed to be focus of the parent section, or, for a section in the Composition itself, the subject of the composition. Sections with a focus SHALL only include resources where the logical subject (patient, subject, focus, etc.) matches the section focus, or the resources have no logical subject (few resources)." />
@@ -5944,7 +5947,7 @@
         <map value=".subject? (CDA did not differentiate between subject and focus)" />
       </mapping>
     </element>
-    <element id="Composition.section:Versicherungsverhaeltnis.text">
+    <element id="Composition.section:VersichertenVerhaeltnis.text">
       <path value="Composition.section.text" />
       <short value="Text summary of the section, for human interpretation" />
       <definition value="A human-readable narrative that contains the attested content of the section, used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it &quot;clinically safe&quot; for a human to just read the narrative." />
@@ -5986,7 +5989,7 @@
         <map value=".text" />
       </mapping>
     </element>
-    <element id="Composition.section:Versicherungsverhaeltnis.mode">
+    <element id="Composition.section:VersichertenVerhaeltnis.mode">
       <path value="Composition.section.mode" />
       <short value="working | snapshot | changes" />
       <definition value="How the entry list was prepared - whether it is a working list that is suitable for being maintained on an ongoing basis, or if it represents a snapshot of a list of items from another source, or whether it is a prepared list where items may be marked as added, modified or deleted." />
@@ -6036,7 +6039,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Composition.section:Versicherungsverhaeltnis.orderedBy">
+    <element id="Composition.section:VersichertenVerhaeltnis.orderedBy">
       <path value="Composition.section.orderedBy" />
       <short value="Order of section entries" />
       <definition value="Specifies the order applied to the items in the section entries." />
@@ -6094,9 +6097,9 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Composition.section:Versicherungsverhaeltnis.entry">
+    <element id="Composition.section:VersichertenVerhaeltnis.entry">
       <path value="Composition.section.entry" />
-      <short value="Verweis auf das ENLA-Profil Versicherungsverhältnis" />
+      <short value="Verweis auf das ENLA-Profil VersichertenVerhaeltnis" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -6108,7 +6111,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-VersicherungsVerhaeltnis" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Coverage/DGUV-ENLA-PR-VersichertenVerhaeltnis" />
       </type>
       <condition value="ele-1" />
       <condition value="cmp-2" />
@@ -6146,7 +6149,7 @@
         <map value=".entry" />
       </mapping>
     </element>
-    <element id="Composition.section:Versicherungsverhaeltnis.entry.id">
+    <element id="Composition.section:VersichertenVerhaeltnis.entry.id">
       <path value="Composition.section.entry.id" />
       <representation value="xmlAttr" />
       <short value="Unique id for inter-element referencing" />
@@ -6169,7 +6172,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Composition.section:Versicherungsverhaeltnis.entry.extension">
+    <element id="Composition.section:VersichertenVerhaeltnis.entry.extension">
       <path value="Composition.section.entry.extension" />
       <slicing>
         <discriminator>
@@ -6220,9 +6223,9 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Composition.section:Versicherungsverhaeltnis.entry.reference">
+    <element id="Composition.section:VersichertenVerhaeltnis.entry.reference">
       <path value="Composition.section.entry.reference" />
-      <short value="Verweis auf das konkrete ENLA-Profil Versicherungsverhältnis" />
+      <short value="Verweis auf das konkrete ENLA-Profil VersichertenVerhaeltnis" />
       <definition value="A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources." />
       <comment value="Using absolute URLs provides a stable scalable approach suitable for a cloud/web context, while using relative/logical references provides a flexible approach suitable for use when trading across closed eco-system boundaries.   Absolute URLs do not need to point to a FHIR RESTful server, though this is the preferred approach. If the URL conforms to the structure &quot;/[type]/[id]&quot; then it should be assumed that the reference is to a FHIR RESTful server." />
       <min value="1" />
@@ -6256,7 +6259,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Composition.section:Versicherungsverhaeltnis.entry.type">
+    <element id="Composition.section:VersichertenVerhaeltnis.entry.type">
       <path value="Composition.section.entry.type" />
       <short value="Type the reference refers to (e.g. &quot;Patient&quot;)" />
       <definition value="The expected type of the target of the reference. If both Reference.type and Reference.reference are populated and Reference.reference is a FHIR URL, both SHALL be consistent.&#xA;&#xA;The type is the Canonical URL of Resource Definition that is the type this reference refers to. References are URLs that are relative to http://hl7.org/fhir/StructureDefinition/ e.g. &quot;Patient&quot; is a reference to http://hl7.org/fhir/StructureDefinition/Patient. Absolute URLs are only allowed for logical models (and can only be used in references in logical models, not resources)." />
@@ -6298,7 +6301,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Composition.section:Versicherungsverhaeltnis.entry.identifier">
+    <element id="Composition.section:VersichertenVerhaeltnis.entry.identifier">
       <path value="Composition.section.entry.identifier" />
       <short value="Logical reference, when literal reference is not known" />
       <definition value="An identifier for the target resource. This is used when there is no way to reference the other resource directly, either because the entity it represents is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference." />
@@ -6344,7 +6347,7 @@
         <map value=".identifier" />
       </mapping>
     </element>
-    <element id="Composition.section:Versicherungsverhaeltnis.entry.display">
+    <element id="Composition.section:VersichertenVerhaeltnis.entry.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -6381,7 +6384,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Composition.section:Versicherungsverhaeltnis.emptyReason">
+    <element id="Composition.section:VersichertenVerhaeltnis.emptyReason">
       <path value="Composition.section.emptyReason" />
       <short value="Why the section is empty" />
       <definition value="If the section is empty, why the list is empty. An empty section typically has some text explaining the empty reason." />
@@ -6440,7 +6443,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Composition.section:Versicherungsverhaeltnis.section">
+    <element id="Composition.section:VersichertenVerhaeltnis.section">
       <path value="Composition.section.section" />
       <short value="Nested Section" />
       <definition value="A nested sub-section within this section." />
@@ -6644,14 +6647,14 @@
     </element>
     <element id="Composition.section:Pflegekasse.title">
       <path value="Composition.section.title" />
-      <short value="Label for section (e.g. for ToC)" />
+      <short value="Kriterium für section-Diskriminator" />
       <definition value="The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents." />
       <comment value="The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents, it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element." />
       <requirements value="Section headings are often standardized for different types of documents.  They give guidance to humans on how the document is organized." />
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -6671,6 +6674,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -7548,14 +7552,14 @@
     </element>
     <element id="Composition.section:Unfallbetrieb.title">
       <path value="Composition.section.title" />
-      <short value="Label for section (e.g. for ToC)" />
+      <short value="Kriterium für section-Diskriminator" />
       <definition value="The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents." />
       <comment value="The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents, it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element." />
       <requirements value="Section headings are often standardized for different types of documents.  They give guidance to humans on how the document is organized." />
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -7575,6 +7579,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -8452,14 +8457,14 @@
     </element>
     <element id="Composition.section:Aufenthaltsinformationen.title">
       <path value="Composition.section.title" />
-      <short value="Label for section (e.g. for ToC)" />
+      <short value="Kriterium für section-Diskriminator" />
       <definition value="The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents." />
       <comment value="The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents, it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element." />
       <requirements value="Section headings are often standardized for different types of documents.  They give guidance to humans on how the document is organized." />
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -8479,6 +8484,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -9356,14 +9362,14 @@
     </element>
     <element id="Composition.section:DiagnoseFreitext.title">
       <path value="Composition.section.title" />
-      <short value="Label for section (e.g. for ToC)" />
+      <short value="Kriterium für section-Diskriminator" />
       <definition value="The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents." />
       <comment value="The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents, it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element." />
       <requirements value="Section headings are often standardized for different types of documents.  They give guidance to humans on how the document is organized." />
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -9383,6 +9389,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -10260,14 +10267,14 @@
     </element>
     <element id="Composition.section:DiagnoseStrukturiert.title">
       <path value="Composition.section.title" />
-      <short value="Label for section (e.g. for ToC)" />
+      <short value="Kriterium für section-Diskriminator" />
       <definition value="The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents." />
       <comment value="The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents, it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element." />
       <requirements value="Section headings are often standardized for different types of documents.  They give guidance to humans on how the document is organized." />
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -10287,6 +10294,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -11164,14 +11172,14 @@
     </element>
     <element id="Composition.section:Therapie.title">
       <path value="Composition.section.title" />
-      <short value="Label for section (e.g. for ToC)" />
+      <short value="Kriterium für section-Diskriminator" />
       <definition value="The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents." />
       <comment value="The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents, it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element." />
       <requirements value="Section headings are often standardized for different types of documents.  They give guidance to humans on how the document is organized." />
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -11191,6 +11199,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -12068,14 +12077,14 @@
     </element>
     <element id="Composition.section:Unfallereignis.title">
       <path value="Composition.section.title" />
-      <short value="Label for section (e.g. for ToC)" />
+      <short value="Kriterium für section-Diskriminator" />
       <definition value="The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents." />
       <comment value="The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents, it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element." />
       <requirements value="Section headings are often standardized for different types of documents.  They give guidance to humans on how the document is organized." />
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -12095,6 +12104,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -12972,14 +12982,14 @@
     </element>
     <element id="Composition.section:Aufnahmebefunde.title">
       <path value="Composition.section.title" />
-      <short value="Label for section (e.g. for ToC)" />
+      <short value="Kriterium für section-Diskriminator" />
       <definition value="The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents." />
       <comment value="The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents, it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element." />
       <requirements value="Section headings are often standardized for different types of documents.  They give guidance to humans on how the document is organized." />
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -12999,6 +13009,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -13876,14 +13887,14 @@
     </element>
     <element id="Composition.section:Behandlungsverlauf.title">
       <path value="Composition.section.title" />
-      <short value="Label for section (e.g. for ToC)" />
+      <short value="Kriterium für section-Diskriminator" />
       <definition value="The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents." />
       <comment value="The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents, it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element." />
       <requirements value="Section headings are often standardized for different types of documents.  They give guidance to humans on how the document is organized." />
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -13903,6 +13914,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -14780,14 +14792,14 @@
     </element>
     <element id="Composition.section:Konsiliarbefunde.title">
       <path value="Composition.section.title" />
-      <short value="Label for section (e.g. for ToC)" />
+      <short value="Kriterium für section-Diskriminator" />
       <definition value="The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents." />
       <comment value="The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents, it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element." />
       <requirements value="Section headings are often standardized for different types of documents.  They give guidance to humans on how the document is organized." />
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -14807,6 +14819,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -15684,14 +15697,14 @@
     </element>
     <element id="Composition.section:Entlassbefunde.title">
       <path value="Composition.section.title" />
-      <short value="Label for section (e.g. for ToC)" />
+      <short value="Kriterium für section-Diskriminator" />
       <definition value="The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents." />
       <comment value="The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents, it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element." />
       <requirements value="Section headings are often standardized for different types of documents.  They give guidance to humans on how the document is organized." />
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -15711,6 +15724,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -16407,12 +16421,12 @@
         <map value=".component.section" />
       </mapping>
     </element>
-    <element id="Composition.section:Dokumentenreferenz">
+    <element id="Composition.section:DokumentenReferenz">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
       </extension>
       <path value="Composition.section" />
-      <sliceName value="Dokumentenreferenz" />
+      <sliceName value="DokumentenReferenz" />
       <short value="Composition is broken into sections" />
       <definition value="The root of the sections that make up the composition." />
       <min value="0" />
@@ -16464,7 +16478,7 @@
         <map value=".component.structuredBody.component.section" />
       </mapping>
     </element>
-    <element id="Composition.section:Dokumentenreferenz.id">
+    <element id="Composition.section:DokumentenReferenz.id">
       <path value="Composition.section.id" />
       <representation value="xmlAttr" />
       <short value="Unique id for inter-element referencing" />
@@ -16487,7 +16501,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Composition.section:Dokumentenreferenz.extension">
+    <element id="Composition.section:DokumentenReferenz.extension">
       <path value="Composition.section.extension" />
       <slicing>
         <discriminator>
@@ -16538,7 +16552,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Composition.section:Dokumentenreferenz.modifierExtension">
+    <element id="Composition.section:DokumentenReferenz.modifierExtension">
       <path value="Composition.section.modifierExtension" />
       <short value="Extensions that cannot be ignored even if unrecognized" />
       <definition value="May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.&#xA;&#xA;Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)." />
@@ -16586,16 +16600,16 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Composition.section:Dokumentenreferenz.title">
+    <element id="Composition.section:DokumentenReferenz.title">
       <path value="Composition.section.title" />
-      <short value="Label for section (e.g. for ToC)" />
+      <short value="Kriterium für section-Diskriminator" />
       <definition value="The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents." />
       <comment value="The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents, it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element." />
       <requirements value="Section headings are often standardized for different types of documents.  They give guidance to humans on how the document is organized." />
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -16615,6 +16629,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -16628,7 +16643,7 @@
         <map value=".title" />
       </mapping>
     </element>
-    <element id="Composition.section:Dokumentenreferenz.code">
+    <element id="Composition.section:DokumentenReferenz.code">
       <path value="Composition.section.code" />
       <short value="Classification of section (recommended)" />
       <definition value="A code identifying the kind of content contained within the section. This must be consistent with the section title." />
@@ -16686,7 +16701,7 @@
         <map value=".code" />
       </mapping>
     </element>
-    <element id="Composition.section:Dokumentenreferenz.author">
+    <element id="Composition.section:DokumentenReferenz.author">
       <path value="Composition.section.author" />
       <short value="Who and/or what authored the section" />
       <definition value="Identifies who is responsible for the information in this section, not necessarily who typed it in." />
@@ -16746,7 +16761,7 @@
         <map value=".author.assignedAuthor" />
       </mapping>
     </element>
-    <element id="Composition.section:Dokumentenreferenz.focus">
+    <element id="Composition.section:DokumentenReferenz.focus">
       <path value="Composition.section.focus" />
       <short value="Who/what the section is about, when it is not about the subject of composition" />
       <definition value="The actual focus of the section when it is not the subject of the composition, but instead represents something or someone associated with the subject such as (for a patient subject) a spouse, parent, fetus, or donor. If not focus is specified, the focus is assumed to be focus of the parent section, or, for a section in the Composition itself, the subject of the composition. Sections with a focus SHALL only include resources where the logical subject (patient, subject, focus, etc.) matches the section focus, or the resources have no logical subject (few resources)." />
@@ -16792,7 +16807,7 @@
         <map value=".subject? (CDA did not differentiate between subject and focus)" />
       </mapping>
     </element>
-    <element id="Composition.section:Dokumentenreferenz.text">
+    <element id="Composition.section:DokumentenReferenz.text">
       <path value="Composition.section.text" />
       <short value="Text summary of the section, for human interpretation" />
       <definition value="A human-readable narrative that contains the attested content of the section, used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it &quot;clinically safe&quot; for a human to just read the narrative." />
@@ -16834,7 +16849,7 @@
         <map value=".text" />
       </mapping>
     </element>
-    <element id="Composition.section:Dokumentenreferenz.mode">
+    <element id="Composition.section:DokumentenReferenz.mode">
       <path value="Composition.section.mode" />
       <short value="working | snapshot | changes" />
       <definition value="How the entry list was prepared - whether it is a working list that is suitable for being maintained on an ongoing basis, or if it represents a snapshot of a list of items from another source, or whether it is a prepared list where items may be marked as added, modified or deleted." />
@@ -16884,7 +16899,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Composition.section:Dokumentenreferenz.orderedBy">
+    <element id="Composition.section:DokumentenReferenz.orderedBy">
       <path value="Composition.section.orderedBy" />
       <short value="Order of section entries" />
       <definition value="Specifies the order applied to the items in the section entries." />
@@ -16942,7 +16957,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Composition.section:Dokumentenreferenz.entry">
+    <element id="Composition.section:DokumentenReferenz.entry">
       <path value="Composition.section.entry" />
       <short value="Verweis auf das ENLA-Profil Dokumentenreferenz" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
@@ -16994,7 +17009,7 @@
         <map value=".entry" />
       </mapping>
     </element>
-    <element id="Composition.section:Dokumentenreferenz.entry.id">
+    <element id="Composition.section:DokumentenReferenz.entry.id">
       <path value="Composition.section.entry.id" />
       <representation value="xmlAttr" />
       <short value="Unique id for inter-element referencing" />
@@ -17017,7 +17032,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Composition.section:Dokumentenreferenz.entry.extension">
+    <element id="Composition.section:DokumentenReferenz.entry.extension">
       <path value="Composition.section.entry.extension" />
       <slicing>
         <discriminator>
@@ -17068,7 +17083,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Composition.section:Dokumentenreferenz.entry.reference">
+    <element id="Composition.section:DokumentenReferenz.entry.reference">
       <path value="Composition.section.entry.reference" />
       <short value="Verweis auf das konkrete ENLA-Profil Dokumentenreferenz" />
       <definition value="A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources." />
@@ -17104,7 +17119,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Composition.section:Dokumentenreferenz.entry.type">
+    <element id="Composition.section:DokumentenReferenz.entry.type">
       <path value="Composition.section.entry.type" />
       <short value="Type the reference refers to (e.g. &quot;Patient&quot;)" />
       <definition value="The expected type of the target of the reference. If both Reference.type and Reference.reference are populated and Reference.reference is a FHIR URL, both SHALL be consistent.&#xA;&#xA;The type is the Canonical URL of Resource Definition that is the type this reference refers to. References are URLs that are relative to http://hl7.org/fhir/StructureDefinition/ e.g. &quot;Patient&quot; is a reference to http://hl7.org/fhir/StructureDefinition/Patient. Absolute URLs are only allowed for logical models (and can only be used in references in logical models, not resources)." />
@@ -17146,7 +17161,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Composition.section:Dokumentenreferenz.entry.identifier">
+    <element id="Composition.section:DokumentenReferenz.entry.identifier">
       <path value="Composition.section.entry.identifier" />
       <short value="Logical reference, when literal reference is not known" />
       <definition value="An identifier for the target resource. This is used when there is no way to reference the other resource directly, either because the entity it represents is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference." />
@@ -17192,7 +17207,7 @@
         <map value=".identifier" />
       </mapping>
     </element>
-    <element id="Composition.section:Dokumentenreferenz.entry.display">
+    <element id="Composition.section:DokumentenReferenz.entry.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -17229,7 +17244,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Composition.section:Dokumentenreferenz.emptyReason">
+    <element id="Composition.section:DokumentenReferenz.emptyReason">
       <path value="Composition.section.emptyReason" />
       <short value="Why the section is empty" />
       <definition value="If the section is empty, why the list is empty. An empty section typically has some text explaining the empty reason." />
@@ -17288,7 +17303,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Composition.section:Dokumentenreferenz.section">
+    <element id="Composition.section:DokumentenReferenz.section">
       <path value="Composition.section.section" />
       <short value="Nested Section" />
       <definition value="A nested sub-section within this section." />
@@ -17492,14 +17507,14 @@
     </element>
     <element id="Composition.section:Therapieempfehlung.title">
       <path value="Composition.section.title" />
-      <short value="Label for section (e.g. for ToC)" />
+      <short value="Kriterium für section-Diskriminator" />
       <definition value="The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents." />
       <comment value="The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents, it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element." />
       <requirements value="Section headings are often standardized for different types of documents.  They give guidance to humans on how the document is organized." />
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -17519,6 +17534,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -18396,14 +18412,14 @@
     </element>
     <element id="Composition.section:MedikationsInformation.title">
       <path value="Composition.section.title" />
-      <short value="Label for section (e.g. for ToC)" />
+      <short value="Kriterium für section-Diskriminator" />
       <definition value="The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents." />
       <comment value="The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents, it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element." />
       <requirements value="Section headings are often standardized for different types of documents.  They give guidance to humans on how the document is organized." />
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -18423,6 +18439,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -19300,14 +19317,14 @@
     </element>
     <element id="Composition.section:MedikationWirkstoff.title">
       <path value="Composition.section.title" />
-      <short value="Label for section (e.g. for ToC)" />
+      <short value="Kriterium für section-Diskriminator" />
       <definition value="The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents." />
       <comment value="The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents, it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element." />
       <requirements value="Section headings are often standardized for different types of documents.  They give guidance to humans on how the document is organized." />
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -19327,6 +19344,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -20204,14 +20222,14 @@
     </element>
     <element id="Composition.section:MedikationRezeptur.title">
       <path value="Composition.section.title" />
-      <short value="Label for section (e.g. for ToC)" />
+      <short value="Kriterium für section-Diskriminator" />
       <definition value="The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents." />
       <comment value="The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents, it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element." />
       <requirements value="Section headings are often standardized for different types of documents.  They give guidance to humans on how the document is organized." />
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -20231,6 +20249,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -21108,14 +21127,14 @@
     </element>
     <element id="Composition.section:MedikationArzneimittel.title">
       <path value="Composition.section.title" />
-      <short value="Label for section (e.g. for ToC)" />
+      <short value="Kriterium für section-Diskriminator" />
       <definition value="The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents." />
       <comment value="The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents, it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element." />
       <requirements value="Section headings are often standardized for different types of documents.  They give guidance to humans on how the document is organized." />
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -21135,6 +21154,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -22012,14 +22032,14 @@
     </element>
     <element id="Composition.section:WeiterbehandelnderArzt.title">
       <path value="Composition.section.title" />
-      <short value="Label for section (e.g. for ToC)" />
+      <short value="Kriterium für section-Diskriminator" />
       <definition value="The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents." />
       <comment value="The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents, it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element." />
       <requirements value="Section headings are often standardized for different types of documents.  They give guidance to humans on how the document is organized." />
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -22029,7 +22049,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="MedikationArzneimittel" />
+      <fixedString value="WeiterbehandelnderArzt" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -22039,6 +22059,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -22917,14 +22938,14 @@
     </element>
     <element id="Composition.section:WeiterbehandelndeOrganisation.title">
       <path value="Composition.section.title" />
-      <short value="Label for section (e.g. for ToC)" />
+      <short value="Kriterium für section-Diskriminator" />
       <definition value="The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents." />
       <comment value="The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents, it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element." />
       <requirements value="Section headings are often standardized for different types of documents.  They give guidance to humans on how the document is organized." />
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -22934,7 +22955,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="WeiterbehandelnderArzt" />
+      <fixedString value="WeiterbehandelndeOrganisation" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -22944,6 +22965,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -23821,14 +23843,14 @@
     </element>
     <element id="Composition.section:RehaMassnahmen.title">
       <path value="Composition.section.title" />
-      <short value="Label for section (e.g. for ToC)" />
+      <short value="Kriterium für section-Diskriminator" />
       <definition value="The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents." />
       <comment value="The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents, it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element." />
       <requirements value="Section headings are often standardized for different types of documents.  They give guidance to humans on how the document is organized." />
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -23848,6 +23870,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -24725,14 +24748,14 @@
     </element>
     <element id="Composition.section:Heilmittel.title">
       <path value="Composition.section.title" />
-      <short value="Label for section (e.g. for ToC)" />
+      <short value="Kriterium für section-Diskriminator" />
       <definition value="The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents." />
       <comment value="The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents, it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element." />
       <requirements value="Section headings are often standardized for different types of documents.  They give guidance to humans on how the document is organized." />
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -24752,6 +24775,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -25629,14 +25653,14 @@
     </element>
     <element id="Composition.section:Hilfsmittel.title">
       <path value="Composition.section.title" />
-      <short value="Label for section (e.g. for ToC)" />
+      <short value="Kriterium für section-Diskriminator" />
       <definition value="The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents." />
       <comment value="The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents, it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element." />
       <requirements value="Section headings are often standardized for different types of documents.  They give guidance to humans on how the document is organized." />
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -25656,6 +25680,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -26533,14 +26558,14 @@
     </element>
     <element id="Composition.section:BesondereMassnahmen.title">
       <path value="Composition.section.title" />
-      <short value="Label for section (e.g. for ToC)" />
+      <short value="Kriterium für section-Diskriminator" />
       <definition value="The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents." />
       <comment value="The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents, it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element." />
       <requirements value="Section headings are often standardized for different types of documents.  They give guidance to humans on how the document is organized." />
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -26560,6 +26585,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -27437,14 +27463,14 @@
     </element>
     <element id="Composition.section:Arbeitsunfaehigkeit.title">
       <path value="Composition.section.title" />
-      <short value="Label for section (e.g. for ToC)" />
+      <short value="Kriterium für section-Diskriminator" />
       <definition value="The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents." />
       <comment value="The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents, it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element." />
       <requirements value="Section headings are often standardized for different types of documents.  They give guidance to humans on how the document is organized." />
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -27464,6 +27490,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -28341,14 +28368,14 @@
     </element>
     <element id="Composition.section:PrognoseWiederaufnahmeTaetigkeit.title">
       <path value="Composition.section.title" />
-      <short value="Label for section (e.g. for ToC)" />
+      <short value="Kriterium für section-Diskriminator" />
       <definition value="The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents." />
       <comment value="The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents, it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element." />
       <requirements value="Section headings are often standardized for different types of documents.  They give guidance to humans on how the document is organized." />
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -28368,6 +28395,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -29064,12 +29092,12 @@
         <map value=".component.section" />
       </mapping>
     </element>
-    <element id="Composition.section:StufenweiseWiedereingliederung">
+    <element id="Composition.section:stufenweiseWiedereingliederung">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
       </extension>
       <path value="Composition.section" />
-      <sliceName value="StufenweiseWiedereingliederung" />
+      <sliceName value="stufenweiseWiedereingliederung" />
       <short value="Composition is broken into sections" />
       <definition value="The root of the sections that make up the composition." />
       <min value="0" />
@@ -29121,7 +29149,7 @@
         <map value=".component.structuredBody.component.section" />
       </mapping>
     </element>
-    <element id="Composition.section:StufenweiseWiedereingliederung.id">
+    <element id="Composition.section:stufenweiseWiedereingliederung.id">
       <path value="Composition.section.id" />
       <representation value="xmlAttr" />
       <short value="Unique id for inter-element referencing" />
@@ -29144,7 +29172,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Composition.section:StufenweiseWiedereingliederung.extension">
+    <element id="Composition.section:stufenweiseWiedereingliederung.extension">
       <path value="Composition.section.extension" />
       <slicing>
         <discriminator>
@@ -29195,7 +29223,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Composition.section:StufenweiseWiedereingliederung.modifierExtension">
+    <element id="Composition.section:stufenweiseWiedereingliederung.modifierExtension">
       <path value="Composition.section.modifierExtension" />
       <short value="Extensions that cannot be ignored even if unrecognized" />
       <definition value="May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.&#xA;&#xA;Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)." />
@@ -29243,16 +29271,16 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Composition.section:StufenweiseWiedereingliederung.title">
+    <element id="Composition.section:stufenweiseWiedereingliederung.title">
       <path value="Composition.section.title" />
-      <short value="Label for section (e.g. for ToC)" />
+      <short value="Kriterium für section-Diskriminator" />
       <definition value="The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents." />
       <comment value="The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents, it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element." />
       <requirements value="Section headings are often standardized for different types of documents.  They give guidance to humans on how the document is organized." />
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -29272,6 +29300,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -29285,7 +29314,7 @@
         <map value=".title" />
       </mapping>
     </element>
-    <element id="Composition.section:StufenweiseWiedereingliederung.code">
+    <element id="Composition.section:stufenweiseWiedereingliederung.code">
       <path value="Composition.section.code" />
       <short value="Classification of section (recommended)" />
       <definition value="A code identifying the kind of content contained within the section. This must be consistent with the section title." />
@@ -29343,7 +29372,7 @@
         <map value=".code" />
       </mapping>
     </element>
-    <element id="Composition.section:StufenweiseWiedereingliederung.author">
+    <element id="Composition.section:stufenweiseWiedereingliederung.author">
       <path value="Composition.section.author" />
       <short value="Who and/or what authored the section" />
       <definition value="Identifies who is responsible for the information in this section, not necessarily who typed it in." />
@@ -29403,7 +29432,7 @@
         <map value=".author.assignedAuthor" />
       </mapping>
     </element>
-    <element id="Composition.section:StufenweiseWiedereingliederung.focus">
+    <element id="Composition.section:stufenweiseWiedereingliederung.focus">
       <path value="Composition.section.focus" />
       <short value="Who/what the section is about, when it is not about the subject of composition" />
       <definition value="The actual focus of the section when it is not the subject of the composition, but instead represents something or someone associated with the subject such as (for a patient subject) a spouse, parent, fetus, or donor. If not focus is specified, the focus is assumed to be focus of the parent section, or, for a section in the Composition itself, the subject of the composition. Sections with a focus SHALL only include resources where the logical subject (patient, subject, focus, etc.) matches the section focus, or the resources have no logical subject (few resources)." />
@@ -29449,7 +29478,7 @@
         <map value=".subject? (CDA did not differentiate between subject and focus)" />
       </mapping>
     </element>
-    <element id="Composition.section:StufenweiseWiedereingliederung.text">
+    <element id="Composition.section:stufenweiseWiedereingliederung.text">
       <path value="Composition.section.text" />
       <short value="Text summary of the section, for human interpretation" />
       <definition value="A human-readable narrative that contains the attested content of the section, used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it &quot;clinically safe&quot; for a human to just read the narrative." />
@@ -29491,7 +29520,7 @@
         <map value=".text" />
       </mapping>
     </element>
-    <element id="Composition.section:StufenweiseWiedereingliederung.mode">
+    <element id="Composition.section:stufenweiseWiedereingliederung.mode">
       <path value="Composition.section.mode" />
       <short value="working | snapshot | changes" />
       <definition value="How the entry list was prepared - whether it is a working list that is suitable for being maintained on an ongoing basis, or if it represents a snapshot of a list of items from another source, or whether it is a prepared list where items may be marked as added, modified or deleted." />
@@ -29541,7 +29570,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Composition.section:StufenweiseWiedereingliederung.orderedBy">
+    <element id="Composition.section:stufenweiseWiedereingliederung.orderedBy">
       <path value="Composition.section.orderedBy" />
       <short value="Order of section entries" />
       <definition value="Specifies the order applied to the items in the section entries." />
@@ -29599,7 +29628,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Composition.section:StufenweiseWiedereingliederung.entry">
+    <element id="Composition.section:stufenweiseWiedereingliederung.entry">
       <path value="Composition.section.entry" />
       <short value="Verweis auf das ENLA-Profil StufenweiseWiedereingliederung" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
@@ -29651,7 +29680,7 @@
         <map value=".entry" />
       </mapping>
     </element>
-    <element id="Composition.section:StufenweiseWiedereingliederung.entry.id">
+    <element id="Composition.section:stufenweiseWiedereingliederung.entry.id">
       <path value="Composition.section.entry.id" />
       <representation value="xmlAttr" />
       <short value="Unique id for inter-element referencing" />
@@ -29674,7 +29703,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Composition.section:StufenweiseWiedereingliederung.entry.extension">
+    <element id="Composition.section:stufenweiseWiedereingliederung.entry.extension">
       <path value="Composition.section.entry.extension" />
       <slicing>
         <discriminator>
@@ -29725,7 +29754,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Composition.section:StufenweiseWiedereingliederung.entry.reference">
+    <element id="Composition.section:stufenweiseWiedereingliederung.entry.reference">
       <path value="Composition.section.entry.reference" />
       <short value="Verweis auf das konkrete ENLA-Profil StufenweiseWiedereingliederung" />
       <definition value="A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources." />
@@ -29761,7 +29790,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Composition.section:StufenweiseWiedereingliederung.entry.type">
+    <element id="Composition.section:stufenweiseWiedereingliederung.entry.type">
       <path value="Composition.section.entry.type" />
       <short value="Type the reference refers to (e.g. &quot;Patient&quot;)" />
       <definition value="The expected type of the target of the reference. If both Reference.type and Reference.reference are populated and Reference.reference is a FHIR URL, both SHALL be consistent.&#xA;&#xA;The type is the Canonical URL of Resource Definition that is the type this reference refers to. References are URLs that are relative to http://hl7.org/fhir/StructureDefinition/ e.g. &quot;Patient&quot; is a reference to http://hl7.org/fhir/StructureDefinition/Patient. Absolute URLs are only allowed for logical models (and can only be used in references in logical models, not resources)." />
@@ -29803,7 +29832,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Composition.section:StufenweiseWiedereingliederung.entry.identifier">
+    <element id="Composition.section:stufenweiseWiedereingliederung.entry.identifier">
       <path value="Composition.section.entry.identifier" />
       <short value="Logical reference, when literal reference is not known" />
       <definition value="An identifier for the target resource. This is used when there is no way to reference the other resource directly, either because the entity it represents is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference." />
@@ -29849,7 +29878,7 @@
         <map value=".identifier" />
       </mapping>
     </element>
-    <element id="Composition.section:StufenweiseWiedereingliederung.entry.display">
+    <element id="Composition.section:stufenweiseWiedereingliederung.entry.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -29886,7 +29915,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Composition.section:StufenweiseWiedereingliederung.emptyReason">
+    <element id="Composition.section:stufenweiseWiedereingliederung.emptyReason">
       <path value="Composition.section.emptyReason" />
       <short value="Why the section is empty" />
       <definition value="If the section is empty, why the list is empty. An empty section typically has some text explaining the empty reason." />
@@ -29945,7 +29974,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Composition.section:StufenweiseWiedereingliederung.section">
+    <element id="Composition.section:stufenweiseWiedereingliederung.section">
       <path value="Composition.section.section" />
       <short value="Nested Section" />
       <definition value="A nested sub-section within this section." />
@@ -30149,14 +30178,14 @@
     </element>
     <element id="Composition.section:Datenschutz.title">
       <path value="Composition.section.title" />
-      <short value="Label for section (e.g. for ToC)" />
+      <short value="Kriterium für section-Diskriminator" />
       <definition value="The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents." />
       <comment value="The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents, it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element." />
       <requirements value="Section headings are often standardized for different types of documents.  They give guidance to humans on how the document is organized." />
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -30176,6 +30205,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -31053,14 +31083,14 @@
     </element>
     <element id="Composition.section:DArzt.title">
       <path value="Composition.section.title" />
-      <short value="Label for section (e.g. for ToC)" />
+      <short value="Kriterium für section-Diskriminator" />
       <definition value="The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents." />
       <comment value="The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents, it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element." />
       <requirements value="Section headings are often standardized for different types of documents.  They give guidance to humans on how the document is organized." />
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -31080,6 +31110,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -31957,14 +31988,14 @@
     </element>
     <element id="Composition.section:DArztOrganisation.title">
       <path value="Composition.section.title" />
-      <short value="Label for section (e.g. for ToC)" />
+      <short value="Kriterium für section-Diskriminator" />
       <definition value="The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents." />
       <comment value="The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents, it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element." />
       <requirements value="Section headings are often standardized for different types of documents.  They give guidance to humans on how the document is organized." />
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -31984,6 +32015,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -32861,14 +32893,14 @@
     </element>
     <element id="Composition.section:Leistungserbringer.title">
       <path value="Composition.section.title" />
-      <short value="Label for section (e.g. for ToC)" />
+      <short value="Kriterium für section-Diskriminator" />
       <definition value="The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents." />
       <comment value="The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents, it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element." />
       <requirements value="Section headings are often standardized for different types of documents.  They give guidance to humans on how the document is organized." />
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -32888,6 +32920,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -33765,14 +33798,14 @@
     </element>
     <element id="Composition.section:BehandelndeEinrichtung.title">
       <path value="Composition.section.title" />
-      <short value="Label for section (e.g. for ToC)" />
+      <short value="Kriterium für section-Diskriminator" />
       <definition value="The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents." />
       <comment value="The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents, it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element." />
       <requirements value="Section headings are often standardized for different types of documents.  They give guidance to humans on how the document is organized." />
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -33792,6 +33825,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -34669,14 +34703,14 @@
     </element>
     <element id="Composition.section:AnsprechpartnerFuerRueckfragen.title">
       <path value="Composition.section.title" />
-      <short value="Label for section (e.g. for ToC)" />
+      <short value="Kriterium für section-Diskriminator" />
       <definition value="The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents." />
       <comment value="The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents, it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element." />
       <requirements value="Section headings are often standardized for different types of documents.  They give guidance to humans on how the document is organized." />
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -34696,6 +34730,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -35514,7 +35549,10 @@
     </element>
     <element id="Composition.section:Unfallversicherungstraeger.title">
       <path value="Composition.section.title" />
+      <short value="Kriterium für section-Diskriminator" />
+      <min value="1" />
       <fixedString value="Unfallversicherungstraeger" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:Unfallversicherungstraeger.entry">
       <path value="Composition.section.entry" />
@@ -35540,7 +35578,10 @@
     </element>
     <element id="Composition.section:Krankenkasse.title">
       <path value="Composition.section.title" />
+      <short value="Kriterium für section-Diskriminator" />
+      <min value="1" />
       <fixedString value="Krankenkasse" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:Krankenkasse.entry">
       <path value="Composition.section.entry" />
@@ -35557,30 +35598,33 @@
       <path value="Composition.section.entry.reference" />
       <short value="Verweis auf das konkrete ENLA-Profil Krankenkasse" />
     </element>
-    <element id="Composition.section:Versicherungsverhaeltnis">
+    <element id="Composition.section:VersichertenVerhaeltnis">
       <path value="Composition.section" />
-      <sliceName value="Versicherungsverhaeltnis" />
+      <sliceName value="VersichertenVerhaeltnis" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:Versicherungsverhaeltnis.title">
+    <element id="Composition.section:VersichertenVerhaeltnis.title">
       <path value="Composition.section.title" />
-      <fixedString value="VersicherungsVerhaeltnis" />
+      <short value="Kriterium für section-Diskriminator" />
+      <min value="1" />
+      <fixedString value="VersichertenVerhaeltnis" />
+      <mustSupport value="true" />
     </element>
-    <element id="Composition.section:Versicherungsverhaeltnis.entry">
+    <element id="Composition.section:VersichertenVerhaeltnis.entry">
       <path value="Composition.section.entry" />
-      <short value="Verweis auf das ENLA-Profil Versicherungsverhältnis" />
+      <short value="Verweis auf das ENLA-Profil VersichertenVerhaeltnis" />
       <min value="1" />
       <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-VersicherungsVerhaeltnis" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Coverage/DGUV-ENLA-PR-VersichertenVerhaeltnis" />
       </type>
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:Versicherungsverhaeltnis.entry.reference">
+    <element id="Composition.section:VersichertenVerhaeltnis.entry.reference">
       <path value="Composition.section.entry.reference" />
-      <short value="Verweis auf das konkrete ENLA-Profil Versicherungsverhältnis" />
+      <short value="Verweis auf das konkrete ENLA-Profil VersichertenVerhaeltnis" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -35592,7 +35636,10 @@
     </element>
     <element id="Composition.section:Pflegekasse.title">
       <path value="Composition.section.title" />
+      <short value="Kriterium für section-Diskriminator" />
+      <min value="1" />
       <fixedString value="Pflegekasse" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:Pflegekasse.entry">
       <path value="Composition.section.entry" />
@@ -35619,7 +35666,10 @@
     </element>
     <element id="Composition.section:Unfallbetrieb.title">
       <path value="Composition.section.title" />
+      <short value="Kriterium für section-Diskriminator" />
+      <min value="1" />
       <fixedString value="Unfallbetrieb" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:Unfallbetrieb.entry">
       <path value="Composition.section.entry" />
@@ -35646,7 +35696,10 @@
     </element>
     <element id="Composition.section:Aufenthaltsinformationen.title">
       <path value="Composition.section.title" />
+      <short value="Kriterium für section-Diskriminator" />
+      <min value="1" />
       <fixedString value="Aufenthaltsinformationen" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:Aufenthaltsinformationen.entry">
       <path value="Composition.section.entry" />
@@ -35674,7 +35727,10 @@
     </element>
     <element id="Composition.section:DiagnoseFreitext.title">
       <path value="Composition.section.title" />
+      <short value="Kriterium für section-Diskriminator" />
+      <min value="1" />
       <fixedString value="DiagnoseFreitext" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:DiagnoseFreitext.entry">
       <path value="Composition.section.entry" />
@@ -35701,7 +35757,10 @@
     </element>
     <element id="Composition.section:DiagnoseStrukturiert.title">
       <path value="Composition.section.title" />
+      <short value="Kriterium für section-Diskriminator" />
+      <min value="1" />
       <fixedString value="DiagnoseStrukturiert" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:DiagnoseStrukturiert.entry">
       <path value="Composition.section.entry" />
@@ -35728,7 +35787,10 @@
     </element>
     <element id="Composition.section:Therapie.title">
       <path value="Composition.section.title" />
+      <short value="Kriterium für section-Diskriminator" />
+      <min value="1" />
       <fixedString value="Therapie" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:Therapie.entry">
       <path value="Composition.section.entry" />
@@ -35755,7 +35817,10 @@
     </element>
     <element id="Composition.section:Unfallereignis.title">
       <path value="Composition.section.title" />
+      <short value="Kriterium für section-Diskriminator" />
+      <min value="1" />
       <fixedString value="Unfallereignis" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:Unfallereignis.entry">
       <path value="Composition.section.entry" />
@@ -35782,7 +35847,10 @@
     </element>
     <element id="Composition.section:Aufnahmebefunde.title">
       <path value="Composition.section.title" />
+      <short value="Kriterium für section-Diskriminator" />
+      <min value="1" />
       <fixedString value="Aufnahmebefunde" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:Aufnahmebefunde.entry">
       <path value="Composition.section.entry" />
@@ -35809,7 +35877,10 @@
     </element>
     <element id="Composition.section:Behandlungsverlauf.title">
       <path value="Composition.section.title" />
+      <short value="Kriterium für section-Diskriminator" />
+      <min value="1" />
       <fixedString value="Behandlungsverlauf" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:Behandlungsverlauf.entry">
       <path value="Composition.section.entry" />
@@ -35836,7 +35907,10 @@
     </element>
     <element id="Composition.section:Konsiliarbefunde.title">
       <path value="Composition.section.title" />
+      <short value="Kriterium für section-Diskriminator" />
+      <min value="1" />
       <fixedString value="Konsiliarbefunde" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:Konsiliarbefunde.entry">
       <path value="Composition.section.entry" />
@@ -35863,7 +35937,10 @@
     </element>
     <element id="Composition.section:Entlassbefunde.title">
       <path value="Composition.section.title" />
+      <short value="Kriterium für section-Diskriminator" />
+      <min value="1" />
       <fixedString value="Entlassbefunde" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:Entlassbefunde.entry">
       <path value="Composition.section.entry" />
@@ -35882,17 +35959,20 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:Dokumentenreferenz">
+    <element id="Composition.section:DokumentenReferenz">
       <path value="Composition.section" />
-      <sliceName value="Dokumentenreferenz" />
+      <sliceName value="DokumentenReferenz" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:Dokumentenreferenz.title">
+    <element id="Composition.section:DokumentenReferenz.title">
       <path value="Composition.section.title" />
+      <short value="Kriterium für section-Diskriminator" />
+      <min value="1" />
       <fixedString value="DokumentenReferenz" />
+      <mustSupport value="true" />
     </element>
-    <element id="Composition.section:Dokumentenreferenz.entry">
+    <element id="Composition.section:DokumentenReferenz.entry">
       <path value="Composition.section.entry" />
       <short value="Verweis auf das ENLA-Profil Dokumentenreferenz" />
       <min value="1" />
@@ -35903,7 +35983,7 @@
       </type>
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:Dokumentenreferenz.entry.reference">
+    <element id="Composition.section:DokumentenReferenz.entry.reference">
       <path value="Composition.section.entry.reference" />
       <short value="Verweis auf das konkrete ENLA-Profil Dokumentenreferenz" />
       <min value="1" />
@@ -35917,7 +35997,10 @@
     </element>
     <element id="Composition.section:Therapieempfehlung.title">
       <path value="Composition.section.title" />
+      <short value="Kriterium für section-Diskriminator" />
+      <min value="1" />
       <fixedString value="Therapieempfehlung" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:Therapieempfehlung.entry">
       <path value="Composition.section.entry" />
@@ -35944,7 +36027,10 @@
     </element>
     <element id="Composition.section:MedikationsInformation.title">
       <path value="Composition.section.title" />
+      <short value="Kriterium für section-Diskriminator" />
+      <min value="1" />
       <fixedString value="MedikationsInformation" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:MedikationsInformation.entry">
       <path value="Composition.section.entry" />
@@ -35971,7 +36057,10 @@
     </element>
     <element id="Composition.section:MedikationWirkstoff.title">
       <path value="Composition.section.title" />
+      <short value="Kriterium für section-Diskriminator" />
+      <min value="1" />
       <fixedString value="MedikationWirkstoff" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:MedikationWirkstoff.entry">
       <path value="Composition.section.entry" />
@@ -35998,7 +36087,10 @@
     </element>
     <element id="Composition.section:MedikationRezeptur.title">
       <path value="Composition.section.title" />
+      <short value="Kriterium für section-Diskriminator" />
+      <min value="1" />
       <fixedString value="MedikationRezeptur" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:MedikationRezeptur.entry">
       <path value="Composition.section.entry" />
@@ -36025,7 +36117,10 @@
     </element>
     <element id="Composition.section:MedikationArzneimittel.title">
       <path value="Composition.section.title" />
+      <short value="Kriterium für section-Diskriminator" />
+      <min value="1" />
       <fixedString value="MedikationArzneimittel" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:MedikationArzneimittel.entry">
       <path value="Composition.section.entry" />
@@ -36052,7 +36147,10 @@
     </element>
     <element id="Composition.section:WeiterbehandelnderArzt.title">
       <path value="Composition.section.title" />
-      <fixedString value="MedikationArzneimittel" />
+      <short value="Kriterium für section-Diskriminator" />
+      <min value="1" />
+      <fixedString value="WeiterbehandelnderArzt" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:WeiterbehandelnderArzt.mode">
       <path value="Composition.section.mode" />
@@ -36083,7 +36181,10 @@
     </element>
     <element id="Composition.section:WeiterbehandelndeOrganisation.title">
       <path value="Composition.section.title" />
-      <fixedString value="WeiterbehandelnderArzt" />
+      <short value="Kriterium für section-Diskriminator" />
+      <min value="1" />
+      <fixedString value="WeiterbehandelndeOrganisation" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:WeiterbehandelndeOrganisation.entry">
       <path value="Composition.section.entry" />
@@ -36110,7 +36211,10 @@
     </element>
     <element id="Composition.section:RehaMassnahmen.title">
       <path value="Composition.section.title" />
+      <short value="Kriterium für section-Diskriminator" />
+      <min value="1" />
       <fixedString value="RehaMassnahmen" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:RehaMassnahmen.entry">
       <path value="Composition.section.entry" />
@@ -36137,7 +36241,10 @@
     </element>
     <element id="Composition.section:Heilmittel.title">
       <path value="Composition.section.title" />
+      <short value="Kriterium für section-Diskriminator" />
+      <min value="1" />
       <fixedString value="Heilmittel" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:Heilmittel.entry">
       <path value="Composition.section.entry" />
@@ -36164,7 +36271,10 @@
     </element>
     <element id="Composition.section:Hilfsmittel.title">
       <path value="Composition.section.title" />
+      <short value="Kriterium für section-Diskriminator" />
+      <min value="1" />
       <fixedString value="Hilfsmittel" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:Hilfsmittel.entry">
       <path value="Composition.section.entry" />
@@ -36191,7 +36301,10 @@
     </element>
     <element id="Composition.section:BesondereMassnahmen.title">
       <path value="Composition.section.title" />
+      <short value="Kriterium für section-Diskriminator" />
+      <min value="1" />
       <fixedString value="BesondereMassnahmen" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:BesondereMassnahmen.entry">
       <path value="Composition.section.entry" />
@@ -36218,7 +36331,10 @@
     </element>
     <element id="Composition.section:Arbeitsunfaehigkeit.title">
       <path value="Composition.section.title" />
+      <short value="Kriterium für section-Diskriminator" />
+      <min value="1" />
       <fixedString value="Arbeitsunfaehigkeit" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:Arbeitsunfaehigkeit.entry">
       <path value="Composition.section.entry" />
@@ -36245,7 +36361,10 @@
     </element>
     <element id="Composition.section:PrognoseWiederaufnahmeTaetigkeit.title">
       <path value="Composition.section.title" />
+      <short value="Kriterium für section-Diskriminator" />
+      <min value="1" />
       <fixedString value="PrognoseWiederaufnahmeTaetigkeit" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:PrognoseWiederaufnahmeTaetigkeit.entry">
       <path value="Composition.section.entry" />
@@ -36264,17 +36383,20 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:StufenweiseWiedereingliederung">
+    <element id="Composition.section:stufenweiseWiedereingliederung">
       <path value="Composition.section" />
-      <sliceName value="StufenweiseWiedereingliederung" />
+      <sliceName value="stufenweiseWiedereingliederung" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:StufenweiseWiedereingliederung.title">
+    <element id="Composition.section:stufenweiseWiedereingliederung.title">
       <path value="Composition.section.title" />
+      <short value="Kriterium für section-Diskriminator" />
+      <min value="1" />
       <fixedString value="stufenweiseWiedereingliederung" />
+      <mustSupport value="true" />
     </element>
-    <element id="Composition.section:StufenweiseWiedereingliederung.entry">
+    <element id="Composition.section:stufenweiseWiedereingliederung.entry">
       <path value="Composition.section.entry" />
       <short value="Verweis auf das ENLA-Profil StufenweiseWiedereingliederung" />
       <min value="1" />
@@ -36285,7 +36407,7 @@
       </type>
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:StufenweiseWiedereingliederung.entry.reference">
+    <element id="Composition.section:stufenweiseWiedereingliederung.entry.reference">
       <path value="Composition.section.entry.reference" />
       <short value="Verweis auf das konkrete ENLA-Profil StufenweiseWiedereingliederung" />
       <min value="1" />
@@ -36299,7 +36421,10 @@
     </element>
     <element id="Composition.section:Datenschutz.title">
       <path value="Composition.section.title" />
+      <short value="Kriterium für section-Diskriminator" />
+      <min value="1" />
       <fixedString value="Datenschutz" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:Datenschutz.entry">
       <path value="Composition.section.entry" />
@@ -36326,7 +36451,10 @@
     </element>
     <element id="Composition.section:DArzt.title">
       <path value="Composition.section.title" />
+      <short value="Kriterium für section-Diskriminator" />
+      <min value="1" />
       <fixedString value="DArzt" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:DArzt.entry">
       <path value="Composition.section.entry" />
@@ -36353,7 +36481,10 @@
     </element>
     <element id="Composition.section:DArztOrganisation.title">
       <path value="Composition.section.title" />
+      <short value="Kriterium für section-Diskriminator" />
+      <min value="1" />
       <fixedString value="DArztOrganisation" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:DArztOrganisation.entry">
       <path value="Composition.section.entry" />
@@ -36380,7 +36511,10 @@
     </element>
     <element id="Composition.section:Leistungserbringer.title">
       <path value="Composition.section.title" />
+      <short value="Kriterium für section-Diskriminator" />
+      <min value="1" />
       <fixedString value="Leistungserbringer" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:Leistungserbringer.entry">
       <path value="Composition.section.entry" />
@@ -36407,7 +36541,10 @@
     </element>
     <element id="Composition.section:BehandelndeEinrichtung.title">
       <path value="Composition.section.title" />
+      <short value="Kriterium für section-Diskriminator" />
+      <min value="1" />
       <fixedString value="BehandelndeEinrichtung" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:BehandelndeEinrichtung.entry">
       <path value="Composition.section.entry" />
@@ -36434,7 +36571,10 @@
     </element>
     <element id="Composition.section:AnsprechpartnerFuerRueckfragen.title">
       <path value="Composition.section.title" />
+      <short value="Kriterium für section-Diskriminator" />
+      <min value="1" />
       <fixedString value="AnsprechpartnerFuerRueckfragen" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:AnsprechpartnerFuerRueckfragen.entry">
       <path value="Composition.section.entry" />
