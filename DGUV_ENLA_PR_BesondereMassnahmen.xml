@@ -2647,7 +2647,7 @@
         </extension>
         <strength value="required" />
         <description value="Code for a known / defined timing pattern." />
-        <valueSet value="http://fhir.dguv.de/ENLA/ValueSet/DGUV_ENLA_VS_MassnahmenZeitpunkt" />
+        <valueSet value="http://fhir.dguv.de/ENLA/ValueSet/DGUV-ENLA-VS-MassnahmenZeitpunkt" />
       </binding>
       <mapping>
         <identity value="rim" />
@@ -5422,7 +5422,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://fhir.dguv.de/ENLA/ValueSet/DGUV_ENLA_VS_MassnahmenZeitpunkt" />
+        <valueSet value="http://fhir.dguv.de/ENLA/ValueSet/DGUV-ENLA-VS-MassnahmenZeitpunkt" />
       </binding>
     </element>
     <element id="Observation.effective[x].code.coding">
