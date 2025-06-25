@@ -6,7 +6,11 @@
     </meta>
     <status value="final"/>
     <code>
-        <text value="Datenschutz" />
+        <coding>
+            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+            <code value="DS" />
+            <display value="Datenschutz" />
+        </coding>
     </code>
     <subject>
         <reference value="Patient/VersichertePerson-1"/>
