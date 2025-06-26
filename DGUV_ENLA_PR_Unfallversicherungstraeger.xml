@@ -5448,8 +5448,8 @@
       <short value="Straßenname mit Hausnummer oder Postfach sowie weitere Angaben zur Zustellung" />
       <definition value="Diese Komponente kann Straßennamen, Hausnummer, Appartmentnummer, Postfach, c/o sowie weitere Zustellungshinweise enthalten. Die Informationen können in mehrere line-Komponenten aufgeteilt werden.&#xD;&#xA;Bei Verwendung der Extensions, um Straße, Hausnnummer und Postleitzahl strukturiert zu übermitteln, müssen diese Informationen stets vollständig auch in der line-Komponente, die sie erweitern, enthalten sein, um es Systemen, die diese Extensions nicht verwenden zu ermöglichen, auf diese Informationen zugreifen zu können." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
-      <min value="0" />
-      <max value="3" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="Address.line" />
         <min value="0" />
@@ -5483,6 +5483,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -5543,8 +5544,8 @@
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="0" />
-      <max value="*" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -5570,6 +5571,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -6127,7 +6129,7 @@
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Element.extension" />
@@ -6155,6 +6157,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -6290,6 +6293,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -6328,7 +6332,7 @@
       <definition value="The name of the city, town, suburb, village or other community or delivery center." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <alias value="Municpality" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Address.city" />
@@ -6351,6 +6355,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -6474,7 +6479,7 @@
       <definition value="Postleitzahl gemäß der im jeweiligen Land gültigen Konventionen" />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <alias value="Zip" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Address.postalCode" />
@@ -6497,6 +6502,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -6543,6 +6549,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <binding>
         <strength value="preferred" />
@@ -7332,6 +7339,42 @@
     </element>
     <element id="Organization.address:Postfach.type">
       <path value="Organization.address.type" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Postfach.line">
+      <path value="Organization.address.line" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Postfach.line.extension">
+      <path value="Organization.address.line.extension" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Postfach.line.extension:Postfach">
+      <path value="Organization.address.line.extension" />
+      <sliceName value="Postfach" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Postfach.line.extension:Postfach.value[x]">
+      <path value="Organization.address.line.extension.value[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Postfach.city">
+      <path value="Organization.address.city" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Postfach.postalCode">
+      <path value="Organization.address.postalCode" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Postfach.country">
+      <path value="Organization.address.country" />
       <mustSupport value="true" />
     </element>
   </differential>
