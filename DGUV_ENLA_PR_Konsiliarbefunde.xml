@@ -665,8 +665,8 @@
       <definition value="Ein Code, der den generllen Typ des Befunds klassifiziert (z.B. Vitalparameter, Röntgenbefunde)." />
       <comment value="In addition to the required category valueset, this element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used at once.  The level of granularity is defined by the category concepts in the value set." />
       <requirements value="Used for filtering what observations are retrieved and displayed." />
-      <min value="0" />
-      <max value="*" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="Observation.category" />
         <min value="0" />
@@ -1195,7 +1195,7 @@
     </element>
     <element id="Observation.code">
       <path value="Observation.code" />
-      <short value="Type of observation (code / type)" />
+      <short value="ENLA-Teilberichtsinhalt" />
       <definition value="Describes what was observed. Sometimes this is called the observation &quot;name&quot;." />
       <comment value="*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation." />
       <requirements value="Knowing what kind of observation is being made is essential to understanding the observation." />
@@ -4672,6 +4672,8 @@
       <path value="Observation.category" />
       <short value="Klassifikation des Befundtyps" />
       <definition value="Ein Code, der den generllen Typ des Befunds klassifiziert (z.B. Vitalparameter, Röntgenbefunde)." />
+      <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.category.coding">
@@ -4704,6 +4706,7 @@
     </element>
     <element id="Observation.code">
       <path value="Observation.code" />
+      <short value="ENLA-Teilberichtsinhalt" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.code.coding">
