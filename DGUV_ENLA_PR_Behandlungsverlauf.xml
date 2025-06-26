@@ -899,7 +899,7 @@
     </element>
     <element id="Observation.code">
       <path value="Observation.code" />
-      <short value="Type of observation (code / type)" />
+      <short value="ENLA-Teilberichtsinhalt" />
       <definition value="Describes what was observed. Sometimes this is called the observation &quot;name&quot;." />
       <comment value="*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation." />
       <requirements value="Knowing what kind of observation is being made is essential to understanding the observation." />
@@ -4394,6 +4394,7 @@
     </element>
     <element id="Observation.code">
       <path value="Observation.code" />
+      <short value="ENLA-Teilberichtsinhalt" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.code.coding">
