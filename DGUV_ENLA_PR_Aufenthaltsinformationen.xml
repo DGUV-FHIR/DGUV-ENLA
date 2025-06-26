@@ -4419,7 +4419,7 @@
       <binding>
         <strength value="required" />
         <description value="Beschreibung der Aufnahmeart (Erstbehandlung (EB), Folgebehandlung (FB))" />
-        <valueSet value="https://fhir.dguv.de/ENLA/ValueSet/DGUV-ENLA-VS-Aufnahmeart" />
+        <valueSet value="http://fhir.dguv.de/ENLA/ValueSet/DGUV-ENLA-VS-Aufnahmeart" />
       </binding>
       <mapping>
         <identity value="rim" />
@@ -6196,7 +6196,7 @@
       <binding>
         <strength value="required" />
         <description value="Beschreibung der Aufnahmeart (Erstbehandlung (EB), Folgebehandlung (FB))" />
-        <valueSet value="https://fhir.dguv.de/ENLA/ValueSet/DGUV-ENLA-VS-Aufnahmeart" />
+        <valueSet value="http://fhir.dguv.de/ENLA/ValueSet/DGUV-ENLA-VS-Aufnahmeart" />
       </binding>
     </element>
     <element id="Encounter.hospitalization.admitSource.coding.system">
