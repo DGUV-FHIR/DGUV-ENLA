@@ -2,7 +2,7 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
   <id value="DGUV-ENLA-CS-Aufnahmeart" />
   <url value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Aufnahmeart" />
-  <version value="1.0.0" />
+  <version value="0.0.2" />
   <name value="DGUV_ENLA_CS_Aufnahmeart" />
   <title value="Aufnahmeart" />
   <status value="draft" />
