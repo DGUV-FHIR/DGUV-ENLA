@@ -303,7 +303,7 @@
       <alias value="extensions" />
       <alias value="user content" />
       <min value="1" />
-      <max value="*" />
+      <max value="1" />
       <base>
         <path value="DomainResource.extension" />
         <min value="0" />
@@ -1741,12 +1741,6 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
         <targetProfile value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringer" />
       </type>
       <condition value="ele-1" />
@@ -2047,6 +2041,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="Entlassungsbericht aus stationärer Behandlung" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -2056,6 +2051,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -3760,7 +3756,7 @@
       <sliceName value="Unfallversicherungstraeger" />
       <short value="Composition is broken into sections" />
       <definition value="The root of the sections that make up the composition." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section" />
@@ -4665,7 +4661,7 @@
       <sliceName value="Krankenkasse" />
       <short value="Composition is broken into sections" />
       <definition value="The root of the sections that make up the composition." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section" />
@@ -5569,7 +5565,7 @@
       <sliceName value="VersichertenVerhaeltnis" />
       <short value="Composition is broken into sections" />
       <definition value="The root of the sections that make up the composition." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section" />
@@ -7379,7 +7375,7 @@
       <sliceName value="Unfallbetrieb" />
       <short value="Composition is broken into sections" />
       <definition value="The root of the sections that make up the composition." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section" />
@@ -8284,7 +8280,7 @@
       <sliceName value="Aufenthaltsinformationen" />
       <short value="Composition is broken into sections" />
       <definition value="The root of the sections that make up the composition." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section" />
@@ -9189,7 +9185,7 @@
       <sliceName value="DiagnoseFreitext" />
       <short value="Verweis auf den ENLA-Profiltyp Freitextdiagnose" />
       <definition value="The root of the sections that make up the composition." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section" />
@@ -10094,8 +10090,8 @@
       <sliceName value="DiagnoseStrukturiert" />
       <short value="Composition is broken into sections" />
       <definition value="The root of the sections that make up the composition." />
-      <min value="0" />
-      <max value="1" />
+      <min value="1" />
+      <max value="*" />
       <base>
         <path value="Composition.section" />
         <min value="0" />
@@ -11904,7 +11900,7 @@
       <sliceName value="Unfallereignis" />
       <short value="Composition is broken into sections" />
       <definition value="The root of the sections that make up the composition." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section" />
@@ -12810,7 +12806,7 @@
       <short value="Composition is broken into sections" />
       <definition value="The root of the sections that make up the composition." />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <base>
         <path value="Composition.section" />
         <min value="0" />
@@ -13714,7 +13710,7 @@
       <sliceName value="Behandlungsverlauf" />
       <short value="Composition is broken into sections" />
       <definition value="The root of the sections that make up the composition." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section" />
@@ -14620,7 +14616,7 @@
       <short value="Composition is broken into sections" />
       <definition value="The root of the sections that make up the composition." />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <base>
         <path value="Composition.section" />
         <min value="0" />
@@ -15524,8 +15520,8 @@
       <sliceName value="Entlassbefunde" />
       <short value="Composition is broken into sections" />
       <definition value="The root of the sections that make up the composition." />
-      <min value="0" />
-      <max value="1" />
+      <min value="1" />
+      <max value="*" />
       <base>
         <path value="Composition.section" />
         <min value="0" />
@@ -16430,7 +16426,7 @@
       <short value="Composition is broken into sections" />
       <definition value="The root of the sections that make up the composition." />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <base>
         <path value="Composition.section" />
         <min value="0" />
@@ -18240,7 +18236,7 @@
       <short value="Composition is broken into sections" />
       <definition value="The root of the sections that make up the composition." />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <base>
         <path value="Composition.section" />
         <min value="0" />
@@ -19145,7 +19141,7 @@
       <short value="Composition is broken into sections" />
       <definition value="The root of the sections that make up the composition." />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <base>
         <path value="Composition.section" />
         <min value="0" />
@@ -20050,7 +20046,7 @@
       <short value="Composition is broken into sections" />
       <definition value="The root of the sections that make up the composition." />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <base>
         <path value="Composition.section" />
         <min value="0" />
@@ -20955,7 +20951,7 @@
       <short value="Composition is broken into sections" />
       <definition value="The root of the sections that make up the composition." />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <base>
         <path value="Composition.section" />
         <min value="0" />
@@ -21859,7 +21855,7 @@
       <sliceName value="WeiterbehandelnderArzt" />
       <short value="Composition is broken into sections" />
       <definition value="The root of the sections that make up the composition." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section" />
@@ -23671,7 +23667,7 @@
       <short value="Composition is broken into sections" />
       <definition value="The root of the sections that make up the composition." />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <base>
         <path value="Composition.section" />
         <min value="0" />
@@ -24576,7 +24572,7 @@
       <short value="Composition is broken into sections" />
       <definition value="The root of the sections that make up the composition." />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <base>
         <path value="Composition.section" />
         <min value="0" />
@@ -25481,7 +25477,7 @@
       <short value="Composition is broken into sections" />
       <definition value="The root of the sections that make up the composition." />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <base>
         <path value="Composition.section" />
         <min value="0" />
@@ -26386,7 +26382,7 @@
       <short value="Composition is broken into sections" />
       <definition value="The root of the sections that make up the composition." />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <base>
         <path value="Composition.section" />
         <min value="0" />
@@ -27290,7 +27286,7 @@
       <sliceName value="Arbeitsunfaehigkeit" />
       <short value="Composition is broken into sections" />
       <definition value="The root of the sections that make up the composition." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section" />
@@ -28195,7 +28191,7 @@
       <sliceName value="PrognoseWiederaufnahmeTaetigkeit" />
       <short value="Composition is broken into sections" />
       <definition value="The root of the sections that make up the composition." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section" />
@@ -29100,7 +29096,7 @@
       <sliceName value="stufenweiseWiedereingliederung" />
       <short value="Composition is broken into sections" />
       <definition value="The root of the sections that make up the composition." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section" />
@@ -30005,7 +30001,7 @@
       <sliceName value="Datenschutz" />
       <short value="Composition is broken into sections" />
       <definition value="The root of the sections that make up the composition." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section" />
@@ -30910,7 +30906,7 @@
       <sliceName value="DArzt" />
       <short value="Composition is broken into sections" />
       <definition value="The root of the sections that make up the composition." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section" />
@@ -31815,7 +31811,7 @@
       <sliceName value="DArztOrganisation" />
       <short value="Composition is broken into sections" />
       <definition value="The root of the sections that make up the composition." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section" />
@@ -32720,8 +32716,8 @@
       <sliceName value="Leistungserbringer" />
       <short value="Composition is broken into sections" />
       <definition value="The root of the sections that make up the composition." />
-      <min value="0" />
-      <max value="1" />
+      <min value="1" />
+      <max value="*" />
       <base>
         <path value="Composition.section" />
         <min value="0" />
@@ -33626,7 +33622,7 @@
       <short value="Composition is broken into sections" />
       <definition value="The root of the sections that make up the composition." />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <base>
         <path value="Composition.section" />
         <min value="0" />
@@ -35436,6 +35432,7 @@
     <element id="Composition.extension">
       <path value="Composition.extension" />
       <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.extension:SonstigeBemerkungen">
@@ -35512,12 +35509,6 @@
       <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
         <targetProfile value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringer" />
       </type>
       <mustSupport value="true" />
@@ -35526,6 +35517,11 @@
       <path value="Composition.author.reference" />
       <short value="Konkreter Verweis auf Ersteller des Entlassberichts" />
       <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.title">
+      <path value="Composition.title" />
+      <fixedString value="Entlassungsbericht aus stationärer Behandlung" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section">
@@ -35544,6 +35540,7 @@
     <element id="Composition.section:Unfallversicherungstraeger">
       <path value="Composition.section" />
       <sliceName value="Unfallversicherungstraeger" />
+      <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
@@ -35573,6 +35570,7 @@
     <element id="Composition.section:Krankenkasse">
       <path value="Composition.section" />
       <sliceName value="Krankenkasse" />
+      <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
@@ -35601,6 +35599,7 @@
     <element id="Composition.section:VersichertenVerhaeltnis">
       <path value="Composition.section" />
       <sliceName value="VersichertenVerhaeltnis" />
+      <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
@@ -35661,6 +35660,7 @@
     <element id="Composition.section:Unfallbetrieb">
       <path value="Composition.section" />
       <sliceName value="Unfallbetrieb" />
+      <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
@@ -35691,6 +35691,7 @@
     <element id="Composition.section:Aufenthaltsinformationen">
       <path value="Composition.section" />
       <sliceName value="Aufenthaltsinformationen" />
+      <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
@@ -35722,6 +35723,7 @@
       <path value="Composition.section" />
       <sliceName value="DiagnoseFreitext" />
       <short value="Verweis auf den ENLA-Profiltyp Freitextdiagnose" />
+      <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
@@ -35752,7 +35754,7 @@
     <element id="Composition.section:DiagnoseStrukturiert">
       <path value="Composition.section" />
       <sliceName value="DiagnoseStrukturiert" />
-      <max value="1" />
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:DiagnoseStrukturiert.title">
@@ -35812,6 +35814,7 @@
     <element id="Composition.section:Unfallereignis">
       <path value="Composition.section" />
       <sliceName value="Unfallereignis" />
+      <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
@@ -35842,7 +35845,6 @@
     <element id="Composition.section:Aufnahmebefunde">
       <path value="Composition.section" />
       <sliceName value="Aufnahmebefunde" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:Aufnahmebefunde.title">
@@ -35872,6 +35874,7 @@
     <element id="Composition.section:Behandlungsverlauf">
       <path value="Composition.section" />
       <sliceName value="Behandlungsverlauf" />
+      <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
@@ -35902,7 +35905,6 @@
     <element id="Composition.section:Konsiliarbefunde">
       <path value="Composition.section" />
       <sliceName value="Konsiliarbefunde" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:Konsiliarbefunde.title">
@@ -35932,7 +35934,7 @@
     <element id="Composition.section:Entlassbefunde">
       <path value="Composition.section" />
       <sliceName value="Entlassbefunde" />
-      <max value="1" />
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:Entlassbefunde.title">
@@ -35962,7 +35964,6 @@
     <element id="Composition.section:DokumentenReferenz">
       <path value="Composition.section" />
       <sliceName value="DokumentenReferenz" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:DokumentenReferenz.title">
@@ -36022,7 +36023,6 @@
     <element id="Composition.section:MedikationsInformation">
       <path value="Composition.section" />
       <sliceName value="MedikationsInformation" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:MedikationsInformation.title">
@@ -36052,7 +36052,6 @@
     <element id="Composition.section:MedikationWirkstoff">
       <path value="Composition.section" />
       <sliceName value="MedikationWirkstoff" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:MedikationWirkstoff.title">
@@ -36082,7 +36081,6 @@
     <element id="Composition.section:MedikationRezeptur">
       <path value="Composition.section" />
       <sliceName value="MedikationRezeptur" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:MedikationRezeptur.title">
@@ -36112,7 +36110,6 @@
     <element id="Composition.section:MedikationArzneimittel">
       <path value="Composition.section" />
       <sliceName value="MedikationArzneimittel" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:MedikationArzneimittel.title">
@@ -36142,6 +36139,7 @@
     <element id="Composition.section:WeiterbehandelnderArzt">
       <path value="Composition.section" />
       <sliceName value="WeiterbehandelnderArzt" />
+      <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
@@ -36206,7 +36204,6 @@
     <element id="Composition.section:RehaMassnahmen">
       <path value="Composition.section" />
       <sliceName value="RehaMassnahmen" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:RehaMassnahmen.title">
@@ -36236,7 +36233,6 @@
     <element id="Composition.section:Heilmittel">
       <path value="Composition.section" />
       <sliceName value="Heilmittel" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:Heilmittel.title">
@@ -36266,7 +36262,6 @@
     <element id="Composition.section:Hilfsmittel">
       <path value="Composition.section" />
       <sliceName value="Hilfsmittel" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:Hilfsmittel.title">
@@ -36296,7 +36291,6 @@
     <element id="Composition.section:BesondereMassnahmen">
       <path value="Composition.section" />
       <sliceName value="BesondereMassnahmen" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:BesondereMassnahmen.title">
@@ -36326,6 +36320,7 @@
     <element id="Composition.section:Arbeitsunfaehigkeit">
       <path value="Composition.section" />
       <sliceName value="Arbeitsunfaehigkeit" />
+      <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
@@ -36356,6 +36351,7 @@
     <element id="Composition.section:PrognoseWiederaufnahmeTaetigkeit">
       <path value="Composition.section" />
       <sliceName value="PrognoseWiederaufnahmeTaetigkeit" />
+      <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
@@ -36386,6 +36382,7 @@
     <element id="Composition.section:stufenweiseWiedereingliederung">
       <path value="Composition.section" />
       <sliceName value="stufenweiseWiedereingliederung" />
+      <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
@@ -36416,6 +36413,7 @@
     <element id="Composition.section:Datenschutz">
       <path value="Composition.section" />
       <sliceName value="Datenschutz" />
+      <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
@@ -36446,6 +36444,7 @@
     <element id="Composition.section:DArzt">
       <path value="Composition.section" />
       <sliceName value="DArzt" />
+      <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
@@ -36476,6 +36475,7 @@
     <element id="Composition.section:DArztOrganisation">
       <path value="Composition.section" />
       <sliceName value="DArztOrganisation" />
+      <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
@@ -36506,7 +36506,7 @@
     <element id="Composition.section:Leistungserbringer">
       <path value="Composition.section" />
       <sliceName value="Leistungserbringer" />
-      <max value="1" />
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:Leistungserbringer.title">
@@ -36536,7 +36536,6 @@
     <element id="Composition.section:BehandelndeEinrichtung">
       <path value="Composition.section" />
       <sliceName value="BehandelndeEinrichtung" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:BehandelndeEinrichtung.title">
