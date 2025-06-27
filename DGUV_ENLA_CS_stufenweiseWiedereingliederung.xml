@@ -2,7 +2,7 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
   <id value="DGUV-ENLA-CS-stufenweiseWiedereingliederung" />
   <url value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-stufenweiseWiedereingliederung" />
-  <version value="0.0.1" />
+  <version value="0.0.2" />
   <name value="DGUV_ENLA_CS_stufenweiseWiedereingliederung" />
   <title value="Stufenweise Wiedereingliederung - CS" />
   <status value="draft" />
