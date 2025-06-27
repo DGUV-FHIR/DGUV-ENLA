@@ -4,13 +4,12 @@
         <profile value="http://fhir.dguv.de/ENLA/MedicationStatement/DGUV-ENLA-PR-MedikationsInformation" />
     </meta>
     <status value="active" />
-    <medication>
+    <medicationReference>
         <reference value="Medication/MedikationArzneimittel"/>     
-    </medication>
+    </medicationReference>
     <subject>
         <reference value="Farad, Rudi/T995030511"/>     
-    </subject>
-          
+    </subject>  
     <dosage>
         <timing>
             <code>
@@ -28,10 +27,10 @@
         </timing>
         <route>
             <coding>
-                    <system value="http://terminology.hl7.org/v2plusvocab/CodeSystem/RouteOfAdministrationV110"/>
-                    <version value="1.1.0"/>
-                    <code value="PO"/>
-                    <display value="Oral"/>
+                    <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_Route_of_Administration_German"/>
+                    <version value="1.0.0"/>
+                    <code value="oral"/>
+                    <display value="oral"/>
             </coding>
         </route>
     </dosage>

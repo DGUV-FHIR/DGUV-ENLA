@@ -2,6 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="DGUV-ENLA-PR-DiagnoseStrukturiert" />
   <url value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseStrukturiert" />
+  <version value="0.0.2" />
   <name value="DGUV_ENLA_PR_DiagnoseStrukturiert" />
   <title value="Diagnose - strukturiert" />
   <status value="draft" />

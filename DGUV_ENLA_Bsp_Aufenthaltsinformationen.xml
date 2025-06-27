@@ -5,10 +5,10 @@
         <profile value="http://fhir.dguv.de/ENLA/Encounter/DGUV-ENLA-PR-Aufenthaltsinformationen" />
     </meta>
     <status value="finished" />
-    <class value="">
-        <system value="" />
-        <code value="" />
-        <display value="" />
+    <class>
+        <system value="http://terminology.hl7.org/ValueSet/v3-ActEncounterCode" />
+        <code value="IMP" />
+        <display value="inpatient encounter" />
     </class>
     <subject>
         <reference value="Patient/T37501234" />
@@ -20,16 +20,16 @@
     <hospitalization>
         <admitSource>
             <coding>
-                <system value="" />
-                <code value="" />
-                <display value="" />
+                <system  value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Aufnahmeart" />
+                <code value="FB" />
+                <display value="Folgebehandlung" />
             </coding>
         </admitSource>
         <dischargeDisposition>
             <coding>
-                <system value="" />
-                <code value="" />
-                <display value="" />
+                <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-EntlassungsVerlegungsgrund" />
+                <code value="01" />
+                <display value="Behandlung regulär beendet" />
             </coding>
         </dischargeDisposition>
     </hospitalization>

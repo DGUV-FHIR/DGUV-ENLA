@@ -7,33 +7,41 @@
     <type value="document" />
     <timestamp value="2025-06-10T12:00:00+01:00" />
     <entry>
+        <!--fullUrl value="http://fhir.dguv.de/ENLA/180f219f-97a8-486d-99d9-ed631fe4fc57" /-->
+        <fullUrl value="#DGUV-ENLA-Bsp-Composition.xml" />
         <resource>
-            <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-SonstigeBemerkungen">    
-                <valueString value="Die sonstige Bemerkung." />
-            </extension>    
-            <status value="preliminary" />
-            <type>
-                <coding>
-                    <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-Formtexte" />
-                    <code value="F 2102" />
-                    <display value="DAV" />  
-                </coding>
-            </type>
-            <subject>
-                <reference value="Patient/4213443" />
-            </subject>
-            <date value="2025-06-10T11:40:00+01:00" />
-            <author value="Practioner/52436636" />
-            <title value="Entlassbericht zum Fall ..." />
-            <code value="Unfallversicherungstraeger" />
-            <section>
-                <entry value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Unfallversicherungstraeger">
-                <!--reference value="#DGUV-ENLA-Bsp-Unfallversicherungstraeger.xml" /-->
-                <reference value="Observation/Unfallversicherungstraeger" /> 
-                </entry>
-            </section>
+            <Composition>
+                <id value="180f219f-97a8-486d-99d9-ed631fe4fc57"/> 
+                <!--meta> 
+                    <lastUpdated value="2013-05-28T22:12:21Z"/> 
+                </meta--> 
+                <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-SonstigeBemerkungen">    
+                    <valueString value="Die sonstige Bemerkung." />
+                </extension>    
+                <status value="final" />
+                <type>
+                    <coding>
+                        <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-Formtexte" />
+                        <code value="F 2102" />
+                        <display value="Entlassungsbericht aus stationärer Behandlung (DAV/VAV/SAV)" />  
+                    </coding>
+                </type>
+                <subject>
+                    <reference value="Patient/4213443" />
+                </subject>
+                <date value="2025-06-10T11:40:00+01:00" />
+                <author>
+                    <reference value="Practioner/52436636" />
+                </author>
+                <title value="Entlassbericht zum Fall ..." />
+                <section>
+                    <title value="Unfallversicherungstraeger" />
+                    <entry>
+                        <!--reference value="#DGUV-ENLA-Bsp-Unfallversicherungstraeger.xml" /-->
+                        <reference value="Organization/Unfallversicherungstraeger" /> 
+                    </entry>
+                </section>
+            </Composition>    
         </resource>
     </entry>
-    <signature>
-    </signature>
 </Bundle>

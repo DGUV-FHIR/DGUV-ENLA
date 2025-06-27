@@ -2,6 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="DGUV-ENLA-EX-Besonderheiten" />
   <url value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-Besonderheiten" />
+  <version value="0.0.2" />
   <name value="DGUV_ENLA_EX_Besonderheiten" />
   <title value="Besonderheiten im Behandlungsverlauf (Erweiterung)" />
   <status value="draft" />
@@ -106,7 +107,7 @@
       <alias value="extensions" />
       <alias value="user content" />
       <min value="0" />
-      <max value="0" />
+      <max value="*" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -206,10 +207,6 @@
     </element>
   </snapshot>
   <differential>
-    <element id="Extension.extension">
-      <path value="Extension.extension" />
-      <max value="0" />
-    </element>
     <element id="Extension.url">
       <path value="Extension.url" />
       <fixedUri value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-Besonderheiten" />

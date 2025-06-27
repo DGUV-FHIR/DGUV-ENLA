@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="DGUV-ENLA-EX-GrundFolgebehandlung" />
-  <url value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-GrundFolgebehandlung" />
+  <id value="DGUV-ENLA-EX-DosierungFreitext" />
+  <url value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-DosierungFreitext" />
   <version value="0.0.2" />
-  <name value="DGUV_ENLA_EX_GrundFolgebehandlung" />
-  <title value="Grund einer Folgebehandlung (Erweiterung)" />
+  <name value="DGUV_ENLA_EX_DosierungFreitext" />
+  <title value="Freitextliche Dosierungsbeschreibung" />
   <status value="draft" />
   <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
-  <description value="Möglichkeit zur zusätzlichen Angabe des Grundes einer Folgebehandlung" />
+  <description value="Diese Extension ermöglicht die freitextliche Beschreibung einer Dosierung in Profilen des Typs &quot;MedicationStatement&quot;." />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <context>
     <type value="element" />
-    <expression value="Encounter.hospitalization.admitSource" />
+    <expression value="MedicationStatement.dosage" />
   </context>
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
@@ -161,7 +161,7 @@
         </extension>
         <code value="http://hl7.org/fhirpath/System.String" />
       </type>
-      <fixedUri value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-GrundFolgebehandlung" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-DosierungFreitext" />
       <mapping>
         <identity value="rim" />
         <map value="N/A" />
@@ -175,7 +175,7 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="Extension.value[x]" />
-      <short value="Value of extension" />
+      <short value="Freitextbeschreibung einer Dosierung" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
       <min value="0" />
       <max value="1" />
@@ -209,10 +209,11 @@
   <differential>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-GrundFolgebehandlung" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-DosierungFreitext" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
+      <short value="Freitextbeschreibung einer Dosierung" />
       <type>
         <code value="string" />
       </type>

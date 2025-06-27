@@ -1,7 +1,7 @@
 <Practitioner xmlns="http://hl7.org/fhir">
     <id value="DGUV-ENLA-Bsp-Leistungserbringer" />
     <meta>
-        <profile url="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringer"/> 
+        <profile value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringer"/> 
     </meta>
     <identifier> 
         <type>
@@ -11,7 +11,7 @@
                 <display value="Lifelong physician number" />
             </coding>
         </type>
-        <system value="https://fhir.kbv.de/NamingSystem/KBV-NS-Base-ANR" />
+        <system value="https://fhir.kbv.de/NamingSystem/KBV_NS_Base_ANR" />
         <value value="123456799" />
     </identifier>
     <name>

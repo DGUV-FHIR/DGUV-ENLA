@@ -9,9 +9,15 @@
     <reference value="Patient/T37501234" />
   </subject>
   <content>
-    <attachment>
-      <contentType value="Base64BinaryType" />
-      <data url="Bsp_Dokument_PDF.xml" />
-    </attachment>
+    <attachment> 
+        <contentType value="application/hl7-v3+xml"/> 
+        <language value="en-US"/>
+        <data value="YWRzYWdzYWd2ZnNhdnggMzE0OTMxMGlyaW04NDI3Y29ub3o=" />
+        <url value="http://fhir.dguv.de/xds/mhd/Binary/07a6483f-732b-461e-86b6-edb665c45510"/>
+        <size value="35"/> 
+        <hash value="2jmj7l5rSw0yVb/vlWAYkK/YBwk="/> 
+        <title value="Physical"/> 
+        <creation value="2005-12-24T09:35:00+11:00"/> 
+    </attachment> 
   </content>
 </DocumentReference>

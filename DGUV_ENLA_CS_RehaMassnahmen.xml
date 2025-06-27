@@ -2,7 +2,7 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
   <id value="DGUV-ENLA-CS-RehaMassnahmen" />
   <url value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-RehaMassnahmen" />
-  <version value="0.0.1" />
+  <version value="0.0.2" />
   <name value="DGUV_ENLA_CS_RehaMassnahmen" />
   <title value="RehaMassnahmen" />
   <status value="draft" />

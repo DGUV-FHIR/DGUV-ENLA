@@ -32,9 +32,6 @@
 		<value value="0049 458 66 888"/>
 	</telecom>
     <address>
-        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct">
-            <valueString value="Mitte" />
-        </extension>
         <type value="both" />
         <line value="Musterstr. 99">
             <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
@@ -44,18 +41,8 @@
                 <valueString value="Musterstr." />
             </extension>
         </line>
-        <line value="Mitte" />
         <city value="Dortmund" />
         <postalCode value="44227" />
         <country value="DE" />
-    </address>
-    <address>
-        <type value="postal" />
-        <line value="45678">
-            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox">
-                <valueString value="45678" />
-            </extension>
-        </line>
-        <city value="Dortmund" />
     </address>
 </Organization>

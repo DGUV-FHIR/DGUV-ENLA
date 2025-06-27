@@ -2,6 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="DGUV-ENLA-PR-VersichertePerson" />
   <url value="http://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson" />
+  <version value="0.0.2" />
   <name value="DGUV_ENLA_PR_VersichertePerson" />
   <title value="Versicherte Person" />
   <status value="draft" />
@@ -851,7 +852,6 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="http://hl7.org/fhir/ValueSet/iso3166-1-2|4.0.1" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -16431,7 +16431,6 @@
       <path value="Patient.extension.extension.value[x].coding.system" />
       <short value="ValueSet mit Nationalitäten" />
       <min value="1" />
-      <fixedUri value="http://hl7.org/fhir/ValueSet/iso3166-1-2|4.0.1" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.extension:nationality.extension:code.value[x].coding.code">
