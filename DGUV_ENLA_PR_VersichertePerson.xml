@@ -851,7 +851,6 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="http://hl7.org/fhir/ValueSet/iso3166-1-2|4.0.1" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -16431,7 +16430,6 @@
       <path value="Patient.extension.extension.value[x].coding.system" />
       <short value="ValueSet mit Nationalitäten" />
       <min value="1" />
-      <fixedUri value="http://hl7.org/fhir/ValueSet/iso3166-1-2|4.0.1" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.extension:nationality.extension:code.value[x].coding.code">
