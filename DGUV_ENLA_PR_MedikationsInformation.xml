@@ -1954,7 +1954,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="strukturierteDosierung" />
+      <fixedString value="Strukturierte Dosierung" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -6476,7 +6476,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="freitextlicheDosierung" />
+      <fixedString value="Freitextliche Dosierung" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -7936,7 +7936,7 @@
       <path value="MedicationStatement.dosage.text" />
       <short value="Diskriminatorkriterium" />
       <min value="1" />
-      <fixedString value="strukturierteDosierung" />
+      <fixedString value="Strukturierte Dosierung" />
       <mustSupport value="true" />
     </element>
     <element id="MedicationStatement.dosage:strukturierteDosierung.additionalInstruction">
@@ -8196,7 +8196,7 @@
       <path value="MedicationStatement.dosage.text" />
       <short value="Diskriminatorkriterium" />
       <min value="1" />
-      <fixedString value="freitextlicheDosierung" />
+      <fixedString value="Freitextliche Dosierung" />
       <mustSupport value="true" />
     </element>
     <element id="MedicationStatement.dosage:freitextlicheDosierung.additionalInstruction">
