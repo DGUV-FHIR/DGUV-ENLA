@@ -1815,7 +1815,7 @@
       <alias value="extensions" />
       <alias value="user content" />
       <min value="0" />
-      <max value="*" />
+      <max value="1" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -1841,6 +1841,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -1939,7 +1940,7 @@
     </element>
     <element id="MedicationStatement.dosage:strukturierteDosierung.text">
       <path value="MedicationStatement.dosage.text" />
-      <short value="Free text dosage instructions e.g. SIG" />
+      <short value="Diskriminatorkriterium" />
       <definition value="Free text dosage instructions e.g. SIG." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Free text dosage instructions can be used for cases where the instructions are too complex to code.  The content of this attribute does not include the name or description of the medication. When coded instructions are present, the free text instructions may still be present for display to humans taking or administering the medication. It is expected that the text instructions will always be populated.  If the dosage.timing attribute is also populated, then the dosage.text should reflect the same information as the timing.  Additional information about administration or preparation of the medication should be included as text." />
@@ -1953,7 +1954,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="Strukturierte Dosierung" />
+      <fixedString value="strukturierteDosierung" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -6156,8 +6157,8 @@
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="0" />
-      <max value="*" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -6183,6 +6184,186 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.dosage:freitextlicheDosierung.extension:DosierungFreitext">
+      <path value="MedicationStatement.dosage.extension" />
+      <sliceName value="DosierungFreitext" />
+      <short value="Freitextbeschreibung einer Dosierung" />
+      <definition value="Optional Extension Element - found in all resources." />
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
+      <alias value="extensions" />
+      <alias value="user content" />
+      <min value="1" />
+      <max value="1" />
+      <base>
+        <path value="Element.extension" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="Extension" />
+        <profile value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-DosierungFreitext" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
+      </constraint>
+      <mustSupport value="true" />
+      <isModifier value="false" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.dosage:freitextlicheDosierung.extension:DosierungFreitext.id">
+      <path value="MedicationStatement.dosage.extension.id" />
+      <representation value="xmlAttr" />
+      <short value="Unique id for inter-element referencing" />
+      <definition value="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Element.id" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
+          <valueUrl value="string" />
+        </extension>
+        <code value="http://hl7.org/fhirpath/System.String" />
+      </type>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.dosage:freitextlicheDosierung.extension:DosierungFreitext.extension">
+      <path value="MedicationStatement.dosage.extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <description value="Extensions are always sliced by (at least) url" />
+        <rules value="open" />
+      </slicing>
+      <short value="Additional content defined by implementations" />
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
+      <alias value="extensions" />
+      <alias value="user content" />
+      <min value="0" />
+      <max value="0" />
+      <base>
+        <path value="Element.extension" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="Extension" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.dosage:freitextlicheDosierung.extension:DosierungFreitext.url">
+      <path value="MedicationStatement.dosage.extension.url" />
+      <representation value="xmlAttr" />
+      <short value="identifies the meaning of the extension" />
+      <definition value="Source of the definition for the extension code - a logical name or a URL." />
+      <comment value="The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension." />
+      <min value="1" />
+      <max value="1" />
+      <base>
+        <path value="Extension.url" />
+        <min value="1" />
+        <max value="1" />
+      </base>
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
+          <valueUrl value="uri" />
+        </extension>
+        <code value="http://hl7.org/fhirpath/System.String" />
+      </type>
+      <fixedUri value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-DosierungFreitext" />
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.dosage:freitextlicheDosierung.extension:DosierungFreitext.value[x]">
+      <path value="MedicationStatement.dosage.extension.value[x]" />
+      <short value="Konkrete Freitextbeschreibung einer Dosierung" />
+      <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
+      <min value="1" />
+      <max value="1" />
+      <base>
+        <path value="Extension.value[x]" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="string" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -6281,7 +6462,7 @@
     </element>
     <element id="MedicationStatement.dosage:freitextlicheDosierung.text">
       <path value="MedicationStatement.dosage.text" />
-      <short value="Free text dosage instructions e.g. SIG" />
+      <short value="Diskriminatorkriterium" />
       <definition value="Free text dosage instructions e.g. SIG." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Free text dosage instructions can be used for cases where the instructions are too complex to code.  The content of this attribute does not include the name or description of the medication. When coded instructions are present, the free text instructions may still be present for display to humans taking or administering the medication. It is expected that the text instructions will always be populated.  If the dosage.timing attribute is also populated, then the dosage.text should reflect the same information as the timing.  Additional information about administration or preparation of the medication should be included as text." />
@@ -6295,6 +6476,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="freitextlicheDosierung" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -7741,14 +7923,20 @@
       <max value="4" />
       <mustSupport value="true" />
     </element>
+    <element id="MedicationStatement.dosage:strukturierteDosierung.extension">
+      <path value="MedicationStatement.dosage.extension" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
     <element id="MedicationStatement.dosage:strukturierteDosierung.sequence">
       <path value="MedicationStatement.dosage.sequence" />
       <max value="0" />
     </element>
     <element id="MedicationStatement.dosage:strukturierteDosierung.text">
       <path value="MedicationStatement.dosage.text" />
+      <short value="Diskriminatorkriterium" />
       <min value="1" />
-      <fixedString value="Strukturierte Dosierung" />
+      <fixedString value="strukturierteDosierung" />
       <mustSupport value="true" />
     </element>
     <element id="MedicationStatement.dosage:strukturierteDosierung.additionalInstruction">
@@ -7975,13 +8163,40 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="MedicationStatement.dosage:freitextlicheDosierung.extension">
+      <path value="MedicationStatement.dosage.extension" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.dosage:freitextlicheDosierung.extension:DosierungFreitext">
+      <path value="MedicationStatement.dosage.extension" />
+      <sliceName value="DosierungFreitext" />
+      <short value="Freitextbeschreibung einer Dosierung" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-DosierungFreitext" />
+      </type>
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>
+    <element id="MedicationStatement.dosage:freitextlicheDosierung.extension:DosierungFreitext.value[x]">
+      <path value="MedicationStatement.dosage.extension.value[x]" />
+      <short value="Konkrete Freitextbeschreibung einer Dosierung" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
     <element id="MedicationStatement.dosage:freitextlicheDosierung.sequence">
       <path value="MedicationStatement.dosage.sequence" />
       <max value="0" />
     </element>
     <element id="MedicationStatement.dosage:freitextlicheDosierung.text">
       <path value="MedicationStatement.dosage.text" />
+      <short value="Diskriminatorkriterium" />
       <min value="1" />
+      <fixedString value="freitextlicheDosierung" />
       <mustSupport value="true" />
     </element>
     <element id="MedicationStatement.dosage:freitextlicheDosierung.additionalInstruction">
