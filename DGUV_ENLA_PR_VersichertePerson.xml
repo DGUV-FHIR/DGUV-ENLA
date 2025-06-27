@@ -2,6 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="DGUV-ENLA-PR-VersichertePerson" />
   <url value="http://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson" />
+  <version value="0.0.2" />
   <name value="DGUV_ENLA_PR_VersichertePerson" />
   <title value="Versicherte Person" />
   <status value="draft" />

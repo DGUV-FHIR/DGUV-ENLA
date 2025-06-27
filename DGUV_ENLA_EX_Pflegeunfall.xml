@@ -2,6 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="DGUV-ENLA-EX-Pflegeunfall" />
   <url value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-Pflegeunfall" />
+  <version value="0.0.2" />
   <name value="DGUV_ENLA_EX_Pflegeunfall" />
   <title value="Pflegeunfall" />
   <status value="draft" />
@@ -19,6 +20,12 @@
   <derivation value="constraint" />
   <snapshot>
     <element id="Extension">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
       <path value="Extension" />
       <short value="Optional Extensions Element" />
       <definition value="Optional Extension Element - found in all resources." />
@@ -79,6 +86,12 @@
       </mapping>
     </element>
     <element id="Extension.extension">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
       <path value="Extension.extension" />
       <slicing>
         <discriminator>
@@ -130,6 +143,12 @@
       </mapping>
     </element>
     <element id="Extension.extension:Pflegeunfall">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
       <path value="Extension.extension" />
       <sliceName value="Pflegeunfall" />
       <short value="Kennzeichnung eines Unfalls im Rahmen von Pflegetätigkeit" />
@@ -197,6 +216,12 @@
       </mapping>
     </element>
     <element id="Extension.extension:Pflegeunfall.extension">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
       <path value="Extension.extension.extension" />
       <slicing>
         <discriminator>
@@ -212,7 +237,7 @@
       <alias value="extensions" />
       <alias value="user content" />
       <min value="0" />
-      <max value="0" />
+      <max value="*" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -273,6 +298,12 @@
       </mapping>
     </element>
     <element id="Extension.extension:Pflegeunfall.value[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
       <path value="Extension.extension.value[x]" />
       <short value="Konkrete Kennzeichnung als Pflegeunfall (true) oder Nicht-Pflegeunfall (false)" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
@@ -305,6 +336,12 @@
       </mapping>
     </element>
     <element id="Extension.extension:Pflegekasse">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
       <path value="Extension.extension" />
       <sliceName value="Pflegekasse" />
       <short value="Pflegekasse der pflegebedürftigen Person im Fall eines Pflegeunfalls" />
@@ -372,6 +409,12 @@
       </mapping>
     </element>
     <element id="Extension.extension:Pflegekasse.extension">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
       <path value="Extension.extension.extension" />
       <slicing>
         <discriminator>
@@ -387,7 +430,7 @@
       <alias value="extensions" />
       <alias value="user content" />
       <min value="0" />
-      <max value="0" />
+      <max value="*" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -448,6 +491,12 @@
       </mapping>
     </element>
     <element id="Extension.extension:Pflegekasse.value[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
       <path value="Extension.extension.value[x]" />
       <short value="Referenz auf die Pflegekasse des Pflegebedürftigen" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
@@ -504,6 +553,12 @@
       </mapping>
     </element>
     <element id="Extension.extension:Pflegekasse.value[x].extension">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
       <path value="Extension.extension.value[x].extension" />
       <slicing>
         <discriminator>
@@ -632,6 +687,12 @@
       </mapping>
     </element>
     <element id="Extension.extension:Pflegekasse.value[x].identifier">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
       <path value="Extension.extension.value[x].identifier" />
       <short value="Logical reference, when literal reference is not known" />
       <definition value="An identifier for the target resource. This is used when there is no way to reference the other resource directly, either because the entity it represents is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference." />
@@ -740,6 +801,12 @@
       </mapping>
     </element>
     <element id="Extension.value[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
       <path value="Extension.value[x]" />
       <short value="Value of extension" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
@@ -932,10 +999,6 @@
       <min value="1" />
       <max value="1" />
     </element>
-    <element id="Extension.extension:Pflegeunfall.extension">
-      <path value="Extension.extension.extension" />
-      <max value="0" />
-    </element>
     <element id="Extension.extension:Pflegeunfall.url">
       <path value="Extension.extension.url" />
       <fixedUri value="Pflegeunfall" />
@@ -954,10 +1017,6 @@
       <short value="Pflegekasse der pflegebedürftigen Person im Fall eines Pflegeunfalls" />
       <comment value="Bei Pflegeunfall Pflegekasse der pflegebedürftigen Person" />
       <max value="1" />
-    </element>
-    <element id="Extension.extension:Pflegekasse.extension">
-      <path value="Extension.extension.extension" />
-      <max value="0" />
     </element>
     <element id="Extension.extension:Pflegekasse.url">
       <path value="Extension.extension.url" />

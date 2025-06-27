@@ -2,6 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="DGUV-ENLA-PR-Pflegekasse" />
   <url value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Pflegekasse" />
+  <version value="0.0.2" />
   <name value="DGUV_ENLA_PR_Pflegekasse" />
   <title value="Pflegekasse" />
   <status value="draft" />
