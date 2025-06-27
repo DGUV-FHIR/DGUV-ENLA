@@ -2,6 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="DGUV-ENLA-PR-Unfallversicherungstraeger" />
   <url value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Unfallversicherungstraeger" />
+  <version value="0.0.2" />
   <name value="DGUV_ENLA_PR_Unfallversicherungstraeger" />
   <title value="Unfallversicherungsträger" />
   <status value="draft" />

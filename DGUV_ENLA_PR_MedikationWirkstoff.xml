@@ -2,6 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="DGUV-ENLA-PR-MedikationWirkstoff" />
   <url value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationWirkstoff" />
+  <version value="0.0.2" />
   <name value="DGUV_ENLA_PR_MedikationWirkstoff" />
   <title value="MedikationWirkstoff" />
   <status value="draft" />
@@ -93,7 +94,7 @@
     </element>
     <element id="Medication.id">
       <path value="Medication.id" />
-      <short value="eindeutige ID der Ressource auf dem Server" />
+      <short value="Logical id of this artifact" />
       <definition value="The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes." />
       <comment value="The only time that a resource does not have an id is when it is being submitted to the server using a create operation." />
       <min value="0" />
@@ -109,16 +110,9 @@
         </extension>
         <code value="http://hl7.org/fhirpath/System.String" />
       </type>
-      <mustSupport value="true" />
       <isSummary value="true" />
     </element>
     <element id="Medication.meta">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.meta" />
       <short value="Metadata about the resource" />
       <definition value="The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource." />
@@ -214,9 +208,6 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="Language" />
         </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true" />
-        </extension>
         <strength value="preferred" />
         <description value="A human language." />
         <valueSet value="http://hl7.org/fhir/ValueSet/languages" />
@@ -227,12 +218,6 @@
       </mapping>
     </element>
     <element id="Medication.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.text" />
       <short value="Text summary of the resource, for human interpretation" />
       <definition value="A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it &quot;clinically safe&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety." />
@@ -301,12 +286,6 @@
       </mapping>
     </element>
     <element id="Medication.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.extension" />
       <slicing>
         <discriminator>
@@ -358,12 +337,6 @@
       </mapping>
     </element>
     <element id="Medication.modifierExtension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.modifierExtension" />
       <slicing>
         <discriminator>
@@ -418,12 +391,6 @@
       </mapping>
     </element>
     <element id="Medication.identifier">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.identifier" />
       <short value="Business identifier for this medication" />
       <definition value="Business identifier for this medication." />
@@ -474,12 +441,6 @@
       </mapping>
     </element>
     <element id="Medication.code">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.code" />
       <short value="Medikament in codierter Form oder ggf. als Freitext" />
       <definition value="A code (or set of codes) that specify this medication, or a textual description if no code is available. Usage note: This could be a standard medication code such as a code from RxNorm, SNOMED CT, IDMP etc. It could also be a national or local formulary code, optionally with translations to other code systems." />
@@ -570,12 +531,6 @@
       </mapping>
     </element>
     <element id="Medication.code.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.code.extension" />
       <slicing>
         <discriminator>
@@ -627,12 +582,6 @@
       </mapping>
     </element>
     <element id="Medication.code.coding">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.code.coding" />
       <slicing>
         <discriminator>
@@ -696,12 +645,6 @@
       </mapping>
     </element>
     <element id="Medication.code.coding:PZN">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.code.coding" />
       <sliceName value="PZN" />
       <short value="Code defined by a terminology system" />
@@ -785,12 +728,6 @@
       </mapping>
     </element>
     <element id="Medication.code.coding:PZN.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.code.coding.extension" />
       <slicing>
         <discriminator>
@@ -1062,12 +999,6 @@
       </mapping>
     </element>
     <element id="Medication.code.coding:ATC-DE">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.code.coding" />
       <sliceName value="ATC-DE" />
       <short value="Code defined by a terminology system" />
@@ -1151,12 +1082,6 @@
       </mapping>
     </element>
     <element id="Medication.code.coding:ATC-DE.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.code.coding.extension" />
       <slicing>
         <discriminator>
@@ -1428,12 +1353,6 @@
       </mapping>
     </element>
     <element id="Medication.code.coding:WG14">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.code.coding" />
       <sliceName value="WG14" />
       <short value="Code defined by a terminology system" />
@@ -1517,12 +1436,6 @@
       </mapping>
     </element>
     <element id="Medication.code.coding:WG14.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.code.coding.extension" />
       <slicing>
         <discriminator>
@@ -1886,12 +1799,6 @@
       </mapping>
     </element>
     <element id="Medication.manufacturer">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.manufacturer" />
       <short value="Hersteller des Medikaments" />
       <definition value="Describes the details of the manufacturer of the medication product.  This is not intended to represent the distributor of a medication product." />
@@ -1975,12 +1882,6 @@
       </mapping>
     </element>
     <element id="Medication.manufacturer.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.manufacturer.extension" />
       <slicing>
         <discriminator>
@@ -2109,12 +2010,6 @@
       </mapping>
     </element>
     <element id="Medication.manufacturer.identifier">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.manufacturer.identifier" />
       <short value="Logical reference, when literal reference is not known" />
       <definition value="An identifier for the target resource. This is used when there is no way to reference the other resource directly, either because the entity it represents is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference." />
@@ -2199,12 +2094,6 @@
       </mapping>
     </element>
     <element id="Medication.form">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.form" />
       <short value="Abgabeform" />
       <definition value="Describes the form of the item.  Powder; tablets; capsule." />
@@ -2290,12 +2179,6 @@
       </mapping>
     </element>
     <element id="Medication.form.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.form.extension" />
       <slicing>
         <discriminator>
@@ -2347,12 +2230,6 @@
       </mapping>
     </element>
     <element id="Medication.form.coding">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.form.coding" />
       <slicing>
         <discriminator>
@@ -2416,12 +2293,6 @@
       </mapping>
     </element>
     <element id="Medication.form.coding:EDQM">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.form.coding" />
       <sliceName value="EDQM" />
       <short value="Code defined by a terminology system" />
@@ -2506,12 +2377,6 @@
       </mapping>
     </element>
     <element id="Medication.form.coding:EDQM.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.form.coding.extension" />
       <slicing>
         <discriminator>
@@ -2829,12 +2694,6 @@
       </mapping>
     </element>
     <element id="Medication.amount">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.amount" />
       <short value="Menge" />
       <definition value="Specific amount of the drug in the packaged product.  For example, when specifying a product that has the same strength (For example, Insulin glargine 100 unit per mL solution for injection), this attribute provides additional clarification of the package amount (For example, 3 mL, 10mL, etc.)." />
@@ -2909,12 +2768,6 @@
       </mapping>
     </element>
     <element id="Medication.amount.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.amount.extension" />
       <slicing>
         <discriminator>
@@ -2966,12 +2819,6 @@
       </mapping>
     </element>
     <element id="Medication.amount.numerator">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.amount.numerator" />
       <short value="Numerator value" />
       <definition value="The value of the numerator." />
@@ -3049,12 +2896,6 @@
       </mapping>
     </element>
     <element id="Medication.amount.numerator.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.amount.numerator.extension" />
       <slicing>
         <discriminator>
@@ -3320,12 +3161,6 @@
       </mapping>
     </element>
     <element id="Medication.amount.denominator">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.amount.denominator" />
       <short value="Denominator value" />
       <definition value="The value of the denominator." />
@@ -3403,12 +3238,6 @@
       </mapping>
     </element>
     <element id="Medication.amount.denominator.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.amount.denominator.extension" />
       <slicing>
         <discriminator>
@@ -3674,12 +3503,6 @@
       </mapping>
     </element>
     <element id="Medication.ingredient">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.ingredient" />
       <short value="Informationen zu Bestandteilen (Rezeptur)" />
       <definition value="Identifies a particular constituent of interest in the product." />
@@ -3737,12 +3560,6 @@
       </mapping>
     </element>
     <element id="Medication.ingredient.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.ingredient.extension" />
       <slicing>
         <discriminator>
@@ -3795,12 +3612,6 @@
       </mapping>
     </element>
     <element id="Medication.ingredient.extension:wirkstofftyp">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.ingredient.extension" />
       <sliceName value="wirkstofftyp" />
       <short value="Optional Extensions Element" />
@@ -3870,12 +3681,6 @@
       </mapping>
     </element>
     <element id="Medication.ingredient.extension:wirkstofftyp.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.ingredient.extension.extension" />
       <slicing>
         <discriminator>
@@ -3952,12 +3757,6 @@
       </mapping>
     </element>
     <element id="Medication.ingredient.extension:wirkstofftyp.value[x]">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.ingredient.extension.value[x]" />
       <short value="Value of extension" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
@@ -4017,12 +3816,6 @@
       </mapping>
     </element>
     <element id="Medication.ingredient.extension:wirkstofftyp.value[x].extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.ingredient.extension.value[x].extension" />
       <slicing>
         <discriminator>
@@ -4292,12 +4085,6 @@
       </mapping>
     </element>
     <element id="Medication.ingredient.modifierExtension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.ingredient.modifierExtension" />
       <short value="Extensions that cannot be ignored even if unrecognized" />
       <definition value="May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.&#xA;&#xA;Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)." />
@@ -4346,12 +4133,6 @@
       </mapping>
     </element>
     <element id="Medication.ingredient.item[x]">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.ingredient.item[x]" />
       <slicing>
         <discriminator>
@@ -4406,12 +4187,6 @@
       </mapping>
     </element>
     <element id="Medication.ingredient.item[x]:itemCodeableConcept">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.ingredient.item[x]" />
       <sliceName value="itemCodeableConcept" />
       <short value="Bestandteil in codierter Form oder ggf. als Freitext" />
@@ -4478,12 +4253,6 @@
       </mapping>
     </element>
     <element id="Medication.ingredient.item[x]:itemCodeableConcept.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.ingredient.item[x].extension" />
       <slicing>
         <discriminator>
@@ -4535,12 +4304,6 @@
       </mapping>
     </element>
     <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.ingredient.item[x].coding" />
       <slicing>
         <discriminator>
@@ -4604,12 +4367,6 @@
       </mapping>
     </element>
     <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:ASK">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.ingredient.item[x].coding" />
       <sliceName value="ASK" />
       <short value="Code defined by a terminology system" />
@@ -4693,12 +4450,6 @@
       </mapping>
     </element>
     <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:ASK.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.ingredient.item[x].coding.extension" />
       <slicing>
         <discriminator>
@@ -4970,12 +4721,6 @@
       </mapping>
     </element>
     <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:ATC-DE">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.ingredient.item[x].coding" />
       <sliceName value="ATC-DE" />
       <short value="Code defined by a terminology system" />
@@ -5059,12 +4804,6 @@
       </mapping>
     </element>
     <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:ATC-DE.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.ingredient.item[x].coding.extension" />
       <slicing>
         <discriminator>
@@ -5336,12 +5075,6 @@
       </mapping>
     </element>
     <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:PZN">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.ingredient.item[x].coding" />
       <sliceName value="PZN" />
       <short value="Code defined by a terminology system" />
@@ -5425,12 +5158,6 @@
       </mapping>
     </element>
     <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:PZN.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.ingredient.item[x].coding.extension" />
       <slicing>
         <discriminator>
@@ -5702,12 +5429,6 @@
       </mapping>
     </element>
     <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:WG14">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.ingredient.item[x].coding" />
       <sliceName value="WG14" />
       <short value="Code defined by a terminology system" />
@@ -5791,12 +5512,6 @@
       </mapping>
     </element>
     <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:WG14.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.ingredient.item[x].coding.extension" />
       <slicing>
         <discriminator>
@@ -6115,12 +5830,6 @@
       </mapping>
     </element>
     <element id="Medication.ingredient.item[x]:itemReference">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.ingredient.item[x]" />
       <sliceName value="itemReference" />
       <short value="Bestandteil (Referenz auf ein anderes Medikament)" />
@@ -6189,12 +5898,6 @@
       </mapping>
     </element>
     <element id="Medication.ingredient.item[x]:itemReference.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.ingredient.item[x].extension" />
       <slicing>
         <discriminator>
@@ -6324,12 +6027,6 @@
       </mapping>
     </element>
     <element id="Medication.ingredient.item[x]:itemReference.identifier">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.ingredient.item[x].identifier" />
       <short value="Logical reference, when literal reference is not known" />
       <definition value="An identifier for the target resource. This is used when there is no way to reference the other resource directly, either because the entity it represents is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference." />
@@ -6447,12 +6144,6 @@
       </mapping>
     </element>
     <element id="Medication.ingredient.strength">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.ingredient.strength" />
       <short value="Stärke" />
       <definition value="Specifies how many (or how much) of the items there are in this Medication.  For example, 250 mg per tablet.  This is expressed as a ratio where the numerator is 250mg and the denominator is 1 tablet." />
@@ -6534,12 +6225,6 @@
       </mapping>
     </element>
     <element id="Medication.ingredient.strength.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.ingredient.strength.extension" />
       <slicing>
         <discriminator>
@@ -6591,12 +6276,6 @@
       </mapping>
     </element>
     <element id="Medication.ingredient.strength.numerator">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.ingredient.strength.numerator" />
       <short value="Numerator value" />
       <definition value="The value of the numerator." />
@@ -6674,12 +6353,6 @@
       </mapping>
     </element>
     <element id="Medication.ingredient.strength.numerator.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.ingredient.strength.numerator.extension" />
       <slicing>
         <discriminator>
@@ -6945,12 +6618,6 @@
       </mapping>
     </element>
     <element id="Medication.ingredient.strength.denominator">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.ingredient.strength.denominator" />
       <short value="Denominator value" />
       <definition value="The value of the denominator." />
@@ -7028,12 +6695,6 @@
       </mapping>
     </element>
     <element id="Medication.ingredient.strength.denominator.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.ingredient.strength.denominator.extension" />
       <slicing>
         <discriminator>
@@ -7299,15 +6960,10 @@
       </mapping>
     </element>
     <element id="Medication.batch">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.batch" />
       <short value="Angaben zur Charge" />
       <definition value="Information that only applies to packages (not products)." />
+      <comment value="Bitte beachten Sie gegebenenfalls die Regelungen der zwischen GKV-SV und DAV: https://www.gkv-datenaustausch.de/leistungserbringer/apotheken/apotheken.jsp . Insbesondere den Technischen Anhang 7 (TA7) zur Arzneimittelabrechnungsvereinbarung gemäß § 300 Absatz 3 SGB V in der aktuellsten Fassung." />
       <min value="0" />
       <max value="1" />
       <base>
@@ -7365,12 +7021,6 @@
       </mapping>
     </element>
     <element id="Medication.batch.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.batch.extension" />
       <slicing>
         <discriminator>
@@ -7422,12 +7072,6 @@
       </mapping>
     </element>
     <element id="Medication.batch.modifierExtension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Medication.batch.modifierExtension" />
       <short value="Extensions that cannot be ignored even if unrecognized" />
       <definition value="May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.&#xA;&#xA;Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)." />
@@ -7479,7 +7123,7 @@
       <path value="Medication.batch.lotNumber" />
       <short value="Chargennummer" />
       <definition value="The assigned lot number of a batch of the specified product." />
-      <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
+      <comment value="Gemäß Anlage 1 der TA7 kann hier übergangsweise bis zum 30. Juni 2025 eine Musterchargennummer (&quot;STELLEN&quot;) eingetragen werden. Wenn die Übermittlung der Chargenbezeichnung beim Stellen von Arzneimitteln technisch nicht möglich ist, z.B. beim Verblistern, wird von der Verpflichtung zur Chargendokumentation abgesehen. Dementsprechend kann anstatt der tatsächlichen Chargenbezeichnungen &quot;STELLEN&quot; in das hierbeschirebene Datenfeld eingetragen werden." />
       <min value="0" />
       <max value="1" />
       <base>

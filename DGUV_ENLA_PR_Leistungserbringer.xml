@@ -2,6 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="DGUV-ENLA-PR-Leistungserbringer" />
   <url value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringer" />
+  <version value="0.0.2" />
   <name value="DGUV_ENLA_PR_Leistungserbringer" />
   <title value="Leistungserbringer" />
   <status value="draft" />
