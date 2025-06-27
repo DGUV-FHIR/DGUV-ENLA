@@ -2,6 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="DGUV-ENLA-PR-DiagnoseFreitext" />
   <url value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseFreitext" />
+  <version value="0.0.2" />
   <name value="DGUV_ENLA_PR_DiagnoseFreitext" />
   <title value="Diagnose - Freitext" />
   <status value="draft" />

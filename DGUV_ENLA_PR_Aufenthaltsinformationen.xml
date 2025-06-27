@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://fhir.dguv.de/ENLA/Encounter/DGUV-ENLA-PR-Aufenthaltsinformationen" />
+  <version value="0.0.2" />
   <name value="DGUV_ENLA_PR_Aufenthaltsinformationen" />
   <title value="Aufenthaltsinformationen" />
   <status value="draft" />
@@ -105,12 +106,6 @@
       <isSummary value="true" />
     </element>
     <element id="Encounter.meta">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.meta" />
       <short value="Metadata about the resource" />
       <definition value="The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource." />
@@ -206,9 +201,6 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="Language" />
         </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true" />
-        </extension>
         <strength value="preferred" />
         <description value="A human language." />
         <valueSet value="http://hl7.org/fhir/ValueSet/languages" />
@@ -219,12 +211,6 @@
       </mapping>
     </element>
     <element id="Encounter.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.text" />
       <short value="Text summary of the resource, for human interpretation" />
       <definition value="A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it &quot;clinically safe&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety." />
@@ -293,12 +279,6 @@
       </mapping>
     </element>
     <element id="Encounter.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.extension" />
       <slicing>
         <discriminator>
@@ -350,12 +330,6 @@
       </mapping>
     </element>
     <element id="Encounter.modifierExtension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.modifierExtension" />
       <slicing>
         <discriminator>
@@ -410,12 +384,6 @@
       </mapping>
     </element>
     <element id="Encounter.identifier">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.identifier" />
       <short value="Identifier bildet die Fallnummer ab" />
       <definition value="An identifier - identifies some entity uniquely and unambiguously. Typically this is used for business identifiers." />
@@ -498,12 +466,6 @@
       </mapping>
     </element>
     <element id="Encounter.identifier.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.identifier.extension" />
       <slicing>
         <discriminator>
@@ -604,12 +566,6 @@
       </mapping>
     </element>
     <element id="Encounter.identifier.type">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.identifier.type" />
       <short value="Description of identifier" />
       <definition value="A coded type for the identifier that can be used to determine which identifier to use for a specific purpose." />
@@ -646,9 +602,6 @@
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="IdentifierType" />
-        </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true" />
         </extension>
         <strength value="extensible" />
         <description value="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose." />
@@ -703,12 +656,6 @@
       </mapping>
     </element>
     <element id="Encounter.identifier.type.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.identifier.type.extension" />
       <slicing>
         <discriminator>
@@ -760,12 +707,6 @@
       </mapping>
     </element>
     <element id="Encounter.identifier.type.coding">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.identifier.type.coding" />
       <short value="Code defined by a terminology system" />
       <definition value="A reference to a code defined by a terminology system." />
@@ -845,12 +786,6 @@
       </mapping>
     </element>
     <element id="Encounter.identifier.type.coding.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.identifier.type.coding.extension" />
       <slicing>
         <discriminator>
@@ -1263,12 +1198,6 @@
       </mapping>
     </element>
     <element id="Encounter.identifier.period">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.identifier.period" />
       <short value="Time period when id is/was valid for use" />
       <definition value="Time period during which identifier is/was valid for use." />
@@ -1327,12 +1256,6 @@
       </mapping>
     </element>
     <element id="Encounter.identifier.assigner">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.identifier.assigner" />
       <short value="Organization that issued id (may be just text)" />
       <definition value="Organization that issued/manages the identifier." />
@@ -1445,12 +1368,6 @@
       </mapping>
     </element>
     <element id="Encounter.statusHistory">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="StatusHistory" />
       </extension>
@@ -1506,12 +1423,6 @@
       </mapping>
     </element>
     <element id="Encounter.statusHistory.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.statusHistory.extension" />
       <slicing>
         <discriminator>
@@ -1563,12 +1474,6 @@
       </mapping>
     </element>
     <element id="Encounter.statusHistory.modifierExtension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.statusHistory.modifierExtension" />
       <short value="Extensions that cannot be ignored even if unrecognized" />
       <definition value="May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.&#xA;&#xA;Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)." />
@@ -1654,12 +1559,6 @@
       </mapping>
     </element>
     <element id="Encounter.statusHistory.period">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.statusHistory.period" />
       <short value="The time that the episode was in the specified status" />
       <definition value="The time that the episode was in the specified status." />
@@ -1705,12 +1604,6 @@
       </mapping>
     </element>
     <element id="Encounter.class">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.class" />
       <short value="Classification of patient encounter" />
       <definition value="Concepts representing classification of patient encounter such as ambulatory (outpatient), inpatient, emergency, home health or others due to local variations." />
@@ -1797,12 +1690,6 @@
       </mapping>
     </element>
     <element id="Encounter.class.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.class.extension" />
       <slicing>
         <discriminator>
@@ -2076,12 +1963,6 @@
       </mapping>
     </element>
     <element id="Encounter.classHistory">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="ClassHistory" />
       </extension>
@@ -2136,12 +2017,6 @@
       </mapping>
     </element>
     <element id="Encounter.classHistory.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.classHistory.extension" />
       <slicing>
         <discriminator>
@@ -2193,12 +2068,6 @@
       </mapping>
     </element>
     <element id="Encounter.classHistory.modifierExtension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.classHistory.modifierExtension" />
       <short value="Extensions that cannot be ignored even if unrecognized" />
       <definition value="May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.&#xA;&#xA;Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)." />
@@ -2247,12 +2116,6 @@
       </mapping>
     </element>
     <element id="Encounter.classHistory.class">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.classHistory.class" />
       <short value="inpatient | outpatient | ambulatory | emergency +" />
       <definition value="inpatient | outpatient | ambulatory | emergency +." />
@@ -2302,12 +2165,6 @@
       </mapping>
     </element>
     <element id="Encounter.classHistory.period">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.classHistory.period" />
       <short value="The time that the episode was in the specified class" />
       <definition value="The time that the episode was in the specified class." />
@@ -2353,12 +2210,6 @@
       </mapping>
     </element>
     <element id="Encounter.type">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.type" />
       <short value="Specific type of encounter" />
       <definition value="Specific type of encounter (e.g. e-mail consultation, surgical day-care, skilled nursing, rehabilitation)." />
@@ -2425,12 +2276,6 @@
       </mapping>
     </element>
     <element id="Encounter.serviceType">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.serviceType" />
       <short value="Specific type of service" />
       <definition value="Broad categorization of the service that is to be provided (e.g. cardiology)." />
@@ -2489,12 +2334,6 @@
       </mapping>
     </element>
     <element id="Encounter.priority">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.priority" />
       <short value="Indicates the urgency of the encounter" />
       <definition value="Indicates the urgency of the encounter." />
@@ -2556,12 +2395,6 @@
       </mapping>
     </element>
     <element id="Encounter.subject">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.subject" />
       <short value="Verweis auf die versicherte Person" />
       <definition value="The patient or group present at the encounter." />
@@ -2650,12 +2483,6 @@
       </mapping>
     </element>
     <element id="Encounter.subject.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.subject.extension" />
       <slicing>
         <discriminator>
@@ -2785,12 +2612,6 @@
       </mapping>
     </element>
     <element id="Encounter.subject.identifier">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.subject.identifier" />
       <short value="Logical reference, when literal reference is not known" />
       <definition value="An identifier for the target resource. This is used when there is no way to reference the other resource directly, either because the entity it represents is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference." />
@@ -2874,12 +2695,6 @@
       </mapping>
     </element>
     <element id="Encounter.episodeOfCare">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.episodeOfCare" />
       <short value="Episode(s) of care that this encounter should be recorded against" />
       <definition value="Where a specific encounter should be classified as a part of a specific episode(s) of care this field should be used. This association can facilitate grouping of related encounters together for a specific purpose, such as government reporting, issue tracking, association via a common problem.  The association is recorded on the encounter as these are typically created after the episode of care and grouped on entry rather than editing the episode of care to append another encounter to it (the episode of care could span years)." />
@@ -2935,12 +2750,6 @@
       </mapping>
     </element>
     <element id="Encounter.basedOn">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.basedOn" />
       <short value="The ServiceRequest that initiated this encounter" />
       <definition value="The request this encounter satisfies (e.g. incoming referral or procedure request)." />
@@ -2992,12 +2801,6 @@
       </mapping>
     </element>
     <element id="Encounter.participant">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.participant" />
       <short value="List of participants involved in the encounter" />
       <definition value="The list of people responsible for providing the service." />
@@ -3062,12 +2865,6 @@
       </mapping>
     </element>
     <element id="Encounter.participant.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.participant.extension" />
       <slicing>
         <discriminator>
@@ -3119,12 +2916,6 @@
       </mapping>
     </element>
     <element id="Encounter.participant.modifierExtension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.participant.modifierExtension" />
       <short value="Extensions that cannot be ignored even if unrecognized" />
       <definition value="May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.&#xA;&#xA;Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)." />
@@ -3173,12 +2964,6 @@
       </mapping>
     </element>
     <element id="Encounter.participant.type">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.participant.type" />
       <short value="Role of participant in encounter" />
       <definition value="Role of participant in encounter." />
@@ -3241,12 +3026,6 @@
       </mapping>
     </element>
     <element id="Encounter.participant.period">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.participant.period" />
       <short value="Period of time during the encounter that the participant participated" />
       <definition value="The period of time that the specified participant participated in the encounter. These can overlap or be sub-sets of the overall encounter's period." />
@@ -3300,12 +3079,6 @@
       </mapping>
     </element>
     <element id="Encounter.participant.individual">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.participant.individual" />
       <short value="Persons involved in the encounter other than the patient" />
       <definition value="Persons involved in the encounter other than the patient." />
@@ -3367,12 +3140,6 @@
       </mapping>
     </element>
     <element id="Encounter.appointment">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.appointment" />
       <short value="The appointment that scheduled this encounter" />
       <definition value="The appointment that scheduled this encounter." />
@@ -3428,12 +3195,6 @@
       </mapping>
     </element>
     <element id="Encounter.period">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.period" />
       <short value="The start and end time of the encounter" />
       <definition value="The start and end time of the encounter." />
@@ -3519,12 +3280,6 @@
       </mapping>
     </element>
     <element id="Encounter.period.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.period.extension" />
       <slicing>
         <discriminator>
@@ -3657,12 +3412,6 @@
       </mapping>
     </element>
     <element id="Encounter.length">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.length" />
       <short value="Quantity of time the encounter lasted (less time absent)" />
       <definition value="Quantity of time the encounter lasted. This excludes the time during leaves of absence." />
@@ -3732,12 +3481,6 @@
       </mapping>
     </element>
     <element id="Encounter.reasonCode">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.reasonCode" />
       <short value="Coded reason the encounter takes place" />
       <definition value="Reason the encounter takes place, expressed as a code. For admissions, this can be used for a coded admission diagnosis." />
@@ -3806,12 +3549,6 @@
       </mapping>
     </element>
     <element id="Encounter.reasonReference">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.reasonReference" />
       <short value="Reason the encounter takes place (reference)" />
       <definition value="Reason the encounter takes place, expressed as a code. For admissions, this can be used for a coded admission diagnosis." />
@@ -3876,12 +3613,6 @@
       </mapping>
     </element>
     <element id="Encounter.diagnosis">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Diagnosis" />
       </extension>
@@ -3941,12 +3672,6 @@
       </mapping>
     </element>
     <element id="Encounter.diagnosis.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.diagnosis.extension" />
       <slicing>
         <discriminator>
@@ -3998,12 +3723,6 @@
       </mapping>
     </element>
     <element id="Encounter.diagnosis.modifierExtension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.diagnosis.modifierExtension" />
       <short value="Extensions that cannot be ignored even if unrecognized" />
       <definition value="May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.&#xA;&#xA;Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)." />
@@ -4052,12 +3771,6 @@
       </mapping>
     </element>
     <element id="Encounter.diagnosis.condition">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.diagnosis.condition" />
       <short value="The diagnosis or procedure relevant to the encounter" />
       <definition value="Reason the encounter takes place, as specified using information from another resource. For admissions, this is the admission diagnosis. The indication will typically be a Condition (with other resources referenced in the evidence.detail), or a Procedure." />
@@ -4121,12 +3834,6 @@
       </mapping>
     </element>
     <element id="Encounter.diagnosis.use">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.diagnosis.use" />
       <short value="Role that this diagnosis has within the encounter (e.g. admission, billing, discharge …)" />
       <definition value="Role that this diagnosis has within the encounter (e.g. admission, billing, discharge …)." />
@@ -4153,9 +3860,6 @@
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="DiagnosisRole" />
-        </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true" />
         </extension>
         <strength value="preferred" />
         <description value="The type of diagnosis this condition represents." />
@@ -4212,12 +3916,6 @@
       </mapping>
     </element>
     <element id="Encounter.account">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.account" />
       <short value="The set of accounts that may be used for billing for this Encounter" />
       <definition value="The set of accounts that may be used for billing for this Encounter." />
@@ -4264,12 +3962,6 @@
       </mapping>
     </element>
     <element id="Encounter.hospitalization">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.hospitalization" />
       <short value="Details about the admission to a healthcare service" />
       <definition value="Details about the admission to a healthcare service." />
@@ -4327,12 +4019,6 @@
       </mapping>
     </element>
     <element id="Encounter.hospitalization.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.hospitalization.extension" />
       <slicing>
         <discriminator>
@@ -4384,12 +4070,6 @@
       </mapping>
     </element>
     <element id="Encounter.hospitalization.modifierExtension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.hospitalization.modifierExtension" />
       <short value="Extensions that cannot be ignored even if unrecognized" />
       <definition value="May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.&#xA;&#xA;Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)." />
@@ -4438,12 +4118,6 @@
       </mapping>
     </element>
     <element id="Encounter.hospitalization.preAdmissionIdentifier">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.hospitalization.preAdmissionIdentifier" />
       <short value="Pre-admission identifier" />
       <definition value="Pre-admission identifier." />
@@ -4492,12 +4166,6 @@
       </mapping>
     </element>
     <element id="Encounter.hospitalization.origin">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.hospitalization.origin" />
       <short value="The location/organization from which the patient came before admission" />
       <definition value="The location/organization from which the patient came before admission." />
@@ -4545,12 +4213,6 @@
       </mapping>
     </element>
     <element id="Encounter.hospitalization.admitSource">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.hospitalization.admitSource" />
       <short value="From where patient was admitted (physician referral, transfer)" />
       <definition value="From where patient was admitted (physician referral, transfer)." />
@@ -4632,12 +4294,6 @@
       </mapping>
     </element>
     <element id="Encounter.hospitalization.admitSource.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.hospitalization.admitSource.extension" />
       <slicing>
         <discriminator>
@@ -4689,12 +4345,6 @@
       </mapping>
     </element>
     <element id="Encounter.hospitalization.admitSource.extension:GrundFolgebehandlung">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.hospitalization.admitSource.extension" />
       <sliceName value="GrundFolgebehandlung" />
       <short value="Optional Extensions Element" />
@@ -4741,12 +4391,6 @@
       </mapping>
     </element>
     <element id="Encounter.hospitalization.admitSource.coding">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.hospitalization.admitSource.coding" />
       <short value="Code defined by a terminology system" />
       <definition value="A reference to a code defined by a terminology system." />
@@ -4831,12 +4475,6 @@
       </mapping>
     </element>
     <element id="Encounter.hospitalization.admitSource.coding.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.hospitalization.admitSource.coding.extension" />
       <slicing>
         <discriminator>
@@ -5156,12 +4794,6 @@
       </mapping>
     </element>
     <element id="Encounter.hospitalization.reAdmission">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.hospitalization.reAdmission" />
       <short value="The type of hospital re-admission that has occurred (if any). If the value is absent, then this is not identified as a readmission" />
       <definition value="Whether this hospitalization is a readmission and why if known." />
@@ -5215,12 +4847,6 @@
       </mapping>
     </element>
     <element id="Encounter.hospitalization.dietPreference">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.hospitalization.dietPreference" />
       <short value="Diet preferences reported by the patient" />
       <definition value="Diet preferences reported by the patient." />
@@ -5279,12 +4905,6 @@
       </mapping>
     </element>
     <element id="Encounter.hospitalization.specialCourtesy">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.hospitalization.specialCourtesy" />
       <short value="Special courtesies (VIP, board member)" />
       <definition value="Special courtesies (VIP, board member)." />
@@ -5342,12 +4962,6 @@
       </mapping>
     </element>
     <element id="Encounter.hospitalization.specialArrangement">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.hospitalization.specialArrangement" />
       <short value="Wheelchair, translator, stretcher, etc." />
       <definition value="Any special requests that have been made for this hospitalization encounter, such as the provision of specific equipment or other things." />
@@ -5405,12 +5019,6 @@
       </mapping>
     </element>
     <element id="Encounter.hospitalization.destination">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.hospitalization.destination" />
       <short value="Location/organization to which the patient is discharged" />
       <definition value="Location/organization to which the patient is discharged." />
@@ -5462,12 +5070,6 @@
       </mapping>
     </element>
     <element id="Encounter.hospitalization.dischargeDisposition">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.hospitalization.dischargeDisposition" />
       <short value="Beschreibung des Entlassungs- oder Verlegungsgrunds" />
       <definition value="Beschreibung des Entlassungsgrunds (nach Hause, in andere Rehabilitationsinstitution, etc.)" />
@@ -5549,12 +5151,6 @@
       </mapping>
     </element>
     <element id="Encounter.hospitalization.dischargeDisposition.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.hospitalization.dischargeDisposition.extension" />
       <slicing>
         <discriminator>
@@ -5606,12 +5202,6 @@
       </mapping>
     </element>
     <element id="Encounter.hospitalization.dischargeDisposition.coding">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.hospitalization.dischargeDisposition.coding" />
       <short value="Codes zur Beschreibung von Entlassungsgrund" />
       <definition value="Codes zur Beschreibung von Entlassungsgrund (nach Hause, in andere Rehabilitationsinstitution, etc.)." />
@@ -5696,12 +5286,6 @@
       </mapping>
     </element>
     <element id="Encounter.hospitalization.dischargeDisposition.coding.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.hospitalization.dischargeDisposition.coding.extension" />
       <slicing>
         <discriminator>
@@ -6021,12 +5605,6 @@
       </mapping>
     </element>
     <element id="Encounter.location">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.location" />
       <short value="List of locations where the patient has been" />
       <definition value="List of locations where  the patient has been during this encounter." />
@@ -6083,12 +5661,6 @@
       </mapping>
     </element>
     <element id="Encounter.location.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.location.extension" />
       <slicing>
         <discriminator>
@@ -6140,12 +5712,6 @@
       </mapping>
     </element>
     <element id="Encounter.location.modifierExtension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.location.modifierExtension" />
       <short value="Extensions that cannot be ignored even if unrecognized" />
       <definition value="May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.&#xA;&#xA;Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)." />
@@ -6194,12 +5760,6 @@
       </mapping>
     </element>
     <element id="Encounter.location.location">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.location.location" />
       <short value="Location the encounter takes place" />
       <definition value="The location where the encounter takes place." />
@@ -6299,12 +5859,6 @@
       </mapping>
     </element>
     <element id="Encounter.location.physicalType">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.location.physicalType" />
       <short value="The physical type of the location (usually the level in the location hierachy - bed room ward etc.)" />
       <definition value="This will be used to specify the required levels (bed/ward/room/etc.) desired to be recorded to simplify either messaging or query." />
@@ -6354,12 +5908,6 @@
       </mapping>
     </element>
     <element id="Encounter.location.period">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.location.period" />
       <short value="Time period during which the patient was present at the location" />
       <definition value="Time period during which the patient was present at the location." />
@@ -6409,12 +5957,6 @@
       </mapping>
     </element>
     <element id="Encounter.serviceProvider">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.serviceProvider" />
       <short value="The organization (facility) responsible for this encounter" />
       <definition value="The organization that is primarily responsible for this Encounter's services. This MAY be the same as the organization on the Patient record, however it could be different, such as if the actor performing the services was from an external organization (which may be billed seperately) for an external consultation.  Refer to the example bundle showing an abbreviated set of Encounters for a colonoscopy." />
@@ -6469,12 +6011,6 @@
       </mapping>
     </element>
     <element id="Encounter.partOf">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Encounter.partOf" />
       <short value="Another Encounter this encounter is part of" />
       <definition value="Another Encounter of which this encounter is a part of (administratively or in time)." />
@@ -6487,9 +6023,6 @@
         <max value="1" />
       </base>
       <type>
-        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy">
-          <valueBoolean value="true" />
-        </extension>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Encounter" />
       </type>
