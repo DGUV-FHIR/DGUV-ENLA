@@ -4,6 +4,10 @@
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Bundle/DGUV-ENLA-PR-Bundle" />
     </meta>
+    <identifier> 
+        <system value="urn:ietf:rfc:3986"/> 
+        <value value="urn:uuid:0c3151bd-1cbf-4d64-b04d-cd9187a4c6e0"/> 
+    </identifier>
     <type value="document" />
     <timestamp value="2025-06-10T12:00:00+01:00" />
     <entry>
@@ -22,7 +26,7 @@
                    <coding>
                        <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-Formtexte" />
                        <code value="F 2102" />
-                       <display value="Entlassungsbericht aus stationärer Behandlung (DAV/VAV/SAV)" />
+                       <display value="Entlassungsbericht aus stationärer Behandlung" />
                    </coding>
                </type>
                <subject>
@@ -30,13 +34,19 @@
                </subject>
                <date value="2025-06-10T12:00:00+01:00" />
                <author>
-                   <reference value="Practitioner/180f219f-97a8-486d-99d9-ed631fe4fc59" />
+                   <reference value="Practitioner/0bcaf90a-3c20-4964-b2d5-7753081eeda6" />
                </author>
                <title value="Mein neuer Entlassbericht" />
                <section>
                    <title value="Unfallversicherungstraeger" />
                    <entry>
                        <reference value="Organization/180f219f-97a8-486d-99d9-ed631fe4fc60" />
+                   </entry>
+               </section>
+               <section>
+                   <title value="VersichertenVerhaeltnis" />
+                   <entry>
+                       <reference value="Coverage/75c6d854-876e-4b9d-8ea9-327a46c9c50f" />
                    </entry>
                </section>
             </Composition>    
@@ -117,10 +127,10 @@
      </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/ENLA/Practitioner/180f219f-97a8-486d-99d9-ed631fe4fc59" />
+        <fullUrl value="http://fhir.dguv.de/Practitioner/0bcaf90a-3c20-4964-b2d5-7753081eeda6" />
         <resource>
             <Practitioner xmlns="http://hl7.org/fhir">
-                <id value="180f219f-97a8-486d-99d9-ed631fe4fc59" />
+                <id value="0bcaf90a-3c20-4964-b2d5-7753081eeda6" />
                 <meta>
                     <profile value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringer"/> 
                 </meta>
@@ -153,8 +163,8 @@
         </resource>
     </entry>
     <entry>
-        <resource>
-            <fullUrl value="http://fhir.dguv.de/ENLA/Organization/180f219f-97a8-486d-99d9-ed631fe4fc60" />
+        <fullUrl value="http://fhir.dguv.de/Organization/180f219f-97a8-486d-99d9-ed631fe4fc60" />
+        <resource>            
             <Organization xmlns="http://hl7.org/fhir">
                 <id value="180f219f-97a8-486d-99d9-ed631fe4fc60" />
                 <meta>
