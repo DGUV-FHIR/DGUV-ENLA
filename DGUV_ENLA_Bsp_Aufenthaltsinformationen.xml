@@ -28,8 +28,8 @@
         <dischargeDisposition>
             <coding>
                 <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-EntlassungsVerlegungsgrund" />
-                <code value="01" />
-                <display value="Behandlung regulär beendet" />
+                <code value="03" />
+                <display value="Behandlung aus sonstigen Gründen beendet" />
             </coding>
         </dischargeDisposition>
     </hospitalization>
