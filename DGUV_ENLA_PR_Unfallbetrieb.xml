@@ -852,7 +852,7 @@
     </element>
     <element id="Organization.telecom.value">
       <path value="Organization.telecom.value" />
-      <short value="The actual contact point details" />
+      <short value="Konkrete Kontaktdaten" />
       <definition value="The actual contact point details, in a form that is meaningful to the designated communication system (i.e. phone number or email address)." />
       <comment value="Additional text data such as phone extension numbers, or notes about use of the contact are sometimes included in the value." />
       <requirements value="Need to support legacy numbers that are not in a tightly controlled format." />
@@ -1048,7 +1048,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <short value="An address for the organization" />
+      <short value="Adresse des Unfallbetriebes" />
       <definition value="An address for the organization." />
       <comment value="Organization may have multiple addresses with different uses or applicable periods. The use code 'home' is not to be used." />
       <requirements value="May need to keep track of the organization's addresses for contacting, billing or reporting requirements." />
@@ -1938,7 +1938,7 @@
     </element>
     <element id="Organization.address:Strassenanschrift.line.extension:Strasse.value[x]">
       <path value="Organization.address.line.extension.value[x]" />
-      <short value="Value of extension" />
+      <short value="Konkreter Strassenname" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
       <min value="1" />
       <max value="1" />
@@ -2120,7 +2120,7 @@
     </element>
     <element id="Organization.address:Strassenanschrift.line.extension:Hausnummer.value[x]">
       <path value="Organization.address.line.extension.value[x]" />
-      <short value="Value of extension" />
+      <short value="Konkrete Hausnummer" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
       <min value="1" />
       <max value="1" />
@@ -2302,7 +2302,7 @@
     </element>
     <element id="Organization.address:Strassenanschrift.line.extension:Adresszusatz.value[x]">
       <path value="Organization.address.line.extension.value[x]" />
-      <short value="Value of extension" />
+      <short value="Konkreter Adresszusatz" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
       <min value="1" />
       <max value="1" />
@@ -2538,7 +2538,7 @@
     </element>
     <element id="Organization.address:Strassenanschrift.city">
       <path value="Organization.address.city" />
-      <short value="Name of city, town etc." />
+      <short value="Name der Stadt" />
       <definition value="The name of the city, town, suburb, village or other community or delivery center." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <alias value="Municpality" />
@@ -3396,8 +3396,8 @@
       <short value="Straßenname mit Hausnummer oder Postfach sowie weitere Angaben zur Zustellung" />
       <definition value="Diese Komponente kann Straßennamen, Hausnummer, Appartmentnummer, Postfach, c/o sowie weitere Zustellungshinweise enthalten. Die Informationen können in mehrere line-Komponenten aufgeteilt werden.&#xD;&#xA;Bei Verwendung der Extensions, um Straße, Hausnnummer und Postleitzahl strukturiert zu übermitteln, müssen diese Informationen stets vollständig auch in der line-Komponente, die sie erweitern, enthalten sein, um es Systemen, die diese Extensions nicht verwenden zu ermöglichen, auf diese Informationen zugreifen zu können." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
-      <min value="0" />
-      <max value="3" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="Address.line" />
         <min value="0" />
@@ -3431,6 +3431,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -3491,8 +3492,8 @@
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="0" />
-      <max value="*" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -3518,6 +3519,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -4075,7 +4077,7 @@
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Element.extension" />
@@ -4103,6 +4105,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -4217,7 +4220,7 @@
     </element>
     <element id="Organization.address:Postfach.line.extension:Postfach.value[x]">
       <path value="Organization.address.line.extension.value[x]" />
-      <short value="Value of extension" />
+      <short value="Konkrete Postfachbezeichnung" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
       <min value="1" />
       <max value="1" />
@@ -4238,6 +4241,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -4272,11 +4276,11 @@
     </element>
     <element id="Organization.address:Postfach.city">
       <path value="Organization.address.city" />
-      <short value="Name of city, town etc." />
+      <short value="Name der Stadt" />
       <definition value="The name of the city, town, suburb, village or other community or delivery center." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <alias value="Municpality" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Address.city" />
@@ -4299,6 +4303,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -4422,7 +4427,7 @@
       <definition value="Postleitzahl gemäß der im jeweiligen Land gültigen Konventionen" />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <alias value="Zip" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Address.postalCode" />
@@ -4445,6 +4450,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -4491,6 +4497,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <binding>
         <strength value="preferred" />
@@ -5471,10 +5478,12 @@
     </element>
     <element id="Organization.telecom.value">
       <path value="Organization.telecom.value" />
+      <short value="Konkrete Kontaktdaten" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.address">
       <path value="Organization.address" />
+      <short value="Adresse des Unfallbetriebes" />
       <max value="2" />
       <mustSupport value="true" />
     </element>
@@ -5509,6 +5518,7 @@
     </element>
     <element id="Organization.address:Strassenanschrift.line.extension:Strasse.value[x]">
       <path value="Organization.address.line.extension.value[x]" />
+      <short value="Konkreter Strassenname" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.address:Strassenanschrift.line.extension:Hausnummer">
@@ -5519,6 +5529,7 @@
     </element>
     <element id="Organization.address:Strassenanschrift.line.extension:Hausnummer.value[x]">
       <path value="Organization.address.line.extension.value[x]" />
+      <short value="Konkrete Hausnummer" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.address:Strassenanschrift.line.extension:Adresszusatz">
@@ -5528,10 +5539,12 @@
     </element>
     <element id="Organization.address:Strassenanschrift.line.extension:Adresszusatz.value[x]">
       <path value="Organization.address.line.extension.value[x]" />
+      <short value="Konkreter Adresszusatz" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.address:Strassenanschrift.city">
       <path value="Organization.address.city" />
+      <short value="Name der Stadt" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -5552,6 +5565,44 @@
     </element>
     <element id="Organization.address:Postfach.type">
       <path value="Organization.address.type" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Postfach.line">
+      <path value="Organization.address.line" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Postfach.line.extension">
+      <path value="Organization.address.line.extension" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Postfach.line.extension:Postfach">
+      <path value="Organization.address.line.extension" />
+      <sliceName value="Postfach" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Postfach.line.extension:Postfach.value[x]">
+      <path value="Organization.address.line.extension.value[x]" />
+      <short value="Konkrete Postfachbezeichnung" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Postfach.city">
+      <path value="Organization.address.city" />
+      <short value="Name der Stadt" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Postfach.postalCode">
+      <path value="Organization.address.postalCode" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Postfach.country">
+      <path value="Organization.address.country" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.contact">

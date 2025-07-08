@@ -2547,7 +2547,7 @@
       <comment value="Basis-Profil wird beim Typ nicht durch ein ENLA-Profil ersetzt, da es sich hier nur um ein erweitertes Attribut handelt." />
       <requirements value="Human contact for the organization." />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <base>
         <path value="Organization.telecom" />
         <min value="0" />
@@ -2937,7 +2937,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <short value="An address for the organization" />
+      <short value="Adresse der Krankenkasse" />
       <definition value="An address for the organization." />
       <comment value="Organization may have multiple addresses with different uses or applicable periods. The use code 'home' is not to be used." />
       <requirements value="May need to keep track of the organization's addresses for contacting, billing or reporting requirements." />
@@ -3827,7 +3827,7 @@
     </element>
     <element id="Organization.address:Strassenanschrift.line.extension:Strasse.value[x]">
       <path value="Organization.address.line.extension.value[x]" />
-      <short value="Value of extension" />
+      <short value="Konkreter Strassenname" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
       <min value="1" />
       <max value="1" />
@@ -4009,7 +4009,7 @@
     </element>
     <element id="Organization.address:Strassenanschrift.line.extension:Hausnummer.value[x]">
       <path value="Organization.address.line.extension.value[x]" />
-      <short value="Value of extension" />
+      <short value="Konkrete Hausnummer" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
       <min value="1" />
       <max value="1" />
@@ -4191,7 +4191,7 @@
     </element>
     <element id="Organization.address:Strassenanschrift.line.extension:Adresszusatz.value[x]">
       <path value="Organization.address.line.extension.value[x]" />
-      <short value="Value of extension" />
+      <short value="Konkreter Adresszusatz" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
       <min value="1" />
       <max value="1" />
@@ -6109,7 +6109,7 @@
     </element>
     <element id="Organization.address:Postfach.line.extension:Postfach.value[x]">
       <path value="Organization.address.line.extension.value[x]" />
-      <short value="Value of extension" />
+      <short value="Konkrete Postfachbezeichnung" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
       <min value="1" />
       <max value="1" />
@@ -7081,7 +7081,6 @@
     <element id="Organization.telecom">
       <path value="Organization.telecom" />
       <comment value="Basis-Profil wird beim Typ nicht durch ein ENLA-Profil ersetzt, da es sich hier nur um ein erweitertes Attribut handelt." />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.telecom.system">
@@ -7095,6 +7094,7 @@
     </element>
     <element id="Organization.address">
       <path value="Organization.address" />
+      <short value="Adresse der Krankenkasse" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
@@ -7128,6 +7128,7 @@
     </element>
     <element id="Organization.address:Strassenanschrift.line.extension:Strasse.value[x]">
       <path value="Organization.address.line.extension.value[x]" />
+      <short value="Konkreter Strassenname" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.address:Strassenanschrift.line.extension:Hausnummer">
@@ -7138,6 +7139,7 @@
     </element>
     <element id="Organization.address:Strassenanschrift.line.extension:Hausnummer.value[x]">
       <path value="Organization.address.line.extension.value[x]" />
+      <short value="Konkrete Hausnummer" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.address:Strassenanschrift.line.extension:Adresszusatz">
@@ -7147,6 +7149,7 @@
     </element>
     <element id="Organization.address:Strassenanschrift.line.extension:Adresszusatz.value[x]">
       <path value="Organization.address.line.extension.value[x]" />
+      <short value="Konkreter Adresszusatz" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.address:Strassenanschrift.city">
@@ -7194,6 +7197,7 @@
     </element>
     <element id="Organization.address:Postfach.line.extension:Postfach.value[x]">
       <path value="Organization.address.line.extension.value[x]" />
+      <short value="Konkrete Postfachbezeichnung" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.address:Postfach.city">
