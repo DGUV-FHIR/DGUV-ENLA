@@ -575,7 +575,7 @@
     <element id="Organization.name">
       <path value="Organization.name" />
       <short value="Name des Unfallbetriebs" />
-      <definition value="Name des Unfallbetriebs, Arbeitgebers, der Kita, der (Hoch-)Schule der pflegebedürftigen Person" />
+      <definition value="Name des Unfallbetriebs, Arbeitgebers, der Kita, der (Hoch-)Schule, - bei Pflegeunfall - der pflegebedürftigen Person" />
       <comment value="If the name of an organization changes, consider putting the old name in the alias column so that it can still be located through searches." />
       <requirements value="Need to use the name as the label of the organization." />
       <min value="1" />
@@ -5464,7 +5464,7 @@
     <element id="Organization.name">
       <path value="Organization.name" />
       <short value="Name des Unfallbetriebs" />
-      <definition value="Name des Unfallbetriebs, Arbeitgebers, der Kita, der (Hoch-)Schule der pflegebedürftigen Person" />
+      <definition value="Name des Unfallbetriebs, Arbeitgebers, der Kita, der (Hoch-)Schule, - bei Pflegeunfall - der pflegebedürftigen Person" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.telecom">
