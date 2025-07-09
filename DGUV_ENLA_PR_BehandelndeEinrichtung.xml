@@ -405,7 +405,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <short value="Identifikator für die behandelnde Organisation" />
+      <short value="Identifikator für die behandelnde Einrichtung" />
       <definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems." />
       <comment value="Alle Identifier im Profil “DGUV_ENLA_PR_BehandelndeEinrichtung” sind nur optional, da auf dieses Profil nur aus der Organisation von “DGUV_ENLA_PR_AnsprechpartnerFuerRueckfragen“ heraus referenziert wird und diese für die Rechnungsstellung irrelevant ist." />
       <requirements value="Organizations are known by a variety of ids. Some institutions maintain several, and most collect identifiers for exchange with other organizations concerning the organization." />
@@ -14142,7 +14142,7 @@
     </element>
     <element id="Organization.identifier">
       <path value="Organization.identifier" />
-      <short value="Identifikator für die behandelnde Organisation" />
+      <short value="Identifikator für die behandelnde Einrichtung" />
       <comment value="Alle Identifier im Profil “DGUV_ENLA_PR_BehandelndeEinrichtung” sind nur optional, da auf dieses Profil nur aus der Organisation von “DGUV_ENLA_PR_AnsprechpartnerFuerRueckfragen“ heraus referenziert wird und diese für die Rechnungsstellung irrelevant ist." />
       <max value="6" />
       <mustSupport value="true" />
