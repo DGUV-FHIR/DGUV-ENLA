@@ -18,19 +18,7 @@
   <compose>
     <include>
       <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-MassnahmenZeitpunkt" />
-      <version value="1.0.0" />
-      <concept>
-        <code value="Direkt" />
-        <display value="Direkt im Anschluss" />
-      </concept>
-      <concept>
-        <code value="Festzul" />
-        <display value="Durch Weiterbehandler festzulegen" />
-      </concept>
-      <concept>
-        <code value="Azpkt" />
-        <display value="Anderer Zeitpunkt" />
-      </concept>
+      <version value="0.0.2" />
     </include>
   </compose>
 </ValueSet>
