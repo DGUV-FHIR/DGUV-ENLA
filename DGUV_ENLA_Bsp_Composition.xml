@@ -22,12 +22,19 @@
    <author>
        <reference value="Ersteller Entlassbericht/4324321" />
    </author>
-   <title value="Mein neuer Entlassbericht" />
+   <title value="Entlassungsbericht aus stationärer Behandlung" />
    <section>
        <title value="Unfallversicherungstraeger" />
        <entry>
            <!--reference value="#DGUV-ENLA-Bsp-Unfallversicherungstraeger.xml" /-->
            <reference value="Organization/Unfallversicherungstraeger" />
+       </entry>
+   </section>
+   <section>
+       <title value="Krankenkasse" />
+       <entry>
+           <!--reference value="#DGUV-ENLA-Bsp-Unfallversicherungstraeger.xml" /-->
+           <reference value="Organization/Krankenkasse" />
        </entry>
    </section>
    <section>
