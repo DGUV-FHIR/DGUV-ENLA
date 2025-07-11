@@ -7,6 +7,7 @@
   <title value="Versichertenverhältnis" />
   <status value="draft" />
   <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
+  <description value="Dieses Profil bildet das Verhältnis des Patienten zur Versicherung ab (direkt- oder familienversichert)." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -443,6 +444,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -3157,6 +3159,10 @@
       <short value="Beschreibung des Patientenverhältnisses zur Versicherung" />
       <min value="1" />
       <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.extension:Familienversicherung.extension">
+      <path value="Coverage.extension.extension" />
       <mustSupport value="true" />
     </element>
     <element id="Coverage.extension:Familienversicherung.extension:Familienversichert">
