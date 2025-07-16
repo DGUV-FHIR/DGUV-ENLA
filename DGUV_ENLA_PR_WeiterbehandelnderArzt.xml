@@ -1323,7 +1323,7 @@
     <element id="PractitionerRole.code.coding:RolleInDerEinrichtung">
       <path value="PractitionerRole.code.coding" />
       <sliceName value="RolleInDerEinrichtung" />
-      <short value="Code defined by a terminology system" />
+      <short value="Rolle des weiterbehandelnden Arztes in weiterbehandelnder Organisation" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
@@ -1544,7 +1544,7 @@
     </element>
     <element id="PractitionerRole.code.coding:RolleInDerEinrichtung.code">
       <path value="PractitionerRole.code.coding.code" />
-      <short value="Symbol in syntax defined by the system" />
+      <short value="Konkreter Codefür die Rolle" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to refer to a particular code in the system." />
@@ -1591,7 +1591,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="PractitionerRole.code.coding.display" />
-      <short value="Representation defined by the system" />
+      <short value="Konkrete Bezeichnung der Rolle" />
       <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
@@ -1925,7 +1925,7 @@
     <element id="PractitionerRole.specialty.coding:KBV-Fachgruppe">
       <path value="PractitionerRole.specialty.coding" />
       <sliceName value="KBV-Fachgruppe" />
-      <short value="Code defined by a terminology system" />
+      <short value="KBV-Fachgruppe des weiterbehandelnden Arztes" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
@@ -2146,7 +2146,7 @@
     </element>
     <element id="PractitionerRole.specialty.coding:KBV-Fachgruppe.code">
       <path value="PractitionerRole.specialty.coding.code" />
-      <short value="Symbol in syntax defined by the system" />
+      <short value="Konkreter Code für die KBV-Fachgruppe" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to refer to a particular code in the system." />
@@ -2193,7 +2193,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="PractitionerRole.specialty.coding.display" />
-      <short value="Representation defined by the system" />
+      <short value="Konkrete Bezeichnung für die KBV-Fachgruppe" />
       <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
@@ -3449,6 +3449,7 @@
     <element id="PractitionerRole.code.coding:RolleInDerEinrichtung">
       <path value="PractitionerRole.code.coding" />
       <sliceName value="RolleInDerEinrichtung" />
+      <short value="Rolle des weiterbehandelnden Arztes in weiterbehandelnder Organisation" />
       <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.code.coding:RolleInDerEinrichtung.system">
@@ -3461,10 +3462,12 @@
     </element>
     <element id="PractitionerRole.code.coding:RolleInDerEinrichtung.code">
       <path value="PractitionerRole.code.coding.code" />
+      <short value="Konkreter Codefür die Rolle" />
       <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.code.coding:RolleInDerEinrichtung.display">
       <path value="PractitionerRole.code.coding.display" />
+      <short value="Konkrete Bezeichnung der Rolle" />
       <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.specialty">
@@ -3478,6 +3481,7 @@
     <element id="PractitionerRole.specialty.coding:KBV-Fachgruppe">
       <path value="PractitionerRole.specialty.coding" />
       <sliceName value="KBV-Fachgruppe" />
+      <short value="KBV-Fachgruppe des weiterbehandelnden Arztes" />
       <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.specialty.coding:KBV-Fachgruppe.version">
@@ -3486,10 +3490,12 @@
     </element>
     <element id="PractitionerRole.specialty.coding:KBV-Fachgruppe.code">
       <path value="PractitionerRole.specialty.coding.code" />
+      <short value="Konkreter Code für die KBV-Fachgruppe" />
       <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.specialty.coding:KBV-Fachgruppe.display">
       <path value="PractitionerRole.specialty.coding.display" />
+      <short value="Konkrete Bezeichnung für die KBV-Fachgruppe" />
       <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.telecom">
