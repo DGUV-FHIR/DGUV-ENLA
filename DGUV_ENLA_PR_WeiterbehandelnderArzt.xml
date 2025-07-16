@@ -555,7 +555,7 @@
     </element>
     <element id="PractitionerRole.practitioner">
       <path value="PractitionerRole.practitioner" />
-      <short value="Practitioner that is able to provide the defined services for the organization" />
+      <short value="Profiltyp für referenzierten weiterbehandelnden Arzt" />
       <definition value="Practitioner that is able to provide the defined services for the organization." />
       <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository." />
       <min value="1" />
@@ -677,7 +677,7 @@
     </element>
     <element id="PractitionerRole.practitioner.reference">
       <path value="PractitionerRole.practitioner.reference" />
-      <short value="Literal reference, Relative, internal or absolute URL" />
+      <short value="Referenz auf konkreten weiterbehandelnden Arzt" />
       <definition value="A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources." />
       <comment value="Using absolute URLs provides a stable scalable approach suitable for a cloud/web context, while using relative/logical references provides a flexible approach suitable for use when trading across closed eco-system boundaries.   Absolute URLs do not need to point to a FHIR RESTful server, though this is the preferred approach. If the URL conforms to the structure &quot;/[type]/[id]&quot; then it should be assumed that the reference is to a FHIR RESTful server." />
       <min value="1" />
@@ -838,7 +838,7 @@
     </element>
     <element id="PractitionerRole.organization">
       <path value="PractitionerRole.organization" />
-      <short value="Organization where the roles are available" />
+      <short value="Profiltyp referenzierter weiterbehandelnder Organisation" />
       <definition value="The organization where the Practitioner performs the roles associated." />
       <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository." />
       <min value="1" />
@@ -960,7 +960,7 @@
     </element>
     <element id="PractitionerRole.organization.reference">
       <path value="PractitionerRole.organization.reference" />
-      <short value="Literal reference, Relative, internal or absolute URL" />
+      <short value="Referenz auf konkrete weiterbehandelnde Organisation" />
       <definition value="A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources." />
       <comment value="Using absolute URLs provides a stable scalable approach suitable for a cloud/web context, while using relative/logical references provides a flexible approach suitable for use when trading across closed eco-system boundaries.   Absolute URLs do not need to point to a FHIR RESTful server, though this is the preferred approach. If the URL conforms to the structure &quot;/[type]/[id]&quot; then it should be assumed that the reference is to a FHIR RESTful server." />
       <min value="1" />
@@ -2613,7 +2613,7 @@
     </element>
     <element id="PractitionerRole.telecom.value">
       <path value="PractitionerRole.telecom.value" />
-      <short value="The actual contact point details" />
+      <short value="Konkrete Kontaktdaten" />
       <definition value="The actual contact point details, in a form that is meaningful to the designated communication system (i.e. phone number or email address)." />
       <comment value="Additional text data such as phone extension numbers, or notes about use of the contact are sometimes included in the value." />
       <requirements value="Need to support legacy numbers that are not in a tightly controlled format." />
@@ -3410,6 +3410,7 @@
     </element>
     <element id="PractitionerRole.practitioner">
       <path value="PractitionerRole.practitioner" />
+      <short value="Profiltyp für referenzierten weiterbehandelnden Arzt" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringer" />
@@ -3418,11 +3419,13 @@
     </element>
     <element id="PractitionerRole.practitioner.reference">
       <path value="PractitionerRole.practitioner.reference" />
+      <short value="Referenz auf konkreten weiterbehandelnden Arzt" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.organization">
       <path value="PractitionerRole.organization" />
+      <short value="Profiltyp referenzierter weiterbehandelnder Organisation" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-WeiterbehandelndeOrganisation" />
@@ -3431,6 +3434,7 @@
     </element>
     <element id="PractitionerRole.organization.reference">
       <path value="PractitionerRole.organization.reference" />
+      <short value="Referenz auf konkrete weiterbehandelnde Organisation" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -3498,6 +3502,7 @@
     </element>
     <element id="PractitionerRole.telecom.value">
       <path value="PractitionerRole.telecom.value" />
+      <short value="Konkrete Kontaktdaten" />
       <mustSupport value="true" />
     </element>
   </differential>
