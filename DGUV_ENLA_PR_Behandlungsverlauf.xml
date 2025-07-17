@@ -446,7 +446,7 @@
       <alias value="extensions" />
       <alias value="user content" />
       <min value="0" />
-      <max value="0" />
+      <max value="*" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -509,7 +509,7 @@
     <element id="Observation.extension:BesonderheitenBehandlungsverlauf.value[x]">
       <path value="Observation.extension.value[x]" />
       <short value="Besonderheiten im Behandlungsverlauf" />
-      <definition value="Besonderheiten im Verhandlungsverlauf umfassen beispielsweise Komplikationen oder psychische Gesundheitsbeeinträchtigungen." />
+      <definition value="Besonderheiten im Behandlungsverlauf umfassen beispielsweise Komplikationen oder psychische Gesundheitsbeeinträchtigungen." />
       <min value="1" />
       <max value="1" />
       <base>
@@ -900,7 +900,7 @@
     </element>
     <element id="Observation.code">
       <path value="Observation.code" />
-      <short value="ENLA-Teilberichtsinhalt" />
+      <short value="Kennzeichnung des ENLA-Teilberichtsinhalts" />
       <definition value="Describes what was observed. Sometimes this is called the observation &quot;name&quot;." />
       <comment value="*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation." />
       <requirements value="Knowing what kind of observation is being made is essential to understanding the observation." />
@@ -1268,7 +1268,7 @@
     </element>
     <element id="Observation.code.coding.code">
       <path value="Observation.code.coding.code" />
-      <short value="Symbol in syntax defined by the system" />
+      <short value="Konkretes Kürzel für ENLA-Teilberichtsinhalt" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to refer to a particular code in the system." />
@@ -1316,7 +1316,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Observation.code.coding.display" />
-      <short value="Representation defined by the system" />
+      <short value="Konkrete Bezeichnung für ENLA-Teilberichtsinhalt" />
       <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
@@ -1450,7 +1450,7 @@
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
-      <short value="Who and/or what the observation is about" />
+      <short value="Verweis auf betroffene versicherte Person" />
       <definition value="The patient, or group of patients, location, or device this observation is about and into whose record the observation is placed. If the actual focus of the observation is different from the subject (or a sample of, part, or region of the subject), the `focus` element or the `code` itself specifies the actual focus of the observation." />
       <comment value="One would expect this element to be a cardinality of 1..1. The only circumstance in which the subject can be missing is when the observation is made by a device that does not know the patient. In this case, the observation SHALL be matched to a patient through some context/channel matching technique, and at this point, the observation should be updated." />
       <requirements value="Observations have no value if you don't know who or what they're about." />
@@ -1589,7 +1589,7 @@
     </element>
     <element id="Observation.subject.reference">
       <path value="Observation.subject.reference" />
-      <short value="Literal reference, Relative, internal or absolute URL" />
+      <short value="Konkreter Verweis auf versicherte Person" />
       <definition value="A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources." />
       <comment value="Using absolute URLs provides a stable scalable approach suitable for a cloud/web context, while using relative/logical references provides a flexible approach suitable for use when trading across closed eco-system boundaries.   Absolute URLs do not need to point to a FHIR RESTful server, though this is the preferred approach. If the URL conforms to the structure &quot;/[type]/[id]&quot; then it should be assumed that the reference is to a FHIR RESTful server." />
       <min value="1" />
@@ -2035,7 +2035,7 @@
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
       <short value="Beschreibung Behandlungsverlauf" />
-      <definition value="Freitext zum Behandlungsverlauf während stationärer Behandlung." />
+      <definition value="Freitext zum Behandlungsverlauf während stationärer Behandlung" />
       <comment value="An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below." />
       <requirements value="An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations." />
       <min value="1" />
@@ -3749,7 +3749,7 @@
     </element>
     <element id="Observation.derivedFrom.reference">
       <path value="Observation.derivedFrom.reference" />
-      <short value="Literal reference, Relative, internal or absolute URL" />
+      <short value="Konkreter Verweis auf OP-Bericht" />
       <definition value="A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources." />
       <comment value="Using absolute URLs provides a stable scalable approach suitable for a cloud/web context, while using relative/logical references provides a flexible approach suitable for use when trading across closed eco-system boundaries.   Absolute URLs do not need to point to a FHIR RESTful server, though this is the preferred approach. If the URL conforms to the structure &quot;/[type]/[id]&quot; then it should be assumed that the reference is to a FHIR RESTful server." />
       <min value="1" />
@@ -4386,6 +4386,7 @@
     </element>
     <element id="Observation.extension:BesonderheitenBehandlungsverlauf.value[x]">
       <path value="Observation.extension.value[x]" />
+      <definition value="Besonderheiten im Behandlungsverlauf umfassen beispielsweise Komplikationen oder psychische Gesundheitsbeeinträchtigungen." />
       <mustSupport value="true" />
     </element>
     <element id="Observation.status">
@@ -4395,7 +4396,7 @@
     </element>
     <element id="Observation.code">
       <path value="Observation.code" />
-      <short value="ENLA-Teilberichtsinhalt" />
+      <short value="Kennzeichnung des ENLA-Teilberichtsinhalts" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.code.coding">
@@ -4413,18 +4414,21 @@
     </element>
     <element id="Observation.code.coding.code">
       <path value="Observation.code.coding.code" />
+      <short value="Konkretes Kürzel für ENLA-Teilberichtsinhalt" />
       <min value="1" />
       <fixedCode value="BV" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.code.coding.display">
       <path value="Observation.code.coding.display" />
+      <short value="Konkrete Bezeichnung für ENLA-Teilberichtsinhalt" />
       <min value="1" />
       <fixedString value="Behandlungsverlauf" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
+      <short value="Verweis auf betroffene versicherte Person" />
       <min value="1" />
       <type>
         <code value="Reference" />
@@ -4434,13 +4438,14 @@
     </element>
     <element id="Observation.subject.reference">
       <path value="Observation.subject.reference" />
+      <short value="Konkreter Verweis auf versicherte Person" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
       <short value="Beschreibung Behandlungsverlauf" />
-      <definition value="Freitext zum Behandlungsverlauf während stationärer Behandlung." />
+      <definition value="Freitext zum Behandlungsverlauf während stationärer Behandlung" />
       <min value="1" />
       <type>
         <code value="string" />
@@ -4459,6 +4464,7 @@
     </element>
     <element id="Observation.derivedFrom.reference">
       <path value="Observation.derivedFrom.reference" />
+      <short value="Konkreter Verweis auf OP-Bericht" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
