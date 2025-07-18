@@ -7,7 +7,7 @@
   <title value="Aufnahmebefunde" />
   <status value="draft" />
   <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
-  <description value="Dieses Profil bildet Aufnahmebefunde ab." />
+  <description value="Dieses Profil bildet Aufnahmebefunde ab und enthält Messwerte und einfache Aussagen über einen Patienten, ein Gerät oder einen anderen Gegenstand." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -601,7 +601,7 @@
       <path value="Observation.status" />
       <short value="registered | preliminary | final | amended +" />
       <definition value="The status of the result value." />
-      <comment value="This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid." />
+      <comment value="Fixed value = “final”, weil ein Entlassungsbericht (ENLA) nach seiner Erstellung nicht mehr geändert wird." />
       <requirements value="Need to track the status of individual results. Some results are finalized before the whole report is finalized." />
       <min value="1" />
       <max value="1" />
@@ -663,7 +663,7 @@
     <element id="Observation.category">
       <path value="Observation.category" />
       <short value="Klassifikation des Befundtyps" />
-      <definition value="A code that classifies the general type of observation being made." />
+      <definition value="Code, der den generellen Typ des Befunds klassifiziert (z.B. Vitalparameter, Röntgenbefunde)" />
       <comment value="In addition to the required category valueset, this element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used at once.  The level of granularity is defined by the category concepts in the value set." />
       <requirements value="Used for filtering what observations are retrieved and displayed." />
       <min value="1" />
@@ -929,8 +929,8 @@
     </element>
     <element id="Observation.category.coding.system">
       <path value="Observation.category.coding.system" />
-      <short value="Klassifikation des Befundtyps" />
-      <definition value="Ein Code, der den generellen Typ des Befunds klassifiziert (z.B. Vitalparameter, Röntgenbefunde)." />
+      <short value="CodeSystem für die Klassifikation des Befundtyps" />
+      <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
       <comment value="The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously." />
       <requirements value="Need to be unambiguous about the source of the definition of the symbol." />
       <min value="1" />
@@ -1016,7 +1016,7 @@
     </element>
     <element id="Observation.category.coding.code">
       <path value="Observation.category.coding.code" />
-      <short value="Symbol in syntax defined by the system" />
+      <short value="Kürzel für konkrete Befundkategorie" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to refer to a particular code in the system." />
@@ -1063,7 +1063,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Observation.category.coding.display" />
-      <short value="Representation defined by the system" />
+      <short value="Bezeichnung für konkrete Befundkategorie" />
       <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
@@ -1196,7 +1196,7 @@
     </element>
     <element id="Observation.code">
       <path value="Observation.code" />
-      <short value="ENLA-Teilberichtsinhalt" />
+      <short value="Kennzeichnung des ENLA-Teilberichtsinhalts" />
       <definition value="Describes what was observed. Sometimes this is called the observation &quot;name&quot;." />
       <comment value="*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation." />
       <requirements value="Knowing what kind of observation is being made is essential to understanding the observation." />
@@ -1564,7 +1564,7 @@
     </element>
     <element id="Observation.code.coding.code">
       <path value="Observation.code.coding.code" />
-      <short value="Symbol in syntax defined by the system" />
+      <short value="Konkretes Kürzel für ENLA-Teilberichtsinhalt" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to refer to a particular code in the system." />
@@ -1612,7 +1612,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Observation.code.coding.display" />
-      <short value="Representation defined by the system" />
+      <short value="Konkrete Bezeichnung für ENLA-Teilberichtsinhalt" />
       <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
@@ -1746,7 +1746,7 @@
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
-      <short value="Who and/or what the observation is about" />
+      <short value="Verweis auf betroffene versicherte Person" />
       <definition value="The patient, or group of patients, location, or device this observation is about and into whose record the observation is placed. If the actual focus of the observation is different from the subject (or a sample of, part, or region of the subject), the `focus` element or the `code` itself specifies the actual focus of the observation." />
       <comment value="One would expect this element to be a cardinality of 1..1. The only circumstance in which the subject can be missing is when the observation is made by a device that does not know the patient. In this case, the observation SHALL be matched to a patient through some context/channel matching technique, and at this point, the observation should be updated." />
       <requirements value="Observations have no value if you don't know who or what they're about." />
@@ -1885,7 +1885,7 @@
     </element>
     <element id="Observation.subject.reference">
       <path value="Observation.subject.reference" />
-      <short value="Literal reference, Relative, internal or absolute URL" />
+      <short value="Konkreter Verweis auf versicherte Person" />
       <definition value="A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources." />
       <comment value="Using absolute URLs provides a stable scalable approach suitable for a cloud/web context, while using relative/logical references provides a flexible approach suitable for use when trading across closed eco-system boundaries.   Absolute URLs do not need to point to a FHIR RESTful server, though this is the preferred approach. If the URL conforms to the structure &quot;/[type]/[id]&quot; then it should be assumed that the reference is to a FHIR RESTful server." />
       <min value="1" />
@@ -2330,8 +2330,8 @@
     </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
-      <short value="Befundergebnis Narrativ" />
-      <definition value="Die Befundergebnisse des jeweiligen Befundes (z.B. Laborwerte oder Röntgenbefund)." />
+      <short value="Befund Narrativ" />
+      <definition value="Inhalt des jeweiligen Befundes (z.B. Laborwerte oder Röntgenbefund) als Freitext" />
       <comment value="An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below." />
       <requirements value="An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations." />
       <min value="1" />
@@ -3919,7 +3919,7 @@
     </element>
     <element id="Observation.derivedFrom">
       <path value="Observation.derivedFrom" />
-      <short value="Related measurements the observation is made from" />
+      <short value="Verweis auf dem Befund zugehörige Dokumente" />
       <definition value="The target resource that represents a measurement from which this observation value is derived. For example, a calculated anion gap or a fetal measurement based on an ultrasound image." />
       <comment value="All the reference choices that are listed in this element can represent clinical observations and other measurements that may be the source for a derived value.  The most common reference will be another Observation.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below." />
       <min value="0" />
@@ -4045,7 +4045,7 @@
     </element>
     <element id="Observation.derivedFrom.reference">
       <path value="Observation.derivedFrom.reference" />
-      <short value="Literal reference, Relative, internal or absolute URL" />
+      <short value="Konkreter Verweis auf zugehöriges Dokument" />
       <definition value="A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources." />
       <comment value="Using absolute URLs provides a stable scalable approach suitable for a cloud/web context, while using relative/logical references provides a flexible approach suitable for use when trading across closed eco-system boundaries.   Absolute URLs do not need to point to a FHIR RESTful server, though this is the preferred approach. If the URL conforms to the structure &quot;/[type]/[id]&quot; then it should be assumed that the reference is to a FHIR RESTful server." />
       <min value="1" />
@@ -4666,12 +4666,14 @@
     </element>
     <element id="Observation.status">
       <path value="Observation.status" />
+      <comment value="Fixed value = “final”, weil ein Entlassungsbericht (ENLA) nach seiner Erstellung nicht mehr geändert wird." />
       <fixedCode value="final" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.category">
       <path value="Observation.category" />
       <short value="Klassifikation des Befundtyps" />
+      <definition value="Code, der den generellen Typ des Befunds klassifiziert (z.B. Vitalparameter, Röntgenbefunde)" />
       <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
@@ -4688,25 +4690,26 @@
     </element>
     <element id="Observation.category.coding.system">
       <path value="Observation.category.coding.system" />
-      <short value="Klassifikation des Befundtyps" />
-      <definition value="Ein Code, der den generellen Typ des Befunds klassifiziert (z.B. Vitalparameter, Röntgenbefunde)." />
+      <short value="CodeSystem für die Klassifikation des Befundtyps" />
       <min value="1" />
       <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-BefundKategorie" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.category.coding.code">
       <path value="Observation.category.coding.code" />
+      <short value="Kürzel für konkrete Befundkategorie" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.category.coding.display">
       <path value="Observation.category.coding.display" />
+      <short value="Bezeichnung für konkrete Befundkategorie" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.code">
       <path value="Observation.code" />
-      <short value="ENLA-Teilberichtsinhalt" />
+      <short value="Kennzeichnung des ENLA-Teilberichtsinhalts" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.code.coding">
@@ -4724,18 +4727,21 @@
     </element>
     <element id="Observation.code.coding.code">
       <path value="Observation.code.coding.code" />
+      <short value="Konkretes Kürzel für ENLA-Teilberichtsinhalt" />
       <min value="1" />
       <fixedCode value="Aufnahme" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.code.coding.display">
       <path value="Observation.code.coding.display" />
+      <short value="Konkrete Bezeichnung für ENLA-Teilberichtsinhalt" />
       <min value="1" />
       <fixedString value="Aufnahmebefund" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
+      <short value="Verweis auf betroffene versicherte Person" />
       <min value="1" />
       <type>
         <code value="Reference" />
@@ -4745,13 +4751,14 @@
     </element>
     <element id="Observation.subject.reference">
       <path value="Observation.subject.reference" />
+      <short value="Konkreter Verweis auf versicherte Person" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
-      <short value="Befundergebnis Narrativ" />
-      <definition value="Die Befundergebnisse des jeweiligen Befundes (z.B. Laborwerte oder Röntgenbefund)." />
+      <short value="Befund Narrativ" />
+      <definition value="Inhalt des jeweiligen Befundes (z.B. Laborwerte oder Röntgenbefund) als Freitext" />
       <min value="1" />
       <type>
         <code value="string" />
@@ -4760,6 +4767,7 @@
     </element>
     <element id="Observation.derivedFrom">
       <path value="Observation.derivedFrom" />
+      <short value="Verweis auf dem Befund zugehörige Dokumente" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://fhir.dguv.de/ENLA/DocumentReference/DGUV-ENLA-PR-DokumentenReferenz" />
@@ -4768,6 +4776,7 @@
     </element>
     <element id="Observation.derivedFrom.reference">
       <path value="Observation.derivedFrom.reference" />
+      <short value="Konkreter Verweis auf zugehöriges Dokument" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
