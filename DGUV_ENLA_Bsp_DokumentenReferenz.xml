@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Author: 
+    Datum:  
+
+    Die vorliegende Beispiel Datei .... dient der Validierung 
+    der Datenaufnahme zu dem ......
+    
+    Zu beachten ist dabei ...
+
+    Durchzuführende Massnahmen:
+
+
+-->
 <DocumentReference xmlns="http://hl7.org/fhir">
   <id value="DGUV-ENLA-Bsp-DokumentenReferenz" />
   <meta>
@@ -10,14 +23,15 @@
   </subject>
   <content>
     <attachment> 
-        <contentType value="application/hl7-v3+xml"/> 
-        <language value="en-US"/>
+        <!-- contentType value="application/hl7-v3+xml"/-->
+        <contentType value="application/pdf"/>
+        <language value="de-DE"/>
         <data value="YWRzYWdzYWd2ZnNhdnggMzE0OTMxMGlyaW04NDI3Y29ub3o=" />
         <url value="http://fhir.dguv.de/xds/mhd/Binary/07a6483f-732b-461e-86b6-edb665c45510"/>
-        <size value="35"/> 
-        <hash value="2jmj7l5rSw0yVb/vlWAYkK/YBwk="/> 
-        <title value="Physical"/> 
-        <creation value="2005-12-24T09:35:00+11:00"/> 
+        <!-- size value="35"/ --> 
+        <!-- hash value="2jmj7l5rSw0yVb/vlWAYkK/YBwk="/ --> 
+        <!-- title value="Physical"/ --> 
+        <!-- creation value="2005-12-24T09:35:00+11:00"/ --> 
     </attachment> 
   </content>
 </DocumentReference>

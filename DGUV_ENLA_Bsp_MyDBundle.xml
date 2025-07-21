@@ -14,29 +14,26 @@
 -->
 <Bundle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xmlns="http://hl7.org/fhir">
-    <id value="5d75b64f-a8a1-49b8-8d33-bd16423b3e6e" />
+    <id value="DGUV-ENLA-Bsp-MyBundle" />
     <meta>
-        <profile value="http://fhir.dguv.de/ENLA/Bundle/DGUV-ENLA-PR-Bundle" />
+        <profile value="http://fhir.dguv.de/ENLA/Bundle/DGUV-ENLA-PR-MyBundle" />
     </meta>
      <identifier> 
         <system value="urn:ietf:rfc:3986"/> 
-        <!--value value="urn:uuid:c173535e-135e-48e3-ab64-38bacc68dba8"/-->
-        <value value="http://fhir.dguv.de/ENLA/" />
+        <value value="urn:uuid:0c3151bd-1cbf-4d64-b04d-cd9187a4c6e0"/> 
     </identifier> 
     <type value="document" />
     <timestamp value="2025-06-10T12:00:00+01:00" />
     <entry>
-        <fullUrl value="http://fhir.dguv.de/ENLA/Composition/c00f7826-5a3e-49aa-b499-3f8c6599bd2b" />
+        <fullUrl value="http://test.dguv.de/open/Composition/180f219f-97a8-486d-99d9-ed631fe4fc57" />
         <resource>
             <Composition>
-                <id value="c00f7826-5a3e-49aa-b499-3f8c6599bd2b" />
-                <meta>
-                    <profile value="http://fhir.dguv.de/ENLA/Composition/DGUV-ENLA-PR-Composition|0.0.2" />
-                </meta>
-                <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-SonstigeBemerkungen">
-                    <valueString value="Die sonstige Bemerkung." />
-                </extension>
-                <status value="preliminary" />
+                <id value="180f219f-97a8-486d-99d9-ed631fe4fc57"/>
+                <status value="draft" />
+                <date value="2025-06-10T12:00:00+01:00" />
+                <author>
+                    <reference value="http://test.dguv.de/open/Practitioner/a1" />
+                </author>
                 <type>
                     <coding>
                         <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-Formtexte" />
@@ -45,27 +42,22 @@
                     </coding>
                 </type>
                 <subject>
-                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
-                </subject>
-                <date value="2025-06-10T12:00:00+01:00" />
-                <author>
-                    <reference value="Practitioner/53192032-6365-4659-8cc2-f9a7df67a466" />
-                </author>
-                <title value="Entlassungsbericht aus stationärer Behandlung" />
+                    <reference value="http://test.dguv.de/open/Patient/p1" />
+                </subject>                
                 <section>
                     <title value="Unfallversicherungstraeger" />
                     <entry>
-                        <reference value="Organization/180f219f-97a8-486d-99d9-ed631fe4fc60" />
+                        <reference value="Organization/o1" />                    
                     </entry>
                 </section>
             </Composition>    
         </resource>
     </entry>
     <entry>   
-        <fullUrl value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+        <fullUrl value="http://test.dguv.de/open/Patient/p1" />
         <resource>
             <Patient xmlns="http://hl7.org/fhir">
-                <id value="482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
+                <id value="p1"/>
                 <meta>
                     <profile value="http://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson"/>
                 </meta>   
@@ -135,10 +127,10 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/ENLA/Practitioner/53192032-6365-4659-8cc2-f9a7df67a466" />
+        <fullUrl value="http://test.dguv.de/open/Practitioner/a1" />
         <resource>
             <Practitioner xmlns="http://hl7.org/fhir">
-                <id value="53192032-6365-4659-8cc2-f9a7df67a466" />
+                <id value="a1" />
                 <meta>
                     <profile value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringer"/> 
                 </meta>
@@ -171,10 +163,10 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/ENLA/Organization/180f219f-97a8-486d-99d9-ed631fe4fc60" />
+        <fullUrl value="http://test.dguv.de/open/Organization/o1" />
         <resource>            
             <Organization xmlns="http://hl7.org/fhir">
-                <id value="180f219f-97a8-486d-99d9-ed631fe4fc60" />
+                <id value="o1" />
                 <meta>
                     <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Unfallversicherungstraeger" />
                 </meta>

@@ -1,4 +1,17 @@
 <Practitioner xmlns="http://hl7.org/fhir">
+    <!--
+    Author: 
+    Datum:  
+
+    Die vorliegende Beispiel Datei .... dient der Validierung 
+    der Datenaufnahme zu dem ......
+    
+    Zu beachten ist dabei ...
+
+    Durchzuführende Massnahmen:
+
+
+-->
     <id value="DGUV-ENLA-Bsp-Leistungserbringer" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringer"/> 

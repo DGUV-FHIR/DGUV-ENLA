@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Author: 
+    Datum:  
+
+    Die vorliegende Beispiel Datei .... dient der Validierung 
+    der Datenaufnahme zu dem ......
+    
+    Zu beachten ist dabei ...
+
+    Durchzuführende Massnahmen:
+
+
+-->
 <Observation xmlns="http://hl7.org/fhir">
     <id value="DGUV-ENLA-Bsp-Hilfsmittel" />
     <meta>
