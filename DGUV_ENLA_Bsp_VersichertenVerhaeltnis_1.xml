@@ -34,7 +34,7 @@
             </extension>
     </extension>
 
-<!-- Ist es notwendig den Wert des status zu überprüfe? -->    
+<!-- Ist es notwendig den Wert des status zu überprüfen? -->    
     <status value="active"/>
 
 <!--
