@@ -3504,6 +3504,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -3599,7 +3600,7 @@
       <alias value="extensions" />
       <alias value="user content" />
       <min value="0" />
-      <max value="0" />
+      <max value="*" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -6281,7 +6282,7 @@
       <alias value="extensions" />
       <alias value="user content" />
       <min value="0" />
-      <max value="0" />
+      <max value="*" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -8001,6 +8002,7 @@
     <element id="MedicationStatement.dosage:strukturierteDosierung.timing.code.coding.display.extension">
       <path value="MedicationStatement.dosage.timing.code.coding.display.extension" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="MedicationStatement.dosage:strukturierteDosierung.timing.code.coding.display.extension:AnzeigenameDeutsch">
       <path value="MedicationStatement.dosage.timing.code.coding.display.extension" />
