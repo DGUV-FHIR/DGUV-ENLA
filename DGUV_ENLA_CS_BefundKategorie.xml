@@ -3,7 +3,7 @@
   <id value="DGUV-ENLA-CS-BefundKategorie" />
   <url value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-BefundKategorie" />
   <version value="0.0.2" />
-  <name value="DGUV_ENLA_CS_Befundkategorie" />
+  <name value="DGUV_ENLA_CS_BefundKategorie" />
   <title value="BefundKategorien - CS" />
   <status value="draft" />
   <experimental value="false" />
