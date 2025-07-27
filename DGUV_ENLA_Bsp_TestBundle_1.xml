@@ -47,7 +47,7 @@
     <type value="document" />
     <timestamp value="2025-06-10T12:00:00+01:00" />
     <entry>
-        <fullUrl value="http://fhir.dguv.de/TestComposition/c00f7826-5a3e-49aa-b499-3f8c6599bd2b" />
+        <fullUrl value="http://fhir.dguv.de/Composition/c00f7826-5a3e-49aa-b499-3f8c6599bd2b" />
         <resource>
             <Composition>
                 <id value="c00f7826-5a3e-49aa-b499-3f8c6599bd2b" />
@@ -94,28 +94,6 @@
                         <reference value="Organization/180f219f-97a8-486d-99d9-ed631fe4fc60" />
                     </entry>
                 </section>
-                <section>
-                    <title value="VersichertePerson" />
-                    <entry>
-                <!-- 
-                    Auswahl des Unfallversicherungstraeger Objektes:
-                    ServaerAnteil        + "/" + RelativeURL:
-                    http://fhir.dguv.de/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba
-                -->
-                        <reference value="Composition/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
-                    </entry>
-                </section>
-                <section>
-                    <title value="Leistungserbringer" />
-                    <entry>
-                <!-- 
-                    Auswahl des Unfallversicherungstraeger Objektes:
-                    ServaerAnteil        + "/" + RelativeURL:
-                    http://fhir.dguv.de/Practitioner/53192032-6365-4659-8cc2-f9a7df67a466
-                -->
-                        <reference value="Composition/Practitioner/53192032-6365-4659-8cc2-f9a7df67a466" />
-                    </entry>
-                </section>
             </Composition>    
         </resource>
     </entry>
@@ -128,7 +106,7 @@
             <Patient xmlns="http://hl7.org/fhir">
                 <id value="482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
                 <meta>
-                    <profile value="http://fhir.dguv.de/open/Patient/DGUV-ENLA-PR-VersichertePerson"/>
+                    <profile value="http://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson"/>
                 </meta>   
                 <text>
                     <status value="generated"/>
