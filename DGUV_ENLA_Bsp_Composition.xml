@@ -3,7 +3,7 @@
     Author: 
     Datum:  
 
-    Die vorliegende Beispiel Datei .... dient der Validierung 
+    Die vorliegende Beispiel Datei dient der Validierung 
     der Datenaufnahme zu dem ......
     
     Zu beachten ist dabei ...
@@ -33,50 +33,72 @@
    </subject>
    <date value="2025-06-10T12:00:00+01:00" />
    <author>
-       <reference value="Ersteller Entlassbericht/4324321" />
+   <!--
+        Target der Referenz Practitioner ist ein "Leistungserbringer Objekt"
+    -->
+       <reference value="Practitioner/4324321" />
    </author>
    <title value="Entlassungsbericht aus stationärer Behandlung" />
    <section>
        <title value="Unfallversicherungstraeger" />
        <entry>
-           <!--reference value="#DGUV-ENLA-Bsp-Unfallversicherungstraeger.xml" /-->
+    <!--
+        Target der Referenz Organization ist ein "Unfallversicherungstraeger Objekt"
+    -->
            <reference value="Organization/Unfallversicherungstraeger" />
        </entry>
    </section>
    <section>
        <title value="Krankenkasse" />
        <entry>
-           <!--reference value="#DGUV-ENLA-Bsp-Unfallversicherungstraeger.xml" /-->
+    <!--
+        Target der Referenz Organization ist ein "Krankenkasse Objekt"
+    -->
            <reference value="Organization/Krankenkasse" />
        </entry>
    </section>
    <section>
        <title value="VersichertenVerhaeltnis" />
        <entry>
+    <!--
+        Target der Referenz Coverage ist ein "VersichertenVerhaeltnis Objekt"
+    -->
            <reference value="Coverage/VersichertenVerhaeltnis" />
        </entry>
    </section>
    <section>
        <title value="Pflegekasse" />
        <entry>
+    <!--
+        Target der Referenz Organization ist ein "Pflegekasse Objekt"
+    -->
            <reference value="Organization/Pflegekasse" />
        </entry>
    </section>
    <section>
        <title value="Unfallbetrieb" />
        <entry>
+    <!--
+        Target der Referenz Organization ist ein "Unfallbetrieb Objekt"
+    -->
            <reference value="Organization/Unfallbetrieb" />
        </entry>
    </section>
    <section>
        <title value="Aufenthaltsinformationen" />
        <entry>
+    <!--
+        Target der Referenz Encounter ist ein "Aufenthaltsinformationen Objekt"
+    -->
            <reference value="Encounter/Aufenthaltsinformationen" />
        </entry>
    </section>
    <section>
        <title value="DiagnoseFreitext" />
-       <entry>
+       <entry>#
+    <!--
+        Target der Referenz Condition ist ein "DiagnoseFreitext Objekt"
+    -->
            <reference value="Condition/DiagnoseFreitext" />
        </entry>
    </section>
