@@ -4,7 +4,7 @@
   <url value="http://fhir.dguv.de/ENLA/DocumentReference/DGUV-ENLA-PR-DokumentenReferenz" />
   <version value="0.0.2" />
   <name value="DGUV_ENLA_PR_DokumentenReferenz" />
-  <title value="Dokumentreferenzen" />
+  <title value="Dokumentenreferenz" />
   <status value="draft" />
   <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
   <description value="Dieses Profil bildet zusätzlich zu übermittelnde Anhänge ab." />

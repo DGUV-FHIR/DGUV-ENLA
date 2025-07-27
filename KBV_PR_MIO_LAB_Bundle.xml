@@ -1,0 +1,319 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+<id value="KBV-PR-MIO-LAB-Bundle" />
+<url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Bundle" />
+<version value="1.0.0-kommentierung.2" />
+<name value="KBV_PR_MIO_LAB_Bundle" />
+<title value="KBV_PR_MIO_LAB_Bundle" />
+<status value="draft" />
+<publisher value="Kassenärztliche Bundesvereinigung (KBV)" />
+<description value="Dieses Profil dient als bündelndes Element. Das Bundle kann als Klammer-Ressource verstanden werden, die die notwendigen Ressourcen zusammenfügt. Diese Ressource und die darin gebündelten Ressourcen können dann mit einer Signatur versehen werden. Das Bundle umfasst in dieser Anwendung einen Laborbefund." />
+<copyright value="Im folgenden Profil können Codes aus den Code-Systemen SNOMED CT®, LOINC, Ucum, ATC, ICD-10-GM, ICD-10-WHO, OPS, Alpha-ID/Alpha-ID-SE und ICF enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED CT® Clinical Terms® (SNOMED CT® CT®) which is used by permission of SNOMED CT® International. All rights reserved. SNOMED CT® CT®, was originally created by The College of American Pathologists. SNOMED CT® and SNOMED CT® CT are registered trademarks of SNOMED CT® International. Implementers of these artefacts must have the appropriate SNOMED CT® CT Affiliate license. This material contains content from LOINC (http://LOINC.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://LOINC.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED 'AS IS.' ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. Dieses Material enthält Inhalte aus ATC. Die Erstellung erfolgte unter Verwendung der Datenträger der amtlichen Fassung der ATC-Klassifikation mit DDD des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICD-10-GM, ICD-10-WHO, OPS Alpha-ID ans Alpha-ID-SE. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICF. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Deutschen Instituts für Medizinische Dokumentation und Information (DIMDI). ICF-Kodes, -Begriffe und -Texte © Weltgesundheitsorganisation, übersetzt und herausgegeben durch das Deutsche Institut für Medizinische Dokumentation und Information von der International classification of functioning, disability and health - ICF, herausgegeben durch die Weltgesundheitsorganisation." />
+<fhirVersion value="4.0.1" />
+<kind value="resource" />
+<abstract value="false" />
+<type value="Bundle" />
+<baseDefinition value="http://hl7.org/fhir/StructureDefinition/Bundle" />
+<derivation value="constraint" />
+<differential>
+<element id="Bundle.meta">
+<path value="Bundle.meta" />
+<min value="1" />
+</element>
+<element id="Bundle.meta.versionId">
+<path value="Bundle.meta.versionId" />
+<mustSupport value="true" />
+</element>
+<element id="Bundle.meta.lastUpdated">
+<path value="Bundle.meta.lastUpdated" />
+<mustSupport value="true" />
+</element>
+<element id="Bundle.meta.source">
+<path value="Bundle.meta.source" />
+<max value="0" />
+</element>
+<element id="Bundle.meta.profile">
+<path value="Bundle.meta.profile" />
+<slicing>
+<discriminator>
+<type value="value" />
+<path value="$this" />
+</discriminator>
+<rules value="open" />
+</slicing>
+<min value="1" />
+</element>
+<element id="Bundle.meta.profile:mioProfile">
+<path value="Bundle.meta.profile" />
+<sliceName value="mioProfile" />
+<min value="1" />
+<max value="1" />
+<patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Bundle|1.0.0-kommentierung.2" />
+</element>
+<element id="Bundle.meta.security">
+<path value="Bundle.meta.security" />
+<max value="0" />
+</element>
+<element id="Bundle.meta.tag">
+<path value="Bundle.meta.tag" />
+<max value="0" />
+</element>
+<element id="Bundle.implicitRules">
+<path value="Bundle.implicitRules" />
+<max value="0" />
+</element>
+<element id="Bundle.identifier">
+<path value="Bundle.identifier" />
+<min value="1" />
+</element>
+<element id="Bundle.type">
+<path value="Bundle.type" />
+<patternCode value="document" />
+</element>
+<element id="Bundle.timestamp">
+<path value="Bundle.timestamp" />
+<min value="1" />
+</element>
+<element id="Bundle.total">
+<path value="Bundle.total" />
+<max value="0" />
+</element>
+<element id="Bundle.link">
+<path value="Bundle.link" />
+<max value="0" />
+</element>
+<element id="Bundle.entry">
+<path value="Bundle.entry" />
+<slicing>
+<discriminator>
+<type value="type" />
+<path value="resource" />
+</discriminator>
+<ordered value="false" />
+<rules value="closed" />
+</slicing>
+<min value="5" />
+</element>
+<element id="Bundle.entry.link">
+<path value="Bundle.entry.link" />
+<max value="0" />
+</element>
+<element id="Bundle.entry.fullUrl">
+<path value="Bundle.entry.fullUrl" />
+<min value="1" />
+</element>
+<element id="Bundle.entry.resource">
+<path value="Bundle.entry.resource" />
+<min value="1" />
+</element>
+<element id="Bundle.entry.search">
+<path value="Bundle.entry.search" />
+<max value="0" />
+</element>
+<element id="Bundle.entry.request">
+<path value="Bundle.entry.request" />
+<max value="0" />
+</element>
+<element id="Bundle.entry.response">
+<path value="Bundle.entry.response" />
+<max value="0" />
+</element>
+<element id="Bundle.entry:composition">
+<path value="Bundle.entry" />
+<sliceName value="composition" />
+<min value="1" />
+<max value="1" />
+</element>
+<element id="Bundle.entry:composition.resource">
+<path value="Bundle.entry.resource" />
+<type>
+<code value="Composition" />
+<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Composition" />
+</type>
+</element>
+<element id="Bundle.entry:diagnosticReport">
+<path value="Bundle.entry" />
+<sliceName value="diagnosticReport" />
+<min value="1" />
+<max value="1" />
+</element>
+<element id="Bundle.entry:diagnosticReport.resource">
+<path value="Bundle.entry.resource" />
+<type>
+<code value="DiagnosticReport" />
+<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_DiagnosticReport" />
+</type>
+</element>
+<element id="Bundle.entry:patient">
+<path value="Bundle.entry" />
+<sliceName value="patient" />
+<min value="1" />
+<max value="1" />
+</element>
+<element id="Bundle.entry:patient.resource">
+<path value="Bundle.entry.resource" />
+<type>
+<code value="Patient" />
+<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Patient" />
+</type>
+</element>
+<element id="Bundle.entry:observation">
+<path value="Bundle.entry" />
+<sliceName value="observation" />
+<min value="1" />
+<max value="*" />
+</element>
+<element id="Bundle.entry:observation.resource">
+<path value="Bundle.entry.resource" />
+<type>
+<code value="Observation" />
+<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Observation_Laboratory_Study" />
+<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Observation_Laboratory_Study_Group" />
+</type>
+</element>
+<element id="Bundle.entry:specimen">
+<path value="Bundle.entry" />
+<sliceName value="specimen" />
+<min value="0" />
+<max value="*" />
+</element>
+<element id="Bundle.entry:specimen.resource">
+<path value="Bundle.entry.resource" />
+<type>
+<code value="Specimen" />
+<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Specimen" />
+</type>
+</element>
+<element id="Bundle.entry:serviceRequest">
+<path value="Bundle.entry" />
+<sliceName value="serviceRequest" />
+<min value="1" />
+<max value="1" />
+</element>
+<element id="Bundle.entry:serviceRequest.resource">
+<path value="Bundle.entry.resource" />
+<type>
+<code value="ServiceRequest" />
+<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_ServiceRequest" />
+</type>
+</element>
+<element id="Bundle.entry:organization">
+<path value="Bundle.entry" />
+<sliceName value="organization" />
+<min value="0" />
+<max value="*" />
+</element>
+<element id="Bundle.entry:organization.resource">
+<path value="Bundle.entry.resource" />
+<type>
+<code value="Organization" />
+<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Organization" />
+</type>
+</element>
+<element id="Bundle.entry:practitioner">
+<path value="Bundle.entry" />
+<sliceName value="practitioner" />
+<min value="0" />
+<max value="*" />
+</element>
+<element id="Bundle.entry:practitioner.resource">
+<path value="Bundle.entry.resource" />
+<type>
+<code value="Practitioner" />
+<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Practitioner" />
+</type>
+</element>
+<element id="Bundle.entry:practitionerRole">
+<path value="Bundle.entry" />
+<sliceName value="practitionerRole" />
+<min value="0" />
+<max value="*" />
+</element>
+<element id="Bundle.entry:practitionerRole.resource">
+<path value="Bundle.entry.resource" />
+<type>
+<code value="PractitionerRole" />
+<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_PractitionerRole" />
+</type>
+</element>
+<element id="Bundle.entry:bodyStructure">
+<path value="Bundle.entry" />
+<sliceName value="bodyStructure" />
+<min value="0" />
+<max value="*" />
+</element>
+<element id="Bundle.entry:bodyStructure.resource">
+<path value="Bundle.entry.resource" />
+<type>
+<code value="BodyStructure" />
+<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_BodyStructure" />
+</type>
+</element>
+<element id="Bundle.entry:provenance">
+<path value="Bundle.entry" />
+<sliceName value="provenance" />
+<min value="0" />
+<max value="*" />
+</element>
+<element id="Bundle.entry:provenance.resource">
+<path value="Bundle.entry.resource" />
+<type>
+<code value="Provenance" />
+<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Provenance" />
+</type>
+</element>
+<element id="Bundle.entry:device">
+<path value="Bundle.entry" />
+<sliceName value="device" />
+<min value="0" />
+<max value="*" />
+</element>
+<element id="Bundle.entry:device.resource">
+<path value="Bundle.entry.resource" />
+<type>
+<code value="Device" />
+<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Device" />
+<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Device_Specimen_Container" />
+</type>
+</element>
+<element id="Bundle.entry:deviceDefinition">
+<path value="Bundle.entry" />
+<sliceName value="deviceDefinition" />
+<min value="0" />
+<max value="*" />
+</element>
+<element id="Bundle.entry:deviceDefinition.resource">
+<path value="Bundle.entry.resource" />
+<type>
+<code value="DeviceDefinition" />
+<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_DeviceDefinition" />
+<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_DeviceDefinition_Specimen_Container" />
+</type>
+</element>
+<element id="Bundle.entry:documentReference">
+<path value="Bundle.entry" />
+<sliceName value="documentReference" />
+<min value="0" />
+<max value="*" />
+</element>
+<element id="Bundle.entry:documentReference.resource">
+<path value="Bundle.entry.resource" />
+<type>
+<code value="DocumentReference" />
+<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_DocumentReference" />
+</type>
+</element>
+<element id="Bundle.entry:substance">
+<path value="Bundle.entry" />
+<sliceName value="substance" />
+<min value="0" />
+<max value="*" />
+</element>
+<element id="Bundle.entry:substance.resource">
+<path value="Bundle.entry.resource" />
+<type>
+<code value="Substance" />
+<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_LAB_Substance" />
+</type>
+</element>
+</differential>
+</StructureDefinition>

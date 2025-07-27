@@ -446,7 +446,7 @@
       <alias value="extensions" />
       <alias value="user content" />
       <min value="0" />
-      <max value="*" />
+      <max value="0" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -508,7 +508,7 @@
     </element>
     <element id="Observation.extension:BesonderheitenBehandlungsverlauf.value[x]">
       <path value="Observation.extension.value[x]" />
-      <short value="Besonderheiten im Behandlungsverlauf" />
+      <short value="Konkrete Besonderheiten im Behandlungsverlauf" />
       <definition value="Besonderheiten im Behandlungsverlauf umfassen beispielsweise Komplikationen oder psychische Gesundheitsbeeinträchtigungen." />
       <min value="1" />
       <max value="1" />
@@ -4386,6 +4386,7 @@
     </element>
     <element id="Observation.extension:BesonderheitenBehandlungsverlauf.value[x]">
       <path value="Observation.extension.value[x]" />
+      <short value="Konkrete Besonderheiten im Behandlungsverlauf" />
       <definition value="Besonderheiten im Behandlungsverlauf umfassen beispielsweise Komplikationen oder psychische Gesundheitsbeeinträchtigungen." />
       <mustSupport value="true" />
     </element>
