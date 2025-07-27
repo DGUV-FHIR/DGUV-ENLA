@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Author: Friedhelm Matten
+    Datum:  21.07.2025
+    Letzte Änderung: 24.07.2025
+
+    Die vorliegende Beispiel Datei DGUV_ENLA_Bsp_TestBundle_1 dient der Validierung 
+    des 'slicing' in Bundle und Composition sowie der Auflösung der internen Referenzen.
+    
+    Zu beachten ist dabei:
+
+    Es liegt ein Bundle Dokument vor, das immer als ersten Eintrag eine Composition enthält.
+    
+    In der DGUV-ENLA-PR-TestBundle.xml Datei erfolgt das slicing für die im Bundle auftretenden Profile
+    wie z.B. Composition, VersichertePerson, Leistungserbringer,...
+    Dabei ist die Composition der notwendige erste Eintrag bei dem slicing.
+
+    In der DGUV-ENLA-PR-TestComposition.xml Datei erfolgt das slicing für die in der Composition enthaltenen
+    Profile, die die Einzelheiten des durch das Bundle dargestellten Dokuments enthalten.
+
+
+    Durchzuführende Massnahmen:
+
+    1. Gewährleistung der Funktionalität des slicing in dem Bundle
+       Hier: Das minimale slicing bezüglich Composition und Unfallversicherungstraeger
+    2. Gewährleistung der Funktionalität des slicing in der Composition
+       Hier: Unfallversicherungstraeger
+    3. Gegentest: VersichertePerson, Leistungserbringer
+       Spezielle Einstellung zum Test der Notwendigkeit eines slicing im Bundle und des Eintrags aller notwendigen
+       Profile:
+       Eintrag der Profile: VersichertePerson, Leistungserbringer die nicht im Bundle vorkommen
+    3. Gewährleistung des reibungslosen Zugriffs aller Referenzen auf die entsprechenden korrekten
+       Objekte
+
+    
+-->
+<Bundle xmlns="http://hl7.org/fhir">
+    <id value="5d75b64f-a8a1-49b8-8d33-bd16423b3e6e" />
+    <meta>
+        <profile value="http://fhir.dguv.de/ENLA/Bundle/DGUV-ENLA-PR-TestBundle" />
+    </meta>
+     <identifier>
+     <!-- Server Anteil der URL--> 
+        <system value="http://fhir.dguv.de/open"/> 
+        <value value="5d75b64f-a8a1-49b8-8d33-bd16423b3e6e" />
+    </identifier> 
+    <type value="document" />
+    <timestamp value="2025-06-10T12:00:00+01:00" />
+    <entry>
+        <fullUrl value="http://fhir.dguv.de/TestComposition/c00f7826-5a3e-49aa-b499-3f8c6599bd2b" />
+        <resource>
+            <Composition>
+                <id value="c00f7826-5a3e-49aa-b499-3f8c6599bd2b" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Composition/DGUV-ENLA-PR-TestComposition" />
+                </meta>
+                <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-SonstigeBemerkungen">
+                    <valueString value="Die sonstige Bemerkung." />
+                </extension>
+                <status value="preliminary" />
+                <type>
+                    <coding>
+                        <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-Formtexte" />
+                        <code value="F 2102" />
+                        <display value="Entlassungsbericht aus stationärer Behandlung (DAV/VAV/SAV)" />
+                    </coding>
+                </type>
+                <subject>
+                <!-- 
+                        Lokale Referenz auf das Profil VersichertePerson:
+                        ServaerAnteil        + "/" + RelativeURL:
+                        http://fhir.dguv.de/open/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba
+                -->
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </subject>
+                <date value="2025-06-10T12:00:00+01:00" />
+                <author>
+                <!-- 
+                        Lokale Referenz auf das Profil Leistungserbringer:
+                        ServaerAnteil        + "/" + RelativeURL:
+                        http://fhir.dguv.de/open/Practitioner/53192032-6365-4659-8cc2-f9a7df67a466
+                -->
+                    <reference value="Practitioner/53192032-6365-4659-8cc2-f9a7df67a466" />
+                </author>
+                <title value="Entlassungsbericht aus stationärer Behandlung" />
+                <section>
+                    <title value="Unfallversicherungstraeger" />
+                    <entry>
+                <!-- 
+                    Auswahl des Unfallversicherungstraeger Objektes:
+                    ServaerAnteil        + "/" + RelativeURL:
+                    http://fhir.dguv.de/open/Organization/180f219f-97a8-486d-99d9-ed631fe4fc60
+                -->
+                        <reference value="Organization/180f219f-97a8-486d-99d9-ed631fe4fc60" />
+                    </entry>
+                </section>
+                <section>
+                    <title value="VersichertePerson" />
+                    <entry>
+                <!-- 
+                    Auswahl des Unfallversicherungstraeger Objektes:
+                    ServaerAnteil        + "/" + RelativeURL:
+                    http://fhir.dguv.de/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba
+                -->
+                        <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                    </entry>
+                </section>
+                <section>
+                    <title value="Leistungserbringer" />
+                    <entry>
+                <!-- 
+                    Auswahl des Unfallversicherungstraeger Objektes:
+                    ServaerAnteil        + "/" + RelativeURL:
+                    http://fhir.dguv.de/Practitioner/53192032-6365-4659-8cc2-f9a7df67a466
+                -->
+                        <reference value="Practitioner/53192032-6365-4659-8cc2-f9a7df67a466" />
+                    </entry>
+                </section>
+            </Composition>    
+        </resource>
+    </entry>
+    <entry>
+    <!--
+        Target der Referenz VersichertePerson ist ein "VersichertePerson Objekt"
+    -->
+        <fullUrl value="http://fhir.dguv.de/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+        <resource>
+            <Patient xmlns="http://hl7.org/fhir">
+                <id value="482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
+                <meta>
+                    <profile value="http://fhir.dguv.de/open/Patient/DGUV-ENLA-PR-VersichertePerson"/>
+                </meta>   
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                    <h1>Hier finden Sie ein Beispiel einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+                <extension url="http://hl7.org/fhir/StructureDefinition/patient-nationality">
+                <!--extension url="http://hl7.org/fhir/ValueSet/iso3166-1-2|4.0.1" -->      
+                    <extension url="code" >
+                        <valueCodeableConcept>
+                        <coding>
+                            <system value="urn:iso:std:iso:3166" />
+                            <code value="DE" />
+                            <display value="Germany" />
+                        </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="period" >
+                    <valuePeriod>
+                        <start value="2004-11-12"/>
+                        <end value="2024-01-01"/>
+                    </valuePeriod>
+                    </extension>
+                </extension>
+                <identifier>
+                    <type>
+                        <coding>
+                            <system value="http://fhir.de/CodeSystem/identifier-type-de-basis" />
+                            <code value="KVZ10" />
+                        </coding>
+                    </type>
+                    <system value="http://fhir.de/sid/gkv/kvid-10" />
+                    <value value="S123456789" />
+                </identifier>
+                <name>
+                    <use value="official" />
+                    <family value="Mustermann">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+                            <valueString value="Mustermann" />
+                        </extension>
+                    </family> 
+                    <given value="Lionel" />
+                </name>
+                <telecom>
+                    <system value="phone"/>
+                    <value value="0049177/00000000"/>
+                </telecom>
+                <gender value="male"/>
+                <birthDate value="2004-11-12"/>
+                <address>
+                    <type value="both" />
+                    <line value="Musterweg 1">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                            <valueString value="Musterweg" />
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                            <valueString value="1" />
+                        </extension>
+                    </line>
+                    <city value="Musterhausen" />
+                    <postalCode value="11111" />
+                    <country value="DE" />
+                </address>
+            </Patient>
+        </resource>
+    </entry>
+    <entry>
+    <!--
+        Target der Referenz Leistungserbringer ist ein "Leistungserbringer Objekt"
+    -->
+        <fullUrl value="http://fhir.dguv.de/Practitioner/53192032-6365-4659-8cc2-f9a7df67a466" />
+        <resource>
+            <Practitioner xmlns="http://hl7.org/fhir">
+                <id value="53192032-6365-4659-8cc2-f9a7df67a466" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringer"/> 
+                </meta>
+                <identifier> 
+                    <type>
+                        <coding>
+                            <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+                            <code value="LANR" />
+                            <display value="Lifelong physician number" />
+                        </coding>
+                    </type>
+                    <system value="https://fhir.kbv.de/NamingSystem/KBV_NS_Base_ANR" />
+                    <value value="123456799" />
+                </identifier>
+                <name>
+                    <use value="official"/>
+                    <family value="Musteraerztin14">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+                                <valueString value="Musteraerztin14" />
+                        </extension>
+                    </family>
+                    <given value="Maria"/>
+                    <prefix value="Dr.">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+                            <valueCode value="AC" />
+                        </extension>
+                    </prefix>
+                </name>
+            </Practitioner>
+        </resource>
+    </entry>
+    <entry>
+    <!--
+        Target der Referenz Unfallversicherungstraeger ist ein "Unfallversicherungstraeger Objekt"
+    -->
+        <fullUrl value="http://fhir.dguv.de/Organization/180f219f-97a8-486d-99d9-ed631fe4fc60" />
+        <resource>            
+            <Organization xmlns="http://hl7.org/fhir">
+                <id value="180f219f-97a8-486d-99d9-ed631fe4fc60" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Unfallversicherungstraeger" />
+                </meta>
+                <!--   Institutionskennzeichen   -->
+                <identifier>
+                    <type>
+                        <coding>
+                            <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+                            <code value="XX" />
+                            <display value="Organization identifier" />
+                        </coding>
+                    </type>
+                    <system value="http://fhir.de/sid/arge-ik/iknr" />
+                    <value value="121192344" />
+                </identifier>
+                <name value="BG Verwaltung Berlin" />
+                <telecom>
+                    <system value="phone"/>
+                    <value value="030 77003-0"/>
+                </telecom>
+                <address>
+                    <type value="both" />
+                    <line value="Markgrafenstraße 18">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                            <valueString value="18" />
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                            <valueString value="Markgrafenstraße." />
+                        </extension>
+                    </line>
+                    <city value="Berlin" />
+                    <postalCode value="10969" />
+                </address>
+            </Organization>
+        </resource>
+    </entry>
+</Bundle>
