@@ -102,7 +102,7 @@
                     ServaerAnteil        + "/" + RelativeURL:
                     http://fhir.dguv.de/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba
                 -->
-                        <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                        <reference value="Composition/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
                     </entry>
                 </section>
                 <section>
@@ -113,7 +113,7 @@
                     ServaerAnteil        + "/" + RelativeURL:
                     http://fhir.dguv.de/Practitioner/53192032-6365-4659-8cc2-f9a7df67a466
                 -->
-                        <reference value="Practitioner/53192032-6365-4659-8cc2-f9a7df67a466" />
+                        <reference value="Composition/Practitioner/53192032-6365-4659-8cc2-f9a7df67a466" />
                     </entry>
                 </section>
             </Composition>    
