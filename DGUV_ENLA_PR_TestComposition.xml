@@ -4273,7 +4273,7 @@
       <sliceName value="VersichertePerson" />
       <short value="Composition is broken into sections" />
       <definition value="The root of the sections that make up the composition." />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Composition.section" />
@@ -4941,7 +4941,7 @@
       <sliceName value="Leistungserbringer" />
       <short value="Composition is broken into sections" />
       <definition value="The root of the sections that make up the composition." />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Composition.section" />
@@ -5703,7 +5703,6 @@
     <element id="Composition.section:VersichertePerson">
       <path value="Composition.section" />
       <sliceName value="VersichertePerson" />
-      <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
@@ -5724,7 +5723,6 @@
     <element id="Composition.section:Leistungserbringer">
       <path value="Composition.section" />
       <sliceName value="Leistungserbringer" />
-      <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
