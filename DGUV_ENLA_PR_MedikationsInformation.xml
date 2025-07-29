@@ -4048,7 +4048,7 @@
     </element>
     <element id="MedicationStatement.dosage:strukturierteDosierung.route.coding">
       <path value="MedicationStatement.dosage.route.coding" />
-      <short value="Code defined by a terminology system" />
+      <short value="Verabreichungsweg in Codeform" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
@@ -4407,7 +4407,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="MedicationStatement.dosage.route.text" />
-      <short value="Plain text representation of the concept" />
+      <short value="Verabreichungsweg als Freitext" />
       <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user." />
       <comment value="Very often the text is the same as a displayName of one of the codings." />
       <requirements value="The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source." />
@@ -4510,7 +4510,7 @@
     </element>
     <element id="MedicationStatement.dosage:strukturierteDosierung.doseAndRate">
       <path value="MedicationStatement.dosage.doseAndRate" />
-      <short value="Amount of medication administered" />
+      <short value="Menge des verabreichten Medikaments" />
       <definition value="The amount of medication administered." />
       <min value="0" />
       <max value="1" />
@@ -4673,7 +4673,7 @@
     </element>
     <element id="MedicationStatement.dosage:strukturierteDosierung.doseAndRate.dose[x]">
       <path value="MedicationStatement.dosage.doseAndRate.dose[x]" />
-      <short value="Amount of medication per dose" />
+      <short value="Menge des verabreichten Medikaments" />
       <definition value="Amount of medication per dose." />
       <comment value="Note that this specifies the quantity of the specified medication, not the quantity for each active ingredient(s). Each ingredient amount can be communicated in the Medication resource. For example, if one wants to communicate that a tablet was 375 mg, where the dose was one tablet, you can use the Medication resource to document that the tablet was comprised of 375 mg of drug XYZ. Alternatively if the dose was 375 mg, then you may only need to use the Medication resource to indicate this was a tablet. If the example were an IV such as dopamine and you wanted to communicate that 400mg of dopamine was mixed in 500 ml of some IV solution, then this would all be communicated in the Medication resource. If the administration is not intended to be instantaneous (rate is present or timing has a duration), this can be specified to convey the total amount to be administered over the period of time as indicated by the schedule e.g. 500 ml in dose, with timing used to convey that this should be done over 4 hours." />
       <requirements value="The amount of therapeutic or other substance given at one administration event." />
@@ -4788,7 +4788,7 @@
     </element>
     <element id="MedicationStatement.dosage:strukturierteDosierung.doseAndRate.dose[x].value">
       <path value="MedicationStatement.dosage.doseAndRate.dose[x].value" />
-      <short value="Numerical value (with implicit precision)" />
+      <short value="Zahlenwert der Menge des verabreichten Medikaments" />
       <definition value="The value of the measured amount. The value includes an implicit precision in the presentation of the value." />
       <comment value="The implicit precision in the value should always be honored. Monetary values have their own rules for handling precision (refer to standard accounting text books)." />
       <requirements value="Precision is handled implicitly in almost all cases of measurement." />
@@ -4920,7 +4920,7 @@
     </element>
     <element id="MedicationStatement.dosage:strukturierteDosierung.doseAndRate.dose[x].system">
       <path value="MedicationStatement.dosage.doseAndRate.dose[x].system" />
-      <short value="System that defines coded unit form" />
+      <short value="CodeSystem für kodierte Dosiereinheiten" />
       <definition value="The identification of the system that provides the coded form of the unit." />
       <comment value="see http://en.wikipedia.org/wiki/Uniform_resource_identifier" />
       <requirements value="Need to know the system that defines the coded form of the unit." />
@@ -4962,7 +4962,7 @@
     </element>
     <element id="MedicationStatement.dosage:strukturierteDosierung.doseAndRate.dose[x].code">
       <path value="MedicationStatement.dosage.doseAndRate.dose[x].code" />
-      <short value="Coded form of the unit" />
+      <short value="Einheit der Menge des verabreichten Medikaments in Codeform" />
       <definition value="A computer processable form of the unit in some unit representation system." />
       <comment value="The preferred system is UCUM, but SNOMED CT can also be used (for customary units) or ISO 4217 for currency.  The context of use may additionally require a code from a particular system." />
       <requirements value="Need a computable form of the unit that is fixed across all forms. UCUM provides this for quantities, but SNOMED CT provides many units of interest." />
@@ -5452,6 +5452,290 @@
         <map value="not supported" />
       </mapping>
     </element>
+    <element id="MedicationStatement.dosage:strukturierteDosierung.maxDosePerAdministration.id">
+      <path value="MedicationStatement.dosage.maxDosePerAdministration.id" />
+      <representation value="xmlAttr" />
+      <short value="Unique id for inter-element referencing" />
+      <definition value="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Element.id" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
+          <valueUrl value="string" />
+        </extension>
+        <code value="http://hl7.org/fhirpath/System.String" />
+      </type>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.dosage:strukturierteDosierung.maxDosePerAdministration.extension">
+      <path value="MedicationStatement.dosage.maxDosePerAdministration.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <description value="Extensions are always sliced by (at least) url" />
+        <rules value="open" />
+      </slicing>
+      <short value="Additional content defined by implementations" />
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
+      <alias value="extensions" />
+      <alias value="user content" />
+      <min value="0" />
+      <max value="*" />
+      <base>
+        <path value="Element.extension" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="Extension" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.dosage:strukturierteDosierung.maxDosePerAdministration.value">
+      <path value="MedicationStatement.dosage.maxDosePerAdministration.value" />
+      <short value="Numerical value (with implicit precision)" />
+      <definition value="The value of the measured amount. The value includes an implicit precision in the presentation of the value." />
+      <comment value="The implicit precision in the value should always be honored. Monetary values have their own rules for handling precision (refer to standard accounting text books)." />
+      <requirements value="Precision is handled implicitly in almost all cases of measurement." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Quantity.value" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="decimal" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="SN.2  / CQ - N/A" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="PQ.value, CO.value, MO.value, IVL.high or IVL.low depending on the value" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.dosage:strukturierteDosierung.maxDosePerAdministration.comparator">
+      <path value="MedicationStatement.dosage.maxDosePerAdministration.comparator" />
+      <short value="&lt; | &lt;= | &gt;= | &gt; - how to understand the value" />
+      <definition value="Not allowed to be used in this context" />
+      <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
+      <requirements value="Need a framework for handling measures where the value is &lt;5ug/L or &gt;400mg/L due to the limitations of measuring methodology." />
+      <min value="0" />
+      <max value="0" />
+      <base>
+        <path value="Quantity.comparator" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="code" />
+      </type>
+      <meaningWhenMissing value="If there is no comparator, then there is no modification of the value" />
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isModifier value="true" />
+      <isModifierReason value="This is labeled as &quot;Is Modifier&quot; because the comparator modifies the interpretation of the value significantly. If there is no comparator, then there is no modification of the value" />
+      <isSummary value="true" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="QuantityComparator" />
+        </extension>
+        <strength value="required" />
+        <description value="How the Quantity should be understood and represented." />
+        <valueSet value="http://hl7.org/fhir/ValueSet/quantity-comparator|4.0.1" />
+      </binding>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="SN.1  / CQ.1" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="IVL properties" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.dosage:strukturierteDosierung.maxDosePerAdministration.unit">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="MedicationStatement.dosage.maxDosePerAdministration.unit" />
+      <short value="Unit representation" />
+      <definition value="A human-readable form of the unit." />
+      <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
+      <requirements value="There are many representations for units of measure and in many contexts, particular representations are fixed and required. I.e. mcg for micrograms." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Quantity.unit" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="string" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="(see OBX.6 etc.) / CQ.2" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="PQ.unit" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.dosage:strukturierteDosierung.maxDosePerAdministration.system">
+      <path value="MedicationStatement.dosage.maxDosePerAdministration.system" />
+      <short value="System that defines coded unit form" />
+      <definition value="The identification of the system that provides the coded form of the unit." />
+      <comment value="see http://en.wikipedia.org/wiki/Uniform_resource_identifier" />
+      <requirements value="Need to know the system that defines the coded form of the unit." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Quantity.system" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="uri" />
+      </type>
+      <condition value="ele-1" />
+      <condition value="qty-3" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="(see OBX.6 etc.) / CQ.2" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="CO.codeSystem, PQ.translation.codeSystem" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.dosage:strukturierteDosierung.maxDosePerAdministration.code">
+      <path value="MedicationStatement.dosage.maxDosePerAdministration.code" />
+      <short value="Coded form of the unit" />
+      <definition value="A computer processable form of the unit in some unit representation system." />
+      <comment value="The preferred system is UCUM, but SNOMED CT can also be used (for customary units) or ISO 4217 for currency.  The context of use may additionally require a code from a particular system." />
+      <requirements value="Need a computable form of the unit that is fixed across all forms. UCUM provides this for quantities, but SNOMED CT provides many units of interest." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Quantity.code" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="code" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="(see OBX.6 etc.) / CQ.2" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="PQ.code, MO.currency, PQ.translation.code" />
+      </mapping>
+    </element>
     <element id="MedicationStatement.dosage:strukturierteDosierung.maxDosePerLifetime">
       <path value="MedicationStatement.dosage.maxDosePerLifetime" />
       <short value="Upper limit on medication per lifetime of the patient" />
@@ -5511,6 +5795,290 @@
       <mapping>
         <identity value="rim" />
         <map value="not supported" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.dosage:strukturierteDosierung.maxDosePerLifetime.id">
+      <path value="MedicationStatement.dosage.maxDosePerLifetime.id" />
+      <representation value="xmlAttr" />
+      <short value="Unique id for inter-element referencing" />
+      <definition value="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Element.id" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
+          <valueUrl value="string" />
+        </extension>
+        <code value="http://hl7.org/fhirpath/System.String" />
+      </type>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.dosage:strukturierteDosierung.maxDosePerLifetime.extension">
+      <path value="MedicationStatement.dosage.maxDosePerLifetime.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <description value="Extensions are always sliced by (at least) url" />
+        <rules value="open" />
+      </slicing>
+      <short value="Additional content defined by implementations" />
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
+      <alias value="extensions" />
+      <alias value="user content" />
+      <min value="0" />
+      <max value="*" />
+      <base>
+        <path value="Element.extension" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="Extension" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.dosage:strukturierteDosierung.maxDosePerLifetime.value">
+      <path value="MedicationStatement.dosage.maxDosePerLifetime.value" />
+      <short value="Numerical value (with implicit precision)" />
+      <definition value="The value of the measured amount. The value includes an implicit precision in the presentation of the value." />
+      <comment value="The implicit precision in the value should always be honored. Monetary values have their own rules for handling precision (refer to standard accounting text books)." />
+      <requirements value="Precision is handled implicitly in almost all cases of measurement." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Quantity.value" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="decimal" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="SN.2  / CQ - N/A" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="PQ.value, CO.value, MO.value, IVL.high or IVL.low depending on the value" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.dosage:strukturierteDosierung.maxDosePerLifetime.comparator">
+      <path value="MedicationStatement.dosage.maxDosePerLifetime.comparator" />
+      <short value="&lt; | &lt;= | &gt;= | &gt; - how to understand the value" />
+      <definition value="Not allowed to be used in this context" />
+      <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
+      <requirements value="Need a framework for handling measures where the value is &lt;5ug/L or &gt;400mg/L due to the limitations of measuring methodology." />
+      <min value="0" />
+      <max value="0" />
+      <base>
+        <path value="Quantity.comparator" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="code" />
+      </type>
+      <meaningWhenMissing value="If there is no comparator, then there is no modification of the value" />
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isModifier value="true" />
+      <isModifierReason value="This is labeled as &quot;Is Modifier&quot; because the comparator modifies the interpretation of the value significantly. If there is no comparator, then there is no modification of the value" />
+      <isSummary value="true" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="QuantityComparator" />
+        </extension>
+        <strength value="required" />
+        <description value="How the Quantity should be understood and represented." />
+        <valueSet value="http://hl7.org/fhir/ValueSet/quantity-comparator|4.0.1" />
+      </binding>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="SN.1  / CQ.1" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="IVL properties" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.dosage:strukturierteDosierung.maxDosePerLifetime.unit">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="MedicationStatement.dosage.maxDosePerLifetime.unit" />
+      <short value="Unit representation" />
+      <definition value="A human-readable form of the unit." />
+      <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
+      <requirements value="There are many representations for units of measure and in many contexts, particular representations are fixed and required. I.e. mcg for micrograms." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Quantity.unit" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="string" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="(see OBX.6 etc.) / CQ.2" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="PQ.unit" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.dosage:strukturierteDosierung.maxDosePerLifetime.system">
+      <path value="MedicationStatement.dosage.maxDosePerLifetime.system" />
+      <short value="System that defines coded unit form" />
+      <definition value="The identification of the system that provides the coded form of the unit." />
+      <comment value="see http://en.wikipedia.org/wiki/Uniform_resource_identifier" />
+      <requirements value="Need to know the system that defines the coded form of the unit." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Quantity.system" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="uri" />
+      </type>
+      <condition value="ele-1" />
+      <condition value="qty-3" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="(see OBX.6 etc.) / CQ.2" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="CO.codeSystem, PQ.translation.codeSystem" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.dosage:strukturierteDosierung.maxDosePerLifetime.code">
+      <path value="MedicationStatement.dosage.maxDosePerLifetime.code" />
+      <short value="Coded form of the unit" />
+      <definition value="A computer processable form of the unit in some unit representation system." />
+      <comment value="The preferred system is UCUM, but SNOMED CT can also be used (for customary units) or ISO 4217 for currency.  The context of use may additionally require a code from a particular system." />
+      <requirements value="Need a computable form of the unit that is fixed across all forms. UCUM provides this for quantities, but SNOMED CT provides many units of interest." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Quantity.code" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="code" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="(see OBX.6 etc.) / CQ.2" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="PQ.code, MO.currency, PQ.translation.code" />
       </mapping>
     </element>
     <element id="MedicationStatement.dosage:freitextlicheDosierung">
@@ -6667,6 +7235,290 @@
         <map value="not supported" />
       </mapping>
     </element>
+    <element id="MedicationStatement.dosage:freitextlicheDosierung.maxDosePerAdministration.id">
+      <path value="MedicationStatement.dosage.maxDosePerAdministration.id" />
+      <representation value="xmlAttr" />
+      <short value="Unique id for inter-element referencing" />
+      <definition value="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Element.id" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
+          <valueUrl value="string" />
+        </extension>
+        <code value="http://hl7.org/fhirpath/System.String" />
+      </type>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.dosage:freitextlicheDosierung.maxDosePerAdministration.extension">
+      <path value="MedicationStatement.dosage.maxDosePerAdministration.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <description value="Extensions are always sliced by (at least) url" />
+        <rules value="open" />
+      </slicing>
+      <short value="Additional content defined by implementations" />
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
+      <alias value="extensions" />
+      <alias value="user content" />
+      <min value="0" />
+      <max value="*" />
+      <base>
+        <path value="Element.extension" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="Extension" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.dosage:freitextlicheDosierung.maxDosePerAdministration.value">
+      <path value="MedicationStatement.dosage.maxDosePerAdministration.value" />
+      <short value="Numerical value (with implicit precision)" />
+      <definition value="The value of the measured amount. The value includes an implicit precision in the presentation of the value." />
+      <comment value="The implicit precision in the value should always be honored. Monetary values have their own rules for handling precision (refer to standard accounting text books)." />
+      <requirements value="Precision is handled implicitly in almost all cases of measurement." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Quantity.value" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="decimal" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="SN.2  / CQ - N/A" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="PQ.value, CO.value, MO.value, IVL.high or IVL.low depending on the value" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.dosage:freitextlicheDosierung.maxDosePerAdministration.comparator">
+      <path value="MedicationStatement.dosage.maxDosePerAdministration.comparator" />
+      <short value="&lt; | &lt;= | &gt;= | &gt; - how to understand the value" />
+      <definition value="Not allowed to be used in this context" />
+      <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
+      <requirements value="Need a framework for handling measures where the value is &lt;5ug/L or &gt;400mg/L due to the limitations of measuring methodology." />
+      <min value="0" />
+      <max value="0" />
+      <base>
+        <path value="Quantity.comparator" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="code" />
+      </type>
+      <meaningWhenMissing value="If there is no comparator, then there is no modification of the value" />
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isModifier value="true" />
+      <isModifierReason value="This is labeled as &quot;Is Modifier&quot; because the comparator modifies the interpretation of the value significantly. If there is no comparator, then there is no modification of the value" />
+      <isSummary value="true" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="QuantityComparator" />
+        </extension>
+        <strength value="required" />
+        <description value="How the Quantity should be understood and represented." />
+        <valueSet value="http://hl7.org/fhir/ValueSet/quantity-comparator|4.0.1" />
+      </binding>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="SN.1  / CQ.1" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="IVL properties" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.dosage:freitextlicheDosierung.maxDosePerAdministration.unit">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="MedicationStatement.dosage.maxDosePerAdministration.unit" />
+      <short value="Unit representation" />
+      <definition value="A human-readable form of the unit." />
+      <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
+      <requirements value="There are many representations for units of measure and in many contexts, particular representations are fixed and required. I.e. mcg for micrograms." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Quantity.unit" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="string" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="(see OBX.6 etc.) / CQ.2" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="PQ.unit" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.dosage:freitextlicheDosierung.maxDosePerAdministration.system">
+      <path value="MedicationStatement.dosage.maxDosePerAdministration.system" />
+      <short value="System that defines coded unit form" />
+      <definition value="The identification of the system that provides the coded form of the unit." />
+      <comment value="see http://en.wikipedia.org/wiki/Uniform_resource_identifier" />
+      <requirements value="Need to know the system that defines the coded form of the unit." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Quantity.system" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="uri" />
+      </type>
+      <condition value="ele-1" />
+      <condition value="qty-3" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="(see OBX.6 etc.) / CQ.2" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="CO.codeSystem, PQ.translation.codeSystem" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.dosage:freitextlicheDosierung.maxDosePerAdministration.code">
+      <path value="MedicationStatement.dosage.maxDosePerAdministration.code" />
+      <short value="Coded form of the unit" />
+      <definition value="A computer processable form of the unit in some unit representation system." />
+      <comment value="The preferred system is UCUM, but SNOMED CT can also be used (for customary units) or ISO 4217 for currency.  The context of use may additionally require a code from a particular system." />
+      <requirements value="Need a computable form of the unit that is fixed across all forms. UCUM provides this for quantities, but SNOMED CT provides many units of interest." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Quantity.code" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="code" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="(see OBX.6 etc.) / CQ.2" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="PQ.code, MO.currency, PQ.translation.code" />
+      </mapping>
+    </element>
     <element id="MedicationStatement.dosage:freitextlicheDosierung.maxDosePerLifetime">
       <path value="MedicationStatement.dosage.maxDosePerLifetime" />
       <short value="Upper limit on medication per lifetime of the patient" />
@@ -6726,6 +7578,290 @@
       <mapping>
         <identity value="rim" />
         <map value="not supported" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.dosage:freitextlicheDosierung.maxDosePerLifetime.id">
+      <path value="MedicationStatement.dosage.maxDosePerLifetime.id" />
+      <representation value="xmlAttr" />
+      <short value="Unique id for inter-element referencing" />
+      <definition value="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Element.id" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
+          <valueUrl value="string" />
+        </extension>
+        <code value="http://hl7.org/fhirpath/System.String" />
+      </type>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.dosage:freitextlicheDosierung.maxDosePerLifetime.extension">
+      <path value="MedicationStatement.dosage.maxDosePerLifetime.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <description value="Extensions are always sliced by (at least) url" />
+        <rules value="open" />
+      </slicing>
+      <short value="Additional content defined by implementations" />
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
+      <alias value="extensions" />
+      <alias value="user content" />
+      <min value="0" />
+      <max value="*" />
+      <base>
+        <path value="Element.extension" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="Extension" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.dosage:freitextlicheDosierung.maxDosePerLifetime.value">
+      <path value="MedicationStatement.dosage.maxDosePerLifetime.value" />
+      <short value="Numerical value (with implicit precision)" />
+      <definition value="The value of the measured amount. The value includes an implicit precision in the presentation of the value." />
+      <comment value="The implicit precision in the value should always be honored. Monetary values have their own rules for handling precision (refer to standard accounting text books)." />
+      <requirements value="Precision is handled implicitly in almost all cases of measurement." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Quantity.value" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="decimal" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="SN.2  / CQ - N/A" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="PQ.value, CO.value, MO.value, IVL.high or IVL.low depending on the value" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.dosage:freitextlicheDosierung.maxDosePerLifetime.comparator">
+      <path value="MedicationStatement.dosage.maxDosePerLifetime.comparator" />
+      <short value="&lt; | &lt;= | &gt;= | &gt; - how to understand the value" />
+      <definition value="Not allowed to be used in this context" />
+      <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
+      <requirements value="Need a framework for handling measures where the value is &lt;5ug/L or &gt;400mg/L due to the limitations of measuring methodology." />
+      <min value="0" />
+      <max value="0" />
+      <base>
+        <path value="Quantity.comparator" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="code" />
+      </type>
+      <meaningWhenMissing value="If there is no comparator, then there is no modification of the value" />
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isModifier value="true" />
+      <isModifierReason value="This is labeled as &quot;Is Modifier&quot; because the comparator modifies the interpretation of the value significantly. If there is no comparator, then there is no modification of the value" />
+      <isSummary value="true" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="QuantityComparator" />
+        </extension>
+        <strength value="required" />
+        <description value="How the Quantity should be understood and represented." />
+        <valueSet value="http://hl7.org/fhir/ValueSet/quantity-comparator|4.0.1" />
+      </binding>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="SN.1  / CQ.1" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="IVL properties" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.dosage:freitextlicheDosierung.maxDosePerLifetime.unit">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="MedicationStatement.dosage.maxDosePerLifetime.unit" />
+      <short value="Unit representation" />
+      <definition value="A human-readable form of the unit." />
+      <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
+      <requirements value="There are many representations for units of measure and in many contexts, particular representations are fixed and required. I.e. mcg for micrograms." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Quantity.unit" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="string" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="(see OBX.6 etc.) / CQ.2" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="PQ.unit" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.dosage:freitextlicheDosierung.maxDosePerLifetime.system">
+      <path value="MedicationStatement.dosage.maxDosePerLifetime.system" />
+      <short value="System that defines coded unit form" />
+      <definition value="The identification of the system that provides the coded form of the unit." />
+      <comment value="see http://en.wikipedia.org/wiki/Uniform_resource_identifier" />
+      <requirements value="Need to know the system that defines the coded form of the unit." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Quantity.system" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="uri" />
+      </type>
+      <condition value="ele-1" />
+      <condition value="qty-3" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="(see OBX.6 etc.) / CQ.2" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="CO.codeSystem, PQ.translation.codeSystem" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.dosage:freitextlicheDosierung.maxDosePerLifetime.code">
+      <path value="MedicationStatement.dosage.maxDosePerLifetime.code" />
+      <short value="Coded form of the unit" />
+      <definition value="A computer processable form of the unit in some unit representation system." />
+      <comment value="The preferred system is UCUM, but SNOMED CT can also be used (for customary units) or ISO 4217 for currency.  The context of use may additionally require a code from a particular system." />
+      <requirements value="Need a computable form of the unit that is fixed across all forms. UCUM provides this for quantities, but SNOMED CT provides many units of interest." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Quantity.code" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="code" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="(see OBX.6 etc.) / CQ.2" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="PQ.code, MO.currency, PQ.translation.code" />
       </mapping>
     </element>
   </snapshot>
@@ -6914,6 +8050,7 @@
     </element>
     <element id="MedicationStatement.dosage:strukturierteDosierung.route.coding">
       <path value="MedicationStatement.dosage.route.coding" />
+      <short value="Verabreichungsweg in Codeform" />
       <max value="1" />
       <mustSupport value="true" />
       <binding>
@@ -6952,6 +8089,7 @@
     </element>
     <element id="MedicationStatement.dosage:strukturierteDosierung.route.text">
       <path value="MedicationStatement.dosage.route.text" />
+      <short value="Verabreichungsweg als Freitext" />
       <mustSupport value="true" />
     </element>
     <element id="MedicationStatement.dosage:strukturierteDosierung.method">
@@ -6960,6 +8098,7 @@
     </element>
     <element id="MedicationStatement.dosage:strukturierteDosierung.doseAndRate">
       <path value="MedicationStatement.dosage.doseAndRate" />
+      <short value="Menge des verabreichten Medikaments" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
@@ -6969,6 +8108,7 @@
     </element>
     <element id="MedicationStatement.dosage:strukturierteDosierung.doseAndRate.dose[x]">
       <path value="MedicationStatement.dosage.doseAndRate.dose[x]" />
+      <short value="Menge des verabreichten Medikaments" />
       <min value="1" />
       <type>
         <code value="Quantity" />
@@ -6977,17 +8117,20 @@
     </element>
     <element id="MedicationStatement.dosage:strukturierteDosierung.doseAndRate.dose[x].value">
       <path value="MedicationStatement.dosage.doseAndRate.dose[x].value" />
+      <short value="Zahlenwert der Menge des verabreichten Medikaments" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="MedicationStatement.dosage:strukturierteDosierung.doseAndRate.dose[x].system">
       <path value="MedicationStatement.dosage.doseAndRate.dose[x].system" />
+      <short value="CodeSystem für kodierte Dosiereinheiten" />
       <min value="1" />
       <fixedUri value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BMP_DOSIEREINHEIT" />
       <mustSupport value="true" />
     </element>
     <element id="MedicationStatement.dosage:strukturierteDosierung.doseAndRate.dose[x].code">
       <path value="MedicationStatement.dosage.doseAndRate.dose[x].code" />
+      <short value="Einheit der Menge des verabreichten Medikaments in Codeform" />
       <min value="1" />
       <mustSupport value="true" />
       <binding>
