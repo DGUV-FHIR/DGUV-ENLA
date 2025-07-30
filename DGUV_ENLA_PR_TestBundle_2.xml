@@ -1900,6 +1900,7 @@
         </extension>
         <code value="http://hl7.org/fhirpath/System.String" />
       </type>
+      <fixedString value="DGUV-ENLA-Bsp-TestComposition-2" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -3177,6 +3178,7 @@
         </extension>
         <code value="http://hl7.org/fhirpath/System.String" />
       </type>
+      <fixedString value="DGUV-ENLA-PR-Unfallversicherungstraeger" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -5729,6 +5731,7 @@
         </extension>
         <code value="http://hl7.org/fhirpath/System.String" />
       </type>
+      <fixedString value="DGUV-ENLA-Bsp-VersichertePerson" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -7003,6 +7006,10 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Bundle.entry:Composition.id">
+      <path value="Bundle.entry.id" />
+      <fixedString value="DGUV-ENLA-Bsp-TestComposition-2" />
+    </element>
     <element id="Bundle.entry:Composition.resource">
       <path value="Bundle.entry.resource" />
       <min value="1" />
@@ -7018,6 +7025,10 @@
       <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
+    </element>
+    <element id="Bundle.entry:Unfallversicherungstraeger.id">
+      <path value="Bundle.entry.id" />
+      <fixedString value="DGUV-ENLA-PR-Unfallversicherungstraeger" />
     </element>
     <element id="Bundle.entry:Unfallversicherungstraeger.resource">
       <path value="Bundle.entry.resource" />
@@ -7049,6 +7060,10 @@
       <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
+    </element>
+    <element id="Bundle.entry:VersichertePerson.id">
+      <path value="Bundle.entry.id" />
+      <fixedString value="DGUV-ENLA-Bsp-VersichertePerson" />
     </element>
     <element id="Bundle.entry:VersichertePerson.resource">
       <path value="Bundle.entry.resource" />
