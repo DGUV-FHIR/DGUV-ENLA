@@ -3117,7 +3117,7 @@
       <sliceName value="Unfallversicherungstraeger" />
       <short value="Entry in the bundle - will have a resource or information" />
       <definition value="An entry in a bundle resource - will either contain a resource or information about a resource (transactions and history only)." />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Bundle.entry" />
@@ -3153,7 +3153,6 @@
         <xpath value="exists(f:resource) or exists(f:request) or exists(f:response)" />
         <source value="http://hl7.org/fhir/StructureDefinition/Bundle" />
       </constraint>
-      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -4398,8 +4397,8 @@
       <sliceName value="Leistungserbringer" />
       <short value="Entry in the bundle - will have a resource or information" />
       <definition value="An entry in a bundle resource - will either contain a resource or information about a resource (transactions and history only)." />
-      <min value="1" />
-      <max value="*" />
+      <min value="0" />
+      <max value="1" />
       <base>
         <path value="Bundle.entry" />
         <min value="0" />
@@ -4434,7 +4433,6 @@
         <xpath value="exists(f:resource) or exists(f:request) or exists(f:response)" />
         <source value="http://hl7.org/fhir/StructureDefinition/Bundle" />
       </constraint>
-      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -5670,7 +5668,7 @@
       <sliceName value="VersichertePerson" />
       <short value="Entry in the bundle - will have a resource or information" />
       <definition value="An entry in a bundle resource - will either contain a resource or information about a resource (transactions and history only)." />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Bundle.entry" />
@@ -5706,7 +5704,6 @@
         <xpath value="exists(f:resource) or exists(f:request) or exists(f:response)" />
         <source value="http://hl7.org/fhir/StructureDefinition/Bundle" />
       </constraint>
-      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -7022,9 +7019,7 @@
     <element id="Bundle.entry:Unfallversicherungstraeger">
       <path value="Bundle.entry" />
       <sliceName value="Unfallversicherungstraeger" />
-      <min value="1" />
       <max value="1" />
-      <mustSupport value="true" />
     </element>
     <element id="Bundle.entry:Unfallversicherungstraeger.id">
       <path value="Bundle.entry.id" />
@@ -7042,8 +7037,7 @@
     <element id="Bundle.entry:Leistungserbringer">
       <path value="Bundle.entry" />
       <sliceName value="Leistungserbringer" />
-      <min value="1" />
-      <mustSupport value="true" />
+      <max value="1" />
     </element>
     <element id="Bundle.entry:Leistungserbringer.resource">
       <path value="Bundle.entry.resource" />
@@ -7057,9 +7051,7 @@
     <element id="Bundle.entry:VersichertePerson">
       <path value="Bundle.entry" />
       <sliceName value="VersichertePerson" />
-      <min value="1" />
       <max value="1" />
-      <mustSupport value="true" />
     </element>
     <element id="Bundle.entry:VersichertePerson.id">
       <path value="Bundle.entry.id" />
