@@ -732,7 +732,7 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationArzneimittel" />
-        <targetProfile value="http://fhir.dguv.de/ENLA/Medication/DGUV_ENLA_PR_MedikationWirkstoff" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationWirkstoff" />
         <targetProfile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationRezeptur" />
       </type>
       <condition value="ele-1" />
@@ -7881,7 +7881,7 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationArzneimittel" />
-        <targetProfile value="http://fhir.dguv.de/ENLA/Medication/DGUV_ENLA_PR_MedikationWirkstoff" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationWirkstoff" />
         <targetProfile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationRezeptur" />
       </type>
       <mustSupport value="true" />
