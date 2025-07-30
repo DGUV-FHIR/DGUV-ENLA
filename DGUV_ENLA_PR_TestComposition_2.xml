@@ -5747,7 +5747,7 @@
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -5757,6 +5757,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="VersichertePerson" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -6409,7 +6410,12 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section.entry">
+    <element id="Composition.section:VersichertePerson.title">
+      <path value="Composition.section.title" />
+      <min value="1" />
+      <fixedString value="VersichertePerson" />
+    </element>
+    <element id="Composition.section:VersichertePerson.entry">
       <path value="Composition.section.entry" />
       <min value="1" />
       <max value="1" />
