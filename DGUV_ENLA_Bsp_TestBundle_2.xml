@@ -16,7 +16,7 @@
  xmlns="http://hl7.org/fhir">
     <id value="DGUV-ENLA-Bsp-TestBundle" />
     <meta>
-        <profile value="http://fhir.dguv.de/ENLA/Bundle/DGUV-ENLA-PR-TestBundle" />
+        <profile value="http://fhir.dguv.de/ENLA/Bundle/DGUV-ENLA-PR-TestBundle-2" />
     </meta>
 
     <identifier>
@@ -31,9 +31,9 @@
         <fullUrl value="http://fhir.dguv.de/Composition/180f219f-97a8-486d-99d9-ed631fe4fc57" />
         <resource>
             <Composition>
-                <id value="180f219f-97a8-486d-99d9-ed631fe4fc57"/> 
+                <id value="DGUV-ENLA-Bsp-TestComposition-2"/> 
                 <meta> 
-                    <profile value="http://fhir.dguv.de/ENLA/Composition/DGUV-ENLA-PR-TestComposition" />
+                    <profile value="http://fhir.dguv.de/ENLA/Composition/DGUV-ENLA-PR-TestComposition-2" />
                 </meta> 
                 <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-SonstigeBemerkungen">    
                     <valueString value="Die sonstige Bemerkung." />
@@ -141,7 +141,7 @@
         <fullUrl value="http://fhir.dguv.de/Organization/180f219f-97a8-486d-99d9-ed631fe4fc60" />
         <resource>            
             <Organization xmlns="http://hl7.org/fhir">
-                <id value="180f219f-97a8-486d-99d9-ed631fe4fc60" />
+                <id value="DGUV-ENLA-PR-Unfallversicherungstraeger" />
                 <meta>
                     <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Unfallversicherungstraeger" />
                 </meta>
@@ -182,7 +182,7 @@
         <fullUrl value="http://fhir.dguv.de/Practitioner/daaa56d8-4fc7-4e14-88af-ba4fc998437f" />
         <resource>
             <Practitioner xmlns="http://hl7.org/fhir">
-                <id value="daaa56d8-4fc7-4e14-88af-ba4fc998437f" />
+                <id value="DGUV-ENLA-PR-Leistungserbringer" />
                 <meta>
                     <profile value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringer"/> 
                 </meta>
