@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Author: 
+    Datum:  
+
+    Die vorliegende Beispiel Datei dient der Validierung 
+    der Datenaufnahme zu dem ......
+    
+    Zu beachten ist dabei ...
+
+    Durchzuführende Massnahmen:
+
+
+-->
+<Composition xmlns="http://hl7.org/fhir">
+   <id value="DGUV-ENLA-Bsp-TestComposition" />
+   <meta>
+       <profile value="http://fhir.dguv.de/ENLA/Composition/DGUV-ENLA-PR-TestComposition" />
+   </meta>
+   <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-SonstigeBemerkungen">
+       <valueString value="Die sonstige Bemerkung." />
+   </extension>
+   <status value="preliminary" />
+   <type>
+       <coding>
+           <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-Formtexte" />
+           <code value="F 2102" />
+           <display value="Entlassungsbericht aus stationärer Behandlung (DAV/VAV/SAV)" />
+       </coding>
+   </type>
+   <subject>
+       <reference value="Patient/431924348" />
+   </subject>
+   <date value="2025-06-10T12:00:00+01:00" />
+   <author>
+   <!--
+        Target der Referenz Practitioner ist ein "Leistungserbringer Objekt"
+    -->
+       <reference value="Practitioner/4324321" />
+   </author>
+   <title value="Entlassungsbericht aus stationärer Behandlung" />
+   <section>
+       <title value="Unfallversicherungstraeger" />
+       <entry>
+    <!--
+        Target der Referenz Organization ist ein "Unfallversicherungstraeger Objekt"
+    -->
+           <reference value="Organization/Unfallversicherungstraeger" />
+       </entry>
+   </section>
+   <section>
+       <title value="Krankenkasse" />
+       <entry>
+    <!--
+        Target der Referenz Organization ist ein "Krankenkasse Objekt"
+    -->
+           <reference value="Organization/Krankenkasse" />
+       </entry>
+   </section>
+   <section>
+       <title value="VersichertenVerhaeltnis" />
+       <entry>
+    <!--
+        Target der Referenz Coverage ist ein "VersichertenVerhaeltnis Objekt"
+    -->
+           <reference value="Coverage/VersichertenVerhaeltnis" />
+       </entry>
+   </section>
+   <section>
+       <title value="Pflegekasse" />
+       <entry>
+    <!--
+        Target der Referenz Organization ist ein "Pflegekasse Objekt"
+    -->
+           <reference value="Organization/Pflegekasse" />
+       </entry>
+   </section>
+   <section>
+       <title value="Unfallbetrieb" />
+       <entry>
+    <!--
+        Target der Referenz Organization ist ein "Unfallbetrieb Objekt"
+    -->
+           <reference value="Organization/Unfallbetrieb" />
+       </entry>
+   </section>
+   <section>
+       <title value="Aufenthaltsinformationen" />
+       <entry>
+    <!--
+        Target der Referenz Encounter ist ein "Aufenthaltsinformationen Objekt"
+    -->
+           <reference value="Encounter/Aufenthaltsinformationen" />
+       </entry>
+   </section>
+   <section>
+       <title value="DiagnoseFreitext" />
+       <entry>#
+    <!--
+        Target der Referenz Condition ist ein "DiagnoseFreitext Objekt"
+    -->
+           <reference value="Condition/DiagnoseFreitext" />
+       </entry>
+   </section>
+   <section>
+       <title value="DiagnoseStrukturiert" />
+       <entry>
+           <reference value="Condition/DiagnoseStrukturiert" />
+       </entry>
+   </section>
+   <section>
+       <title value="Therapie" />
+       <entry>
+           <reference value="Observation/Therapie" />
+       </entry>
+   </section>
+   <section>
+       <title value="Unfallereignis" />
+       <entry>
+           <reference value="Observation/Unfallereignis" />
+       </entry>
+   </section>
+   <section>
+       <title value="Aufnahmebefunde" />
+       <entry>
+           <reference value="Observation/Aufnahmebefunde" />
+       </entry>
+   </section>
+   <section>
+       <title value="Behandlungsverlauf" />
+       <entry>
+           <reference value="Observation/Behandlungsverlauf" />
+       </entry>
+   </section>
+   <section>
+       <title value="Konsiliarbefunde" />
+       <entry>
+           <reference value="Observation/Konsiliarbefunde" />
+       </entry>
+   </section>
+   <section>
+       <title value="Entlassbefunde" />
+       <entry>
+           <reference value="Observation/Entlassbefunde" />
+       </entry>
+   </section>
+   <section>
+       <title value="DokumentenReferenz" />
+       <entry>
+           <reference value="DocumentReference/DokumentenReferenz" />
+       </entry>
+   </section>
+   <section>
+       <title value="Therapieempfehlung" />
+       <entry>
+           <reference value="Observation/Therapieempfehlung" />
+       </entry>
+   </section>
+   <section>
+       <title value="MedikationsInformation" />
+       <entry>
+           <reference value="MedicationStatement/MedikationsInformation" />
+       </entry>
+   </section>
+   <section>
+       <title value="MedikationWirkstoff" />
+       <entry>
+           <reference value="Medication/MedikationWirkstoff" />
+       </entry>
+   </section>
+   <section>
+       <title value="MedikationRezeptur" />
+       <entry>
+           <reference value="Medication/MedikationRezeptur" />
+       </entry>
+   </section>
+   <section>
+       <title value="MedikationArzneimittel" />
+       <entry>
+           <reference value="Medication/MedikationArzneimittel" />
+       </entry>
+   </section>
+   <section>
+       <title value="WeiterbehandelnderArzt" />
+       <entry>
+           <reference value="PractitionerRole/WeiterbehandelnderArzt" />
+       </entry>
+   </section>
+   <section>
+       <title value="WeiterbehandelndeOrganisation" />
+       <entry>
+           <reference value="Organization/WeiterbehandelndeOrganisation" />
+       </entry>
+   </section>
+   <section>
+       <title value="RehaMassnahmen" />
+       <entry>
+           <reference value="Observation/RehaMassnahmen" />
+       </entry>
+   </section>
+   <section>
+       <title value="Heilmittel" />
+       <entry>
+           <reference value="Observation/Heilmittel" />
+       </entry>
+   </section>
+   <section>
+       <title value="Hilfsmittel" />
+       <entry>
+           <reference value="Observation/Hilfsmittel" />
+       </entry>
+   </section>
+   <section>
+       <title value="BesondereMassnahmen" />
+       <entry>
+           <reference value="Observation/BesondereMassnahmen" />
+       </entry>
+   </section>
+   <section>
+       <title value="Arbeitsunfaehigkeit" />
+       <entry>
+           <reference value="Observation/Arbeitsunfaehigkeit" />
+       </entry>
+   </section>
+   <section>
+       <title value="PrognoseWiederaufnahmeTaetigkeit" />
+       <entry>
+           <reference value="Observation/PrognoseWiederaufnahmeTaetigkeit" />
+       </entry>
+   </section>
+   <section>
+       <title value="stufenweiseWiedereingliederung" />
+       <entry>
+           <reference value="Observation/stufenweiseWiedereingliederung" />
+       </entry>
+   </section>
+   <section>
+       <title value="Datenschutz" />
+       <entry>
+           <reference value="Observation/Datenschutz" />
+       </entry>
+   </section>
+   <section>
+       <title value="DArzt" />
+       <entry>
+           <reference value="PractitionerRole/DArzt" />
+       </entry>
+   </section>
+   <section>
+       <title value="DArztOrganisation" />
+       <entry>
+           <reference value="Organization/DArztOrganisation" />
+       </entry>
+   </section>
+   <section>
+       <title value="Leistungserbringer" />
+       <entry>
+           <reference value="Practitioner/Leistungserbringer" />
+       </entry>
+   </section>
+   <section>
+       <title value="BehandelndeEinrichtung" />
+       <entry>
+           <reference value="Organization/BehandelndeEinrichtung" />
+       </entry>
+   </section>
+   <section>
+       <title value="AnsprechpartnerFuerRueckfragen" />
+       <entry>
+           <reference value="PractitionerRole/AnsprechpartnerFuerRueckfragen" />
+       </entry>
+   </section>
+</Composition>

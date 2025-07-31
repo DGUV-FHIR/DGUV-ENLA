@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Author: 
+    Datum:  
+
+    Die vorliegende Beispiel Datei dient der Validierung 
+    der Datenaufnahme zu dem ......
+    
+    Zu beachten ist dabei ...
+
+    Durchzuführende Massnahmen:
+
+
+-->
+<Composition xmlns="http://hl7.org/fhir">
+   <id value="DGUV-ENLA-Bsp-TestComposition-2" />
+   <meta>
+       <profile value="http://fhir.dguv.de/ENLA/Composition/DGUV-ENLA-PR-TestComposition-2" />
+   </meta>
+   <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-SonstigeBemerkungen">
+       <valueString value="Die sonstige Bemerkung." />
+   </extension>
+   <status value="preliminary" />
+   <type>
+       <coding>
+           <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-Formtexte" />
+           <code value="F 2102" />
+           <display value="Entlassungsbericht aus stationärer Behandlung (DAV/VAV/SAV)" />
+       </coding>
+   </type>
+   <subject>
+       <reference value="Patient/431924348" />
+   </subject>
+   <date value="2025-06-10T12:00:00+01:00" />
+   <author>
+   <!--
+        Target der Referenz Practitioner ist ein "Leistungserbringer Objekt"
+    -->
+       <reference value="Practitioner/4324321" />
+   </author>
+   <title value="Entlassungsbericht aus stationärer Behandlung" />
+   <section>
+       <title value="Unfallversicherungstraeger" />
+       <entry>
+    <!--
+        Target der Referenz Organization ist ein "Unfallversicherungstraeger Objekt"
+    -->
+           <reference value="Organization/Unfallversicherungstraeger" />
+       </entry>
+   </section>
+</Composition>

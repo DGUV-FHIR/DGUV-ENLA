@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="DGUV-ENLA-PR-TestBundle-2" />
   <url value="http://fhir.dguv.de/ENLA/Bundle/DGUV-ENLA-PR-TestBundle-2" />
+  <version value="0.0.2" />
   <name value="DGUV_ENLA_PR_TestBundle_2" />
+  <title value="ENLA-Bundle" />
   <status value="draft" />
+  <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -128,6 +132,7 @@
         </extension>
         <code value="http://hl7.org/fhirpath/System.String" />
       </type>
+      <mustSupport value="true" />
       <isSummary value="true" />
     </element>
     <element id="Bundle.meta">
@@ -300,6 +305,7 @@
       <type>
         <code value="code" />
       </type>
+      <fixedCode value="document" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -309,6 +315,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -329,10 +336,10 @@
     </element>
     <element id="Bundle.timestamp">
       <path value="Bundle.timestamp" />
-      <short value="When the bundle was assembled" />
+      <short value="Zeitpunkt der Erstellung des Bundles" />
       <definition value="The date/time that the bundle was assembled - i.e. when the resources were placed in the bundle." />
       <comment value="For many bundles, the timestamp is equal to .meta.lastUpdated, because they are not stored (e.g. search results). When a bundle is placed in a persistent store, .meta.lastUpdated will be usually be changed by the server. When the bundle is a message, a middleware agent altering the message (even if not stored) SHOULD update .meta.lastUpdated. .timestamp is used to track the original time of the Bundle, and SHOULD be populated.  &#xA;&#xA;Usage:&#xA;&#xA;* document : the date the document was created. Note: the composition may predate the document, or be associated with multiple documents. The date of the composition - the authoring time - may be earlier than the document assembly time&#xA;* message : the date that the content of the message was assembled. This date is not changed by middleware engines unless they add additional data that changes the meaning of the time of the message&#xA;* history : the date that the history was assembled. This time would be used as the _since time to ask for subsequent updates&#xA;* searchset : the time that the search set was assembled. Note that different pages MAY have different timestamps but need not. Having different timestamps does not imply that subsequent pages will represent or include changes made since the initial query&#xA;* transaction | transaction-response | batch | batch-response | collection : no particular assigned meaning&#xA;&#xA;The timestamp value should be greater than the lastUpdated and other timestamps in the resources in the bundle, and it should be equal or earlier than the .meta.lastUpdated on the Bundle itself." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Bundle.timestamp" />
@@ -351,6 +358,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -613,7 +621,7 @@
       <short value="Entry in the bundle - will have a resource or information" />
       <definition value="An entry in a bundle resource - will either contain a resource or information about a resource (transactions and history only)." />
       <min value="1" />
-      <max value="1" />
+      <max value="*" />
       <base>
         <path value="Bundle.entry" />
         <min value="0" />
@@ -883,6 +891,7 @@
         <xpath value="not(exists(f:contained/*/f:meta/f:security))" />
         <source value="http://hl7.org/fhir/StructureDefinition/DomainResource" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -1920,10 +1929,24 @@
     </element>
   </snapshot>
   <differential>
+    <element id="Bundle.id">
+      <path value="Bundle.id" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Bundle.type">
+      <path value="Bundle.type" />
+      <fixedCode value="document" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Bundle.timestamp">
+      <path value="Bundle.timestamp" />
+      <short value="Zeitpunkt der Erstellung des Bundles" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
     <element id="Bundle.entry">
       <path value="Bundle.entry" />
       <min value="1" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Bundle.entry.resource">
@@ -1933,6 +1956,7 @@
         <code value="Resource" />
         <profile value="http://fhir.dguv.de/ENLA/Composition/DGUV-ENLA-PR-TestComposition-2" />
       </type>
+      <mustSupport value="true" />
     </element>
   </differential>
 </StructureDefinition>
