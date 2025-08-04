@@ -3780,6 +3780,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <binding>
         <strength value="required" />
         <valueSet value="https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/ValueSet/wirkstofftyp" />
@@ -3893,6 +3894,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -3978,6 +3980,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -4024,6 +4027,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -7331,18 +7335,22 @@
     <element id="Medication.ingredient.extension:wirkstofftyp.value[x]">
       <path value="Medication.ingredient.extension.value[x]" />
       <short value="Wirkstofftyp" />
+      <mustSupport value="true" />
     </element>
     <element id="Medication.ingredient.extension:wirkstofftyp.value[x].system">
       <path value="Medication.ingredient.extension.value[x].system" />
       <short value="CodeSystem für Wirkstofftypen" />
+      <mustSupport value="true" />
     </element>
     <element id="Medication.ingredient.extension:wirkstofftyp.value[x].code">
       <path value="Medication.ingredient.extension.value[x].code" />
       <short value="Code des konkreten Wirkstofftyps" />
+      <mustSupport value="true" />
     </element>
     <element id="Medication.ingredient.extension:wirkstofftyp.value[x].display">
       <path value="Medication.ingredient.extension.value[x].display" />
       <short value="Bezeichnung des konkreten Wirkstofftyps" />
+      <mustSupport value="true" />
     </element>
     <element id="Medication.ingredient.item[x]:itemCodeableConcept">
       <path value="Medication.ingredient.item[x]" />
