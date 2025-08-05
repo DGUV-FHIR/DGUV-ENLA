@@ -66,6 +66,12 @@
                         <reference value="Organization/446a540f-7d08-4926-98fe-2abd3094aa92" />
                     </entry>
                 </section>
+                <section>
+                    <title value="VersichertenVerhaeltnis" />
+                    <entry>
+                        <reference value="Coverage/475c6d854-876e-4b9d-8ea9-327a46c9c50f" />
+                    </entry>
+                </section>
             </Composition>    
         </resource>
     </entry>
@@ -267,6 +273,32 @@
                     <country value="DE"/>
                 </address>
             </Organization>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://fhir.dguv.de/Coverage/75c6d854-876e-4b9d-8ea9-327a46c9c50f"/>
+        <resource>
+            <Coverage xmlns="http://hl7.org/fhir">
+                <id value="75c6d854-876e-4b9d-8ea9-327a46c9c50f" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Coverage/DGUV-ENLA-PR-VersichertenVerhaeltnis" />
+                </meta>
+                <extension  url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-Familienversicherung">
+                        <extension url="Familienversichert">
+                            <valueBoolean value="true" />
+                        </extension>
+                        <extension url="Mitgliedsname">  
+                            <valueString value="Rudi Fahrad" />
+                        </extension>
+                </extension>
+                <status value="active"/>
+                <beneficiary>
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </beneficiary>
+                <payor>
+                    <reference value="Organization/180f219f-97a8-486d-99d9-ed631fe4fc60"/>
+                </payor>
+            </Coverage>
         </resource>
     </entry>
 </Bundle>
