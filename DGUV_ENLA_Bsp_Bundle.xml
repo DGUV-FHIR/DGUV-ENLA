@@ -271,7 +271,7 @@
         <fullUrl value="http://fhir.dguv.de/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
         <resource>
             <Patient xmlns="http://hl7.org/fhir">
-                <id value="DGUV-ENLA-Bsp-VersichertePerson"/>
+                <id value="482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
                 <meta>
                     <profile value="http://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson"/>
                 </meta>   
@@ -449,7 +449,7 @@
                 </extension>
                 <status value="active"/>
                 <beneficiary>
-                    <reference value="Patient/180f219f-97a8-486d-99d9-ed631fe4fc58" />
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
                 </beneficiary>
                 <payor>
                     <reference value="Payor/Versicherung"/>
@@ -543,7 +543,7 @@
                     <display value="inpatient encounter" />
                 </class>
                 <subject>
-                    <reference value="Patient/180f219f-97a8-486d-99d9-ed631fe4fc58" />
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
                 </subject>
                 <period>
                     <start value="2024-06-10T12:00:00+01:00" />
@@ -588,7 +588,7 @@
                     <text value="Hier steht der Freitext!"/>
                 </code>
                 <subject>
-                    <reference value="Patient/180f219f-97a8-486d-99d9-ed631fe4fc58"/>
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
                 </subject>
             </Condition>
         </resource>
@@ -610,7 +610,7 @@
                     </coding>
                 </code>
                 <subject>
-                    <reference value="Patient/180f219f-97a8-486d-99d9-ed631fe4fc58"/>
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
                 </subject>
             </Condition>
           </resource>
@@ -632,7 +632,7 @@
                     </coding>
                 </code>
                 <subject>
-                    <reference value="Farad, Rudi/T995030511"/>
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
                 </subject>
                 <valueString value="neurologisches und inneres konsil" />
             </Observation>
@@ -660,7 +660,7 @@
                     </coding>
                 </code>
                 <subject> 
-                    <reference value="Farad, Rudi/T995030511" />
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
                 </subject>
                 <effectiveDateTime value="2018-08-24T13:00:00+00:00"/>
                 <component>
@@ -710,7 +710,7 @@
         <fullUrl value="http://fhir.dguv.de/Observation/d39c416d-e1a1-43fd-afef-2763fd66473e" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
-                <id value="DGUV-ENLA-Bsp-Aufnahmebefunde" />
+                <id value="d39c416d-e1a1-43fd-afef-2763fd66473e" />
                 <meta>
                     <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Aufnahmebefunde" />
                 </meta>
@@ -730,7 +730,7 @@
                     </coding>
                 </code>
                 <subject>
-                    <reference value="Patient/180f219f-97a8-486d-99d9-ed631fe4fc58" />
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
                 </subject>
                 <valueString value="Befundergebnis" />
             </Observation>
@@ -756,10 +756,10 @@
                     </coding>
                 </code>
                 <subject>
-                    <reference value="Patient/180f219f-97a8-486d-99d9-ed631fe4fc58" />
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
                 </subject>
                 <performer>
-                    <reference value="DArzt/gh45434" />
+                    <reference value="PractitionerRole/93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
                 </performer>
                 <valueString value="Freitext" />
             </Observation>
@@ -789,7 +789,7 @@
                     </coding>
                 </code>
                 <subject>
-                    <reference value="Patient/180f219f-97a8-486d-99d9-ed631fe4fc58" />
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
                 </subject>
                 <valueString value="Befundergebnis" />
             </Observation>
@@ -819,30 +819,30 @@
                     </coding>
                 </code>
                 <subject>
-                    <reference value="Patient/180f219f-97a8-486d-99d9-ed631fe4fc58" />
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
                 </subject>
                 <valueString value="Befundergebnis" />
             </Observation>
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/DocumentReference/c7b24835-f7b8-4480-a0fe-c0653d6c4050" />
+        <fullUrl value="http://fhir.dguv.de/Binary/c7b24835-f7b8-4480-a0fe-c0653d6c4050" />
         <resource>
             <DocumentReference xmlns="http://hl7.org/fhir">
-                <id value="c7b24835-f7b8-4480-a0fe-c0653d6c405" />
+                <id value="c7b24835-f7b8-4480-a0fe-c0653d6c4050" />
                 <meta>
                     <profile value="http://fhir.dguv.de/ENLA/DocumentReference/DGUV-ENLA-PR-DokumentenReferenz"/>
                 </meta>
                 <status value="current" />
                 <subject>
-                    <reference value="Patient/180f219f-97a8-486d-99d9-ed631fe4fc58" />
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
                 </subject>
                 <content>
                     <attachment> 
                         <contentType value="application/hl7-v3+xml"/> 
-                        <language value="en-US"/>
+                        <language value="de-DE"/>
                         <data value="YWRzYWdzYWd2ZnNhdnggMzE0OTMxMGlyaW04NDI3Y29ub3o=" />
-                        <url value="http://fhir.dguv.de/xds/mhd/Binary/07a6483f-732b-461e-86b6-edb665c45510"/>
+                        <url value="http://fhir.dguv.de/Binary/c7b24835-f7b8-4480-a0fe-c0653d6c4050"/>
                         <size value="35"/> 
                         <hash value="2jmj7l5rSw0yVb/vlWAYkK/YBwk="/> 
                         <title value="Physical"/> 
@@ -869,7 +869,7 @@
                     </coding>
                 </code>
                 <subject>
-                    <reference value="Farad, Rudi/T995030511"/>
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
                 </subject>
                 <valueString value="Regelmässige Wundkontrollen, im Bereich des linken Oberarmes empfehlen wir eine funktionelle lastfreie Behandlung für 6 Wochen postoperationem, etc." />
             </Observation>
@@ -885,10 +885,10 @@
                 </meta>
                 <status value="active" />
                 <medicationReference>
-                    <reference value="Medication/MedikationArzneimittel"/>     
+                    <reference value="Medication/8947dca1-69fd-4184-a55f-8f7f32b0a914"/>     
                 </medicationReference>
                 <subject>
-                    <reference value="Farad, Rudi/T995030511"/>     
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>     
                 </subject>  
                 <dosage>
                     <timing>
@@ -989,10 +989,10 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Medication/4b28cbef-80e7-4838-b15b-b2d9dfc4461b" />
+        <fullUrl value="http://fhir.dguv.de/Medication/ebd25191-272a-4a2f-9b52-8733963b32b8" />
         <resource>
             <Medication xmlns="http://hl7.org/fhir">
-                <id value="4b28cbef-80e7-4838-b15b-b2d9dfc4461bl" />
+                <id value="ebd25191-272a-4a2f-9b52-8733963b32b8" />
                 <meta>
                     <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationArzneimittel" />
                 </meta>
@@ -1164,7 +1164,7 @@
                     </coding>
                 </code>
                 <subject>
-                    <reference value="Farad, Rudi/T995030511"/>
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
                 </subject>
                 <effectiveTiming>
                     <code  value="http://fhir.dguv.de/ENLA/CodingSystem/DGUV-ENLA-CS-MassnahmenZeitpunkt">
@@ -1205,7 +1205,7 @@
                     </coding>
                 </code>
                 <subject>
-                    <reference value="Farad, Rudi/T995030511"/>
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
                 </subject>
                 <effectiveTiming>
                     <code  value="http://fhir.dguv.de/ENLA/CodingSystem/DGUV-ENLA-CS-MassnahmenZeitpunkt">
@@ -1246,7 +1246,7 @@
                     </coding>
                 </code>
                 <subject>
-                    <reference value="Farad, Rudi/T995030511"/>
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
                 </subject>
                 <effectiveTiming>
                     <code>  
@@ -1278,11 +1278,11 @@
                     </coding>
                 </code>
                 <subject>
-                    <reference value="Patient/180f219f-97a8-486d-99d9-ed631fe4fc58" />
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
                 </subject>
                 <effectiveDateTime value="2025-07-03" />
                 <performer>
-                    <reference value="DArzt/T37501234" />
+                    <reference value="PractitionerRole/93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
                 </performer>  
                 <valueCodeableConcept>
                     <coding>
@@ -1311,7 +1311,7 @@
                     </coding>
                 </code>
                 <subject>
-                    <reference value="Patient/180f219f-97a8-486d-99d9-ed631fe4fc58" />
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
                 </subject>
                 <valueCodeableConcept>
                     <coding>
@@ -1340,7 +1340,7 @@
                     </coding>
                 </code>
                 <subject>
-                    <reference value="Patient/180f219f-97a8-486d-99d9-ed631fe4fc58" />
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
                 </subject>
                 <valueCodeableConcept>
                     <coding>
@@ -1369,10 +1369,10 @@
                     </coding>
                 </code>
                 <subject>
-                    <reference value="Patient/180f219f-97a8-486d-99d9-ed631fe4fc58"/>
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
                 </subject>
                 <performer>
-                    <reference value="Performer/DArzt"/>
+                    <reference value="PractitionerRole/93ad5198-d79b-4436-9e1e-aaa69acb2d08"/>
                 </performer>
                 <valueBoolean value="false" />
             </Observation>
@@ -1454,10 +1454,10 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Practitioner/daaa56d8-4fc7-4e14-88af-ba4fc998437f" />
+        <fullUrl value="http://fhir.dguv.de/Practitioner/53192032-6365-4659-8cc2-f9a7df67a466" />
         <resource>
             <Practitioner xmlns="http://hl7.org/fhir">
-                <id value="daaa56d8-4fc7-4e14-88af-ba4fc998437f" />
+                <id value="53192032-6365-4659-8cc2-f9a7df67a466" />
                 <meta>
                     <profile value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringer"/> 
                 </meta>
@@ -1558,7 +1558,7 @@
                     <reference value="Practitioner/NichtAerztlich-14" />
                 </practitioner>
                 <organization>
-                    <reference value="Organization/BehandelndeEinrichtung-234" />
+                    <reference value="Organization/f952b0d1-bb04-402d-b0e6-cef800858f98" />
                 </organization>
                 <telecom>
                     <system value="phone"/>
