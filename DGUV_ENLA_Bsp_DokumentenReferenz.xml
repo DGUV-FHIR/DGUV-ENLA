@@ -13,13 +13,13 @@
 
 -->
 <DocumentReference xmlns="http://hl7.org/fhir">
-  <id value="DGUV-ENLA-Bsp-DokumentenReferenz" />
+  <id value="c7b24835-f7b8-4480-a0fe-c0653d6c4050" />
   <meta>
     <profile value="http://fhir.dguv.de/ENLA/DocumentReference/DGUV-ENLA-PR-DokumentenReferenz"/>
   </meta>
   <status value="current" />
   <subject>
-    <reference value="Patient/T37501234" />
+    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
   </subject>
   <content>
     <attachment> 
