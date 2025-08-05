@@ -60,6 +60,12 @@
                         <reference value="Organization/180f219f-97a8-486d-99d9-ed631fe4fc60" />
                     </entry>
                 </section>
+                <section>
+                    <title value="Krankenkasse" />
+                    <entry>
+                        <reference value="Organization/446a540f-7d08-4926-98fe-2abd3094aa92" />
+                    </entry>
+                </section>
             </Composition>    
         </resource>
     </entry>
@@ -210,6 +216,55 @@
                     </line>
                     <city value="Berlin" />
                     <postalCode value="10969" />
+                </address>
+            </Organization>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://fhir.dguv.de/Organization/446a540f-7d08-4926-98fe-2abd3094aa92" />
+        <resource>
+            <Organization xmlns="http://hl7.org/fhir">
+                <id value="446a540f-7d08-4926-98fe-2abd3094aa92" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Krankenkasse" />
+                </meta>
+                <!--Bei einer Familienversicherung wird hier die hauptversicherte Person angegeben.-->
+                <!--extension url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-Mitgliedsname">          
+                    <valueHumanName>
+                        <family value="Farad" />
+                        <given value="Friedrich" />
+                    </valueHumanName>
+                </extension -->
+                <!--IK-Nummer-->
+                <identifier>
+                    <type>
+                        <coding>
+                            <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                            <code value="XX"/>
+                            <display value="Organization identifier" />
+                        </coding>
+                    </type>
+                    <system value="http://fhir.de/sid/arge-ik/iknr"/>
+                    <value value="107202793"/>
+                </identifier>
+                <name value="AOK Herzogtum Lauenburg"/>
+                <telecom>
+                    <system value="phone"/>
+                    <value value="01771234"/>
+                </telecom>
+                <address>
+                    <type value="both"/>
+                    <line value="Hauptstr. 91">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                            <valueString value="Hauptstraße"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                            <valueString value="91"/>
+                        </extension>
+                    </line>
+                    <city value="Mölln"/>
+                    <postalCode value="23879"/>
+                    <country value="DE"/>
                 </address>
             </Organization>
         </resource>
