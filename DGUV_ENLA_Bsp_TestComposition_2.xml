@@ -29,14 +29,14 @@
        </coding>
    </type>
    <subject>
-       <reference value="Patient/431924348" />
+       <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
    </subject>
    <date value="2025-06-10T12:00:00+01:00" />
    <author>
    <!--
         Target der Referenz Practitioner ist ein "Leistungserbringer Objekt"
     -->
-       <reference value="Practitioner/4324321" />
+       <reference value="Practitioner/53192032-6365-4659-8cc2-f9a7df67a466" />
    </author>
    <title value="Entlassungsbericht aus stationärer Behandlung" />
    <section>
@@ -45,7 +45,7 @@
     <!--
         Target der Referenz Organization ist ein "Unfallversicherungstraeger Objekt"
     -->
-           <reference value="Organization/Unfallversicherungstraeger" />
+           <reference value="Organization/180f219f-97a8-486d-99d9-ed631fe4fc60" />
        </entry>
    </section>
 </Composition>
