@@ -28,10 +28,10 @@
     <type value="document" />
     <timestamp value="2025-06-10T12:00:00+01:00" />
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Composition/180f219f-97a8-486d-99d9-ed631fe4fc57" />
+        <fullUrl value="http://fhir.dguv.de/Composition/c00f7826-5a3e-49aa-b499-3f8c6599bd2b" />
         <resource>
             <Composition>
-                <id value="180f219f-97a8-486d-99d9-ed631fe4fc57"/> 
+                <id value="c00f7826-5a3e-49aa-b499-3f8c6599bd2b"/> 
                 <meta> 
                     <profile value="http://fhir.dguv.de/ENLA/Composition/DGUV-ENLA-PR-Composition" />
                 </meta> 
@@ -47,11 +47,11 @@
                     </coding>
                 </type>
                 <subject>
-                    <reference value="Patient/180f219f-97a8-486d-99d9-ed631fe4fc58" />
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
                 </subject>
                 <date value="2025-06-10T12:00:00+01:00" />
                 <author>
-                    <reference value="Practitioner/daaa56d8-4fc7-4e14-88af-ba4fc998437f" />
+                    <reference value="Practitioner/53192032-6365-4659-8cc2-f9a7df67a466" />
                 </author>
                 <title value="Entlassungsbericht aus stationärer Behandlung" />
                 <section>
@@ -202,6 +202,12 @@
                     <title value="Hilfsmittel" />
                     <entry>
                         <reference value="Observation/b77a0cc9-62ff-47c5-96b5-a964f313490dl" />
+                    </entry>
+                </section>
+                <section>
+                    <title value="BesondereMassnahmen" />
+                    <entry>
+                         <reference value="Observation/3aecc20f-00e2-4d82-ae7b-a703118c9969" /> 
                     </entry>
                 </section>
                 <section>
@@ -1220,6 +1226,38 @@
                         <display value="Pflegehilfsmittel" />
                     </coding>
                 </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://fhir.dguv.de/Observation/3aecc20f-00e2-4d82-ae7b-a703118c9969" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="3aecc20f-00e2-4d82-ae7b-a703118c9969" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-BesondereMassnahmen" />
+                </meta>
+                <status value="final"/>
+                <code>  
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+                        <code value="BM" />
+                        <display value="BesondereMaßnahmen" />
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Farad, Rudi/T995030511"/>
+                </subject>
+                <effectiveTiming>
+                    <code>  
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-MassnahmenZeitpunkt" />
+                            <code value="Festzul" />
+                            <display value="Durch Weiterbehandler festzulegen" />
+                        </coding>
+                    </code>
+                </effectiveTiming>
+                <valueString value="BesondereMassnahme"/> 
             </Observation>
         </resource>
     </entry>
