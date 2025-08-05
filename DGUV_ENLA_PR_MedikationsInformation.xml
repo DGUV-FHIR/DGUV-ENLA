@@ -1703,10 +1703,10 @@
         <rules value="closed" />
       </slicing>
       <short value="Dosierung des Arzneimittels, Wirkstoffs ODER der Rezeptur" />
-      <definition value="Indicates how the medication is/was or should be taken by the patient." />
+      <definition value="Max. Kardinalität 5 ermöglicht die gleichzeitige Angabe einer freitextlichen Dosierung neben dem 4-teiligen Schema in der strukturierten Dosierung." />
       <comment value="The dates included in the dosage on a Medication Statement reflect the dates for a given dose.  For example, &quot;from November 1, 2016 to November 3, 2016, take one tablet daily and from November 4, 2016 to November 7, 2016, take two tablets daily.&quot;  It is expected that this specificity may only be populated where the patient brings in their labeled container or where the Medication Statement is derived from a MedicationRequest." />
       <min value="1" />
-      <max value="4" />
+      <max value="5" />
       <base>
         <path value="MedicationStatement.dosage" />
         <min value="0" />
@@ -3136,7 +3136,7 @@
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
       <min value="1" />
-      <max value="*" />
+      <max value="1" />
       <base>
         <path value="CodeableConcept.coding" />
         <min value="0" />
@@ -7917,8 +7917,9 @@
         <rules value="closed" />
       </slicing>
       <short value="Dosierung des Arzneimittels, Wirkstoffs ODER der Rezeptur" />
+      <definition value="Max. Kardinalität 5 ermöglicht die gleichzeitige Angabe einer freitextlichen Dosierung neben dem 4-teiligen Schema in der strukturierten Dosierung." />
       <min value="1" />
-      <max value="4" />
+      <max value="5" />
       <mustSupport value="true" />
     </element>
     <element id="MedicationStatement.dosage:strukturierteDosierung">
@@ -7979,6 +7980,7 @@
     <element id="MedicationStatement.dosage:strukturierteDosierung.timing.code.coding">
       <path value="MedicationStatement.dosage.timing.code.coding" />
       <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="MedicationStatement.dosage:strukturierteDosierung.timing.code.coding.system">
