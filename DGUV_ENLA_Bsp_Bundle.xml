@@ -21,7 +21,7 @@
 
     <identifier>
      <!-- Server Anteil der URL--> 
-        <system value="http://fhir.dguv.de/open"/>
+        <system value="http://fhir.dguv.de/"/>
         <value value="5d75b64f-a8a1-49b8-8d33-bd16423b3e6e" />
     </identifier> 
 
@@ -141,7 +141,7 @@
                 <section>
                     <title value="DokumentenReferenz" />
                     <entry>
-                        <reference value="DocumentReference/c7b24835-f7b8-4480-a0fe-c0653d6c4050" />
+                        <reference value="Binary/c7b24835-f7b8-4480-a0fe-c0653d6c4050" />
                     </entry>
                 </section>
                 <section>
