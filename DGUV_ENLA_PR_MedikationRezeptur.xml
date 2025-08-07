@@ -2712,7 +2712,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Medication.manufacturer.display" />
-      <short value="Text alternative for the resource" />
+      <short value="Hersteller des Medikaments als Freitext" />
       <definition value="Plain text narrative that identifies the resource in addition to the resource reference." />
       <comment value="This is generally not the same as the Resource.text of the referenced resource.  The purpose is to identify what's being referenced, not to fully describe it." />
       <min value="1" />
@@ -7923,6 +7923,10 @@
     <element id="Medication.code.coding:verordnungskategorieCode.userSelected">
       <path value="Medication.code.coding.userSelected" />
       <max value="0" />
+    </element>
+    <element id="Medication.manufacturer.display">
+      <path value="Medication.manufacturer.display" />
+      <short value="Hersteller des Medikaments als Freitext" />
     </element>
     <element id="Medication.ingredient">
       <path value="Medication.ingredient" />

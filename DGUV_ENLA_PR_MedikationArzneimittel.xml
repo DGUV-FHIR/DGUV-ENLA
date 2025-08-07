@@ -889,7 +889,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <short value="Code defined by a terminology system" />
+      <short value="Medikament in codierter Form" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
@@ -946,7 +946,7 @@
     <element id="Medication.code.coding:PZN">
       <path value="Medication.code.coding" />
       <sliceName value="PZN" />
-      <short value="Code defined by a terminology system" />
+      <short value="Pharmazentralnummer" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
@@ -2011,7 +2011,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Medication.code.text" />
-      <short value="Arzneimittelname / Handelsname" />
+      <short value="Arzneimittelname / Handelsname als Freitext" />
       <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user." />
       <comment value="Very often the text is the same as a displayName of one of the codings." />
       <requirements value="The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source." />
@@ -2360,7 +2360,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Medication.manufacturer.display" />
-      <short value="Text alternative for the resource" />
+      <short value="Hersteller des Medikaments als Freitext" />
       <definition value="Plain text narrative that identifies the resource in addition to the resource reference." />
       <comment value="This is generally not the same as the Resource.text of the referenced resource.  The purpose is to identify what's being referenced, not to fully describe it." />
       <min value="1" />
@@ -2538,7 +2538,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <short value="Code defined by a terminology system" />
+      <short value="Abgabeform in codiertem Format" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
@@ -2595,7 +2595,7 @@
     <element id="Medication.form.coding:EDQM">
       <path value="Medication.form.coding" />
       <sliceName value="EDQM" />
-      <short value="Code defined by a terminology system" />
+      <short value="Abgabeform im EDQM-Format" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
@@ -2951,7 +2951,7 @@
     <element id="Medication.form.coding:kbvDarreichungsform">
       <path value="Medication.form.coding" />
       <sliceName value="kbvDarreichungsform" />
-      <short value="Code defined by a terminology system" />
+      <short value="Abgabeform als KBV-Darreichungsform" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
@@ -7878,12 +7878,14 @@
     </element>
     <element id="Medication.code.coding">
       <path value="Medication.code.coding" />
+      <short value="Medikament in codierter Form" />
       <min value="1" />
       <max value="1" />
     </element>
     <element id="Medication.code.coding:PZN">
       <path value="Medication.code.coding" />
       <sliceName value="PZN" />
+      <short value="Pharmazentralnummer" />
       <min value="1" />
     </element>
     <element id="Medication.code.coding:PZN.system">
@@ -7902,12 +7904,21 @@
     </element>
     <element id="Medication.code.text">
       <path value="Medication.code.text" />
-      <short value="Arzneimittelname / Handelsname" />
+      <short value="Arzneimittelname / Handelsname als Freitext" />
       <min value="1" />
+    </element>
+    <element id="Medication.manufacturer.display">
+      <path value="Medication.manufacturer.display" />
+      <short value="Hersteller des Medikaments als Freitext" />
+    </element>
+    <element id="Medication.form.coding">
+      <path value="Medication.form.coding" />
+      <short value="Abgabeform in codiertem Format" />
     </element>
     <element id="Medication.form.coding:EDQM">
       <path value="Medication.form.coding" />
       <sliceName value="EDQM" />
+      <short value="Abgabeform im EDQM-Format" />
     </element>
     <element id="Medication.form.coding:EDQM.system">
       <path value="Medication.form.coding.system" />
@@ -7916,6 +7927,7 @@
     <element id="Medication.form.coding:kbvDarreichungsform">
       <path value="Medication.form.coding" />
       <sliceName value="kbvDarreichungsform" />
+      <short value="Abgabeform als KBV-Darreichungsform" />
       <min value="1" />
       <max value="1" />
       <patternCoding>
