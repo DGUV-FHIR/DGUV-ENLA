@@ -4671,7 +4671,7 @@
     <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:ASK">
       <path value="Medication.ingredient.item[x].coding" />
       <sliceName value="ASK" />
-      <short value="Code defined by a terminology system" />
+      <short value="ASK-Code" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
@@ -5025,7 +5025,7 @@
     <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:ATC-DE">
       <path value="Medication.ingredient.item[x].coding" />
       <sliceName value="ATC-DE" />
-      <short value="Code defined by a terminology system" />
+      <short value="Anatomisch-Therapeutisch-Chemische (ATC) Klassifikation" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
@@ -5379,7 +5379,7 @@
     <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:PZN">
       <path value="Medication.ingredient.item[x].coding" />
       <sliceName value="PZN" />
-      <short value="Code defined by a terminology system" />
+      <short value="Pharmazentralnummer" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
@@ -5733,7 +5733,7 @@
     <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:WG14">
       <path value="Medication.ingredient.item[x].coding" />
       <sliceName value="WG14" />
-      <short value="Code defined by a terminology system" />
+      <short value="WG14-Nummer" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
@@ -6089,7 +6089,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Medication.ingredient.item[x].text" />
-      <short value="Plain text representation of the concept" />
+      <short value="Freitextbeschreibung des Bestandteils" />
       <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user." />
       <comment value="Freitext: Hier soll der Name des Wirkstoffes eingetragen werden." />
       <requirements value="The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source." />
@@ -7672,8 +7672,29 @@
       <path value="Medication.ingredient.item[x]" />
       <sliceName value="itemCodeableConcept" />
     </element>
+    <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:ASK">
+      <path value="Medication.ingredient.item[x].coding" />
+      <sliceName value="ASK" />
+      <short value="ASK-Code" />
+    </element>
+    <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:ATC-DE">
+      <path value="Medication.ingredient.item[x].coding" />
+      <sliceName value="ATC-DE" />
+      <short value="Anatomisch-Therapeutisch-Chemische (ATC) Klassifikation" />
+    </element>
+    <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:PZN">
+      <path value="Medication.ingredient.item[x].coding" />
+      <sliceName value="PZN" />
+      <short value="Pharmazentralnummer" />
+    </element>
+    <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:WG14">
+      <path value="Medication.ingredient.item[x].coding" />
+      <sliceName value="WG14" />
+      <short value="WG14-Nummer" />
+    </element>
     <element id="Medication.ingredient.item[x]:itemCodeableConcept.text">
       <path value="Medication.ingredient.item[x].text" />
+      <short value="Freitextbeschreibung des Bestandteils" />
       <comment value="Freitext: Hier soll der Name des Wirkstoffes eingetragen werden." />
     </element>
     <element id="Medication.ingredient.item[x]:itemReference">
