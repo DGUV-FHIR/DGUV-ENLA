@@ -102,7 +102,7 @@
       <short value="Logical id of this artifact" />
       <definition value="The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes." />
       <comment value="The only time that a resource does not have an id is when it is being submitted to the server using a create operation." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Resource.id" />
@@ -322,7 +322,7 @@
       <definition value="A list of profiles (references to [StructureDefinition](structuredefinition.html#) resources) that this resource claims to conform to. The URL is a reference to [StructureDefinition.url](structuredefinition-definitions.html#StructureDefinition.url)." />
       <comment value="It is up to the server and/or other infrastructure of policy to determine whether/how these claims are verified and/or updated over time.  The list of profile URLs is a set." />
       <min value="1" />
-      <max value="*" />
+      <max value="1" />
       <base>
         <path value="Meta.profile" />
         <min value="0" />
@@ -7412,6 +7412,7 @@
   <differential>
     <element id="Organization.id">
       <path value="Organization.id" />
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.meta">
@@ -7422,6 +7423,7 @@
     <element id="Organization.meta.profile">
       <path value="Organization.meta.profile" />
       <min value="1" />
+      <max value="1" />
       <fixedCanonical value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Unfallversicherungstraeger" />
       <mustSupport value="true" />
     </element>
