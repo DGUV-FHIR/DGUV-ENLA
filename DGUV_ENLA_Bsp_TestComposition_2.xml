@@ -20,7 +20,7 @@
    <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-SonstigeBemerkungen">
        <valueString value="Die sonstige Bemerkung." />
    </extension>
-   <status value="preliminary" />
+   <status value="final" />
    <type>
        <coding>
            <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-Formtexte" />
@@ -29,7 +29,10 @@
        </coding>
    </type>
    <subject>
-       <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+   <!--
+        Target der Referenz Patient ist ein "Patient Objekt"
+    -->
+       <reference value="Patient/c00f7826-5a3e-49aa-b499-3f8c6599bd2b" />
    </subject>
    <date value="2025-06-10T12:00:00+01:00" />
    <author>
@@ -48,4 +51,52 @@
            <reference value="Organization/180f219f-97a8-486d-99d9-ed631fe4fc60" />
        </entry>
    </section>
+   <section>
+        <title value="Krankenkasse" />
+        <entry>
+            <reference value="Organization/446a540f-7d08-4926-98fe-2abd3094aa92" />
+        </entry>
+    </section>
+    <section>
+        <title value="VersichertenVerhaeltnis" />
+        <entry>
+            <reference value="Coverage/475c6d854-876e-4b9d-8ea9-327a46c9c50f" />
+        </entry>
+    </section>
+    <section>
+        <title value="Pflegekasse" />
+        <entry>
+            <reference value="Organization/bf64ac16-926b-4082-968a-f7c088364b83f" />
+        </entry>
+    </section>
+    <section>
+        <title value="Unfallbetrieb" />
+        <entry>
+            <reference value="Organization/bef1dc10-a361-4eba-8fcc-073f771df44b" />
+        </entry>
+    </section>
+    <section>
+        <title value="Aufenthaltsinformationen" />
+        <entry>
+            <reference value="Encounter/a33633b7-ab47-4341-b4e9-c856bb5e5878" />
+        </entry>
+    </section>
+    <section>
+        <title value="DiagnoseFreitext" />
+        <entry>
+            <reference value="Condition/84507618-4ff5-46d9-9e61-8ab15c9ce2a4" />
+        </entry>
+    </section>
+    <section>
+        <title value="DiagnoseStrukturiert" />
+        <entry>
+            <reference value="Condition/9acff578-cca8-4f9c-9f58-49e5cb91bbab" />
+        </entry>
+    </section>
+    <section>
+        <title value="Therapie" />
+        <entry>
+            <reference value="Observation/2288ca98-76e8-4daf-bfb3-dd36c0efbb39" />
+        </entry>
+    </section>   
 </Composition>
