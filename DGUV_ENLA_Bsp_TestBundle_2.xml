@@ -236,6 +236,9 @@
                 -->                    
                         <reference value="Observation/4f518fd0-15dd-471a-ab4e-fe5ab3fe979e" />
                     </entry>
+                </section>
+                <section>
+                    <title value="DokumentenReferenz" />    
                     <entry>
                 <!-- 
                     Auswahl des DocumentReference Objektes:
@@ -244,6 +247,9 @@
                 -->                    
                         <reference value="DocumentReference/c7b24835-f7b8-4480-a0fe-c0653d6c4050" />
                     </entry>
+                </section>
+                <section>
+                    <title value="Therapieempfehlung" /> 
                     <entry>
                 <!-- 
                     Auswahl des Therapieempfehlung Objektes:
@@ -251,6 +257,72 @@
                     Observation/f2e30a2a-9070-43aa-9bf2-307ad290eb95
                 -->                    
                         <reference value="Observation/f2e30a2a-9070-43aa-9bf2-307ad290eb95" />
+                    </entry>
+                </section>
+                <section>
+                    <title value="MedikationsInformation" /> 
+                    <entry>
+                <!-- 
+                    Auswahl des MedikationsInformation Objektes:
+                    RelativeURL:
+                    MedicationStatement/cf72d600-1c4d-44bf-a8b3-ec100f1a4947
+                -->                    
+                        <reference value="MedicationStatement/cf72d600-1c4d-44bf-a8b3-ec100f1a4947" />
+                    </entry>
+                </section>
+                <section>
+                    <title value="MedikationWirkstoff" />    
+                    <entry>
+                <!-- 
+                    Auswahl des MedikationWirkstoff Objektes:
+                    RelativeURL:
+                    Medication/8947dca1-69fd-4184-a55f-8f7f32b0a914
+                -->                    
+                        <reference value="Medication/8947dca1-69fd-4184-a55f-8f7f32b0a914" />
+                    </entry>
+                </section>
+                <section>
+                    <title value="MedikationRezeptur" />
+                    <entry>
+                <!-- 
+                    Auswahl des MedikationRezeptur Objektes:
+                    RelativeURL:
+                    Medication/347b8239-6420-4b3a-a873-6b62e1fa1b0f
+                -->                    
+                        <reference value="Medication/347b8239-6420-4b3a-a873-6b62e1fa1b0f" />
+                    </entry>
+                </section>
+                <section>
+                    <title value="MedikationArzneimittel" />
+                    <entry>
+                <!-- 
+                    Auswahl des MedikationArzneimittel Objektes:
+                    RelativeURL:
+                    Medication/4b28cbef-80e7-4838-b15b-b2d9dfc4461b
+                -->                    
+                        <reference value="Medication/4b28cbef-80e7-4838-b15b-b2d9dfc4461b" />
+                    </entry>
+                </section>
+                <section>
+                    <title value="WeiterbehandelnderArzt" />
+                    <entry>
+                <!-- 
+                    Auswahl des WeiterbehandelnderArzt Objektes:
+                    RelativeURL:
+                    PractitionerRole/ebd25191-272a-4a2f-9b52-8733963b32b8
+                -->                    
+                        <reference value="PractitionerRole/ebd25191-272a-4a2f-9b52-8733963b32b8" />
+                    </entry>
+                </section>
+                <section>
+                    <title value="WeiterbehandelndeOrganisation" />
+                    <entry>
+                <!-- 
+                    Auswahl des WeiterbehandelndeOrganisation Objektes:
+                    RelativeURL:
+                    Organization/c9643334-ed27-4327-9eff-baff968982a0
+                -->                    
+                        <reference value="Organization/c9643334-ed27-4327-9eff-baff968982a0" />
                     </entry>
                 </section>                
             </Composition>    
@@ -957,5 +1029,254 @@
                 <valueString value="Regelmässige Wundkontrollen, im Bereich des linken Oberarmes empfehlen wir eine funktionelle lastfreie Behandlung für 6 Wochen postoperationem, etc." />
             </Observation>           
         </resource>
-    </entry>       
+    </entry>
+    <entry>
+        <!--
+        Target der Referenz MedikationsInformation ist ein "MedikationsInformation Objekt"
+        -->    
+        <fullUrl value="http://fhir.dguv.de/MedicationStatement/cf72d600-1c4d-44bf-a8b3-ec100f1a4947" />
+        <resource>
+            <MedicationStatement xmlns="http://hl7.org/fhir">
+                <id value="cf72d600-1c4d-44bf-a8b3-ec100f1a4947" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/MedicationStatement/DGUV-ENLA-PR-MedikationsInformation" />
+                </meta>
+                <status value="active" />
+                <medicationReference>
+                    <reference value="Medication/4b28cbef-80e7-4838-b15b-b2d9dfc4461b"/>     
+                </medicationReference>
+                <subject>
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>     
+                </subject>  
+                <dosage>
+                    <timing>
+                        <code>
+                            <coding>
+                                <system value="http://hl7.org/fhir/event-timing"/>
+                                <version value="1.0"/>
+                                <code value="MORN"/>
+                                <display value="Morning">
+                                    <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-AnzeigenameDeutsch">
+                                    <valueString value="Morgens"/>
+                                    </extension>
+                                </display>
+                            </coding>
+                        </code>
+                    </timing>
+                    <route>
+                        <coding>
+                                <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_Route_of_Administration_German"/>
+                                <version value="1.0.0"/>
+                                <code value="oral"/>
+                                <display value="oral"/>
+                        </coding>
+                    </route>
+                </dosage>
+            </MedicationStatement>           
+        </resource>
+    </entry>
+    <entry>
+        <!--
+        Target der Referenz MedikationWirkstoff ist ein "MedikationWirkstoff Objekt"
+        -->    
+        <fullUrl value="http://fhir.dguv.de/Medication/8947dca1-69fd-4184-a55f-8f7f32b0a914" />
+        <resource>
+            <Medication xmlns="http://hl7.org/fhir">
+                <id value="8947dca1-69fd-4184-a55f-8f7f32b0a914" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationWirkstoff" />
+                </meta>
+                <code>
+                    <coding>
+                        <system value="http://fhir.de/CodeSystem/ifa/pzn" />
+                        <code value="98765432" />
+                    </coding>
+                </code>
+                <status value="active"/>
+                <ingredient>
+                    <itemCodeableConcept>
+                    <coding>
+                    <system value="http://fhir.de/CodeSystem/ifa/pzn"/>
+                    <version value="1.0"/>
+                    <code value="98765432"/>
+                    <display value="Paracetamol"/>
+                    </coding>
+                </itemCodeableConcept>
+                </ingredient>
+                <batch>
+                    <lotNumber value="1234"/>
+                </batch>
+            </Medication>         
+        </resource>
+    </entry>
+    <entry>
+        <!--
+        Target der Referenz MedikationRezeptur ist ein "MedikationRezeptur Objekt"
+        -->    
+        <fullUrl value="http://fhir.dguv.de/Medication/347b8239-6420-4b3a-a873-6b62e1fa1b0f" />
+        <resource>
+            <Medication xmlns="http://hl7.org/fhir">
+                <id value="347b8239-6420-4b3a-a873-6b62e1fa1b0f" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationRezeptur" />
+                </meta>
+                <code>
+                    <coding>
+                        <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type" />
+                        <code value="rezeptur" />
+                    </coding>
+                </code>
+                <status value="active"/>
+                <manufacturer>
+                    <display value="AbZ Pharma GmbH"/>     
+                </manufacturer>
+                <form>
+                    <coding>
+                    <system value="http://standardterms.edqm.eu"/>
+                    <version value=" 4.0.1"/>
+                    <code value="10100500"/>
+                    <display value="Concentrate for oral suspension"/>
+                    </coding>
+                </form>
+                <ingredient>
+                    <itemCodeableConcept>
+                    <coding>
+                        <system value= "http://fhir.de/CodeSystem/ifa/pzn"/>
+                        <code value="09999011"/>
+                    </coding>
+                    </itemCodeableConcept>
+                </ingredient>
+                <batch>
+                    <lotNumber value="1234"/>
+                </batch>
+            </Medication>        
+        </resource>
+    </entry>
+    <entry>
+        <!--
+        Target der Referenz MedikationArzneimittel ist ein "MedikationArzneimittel Objekt"
+        -->    
+        <fullUrl value="http://fhir.dguv.de/Medication/4b28cbef-80e7-4838-b15b-b2d9dfc4461b" />
+        <resource>
+           <Medication xmlns="http://hl7.org/fhir">
+                <id value="4b28cbef-80e7-4838-b15b-b2d9dfc4461b" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationArzneimittel" />
+                </meta>
+                <code>
+                    <coding>
+                        <system value="http://fhir.de/CodeSystem/ifa/pzn" />
+                        <code value="04823572" />
+                    </coding>
+                    <text value="ACC long 600mg" />
+                </code>
+                <status value="active"/>
+                <manufacturer>
+                    <display value="Hexal AG"/>     
+                </manufacturer>
+                <form>
+                    <coding>
+                    <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM" />
+                    <version value="1.15"/>
+                    <code value="BTA"/>
+                    <display value="Brausetabletten"/>
+                    </coding>
+                </form>
+                <batch>
+                    <lotNumber value="1234"/>
+                </batch>
+            </Medication>            
+        </resource>
+    </entry>
+    <entry>
+        <!--
+        Target der Referenz WeiterbehandelnderArzt ist ein "WeiterbehandelnderArzt Objekt"
+        -->    
+        <fullUrl value="http://fhir.dguv.de/PractitionerRole/ebd25191-272a-4a2f-9b52-8733963b32b8" />
+        <resource>
+            <PractitionerRole xmlns="http://hl7.org/fhir">
+                <id value="ebd25191-272a-4a2f-9b52-8733963b32b8"/>
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/PractitionerRole/DGUV-ENLA-PR-WeiterbehandelnderArzt" />
+                </meta>
+                <practitioner>
+                    <reference value="Practitioner/53192032-6365-4659-8cc2-f9a7df67a466" />
+                </practitioner>
+                <organization>
+                    <reference value="Organization/c9643334-ed27-4327-9eff-baff968982a0" />
+                </organization>
+                <code>
+                    <coding>
+                        <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_Base_Role_Care" />
+                        <version value="1.6.0"/>
+                        <code value="FA" />
+                        <display value="Fachärztin/-arzt" />
+                    </coding>
+                </code>
+                <specialty>
+                    <coding>
+                        <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BAR2_ARZTNRFACHGRUPPE" />
+                        <version value="1.03"/>
+                        <code value="57" />
+                        <display value="Physikalische und Rehabilitative Medizin/Physiotherapie" />
+                    </coding>
+                </specialty>
+            </PractitionerRole>              
+        </resource>
+    </entry>
+    <entry>
+        <!--
+        Target der Referenz WeiterbehandelndeOrganisation ist ein "WeiterbehandelndeOrganisation Objekt"
+        -->    
+        <fullUrl value="http://fhir.dguv.de/Organization/c9643334-ed27-4327-9eff-baff968982a0" />
+        <resource>
+            <Organization xmlns="http://hl7.org/fhir">
+                <id value="c9643334-ed27-4327-9eff-baff968982a0" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-WeiterbehandelndeOrganisation" />
+                </meta>
+                <identifier>
+                    <type>
+                        <coding>
+                            <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+                            <code value="BSNR" />
+                            <display value="Primary physician office number" />
+                        </coding>
+                    </type>
+                    <system value="https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR" />
+                    <value value="012300004" />
+                </identifier>
+                <identifier>
+                    <type>
+                        <coding>
+                            <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+                            <code value="XX" />
+                            <display value="Organization identifier" />
+                        </coding>
+                    </type>
+                    <system value="http://fhir.de/sid/arge-ik/iknr" />
+                    <value value="123456789" />
+                </identifier>
+                <name value="Praxis Dr. med. Hans Peter Haas" />
+                <telecom>
+                    <system value="phone"/>
+                    <value value="0049 458 66 888"/>
+                </telecom>
+                <address>
+                    <type value="both" />
+                    <line value="Musterstr. 99">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                            <valueString value="99" />
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                            <valueString value="Musterstr." />
+                        </extension>
+                    </line>
+                    <city value="Dortmund" />
+                    <postalCode value="44227" />
+                    <country value="DE" />
+                </address>
+            </Organization>                          
+        </resource>
+    </entry>        
 </Bundle>
