@@ -68,8 +68,8 @@
                 <subject>
                 <!-- 
                         Lokale Referenz auf das Profil VersichertePerson:
-                        ServaerAnteil        + "/" + RelativeURL:
-                        http://fhir.dguv.de/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba
+                        RelativeURL:
+                        Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba
                 -->
                     <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
                 </subject>
@@ -77,8 +77,8 @@
                 <author>
                 <!-- 
                         Lokale Referenz auf das Profil Leistungserbringer:
-                        ServaerAnteil        + "/" + RelativeURL:
-                        http://fhir.dguv.de/Practitioner/53192032-6365-4659-8cc2-f9a7df67a466
+                        RelativeURL:
+                        Practitioner/53192032-6365-4659-8cc2-f9a7df67a466
                 -->
                     <reference value="Practitioner/53192032-6365-4659-8cc2-f9a7df67a466" />
                 </author>
@@ -88,58 +88,131 @@
                     <entry>
                 <!-- 
                     Auswahl des Unfallversicherungstraeger Objektes:
-                    ServaerAnteil        + "/" + RelativeURL:
-                    http://fhir.dguv.de/Organization/180f219f-97a8-486d-99d9-ed631fe4fc60
+                    RelativeURL:
+                    Organization/180f219f-97a8-486d-99d9-ed631fe4fc60
                 -->
                         <reference value="Organization/180f219f-97a8-486d-99d9-ed631fe4fc60" />
                     </entry>
                 </section>
-                                <section>
+                <section>
                     <title value="Krankenkasse" />
                     <entry>
+                <!-- 
+                    Auswahl des Krankenkasse Objektes:
+                    RelativeURL:
+                    Organization/446a540f-7d08-4926-98fe-2abd3094aa92
+                -->                    
                         <reference value="Organization/446a540f-7d08-4926-98fe-2abd3094aa92" />
                     </entry>
                 </section>
                 <section>
                     <title value="VersichertenVerhaeltnis" />
                     <entry>
+                <!-- 
+                    Auswahl des VersichertenVerhaeltnis Objektes:
+                    RelativeURL:
+                    Coverage/475c6d854-876e-4b9d-8ea9-327a46c9c50f
+                -->                    
                         <reference value="Coverage/475c6d854-876e-4b9d-8ea9-327a46c9c50f" />
                     </entry>
                 </section>
                 <section>
                     <title value="Pflegekasse" />
                     <entry>
+                <!-- 
+                    Auswahl des Pflegekasse Objektes:
+                    RelativeURL:
+                    Organization/bf64ac16-926b-4082-968a-f7c088364b83f
+                -->                    
                         <reference value="Organization/bf64ac16-926b-4082-968a-f7c088364b83f" />
                     </entry>
                 </section>
                 <section>
                     <title value="Unfallbetrieb" />
                     <entry>
+                <!-- 
+                    Auswahl des Unfallbetrieb Objektes:
+                    RelativeURL:
+                    Organization/bef1dc10-a361-4eba-8fcc-073f771df44b
+                -->                     
                         <reference value="Organization/bef1dc10-a361-4eba-8fcc-073f771df44b" />
                     </entry>
                 </section>
                 <section>
                     <title value="Aufenthaltsinformationen" />
                     <entry>
+                <!-- 
+                    Auswahl des Aufenthaltsinformationen Objektes:
+                    RelativeURL:
+                    Encounter/a33633b7-ab47-4341-b4e9-c856bb5e5878
+                -->                    
                         <reference value="Encounter/a33633b7-ab47-4341-b4e9-c856bb5e5878" />
                     </entry>
                 </section>
                 <section>
                     <title value="DiagnoseFreitext" />
                     <entry>
+                <!-- 
+                    Auswahl des DiagnoseFreitext Objektes:
+                    RelativeURL:
+                    Condition/84507618-4ff5-46d9-9e61-8ab15c9ce2a4
+                -->                    
                         <reference value="Condition/84507618-4ff5-46d9-9e61-8ab15c9ce2a4" />
                     </entry>
                 </section>
                 <section>
                     <title value="DiagnoseStrukturiert" />
                     <entry>
+                <!-- 
+                    Auswahl des DiagnoseStrukturiert Objektes:
+                    RelativeURL:
+                    Condition/9acff578-cca8-4f9c-9f58-49e5cb91bbab
+                -->
                         <reference value="Condition/9acff578-cca8-4f9c-9f58-49e5cb91bbab" />
                     </entry>
                 </section>
                 <section>
                     <title value="Therapie" />
                     <entry>
+                <!-- 
+                    Auswahl des Therapie Objektes:
+                    RelativeURL:
+                    Observation/2288ca98-76e8-4daf-bfb3-dd36c0efbb39
+                -->                    
                         <reference value="Observation/2288ca98-76e8-4daf-bfb3-dd36c0efbb39" />
+                    </entry>
+                </section>
+                <section>
+                    <title value="Unfallereignis" />
+                    <entry>
+                <!-- 
+                    Auswahl des Unfallereignis Objektes:
+                    RelativeURL:
+                    Observation/08b39f82-9dbf-4315-92f5-5f0011d37a5c
+                -->                    
+                        <reference value="Observation/08b39f82-9dbf-4315-92f5-5f0011d37a5c" />
+                    </entry>
+                </section>
+                <section>
+                    <title value="Aufnahmebefunde" />
+                    <entry>
+                <!-- 
+                    Auswahl des Aufnahmebefunde Objektes:
+                    RelativeURL:
+                    Observation/d39c416d-e1a1-43fd-afef-2763fd66473e
+                -->                    
+                        <reference value="Observation/d39c416d-e1a1-43fd-afef-2763fd66473e" />
+                    </entry>
+                </section>
+                <section>
+                    <title value="Behandlungsverlauf" />
+                    <entry>
+                <!-- 
+                    Auswahl des Behandlungsverlauf Objektes:
+                    RelativeURL:
+                    Observation/0c6d28f5-2b67-4308-9d90-6a53ecd9ce7e
+                -->                    
+                        <reference value="Observation/0c6d28f5-2b67-4308-9d90-6a53ecd9ce7e" />
                     </entry>
                 </section>
             </Composition>    
@@ -306,6 +379,9 @@
         </resource>
     </entry>
     <entry>
+        <!--
+        Target der Referenz Krankenkasse ist ein "Krankenkasse Objekt"
+        -->
         <fullUrl value="http://fhir.dguv.de/Organization/446a540f-7d08-4926-98fe-2abd3094aa92" />
         <resource>
             <Organization xmlns="http://hl7.org/fhir">
@@ -355,6 +431,9 @@
         </resource>
     </entry>
     <entry>
+        <!--
+        Target der Referenz VersichertenVerhaeltnis ist ein "VersichertenVerhaeltnis Objekt"
+        -->
         <fullUrl value="http://fhir.dguv.de/Coverage/475c6d854-876e-4b9d-8ea9-327a46c9c50f"/>
         <resource>
             <Coverage xmlns="http://hl7.org/fhir">
@@ -381,6 +460,9 @@
         </resource>
     </entry>
     <entry>
+        <!--
+        Target der Referenz Pflegekasse ist ein "Pflegekasse Objekt"
+        -->    
         <fullUrl value="http://fhir.dguv.de/Organization/bf64ac16-926b-4082-968a-f7c088364b83f" />
         <resource>
             <Organization xmlns="http://hl7.org/fhir">
@@ -422,6 +504,9 @@
         </resource>
     </entry>
     <entry>
+        <!--
+        Target der Referenz Unfallbetrieb ist ein "Unfallbetrieb Objekt"
+        -->  
         <fullUrl value="http://fhir.dguv.de/Organization/bef1dc10-a361-4eba-8fcc-073f771df44b"/>
         <resource>
             <Organization xmlns="http://hl7.org/fhir">
@@ -453,6 +538,9 @@
     </entry>
     <entry>
         <fullUrl value="http://fhir.dguv.de/Encounter/a33633b7-ab47-4341-b4e9-c856bb5e5878"/>
+        <!--
+        Target der Referenz Aufenthaltsinformationen ist ein "Aufenthaltsinformationen Objekt"
+        -->
         <resource>
             <Encounter xmlns="http://hl7.org/fhir">
                 <id value="a33633b7-ab47-4341-b4e9-c856bb5e5878" />
@@ -492,6 +580,9 @@
         </resource>
     </entry>
     <entry>
+        <!--
+        Target der Referenz DiagnoseFreitext ist ein "DiagnoseFreitext Objekt"
+        -->    
         <fullUrl value="http://fhir.dguv.de/Condition/84507618-4ff5-46d9-9e61-8ab15c9ce2a4" />
         <resource>
              <Condition xmlns="http://hl7.org/fhir">
@@ -517,6 +608,9 @@
         </resource>
     </entry>
     <entry>
+        <!--
+        Target der Referenz DiagnoseStrukturiert ist ein "DiagnoseStrukturiert Objekt"
+        -->     
         <fullUrl value="http://fhir.dguv.de/Condition/9acff578-cca8-4f9c-9f58-49e5cb91bbab" />
         <resource>
             <Condition xmlns="http://hl7.org/fhir">
@@ -539,6 +633,9 @@
         </resource>
     </entry>
     <entry>
+        <!--
+        Target der Referenz Therapie ist ein "Therapie Objekt"
+        -->    
         <fullUrl value="http://fhir.dguv.de/Observation/2288ca98-76e8-4daf-bfb3-dd36c0efbb39" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
@@ -558,6 +655,145 @@
                     <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
                 </subject>
                 <valueString value="neurologisches und inneres konsil" />
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <!--
+        Target der Referenz Unfallereignis ist ein "Unfallereignis Objekt"
+        -->    
+        <fullUrl value="http://fhir.dguv.de/Observation/08b39f82-9dbf-4315-92f5-5f0011d37a5c" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+            <id value="08b39f82-9dbf-4315-92f5-5f0011d37a5c"/>
+            <meta>
+                <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Unfallereignis"/>
+            </meta>
+            <!--extension url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-Pflegeunfall">
+                <extension url="Pflegeunfall">
+                    <valueBoolean value="true"/>
+                </extension>
+                <extension url="Pflegekasse"> 
+                    <valueReference value="Pflegekasse/123" />
+                </extension>
+                </extension-->
+            <status value="final"/>
+            <code>
+                <coding>
+                <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-Verletzungsartenverzeichnis"/>
+                <code value="10.1V"/>
+                <display value="Schwere Verletzungen und Verletzungskombinationen (Polytrauma) mit einem Injury Severity Score (ISS) zwischen 16 und 24."/>
+                </coding>
+            </code>
+            <subject> 
+                <reference value="Farad, Rudi/T995030511" />
+            </subject>
+            <effectiveDateTime value="2018-08-24T13:00:00+00:00"/>
+            <component>
+                <code>
+                <coding>
+                    <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-UnfallereignisComponents"/>
+                    <code value="03"/>
+                    <display value="Unfallhergang"/>
+                </coding>
+                </code>
+                <valueString value="Der Versicherte ist auf dem Weg zum Sechstagerennen mit seinem Motorrad mit einer geschätzten Geschwindigkeit von 60 km/h gegen eine Leitplanke gefahren"/>
+            </component>
+            <component>
+                <code>
+                <coding>
+                    <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-UnfallereignisComponents"/>
+                    <code value="04"/>
+                    <display value="Beschwerden/Klagen"/>
+                </coding>
+                </code>
+                <valueString value="Starke Schmerzen rechter Oberschenkel, Gefühlsstörung im Fuss"/>
+            </component>
+            <component>
+                <code>
+                <coding>
+                    <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-UnfallereignisComponents"/>
+                    <code value="05"/>
+                    <display value="Beschäftigt als"/>
+                </coding>
+                </code>
+                <valueString value="Schrittmacher"/>
+            </component>
+            <component>
+                <code>
+                <coding>
+                    <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-UnfallereignisComponents"/>
+                    <code value="06"/>
+                    <display value="Beschäftigungsbeginn"/>
+                </coding>
+                </code>
+                <valueDateTime value="2021-04-01"/>
+            </component>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <!--
+        Target der Referenz Aufnahmebefunde ist ein "Aufnahmebefunde Objekt"
+        -->    
+        <fullUrl value="http://fhir.dguv.de/Observation/d39c416d-e1a1-43fd-afef-2763fd66473e" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+            <id value="d39c416d-e1a1-43fd-afef-2763fd66473e" />
+            <meta>
+                <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Aufnahmebefunde" />
+            </meta>
+            <status value="final" />
+            <category>
+                <coding>
+                    <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-BefundKategorie" />
+                        <code value="vitalparameter" />
+                        <display value="Vitalparameter" />
+                </coding>
+            </category>
+            <code>
+                <coding>
+                    <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+                    <code value="Aufnahme" />
+                    <display value="Aufnahmebefund" />
+                </coding>
+            </code>
+            <subject>
+                <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+            </subject>
+            <valueString value="Befundergebnis" />
+        </Observation>
+        </resource>
+    </entry>
+        <entry>
+        <!--
+        Target der Referenz Behandlungsverlauf ist ein "Behandlungsverlauf Objekt"
+        -->    
+        <fullUrl value="http://fhir.dguv.de/Observation/0c6d28f5-2b67-4308-9d90-6a53ecd9ce7e" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="0c6d28f5-2b67-4308-9d90-6a53ecd9ce7e" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Behandlungsverlauf" />
+                </meta>
+                <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-Besonderheiten">
+                    <valueString value="Komplikation" />
+                </extension>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+                        <code value="BV" />
+                        <display value="Behandlungsverlauf" />
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </subject>
+                <performer>
+                    <reference value="DArzt/93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
+                </performer>
+                <valueString value="Freitext" />
             </Observation>
         </resource>
     </entry>
