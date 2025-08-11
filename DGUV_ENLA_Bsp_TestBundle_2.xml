@@ -215,6 +215,44 @@
                         <reference value="Observation/0c6d28f5-2b67-4308-9d90-6a53ecd9ce7e" />
                     </entry>
                 </section>
+                <section>
+                    <title value="Konsiliarbefunde" />
+                    <entry>
+                <!-- 
+                    Auswahl des Konsiliarbefunde Objektes:
+                    RelativeURL:
+                    Observation/0a25be9c-af37-410b-bd43-6c7d3e1f1681
+                -->                    
+                        <reference value="Observation/0a25be9c-af37-410b-bd43-6c7d3e1f1681" />
+                    </entry>
+                </section>
+                <section>
+                    <title value="Entlassbefunde" />
+                    <entry>
+                <!-- 
+                    Auswahl des Entlassbefunde Objektes:
+                    RelativeURL:
+                    Observation/4f518fd0-15dd-471a-ab4e-fe5ab3fe979e
+                -->                    
+                        <reference value="Observation/4f518fd0-15dd-471a-ab4e-fe5ab3fe979e" />
+                    </entry>
+                    <entry>
+                <!-- 
+                    Auswahl des DocumentReference Objektes:
+                    RelativeURL:
+                    DocumentReference/c7b24835-f7b8-4480-a0fe-c0653d6c4050
+                -->                    
+                        <reference value="DocumentReference/c7b24835-f7b8-4480-a0fe-c0653d6c4050" />
+                    </entry>
+                    <entry>
+                <!-- 
+                    Auswahl des Therapieempfehlung Objektes:
+                    RelativeURL:
+                    Observation/f2e30a2a-9070-43aa-9bf2-307ad290eb95
+                -->                    
+                        <reference value="Observation/f2e30a2a-9070-43aa-9bf2-307ad290eb95" />
+                    </entry>
+                </section>                
             </Composition>    
         </resource>
     </entry>
@@ -797,4 +835,127 @@
             </Observation>
         </resource>
     </entry>
+    <entry>
+        <!--
+        Target der Referenz Konsiliarbefunde ist ein "Konsiliarbefunde Objekt"
+        -->    
+        <fullUrl value="http://fhir.dguv.de/Observation/0a25be9c-af37-410b-bd43-6c7d3e1f1681" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="0a25be9c-af37-410b-bd43-6c7d3e1f1681" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Konsiliarbefunde" />
+                </meta>
+                <status value="final" />
+                <category>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-BefundKategorie" />
+                            <code value="vitalparameter" />
+                            <display value="Vitalparameter" />
+                    </coding>
+                </category>
+                <code>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+                        <code value="Konsiliar" />
+                        <display value="Konsiliarbefund" />
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </subject>
+                <valueString value="Befundergebnis" />
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <!--
+        Target der Referenz Entlassbefunde ist ein "Entlassbefunde Objekt"
+        -->
+        <fullUrl value="http://fhir.dguv.de/Observation/4f518fd0-15dd-471a-ab4e-fe5ab3fe979e"/>
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="4f518fd0-15dd-471a-ab4e-fe5ab3fe979e" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Entlassbefunde" />
+                </meta>
+                <status value="final" />
+                <category>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-BefundKategorie" />
+                            <code value="vitalparameter" />
+                            <display value="Vitalparameter" />
+                    </coding>
+                </category>
+                <code>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+                        <code value="Entlass" />
+                        <display value="Entlassungsbefund" />
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </subject>
+                <valueString value="Befundergebnis" />
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <!--
+        Target der Referenz DocumentReference ist ein "DocumentReference Objekt"
+        -->    
+        <fullUrl value="http://fhir.dguv.de/DocumentReference/c7b24835-f7b8-4480-a0fe-c0653d6c4050" />
+        <resource>
+            <DocumentReference xmlns="http://hl7.org/fhir">
+            <id value="c7b24835-f7b8-4480-a0fe-c0653d6c4050" />
+            <meta>
+                <profile value="http://fhir.dguv.de/ENLA/DocumentReference/DGUV-ENLA-PR-DokumentenReferenz"/>
+            </meta>
+            <status value="current" />
+            <subject>
+                <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+            </subject>
+            <content>
+                <attachment> 
+                    <!-- contentType value="application/hl7-v3+xml"/-->
+                    <contentType value="application/pdf"/>
+                    <language value="de-DE"/>
+                    <data value="YWRzYWdzYWd2ZnNhdnggMzE0OTMxMGlyaW04NDI3Y29ub3o=" />
+                    <url value="Binary/c7b24835-f7b8-4480-a0fe-c0653d6c4050"/>
+                    <!-- size value="35"/ --> 
+                    <!-- hash value="2jmj7l5rSw0yVb/vlWAYkK/YBwk="/ --> 
+                    <!-- title value="Physical"/ --> 
+                    <!-- creation value="2005-12-24T09:35:00+11:00"/ --> 
+                </attachment> 
+            </content>
+            </DocumentReference>            
+        </resource>
+    </entry>
+    <entry>
+        <!--
+        Target der Referenz Therapieempfehlung ist ein "Therapieempfehlung Objekt"
+        -->    
+        <fullUrl value="http://fhir.dguv.de/Observation/f2e30a2a-9070-43aa-9bf2-307ad290eb95" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="f2e30a2a-9070-43aa-9bf2-307ad290eb95" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Therapieempfehlung" />
+                </meta>
+                <status value="final"/>
+                <code>  
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+                        <code value="THE" />
+                        <display value="Therapieempfehlung" />
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
+                </subject>
+                <valueString value="Regelmässige Wundkontrollen, im Bereich des linken Oberarmes empfehlen wir eine funktionelle lastfreie Behandlung für 6 Wochen postoperationem, etc." />
+            </Observation>           
+        </resource>
+    </entry>       
 </Bundle>
