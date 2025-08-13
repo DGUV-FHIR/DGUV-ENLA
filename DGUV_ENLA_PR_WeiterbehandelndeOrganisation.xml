@@ -140,6 +140,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -14435,6 +14436,7 @@
     <element id="Organization.meta">
       <path value="Organization.meta" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Organization.meta.profile">
       <path value="Organization.meta.profile" />
