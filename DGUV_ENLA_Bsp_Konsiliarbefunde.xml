@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Observation xmlns="http://hl7.org/fhir">
-    <!--
-    Author: 
-    Datum:  
-
-    Die vorliegende Beispiel Datei .... dient der Validierung 
-    der Datenaufnahme zu dem ......
-    
-    Zu beachten ist dabei ...
-
-    Durchzuführende Massnahmen:
-
-
--->
-    <id value="DGUV-ENLA-Bsp-Konsiliarbefunde" />
+    <id value="0a25be9c-af37-410b-bd43-6c7d3e1f1681" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Konsiliarbefunde" />
     </meta>
@@ -21,8 +8,8 @@
     <category>
         <coding>
             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-BefundKategorie" />
-                <code value="vitalparameter" />
-                <display value="Vitalparameter" />
+            <code value="vitalparameter" />
+            <display value="Vitalparameter" />
         </coding>
     </category>
     <code>
@@ -33,7 +20,7 @@
         </coding>
     </code>
     <subject>
-        <reference value="Patient/T37501234" />
+        <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
     </subject>
     <valueString value="Befundergebnis" />
 </Observation>

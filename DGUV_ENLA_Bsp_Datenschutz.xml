@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-    Author: 
-    Datum:  
-
-    Die vorliegende Beispiel Datei .... dient der Validierung 
-    der Datenaufnahme zu dem ......
-    
-    Zu beachten ist dabei ...
-
-    Durchzuführende Massnahmen:
-
-
--->
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="DGUV-ENLA-PR-Datenschutz" />
+    <id value="dc5b40d7-1c69-401a-a649-145c79c4b571" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Datenschutz" />
     </meta>
@@ -26,10 +13,10 @@
         </coding>
     </code>
     <subject>
-        <reference value="Patient/VersichertePerson-1"/>
+        <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
     </subject>
     <performer>
-        <reference value="Performer/DArzt"/>
+        <reference value="PractitionerRole/93ad5198-d79b-4436-9e1e-aaa69acb2d08"/>
     </performer>
     <valueBoolean value="false" />
 </Observation>

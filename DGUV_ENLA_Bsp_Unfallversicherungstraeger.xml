@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-    Author: 
-    Datum:  
-
-    Die vorliegende Beispiel Datei .... dient der Validierung 
-    der Datenaufnahme zu dem ......
-    
-    Zu beachten ist dabei ...
-
-    Durchzuführende Massnahmen:
-
-
--->
 <Organization xmlns="http://hl7.org/fhir">
-    <id value="DGUV-ENLA-Bsp-Unfallversicherungstraeger" />
+    <id value="180f219f-97a8-486d-99d9-ed631fe4fc60" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Unfallversicherungstraeger" />
     </meta>
@@ -31,9 +18,9 @@
     </identifier>
     <name value="BG Verwaltung Berlin" />
     <telecom>
-		<system value="phone"/>
-		<value value="030 77003-0"/>
-	</telecom>
+        <system value="phone"/>
+        <value value="030 77003-0"/>
+    </telecom>
     <address>
         <type value="both" />
         <line value="Markgrafenstraße 18">

@@ -1,28 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-    Author: 
-    Datum:  
-
-    Die vorliegende Beispiel Datei .... dient der Validierung 
-    der Datenaufnahme zu dem ......
-    
-    Zu beachten ist dabei ...
-
-    Durchzuführende Massnahmen:
-
-
--->
 <MedicationStatement xmlns="http://hl7.org/fhir">
-    <id value="DGUV-ENLA-Bsp-MedikationsInformation" />
+    <id value="cf72d600-1c4d-44bf-a8b3-ec100f1a4947" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/MedicationStatement/DGUV-ENLA-PR-MedikationsInformation" />
     </meta>
     <status value="active" />
     <medicationReference>
-        <reference value="Medication/MedikationArzneimittel"/>     
+        <reference value="Medication/4b28cbef-80e7-4838-b15b-b2d9dfc4461b"/>     
     </medicationReference>
     <subject>
-        <reference value="Farad, Rudi/T995030511"/>     
+        <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>     
     </subject>  
     <dosage>
         <timing>
@@ -33,7 +20,7 @@
                     <code value="MORN"/>
                     <display value="Morning">
                         <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-AnzeigenameDeutsch">
-                        <valueString value="Morgens"/>
+                            <valueString value="Morgens"/>
                         </extension>
                     </display>
                 </coding>
@@ -41,11 +28,11 @@
         </timing>
         <route>
             <coding>
-                    <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_Route_of_Administration_German"/>
-                    <version value="1.0.0"/>
-                    <code value="oral"/>
-                    <display value="oral"/>
+                <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_Route_of_Administration_German"/>
+                <version value="1.0.0"/>
+                <code value="oral"/>
+                <display value="oral"/>
             </coding>
         </route>
     </dosage>
-</MedicationStatement>
+</MedicationStatement>  

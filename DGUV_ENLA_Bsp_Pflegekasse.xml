@@ -1,23 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-    Author: 
-    Datum:  
-
-    Die vorliegende Beispiel Datei .... dient der Validierung 
-    der Datenaufnahme zu dem ......
-    
-    Zu beachten ist dabei ...
-
-    Durchzuführende Massnahmen:
-
-
--->
 <Organization xmlns="http://hl7.org/fhir">
-    <id value="DGUV-ENLA-Bsp-Pflegekasse" />
+    <id value="bf64ac16-926b-4082-968a-f7c088364b83f" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Pflegekasse" />
     </meta>
-      <identifier>
+    <identifier>
         <type>
             <coding>
                 <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />

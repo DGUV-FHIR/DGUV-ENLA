@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-    Author: 
-    Datum:  
-
-    Die vorliegende Beispiel Datei .... dient der Validierung 
-    der Datenaufnahme zu dem ......
-    
-    Zu beachten ist dabei ...
-
-    Durchzuführende Massnahmen:
-
-
--->
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="DGUV-ENLA-Bsp-PrognoseWiederaufnahmeTaetigkeit" />
+    <id value="f8412800-04b9-446b-b83d-2d772af8099b" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-PrognoseWiederaufnahmeTaetigkeit" />
     </meta>
@@ -26,7 +13,7 @@
         </coding>
     </code>
     <subject>
-        <reference value="Patient/T37501234" />
+        <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
     </subject>
     <valueCodeableConcept>
         <coding>

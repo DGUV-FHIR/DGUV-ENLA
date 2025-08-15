@@ -1,27 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-    Author: 
-    Datum:  
-
-    Die vorliegende Beispiel Datei .... dient der Validierung 
-    der Datenaufnahme zu dem ......
-    
-    Zu beachten ist dabei ...
-
-    Durchzuführende Massnahmen:
-
-
--->
 <PractitionerRole xmlns="http://hl7.org/fhir">
-    <id value="DGUV-ENLA-Bsp-WeiterbehandelnderArzt"/>
+    <id value="ebd25191-272a-4a2f-9b52-8733963b32b8"/>
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/PractitionerRole/DGUV-ENLA-PR-WeiterbehandelnderArzt" />
     </meta>
     <practitioner>
-        <reference value="Practitioner/Arzt-14" />
+        <reference value="Practitioner/53192032-6365-4659-8cc2-f9a7df67a466" />
     </practitioner>
     <organization>
-        <reference value="Organization/WeiterbehandelndeOrganisation-cf042e44-086a-4d51-9c77-172f9a972e3b" />
+        <reference value="Organization/c9643334-ed27-4327-9eff-baff968982a0" />
     </organization>
     <code>
         <coding>

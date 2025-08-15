@@ -1,18 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <Practitioner xmlns="http://hl7.org/fhir">
-    <!--
-    Author: 
-    Datum:  
-
-    Die vorliegende Beispiel Datei .... dient der Validierung 
-    der Datenaufnahme zu dem ......
-    
-    Zu beachten ist dabei ...
-
-    Durchzuführende Massnahmen:
-
-
--->
-    <id value="DGUV-ENLA-Bsp-Leistungserbringer" />
+    <id value="53192032-6365-4659-8cc2-f9a7df67a466" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringer"/> 
     </meta>
@@ -31,7 +19,7 @@
         <use value="official"/>
         <family value="Musteraerztin14">
             <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
-                    <valueString value="Musteraerztin14" />
+                <valueString value="Musteraerztin14" />
             </extension>
         </family>
         <given value="Maria"/>

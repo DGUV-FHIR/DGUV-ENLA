@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-    Author: 
-    Datum:  
-
-    Die vorliegende Beispiel Datei .... dient der Validierung 
-    der Datenaufnahme zu dem ......
-    
-    Zu beachten ist dabei ...
-
-    Durchzuführende Massnahmen:
-
-
--->
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="DGUV-ENLA-Bsp-Therapieempfehlung" />
+    <id value="f2e30a2a-9070-43aa-9bf2-307ad290eb95" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Therapieempfehlung" />
     </meta>
@@ -26,7 +13,7 @@
         </coding>
     </code>
     <subject>
-        <reference value="Farad, Rudi/T995030511"/>
+        <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
     </subject>
     <valueString value="Regelmässige Wundkontrollen, im Bereich des linken Oberarmes empfehlen wir eine funktionelle lastfreie Behandlung für 6 Wochen postoperationem, etc." />
-</Observation>
+</Observation> 

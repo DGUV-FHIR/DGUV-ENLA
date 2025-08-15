@@ -1,19 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
-    Author: 
-    Datum:  
-
-    Die vorliegende Beispiel Datei .... dient der Validierung 
-    der Datenaufnahme zu dem ......
-    
-    Zu beachten ist dabei ...
-
-    Durchzuführende Massnahmen:
-
-
--->
- <Condition xmlns="http://hl7.org/fhir">
-    <id value="DGUV-ENLA-PR-DiagnoseFreitext"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<Condition xmlns="http://hl7.org/fhir">
+    <id value="84507618-4ff5-46d9-9e61-8ab15c9ce2a4"/>
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseFreitext"/>
     </meta>
@@ -29,6 +16,6 @@
         <text value="Hier steht der Freitext!"/>
     </code>
     <subject>
-        <reference value="Patient/T37501234"/>
+        <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
     </subject>
 </Condition>

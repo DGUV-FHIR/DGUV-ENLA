@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-    Author: 
-    Datum:  
-
-    Die vorliegende Beispiel Datei .... dient der Validierung 
-    der Datenaufnahme zu dem ......
-    
-    Zu beachten ist dabei ...
-
-    Durchzuführende Massnahmen:
-
-
--->
 <Encounter xmlns="http://hl7.org/fhir">
-    <id value="DGUV-ENLA-Bsp-Aufenthaltsinformationen" />
+    <id value="a33633b7-ab47-4341-b4e9-c856bb5e5878" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Encounter/DGUV-ENLA-PR-Aufenthaltsinformationen" />
     </meta>
@@ -24,7 +11,7 @@
         <display value="inpatient encounter" />
     </class>
     <subject>
-        <reference value="Patient/T37501234" />
+        <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
     </subject>
     <period>
         <start value="2024-06-10T12:00:00+01:00" />

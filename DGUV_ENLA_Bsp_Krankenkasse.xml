@@ -1,29 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-    Author: 
-    Datum:  
-
-    Die vorliegende Beispiel Datei .... dient der Validierung 
-    der Datenaufnahme zu dem ......
-    
-    Zu beachten ist dabei ...
-
-    Durchzuführende Massnahmen:
-
-
--->
 <Organization xmlns="http://hl7.org/fhir">
-    <id value="DGUV-ENLA-Bsp-Krankenkasse" />
+    <id value="446a540f-7d08-4926-98fe-2abd3094aa92" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Krankenkasse" />
     </meta>
     <!--Bei einer Familienversicherung wird hier die hauptversicherte Person angegeben.-->
     <!--extension url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-Mitgliedsname">          
-        <valueHumanName>
-            <family value="Farad" />
-            <given value="Friedrich" />
-        </valueHumanName>
-    </extension -->
+                    <valueHumanName>
+                        <family value="Farad" />
+                        <given value="Friedrich" />
+                    </valueHumanName>
+                </extension -->
     <!--IK-Nummer-->
     <identifier>
         <type>
@@ -31,7 +18,7 @@
                 <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
                 <code value="XX"/>
                 <display value="Organization identifier" />
-             </coding>
+            </coding>
         </type>
         <system value="http://fhir.de/sid/arge-ik/iknr"/>
         <value value="107202793"/>

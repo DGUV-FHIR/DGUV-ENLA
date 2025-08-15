@@ -1,37 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-    Author: 
-    Datum:  
-
-    Die vorliegende Beispiel Datei .... dient der Validierung 
-    der Datenaufnahme zu dem ......
-    
-    Zu beachten ist dabei ...
-
-    Durchzuführende Massnahmen:
-
-
--->
 <DocumentReference xmlns="http://hl7.org/fhir">
-  <id value="c7b24835-f7b8-4480-a0fe-c0653d6c4050" />
-  <meta>
-    <profile value="http://fhir.dguv.de/ENLA/DocumentReference/DGUV-ENLA-PR-DokumentenReferenz"/>
-  </meta>
-  <status value="current" />
-  <subject>
-    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
-  </subject>
-  <content>
-    <attachment> 
-        <!-- contentType value="application/hl7-v3+xml"/-->
-        <contentType value="application/pdf"/>
-        <language value="de-DE"/>
-        <data value="YWRzYWdzYWd2ZnNhdnggMzE0OTMxMGlyaW04NDI3Y29ub3o=" />
-        <url value="Binary/c7b24835-f7b8-4480-a0fe-c0653d6c4050"/>
-        <!-- size value="35"/ --> 
-        <!-- hash value="2jmj7l5rSw0yVb/vlWAYkK/YBwk="/ --> 
-        <!-- title value="Physical"/ --> 
-        <!-- creation value="2005-12-24T09:35:00+11:00"/ --> 
-    </attachment> 
-  </content>
+    <id value="c7b24835-f7b8-4480-a0fe-c0653d6c4050" />
+    <meta>
+        <profile value="http://fhir.dguv.de/ENLA/DocumentReference/DGUV-ENLA-PR-DokumentenReferenz"/>
+    </meta>
+    <status value="current" />
+    <subject>
+        <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+    </subject>
+    <content>
+        <attachment> 
+            <!-- contentType value="application/hl7-v3+xml"/-->
+            <contentType value="application/pdf"/>
+            <language value="de-DE"/>
+            <data value="YWRzYWdzYWd2ZnNhdnggMzE0OTMxMGlyaW04NDI3Y29ub3o=" />
+            <url value="Binary/c7b24835-f7b8-4480-a0fe-c0653d6c4050"/>
+            <!-- size value="35"/ --> 
+            <!-- hash value="2jmj7l5rSw0yVb/vlWAYkK/YBwk="/ --> 
+            <!-- title value="Physical"/ --> 
+            <!-- creation value="2005-12-24T09:35:00+11:00"/ --> 
+        </attachment> 
+    </content>
 </DocumentReference>

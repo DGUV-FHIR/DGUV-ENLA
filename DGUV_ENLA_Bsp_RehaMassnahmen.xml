@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-    Author: 
-    Datum:  
-
-    Die vorliegende Beispiel Datei .... dient der Validierung 
-    der Datenaufnahme zu dem ......
-    
-    Zu beachten ist dabei ...
-
-    Durchzuführende Massnahmen:
-
-
--->
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="DGUV-ENLA-Bsp-RehaMassnahmen" />
+    <id value="0f9b10f1-b311-49e8-b395-608303bdaa2d" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-RehaMassnahmen" />
     </meta>
@@ -26,7 +13,7 @@
         </coding>
     </code>
     <subject>
-        <reference value="Farad, Rudi/T995030511"/>
+        <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
     </subject>
     <effectiveTiming>
         <code>  
@@ -39,9 +26,9 @@
     </effectiveTiming>
     <valueCodeableConcept>  
         <coding>
-                <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-IstVerordnet">
-                   <valueBoolean value="true"/>
-                </extension>
+            <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-IstVerordnet">
+                <valueBoolean value="true"/>
+            </extension>
             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-RehaMassnahmen" />
             <code value="EAP" />
             <display value="Erweiterte Ambulante Physiotherapie (EAP)" />

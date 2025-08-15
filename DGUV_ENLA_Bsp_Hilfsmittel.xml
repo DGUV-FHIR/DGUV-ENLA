@@ -1,21 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-    Author: 
-    Datum:  
-
-    Die vorliegende Beispiel Datei .... dient der Validierung 
-    der Datenaufnahme zu dem ......
-    
-    Zu beachten ist dabei ...
-
-    Durchzuführende Massnahmen:
-
-
--->
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="DGUV-ENLA-Bsp-Hilfsmittel" />
+    <id value="b77a0cc9-62ff-47c5-96b5-a964f313490dl" />
     <meta>
-        <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Hilfsmittel" />
+        <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-
+            Hilfsmittel" />
     </meta>
     <status value="final"/>
     <code>  
@@ -26,7 +14,7 @@
         </coding>
     </code>
     <subject>
-        <reference value="Farad, Rudi/T995030511"/>
+        <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
     </subject>
     <effectiveTiming>
         <code  value="http://fhir.dguv.de/ENLA/CodingSystem/DGUV-ENLA-CS-MassnahmenZeitpunkt">
