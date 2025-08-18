@@ -47,5 +47,16 @@ Bundel Übersicht:
 | 32   | DArztOrganisation                | Organization        | cdc0ceec-dc27-44e5-a7c7-567a754dc912  |
 | 33   | BehandelndeEinrichtung           | Organization        | f952b0d1-bb04-402d-b0e6-cef800858f98  |
 | 34   | AnsprechpartnerFuerRueckfragen   | PractitionerRole    | 3011936a-df87-4144-a35a-bbaae96bb2cc  |
-| 35   | MedikationRezeptur               | Medication          | c5b2376e-c4e3-46f6-9405-76e1c76b2262  |
+
+DArzt Practitioner:   Hier muss noch die UUID eines Arztes eingegeben werden
+
+UUID:  4e07b001-b6fa-42bd-b41f-7f0c457f12fc
+DArzt Practitioner:  Practitioner/4e07b001-b6fa-42bd-b41f-7f0c457f12fc
+
+
+
+AnsprechpartnerFuerRueckfragen Practitioner:  Hier muss der nicht ärztliche Ansprechpartner angegeben werden!!!
+
+UUID: 6961e5c7-6f30-4e71-ac0a-b5dc832ef3c7
+AnsprechpartnerFuerRueckfragen Practitioner:  Practitioner/6961e5c7-6f30-4e71-ac0a-b5dc832ef3c7
 
