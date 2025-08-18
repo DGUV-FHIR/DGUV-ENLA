@@ -14,7 +14,7 @@
     </extension>
     <practitioner>
         <!-- Hier muss der nicht ärztliche Ansprechpartner angegeben werden!!! NEUE UUID -->
-        <reference value="Practitioner/NichtAerztlich-14" />
+        <reference value="Practitioner/6961e5c7-6f30-4e71-ac0a-b5dc832ef3c7" />
     </practitioner>
     <organization>
         <reference value="Organization/f952b0d1-bb04-402d-b0e6-cef800858f98" />
