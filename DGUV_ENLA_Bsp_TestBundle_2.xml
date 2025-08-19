@@ -41,13 +41,13 @@
     </meta>
      <identifier>
      <!-- Server Anteil der URL--> 
-        <system value="http://fhir.dguv.de/open"/>
+        <system value="http://test.dguv.de/open"/>
         <value value="5d75b64f-a8a1-49b8-8d33-bd16423b3e6e" />
     </identifier> 
     <type value="document" />
     <timestamp value="2025-06-10T12:00:00+01:00" />
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Composition/c00f7826-5a3e-49aa-b499-3f8c6599bd2b" />
+        <fullUrl value="http://test.dguv.de/Composition/c00f7826-5a3e-49aa-b499-3f8c6599bd2b" />
         <resource>
             <Composition>
                 <id value="c00f7826-5a3e-49aa-b499-3f8c6599bd2b" />
@@ -464,7 +464,7 @@
         <!--
         Target der Referenz VersichertePerson ist ein "VersichertePerson Objekt"
         -->
-        <fullUrl value="http://fhir.dguv.de/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+        <fullUrl value="http://test.dguv.de/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
         <resource>
             <Patient xmlns="http://hl7.org/fhir">
                 <id value="482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
@@ -541,7 +541,7 @@
         <!--
         Target der Referenz Leistungserbringer ist ein "Leistungserbringer Objekt"
         -->
-        <fullUrl value="http://fhir.dguv.de/Practitioner/53192032-6365-4659-8cc2-f9a7df67a466" />
+        <fullUrl value="http://test.dguv.de/Practitioner/53192032-6365-4659-8cc2-f9a7df67a466" />
         <resource>
             <Practitioner xmlns="http://hl7.org/fhir">
                 <id value="53192032-6365-4659-8cc2-f9a7df67a466" />
@@ -580,7 +580,7 @@
         <!--
         Target der Referenz DArzt Leistungserbringer ist ein "DARZT Leistungserbringer Objekt"
         -->
-        <fullUrl value="http://fhir.dguv.de/Practitioner/4e07b001-b6fa-42bd-b41f-7f0c457f12fc" />
+        <fullUrl value="http://test.dguv.de/Practitioner/4e07b001-b6fa-42bd-b41f-7f0c457f12fc" />
         <resource>
             <Practitioner xmlns="http://hl7.org/fhir">
                 <id value="4e07b001-b6fa-42bd-b41f-7f0c457f12fc" />
@@ -619,7 +619,7 @@
         <!--
         Target der Referenz DArzt Leistungserbringer ist ein "DARZT Leistungserbringer Objekt"
         -->
-        <fullUrl value="http://fhir.dguv.de/Practitioner/6961e5c7-6f30-4e71-ac0a-b5dc832ef3c7" />
+        <fullUrl value="http://test.dguv.de/Practitioner/6961e5c7-6f30-4e71-ac0a-b5dc832ef3c7" />
         <resource>
             <Practitioner xmlns="http://hl7.org/fhir">
                 <id value="6961e5c7-6f30-4e71-ac0a-b5dc832ef3c7" />
@@ -658,7 +658,7 @@
         <!--
         Target der Referenz Unfallversicherungstraeger ist ein "Unfallversicherungstraeger Objekt"
         -->
-        <fullUrl value="http://fhir.dguv.de/Organization/180f219f-97a8-486d-99d9-ed631fe4fc60" />
+        <fullUrl value="http://test.dguv.de/Organization/180f219f-97a8-486d-99d9-ed631fe4fc60" />
         <resource>            
             <Organization xmlns="http://hl7.org/fhir">
                 <id value="180f219f-97a8-486d-99d9-ed631fe4fc60" />
@@ -702,7 +702,7 @@
         <!--
         Target der Referenz Krankenkasse ist ein "Krankenkasse Objekt"
         -->
-        <fullUrl value="http://fhir.dguv.de/Organization/446a540f-7d08-4926-98fe-2abd3094aa92" />
+        <fullUrl value="http://test.dguv.de/Organization/446a540f-7d08-4926-98fe-2abd3094aa92" />
         <resource>
             <Organization xmlns="http://hl7.org/fhir">
                 <id value="446a540f-7d08-4926-98fe-2abd3094aa92" />
@@ -754,7 +754,7 @@
         <!--
         Target der Referenz VersichertenVerhaeltnis ist ein "VersichertenVerhaeltnis Objekt"
         -->
-        <fullUrl value="http://fhir.dguv.de/Coverage/475c6d854-876e-4b9d-8ea9-327a46c9c50f"/>
+        <fullUrl value="http://test.dguv.de/Coverage/475c6d854-876e-4b9d-8ea9-327a46c9c50f"/>
         <resource>
             <Coverage xmlns="http://hl7.org/fhir">
                 <id value="475c6d854-876e-4b9d-8ea9-327a46c9c50f" />
@@ -783,7 +783,7 @@
         <!--
         Target der Referenz Pflegekasse ist ein "Pflegekasse Objekt"
         -->    
-        <fullUrl value="http://fhir.dguv.de/Organization/bf64ac16-926b-4082-968a-f7c088364b83f" />
+        <fullUrl value="http://test.dguv.de/Organization/bf64ac16-926b-4082-968a-f7c088364b83f" />
         <resource>
             <Organization xmlns="http://hl7.org/fhir">
                 <id value="bf64ac16-926b-4082-968a-f7c088364b83f" />
@@ -827,7 +827,7 @@
         <!--
         Target der Referenz Unfallbetrieb ist ein "Unfallbetrieb Objekt"
         -->  
-        <fullUrl value="http://fhir.dguv.de/Organization/bef1dc10-a361-4eba-8fcc-073f771df44b"/>
+        <fullUrl value="http://test.dguv.de/Organization/bef1dc10-a361-4eba-8fcc-073f771df44b"/>
         <resource>
             <Organization xmlns="http://hl7.org/fhir">
             <id value="bef1dc10-a361-4eba-8fcc-073f771df44b" />
@@ -857,7 +857,7 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Encounter/a33633b7-ab47-4341-b4e9-c856bb5e5878"/>
+        <fullUrl value="http://test.dguv.de/Encounter/a33633b7-ab47-4341-b4e9-c856bb5e5878"/>
         <!--
         Target der Referenz Aufenthaltsinformationen ist ein "Aufenthaltsinformationen Objekt"
         -->
@@ -903,7 +903,7 @@
         <!--
         Target der Referenz DiagnoseFreitext ist ein "DiagnoseFreitext Objekt"
         -->    
-        <fullUrl value="http://fhir.dguv.de/Condition/84507618-4ff5-46d9-9e61-8ab15c9ce2a4" />
+        <fullUrl value="http://test.dguv.de/Condition/84507618-4ff5-46d9-9e61-8ab15c9ce2a4" />
         <resource>
              <Condition xmlns="http://hl7.org/fhir">
                 <id value="84507618-4ff5-46d9-9e61-8ab15c9ce2a4"/>
@@ -931,7 +931,7 @@
         <!--
         Target der Referenz DiagnoseStrukturiert ist ein "DiagnoseStrukturiert Objekt"
         -->     
-        <fullUrl value="http://fhir.dguv.de/Condition/9acff578-cca8-4f9c-9f58-49e5cb91bbab" />
+        <fullUrl value="http://test.dguv.de/Condition/9acff578-cca8-4f9c-9f58-49e5cb91bbab" />
         <resource>
             <Condition xmlns="http://hl7.org/fhir">
                 <id value="9acff578-cca8-4f9c-9f58-49e5cb91bbab"/>
@@ -956,7 +956,7 @@
         <!--
         Target der Referenz Therapie ist ein "Therapie Objekt"
         -->    
-        <fullUrl value="http://fhir.dguv.de/Observation/2288ca98-76e8-4daf-bfb3-dd36c0efbb39" />
+        <fullUrl value="http://test.dguv.de/Observation/2288ca98-76e8-4daf-bfb3-dd36c0efbb39" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="2288ca98-76e8-4daf-bfb3-dd36c0efbb39" />
@@ -982,7 +982,7 @@
         <!--
         Target der Referenz Unfallereignis ist ein "Unfallereignis Objekt"
         -->    
-        <fullUrl value="http://fhir.dguv.de/Observation/08b39f82-9dbf-4315-92f5-5f0011d37a5c" />
+        <fullUrl value="http://test.dguv.de/Observation/08b39f82-9dbf-4315-92f5-5f0011d37a5c" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="08b39f82-9dbf-4315-92f5-5f0011d37a5c"/>
@@ -1056,7 +1056,7 @@
         <!--
         Target der Referenz Aufnahmebefunde ist ein "Aufnahmebefunde Objekt"
         -->    
-        <fullUrl value="http://fhir.dguv.de/Observation/d39c416d-e1a1-43fd-afef-2763fd66473e" />
+        <fullUrl value="http://test.dguv.de/Observation/d39c416d-e1a1-43fd-afef-2763fd66473e" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="d39c416d-e1a1-43fd-afef-2763fd66473e" />
@@ -1089,7 +1089,7 @@
         <!--
         Target der Referenz Behandlungsverlauf ist ein "Behandlungsverlauf Objekt"
         -->    
-        <fullUrl value="http://fhir.dguv.de/Observation/0c6d28f5-2b67-4308-9d90-6a53ecd9ce7e" />
+        <fullUrl value="http://test.dguv.de/Observation/0c6d28f5-2b67-4308-9d90-6a53ecd9ce7e" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="0c6d28f5-2b67-4308-9d90-6a53ecd9ce7e" />
@@ -1121,7 +1121,7 @@
         <!--
         Target der Referenz Konsiliarbefunde ist ein "Konsiliarbefunde Objekt"
         -->    
-        <fullUrl value="http://fhir.dguv.de/Observation/0a25be9c-af37-410b-bd43-6c7d3e1f1681" />
+        <fullUrl value="http://test.dguv.de/Observation/0a25be9c-af37-410b-bd43-6c7d3e1f1681" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="0a25be9c-af37-410b-bd43-6c7d3e1f1681" />
@@ -1154,7 +1154,7 @@
         <!--
         Target der Referenz Entlassbefunde ist ein "Entlassbefunde Objekt"
         -->
-        <fullUrl value="http://fhir.dguv.de/Observation/4f518fd0-15dd-471a-ab4e-fe5ab3fe979e"/>
+        <fullUrl value="http://test.dguv.de/Observation/4f518fd0-15dd-471a-ab4e-fe5ab3fe979e"/>
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="4f518fd0-15dd-471a-ab4e-fe5ab3fe979e" />
@@ -1187,7 +1187,7 @@
         <!--
         Target der Referenz DocumentReference ist ein "DocumentReference Objekt"
         -->    
-        <fullUrl value="http://fhir.dguv.de/DocumentReference/c7b24835-f7b8-4480-a0fe-c0653d6c4050" />
+        <fullUrl value="http://test.dguv.de/DocumentReference/c7b24835-f7b8-4480-a0fe-c0653d6c4050" />
         <resource>
             <DocumentReference xmlns="http://hl7.org/fhir">
                 <id value="c7b24835-f7b8-4480-a0fe-c0653d6c4050" />
@@ -1218,7 +1218,7 @@
         <!--
         Target der Referenz Therapieempfehlung ist ein "Therapieempfehlung Objekt"
         -->    
-        <fullUrl value="http://fhir.dguv.de/Observation/f2e30a2a-9070-43aa-9bf2-307ad290eb95" />
+        <fullUrl value="http://test.dguv.de/Observation/f2e30a2a-9070-43aa-9bf2-307ad290eb95" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="f2e30a2a-9070-43aa-9bf2-307ad290eb95" />
@@ -1244,7 +1244,7 @@
         <!--
         Target der Referenz MedikationsInformation ist ein "MedikationsInformation Objekt"
         -->    
-        <fullUrl value="http://fhir.dguv.de/MedicationStatement/cf72d600-1c4d-44bf-a8b3-ec100f1a4947" />
+        <fullUrl value="http://test.dguv.de/MedicationStatement/cf72d600-1c4d-44bf-a8b3-ec100f1a4947" />
         <resource>
             <MedicationStatement xmlns="http://hl7.org/fhir">
                 <id value="cf72d600-1c4d-44bf-a8b3-ec100f1a4947" />
@@ -1289,7 +1289,7 @@
         <!--
         Target der Referenz MedikationWirkstoff ist ein "MedikationWirkstoff Objekt"
         -->    
-        <fullUrl value="http://fhir.dguv.de/Medication/8947dca1-69fd-4184-a55f-8f7f32b0a914" />
+        <fullUrl value="http://test.dguv.de/Medication/8947dca1-69fd-4184-a55f-8f7f32b0a914" />
         <resource>
             <Medication xmlns="http://hl7.org/fhir">
                 <id value="8947dca1-69fd-4184-a55f-8f7f32b0a914" />
@@ -1323,7 +1323,7 @@
         <!--
         Target der Referenz MedikationRezeptur ist ein "MedikationRezeptur Objekt"
         -->    
-        <fullUrl value="http://fhir.dguv.de/Medication/347b8239-6420-4b3a-a873-6b62e1fa1b0f" />
+        <fullUrl value="http://test.dguv.de/Medication/347b8239-6420-4b3a-a873-6b62e1fa1b0f" />
         <resource>
             <Medication xmlns="http://hl7.org/fhir">
                 <id value="347b8239-6420-4b3a-a873-6b62e1fa1b0f" />
@@ -1366,7 +1366,7 @@
         <!--
         Target der Referenz MedikationArzneimittel ist ein "MedikationArzneimittel Objekt"
         -->    
-        <fullUrl value="http://fhir.dguv.de/Medication/4b28cbef-80e7-4838-b15b-b2d9dfc4461b" />
+        <fullUrl value="http://test.dguv.de/Medication/4b28cbef-80e7-4838-b15b-b2d9dfc4461b" />
         <resource>
            <Medication xmlns="http://hl7.org/fhir">
                 <id value="4b28cbef-80e7-4838-b15b-b2d9dfc4461b" />
@@ -1402,7 +1402,7 @@
         <!--
         Target der Referenz WeiterbehandelnderArzt ist ein "WeiterbehandelnderArzt Objekt"
         -->    
-        <fullUrl value="http://fhir.dguv.de/PractitionerRole/ebd25191-272a-4a2f-9b52-8733963b32b8" />
+        <fullUrl value="http://test.dguv.de/PractitionerRole/ebd25191-272a-4a2f-9b52-8733963b32b8" />
         <resource>
             <PractitionerRole xmlns="http://hl7.org/fhir">
                 <id value="ebd25191-272a-4a2f-9b52-8733963b32b8"/>
@@ -1438,7 +1438,7 @@
         <!--
         Target der Referenz WeiterbehandelndeOrganisation ist ein "WeiterbehandelndeOrganisation Objekt"
         -->    
-        <fullUrl value="http://fhir.dguv.de/Organization/c9643334-ed27-4327-9eff-baff968982a0" />
+        <fullUrl value="http://test.dguv.de/Organization/c9643334-ed27-4327-9eff-baff968982a0" />
         <resource>
             <Organization xmlns="http://hl7.org/fhir">
                 <id value="c9643334-ed27-4327-9eff-baff968982a0" />
@@ -1493,7 +1493,7 @@
         <!--
         Target der Referenz RehaMassnahmen ist ein "RehaMassnahmen Objekt"
         -->    
-        <fullUrl value="http://fhir.dguv.de/Observation/0f9b10f1-b311-49e8-b395-608303bdaa2d" />
+        <fullUrl value="http://test.dguv.de/Observation/0f9b10f1-b311-49e8-b395-608303bdaa2d" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="0f9b10f1-b311-49e8-b395-608303bdaa2d" />
@@ -1537,7 +1537,7 @@
         <!--
         Target der Referenz Heilmittel ist ein "Heilmittel Objekt"
         -->    
-        <fullUrl value="http://fhir.dguv.de/Observation/8d018e14-21b7-4982-b26f-d3b4812f7a1f" />
+        <fullUrl value="http://test.dguv.de/Observation/8d018e14-21b7-4982-b26f-d3b4812f7a1f" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="8d018e14-21b7-4982-b26f-d3b4812f7a1f" />
@@ -1581,7 +1581,7 @@
         <!--
         Target der Referenz Hilfsmittel ist ein "Hilfsmittel Objekt"
         -->    
-        <fullUrl value="http://fhir.dguv.de/Observation/b77a0cc9-62ff-47c5-96b5-a964f313490dl" />
+        <fullUrl value="http://test.dguv.de/Observation/b77a0cc9-62ff-47c5-96b5-a964f313490dl" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="b77a0cc9-62ff-47c5-96b5-a964f313490dl" />
@@ -1625,7 +1625,7 @@
         <!--
         Target der Referenz BesondereMassnahmen ist ein "BesondereMassnahmen Objekt"
         -->    
-        <fullUrl value="http://fhir.dguv.de/Observation/3aecc20f-00e2-4d82-ae7b-a703118c9969" />
+        <fullUrl value="http://test.dguv.de/Observation/3aecc20f-00e2-4d82-ae7b-a703118c9969" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="3aecc20f-00e2-4d82-ae7b-a703118c9969" />
@@ -1660,7 +1660,7 @@
         <!--
         Target der Referenz Arbeitsunfaehigkeit ist ein "Arbeitsunfaehigkeit Objekt"
         -->    
-        <fullUrl value="http://fhir.dguv.de/Observation/bbc56617-923d-4076-8bad-43cd861031c7" />
+        <fullUrl value="http://test.dguv.de/Observation/bbc56617-923d-4076-8bad-43cd861031c7" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="bbc56617-923d-4076-8bad-43cd861031c7" />
@@ -1716,7 +1716,7 @@
         <!--
         Target der Referenz PrognoseWiederaufnahmeTaetigkeit ist ein "PrognoseWiederaufnahmeTaetigkeit Objekt"
         -->    
-        <fullUrl value="http://fhir.dguv.de/Observation/f8412800-04b9-446b-b83d-2d772af8099b" />
+        <fullUrl value="http://test.dguv.de/Observation/f8412800-04b9-446b-b83d-2d772af8099b" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="f8412800-04b9-446b-b83d-2d772af8099b" />
@@ -1748,7 +1748,7 @@
         <!--
         Target der Referenz stufenweiseWiedereingliederung ist ein "stufenweiseWiedereingliederung Objekt"
         -->    
-        <fullUrl value="http://fhir.dguv.de/Observation/e04aaff2-34c7-4dfa-80cf-b3c5d5a03058" />
+        <fullUrl value="http://test.dguv.de/Observation/e04aaff2-34c7-4dfa-80cf-b3c5d5a03058" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="e04aaff2-34c7-4dfa-80cf-b3c5d5a03058" />
@@ -1780,7 +1780,7 @@
         <!--
         Target der Referenz Datenschutz ist ein "Datenschutz Objekt"
         -->    
-        <fullUrl value="http://fhir.dguv.de/Observation/dc5b40d7-1c69-401a-a649-145c79c4b571" />
+        <fullUrl value="http://test.dguv.de/Observation/dc5b40d7-1c69-401a-a649-145c79c4b571" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="dc5b40d7-1c69-401a-a649-145c79c4b571" />
@@ -1809,7 +1809,7 @@
         <!--
         Target der Referenz DArzt ist ein "DArzt Objekt"
         -->    
-        <fullUrl value="http://fhir.dguv.de/PractitionerRole/93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
+        <fullUrl value="http://test.dguv.de/PractitionerRole/93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
         <resource>
             <PractitionerRole xmlns="http://hl7.org/fhir">
                 <id value="93ad5198-d79b-4436-9e1e-aaa69acb2d08"/>
@@ -1846,7 +1846,7 @@
         <!--
         Target der Referenz DArztOrganisation ist ein "DArztOrganisation Objekt"
         -->    
-        <fullUrl value="http://fhir.dguv.de/Organization/cdc0ceec-dc27-44e5-a7c7-567a754dc912" />
+        <fullUrl value="http://test.dguv.de/Organization/cdc0ceec-dc27-44e5-a7c7-567a754dc912" />
         <resource>
             <Organization xmlns="http://hl7.org/fhir">
                 <id value="cdc0ceec-dc27-44e5-a7c7-567a754dc912" />
@@ -1900,7 +1900,7 @@
         <!--
         Target der Referenz BehandelndeEinrichtung ist ein "BehandelndeEinrichtung Objekt"
         -->    
-        <fullUrl value="http://fhir.dguv.de/Organization/f952b0d1-bb04-402d-b0e6-cef800858f98" />
+        <fullUrl value="http://test.dguv.de/Organization/f952b0d1-bb04-402d-b0e6-cef800858f98" />
         <resource>
             <Organization xmlns="http://hl7.org/fhir">
                 <id value="f952b0d1-bb04-402d-b0e6-cef800858f98" />
@@ -1952,7 +1952,7 @@
         <!--
         Target der Referenz AnsprechpartnerFuerRueckfragen ist ein "AnsprechpartnerFuerRueckfragen Objekt"
         -->    
-        <fullUrl value="http://fhir.dguv.de/PractitionerRole/3011936a-df87-4144-a35a-bbaae96bb2cc" />
+        <fullUrl value="http://test.dguv.de/PractitionerRole/3011936a-df87-4144-a35a-bbaae96bb2cc" />
         <resource>
             <PractitionerRole xmlns="http://hl7.org/fhir">
                 <id value="3011936a-df87-4144-a35a-bbaae96bb2cc"/>
