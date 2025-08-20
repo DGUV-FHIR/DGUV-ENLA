@@ -3253,7 +3253,7 @@
       <path value="Observation.value[x]" />
       <short value="Angaben über notwendige Besondere Maßnahmen" />
       <definition value="The information determined as a result of making the observation, if the information has a simple value." />
-      <comment value="An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below." />
+      <comment value="Muss auch Angabe darüber enthalten, ob eine Verordnung ausgestellt wurde." />
       <requirements value="An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations." />
       <min value="1" />
       <max value="1" />
@@ -5455,6 +5455,7 @@
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
       <short value="Angaben über notwendige Besondere Maßnahmen" />
+      <comment value="Muss auch Angabe darüber enthalten, ob eine Verordnung ausgestellt wurde." />
       <min value="1" />
       <type>
         <code value="string" />
