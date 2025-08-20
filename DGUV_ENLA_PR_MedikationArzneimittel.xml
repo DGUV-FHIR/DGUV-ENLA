@@ -3112,6 +3112,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -3154,6 +3155,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -3197,6 +3199,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -3243,6 +3246,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -7942,18 +7946,22 @@
       <path value="Medication.form.coding.system" />
       <min value="1" />
       <fixedUri value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM" />
+      <mustSupport value="true" />
     </element>
     <element id="Medication.form.coding:kbvDarreichungsform.version">
       <path value="Medication.form.coding.version" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Medication.form.coding:kbvDarreichungsform.code">
       <path value="Medication.form.coding.code" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Medication.form.coding:kbvDarreichungsform.display">
       <path value="Medication.form.coding.display" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Medication.amount.numerator.system">
       <path value="Medication.amount.numerator.system" />
