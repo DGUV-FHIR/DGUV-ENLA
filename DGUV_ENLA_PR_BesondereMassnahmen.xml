@@ -2618,7 +2618,7 @@
     </element>
     <element id="Observation.effective[x].code">
       <path value="Observation.effective[x].code" />
-      <short value="Direkt | Festzul | Azpkt |" />
+      <short value="Direkt | Festzul | Azpkt" />
       <definition value="A code for the timing schedule (or just text in code.text). Some codes such as BID are ubiquitous, but many institutions define their own additional codes. If a code is provided, the code is understood to be a complete statement of whatever is specified in the structured timing data, and either the code or the data may be used to interpret the Timing, with the exception that .repeat.bounds still applies over the code (and is not contained in the code)." />
       <comment value="BID etc. are defined as 'at institutionally specified times'. For example, an institution may choose that BID is &quot;always at 7am and 6pm&quot;.  If it is inappropriate for this choice to be made, the code BID should not be used. Instead, a distinct organization-specific code should be used in place of the HL7-defined BID code and/or a structured representation should be used (in this case, specifying the two event times)." />
       <min value="1" />
@@ -3100,7 +3100,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Observation.effective[x].code.text" />
-      <short value="Plain text representation of the concept" />
+      <short value="Beginn der Besonderen Maßnahmen als Freitext" />
       <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user." />
       <comment value="Very often the text is the same as a displayName of one of the codings." />
       <requirements value="The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source." />
@@ -3253,7 +3253,7 @@
       <path value="Observation.value[x]" />
       <short value="Angaben über notwendige Besondere Maßnahmen" />
       <definition value="The information determined as a result of making the observation, if the information has a simple value." />
-      <comment value="Muss auch Angabe darüber enthalten, ob eine Verordnung ausgestellt wurde." />
+      <comment value="Muss auch Angabe darüber enthalten, ob Verordnungen dazu ausgestellt wurden." />
       <requirements value="An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations." />
       <min value="1" />
       <max value="1" />
@@ -5419,7 +5419,7 @@
     </element>
     <element id="Observation.effective[x].code">
       <path value="Observation.effective[x].code" />
-      <short value="Direkt | Festzul | Azpkt |" />
+      <short value="Direkt | Festzul | Azpkt" />
       <min value="1" />
       <mustSupport value="true" />
       <binding>
@@ -5450,12 +5450,13 @@
     </element>
     <element id="Observation.effective[x].code.text">
       <path value="Observation.effective[x].code.text" />
+      <short value="Beginn der Besonderen Maßnahmen als Freitext" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
       <short value="Angaben über notwendige Besondere Maßnahmen" />
-      <comment value="Muss auch Angabe darüber enthalten, ob eine Verordnung ausgestellt wurde." />
+      <comment value="Muss auch Angabe darüber enthalten, ob Verordnungen dazu ausgestellt wurden." />
       <min value="1" />
       <type>
         <code value="string" />
