@@ -2165,6 +2165,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -2251,6 +2252,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -4655,7 +4657,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Medication.ingredient.extension.value[x].display" />
-      <short value="Representation defined by the system" />
+      <short value="Bezeichnung des konkreten Wirkstofftyps" />
       <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
@@ -4678,6 +4680,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -4962,7 +4965,7 @@
       <path value="Medication.ingredient.item[x].coding" />
       <slicing>
         <discriminator>
-          <type value="pattern" />
+          <type value="type" />
           <path value="$this" />
         </discriminator>
         <rules value="open" />
@@ -7907,6 +7910,7 @@
       <path value="Medication.code.coding.system" />
       <min value="1" />
       <fixedUri value="https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type" />
+      <mustSupport value="true" />
     </element>
     <element id="Medication.code.coding:verordnungskategorieCode.version">
       <path value="Medication.code.coding.version" />
@@ -7916,6 +7920,7 @@
       <path value="Medication.code.coding.code" />
       <min value="1" />
       <fixedCode value="rezeptur" />
+      <mustSupport value="true" />
     </element>
     <element id="Medication.code.coding:verordnungskategorieCode.display">
       <path value="Medication.code.coding.display" />
@@ -7966,6 +7971,11 @@
       <short value="Code des konkreten Wirkstofftyps" />
       <mustSupport value="true" />
     </element>
+    <element id="Medication.ingredient.extension:wirkstofftyp.value[x].display">
+      <path value="Medication.ingredient.extension.value[x].display" />
+      <short value="Bezeichnung des konkreten Wirkstofftyps" />
+      <mustSupport value="true" />
+    </element>
     <element id="Medication.ingredient.item[x]">
       <path value="Medication.ingredient.item[x]" />
       <short value="Bestandteil" />
@@ -7973,6 +7983,16 @@
     <element id="Medication.ingredient.item[x]:itemCodeableConcept">
       <path value="Medication.ingredient.item[x]" />
       <sliceName value="itemCodeableConcept" />
+    </element>
+    <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding">
+      <path value="Medication.ingredient.item[x].coding" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
     </element>
     <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:ASK">
       <path value="Medication.ingredient.item[x].coding" />
