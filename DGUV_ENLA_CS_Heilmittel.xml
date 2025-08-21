@@ -29,15 +29,8 @@
     <display value="Logopädie" />
   </concept>
   <concept>
-    <code value="HANDT" />
-    <display value="Handtherapie" />
-  </concept>
-  <concept>
     <code value="MTT" />
     <display value="Medizinische Trainingstherapie" />
   </concept>
-  <concept>
-    <code value="REHASP" />
-    <display value="Reha-Sport/Funktionstraining" />
-  </concept>
+
 </CodeSystem>
