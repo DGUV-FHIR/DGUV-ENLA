@@ -112,6 +112,7 @@
         </extension>
         <code value="http://hl7.org/fhirpath/System.String" />
       </type>
+      <mustSupport value="true" />
       <isSummary value="true" />
     </element>
     <element id="DocumentReference.meta">
@@ -3308,6 +3309,10 @@
     </element>
   </snapshot>
   <differential>
+    <element id="DocumentReference.id">
+      <path value="DocumentReference.id" />
+      <mustSupport value="true" />
+    </element>
     <element id="DocumentReference.meta">
       <path value="DocumentReference.meta" />
       <min value="1" />
