@@ -28,5 +28,23 @@
     <subject>
         <reference value="Farad, Rudi/T995030511"/>
     </subject>
-    <valueString value="neurologisches und inneres konsil" />
+
+    <valueString value="neurologisches und inneres konsil" >
+        <extension>
+            <OPS-Codes>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://fhir.de/CodeSystem/bfarm/ops" />
+                        <code value="1-203.1" />
+                        <display value="Invasive Funktionsdiagnostik des Nervensystems: Mit Stimulationselektroden, spinal;Invasive Funktionsdiagnostik des Nervensystems;Mit Stimulationselektroden, spinal" />
+                    </coding>
+                    <coding>
+                        <system value="http://fhir.de/CodeSystem/bfarm/ops" />
+                        <code value="1-20a.20" />
+                        <display value="Andere neurophysiologische Untersuchungen: Neurologische Untersuchung bei Bewegungsstörungen: Untersuchung der Pharmakosensitivität mit quantitativer Testung;Andere neurophysiologische Untersuchungen;Neurologische Untersuchung bei Bewegungsstörungen;Untersuchung der Pharmakosensitivität mit quantitativer Testung" />
+                    </coding>
+                </valueCodeableConcept>
+            </OPS-Codes>
+        </extension>
+    </valueString>
 </Observation>
