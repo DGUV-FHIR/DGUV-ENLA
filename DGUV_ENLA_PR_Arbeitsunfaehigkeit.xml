@@ -119,7 +119,7 @@
       <short value="Logical id of this artifact" />
       <definition value="The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes." />
       <comment value="The only time that a resource does not have an id is when it is being submitted to the server using a create operation." />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Resource.id" />
@@ -5183,7 +5183,6 @@
   <differential>
     <element id="Observation.id">
       <path value="Observation.id" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.meta">
