@@ -20,7 +20,7 @@
    <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-SonstigeBemerkungen">
        <valueString value="Die sonstige Bemerkung." />
    </extension>
-   <status value="preliminary" />
+   <status value="final" />
    <type>
        <coding>
            <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-Formtexte" />
@@ -29,6 +29,9 @@
        </coding>
    </type>
    <subject>
+   <!--
+        Target der Referenz Patient ist ein "VersichertePerson Objekt"
+    -->
        <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
    </subject>
    <date value="2025-06-10T12:00:00+01:00" />
