@@ -1,37 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-    Author: 
-    Datum:  
-
-    Die vorliegende Beispiel Datei .... dient der Validierung 
-    der Datenaufnahme zu dem ......
-    
-    Zu beachten ist dabei ...
-
-    Durchzuführende Massnahmen:
-
-
--->
 <Bundle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xmlns="http://hl7.org/fhir">
-    <id value="DGUV-ENLA-Bsp-TestBundle" />
+    <id value="doc-5d75b64f-a8a1-49b8-8d33-bd16423b3e6e" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Bundle/DGUV-ENLA-PR-TestBundle-2" />
     </meta>
 
     <identifier>
-     <!-- Server Anteil der URL--> 
-        <system value="http://fhir.dguv.de/open"/>
-        <value value="5d75b64f-a8a1-49b8-8d33-bd16423b3e6e" />
+        <!-- Server Anteil der URL -->
+        <system value="http://example.org/fhir/documents"/>
+        <value value="document-5d75b64f-a8a1-49b8-8d33-bd16423b3e6e" />
     </identifier> 
 
     <type value="document" />
     <timestamp value="2025-06-10T12:00:00+01:00" />
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Composition/onc00f7826-5a3e-49aa-b499-3f8c6599bd2b" />
+        <fullUrl value="urn:uuid:composition-c00f7826-5a3e-49aa-b499-3f8c6599bd2b" />
         <resource>
             <Composition>
-                <id value="onc00f7826-5a3e-49aa-b499-3f8c6599bd2b"/> 
+                <id value="composition-c00f7826-5a3e-49aa-b499-3f8c6599bd2b"/> 
                 <meta> 
                     <profile value="http://fhir.dguv.de/ENLA/Composition/DGUV-ENLA-PR-TestComposition-2" />
                 </meta> 
@@ -47,39 +34,27 @@
                     </coding>
                 </type>
                 <subject>
-                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                    <reference value="urn:uuid:patient-482bb42d-a37b-45f7-8893-0abe669bd8ba" />
                 </subject>
                 <date value="2025-06-10T12:00:00+01:00" />
                 <author>
-                    <reference value="Practitioner/53192032-6365-4659-8cc2-f9a7df67a466" />
+                    <reference value="urn:uuid:practitioner-53192032-6365-4659-8cc2-f9a7df67a466" />
                 </author>
                 <title value="Entlassungsbericht aus stationärer Behandlung" />
                 <section>
                     <title value="Unfallversicherungstraeger" />
                     <entry>
-                        <reference value="Organization/180f219f-97a8-486d-99d9-ed631fe4fc60" />
-                    </entry>
-                </section>
-                <section>
-                    <title value="Krankenkasse" />
-                    <entry>
-                        <reference value="Organization/446a540f-7d08-4926-98fe-2abd3094aa92" />
-                    </entry>
-                </section>
-                <section>
-                    <title value="VersichertenVerhaeltnis" />
-                    <entry>
-                        <reference value="Coverage/475c6d854-876e-4b9d-8ea9-327a46c9c50f" />
+                        <reference value="urn:uuid:organization-180f219f-97a8-486d-99d9-ed631fe4fc60" />
                     </entry>
                 </section>
             </Composition>    
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
+        <fullUrl value="urn:uuid:patient-482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
         <resource>
             <Patient xmlns="http://hl7.org/fhir">
-                <id value="482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
+                <id value="patient-482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
                 <meta>
                     <profile value="http://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson"/>
                 </meta>   
@@ -150,10 +125,10 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Practitioner/53192032-6365-4659-8cc2-f9a7df67a466" />
+        <fullUrl value="urn:uuid:practitioner-53192032-6365-4659-8cc2-f9a7df67a466" />
         <resource>
             <Practitioner xmlns="http://hl7.org/fhir">
-                <id value="53192032-6365-4659-8cc2-f9a7df67a466" />
+                <id value="practitioner-53192032-6365-4659-8cc2-f9a7df67a466" />
                 <meta>
                     <profile value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringer"/> 
                 </meta>
@@ -186,10 +161,10 @@
         </resource>
     </entry> 
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Organization/180f219f-97a8-486d-99d9-ed631fe4fc60" />
+        <fullUrl value="urn:uuid:organization-180f219f-97a8-486d-99d9-ed631fe4fc60" />
         <resource>            
             <Organization xmlns="http://hl7.org/fhir">
-                <id value="180f219f-97a8-486d-99d9-ed631fe4fc60" />
+                <id value="organization-180f219f-97a8-486d-99d9-ed631fe4fc60" />
                 <meta>
                     <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Unfallversicherungstraeger" />
                 </meta>
@@ -224,81 +199,6 @@
                     <postalCode value="10969" />
                 </address>
             </Organization>
-        </resource>
-    </entry>
-    <entry>
-        <fullUrl value="http://fhir.dguv.de/Organization/446a540f-7d08-4926-98fe-2abd3094aa92" />
-        <resource>
-            <Organization xmlns="http://hl7.org/fhir">
-                <id value="446a540f-7d08-4926-98fe-2abd3094aa92" />
-                <meta>
-                    <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Krankenkasse" />
-                </meta>
-                <!--Bei einer Familienversicherung wird hier die hauptversicherte Person angegeben.-->
-                <!--extension url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-Mitgliedsname">          
-                    <valueHumanName>
-                        <family value="Farad" />
-                        <given value="Friedrich" />
-                    </valueHumanName>
-                </extension -->
-                <!--IK-Nummer-->
-                <identifier>
-                    <type>
-                        <coding>
-                            <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
-                            <code value="XX"/>
-                            <display value="Organization identifier" />
-                        </coding>
-                    </type>
-                    <system value="http://fhir.de/sid/arge-ik/iknr"/>
-                    <value value="107202793"/>
-                </identifier>
-                <name value="AOK Herzogtum Lauenburg"/>
-                <telecom>
-                    <system value="phone"/>
-                    <value value="01771234"/>
-                </telecom>
-                <address>
-                    <type value="both"/>
-                    <line value="Hauptstr. 91">
-                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
-                            <valueString value="Hauptstraße"/>
-                        </extension>
-                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
-                            <valueString value="91"/>
-                        </extension>
-                    </line>
-                    <city value="Mölln"/>
-                    <postalCode value="23879"/>
-                    <country value="DE"/>
-                </address>
-            </Organization>
-        </resource>
-    </entry>
-    <entry>
-        <fullUrl value="http://fhir.dguv.de/Coverage/475c6d854-876e-4b9d-8ea9-327a46c9c50f"/>
-        <resource>
-            <Coverage xmlns="http://hl7.org/fhir">
-                <id value="475c6d854-876e-4b9d-8ea9-327a46c9c50f" />
-                <meta>
-                    <profile value="http://fhir.dguv.de/ENLA/Coverage/DGUV-ENLA-PR-VersichertenVerhaeltnis" />
-                </meta>
-                <extension  url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-Familienversicherung">
-                        <extension url="Familienversichert">
-                            <valueBoolean value="true" />
-                        </extension>
-                        <extension url="Mitgliedsname">  
-                            <valueString value="Rudi Fahrad" />
-                        </extension>
-                </extension>
-                <status value="active"/>
-                <beneficiary>
-                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
-                </beneficiary>
-                <payor>
-                    <reference value="Organization/180f219f-97a8-486d-99d9-ed631fe4fc60"/>
-                </payor>
-            </Coverage>
         </resource>
     </entry>
 </Bundle>
