@@ -2274,16 +2274,16 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.value[x].extension:OPS-Codes">
+    <element id="Observation.value[x].extension:OPSCode">
       <path value="Observation.value[x].extension" />
-      <sliceName value="OPS-Codes" />
-      <short value="Ergänzung des Attributs “value[x]” um ein CodeableConcept" />
-      <definition value="Ergänzung des Attributs “value[x]” um die Möglichkeit, die operative und konservative Therapien neben einer Freitextbeschreibung auch durch OPS-Codes darstellen zu können" />
+      <sliceName value="OPSCode" />
+      <short value="Optional Extensions Element" />
+      <definition value="Optional Extension Element - found in all resources." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -2291,7 +2291,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="http://fhir.dguv.de/ENLA/DGUV-ENLA-EX-CodeableConceptObservation" />
+        <profile value="http://fhir.dguv.de/ENLA/DGUV-ENLA-EX-OPSCode" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -2320,7 +2320,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.value[x].extension:OPS-Codes.id">
+    <element id="Observation.value[x].extension:OPSCode.id">
       <path value="Observation.value[x].extension.id" />
       <representation value="xmlAttr" />
       <short value="Unique id for inter-element referencing" />
@@ -2343,7 +2343,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Observation.value[x].extension:OPS-Codes.extension">
+    <element id="Observation.value[x].extension:OPSCode.extension">
       <path value="Observation.value[x].extension.extension" />
       <slicing>
         <discriminator>
@@ -2394,7 +2394,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.value[x].extension:OPS-Codes.url">
+    <element id="Observation.value[x].extension:OPSCode.url">
       <path value="Observation.value[x].extension.url" />
       <representation value="xmlAttr" />
       <short value="identifies the meaning of the extension" />
@@ -2413,17 +2413,17 @@
         </extension>
         <code value="http://hl7.org/fhirpath/System.String" />
       </type>
-      <fixedUri value="http://fhir.dguv.de/ENLA/DGUV-ENLA-EX-CodeableConceptObservation" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/DGUV-ENLA-EX-OPSCode" />
       <mapping>
         <identity value="rim" />
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.value[x].extension:OPS-Codes.value[x]">
+    <element id="Observation.value[x].extension:OPSCode.value[x]">
       <path value="Observation.value[x].extension.value[x]" />
-      <short value="Variables CodeableConcept" />
+      <short value="Value of extension" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Extension.value[x]" />
@@ -2442,7 +2442,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -2452,7 +2451,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.value[x].extension:OPS-Codes.value[x].id">
+    <element id="Observation.value[x].extension:OPSCode.value[x].id">
       <path value="Observation.value[x].extension.value[x].id" />
       <representation value="xmlAttr" />
       <short value="Unique id for inter-element referencing" />
@@ -2475,7 +2474,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Observation.value[x].extension:OPS-Codes.value[x].extension">
+    <element id="Observation.value[x].extension:OPSCode.value[x].extension">
       <path value="Observation.value[x].extension.value[x].extension" />
       <slicing>
         <discriminator>
@@ -2526,7 +2525,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.value[x].extension:OPS-Codes.value[x].coding">
+    <element id="Observation.value[x].extension:OPSCode.value[x].coding">
       <path value="Observation.value[x].extension.value[x].coding" />
       <short value="Code defined by a terminology system" />
       <definition value="A reference to a code defined by a terminology system." />
@@ -2582,7 +2581,7 @@
         <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" />
       </mapping>
     </element>
-    <element id="Observation.value[x].extension:OPS-Codes.value[x].coding.id">
+    <element id="Observation.value[x].extension:OPSCode.value[x].coding.id">
       <path value="Observation.value[x].extension.value[x].coding.id" />
       <representation value="xmlAttr" />
       <short value="Unique id for inter-element referencing" />
@@ -2605,7 +2604,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Observation.value[x].extension:OPS-Codes.value[x].coding.extension">
+    <element id="Observation.value[x].extension:OPSCode.value[x].coding.extension">
       <path value="Observation.value[x].extension.value[x].coding.extension" />
       <slicing>
         <discriminator>
@@ -2656,7 +2655,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.value[x].extension:OPS-Codes.value[x].coding.system">
+    <element id="Observation.value[x].extension:OPSCode.value[x].coding.system">
       <path value="Observation.value[x].extension.value[x].coding.system" />
       <short value="Identity of the terminology system" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
@@ -2672,7 +2671,6 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="http://fhir.de/CodeSystem/bfarm/ops" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -2701,7 +2699,7 @@
         <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
       </mapping>
     </element>
-    <element id="Observation.value[x].extension:OPS-Codes.value[x].coding.version">
+    <element id="Observation.value[x].extension:OPSCode.value[x].coding.version">
       <path value="Observation.value[x].extension.value[x].coding.version" />
       <short value="Version of the system - if relevant" />
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
@@ -2743,7 +2741,7 @@
         <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
       </mapping>
     </element>
-    <element id="Observation.value[x].extension:OPS-Codes.value[x].coding.code">
+    <element id="Observation.value[x].extension:OPSCode.value[x].coding.code">
       <path value="Observation.value[x].extension.value[x].coding.code" />
       <short value="Symbol in syntax defined by the system" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
@@ -2787,7 +2785,7 @@
         <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
       </mapping>
     </element>
-    <element id="Observation.value[x].extension:OPS-Codes.value[x].coding.display">
+    <element id="Observation.value[x].extension:OPSCode.value[x].coding.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -2834,7 +2832,7 @@
         <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
       </mapping>
     </element>
-    <element id="Observation.value[x].extension:OPS-Codes.value[x].coding.userSelected">
+    <element id="Observation.value[x].extension:OPSCode.value[x].coding.userSelected">
       <path value="Observation.value[x].extension.value[x].coding.userSelected" />
       <short value="If this coding was chosen directly by the user" />
       <definition value="Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays)." />
@@ -2877,7 +2875,7 @@
         <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
       </mapping>
     </element>
-    <element id="Observation.value[x].extension:OPS-Codes.value[x].text">
+    <element id="Observation.value[x].extension:OPSCode.value[x].text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -5085,36 +5083,36 @@
       <path value="Observation.value[x].extension" />
       <mustSupport value="true" />
     </element>
-    <element id="Observation.value[x].extension:OPS-Codes">
+    <element id="Observation.value[x].extension:OPSCode">
       <path value="Observation.value[x].extension" />
-      <sliceName value="OPS-Codes" />
-      <max value="1" />
+      <sliceName value="OPSCode" />
       <type>
         <code value="Extension" />
-        <profile value="http://fhir.dguv.de/ENLA/DGUV-ENLA-EX-CodeableConceptObservation" />
+        <profile value="http://fhir.dguv.de/ENLA/DGUV-ENLA-EX-OPSCode" />
       </type>
       <isModifier value="false" />
     </element>
-    <element id="Observation.value[x].extension:OPS-Codes.value[x]">
+    <element id="Observation.value[x].extension:OPSCode.value[x]">
       <path value="Observation.value[x].extension.value[x]" />
-      <mustSupport value="true" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
     </element>
-    <element id="Observation.value[x].extension:OPS-Codes.value[x].coding">
+    <element id="Observation.value[x].extension:OPSCode.value[x].coding">
       <path value="Observation.value[x].extension.value[x].coding" />
       <mustSupport value="true" />
     </element>
-    <element id="Observation.value[x].extension:OPS-Codes.value[x].coding.system">
+    <element id="Observation.value[x].extension:OPSCode.value[x].coding.system">
       <path value="Observation.value[x].extension.value[x].coding.system" />
       <min value="1" />
-      <fixedUri value="http://fhir.de/CodeSystem/bfarm/ops" />
       <mustSupport value="true" />
     </element>
-    <element id="Observation.value[x].extension:OPS-Codes.value[x].coding.code">
+    <element id="Observation.value[x].extension:OPSCode.value[x].coding.code">
       <path value="Observation.value[x].extension.value[x].coding.code" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Observation.value[x].extension:OPS-Codes.value[x].coding.display">
+    <element id="Observation.value[x].extension:OPSCode.value[x].coding.display">
       <path value="Observation.value[x].extension.value[x].coding.display" />
       <min value="1" />
       <mustSupport value="true" />
