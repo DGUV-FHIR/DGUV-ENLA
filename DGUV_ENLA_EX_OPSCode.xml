@@ -178,7 +178,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -207,7 +206,6 @@
       <type>
         <code value="CodeableConcept" />
       </type>
-      <mustSupport value="true" />
     </element>
   </differential>
 </StructureDefinition>
