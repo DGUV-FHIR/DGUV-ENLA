@@ -2238,7 +2238,7 @@
       <alias value="extensions" />
       <alias value="user content" />
       <min value="0" />
-      <max value="*" />
+      <max value="1" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -2277,13 +2277,13 @@
     <element id="Observation.value[x].extension:OPSCode">
       <path value="Observation.value[x].extension" />
       <sliceName value="OPSCode" />
-      <short value="Optional Extensions Element" />
+      <short value="Optionale Erweiterung für OPSCodes" />
       <definition value="Optional Extension Element - found in all resources." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
       <min value="0" />
-      <max value="*" />
+      <max value="1" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -2310,6 +2310,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <isModifier value="false" />
       <mapping>
         <identity value="rim" />
@@ -2423,7 +2424,7 @@
       <path value="Observation.value[x].extension.value[x]" />
       <short value="Value of extension" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Extension.value[x]" />
@@ -2442,6 +2443,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -5081,22 +5083,23 @@
     </element>
     <element id="Observation.value[x].extension">
       <path value="Observation.value[x].extension" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.value[x].extension:OPSCode">
       <path value="Observation.value[x].extension" />
       <sliceName value="OPSCode" />
+      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://fhir.dguv.de/ENLA/DGUV-ENLA-EX-OPSCode" />
       </type>
+      <mustSupport value="true" />
       <isModifier value="false" />
     </element>
     <element id="Observation.value[x].extension:OPSCode.value[x]">
       <path value="Observation.value[x].extension.value[x]" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
+      <min value="1" />
     </element>
     <element id="Observation.value[x].extension:OPSCode.value[x].coding">
       <path value="Observation.value[x].extension.value[x].coding" />
