@@ -4,7 +4,7 @@
   <url value="http://fhir.dguv.de/ENLA/DGUV-ENLA-EX-OPSCode" />
   <version value="0.0.2" />
   <name value="DGUV_ENLA_EX_OPSCode" />
-  <title value="OPSCode" />
+  <title value="OPSCode (Erweiterung)" />
   <status value="draft" />
   <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
   <description value="Diese Extension ermöglicht die Erweiterung des Attributs “value[x]” in einem Profil vom Typ “Observation” um ein CodeableConcept für OPS-Codes." />
