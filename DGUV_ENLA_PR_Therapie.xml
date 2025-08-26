@@ -2264,7 +2264,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
-      <mustSupport value="false" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -2310,7 +2310,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
-      <mustSupport value="false" />
+      <mustSupport value="true" />
       <isModifier value="false" />
       <mapping>
         <identity value="rim" />
@@ -2443,7 +2443,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -5085,7 +5084,7 @@
     <element id="Observation.value[x].extension">
       <path value="Observation.value[x].extension" />
       <max value="1" />
-      <mustSupport value="false" />
+      <mustSupport value="true" />
     </element>
     <element id="Observation.value[x].extension:OPSCode">
       <path value="Observation.value[x].extension" />
@@ -5095,7 +5094,7 @@
         <code value="Extension" />
         <profile value="http://fhir.dguv.de/ENLA/DGUV-ENLA-EX-OPSCode" />
       </type>
-      <mustSupport value="false" />
+      <mustSupport value="true" />
       <isModifier value="false" />
     </element>
     <element id="Observation.value[x].extension:OPSCode.value[x]">
