@@ -1310,7 +1310,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -8207,7 +8207,7 @@
       <short value="Verweis auf betroffene versicherte Person" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson" />
       </type>
       <mustSupport value="true" />
     </element>
