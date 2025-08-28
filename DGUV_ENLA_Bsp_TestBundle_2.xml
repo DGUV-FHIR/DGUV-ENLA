@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bundle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xmlns="http://hl7.org/fhir">
-    <id value="5d75b64f-a8a1-49b8-8d33-bd16423b3e6e" />
+    <id value="DGUV-ENLA-Bsp-TestBundle-2" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Bundle/DGUV-ENLA-PR-TestBundle-2" />
     </meta>
