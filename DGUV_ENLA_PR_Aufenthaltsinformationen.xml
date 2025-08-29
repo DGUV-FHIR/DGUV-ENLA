@@ -5050,7 +5050,7 @@
       </extension>
       <path value="Encounter.hospitalization.admitSource.text" />
       <short value="Plain text representation of the concept" />
-      <definition value="Soweit ein Grund für die stationäre Folgebehandlung bekannt ist, soll dieser hier angegeben werden. &#xD;&#xA;A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user." />
+      <definition value="Soweit ein Grund für die stationäre Folgebehandlung bekannt ist, soll dieser hier angegeben werden." />
       <comment value="Very often the text is the same as a displayName of one of the codings." />
       <requirements value="The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source." />
       <min value="0" />
@@ -5861,7 +5861,7 @@
       </extension>
       <path value="Encounter.hospitalization.dischargeDisposition.text" />
       <short value="Plain text representation of the concept" />
-      <definition value="Bei einer Verlegung muss hier die Begründung angegeben werden.&#xD;&#xA;A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user." />
+      <definition value="Bei einer Verlegung muss hier die Begründung angegeben werden." />
       <comment value="Very often the text is the same as a displayName of one of the codings." />
       <requirements value="The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source." />
       <min value="0" />
@@ -6528,7 +6528,7 @@
     </element>
     <element id="Encounter.hospitalization.admitSource.text">
       <path value="Encounter.hospitalization.admitSource.text" />
-      <definition value="Soweit ein Grund für die stationäre Folgebehandlung bekannt ist, soll dieser hier angegeben werden. &#xD;&#xA;A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user." />
+      <definition value="Soweit ein Grund für die stationäre Folgebehandlung bekannt ist, soll dieser hier angegeben werden." />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.hospitalization.dischargeDisposition">
@@ -6570,7 +6570,7 @@
     </element>
     <element id="Encounter.hospitalization.dischargeDisposition.text">
       <path value="Encounter.hospitalization.dischargeDisposition.text" />
-      <definition value="Bei einer Verlegung muss hier die Begründung angegeben werden.&#xD;&#xA;A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user." />
+      <definition value="Bei einer Verlegung muss hier die Begründung angegeben werden." />
       <mustSupport value="true" />
     </element>
   </differential>
