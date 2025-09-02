@@ -35,7 +35,7 @@
     
 -->
 <Bundle xmlns="http://hl7.org/fhir">
-    <id value="5d75b64f-a8a1-49b8-8d33-bd16423b3e6e" />
+    <id value="example-document-bundl" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Bundle/DGUV-ENLA-PR-TestBundle-2" />
     </meta>
@@ -75,11 +75,11 @@
                 </subject>
                 <date value="2025-06-10T12:00:00+01:00" />
                 <author>
-                <!-- 
-                        Lokale Referenz auf das Profil Leistungserbringer:
-                        RelativeURL:
-                        Practitioner/53192032-6365-4659-8cc2-f9a7df67a466
-                -->
+                    <!-- 
+                            Lokale Referenz auf das Profil Leistungserbringer:
+                            RelativeURL:
+                            Practitioner/53192032-6365-4659-8cc2-f9a7df67a466
+                    -->
                     <reference value="Practitioner/53192032-6365-4659-8cc2-f9a7df67a466" />
                 </author>
                 <title value="Entlassungsbericht aus stationärer Behandlung" />
@@ -353,9 +353,9 @@
                         <!-- 
                             Auswahl des Hilfsmittel Objektes:
                             RelativeURL:
-                            Observation/b77a0cc9-62ff-47c5-96b5-a964f313490dl
+                            Observation/b77a0cc9-62ff-47c5-96b5-a964f313490d
                         -->                    
-                        <reference value="Observation/b77a0cc9-62ff-47c5-96b5-a964f313490dl" />
+                        <reference value="Observation/b77a0cc9-62ff-47c5-96b5-a964f313490d" />
                     </entry>
                 </section>
                 <section>
@@ -1581,10 +1581,10 @@
         <!--
         Target der Referenz Hilfsmittel ist ein "Hilfsmittel Objekt"
         -->    
-        <fullUrl value="http://test.dguv.de/Observation/b77a0cc9-62ff-47c5-96b5-a964f313490dl" />
+        <fullUrl value="http://test.dguv.de/Observation/b77a0cc9-62ff-47c5-96b5-a964f313490d" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
-                <id value="b77a0cc9-62ff-47c5-96b5-a964f313490dl" />
+                <id value="b77a0cc9-62ff-47c5-96b5-a964f313490d" />
                 <meta>
                     <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Hilfsmittel" />
                 </meta>
