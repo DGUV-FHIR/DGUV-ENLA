@@ -3386,7 +3386,7 @@
           <type value="value" />
           <path value="title" />
         </discriminator>
-        <rules value="open" />
+        <rules value="closed" />
       </slicing>
       <short value="Auflistung ENLA-Profiltypen in ENLA" />
       <definition value="The root of the sections that make up the composition." />
@@ -26526,7 +26526,7 @@
           <type value="value" />
           <path value="title" />
         </discriminator>
-        <rules value="open" />
+        <rules value="closed" />
       </slicing>
       <short value="Auflistung ENLA-Profiltypen in ENLA" />
       <comment value="Auf das hier nicht enthaltene Profil DGUV_ENLA_PR_VersichertePerson wird unter &quot;subject&quot; verwiesen." />
