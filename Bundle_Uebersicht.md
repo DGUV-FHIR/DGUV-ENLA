@@ -37,7 +37,7 @@ Bundel Übersicht:
 | 22   | WeiterbehandelndeOrganisation    | Organization        | c9643334-ed27-4327-9eff-baff968982a0  |
 | 23   | RehaMassnahmen                   | Observation         | 0f9b10f1-b311-49e8-b395-608303bdaa2d  |
 | 24   | Heilmittel                       | Observation         | 8d018e14-21b7-4982-b26f-d3b4812f7a1f  |
-| 25   | Hilfsmittel                      | Observation         | b77a0cc9-62ff-47c5-96b5-a964f313490d |
+| 25   | Hilfsmittel                      | Observation         | b77a0cc9-62ff-47c5-96b5-a964f313490d  |
 | 26   | BesondereMassnahmen              | Observation         | 3aecc20f-00e2-4d82-ae7b-a703118c9969  |
 | 27   | Arbeitsunfaehigkeit              | Observation         | bbc56617-923d-4076-8bad-43cd861031c7  |
 | 28   | PrognoseWiederaufnahmeTaetigkeit | Observation         | f8412800-04b9-446b-b83d-2d772af8099b  |
