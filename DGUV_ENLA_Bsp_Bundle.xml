@@ -14,21 +14,21 @@
 -->
 <Bundle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xmlns="http://hl7.org/fhir">
-    <id value="DGUV-ENLA-Bsp-Bundle" />
+    <id value="5d75b64f-a8a1-49b8-8d33-bd16423b3e6e" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Bundle/DGUV-ENLA-PR-Bundle" />
     </meta>
 
     <identifier>
      <!-- Server Anteil der URL--> 
-        <system value="http://fhir.dguv.de/open"/>
-        <value value="5d75b64f-a8a1-49b8-8d33-bd16423b3e6e" />
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="urn:uuid:5d75b64f-a8a1-49b8-8d33-bd16423b3e6e" />
     </identifier> 
 
     <type value="document" />
     <timestamp value="2025-06-10T12:00:00+01:00" />
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Composition/c00f7826-5a3e-49aa-b499-3f8c6599bd2b" />
+        <fullUrl value="urn:uuid:c00f7826-5a3e-49aa-b499-3f8c6599bd2b" />
         <resource>
             <Composition>
                 <id value="c00f7826-5a3e-49aa-b499-3f8c6599bd2b"/> 
@@ -52,7 +52,7 @@
                     RelativeURL:
                     Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba
                     -->
-                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba" />
                 </subject>
                 <date value="2025-06-10T12:00:00+01:00" />
                 <author>
@@ -61,7 +61,7 @@
                     RelativeURL:
                     Practitioner/53192032-6365-4659-8cc2-f9a7df67a466
                     -->
-                    <reference value="Practitioner/53192032-6365-4659-8cc2-f9a7df67a466" />
+                    <reference value="urn:uuid:53192032-6365-4659-8cc2-f9a7df67a466" />
                 </author>
                 <title value="Entlassungsbericht aus stationärer Behandlung" />
                 <section>
@@ -72,7 +72,7 @@
                         RelativeURL:
                         Organization/180f219f-97a8-486d-99d9-ed631fe4fc60
                         -->
-                        <reference value="Organization/180f219f-97a8-486d-99d9-ed631fe4fc60" />
+                        <reference value="urn:uuid:180f219f-97a8-486d-99d9-ed631fe4fc60" />
                     </entry>
                 </section>
                 <section>
@@ -83,7 +83,7 @@
                         RelativeURL:
                         Organization/446a540f-7d08-4926-98fe-2abd3094aa92
                         --> 
-                        <reference value="Organization/446a540f-7d08-4926-98fe-2abd3094aa92" />
+                        <reference value="urn:uuid:446a540f-7d08-4926-98fe-2abd3094aa92" />
                     </entry>
                 </section>
                 <section>
@@ -94,7 +94,7 @@
                         RelativeURL:
                         Coverage/475c6d854-876e-4b9d-8ea9-327a46c9c50f
                         -->
-                        <reference value="Coverage/75c6d854-876e-4b9d-8ea9-327a46c9c50f" />
+                        <reference value="urn:uuid:75c6d854-876e-4b9d-8ea9-327a46c9c50f" />
                     </entry>
                 </section>
                 <section>
@@ -105,7 +105,7 @@
                         RelativeURL:
                         Organization/bf64ac16-926b-4082-968a-f7c088364b83f
                         -->
-                        <reference value="Organization/bf64ac16-926b-4082-968a-f7c088364b83" />
+                        <reference value="urn:uuid:bf64ac16-926b-4082-968a-f7c088364b83" />
                     </entry>
                 </section>
                 <section>
@@ -116,7 +116,7 @@
                         RelativeURL:
                         Organization/bef1dc10-a361-4eba-8fcc-073f771df44b
                         -->
-                        <reference value="Organization/bef1dc10-a361-4eba-8fcc-073f771df44b" />
+                        <reference value="urn:uuid:bef1dc10-a361-4eba-8fcc-073f771df44b" />
                     </entry>
                 </section>
                 <section>
@@ -127,7 +127,7 @@
                         RelativeURL:
                         Encounter/a33633b7-ab47-4341-b4e9-c856bb5e5878
                         -->
-                        <reference value="Encounter/a33633b7-ab47-4341-b4e9-c856bb5e5878" />
+                        <reference value="urn:uuid:a33633b7-ab47-4341-b4e9-c856bb5e5878" />
                     </entry>
                 </section>
                 <section>
@@ -138,7 +138,7 @@
                         RelativeURL:
                         Condition/84507618-4ff5-46d9-9e61-8ab15c9ce2a4
                         -->
-                        <reference value="Condition/84507618-4ff5-46d9-9e61-8ab15c9ce2a4" />
+                        <reference value="urn:uuid:84507618-4ff5-46d9-9e61-8ab15c9ce2a4" />
                     </entry>
                 </section>
                 <section>
@@ -149,7 +149,7 @@
                         RelativeURL:
                         Condition/9acff578-cca8-4f9c-9f58-49e5cb91bbab
                         -->
-                        <reference value="Condition/9acff578-cca8-4f9c-9f58-49e5cb91bbab" />
+                        <reference value="urn:uuid:9acff578-cca8-4f9c-9f58-49e5cb91bbab" />
                     </entry>
                 </section>
                 <section>
@@ -160,7 +160,7 @@
                         RelativeURL:
                         Observation/2288ca98-76e8-4daf-bfb3-dd36c0efbb39
                         -->
-                        <reference value="Observation/2288ca98-76e8-4daf-bfb3-dd36c0efbb39" />
+                        <reference value="urn:uuid:2288ca98-76e8-4daf-bfb3-dd36c0efbb39" />
                     </entry>
                 </section>
                 <section>
@@ -171,7 +171,7 @@
                         RelativeURL:
                         Observation/08b39f82-9dbf-4315-92f5-5f0011d37a5c
                         -->
-                        <reference value="Observation/08b39f82-9dbf-4315-92f5-5f0011d37a5c" />
+                        <reference value="urn:uuid:08b39f82-9dbf-4315-92f5-5f0011d37a5c" />
                     </entry>
                 </section>
                 <section>
@@ -182,7 +182,7 @@
                         RelativeURL:
                         Observation/d39c416d-e1a1-43fd-afef-2763fd66473e
                         -->
-                        <reference value="Observation/d39c416d-e1a1-43fd-afef-2763fd66473e" />
+                        <reference value="urn:uuid:d39c416d-e1a1-43fd-afef-2763fd66473e" />
                     </entry>
                 </section>
                 <section>
@@ -193,7 +193,7 @@
                         RelativeURL:
                         Observation/0c6d28f5-2b67-4308-9d90-6a53ecd9ce7e
                         -->
-                        <reference value="Observation/0c6d28f5-2b67-4308-9d90-6a53ecd9ce7e" />
+                        <reference value="urn:uuid:0c6d28f5-2b67-4308-9d90-6a53ecd9ce7e" />
                     </entry>
                 </section>
                 <section>
@@ -204,7 +204,7 @@
                         RelativeURL:
                         Observation/0a25be9c-af37-410b-bd43-6c7d3e1f1681
                         -->
-                        <reference value="Observation/0a25be9c-af37-410b-bd43-6c7d3e1f1681" />
+                        <reference value="urn:uuid:0a25be9c-af37-410b-bd43-6c7d3e1f1681" />
                     </entry>
                 </section>
                 <section>
@@ -215,7 +215,7 @@
                         RelativeURL:
                         Observation/4f518fd0-15dd-471a-ab4e-fe5ab3fe979e
                         -->
-                        <reference value="Observation/4f518fd0-15dd-471a-ab4e-fe5ab3fe979e" />
+                        <reference value="urn:uuid:4f518fd0-15dd-471a-ab4e-fe5ab3fe979e" />
                     </entry>
                 </section>
                 <section>
@@ -226,7 +226,7 @@
                         RelativeURL:
                         DocumentReference/c7b24835-f7b8-4480-a0fe-c0653d6c4050
                         -->
-                        <reference value="Binary/c7b24835-f7b8-4480-a0fe-c0653d6c4050" />
+                        <reference value="urn:uuid:c7b24835-f7b8-4480-a0fe-c0653d6c4050" />
                     </entry>
                 </section>
                 <section>
@@ -237,7 +237,7 @@
                         RelativeURL:
                         Observation/f2e30a2a-9070-43aa-9bf2-307ad290eb95
                         -->
-                        <reference value="Observation/f2e30a2a-9070-43aa-9bf2-307ad290eb95" />
+                        <reference value="urn:uuid:f2e30a2a-9070-43aa-9bf2-307ad290eb95" />
                     </entry>
                 </section>
                 <section>
@@ -248,7 +248,7 @@
                         RelativeURL:
                         MedicationStatement/cf72d600-1c4d-44bf-a8b3-ec100f1a4947
                         -->
-                        <reference value="MedicationStatement/cf72d600-1c4d-44bf-a8b3-ec100f1a4947" />
+                        <reference value="urn:uuid:cf72d600-1c4d-44bf-a8b3-ec100f1a4947" />
                     </entry>
                 </section>
                 <section>
@@ -259,7 +259,7 @@
                         RelativeURL:
                         Medication/8947dca1-69fd-4184-a55f-8f7f32b0a914
                         -->
-                        <reference value="Medication/8947dca1-69fd-4184-a55f-8f7f32b0a914" />
+                        <reference value="urn:uuid:8947dca1-69fd-4184-a55f-8f7f32b0a914" />
                     </entry>
                 </section>
                 <section>
@@ -270,7 +270,7 @@
                         RelativeURL:
                         Medication/347b8239-6420-4b3a-a873-6b62e1fa1b0f
                         -->
-                        <reference value="Medication/347b8239-6420-4b3a-a873-6b62e1fa1b0f" />
+                        <reference value="urn:uuid:347b8239-6420-4b3a-a873-6b62e1fa1b0f" />
                     </entry>
                 </section>
                 <section>
@@ -281,7 +281,7 @@
                         RelativeURL:
                         Medication/4b28cbef-80e7-4838-b15b-b2d9dfc4461b
                         -->
-                        <reference value="Medication/4b28cbef-80e7-4838-b15b-b2d9dfc4461b" />
+                        <reference value="urn:uuid:4b28cbef-80e7-4838-b15b-b2d9dfc4461b" />
                     </entry>
                 </section>
                 <section>
@@ -292,7 +292,7 @@
                         RelativeURL:
                         PractitionerRole/ebd25191-272a-4a2f-9b52-8733963b32b8
                         -->
-                        <reference value="PractitionerRole/ebd25191-272a-4a2f-9b52-8733963b32b8" />
+                        <reference value="urn:uuid:ebd25191-272a-4a2f-9b52-8733963b32b8" />
                     </entry>
                 </section>
                 <section>
@@ -303,7 +303,7 @@
                         RelativeURL:
                         Organization/c9643334-ed27-4327-9eff-baff968982a0
                         -->
-                        <reference value="Organization/c9643334-ed27-4327-9eff-baff968982a0" />
+                        <reference value="urn:uuid:c9643334-ed27-4327-9eff-baff968982a0" />
                     </entry>
                 </section>
                 <section>
@@ -314,7 +314,7 @@
                         RelativeURL:
                         Observation/0f9b10f1-b311-49e8-b395-608303bdaa2d
                         -->
-                        <reference value="Observation/0f9b10f1-b311-49e8-b395-608303bdaa2d" />
+                        <reference value="urn:uuid:0f9b10f1-b311-49e8-b395-608303bdaa2d" />
                     </entry>
                 </section>
                 <section>
@@ -325,7 +325,7 @@
                         RelativeURL:
                         Observation/8d018e14-21b7-4982-b26f-d3b4812f7a1f
                         -->
-                        <reference value="Observation/8d018e14-21b7-4982-b26f-d3b4812f7a1f" />
+                        <reference value="urn:uuid:8d018e14-21b7-4982-b26f-d3b4812f7a1f" />
                     </entry>
                 </section>
                 <section>
@@ -336,7 +336,7 @@
                         RelativeURL:
                         Observation/b77a0cc9-62ff-47c5-96b5-a964f313490d
                         -->
-                        <reference value="Observation/b77a0cc9-62ff-47c5-96b5-a964f313490d" />
+                        <reference value="urn:uuid:b77a0cc9-62ff-47c5-96b5-a964f313490d" />
                     </entry>
                 </section>
                 <section>
@@ -347,7 +347,7 @@
                         RelativeURL:
                         Observation/3aecc20f-00e2-4d82-ae7b-a703118c9969
                         -->
-                        <reference value="Observation/3aecc20f-00e2-4d82-ae7b-a703118c9969" /> 
+                        <reference value="urn:uuid:3aecc20f-00e2-4d82-ae7b-a703118c9969" /> 
                     </entry>
                 </section>
                 <section>
@@ -358,7 +358,7 @@
                         RelativeURL:
                         Observation/bbc56617-923d-4076-8bad-43cd861031c7
                         -->
-                        <reference value="Observation/bbc56617-923d-4076-8bad-43cd861031c7" />
+                        <reference value="urn:uuid:bbc56617-923d-4076-8bad-43cd861031c7" />
                     </entry>
                 </section>
                 <section>
@@ -369,7 +369,7 @@
                         RelativeURL:
                         Observation/f8412800-04b9-446b-b83d-2d772af8099b
                         -->
-                        <reference value="Observation/f8412800-04b9-446b-b83d-2d772af8099b" />
+                        <reference value="urn:uuid:f8412800-04b9-446b-b83d-2d772af8099b" />
                     </entry>
                 </section>
                 <section>
@@ -380,7 +380,7 @@
                         RelativeURL:
                         Observation/e04aaff2-34c7-4dfa-80cf-b3c5d5a03058
                         -->
-                        <reference value="Observation/e04aaff2-34c7-4dfa-80cf-b3c5d5a03058" />
+                        <reference value="urn:uuid:e04aaff2-34c7-4dfa-80cf-b3c5d5a03058" />
                     </entry>
                 </section>
                 <section>
@@ -391,7 +391,7 @@
                         RelativeURL:
                         Observation/dc5b40d7-1c69-401a-a649-145c79c4b571
                         -->
-                        <reference value="Observation/dc5b40d7-1c69-401a-a649-145c79c4b571" />
+                        <reference value="urn:uuid:dc5b40d7-1c69-401a-a649-145c79c4b571" />
                     </entry>
                 </section>
                 <section>
@@ -402,7 +402,7 @@
                         RelativeURL:
                         PractitionerRole/93ad5198-d79b-4436-9e1e-aaa69acb2d08
                         -->
-                        <reference value="PractitionerRole/93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
+                        <reference value="urn:uuid:93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
                     </entry>
                 </section>
                 <section>
@@ -413,7 +413,7 @@
                         RelativeURL:
                         Organization/cdc0ceec-dc27-44e5-a7c7-567a754dc912
                         -->
-                        <reference value="Organization/cdc0ceec-dc27-44e5-a7c7-567a754dc912" />
+                        <reference value="urn:uuid:cdc0ceec-dc27-44e5-a7c7-567a754dc912" />
                     </entry>
                 </section>
                 <section>
@@ -424,7 +424,7 @@
                         RelativeURL:
                         Organization/f952b0d1-bb04-402d-b0e6-cef800858f98
                         -->
-                        <reference value="Organization/f952b0d1-bb04-402d-b0e6-cef800858f98" />
+                        <reference value="urn:uuid:f952b0d1-bb04-402d-b0e6-cef800858f98" />
                     </entry>
                 </section>
                 <section>
@@ -435,14 +435,14 @@
                         RelativeURL:
                         PractitionerRole/3011936a-df87-4144-a35a-bbaae96bb2cc
                         -->
-                        <reference value="PractitionerRole/3011936a-df87-4144-a35a-bbaae96bb2cc" />
+                        <reference value="urn:uuid:3011936a-df87-4144-a35a-bbaae96bb2cc" />
                     </entry>
                 </section>
             </Composition>    
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
+        <fullUrl value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
         <resource>
             <Patient xmlns="http://hl7.org/fhir">
                 <id value="482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
@@ -516,7 +516,7 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Practitioner/53192032-6365-4659-8cc2-f9a7df67a466" />
+        <fullUrl value="urn:uuid:53192032-6365-4659-8cc2-f9a7df67a466" />
         <resource>
             <Practitioner xmlns="http://hl7.org/fhir">
                 <id value="53192032-6365-4659-8cc2-f9a7df67a466" />
@@ -552,7 +552,7 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Organization/180f219f-97a8-486d-99d9-ed631fe4fc60" />
+        <fullUrl value="urn:uuid:180f219f-97a8-486d-99d9-ed631fe4fc60" />
         <resource>            
             <Organization xmlns="http://hl7.org/fhir">
                 <id value="180f219f-97a8-486d-99d9-ed631fe4fc60" />
@@ -593,7 +593,7 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Organization/446a540f-7d08-4926-98fe-2abd3094aa92" />
+        <fullUrl value="urn:uuid:446a540f-7d08-4926-98fe-2abd3094aa92" />
         <resource>
             <Organization xmlns="http://hl7.org/fhir">
                 <id value="446a540f-7d08-4926-98fe-2abd3094aa92" />
@@ -642,7 +642,7 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Coverage/75c6d854-876e-4b9d-8ea9-327a46c9c50f" />
+        <fullUrl value="urn:uuid:75c6d854-876e-4b9d-8ea9-327a46c9c50f" />
         <resource>
             <Coverage xmlns="http://hl7.org/fhir">
                 <id value="75c6d854-876e-4b9d-8ea9-327a46c9c50f" />
@@ -659,7 +659,7 @@
                 </extension>
                 <status value="active"/>
                 <beneficiary>
-                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba" />
                 </beneficiary>
                 <payor>
                     <reference value="Payor/Versicherung"/>
@@ -739,7 +739,7 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Encounter/a33633b7-ab47-4341-b4e9-c856bb5e5878" />
+        <fullUrl value="urn:uuid:a33633b7-ab47-4341-b4e9-c856bb5e5878" />
         <resource>
             <Encounter xmlns="http://hl7.org/fhir">
                 <id value="a33633b7-ab47-4341-b4e9-c856bb5e5878" />
@@ -753,7 +753,7 @@
                     <display value="inpatient encounter" />
                 </class>
                 <subject>
-                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba" />
                 </subject>
                 <period>
                     <start value="2024-06-10T12:00:00+01:00" />
@@ -779,7 +779,7 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Condition/84507618-4ff5-46d9-9e61-8ab15c9ce2a4" />
+        <fullUrl value="urn:uuid:84507618-4ff5-46d9-9e61-8ab15c9ce2a4" />
         <resource>
             <Condition xmlns="http://hl7.org/fhir">
                 <id value="84507618-4ff5-46d9-9e61-8ab15c9ce2a4"/>
@@ -798,13 +798,13 @@
                     <text value="Hier steht der Freitext!"/>
                 </code>
                 <subject>
-                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
                 </subject>
             </Condition>
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Condition/9acff578-cca8-4f9c-9f58-49e5cb91bbab" />
+        <fullUrl value="urn:uuid:9acff578-cca8-4f9c-9f58-49e5cb91bbab" />
         <resource>
             <Condition xmlns="http://hl7.org/fhir">
                 <id value="9acff578-cca8-4f9c-9f58-49e5cb91bbab"/>
@@ -820,13 +820,13 @@
                     </coding>
                 </code>
                 <subject>
-                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
                 </subject>
             </Condition>
           </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Observation/2288ca98-76e8-4daf-bfb3-dd36c0efbb39" />
+        <fullUrl value="urn:uuid:2288ca98-76e8-4daf-bfb3-dd36c0efbb39" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="2288ca98-76e8-4daf-bfb3-dd36c0efbb39" />
@@ -842,14 +842,14 @@
                     </coding>
                 </code>
                 <subject>
-                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
                 </subject>
                 <valueString value="neurologisches und inneres konsil" />
             </Observation>
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Observation/08b39f82-9dbf-4315-92f5-5f0011d37a5c" />
+        <fullUrl value="urn:uuid:08b39f82-9dbf-4315-92f5-5f0011d37a5c" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="08b39f82-9dbf-4315-92f5-5f0011d37a5c"/>
@@ -870,7 +870,7 @@
                     </coding>
                 </code>
                 <subject> 
-                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba" />
                 </subject>
                 <effectiveDateTime value="2018-08-24T13:00:00+00:00"/>
                 <component>
@@ -917,7 +917,7 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Observation/d39c416d-e1a1-43fd-afef-2763fd66473e" />
+        <fullUrl value="urn:uuid:d39c416d-e1a1-43fd-afef-2763fd66473e" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="d39c416d-e1a1-43fd-afef-2763fd66473e" />
@@ -940,14 +940,14 @@
                     </coding>
                 </code>
                 <subject>
-                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba" />
                 </subject>
                 <valueString value="Befundergebnis" />
             </Observation>
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Observation/0c6d28f5-2b67-4308-9d90-6a53ecd9ce7e" />
+        <fullUrl value="urn:uuid:0c6d28f5-2b67-4308-9d90-6a53ecd9ce7e" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="0c6d28f5-2b67-4308-9d90-6a53ecd9ce7e" />
@@ -966,7 +966,7 @@
                     </coding>
                 </code>
                 <subject>
-                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba" />
                 </subject>
                 <performer>
                     <reference value="PractitionerRole/93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
@@ -976,7 +976,7 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Observation/0a25be9c-af37-410b-bd43-6c7d3e1f1681" />
+        <fullUrl value="urn:uuid:0a25be9c-af37-410b-bd43-6c7d3e1f1681" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="0a25be9c-af37-410b-bd43-6c7d3e1f1681" />
@@ -999,14 +999,14 @@
                     </coding>
                 </code>
                 <subject>
-                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba" />
                 </subject>
                 <valueString value="Befundergebnis" />
             </Observation>
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Observation/4f518fd0-15dd-471a-ab4e-fe5ab3fe979e" />
+        <fullUrl value="urn:uuid:4f518fd0-15dd-471a-ab4e-fe5ab3fe979e" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="4f518fd0-15dd-471a-ab4e-fe5ab3fe979e" />
@@ -1029,14 +1029,14 @@
                     </coding>
                 </code>
                 <subject>
-                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba" />
                 </subject>
                 <valueString value="Befundergebnis" />
             </Observation>
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Binary/c7b24835-f7b8-4480-a0fe-c0653d6c4050" />
+        <fullUrl value="urn:uuid:c7b24835-f7b8-4480-a0fe-c0653d6c4050" />
         <resource>
             <DocumentReference xmlns="http://hl7.org/fhir">
                 <id value="c7b24835-f7b8-4480-a0fe-c0653d6c4050" />
@@ -1045,7 +1045,7 @@
                 </meta>
                 <status value="current" />
                 <subject>
-                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba" />
                 </subject>
                 <content>
                     <attachment> 
@@ -1063,7 +1063,7 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Observation/f2e30a2a-9070-43aa-9bf2-307ad290eb95" />
+        <fullUrl value="urn:uuid:f2e30a2a-9070-43aa-9bf2-307ad290eb95" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="f2e30a2a-9070-43aa-9bf2-307ad290eb95" />
@@ -1079,14 +1079,14 @@
                     </coding>
                 </code>
                 <subject>
-                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
                 </subject>
                 <valueString value="Regelmässige Wundkontrollen, im Bereich des linken Oberarmes empfehlen wir eine funktionelle lastfreie Behandlung für 6 Wochen postoperationem, etc." />
             </Observation>
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/MedicationStatement/cf72d600-1c4d-44bf-a8b3-ec100f1a4947" />
+        <fullUrl value="urn:uuid:cf72d600-1c4d-44bf-a8b3-ec100f1a4947" />
         <resource>
             <MedicationStatement xmlns="http://hl7.org/fhir">
                 <id value="cf72d600-1c4d-44bf-a8b3-ec100f1a4947" />
@@ -1098,7 +1098,7 @@
                     <reference value="Medication/8947dca1-69fd-4184-a55f-8f7f32b0a914"/>     
                 </medicationReference>
                 <subject>
-                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>     
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba"/>     
                 </subject>  
                 <dosage>
                     <timing>
@@ -1128,7 +1128,7 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Medication/8947dca1-69fd-4184-a55f-8f7f32b0a914" />
+        <fullUrl value="urn:uuid:8947dca1-69fd-4184-a55f-8f7f32b0a914" />
         <resource>
             <Medication xmlns="http://hl7.org/fhir">
                 <id value="8947dca1-69fd-4184-a55f-8f7f32b0a914" />
@@ -1159,7 +1159,7 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Medication/347b8239-6420-4b3a-a873-6b62e1fa1b0f" />
+        <fullUrl value="urn:uuid:347b8239-6420-4b3a-a873-6b62e1fa1b0f" />
         <resource>
             <Medication xmlns="http://hl7.org/fhir">
                 <id value="347b8239-6420-4b3a-a873-6b62e1fa1b0f" />
@@ -1199,7 +1199,7 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Medication/4b28cbef-80e7-4838-b15b-b2d9dfc4461b" />
+        <fullUrl value="urn:uuid:4b28cbef-80e7-4838-b15b-b2d9dfc4461b" />
         <resource>
             <Medication xmlns="http://hl7.org/fhir">
                 <id value="4b28cbef-80e7-4838-b15b-b2d9dfc4461b" />
@@ -1232,7 +1232,7 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/PractitionerRole/ebd25191-272a-4a2f-9b52-8733963b32b8" />
+        <fullUrl value="urn:uuid:ebd25191-272a-4a2f-9b52-8733963b32b8" />
         <resource>
             <PractitionerRole xmlns="http://hl7.org/fhir">
                 <id value="ebd25191-272a-4a2f-9b52-8733963b32b8"/>
@@ -1265,7 +1265,7 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Organization/c9643334-ed27-4327-9eff-baff968982a0" />
+        <fullUrl value="urn:uuid:c9643334-ed27-4327-9eff-baff968982a0" />
         <resource>
             <Organization xmlns="http://hl7.org/fhir">
                 <id value="c9643334-ed27-4327-9eff-baff968982a0" />
@@ -1317,7 +1317,7 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Observation/0f9b10f1-b311-49e8-b395-608303bdaa2d" />
+        <fullUrl value="urn:uuid:0f9b10f1-b311-49e8-b395-608303bdaa2d" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="0f9b10f1-b311-49e8-b395-608303bdaa2d" />
@@ -1358,7 +1358,7 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Observation/8d018e14-21b7-4982-b26f-d3b4812f7a1f" />
+        <fullUrl value="urn:uuid:8d018e14-21b7-4982-b26f-d3b4812f7a1f" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="8d018e14-21b7-4982-b26f-d3b4812f7a1f" />
@@ -1374,7 +1374,7 @@
                     </coding>
                 </code>
                 <subject>
-                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
                 </subject>
                 <effectiveTiming>
                     <code  value="http://fhir.dguv.de/ENLA/CodingSystem/DGUV-ENLA-CS-MassnahmenZeitpunkt">
@@ -1399,7 +1399,7 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Observation/b77a0cc9-62ff-47c5-96b5-a964f313490d" />
+        <fullUrl value="urn:uuid:b77a0cc9-62ff-47c5-96b5-a964f313490d" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="b77a0cc9-62ff-47c5-96b5-a964f313490d" />
@@ -1415,7 +1415,7 @@
                     </coding>
                 </code>
                 <subject>
-                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
                 </subject>
                 <effectiveTiming>
                     <code  value="http://fhir.dguv.de/ENLA/CodingSystem/DGUV-ENLA-CS-MassnahmenZeitpunkt">
@@ -1440,7 +1440,7 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Observation/3aecc20f-00e2-4d82-ae7b-a703118c9969" />
+        <fullUrl value="urn:uuid:3aecc20f-00e2-4d82-ae7b-a703118c9969" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="3aecc20f-00e2-4d82-ae7b-a703118c9969" />
@@ -1456,7 +1456,7 @@
                     </coding>
                 </code>
                 <subject>
-                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
                 </subject>
                 <effectiveTiming>
                     <code>  
@@ -1472,7 +1472,7 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Observation/bbc56617-923d-4076-8bad-43cd861031c7" />
+        <fullUrl value="urn:uuid:bbc56617-923d-4076-8bad-43cd861031c7" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="bbc56617-923d-4076-8bad-43cd861031c7" />
@@ -1488,11 +1488,11 @@
                     </coding>
                 </code>
                 <subject>
-                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba" />
                 </subject>
                 <effectiveDateTime value="2025-07-03" />
                 <performer>
-                    <reference value="PractitionerRole/93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
+                    <reference value="urn:uuid:93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
                 </performer>  
                 <valueCodeableConcept>
                     <coding>
@@ -1505,7 +1505,7 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Observation/f8412800-04b9-446b-b83d-2d772af8099b" />
+        <fullUrl value="urn:uuid:f8412800-04b9-446b-b83d-2d772af8099b" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="f8412800-04b9-446b-b83d-2d772af8099b" />
@@ -1521,7 +1521,7 @@
                     </coding>
                 </code>
                 <subject>
-                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba" />
                 </subject>
                 <valueCodeableConcept>
                     <coding>
@@ -1534,7 +1534,7 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Observation/e04aaff2-34c7-4dfa-80cf-b3c5d5a03058" />
+        <fullUrl value="urn:uuid:e04aaff2-34c7-4dfa-80cf-b3c5d5a03058" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="e04aaff2-34c7-4dfa-80cf-b3c5d5a03058" />
@@ -1550,7 +1550,7 @@
                     </coding>
                 </code>
                 <subject>
-                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba" />
                 </subject>
                 <valueCodeableConcept>
                     <coding>
@@ -1579,17 +1579,17 @@
                     </coding>
                 </code>
                 <subject>
-                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
                 </subject>
                 <performer>
-                    <reference value="PractitionerRole/93ad5198-d79b-4436-9e1e-aaa69acb2d08"/>
+                    <reference value="urn:uuid:93ad5198-d79b-4436-9e1e-aaa69acb2d08"/>
                 </performer>
                 <valueBoolean value="false" />
             </Observation>
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/PractitionerRole/93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
+        <fullUrl value="urn:uuid:93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
         <resource>
             <PractitionerRole xmlns="http://hl7.org/fhir">
                 <id value="93ad5198-d79b-4436-9e1e-aaa69acb2d08"/>
@@ -1597,10 +1597,10 @@
                     <profile value="http://fhir.dguv.de/ENLA/PractitionerRole/DGUV-ENLA-PR-DArzt" />
                 </meta>
                 <practitioner>
-                    <reference value="Practitioner/Arzt-1" />
+                    <reference value="urn:uuid:Arzt-1" />
                 </practitioner>
                 <organization>
-                    <reference value="Organization/DArzt-Einrichtung-234" />
+                    <reference value="urn:uuid:DArzt-Einrichtung-234" />
                 </organization>
                 <code>
                     <coding>
@@ -1622,7 +1622,7 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Organization/cdc0ceec-dc27-44e5-a7c7-567a754dc912" />
+        <fullUrl value="urn:uuid:cdc0ceec-dc27-44e5-a7c7-567a754dc912" />
         <resource>
             <Organization xmlns="http://hl7.org/fhir">
                 <id value="cdc0ceec-dc27-44e5-a7c7-567a754dc912" />
@@ -1664,7 +1664,7 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Organization/f952b0d1-bb04-402d-b0e6-cef800858f98" />
+        <fullUrl value="urn:uuid:f952b0d1-bb04-402d-b0e6-cef800858f98" />
         <resource>
             <Organization xmlns="http://hl7.org/fhir">
                 <id value="f952b0d1-bb04-402d-b0e6-cef800858f98" />
@@ -1713,7 +1713,7 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/PractitionerRole/3011936a-df87-4144-a35a-bbaae96bb2cc" />
+        <fullUrl value="urn:uuid:3011936a-df87-4144-a35a-bbaae96bb2cc" />
         <resource>
             <PractitionerRole xmlns="http://hl7.org/fhir">
                 <id value="3011936a-df87-4144-a35a-bbaae96bb2cc"/>
@@ -1729,10 +1729,10 @@
                     </extension>
                 </extension>
                 <practitioner>
-                    <reference value="Practitioner/NichtAerztlich-14" />
+                    <reference value="urn:uuid:NichtAerztlich-14" />
                 </practitioner>
                 <organization>
-                    <reference value="Organization/f952b0d1-bb04-402d-b0e6-cef800858f98" />
+                    <reference value="urn:uuid:/f952b0d1-bb04-402d-b0e6-cef800858f98" />
                 </organization>
                 <telecom>
                     <system value="phone"/>
