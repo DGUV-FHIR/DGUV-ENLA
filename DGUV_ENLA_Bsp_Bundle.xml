@@ -668,7 +668,7 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Organization/bf64ac16-926b-4082-968a-f7c088364b83" />
+        <fullUrl value="urn:uuid:bf64ac16-926b-4082-968a-f7c088364b83" />
         <resource>
             <Organization xmlns="http://hl7.org/fhir">
                 <id value="bf64ac16-926b-4082-968a-f7c088364b83" />
@@ -709,7 +709,7 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Organization/bef1dc10-a361-4eba-8fcc-073f771df44b" />
+        <fullUrl value="urn:uuid:bef1dc10-a361-4eba-8fcc-073f771df44b" />
         <resource>
             <Organization xmlns="http://hl7.org/fhir">
                 <id value="bef1dc10-a361-4eba-8fcc-073f771df44b" />
@@ -969,7 +969,7 @@
                     <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba" />
                 </subject>
                 <performer>
-                    <reference value="PractitionerRole/93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
+                    <reference value="urn:uuid:93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
                 </performer>
                 <valueString value="Freitext" />
             </Observation>
@@ -1052,7 +1052,7 @@
                         <contentType value="application/hl7-v3+xml"/> 
                         <language value="de-DE"/>
                         <data value="YWRzYWdzYWd2ZnNhdnggMzE0OTMxMGlyaW04NDI3Y29ub3o=" />
-                        <url value="http://fhir.dguv.de/Binary/c7b24835-f7b8-4480-a0fe-c0653d6c4050"/>
+                        <url value="urn:uuid:c7b24835-f7b8-4480-a0fe-c0653d6c4050"/>
                         <size value="35"/> 
                         <hash value="2jmj7l5rSw0yVb/vlWAYkK/YBwk="/> 
                         <title value="Physical"/> 
@@ -1095,7 +1095,7 @@
                 </meta>
                 <status value="active" />
                 <medicationReference>
-                    <reference value="Medication/8947dca1-69fd-4184-a55f-8f7f32b0a914"/>     
+                    <reference value="urn:uuid:8947dca1-69fd-4184-a55f-8f7f32b0a914"/>     
                 </medicationReference>
                 <subject>
                     <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba"/>     
@@ -1240,10 +1240,10 @@
                     <profile value="http://fhir.dguv.de/ENLA/PractitionerRole/DGUV-ENLA-PR-WeiterbehandelnderArzt" />
                 </meta>
                 <practitioner>
-                    <reference value="Practitioner/daaa56d8-4fc7-4e14-88af-ba4fc998437f" />
+                    <reference value="urn:uuid:ebd25191-272a-4a2f-9b52-8733963b32b8" />
                 </practitioner>
                 <organization>
-                    <reference value="Organization/c9643334-ed27-4327-9eff-baff968982a0" />
+                    <reference value="urn:uuid:c9643334-ed27-4327-9eff-baff968982a0" />
                 </organization>
                 <code>
                     <coding>
@@ -1333,7 +1333,7 @@
                     </coding>
                 </code>
                 <subject>
-                    <reference value="Farad, Rudi/T995030511"/>
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
                 </subject>
                 <effectiveTiming>
                     <code>  
@@ -1563,7 +1563,7 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://fhir.dguv.de/Observation/dc5b40d7-1c69-401a-a649-145c79c4b571" />
+        <fullUrl value="urn:uuid:dc5b40d7-1c69-401a-a649-145c79c4b571" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="dc5b40d7-1c69-401a-a649-145c79c4b571" />
@@ -1597,10 +1597,11 @@
                     <profile value="http://fhir.dguv.de/ENLA/PractitionerRole/DGUV-ENLA-PR-DArzt" />
                 </meta>
                 <practitioner>
-                    <reference value="urn:uuid:Arzt-1" />
+                    <!-- Vorerst wird der Leistungserbringer 53192032-6365-4659-8cc2-f9a7df67a466 verwendet -->
+                    <reference value="urn:uuid:53192032-6365-4659-8cc2-f9a7df67a466" />
                 </practitioner>
                 <organization>
-                    <reference value="urn:uuid:DArzt-Einrichtung-234" />
+                    <reference value="urn:uuid:cdc0ceec-dc27-44e5-a7c7-567a754dc912" />
                 </organization>
                 <code>
                     <coding>
@@ -1729,10 +1730,11 @@
                     </extension>
                 </extension>
                 <practitioner>
-                    <reference value="urn:uuid:NichtAerztlich-14" />
+                <!-- Vorerst wird der Leistungserbringer 53192032-6365-4659-8cc2-f9a7df67a466 verwendet -->
+                    <reference value="urn:uuid:53192032-6365-4659-8cc2-f9a7df67a466" />
                 </practitioner>
                 <organization>
-                    <reference value="urn:uuid:/f952b0d1-bb04-402d-b0e6-cef800858f98" />
+                    <reference value="urn:uuid:f952b0d1-bb04-402d-b0e6-cef800858f98" />
                 </organization>
                 <telecom>
                     <system value="phone"/>
