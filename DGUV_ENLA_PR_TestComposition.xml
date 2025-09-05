@@ -2419,14 +2419,15 @@
       <path value="Composition.section" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="title" />
+          <type value="profile" />
+          <path value="resolve()" />
         </discriminator>
+        <ordered value="true" />
         <rules value="closed" />
       </slicing>
       <short value="Composition is broken into sections" />
       <definition value="The root of the sections that make up the composition." />
-      <min value="0" />
+      <min value="1" />
       <max value="*" />
       <base>
         <path value="Composition.section" />
@@ -3074,7 +3075,7 @@
         <min value="0" />
         <max value="*" />
       </base>
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Composition#Composition.section" />
+      <contentReference value="#Composition.section" />
       <condition value="cmp-1" />
       <mapping>
         <identity value="rim" />
@@ -3786,11 +3787,13 @@
       <path value="Composition.section" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="title" />
+          <type value="profile" />
+          <path value="resolve()" />
         </discriminator>
+        <ordered value="true" />
         <rules value="closed" />
       </slicing>
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:Unfallversicherungstraeger">
