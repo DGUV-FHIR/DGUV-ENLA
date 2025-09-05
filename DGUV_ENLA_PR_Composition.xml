@@ -3382,13 +3382,17 @@
           <type value="value" />
           <path value="title" />
         </discriminator>
+        <discriminator>
+          <type value="profile" />
+          <path value="resolve()" />
+        </discriminator>
         <ordered value="true" />
         <rules value="closed" />
       </slicing>
       <short value="Auflistung ENLA-Profiltypen in ENLA" />
       <definition value="The root of the sections that make up the composition." />
       <comment value="Auf das hier nicht enthaltene Profil DGUV_ENLA_PR_VersichertePerson wird unter &quot;subject&quot; verwiesen." />
-      <min value="0" />
+      <min value="1" />
       <max value="*" />
       <base>
         <path value="Composition.section" />
@@ -34937,11 +34941,16 @@
           <type value="value" />
           <path value="title" />
         </discriminator>
+        <discriminator>
+          <type value="profile" />
+          <path value="resolve()" />
+        </discriminator>
         <ordered value="true" />
         <rules value="closed" />
       </slicing>
       <short value="Auflistung ENLA-Profiltypen in ENLA" />
       <comment value="Auf das hier nicht enthaltene Profil DGUV_ENLA_PR_VersichertePerson wird unter &quot;subject&quot; verwiesen." />
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:Unfallversicherungstraeger">
