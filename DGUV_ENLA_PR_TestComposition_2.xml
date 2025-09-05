@@ -3385,6 +3385,10 @@
           <type value="value" />
           <path value="title" />
         </discriminator>
+        <discriminator>
+          <type value="profile" />
+          <path value="resolve()" />
+        </discriminator>
         <ordered value="true" />
         <rules value="closed" />
       </slicing>
@@ -4039,7 +4043,7 @@
         <min value="0" />
         <max value="*" />
       </base>
-      <contentReference value="#Composition.section" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Composition#Composition.section" />
       <condition value="cmp-1" />
       <mapping>
         <identity value="rim" />
@@ -26524,6 +26528,10 @@
         <discriminator>
           <type value="value" />
           <path value="title" />
+        </discriminator>
+        <discriminator>
+          <type value="profile" />
+          <path value="resolve()" />
         </discriminator>
         <ordered value="true" />
         <rules value="closed" />
