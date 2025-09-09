@@ -1211,11 +1211,11 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Medication.code.coding.display" />
-      <short value="Bedeutung der konkreten Pharmazentralnummer" />
-      <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
+      <short value="Handelsname des verordneten Präparats" />
+      <definition value="Handelsname des verordneten Präparates, aus der PZN abgeleitet. Ist eine PZN vorhanden so muss diese hier angeben werden." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Coding.display" />
@@ -4609,7 +4609,7 @@
       <path value="Medication.ingredient.item[x].coding" />
       <slicing>
         <discriminator>
-          <type value="pattern" />
+          <type value="type" />
           <path value="$this" />
         </discriminator>
         <rules value="open" />
@@ -7538,7 +7538,9 @@
     </element>
     <element id="Medication.code.coding:PZN.display">
       <path value="Medication.code.coding.display" />
-      <short value="Bedeutung der konkreten Pharmazentralnummer" />
+      <short value="Handelsname des verordneten Präparats" />
+      <definition value="Handelsname des verordneten Präparates, aus der PZN abgeleitet. Ist eine PZN vorhanden so muss diese hier angeben werden." />
+      <min value="1" />
     </element>
     <element id="Medication.code.coding:ATC-DE">
       <path value="Medication.code.coding" />
@@ -7671,6 +7673,16 @@
     <element id="Medication.ingredient.item[x]:itemCodeableConcept">
       <path value="Medication.ingredient.item[x]" />
       <sliceName value="itemCodeableConcept" />
+    </element>
+    <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding">
+      <path value="Medication.ingredient.item[x].coding" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
     </element>
     <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:ASK">
       <path value="Medication.ingredient.item[x].coding" />
