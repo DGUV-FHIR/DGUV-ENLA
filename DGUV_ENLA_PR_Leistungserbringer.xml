@@ -16208,7 +16208,7 @@
       <path value="Practitioner.gender" />
       <short value="male | female | other | unknown" />
       <definition value="Administrative Gender - the gender that the person is considered to have for administration and record keeping purposes." />
-      <comment value="Angabe spielt hier keine Rolle." />
+      <comment value="Das Geschlecht der Leistungserbringenden ist an dieser Stelle für die UV nicht von Relevanz." />
       <requirements value="Needed to address the person correctly." />
       <min value="0" />
       <max value="0" />
@@ -16544,7 +16544,7 @@
       <path value="Practitioner.birthDate" />
       <short value="The date  on which the practitioner was born" />
       <definition value="The date of birth for the practitioner." />
-      <comment value="Angabe spielt hier keine Rolle." />
+      <comment value="Das Geburtsdatum der Leistungserbringenden ist an dieser Stelle für die UV nicht von Relevanz." />
       <requirements value="Needed for identification." />
       <min value="0" />
       <max value="0" />
@@ -17604,12 +17604,12 @@
     </element>
     <element id="Practitioner.gender">
       <path value="Practitioner.gender" />
-      <comment value="Angabe spielt hier keine Rolle." />
+      <comment value="Das Geschlecht der Leistungserbringenden ist an dieser Stelle für die UV nicht von Relevanz." />
       <max value="0" />
     </element>
     <element id="Practitioner.birthDate">
       <path value="Practitioner.birthDate" />
-      <comment value="Angabe spielt hier keine Rolle." />
+      <comment value="Das Geburtsdatum der Leistungserbringenden ist an dieser Stelle für die UV nicht von Relevanz." />
       <max value="0" />
     </element>
   </differential>
