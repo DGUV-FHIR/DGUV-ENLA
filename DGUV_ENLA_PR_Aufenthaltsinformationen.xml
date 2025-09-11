@@ -1610,8 +1610,8 @@
     </element>
     <element id="Encounter.status">
       <path value="Encounter.status" />
-      <short value="planned | arrived | triaged | in-progress | onleave | finished | cancelled +" />
-      <definition value="planned | arrived | triaged | in-progress | onleave | finished | cancelled +." />
+      <short value="Status des stationären Aufenthalts eines Patienten" />
+      <definition value="planned | arrived | triaged | in-progress | onleave | finished | cancelled +" />
       <comment value="Note that internal business rules will determine the appropriate transitions that may occur between statuses (and also classes)." />
       <min value="1" />
       <max value="1" />
@@ -6432,6 +6432,8 @@
     </element>
     <element id="Encounter.status">
       <path value="Encounter.status" />
+      <short value="Status des stationären Aufenthalts eines Patienten" />
+      <definition value="planned | arrived | triaged | in-progress | onleave | finished | cancelled +" />
       <fixedCode value="finished" />
     </element>
     <element id="Encounter.class">
