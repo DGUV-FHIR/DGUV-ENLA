@@ -3253,7 +3253,7 @@
       <path value="Observation.value[x]" />
       <short value="Angaben über notwendige Besondere Maßnahmen" />
       <definition value="The information determined as a result of making the observation, if the information has a simple value." />
-      <comment value="Muss auch Angabe darüber enthalten, ob Verordnungen dazu ausgestellt wurden." />
+      <comment value="Das Attribut &quot;value&quot; ist ein Freitext. Zusätzlich zur Art der besonderen Maßnahmen muss im Freitext auch eine Information darüber enthalten sein, ob sie schon verordnet sind oder nicht." />
       <requirements value="An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations." />
       <min value="1" />
       <max value="1" />
@@ -5457,7 +5457,7 @@
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
       <short value="Angaben über notwendige Besondere Maßnahmen" />
-      <comment value="Muss auch Angabe darüber enthalten, ob Verordnungen dazu ausgestellt wurden." />
+      <comment value="Das Attribut &quot;value&quot; ist ein Freitext. Zusätzlich zur Art der besonderen Maßnahmen muss im Freitext auch eine Information darüber enthalten sein, ob sie schon verordnet sind oder nicht." />
       <min value="1" />
       <type>
         <code value="string" />

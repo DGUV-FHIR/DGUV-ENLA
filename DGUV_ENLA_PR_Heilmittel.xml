@@ -4223,7 +4223,7 @@
       <path value="Observation.value[x].text" />
       <short value="Angaben über Heilmittel als Freitext" />
       <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user." />
-      <comment value="Muss auch Angabe darüber enthalten, ob Verordnungen dazu ausgestellt wurden." />
+      <comment value="Sollen zusätzlich Heilmittel als Freitext beschrieben werden, muss im Freitext auch eine Information darüber enthalten sein, ob sie schon verordnet sind oder nicht." />
       <requirements value="The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source." />
       <min value="0" />
       <max value="1" />
@@ -6510,7 +6510,7 @@
     <element id="Observation.value[x].text">
       <path value="Observation.value[x].text" />
       <short value="Angaben über Heilmittel als Freitext" />
-      <comment value="Muss auch Angabe darüber enthalten, ob Verordnungen dazu ausgestellt wurden." />
+      <comment value="Sollen zusätzlich Heilmittel als Freitext beschrieben werden, muss im Freitext auch eine Information darüber enthalten sein, ob sie schon verordnet sind oder nicht." />
       <mustSupport value="true" />
     </element>
   </differential>
