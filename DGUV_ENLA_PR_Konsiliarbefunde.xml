@@ -2479,15 +2479,6 @@
       <type>
         <code value="dateTime" />
       </type>
-      <type>
-        <code value="Period" />
-      </type>
-      <type>
-        <code value="Timing" />
-      </type>
-      <type>
-        <code value="instant" />
-      </type>
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -5071,6 +5062,9 @@
       <path value="Observation.effective[x]" />
       <short value="Zeitpunkt der Untersuchung bzw. Probenentnahme" />
       <min value="1" />
+      <type>
+        <code value="dateTime" />
+      </type>
       <mustSupport value="true" />
     </element>
     <element id="Observation.value[x]">
