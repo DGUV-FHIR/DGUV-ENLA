@@ -741,7 +741,7 @@
     </element>
     <element id="Medication.code">
       <path value="Medication.code" />
-      <short value="Medikament in codierter Form oder ggf. als Freitext" />
+      <short value="Dokumentation der Medikation" />
       <definition value="A code (or set of codes) that specify this medication, or a textual description if no code is available. Usage note: This could be a standard medication code such as a code from RxNorm, SNOMED CT, IDMP etc. It could also be a national or local formulary code, optionally with translations to other code systems." />
       <comment value="Depending on the context of use, the code that was actually selected by the user (prescriber, dispenser, etc.) will have the coding.userSelected set to true.  As described in the coding datatype: &quot;A coding may be marked as a &quot;userSelected&quot; if a user selected the particular coded value in a user interface (e.g. the user selects an item in a pick-list). If a user selected coding exists, it is the preferred choice for performing translations etc. Other codes can only be literal translations to alternative code systems, or codes at a lower level of granularity (e.g. a generic code for a vendor-specific primary one)." />
       <min value="1" />
@@ -2228,7 +2228,7 @@
     </element>
     <element id="Medication.code.coding:verordnungskategorieCode.code">
       <path value="Medication.code.coding.code" />
-      <short value="Symbol in syntax defined by the system" />
+      <short value="Kennzeichnung als freitextliche Medikationsdokumentation" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to refer to a particular code in the system." />
@@ -7875,6 +7875,7 @@
     </element>
     <element id="Medication.code">
       <path value="Medication.code" />
+      <short value="Dokumentation der Medikation" />
       <min value="1" />
     </element>
     <element id="Medication.code.coding">
@@ -7914,6 +7915,7 @@
     </element>
     <element id="Medication.code.coding:verordnungskategorieCode.code">
       <path value="Medication.code.coding.code" />
+      <short value="Kennzeichnung als freitextliche Medikationsdokumentation" />
       <min value="1" />
       <fixedCode value="freitext" />
       <mustSupport value="true" />
