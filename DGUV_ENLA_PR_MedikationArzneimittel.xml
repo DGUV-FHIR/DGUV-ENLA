@@ -1214,10 +1214,10 @@
       </extension>
       <path value="Medication.code.coding.display" />
       <short value="Handelsname des verordneten Präparats" />
-      <definition value="Handelsname des verordneten Präparates, aus der PZN abgeleitet. Ist eine PZN vorhanden so muss diese hier angeben werden." />
-      <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
+      <definition value="Handelsname des verordneten Präparates, aus der PZN abgeleitet. Ist eine PZN vorhanden, so muss diese hier angeben werden." />
+      <comment value="Der durch PZN vorgegebene Handelsname ist in code.text verpflichtend und in code.coding.PZN.display optional. Wenn er an beiden Stellen gepflegt wird, dann müssen beide Einträge identisch sein." />
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Coding.display" />
@@ -2013,7 +2013,7 @@
       <path value="Medication.code.text" />
       <short value="Arzneimittelname / Handelsname als Freitext" />
       <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user." />
-      <comment value="Very often the text is the same as a displayName of one of the codings." />
+      <comment value="Der durch PZN vorgegebene Handelsname ist in code.text verpflichtend und in code.coding.PZN.display optional. Wenn er an beiden Stellen gepflegt wird, dann müssen beide Einträge identisch sein." />
       <requirements value="The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source." />
       <min value="1" />
       <max value="1" />
@@ -7904,8 +7904,8 @@
     <element id="Medication.code.coding:PZN.display">
       <path value="Medication.code.coding.display" />
       <short value="Handelsname des verordneten Präparats" />
-      <definition value="Handelsname des verordneten Präparates, aus der PZN abgeleitet. Ist eine PZN vorhanden so muss diese hier angeben werden." />
-      <min value="1" />
+      <definition value="Handelsname des verordneten Präparates, aus der PZN abgeleitet. Ist eine PZN vorhanden, so muss diese hier angeben werden." />
+      <comment value="Der durch PZN vorgegebene Handelsname ist in code.text verpflichtend und in code.coding.PZN.display optional. Wenn er an beiden Stellen gepflegt wird, dann müssen beide Einträge identisch sein." />
     </element>
     <element id="Medication.code.coding:ATC-DE">
       <path value="Medication.code.coding" />
@@ -7920,6 +7920,7 @@
     <element id="Medication.code.text">
       <path value="Medication.code.text" />
       <short value="Arzneimittelname / Handelsname als Freitext" />
+      <comment value="Der durch PZN vorgegebene Handelsname ist in code.text verpflichtend und in code.coding.PZN.display optional. Wenn er an beiden Stellen gepflegt wird, dann müssen beide Einträge identisch sein." />
       <min value="1" />
     </element>
     <element id="Medication.manufacturer.display">
