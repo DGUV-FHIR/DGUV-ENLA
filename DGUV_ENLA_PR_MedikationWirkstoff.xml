@@ -1092,6 +1092,7 @@
       <type>
         <code value="uri" />
       </type>
+      <fixedUri value="http://fhir.de/CodeSystem/ifa/pzn" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -1212,10 +1213,10 @@
       </extension>
       <path value="Medication.code.coding.display" />
       <short value="Handelsname des verordneten Präparats" />
-      <definition value="Handelsname des verordneten Präparates, aus der PZN abgeleitet. Ist eine PZN vorhanden so muss diese hier angeben werden." />
-      <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
+      <definition value="Handelsname des verordneten Präparates, aus der PZN abgeleitet. Ist eine PZN vorhanden, so muss diese hier angeben werden." />
+      <comment value="Der durch PZN vorgegebene Handelsname ist in code.text verpflichtend und in code.coding.PZN.display optional. Wenn es in display einen Eintrag gibt, muss er so auch in text enthalten sein." />
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Coding.display" />
@@ -1446,6 +1447,7 @@
       <type>
         <code value="uri" />
       </type>
+      <fixedUri value="http://fhir.de/CodeSystem/bfarm/atc" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -1567,7 +1569,7 @@
       <path value="Medication.code.coding.display" />
       <short value="Bedeutung der konkreten ATC-Klassifikation" />
       <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
-      <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
+      <comment value="Der durch ATC-DE gegebene Eintrag ist in code.text verpflichtend und in code.coding.WG14.display optional. Wenn es in display einen Eintrag gibt, muss er so auch in text enthalten sein." />
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
       <min value="0" />
       <max value="1" />
@@ -1800,6 +1802,7 @@
       <type>
         <code value="uri" />
       </type>
+      <fixedUri value="http://fhir.de/CodeSystem/abdata/wg14" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -1921,7 +1924,7 @@
       <path value="Medication.code.coding.display" />
       <short value="Bedeutung der konkreten WG14-Nummer" />
       <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
-      <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
+      <comment value="Der durch WG14 gegebene Eintrag ist in code.text verpflichtend und in code.coding.WG14.display optional. Wenn es in display einen Eintrag gibt, muss er so auch in text enthalten sein." />
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
       <min value="0" />
       <max value="1" />
@@ -2011,9 +2014,9 @@
       <path value="Medication.code.text" />
       <short value="Medikament als Freitext" />
       <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user." />
-      <comment value="Very often the text is the same as a displayName of one of the codings." />
+      <comment value="Die durch PZN, ATC-DE oder WG14 gegebenen Einträge sind in code.text verpflichtend und in code.coding.PZN/ATC-DE/WG14.display optional. Wenn es in display einen Eintrag gibt, muss er so auch in text enthalten sein." />
       <requirements value="The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="CodeableConcept.text" />
@@ -7531,6 +7534,7 @@
     <element id="Medication.code.coding:PZN.system">
       <path value="Medication.code.coding.system" />
       <short value="CodeSystem für Pharmazentralnummer" />
+      <fixedUri value="http://fhir.de/CodeSystem/ifa/pzn" />
     </element>
     <element id="Medication.code.coding:PZN.code">
       <path value="Medication.code.coding.code" />
@@ -7539,8 +7543,8 @@
     <element id="Medication.code.coding:PZN.display">
       <path value="Medication.code.coding.display" />
       <short value="Handelsname des verordneten Präparats" />
-      <definition value="Handelsname des verordneten Präparates, aus der PZN abgeleitet. Ist eine PZN vorhanden so muss diese hier angeben werden." />
-      <min value="1" />
+      <definition value="Handelsname des verordneten Präparates, aus der PZN abgeleitet. Ist eine PZN vorhanden, so muss diese hier angeben werden." />
+      <comment value="Der durch PZN vorgegebene Handelsname ist in code.text verpflichtend und in code.coding.PZN.display optional. Wenn es in display einen Eintrag gibt, muss er so auch in text enthalten sein." />
     </element>
     <element id="Medication.code.coding:ATC-DE">
       <path value="Medication.code.coding" />
@@ -7550,6 +7554,7 @@
     <element id="Medication.code.coding:ATC-DE.system">
       <path value="Medication.code.coding.system" />
       <short value="CodeSystem für ATC-Klassifikationen" />
+      <fixedUri value="http://fhir.de/CodeSystem/bfarm/atc" />
     </element>
     <element id="Medication.code.coding:ATC-DE.code">
       <path value="Medication.code.coding.code" />
@@ -7558,6 +7563,7 @@
     <element id="Medication.code.coding:ATC-DE.display">
       <path value="Medication.code.coding.display" />
       <short value="Bedeutung der konkreten ATC-Klassifikation" />
+      <comment value="Der durch ATC-DE gegebene Eintrag ist in code.text verpflichtend und in code.coding.WG14.display optional. Wenn es in display einen Eintrag gibt, muss er so auch in text enthalten sein." />
     </element>
     <element id="Medication.code.coding:WG14">
       <path value="Medication.code.coding" />
@@ -7567,6 +7573,7 @@
     <element id="Medication.code.coding:WG14.system">
       <path value="Medication.code.coding.system" />
       <short value="CodeSystem für WG14-Nummer" />
+      <fixedUri value="http://fhir.de/CodeSystem/abdata/wg14" />
     </element>
     <element id="Medication.code.coding:WG14.code">
       <path value="Medication.code.coding.code" />
@@ -7575,10 +7582,13 @@
     <element id="Medication.code.coding:WG14.display">
       <path value="Medication.code.coding.display" />
       <short value="Bedeutung der konkreten WG14-Nummer" />
+      <comment value="Der durch WG14 gegebene Eintrag ist in code.text verpflichtend und in code.coding.WG14.display optional. Wenn es in display einen Eintrag gibt, muss er so auch in text enthalten sein." />
     </element>
     <element id="Medication.code.text">
       <path value="Medication.code.text" />
       <short value="Medikament als Freitext" />
+      <comment value="Die durch PZN, ATC-DE oder WG14 gegebenen Einträge sind in code.text verpflichtend und in code.coding.PZN/ATC-DE/WG14.display optional. Wenn es in display einen Eintrag gibt, muss er so auch in text enthalten sein." />
+      <min value="1" />
     </element>
     <element id="Medication.manufacturer">
       <path value="Medication.manufacturer" />
