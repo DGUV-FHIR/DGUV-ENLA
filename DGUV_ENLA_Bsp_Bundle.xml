@@ -28,6 +28,7 @@
     <type value="document" />
     <timestamp value="2025-06-10T12:00:00+01:00" />
     <entry>
+        <!--entry 0-->
         <fullUrl value="urn:uuid:c00f7826-5a3e-49aa-b499-3f8c6599bd2b" />
         <resource>
             <Composition>
@@ -65,6 +66,7 @@
                 </author>
                 <title value="Entlassungsbericht aus stationärer Behandlung" />
                 <section>
+                    <!--section 0-->
                     <title value="Unfallversicherungstraeger" />
                     <entry>
                         <!-- 
@@ -76,6 +78,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!--section 1-->
                     <title value="Krankenkasse" />
                     <entry>
                         <!-- 
@@ -87,6 +90,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!--section 2-->
                     <title value="VersichertenVerhaeltnis" />
                     <entry>
                         <!-- 
@@ -98,6 +102,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!--section 3-->
                     <title value="Pflegekasse" />
                     <entry>
                         <!-- 
@@ -109,6 +114,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!--section 4-->
                     <title value="Unfallbetrieb" />
                     <entry>
                         <!-- 
@@ -120,6 +126,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!--section 5-->
                     <title value="Aufenthaltsinformationen" />
                     <entry>
                         <!-- 
@@ -131,6 +138,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!--section 6-->
                     <title value="DiagnoseFreitext" />
                     <entry>
                         <!-- 
@@ -142,6 +150,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!--section 7-->
                     <title value="DiagnoseStrukturiert" />
                     <entry>
                         <!-- 
@@ -153,6 +162,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!--section 8-->
                     <title value="Therapie" />
                     <entry>
                         <!-- 
@@ -164,6 +174,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!--section 9-->
                     <title value="Unfallereignis" />
                     <entry>
                         <!-- 
@@ -175,6 +186,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!--section 10-->
                     <title value="Aufnahmebefunde" />
                     <entry>
                         <!-- 
@@ -186,6 +198,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!--section 11-->
                     <title value="Behandlungsverlauf" />
                     <entry>
                         <!-- 
@@ -197,6 +210,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!--section 12-->
                     <title value="Konsiliarbefunde" />
                     <entry>
                         <!-- 
@@ -208,6 +222,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!--section 13-->
                     <title value="Entlassbefunde" />
                     <entry>
                         <!-- 
@@ -219,6 +234,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!--section 14-->
                     <title value="DokumentenReferenz" />
                     <entry>
                         <!-- 
@@ -230,6 +246,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!--section 15-->
                     <title value="Therapieempfehlung" />
                     <entry>
                         <!-- 
@@ -241,6 +258,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!--section 16-->
                     <title value="MedikationsInformation" />
                     <entry>
                         <!-- 
@@ -252,6 +270,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!--section 17-->
                     <title value="MedikationWirkstoff" />
                     <entry>
                         <!-- 
@@ -263,6 +282,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!--section 18-->
                     <title value="MedikationRezeptur" />
                     <entry>
                         <!-- 
@@ -274,6 +294,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!--section 19-->
                     <title value="MedikationArzneimittel" />
                     <entry>
                         <!-- 
@@ -285,6 +306,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!--section 20-->
                     <title value="WeiterbehandelnderArzt" />
                     <entry>
                         <!-- 
@@ -296,6 +318,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!--section 21-->
                     <title value="WeiterbehandelndeOrganisation" />
                     <entry>
                         <!-- 
@@ -307,6 +330,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!--section 22-->
                     <title value="RehaMassnahmen" />
                     <entry>
                         <!-- 
@@ -318,6 +342,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!--section 23-->
                     <title value="Heilmittel" />
                     <entry>
                         <!-- 
@@ -329,6 +354,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!--section 24-->
                     <title value="Hilfsmittel" />
                     <entry>
                         <!-- 
@@ -340,6 +366,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!--section 25-->
                     <title value="BesondereMassnahmen" />
                     <entry>
                         <!-- 
@@ -351,6 +378,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!--section 26-->
                     <title value="Arbeitsunfaehigkeit" />
                     <entry>
                         <!-- 
@@ -362,6 +390,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!--section 27-->
                     <title value="PrognoseWiederaufnahmeTaetigkeit" />
                     <entry>
                         <!-- 
@@ -373,6 +402,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!--section 28-->
                     <title value="stufenweiseWiedereingliederung" />
                     <entry>
                         <!-- 
@@ -384,6 +414,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!--section 29-->
                     <title value="Datenschutz" />
                     <entry>
                         <!-- 
@@ -395,6 +426,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!--section 30-->
                     <title value="DArzt" />
                     <entry>
                         <!-- 
@@ -406,6 +438,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!--section 31-->
                     <title value="DArztOrganisation" />
                     <entry>
                         <!-- 
@@ -417,6 +450,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!--section 32-->
                     <title value="BehandelndeEinrichtung" />
                     <entry>
                         <!-- 
@@ -428,6 +462,7 @@
                     </entry>
                 </section>
                 <section>
+                <!--section 33-->
                     <title value="AnsprechpartnerFuerRueckfragen" />
                     <entry>
                         <!-- 
@@ -442,6 +477,7 @@
         </resource>
     </entry>
     <entry>
+        <!--entry 1-->
         <fullUrl value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
         <resource>
             <Patient xmlns="http://hl7.org/fhir">
@@ -516,6 +552,7 @@
         </resource>
     </entry>
     <entry>
+        <!--entry 2-->
         <fullUrl value="urn:uuid:53192032-6365-4659-8cc2-f9a7df67a466" />
         <resource>
             <Practitioner xmlns="http://hl7.org/fhir">
@@ -552,6 +589,7 @@
         </resource>
     </entry>
     <entry>
+        <!--entry 3-->
         <fullUrl value="urn:uuid:180f219f-97a8-486d-99d9-ed631fe4fc60" />
         <resource>            
             <Organization xmlns="http://hl7.org/fhir">
@@ -593,6 +631,7 @@
         </resource>
     </entry>
     <entry>
+        <!--entry 4-->
         <fullUrl value="urn:uuid:446a540f-7d08-4926-98fe-2abd3094aa92" />
         <resource>
             <Organization xmlns="http://hl7.org/fhir">
@@ -642,6 +681,7 @@
         </resource>
     </entry>
     <entry>
+        <!--entry 5-->
         <fullUrl value="urn:uuid:75c6d854-876e-4b9d-8ea9-327a46c9c50f" />
         <resource>
             <Coverage xmlns="http://hl7.org/fhir">
@@ -668,6 +708,7 @@
         </resource>
     </entry>
     <entry>
+        <!--entry 6-->
         <fullUrl value="urn:uuid:bf64ac16-926b-4082-968a-f7c088364b83" />
         <resource>
             <Organization xmlns="http://hl7.org/fhir">
@@ -709,6 +750,7 @@
         </resource>
     </entry>
     <entry>
+        <!--entry 7-->
         <fullUrl value="urn:uuid:bef1dc10-a361-4eba-8fcc-073f771df44b" />
         <resource>
             <Organization xmlns="http://hl7.org/fhir">
@@ -739,6 +781,7 @@
         </resource>
     </entry>
     <entry>
+        <!--entry 8-->
         <fullUrl value="urn:uuid:a33633b7-ab47-4341-b4e9-c856bb5e5878" />
         <resource>
             <Encounter xmlns="http://hl7.org/fhir">
@@ -779,6 +822,7 @@
         </resource>
     </entry>
     <entry>
+        <!--entry 9-->
         <fullUrl value="urn:uuid:84507618-4ff5-46d9-9e61-8ab15c9ce2a4" />
         <resource>
             <Condition xmlns="http://hl7.org/fhir">
@@ -804,6 +848,7 @@
         </resource>
     </entry>
     <entry>
+        <!--entry 10-->
         <fullUrl value="urn:uuid:9acff578-cca8-4f9c-9f58-49e5cb91bbab" />
         <resource>
             <Condition xmlns="http://hl7.org/fhir">
@@ -826,6 +871,7 @@
           </resource>
     </entry>
     <entry>
+        <!--entry 11-->
         <fullUrl value="urn:uuid:2288ca98-76e8-4daf-bfb3-dd36c0efbb39" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
@@ -849,6 +895,7 @@
         </resource>
     </entry>
     <entry>
+        <!--entry 12-->
         <fullUrl value="urn:uuid:08b39f82-9dbf-4315-92f5-5f0011d37a5c" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
@@ -917,6 +964,7 @@
         </resource>
     </entry>
     <entry>
+        <!--entry 13-->
         <fullUrl value="urn:uuid:d39c416d-e1a1-43fd-afef-2763fd66473e" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
@@ -947,6 +995,7 @@
         </resource>
     </entry>
     <entry>
+        <!--entry 14-->
         <fullUrl value="urn:uuid:0c6d28f5-2b67-4308-9d90-6a53ecd9ce7e" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
@@ -976,6 +1025,7 @@
         </resource>
     </entry>
     <entry>
+        <!--entry 15-->
         <fullUrl value="urn:uuid:0a25be9c-af37-410b-bd43-6c7d3e1f1681" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
@@ -1006,6 +1056,7 @@
         </resource>
     </entry>
     <entry>
+        <!--entry 16-->
         <fullUrl value="urn:uuid:4f518fd0-15dd-471a-ab4e-fe5ab3fe979e" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
@@ -1036,6 +1087,7 @@
         </resource>
     </entry>
     <entry>
+        <!--entry 17-->
         <fullUrl value="urn:uuid:c7b24835-f7b8-4480-a0fe-c0653d6c4050" />
         <resource>
             <DocumentReference xmlns="http://hl7.org/fhir">
@@ -1063,6 +1115,7 @@
         </resource>
     </entry>
     <entry>
+        <!--entry 18-->
         <fullUrl value="urn:uuid:f2e30a2a-9070-43aa-9bf2-307ad290eb95" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
@@ -1086,6 +1139,7 @@
         </resource>
     </entry>
     <entry>
+        <!--entry 19-->
         <fullUrl value="urn:uuid:cf72d600-1c4d-44bf-a8b3-ec100f1a4947" />
         <resource>
             <MedicationStatement xmlns="http://hl7.org/fhir">
@@ -1128,6 +1182,7 @@
         </resource>
     </entry>
     <entry>
+        <!--entry 20-->
         <fullUrl value="urn:uuid:8947dca1-69fd-4184-a55f-8f7f32b0a914" />
         <resource>
             <Medication xmlns="http://hl7.org/fhir">
@@ -1159,6 +1214,7 @@
         </resource>
     </entry>
     <entry>
+        <!--entry 21-->
         <fullUrl value="urn:uuid:347b8239-6420-4b3a-a873-6b62e1fa1b0f" />
         <resource>
             <Medication xmlns="http://hl7.org/fhir">
@@ -1199,6 +1255,7 @@
         </resource>
     </entry>
     <entry>
+        <!--entry 22-->
         <fullUrl value="urn:uuid:4b28cbef-80e7-4838-b15b-b2d9dfc4461b" />
         <resource>
             <Medication xmlns="http://hl7.org/fhir">
@@ -1232,6 +1289,7 @@
         </resource>
     </entry>
     <entry>
+        <!--entry 23-->
         <fullUrl value="urn:uuid:ebd25191-272a-4a2f-9b52-8733963b32b8" />
         <resource>
             <PractitionerRole xmlns="http://hl7.org/fhir">
@@ -1265,6 +1323,7 @@
         </resource>
     </entry>
     <entry>
+        <!--entry 24-->
         <fullUrl value="urn:uuid:c9643334-ed27-4327-9eff-baff968982a0" />
         <resource>
             <Organization xmlns="http://hl7.org/fhir">
@@ -1317,6 +1376,7 @@
         </resource>
     </entry>
     <entry>
+        <!--entry 25-->
         <fullUrl value="urn:uuid:0f9b10f1-b311-49e8-b395-608303bdaa2d" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
@@ -1358,6 +1418,7 @@
         </resource>
     </entry>
     <entry>
+        <!--entry 26-->
         <fullUrl value="urn:uuid:8d018e14-21b7-4982-b26f-d3b4812f7a1f" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
@@ -1399,6 +1460,7 @@
         </resource>
     </entry>
     <entry>
+        <!--entry 27-->
         <fullUrl value="urn:uuid:b77a0cc9-62ff-47c5-96b5-a964f313490d" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
@@ -1440,6 +1502,7 @@
         </resource>
     </entry>
     <entry>
+        <!--entry 28-->
         <fullUrl value="urn:uuid:3aecc20f-00e2-4d82-ae7b-a703118c9969" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
@@ -1472,6 +1535,7 @@
         </resource>
     </entry>
     <entry>
+        <!--entry 29-->
         <fullUrl value="urn:uuid:bbc56617-923d-4076-8bad-43cd861031c7" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
@@ -1505,6 +1569,7 @@
         </resource>
     </entry>
     <entry>
+         <!--entry 30-->
         <fullUrl value="urn:uuid:f8412800-04b9-446b-b83d-2d772af8099b" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
@@ -1534,6 +1599,7 @@
         </resource>
     </entry>
     <entry>
+        <!--entry 31-->
         <fullUrl value="urn:uuid:e04aaff2-34c7-4dfa-80cf-b3c5d5a03058" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
@@ -1563,6 +1629,7 @@
         </resource>
     </entry>
     <entry>
+        <!--entry 32-->
         <fullUrl value="urn:uuid:dc5b40d7-1c69-401a-a649-145c79c4b571" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
@@ -1589,6 +1656,7 @@
         </resource>
     </entry>
     <entry>
+        <!--entry 33-->
         <fullUrl value="urn:uuid:93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
         <resource>
             <PractitionerRole xmlns="http://hl7.org/fhir">
@@ -1623,6 +1691,7 @@
         </resource>
     </entry>
     <entry>
+        <!--entry 34-->
         <fullUrl value="urn:uuid:cdc0ceec-dc27-44e5-a7c7-567a754dc912" />
         <resource>
             <Organization xmlns="http://hl7.org/fhir">
@@ -1665,6 +1734,7 @@
         </resource>
     </entry>
     <entry>
+        <!--entry 35-->
         <fullUrl value="urn:uuid:f952b0d1-bb04-402d-b0e6-cef800858f98" />
         <resource>
             <Organization xmlns="http://hl7.org/fhir">
@@ -1714,6 +1784,7 @@
         </resource>
     </entry>
     <entry>
+        <!--entry 36-->
         <fullUrl value="urn:uuid:3011936a-df87-4144-a35a-bbaae96bb2cc" />
         <resource>
             <PractitionerRole xmlns="http://hl7.org/fhir">
