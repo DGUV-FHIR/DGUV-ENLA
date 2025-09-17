@@ -903,12 +903,12 @@
                 <meta>
                     <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Unfallereignis"/>
                 </meta>
+                <status value="final"/>
                 <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-Pflegeunfall">
                     <extension url="Pflegeunfall">
                         <valueBoolean value="false" />
                     </extension>
                 </extension>
-                <status value="final"/>
                 <code>
                     <coding>
                         <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-Verletzungsartenverzeichnis"/>
