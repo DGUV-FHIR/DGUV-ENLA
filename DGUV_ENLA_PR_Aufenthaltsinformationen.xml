@@ -683,7 +683,7 @@
     </element>
     <element id="Encounter.identifier">
       <path value="Encounter.identifier" />
-      <short value="Identifier bildet die Fallnummer ab" />
+      <short value="Identifier bildet Fallnummer ab" />
       <definition value="An identifier - identifies some entity uniquely and unambiguously. Typically this is used for business identifiers." />
       <min value="0" />
       <max value="1" />
@@ -882,7 +882,8 @@
       <patternCodeableConcept>
         <coding>
           <version value="v2" />
-          <display value="Kontonummer" />
+          <code value="VN" />
+          <display value="Fallnummer" />
         </coding>
         <text value="An identifier that is unique to an account." />
       </patternCodeableConcept>
@@ -1402,7 +1403,7 @@
     </element>
     <element id="Encounter.identifier.system">
       <path value="Encounter.identifier.system" />
-      <short value="The namespace for the identifier value" />
+      <short value="Wertebereich für die Fallnummern" />
       <definition value="Establishes the namespace for the value - that is, a URL that describes a set values that are unique." />
       <comment value="Identifier.system is always case sensitive." />
       <requirements value="There are many sets  of identifiers.  To perform matching of two identifiers, we need to know what set we're dealing with. The system identifies a particular set of unique identifiers." />
@@ -1450,7 +1451,7 @@
     </element>
     <element id="Encounter.identifier.value">
       <path value="Encounter.identifier.value" />
-      <short value="The value that is unique" />
+      <short value="Konkrete eindeutige Fallnummer" />
       <definition value="The portion of the identifier typically relevant to the user and which is unique within the context of the system." />
       <comment value="If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](extension-rendered-value.html). Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe." />
       <min value="1" />
@@ -1612,7 +1613,7 @@
       <path value="Encounter.status" />
       <short value="Status des stationären Aufenthalts eines Patienten" />
       <definition value="planned | arrived | triaged | in-progress | onleave | finished | cancelled +" />
-      <comment value="Note that internal business rules will determine the appropriate transitions that may occur between statuses (and also classes)." />
+      <comment value="Wenn ein Entlassbericht ausgestellt wird, dann muss der stationäre Aufenthalt des Patienten beendet sein." />
       <min value="1" />
       <max value="1" />
       <base>
@@ -1633,6 +1634,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isModifier value="true" />
       <isModifierReason value="This element is labeled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid" />
       <isSummary value="true" />
@@ -1903,7 +1905,7 @@
     </element>
     <element id="Encounter.class">
       <path value="Encounter.class" />
-      <short value="Classification of patient encounter" />
+      <short value="Art des Aufenthalts eines Patienten" />
       <definition value="Concepts representing classification of patient encounter such as ambulatory (outpatient), inpatient, emergency, home health or others due to local variations." />
       <comment value="Codes may be defined very casually in enumerations or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information." />
       <min value="1" />
@@ -2040,11 +2042,11 @@
     </element>
     <element id="Encounter.class.system">
       <path value="Encounter.class.system" />
-      <short value="Identity of the terminology system" />
+      <short value="CodeSystem für die Art des Aufenthalts eines Patienten" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
       <comment value="The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously." />
       <requirements value="Need to be unambiguous about the source of the definition of the symbol." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Coding.system" />
@@ -2054,6 +2056,7 @@
       <type>
         <code value="uri" />
       </type>
+      <fixedUri value="http://terminology.hl7.org/CodeSystem/v3-ActCode" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -2126,11 +2129,11 @@
     </element>
     <element id="Encounter.class.code">
       <path value="Encounter.class.code" />
-      <short value="Symbol in syntax defined by the system" />
+      <short value="Kürzel für einen stationären Krankenhausaufenthalt" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to refer to a particular code in the system." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Coding.code" />
@@ -2174,11 +2177,11 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Encounter.class.display" />
-      <short value="Representation defined by the system" />
+      <short value="Bezeichnung als stationärer Krankenhausaufenthalt" />
       <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Coding.display" />
@@ -3494,9 +3497,9 @@
     </element>
     <element id="Encounter.period">
       <path value="Encounter.period" />
-      <short value="The start and end time of the encounter" />
+      <short value="Zeitraum des stationären Aufenthalts" />
       <definition value="The start and end time of the encounter." />
-      <comment value="If not (yet) known, the end of the Period may be omitted." />
+      <comment value="Im Fall der Ausstellung eines Entlassberichts muss der Aufenthalt beendet sein. Deshalb darf &quot;end&quot; nicht leer sein." />
       <min value="1" />
       <max value="1" />
       <base>
@@ -3630,7 +3633,7 @@
     </element>
     <element id="Encounter.period.start">
       <path value="Encounter.period.start" />
-      <short value="Starting time with inclusive boundary" />
+      <short value="Erster Tag des stationären Aufenthalts (inkl.)" />
       <definition value="The start of the period. The boundary is inclusive." />
       <comment value="If the low element is missing, the meaning is that the low boundary is not known." />
       <min value="1" />
@@ -3670,7 +3673,7 @@
     </element>
     <element id="Encounter.period.end">
       <path value="Encounter.period.end" />
-      <short value="End time with inclusive boundary, if not ongoing" />
+      <short value="Letzter Tag des stationären Aufenthalts (inkl.)" />
       <definition value="The end of the period. If the end of the period is missing, it means no end was known or planned at the time the instance was created. The start may be in the past, and the end date in the future, which means that period is expected/planned to end at that time." />
       <comment value="The high value includes any matching date/time. i.e. 2012-02-03T10:00:00 is in a period that has an end value of 2012-02-03." />
       <min value="1" />
@@ -6383,7 +6386,7 @@
     </element>
     <element id="Encounter.identifier">
       <path value="Encounter.identifier" />
-      <short value="Identifier bildet die Fallnummer ab" />
+      <short value="Identifier bildet Fallnummer ab" />
       <max value="1" />
       <type>
         <code value="Identifier" />
@@ -6396,7 +6399,8 @@
       <patternCodeableConcept>
         <coding>
           <version value="v2" />
-          <display value="Kontonummer" />
+          <code value="VN" />
+          <display value="Fallnummer" />
         </coding>
         <text value="An identifier that is unique to an account." />
       </patternCodeableConcept>
@@ -6424,33 +6428,45 @@
     </element>
     <element id="Encounter.identifier.system">
       <path value="Encounter.identifier.system" />
+      <short value="Wertebereich für die Fallnummern" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.identifier.value">
       <path value="Encounter.identifier.value" />
+      <short value="Konkrete eindeutige Fallnummer" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.status">
       <path value="Encounter.status" />
       <short value="Status des stationären Aufenthalts eines Patienten" />
       <definition value="planned | arrived | triaged | in-progress | onleave | finished | cancelled +" />
+      <comment value="Wenn ein Entlassbericht ausgestellt wird, dann muss der stationäre Aufenthalt des Patienten beendet sein." />
       <fixedCode value="finished" />
+      <mustSupport value="true" />
     </element>
     <element id="Encounter.class">
       <path value="Encounter.class" />
+      <short value="Art des Aufenthalts eines Patienten" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.class.system">
       <path value="Encounter.class.system" />
+      <short value="CodeSystem für die Art des Aufenthalts eines Patienten" />
+      <min value="1" />
+      <fixedUri value="http://terminology.hl7.org/CodeSystem/v3-ActCode" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.class.code">
       <path value="Encounter.class.code" />
+      <short value="Kürzel für einen stationären Krankenhausaufenthalt" />
+      <min value="1" />
       <fixedCode value="IMP" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.class.display">
       <path value="Encounter.class.display" />
+      <short value="Bezeichnung als stationärer Krankenhausaufenthalt" />
+      <min value="1" />
       <fixedString value="inpatient encounter" />
       <mustSupport value="true" />
     </element>
@@ -6472,16 +6488,20 @@
     </element>
     <element id="Encounter.period">
       <path value="Encounter.period" />
+      <short value="Zeitraum des stationären Aufenthalts" />
+      <comment value="Im Fall der Ausstellung eines Entlassberichts muss der Aufenthalt beendet sein. Deshalb darf &quot;end&quot; nicht leer sein." />
       <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.period.start">
       <path value="Encounter.period.start" />
+      <short value="Erster Tag des stationären Aufenthalts (inkl.)" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.period.end">
       <path value="Encounter.period.end" />
+      <short value="Letzter Tag des stationären Aufenthalts (inkl.)" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
