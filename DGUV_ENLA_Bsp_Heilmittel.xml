@@ -29,9 +29,9 @@
         <reference value="Farad, Rudi/T995030511"/>
     </subject>
     <effectiveTiming>
-        <code  value="http://fhir.dguv.de/ENLA/CodingSystem/DGUV-ENLA-CS-MassnahmenZeitpunkt">
+        <code>
             <coding>
-                <system value="http://fhir.dguv.de/ENLA/ValueSet/DGUV-ENLA-VS-MassnahmenZeitpunkt" />
+                <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-MassnahmenZeitpunkt" />
                 <code value="Festzul" />
                 <display value="Durch Weiterbehandler festzulegen" />
             </coding>
