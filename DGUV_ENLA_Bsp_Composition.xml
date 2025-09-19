@@ -264,10 +264,4 @@
            <reference value="Organization/BehandelndeEinrichtung" />
        </entry>
    </section>
-   <section>
-       <title value="AnsprechpartnerFuerRueckfragen" />
-       <entry>
-           <reference value="PractitionerRole/AnsprechpartnerFuerRueckfragen" />
-       </entry>
-   </section>
 </Composition>
