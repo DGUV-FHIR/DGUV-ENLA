@@ -428,17 +428,6 @@
                         <reference value="urn:uuid:f952b0d1-bb04-402d-b0e6-cef800858f98" />
                     </entry>
                 </section>
-                <section>
-                    <title value="AnsprechpartnerFuerRueckfragen" />
-                    <entry>
-                        <!-- 
-                        Auswahl des AnsprechpartnerFuerRueckfragen Objektes:
-                        RelativeURL:
-                        PractitionerRole/3011936a-df87-4144-a35a-bbaae96bb2cc
-                        -->
-                        <reference value="urn:uuid:3011936a-df87-4144-a35a-bbaae96bb2cc" />
-                    </entry>
-                </section>
             </Composition>    
         </resource>
     </entry>
