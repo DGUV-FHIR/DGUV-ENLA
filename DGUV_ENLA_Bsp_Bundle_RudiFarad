@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bundle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://hl7.org/fhir">
+    <id value="5d75b64f-a8a1-49b8-8d33-bd16423b3e6d">
+    <meta>
+        <profile value="http://fhir.dguv.de/ENLA/Bundle/DGUV-ENLA-PR-Bundle|0.0.2"    />
+    </meta>
+    <type value="document">
+    <timestamp value="2025-09-12T12:00:00+01:00">
+    <entry>
+        <fullUrl value="http://pvs.praxis.local/fhir/Composition/c00f7826-5a3e-49aa-b499-3f8c6599bd2c" />
+        <resource> 
+        <Composition>
+            <meta> 
+                <profile value="http://fhir.dguv.de/ENLA/Composition/DGUV-ENLA-PR-Composition" />
+            </meta> 
+            <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-SonstigeBemerkungen">    
+                <valueString value="Die sonstige Bemerkung." />
+            </extension>    
+            <status value="final" />
+            <type>
+                <coding>
+                    <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-Formtexte" />
+                    <code value="F 2102" />
+                    <display value="Entlassungsbericht aus stationärer Behandlung (DAV/VAV/SAV)" />
+                </coding>
+            </type>
+            <subject>
+                <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+            </subject>
+            <author>
+               <reference value="Practitioner/53192032-6365-4659-8cc2-f9a7df67a466" />
+            </author>
+            <title value="Entlassungsbericht aus stationärer Behandlung"/>
+            <!-- Hier fangen die Sections in der Composition an.-->
+            <section>
+                <title value="Unfallversicherungstraeger" />
+                <entry>
+                    <reference value="Organization/180f219f-97a8-486d-99d9-ed631fe4fc60" />
+                </entry>
+            </section>
+            <section>
+                <title value="Krankenkasse" />
+                <entry>
+                    <reference value="Organization/446a540f-7d08-4926-98fe-2abd3094aa92" />
+                </entry>
+            </section>
+            <section>
+                <title value="VersichertenVerhaeltnis" />
+                <entry>
+                    <reference value="Coverage/75c6d854-876e-4b9d-8ea9-327a46c9c50f" />
+                </entry>
+            </section>
+            <section>
+                <title value="Pflegekasse" />
+                <entry>
+                    <reference value="Organization/bf64ac16-926b-4082-968a-f7c088364b83" />
+                </entry>
+            </section>
+            <section>
+                <title value="Unfallbetrieb" />
+                <entry>
+                    <reference value="Organization/bef1dc10-a361-4eba-8fcc-073f771df44b" />
+                </entry>
+            </section>
+            <section>
+                <title value="Aufenthaltsinformationen" />
+                <entry>
+                    <reference value="Encounter/a33633b7-ab47-4341-b4e9-c856bb5e5878" />
+                </entry>
+            </section>
+            <section>
+                <title value="DiagnoseFreitext" />
+                <entry>
+                    <reference value="Condition/84507618-4ff5-46d9-9e61-8ab15c9ce2a4" />
+                </entry>
+            </section>
+            <section>
+                <title value="DiagnoseStrukturiert" />
+                <entry>
+                    <reference value="Condition/9acff578-cca8-4f9c-9f58-49e5cb91bbab" />
+                </entry>
+            </section>
+             <section>
+                <title value="DiagnoseStrukturiert" />
+                <entry>
+                    <reference value="Condition/9acff578-cca8-4f9c-9f58-49e5cb91bbad" />
+                </entry>
+            </section>
+             <section>
+                <title value="DiagnoseStrukturiert" />
+                <entry>
+                    <reference value="Condition/9acff578-cca8-4f9c-9f58-49e5cb91bbad" />
+                </entry>
+            </section>
+             <section>
+                <title value="DiagnoseStrukturiert" />
+                <entry>
+                    <reference value="Condition/9acff578-cca8-4f9c-9f58-49e5cb91bbae" />
+                </entry>
+            </section>
+             <section>
+                <title value="Therapie" />
+                <entry>
+                    <reference value="Observation/2288ca98-76e8-4daf-bfb3-dd36c0efbb39" />
+                </entry>
+            </section>
+             <section>
+                <title value="Unfallereignis" />
+                <entry>
+                    <reference value="Observation/08b39f82-9dbf-4315-92f5-5f0011d37a5c" />
+                </entry>
+            </section>
+             <section>
+                <title value="Aufnahmebefunde" />
+                <entry>
+                    <reference value="Observation/d39c416d-e1a1-43fd-afef-2763fd66473e" />
+                </entry>
+            </section>
+            <section>
+                <title value="Behandlungsverlauf" />
+                <entry>
+                    <reference value="Observation/0c6d28f5-2b67-4308-9d90-6a53ecd9ce7e" />
+                </entry>
+            </section>
+            <section>
+                <title value="Konsiliarbefunde" />
+                <entry>
+                    <reference value="Observation/0a25be9c-af37-410b-bd43-6c7d3e1f1681" />
+                </entry>
+            </section>
+            <section>
+                <title value="Entlassbefunde" />
+                <entry>
+                    <reference value="Observation/4f518fd0-15dd-471a-ab4e-fe5ab3fe979e" />
+                </entry>
+            </section>
+             <section>
+                <title value="Entlassbefunde" />
+                <entry>
+                    <reference value="Observation/4f518fd0-15dd-471a-ab4e-fe5ab3fe979f" />
+                </entry>
+            </section>
+               <section>
+
+            </section>
+               <section>
+
+            </section>
+               <section>
+
+            </section>
+               <section>
+
+            </section>
+        </Composition>
+        </resource>
+    </entry>
+     <!-- Hier fangen die Sections in der Composition an. -->
+    <entry>
+        <fullUrl value="http://pvs.praxis.local/fhir/Organization/180f219f-97a8-486d-99d9-ed631fe4fc60" />
+        <resource>            
+        <Organization>
+            <id value="180f219f-97a8-486d-99d9-ed631fe4fc60"/>
+            <meta>
+                <profile ="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Unfallversicherungstraeger"/>
+            </meta>
+            <identifier>
+                <type>
+                    <system value"http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                    <code value "XX"/>
+                </type>
+                <system value="http://fhir.de/sid/arge-ik/iknr"/>
+                <value value="120291182"/>
+            </identifier>
+            <name value="BG Verwaltung Berlin" />
+        </Organization>
+    </entry>
+    <entry>
+        <fullUrl value="http://pvs.praxis.local/fhir/Organization/446a540f-7d08-4926-98fe-2abd3094aa92" />
+        <resource>            
+        <Organization>
+            <id value="446a540f-7d08-4926-98fe-2abd3094aa92"/>
+            <meta>
+                <profile ="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Krankenkasse"/>
+            </meta>
+            <identifier>
+                <type>
+                    <system value"http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                    <code value "XX"/>
+                </type>
+                <system value="http://fhir.de/sid/arge-ik/iknr"/>
+                <value value="103411401"/>
+            </identifier>
+            <name value="AOK Herzogtum Lauenburg" />
+        </Organization>
+    </entry>
+    <entry>
+        <fullUrl value="http://pvs.praxis.local/fhir/Coverage/75c6d854-876e-4b9d-8ea9-327a46c9c50f" />
+        <resource>
+            <Coverage xmlns="http://hl7.org/fhir">
+                <id value="75c6d854-876e-4b9d-8ea9-327a46c9c50f" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Coverage/DGUV-ENLA-PR-VersichertenVerhaeltnis" />
+                </meta>
+                <extension  url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-Familienversicherung">
+                    <extension url="Familienversichert">
+                        <valueBoolean value="true" />
+                    </extension>
+                    <extension url="Mitgliedsname">  
+                        <valueString value="Bike, Rudi" />
+                    </extension>
+                </extension>
+                <status value="active"/>
+                <beneficiary>
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </beneficiary>
+                <payor>
+                    <reference value="Organization/180f219f-97a8-486d-99d9-ed631fe4fc60"/>
+                </payor>
+            </Coverage>
+        </resource>
+    </entry>
+     <entry>
+        <fullUrl value="http://pvs.praxis.local/fhir/Organization/bf64ac16-926b-4082-968a-f7c088364b83" />
+        <resource>
+            <Organization xmlns="http://hl7.org/fhir">
+                <id value="bf64ac16-926b-4082-968a-f7c088364b83" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Pflegekasse|0.0.2" />
+                </meta>
+                <identifier>
+                    <type>
+                        <coding>
+                            <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+                            <code value="XX" />
+                            <display value="Organization identifier" />
+                        </coding>
+                    </type>
+                    <system value="http://fhir.de/sid/arge-ik/iknr" />
+                    <value value="999999999" />
+                </identifier>
+                <name value="Pflegekasse Nord-Ostwestfalen Süd"/>
+            </Organization>
+        </resource>
+    </entry>
+      <fullUrl value="http://pvs.praxis.local/fhir/Organization/bef1dc10-a361-4eba-8fcc-073f771df44b" />
+        <resource>
+            <Organization xmlns="http://hl7.org/fhir">
+                <id value="bef1dc10-a361-4eba-8fcc-073f771df44b" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Unfallbetrieb|0.0.2" />
+                </meta>
+                <name value="Sankt Augustiner 6 Tage Rennen GmbH"/>
+                 <telecom>
+                    <system value="phone"/>
+                    <value value="+49-172-2345678"/>
+                </telecom>
+                <address>
+                    <type value="both"/>
+                    <line value="Johann-Lafer-Gasse 2">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                            <valueString value="Johann-Lafer-Gasse"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                            <valueString value="2"/>
+                        </extension>
+                    </line>
+                    <city value="Sankt Augustin"/>
+                    <postalCode value="53757"/>
+                    <country value="DE"/>
+                </address>
+            </Organization>
+        </resource>
+    <entry>
+        <fullUrl value="http://pvs.praxis.local/fhir/Encounter/a33633b7-ab47-4341-b4e9-c856bb5e5878" />
+        <resource>
+        <Encounter xmlns="http://hl7.org/fhir">
+            <id value="a33633b7-ab47-4341-b4e9-c856bb5e5878" />
+            <meta>
+                <profile value="http://fhir.dguv.de/ENLA/Encounter/DGUV-ENLA-PR-Aufenthaltsinformationen" />
+            </meta>
+            <status value="finished" />
+            <class>
+                <system value="http://terminology.hl7.org/ValueSet/v3-ActEncounterCode" />
+                <code value="IMP" />
+                <display value="inpatient encounter" />
+            </class>
+            <subject>
+                <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+            </subject>
+            <period>
+                <start value="2018-01-25" />
+                <end value="2018-02-21" />
+            </period>
+            <hospitalization>
+                <admitSource>
+                    <coding>
+                        <system  value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Aufnahmeart" />
+                        <code value="FB" />
+                        <display value="Folgebehandlung" />
+                    </coding>
+                </admitSource>
+                <dischargeDisposition>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-EntlassungsVerlegungsgrund" />
+                        <code value="01" />
+                        <display value="Behandlung regulär beendet" />
+                    </coding>
+                </dischargeDisposition>
+            </hospitalization>
+        </Encounter>
+    </entry>
+        <fullUrl value="http://pvs.praxis.local/fhir/Condition/84507618-4ff5-46d9-9e61-8ab15c9ce2a4" />
+        <resource>
+            <Condition xmlns="http://hl7.org/fhir">
+                <id value="84507618-4ff5-46d9-9e61-8ab15c9ce2a4"/>
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseFreitext"/>
+                </meta>
+                <extension url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-Frakturklassifikation">
+                    <extension url="Fraktur">
+                        <valueBoolean value="true"/>
+                    </extension>
+                    <extension url="AO-Klassifikation">
+                        <valueString value="52-A3.3 Rippenserienfraktur links 6.-8. Rippe"/>
+                    </extension>
+                </extension>
+                <code>
+                    <text value="Rippenserienfraktur links 6.-8. Rippe S22.43 52-A3.3 Fraktur der Rippe(n), des Sternums und der Brustwirbelsäule: Rippenserienfraktur: Mit Beteiligung von drei Rippen
+                    Brustwirbelsäule, diaphysär, einfache Fraktur, mittel. Zerreißung des vorderen Längsbandes und des Bandscheibenfaches HWK 6/7. Abbruch vestibulären Zahn Lamelle 24. "/>
+                </code>
+                <subject>
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
+                </subject>
+            </Condition>
+        </resource>
+    <entry>
+        <fullUrl value="http://pvs.praxis.local/fhir/Condition/9acff578-cca8-4f9c-9f58-49e5cb91bbab" />
+        <resource>
+            <Condition xmlns="http://hl7.org/fhir">
+                <id value="9acff578-cca8-4f9c-9f58-49e5cb91bbab"/>
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseStrukturiert"/>
+                </meta>
+                <code>
+                    <coding>
+                        <system value="http://fhir.de/CodeSystem/bfarm/icd-10-gm"/>
+                        <version value="2019"/>
+                        <code value="S06.0"/>
+                        <display value="Gehirnerschütterung"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
+                </subject>
+            </Condition>
+        </resource>
+    </entry>
+    <entry>
+    <fullUrl value="http://pvs.praxis.local/fhir/Condition/9acff578-cca8-4f9c-9f58-49e5cb91bbac" />
+        <resource>
+            <Condition xmlns="http://hl7.org/fhir">
+                <id value="9acff578-cca8-4f9c-9f58-49e5cb91bbac"/>
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseStrukturiert"/>
+                </meta>
+                <code>
+                    <coding>
+                        <system value="http://fhir.de/CodeSystem/bfarm/icd-10-gm"/>
+                        <version value="2019"/>
+                        <code value="S06.70"/>
+                        <display value="Bewusstlosigkeit bei Schädel-Hirn-Trauma: Weniger als 30 Minuten"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
+                </subject>
+            </Condition>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://pvs.praxis.local/fhir/Condition/9acff578-cca8-4f9c-9f58-49e5cb91bbad" />
+        <resource>
+            <Condition xmlns="http://hl7.org/fhir">
+                <id value="9acff578-cca8-4f9c-9f58-49e5cb91bbad"/>
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseStrukturiert"/>
+                </meta>
+                <code>
+                    <coding>
+                        <system value="http://fhir.de/CodeSystem/bfarm/icd-10-gm"/>
+                        <version value="2019"/>
+                        <code value="S22.43"/>
+                        <display value="Rippenserienfraktur: Mit Beteiligung von drei Rippen"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
+                </subject>
+            </Condition>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://pvs.praxis.local/fhir/Condition/9acff578-cca8-4f9c-9f58-49e5cb91bbae" />
+        <resource>
+            <Condition xmlns="http://hl7.org/fhir">
+                <id value="9acff578-cca8-4f9c-9f58-49e5cb91bbae"/>
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseStrukturiert"/>
+                </meta>
+                <code>
+                    <coding>
+                        <system value="http://fhir.de/CodeSystem/bfarm/icd-10-gm"/>
+                        <version value="2019"/>
+                        <code value="S21.84"/>
+                        <display value="Weichteilschaden I. Grades bei geschlossener Fraktur oder Luxation des Thorax"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
+                </subject>
+            </Condition>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://pvs.praxis.local/fhir/Observation/2288ca98-76e8-4daf-bfb3-dd36c0efbb39" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="2288ca98-76e8-4daf-bfb3-dd36c0efbb39" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Therapie" />
+                </meta>
+                <status value="final"/>
+                <code>  
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+                        <code value="TH" />
+                        <display value="Therapie" />
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
+                </subject>
+                <valueString value="24.08.2018 Geschlosenne Reposition und interne Osteosynthese mittels antegrade Humerusnagel (FA. Stryker T2) Bursektomie Knie links. 01.09.2018 Ventrale Stabilisierung HWS, Bandscheibenresektion HWK 6/7, Implantation Rabea-Cage. Schmerztherapeutische, physiotherapeutische Komplexbehandlung. Logopädie...." />
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://pvs.praxis.local/fhir/Observation/08b39f82-9dbf-4315-92f5-5f0011d37a5c" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="08b39f82-9dbf-4315-92f5-5f0011d37a5c"/>
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Unfallereignis"/>
+                </meta>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-Verletzungsartenverzeichnis"/>
+                        <code value="10.1V"/>
+                        <display value="Schwere Verletzungen und Verletzungskombinationen (Polytrauma) mit einem Injury Severity Score (ISS) zwischen 16 und 24."/>
+                    </coding>
+                </code>
+                <subject> 
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </subject>
+                <effectiveDateTime value="2018-08-24T13:08:10+00:00"/>
+                <component>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-UnfallereignisComponents"/>
+                            <code value="03"/>
+                            <display value="Unfallhergang"/>
+                        </coding>
+                    </code>
+                    <valueString value="Der Versicherte ist auf dem Weg zum Sechstagerennen mit seinem Motorrad mit einer geschätzten Geschwindigkeit von 60 km/h gegen eine Leitplanke gefahren"/>
+                </component>
+                <component>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-UnfallereignisComponents"/>
+                            <code value="04"/>
+                            <display value="Beschwerden/Klagen"/>
+                        </coding>
+                    </code>
+                    <valueString value="Starke Schmerzen rechter Oberschenkel, Gefühlsstörung im Fuss"/>
+                </component>
+                <component>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-UnfallereignisComponents"/>
+                            <code value="05"/>
+                            <display value="Beschäftigt als"/>
+                        </coding>
+                    </code>
+                    <valueString value="Schrittmacher"/>
+                </component>
+                <component>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-UnfallereignisComponents"/>
+                            <code value="06"/>
+                            <display value="Beschäftigungsbeginn"/>
+                        </coding>
+                    </code>
+                    <valueDateTime value="2001-04-01"/>
+                </component>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+    <fullUrl value="http://pvs.praxis.local/fhir/Observation/d39c416d-e1a1-43fd-afef-2763fd66473e" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="d39c416d-e1a1-43fd-afef-2763fd66473e" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Aufnahmebefunde" />
+                </meta>
+                <status value="final" />
+                <category>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-BefundKategorie" />
+                        <code value="untersuchung" />
+                        <display value="Untersuchung" />
+                    </coding>
+                </category>
+                <code>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+                        <code value="Aufnahme" />
+                        <display value="Aufnahmebefund" />
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </subject>
+                <valueString value="Pat. ist wach, ansprechbar und vollständig orientiert., GCS 15, Prellmarken Gesicht, Hände, Schürfwunde mit Bursaeröffnung links, mediale Oberarmwunde links, darunter instabiler Humerus.
+Pupillen rund, isocor, mittelweit, LR prompt, seitengleich, konsensuell, Kalotte frei, Hirnnerven und Okkulomotorik grob intakt, NAP, NNH, Nase, Jochbeine bds., Kiefergelenk bds. sowie Okklusion unauffällig, HWS im Stiffneck-Verband ruhiggestellt, kein Anhalt für sensomotorische Defizite, pDMS allseits intakt Herztöne rein und rhythmisch, keine Herzgeräusche, keine obere Einflussstauung; bds. Vesikuläratmen, keine Rasselgeräusche. Kein Bronchialatmen. Abdomen weich, kein Druckschmerz, kein Klopfschmerz, Peristaltik über allen 4 Quadranten regelrecht. Keine Resistenzen. Keine palpable Hepatosplenomegalie. Kein Klopfschmerz über dem Nierenlager Kein Klopfschmerz über der restl. Wirbelsäule. Thorax stabil, kein Kompressionsschmerz. Becken stabil, kein Kompressionsschmerz. Extremitäten seitengleich, werden kraftvoll in allen Ebenen bewegt. Keine peripheren Ödeme. Fast Sono: Kein Perikarderguss, keine freie Flüssigkeit, kein Pneu
+" />
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://pvs.praxis.local/fhir/Observation/0c6d28f5-2b67-4308-9d90-6a53ecd9ce7e" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="0c6d28f5-2b67-4308-9d90-6a53ecd9ce7e" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Behandlungsverlauf" />
+                </meta>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+                        <code value="BV" />
+                        <display value="Behandlungsverlauf" />
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </subject>
+                <valueString value="Nach Abschluss der Primärdiagnostik in der Rettungsstelle, inklusive Schockraummanagement und Polytrauma-CT-Diagnostik sowie MRTDiagnostik der gesamten Wirbelsäule wurde der Versicherte auf unserer Intensivstation übernommen. Die Halswirbelsäule wurde in einem Aspen- Collar mobilisiert, linkseitig wurde eine Thoraxdrainage eingelegt. Im Rahmen einer neurologischen Vorstellung konnten keine sensomotorischen Defizite festgestellt werden.
+Am 26.01.2018 erfolgte noch die operative Versorgung der Humerusschaftfraktur in o.g. Art und Weise sowie die Entfernung der traumatisch eröffneten Bursa über dem linken Kniegelenk. Am 31.01.2018 konnte die Thoraxdrainage komplikationslos entfernt werden.
+Die sonographischen Verlaufskontrollen des Abdomens zeigten im Bereich der Milz sowie der Nieren keine Zeichen einer aktiven Blutung. Ebenso konnte im Rahmen einer CT-Verlaufskontrolle des Thorax und des Abdomens mit Kontrastmittel keine Befundprogredienz festgestellt werden.
+Der Versicherte wurde am 01.02.2018 auf unsere Normalstation verlegt.
+Eine im Rahmen der Synkopenabklärung erfolgte EEG-Diagnostik zeigte keine Zeichen einer epileptischen Erregbarkeitssteigerung oder eines epileptischen Anfallsmusters. Ebenso erfolgten ein Schellong-Test sowie eine Langzeit-EKG- und Langzeit-Blutdruck-Messung. Eine Echokardiographie zeigte eine konzentrische linksventrikuläre Hypertrophie, einen vergrößerten linken Vorhof sowie eine gute biventrikuläre
+Pumpfunktion.
+Am 05.02.2018 erfolgte dann die operative Versorgung der Halswirbelsäulenverletzung in o.g. Art und Weise. Postoperativ wurde die Halswirbelsäule weiterhin in einem Aspen-Collar ruhiggestellt.
+Nach Umstellung der i.v.-Antibiose von Unacid auf Amoclav entwickelte der Versicherte eine allergische Reaktion. Diese zeigte sich nach medikamentöser Therapie rückläufig. Als Thromboseprophylaxe applizierten wir Clexane 40 mg 1 x täglich.
+Bei postoperativ aufgetretener Heiserkeit und Dysphagie erfolgte eine konsiliarische HNO-ärztliche Vorstellung. Es wurde ein postoperatives Aryödem festgestellt. Es erfolgte eine Therapie mit Prednisolon für 3 Tage. Aufgrund der Zahnfraktur erfolgte eine konsiliarische MKG-chirurgische Vorstellung. Es wurde die Empfehlung zur Vorstellung beim Hauszahnarzt nach Entlassung und Anfertigung einer Krone ausgegeben.
+Nach Abschluss der umfangreichen Synkopendiagnostik erfolgte eine konsiliarische internistische Vorstellung. Es konnten keine patholgischen Befunde, welche die fragliche Synkope erklären festgestellt werden. Bei rezidivierenden Ereignissen sollte ein Eventrecorder (ILS) erwogen werden. Weiterhin besteht invasiver Abklärungsbedarf bei deutlicher Troponinkinetik im ITS Verlauf.
+Die radiologischen Verlaufskontrollen zeigten allseits eine regelrechte Lage des Osteosynthesematerials ohne Anhalt für eine sekundäre Dislokation. Am 21.02.2018 können wir den Versicherten bei subjektivem Wohlbefinden und reizlosen Wundverhältnissen in die ambulante durchgangsärztliche Weiterbehandlung entlassen.
+" />
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+     <fullUrl value="http://pvs.praxis.local/fhir/Observation/0a25be9c-af37-410b-bd43-6c7d3e1f1681" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="0a25be9c-af37-410b-bd43-6c7d3e1f1681" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Konsiliarbefunde" />
+                </meta>
+                <status value="final" />
+                <category>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-BefundKategorie" />
+                        <code value="untersuchung" />
+                        <display value="Untersuchung" />
+                    </coding>
+                </category>
+                <code>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+                        <code value="Konsiliar" />
+                        <display value="Konsiliarbefund" />
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </subject>
+                <valueString value="Neurologisches Konsil vom 24.08.2018
+Psychisch/ Neuropsychologisch: wach, zu Zeit, Ort, Person und Situation voll orientiert, kooperativ, Antrieb unauffällig, Mnestik orientierend intakt, Stimmung ausgeglichen, kein Anhalt für produktiv psychotisches Erleben. Neurologisch: Motorik OE: Untersuchung bei Fraktur im linken Arm nur eingeschränkt durchführbar, jedoch keine höhergradigen Paresen distal und proximal in beiden Armen, Tonus, Motilität seitengleich regelrecht, kein Absinken oder Pronation im AHV, Feinmotorik (sequentielle Opposition) seitengleich intakt, BSR rechts sicher, links bei liegenden Verbänden nicht sicher auslösbar, RPR, TSR, Trömner mittellebhaft seitengleich.
+Motorik UE: Keine höhergradigen Paresen, Tonus, Motilität seitengleich regelrecht, BHV ohne Absinken, AdSR, PSR, und ASR wiederum nur rechts auslösbar, da das linke Bein komplett bandagiert und verbunden ist. mittellebhaft, keine PBZ.
+Sensibilität: Im Bereich des Rumpfes und der Extremitäten Ästhesie, Algesie seitengleich intakt angegeben.
+Konsil Innere Medizin vom 25.08.2018
+Beim Patienten besteht formal die Notwendigkeit zur Durchführung einer invasiven kardialen Diagnostik, auf diese wurde aufgrund einer unauffälligen Echokardiographie und während des aktuellen Aufenthaltes durchgehend bestehender Beschwerdefreiheit, sowie der aktuell gegebenen Kontraindikation für eine duale Plättchenhemmung (aufgrund des Verletzungsmusters) nach Risiko-Nutzen-Abwägung verzichtet. Diese sollte aber sobald aus chirurgischer Sicht eine solche möglich ist oder akute kardiale Beschwerden auftreten während dieses Aufenthaltes durchgeführt werden. Für die OP besteht dementsprechend ein perioperativ erhöhtes Risiko, welches aber in Anbetracht des gegebenen Verletzungsmusters (Zerreißungsfraktur HWK) eingegangen werden sollte. Im Rahmen der postoperativen Überwachung sollte eine engmaschige CK-/ -MB und EKG Kontrollen erfolgen.
+" />
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://pvs.praxis.local/fhir/Observation/4f518fd0-15dd-471a-ab4e-fe5ab3fe979e" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="4f518fd0-15dd-471a-ab4e-fe5ab3fe979e" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Entlassbefunde" />
+                </meta>
+                <status value="final" />
+                <category>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-BefundKategorie" />
+                        <code value="untersuchung" />
+                        <display value="Untersuchung" />
+                    </coding>
+                </category>
+                <code>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+                        <code value="Entlass" />
+                        <display value="Entlassungsbefund" />
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </subject>
+                <valueString value="Reizlose Wundverhältnisse bei bereits entferntem Nahtmaterial. Der Versicherte ist ohne orthopädische Hilfmitel auf Stationsebene mobil. Anligender. Aspen-collar. Periphere Durchblutung, Motorik, Sensibilität allseits intakt." />
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+    <fullUrl value="http://pvs.praxis.local/fhir/Observation/4f518fd0-15dd-471a-ab4e-fe5ab3fe979f" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="4f518fd0-15dd-471a-ab4e-fe5ab3fe979f" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Entlassbefunde" />
+                </meta>
+                <status value="final" />
+                <category>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-BefundKategorie" />
+                        <code value="radiologischediagnostik" />
+                        <display value="Radiologische Diagnostik" />
+                    </coding>
+                </category>
+                <code>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+                        <code value="Entlass" />
+                        <display value="Entlassungsbefund" />
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </subject>
+                <valueString value="Native cerebrale CT mit MPR vom xx.xx.2018: 
+Unaufälliges natives cCt. Inbesondere kein Nachweis einer intrakraniellen Blutung. Kein Anhalt für frische ossäre Traumafolgen. Links frontales, subgaleales Hämatom.
+CT Polytrauma Standard KM i.v.,  mit MPR vom xx.xx.2018: 
+Rippenserienfraktur links 6. bis 8. (6. ventral, 7. und 8. dorsal). Pneumothorax links mit max. 1 cm Saumbreite ventral. Dezenter Pleuraerguss I.S. eines Hämatothorax. Komplexe Milzkontusion mit perilienalem Hämatom ohne sicheren Nachweis einer aktiven Blutung. Perirenales Hämatom links bis 2,5 cm Saumbreite, auch hier keine sichere aktive Blutung. Geing dislozierte Humerusschaftfraktur links im mittleren drittel. Weichteildefekt über dem Kniegelenk links. NB: Atherosklerotisch bedingte Kaliberschwankungen der Ateria fermoralis superficialis links. retinierte dentes 8 in vier Quadranten, der 48 ist kariös destruiert.
+" />
+            </Observation>
+        </resource>
+    </entry>
+      <entry>
+    </entry>
+      <entry>
+    </entry>
+      <entry>
+    </entry>
+      <entry>
+    </entry>
+      <entry>
+    </entry>
+
+</Bundle>
