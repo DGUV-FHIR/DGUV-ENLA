@@ -3193,6 +3193,7 @@
       <type>
         <code value="uri" />
       </type>
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodingSystem/DGUV-ENLA-CS-MassnahmenZeitpunkt" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -6405,6 +6406,7 @@
     <element id="Observation.effective[x].code.coding.system">
       <path value="Observation.effective[x].code.coding.system" />
       <min value="1" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodingSystem/DGUV-ENLA-CS-MassnahmenZeitpunkt" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.effective[x].code.coding.code">
