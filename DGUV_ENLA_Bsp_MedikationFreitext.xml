@@ -17,7 +17,7 @@
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-MedicationFreitext" />
     </meta>
-    <status value="final"/>
+    <status value="active"/>
     <code>
         <coding>
             <verordnungskategorieCode>
