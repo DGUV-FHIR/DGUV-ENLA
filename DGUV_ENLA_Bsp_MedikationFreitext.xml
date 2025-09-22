@@ -15,15 +15,15 @@
 <Medication xmlns="http://hl7.org/fhir">
     <id value="DGUV-ENLA-Bsp-MedicationFreitext" />
     <meta>
-        <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-MedicationFreitext" />
+        <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-MedikationFreitext" />
     </meta>
     <status value="active"/>
     <code>
         <coding>
-            <verordnungskategorieCode>
-                <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type"/>
-                <code value="Hier steht ein Freitext"/>
-            </verordnungskategorieCode>
+            <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type"/>
+            <code value="freitext"/>
+            <display value="Freitext-Medikation"/>
         </coding>
+        <text value="Hier steht ein Freitext zur Medikation"/>
     </code>
-</Medication>
+</Medication> 
