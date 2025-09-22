@@ -600,7 +600,7 @@
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="DomainResource.extension" />
@@ -645,7 +645,7 @@
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="DomainResource.extension" />
@@ -9484,7 +9484,7 @@
       <short value="Verweis auf den ENLA-Profiltyp Freitextdiagnose" />
       <definition value="The root of the sections that make up the composition." />
       <min value="1" />
-      <max value="1" />
+      <max value="*" />
       <base>
         <path value="Composition.section" />
         <min value="0" />
@@ -11294,7 +11294,7 @@
       <short value="Composition is broken into sections" />
       <definition value="The root of the sections that make up the composition." />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <base>
         <path value="Composition.section" />
         <min value="0" />
@@ -34835,7 +34835,6 @@
     </element>
     <element id="Composition.extension">
       <path value="Composition.extension" />
-      <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
@@ -34844,7 +34843,6 @@
       <sliceName value="SonstigeBemerkungen" />
       <short value="Sonstige Bemerkungen zum stationären Entlassbericht" />
       <definition value="Sonstige Bemerkungen, z. B. Beratungsbedarf durch Reha-Management des UV-Trägers, Schul- und Schulsportfähigkeit, Kontextfaktoren, besondere Umstände" />
-      <min value="1" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -35129,7 +35127,6 @@
       <sliceName value="DiagnoseFreitext" />
       <short value="Verweis auf den ENLA-Profiltyp Freitextdiagnose" />
       <min value="1" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:DiagnoseFreitext.title">
@@ -35189,7 +35186,6 @@
     <element id="Composition.section:Therapie">
       <path value="Composition.section" />
       <sliceName value="Therapie" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:Therapie.title">
