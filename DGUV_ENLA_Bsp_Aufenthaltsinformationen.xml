@@ -19,7 +19,7 @@
     </meta>
     <status value="finished" />
     <class>
-        <system value="http://terminology.hl7.org/ValueSet/v3-ActEncounterCode" />
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode" />
         <code value="IMP" />
         <display value="inpatient encounter" />
     </class>
@@ -41,8 +41,8 @@
         <dischargeDisposition>
             <coding>
                 <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-EntlassungsVerlegungsgrund" />
-                <code value="03" />
-                <display value="Behandlung aus sonstigen Gründen beendet" />
+                <code value="01" />
+                <display value="Behandlung regulär beendet" />
             </coding>
         </dischargeDisposition>
     </hospitalization>
