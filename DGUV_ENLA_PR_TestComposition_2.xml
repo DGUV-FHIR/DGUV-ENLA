@@ -3384,7 +3384,7 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="title" />
+          <path value="code" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -4039,7 +4039,7 @@
         <min value="0" />
         <max value="*" />
       </base>
-      <contentReference value="#Composition.section" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Composition#Composition.section" />
       <condition value="cmp-1" />
       <mapping>
         <identity value="rim" />
@@ -5084,7 +5084,7 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="title" />
+          <path value="code" />
         </discriminator>
         <rules value="open" />
       </slicing>
