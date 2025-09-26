@@ -33,11 +33,11 @@
   </concept>
   <concept>
     <code value="diagnosefreitext"/>
-    <display value="Diagnose Freitext"/>
+    <display value="DiagnoseFreitext"/>
   </concept>
   <concept>
     <code value="diagnosestrukturiert"/>
-    <display value="Diagnose Strukturiert"/>
+    <display value="DiagnoseStrukturiert"/>
   </concept>
   <concept>
     <code value="therapie"/>
