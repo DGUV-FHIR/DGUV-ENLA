@@ -8,7 +8,7 @@
   <description value="Dieses ValueSet definiert die erlaubten Sections innerhalb einer DGUV ENLA Composition."/>
   <compose>
     <include>
-      <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+      <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-VS-CompositionSections"/>
       <concept>
         <code value="unfallversicherungstraeger"/>
       </concept>
