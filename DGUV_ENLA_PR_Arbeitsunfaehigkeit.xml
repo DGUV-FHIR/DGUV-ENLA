@@ -187,7 +187,6 @@
         </extension>
         <code value="http://hl7.org/fhirpath/System.String" />
       </type>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -5193,7 +5192,6 @@
     <element id="Observation.meta.id">
       <path value="Observation.meta.id" />
       <min value="1" />
-      <mustSupport value="true" />
     </element>
     <element id="Observation.meta.profile">
       <path value="Observation.meta.profile" />
