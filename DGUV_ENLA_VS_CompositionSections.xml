@@ -1,0 +1,62 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="dguv-enla-vs-composition-sections"/>
+  <url value="http://fhir.dguv.de/ENLA/ValueSet/DGUV-ENLA-VS-CompositionSections"/>
+  <version value="1.0.0"/>
+  <name value="DGUVENLACompositionSections"/>
+  <title value="DGUV ENLA Composition Sections"/>
+  <status value="active"/>
+  <description value="Dieses ValueSet definiert die erlaubten Sections innerhalb einer DGUV ENLA Composition."/>
+  <compose>
+    <include>
+      <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+      <concept>
+        <code value="unfallversicherungstraeger"/>
+      </concept>
+      <concept>
+        <code value="krankenkasse"/>
+      </concept>
+      <concept>
+        <code value="versichertenverhaeltnis"/>
+      </concept>
+      <concept>
+        <code value="pflegekasse"/>
+      </concept>
+      <concept>
+        <code value="unfallbetrieb"/>
+      </concept>
+      <concept>
+        <code value="aufenthaltsinformationen"/>
+      </concept>
+      <concept>
+        <code value="diagnosefreitext"/>
+      </concept>
+      <concept>
+        <code value="diagnosestrukturiert"/>
+      </concept>
+      <concept>
+        <code value="therapie"/>
+      </concept>
+      <concept>
+        <code value="unfallereignis"/>
+      </concept>
+      <concept>
+        <code value="aufnahmebefunde"/>
+      </concept>
+      <concept>
+        <code value="behandlungsverlauf"/>
+      </concept>
+      <concept>
+        <code value="konsiliarbefunde"/>
+      </concept>
+      <concept>
+        <code value="entlassbefunde"/>
+      </concept>
+      <concept>
+        <code value="dokumentenreferenz"/>
+      </concept>
+      <concept>
+        <code value="therapieempfehlung"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>
