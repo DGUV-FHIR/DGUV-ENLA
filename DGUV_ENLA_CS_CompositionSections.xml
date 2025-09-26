@@ -1,0 +1,74 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="dguv-enla-cs-composition-sections"/>
+  <url value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+  <version value="1.0.0"/>
+  <name value="DGUVENLACompositionSections"/>
+  <title value="DGUV ENLA Composition Sections"/>
+  <status value="active"/>
+  <content value="complete"/>
+  
+  <concept>
+    <code value="unfallversicherungstraeger"/>
+    <display value="Unfallversicherungsträger"/>
+  </concept>
+  <concept>
+    <code value="krankenkasse"/>
+    <display value="Krankenkasse"/>
+  </concept>
+  <concept>
+    <code value="versichertenverhaeltnis"/>
+    <display value="Versichertenverhältnis"/>
+  </concept>
+  <concept>
+    <code value="pflegekasse"/>
+    <display value="Pflegekasse"/>
+  </concept>
+  <concept>
+    <code value="unfallbetrieb"/>
+    <display value="Unfallbetrieb"/>
+  </concept>
+  <concept>
+    <code value="aufenthaltsinformationen"/>
+    <display value="Aufenthaltsinformationen"/>
+  </concept>
+  <concept>
+    <code value="diagnosefreitext"/>
+    <display value="Diagnose Freitext"/>
+  </concept>
+  <concept>
+    <code value="diagnosestrukturiert"/>
+    <display value="Diagnose Strukturiert"/>
+  </concept>
+  <concept>
+    <code value="therapie"/>
+    <display value="Therapie"/>
+  </concept>
+  <concept>
+    <code value="unfallereignis"/>
+    <display value="Unfallereignis"/>
+  </concept>
+  <concept>
+    <code value="aufnahmebefunde"/>
+    <display value="Aufnahmebefunde"/>
+  </concept>
+  <concept>
+    <code value="behandlungsverlauf"/>
+    <display value="Behandlungsverlauf"/>
+  </concept>
+  <concept>
+    <code value="konsiliarbefunde"/>
+    <display value="Konsiliarbefunde"/>
+  </concept>
+  <concept>
+    <code value="entlassbefunde"/>
+    <display value="Entlassbefunde"/>
+  </concept>
+  <concept>
+    <code value="dokumentenreferenz"/>
+    <display value="Dokumentenreferenz"/>
+  </concept>
+  <concept>
+    <code value="therapieempfehlung"/>
+    <display value="Therapieempfehlung"/>
+  </concept>
+</CodeSystem>
