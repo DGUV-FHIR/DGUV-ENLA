@@ -10,7 +10,6 @@
 
     Durchzuführende Massnahmen:
 
-
 -->
 <Composition xmlns="http://hl7.org/fhir">
     <id value="c00f7826-5a3e-49aa-b499-3f8c6599bd2b" />
@@ -32,14 +31,14 @@
         <!--
         Target der Referenz Patient ist ein "Patient Objekt"
         -->
-        <reference value="Patient/c00f7826-5a3e-49aa-b499-3f8c6599bd2b" />
+        <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba" />
     </subject>
     <date value="2025-06-10T12:00:00+01:00" />
     <author>
         <!--
         Target der Referenz Practitioner ist ein "Leistungserbringer Objekt"
         -->
-        <reference value="Practitioner/53192032-6365-4659-8cc2-f9a7df67a466" />
+        <reference value="urn:uuid:53192032-6365-4659-8cc2-f9a7df67a466" />
     </author>
     <title value="Entlassungsbericht aus stationärer Behandlung" />
     <section>
@@ -50,7 +49,7 @@
             RelativeURL:
             Organization/180f219f-97a8-486d-99d9-ed631fe4fc60
             -->
-            <reference value="Organization/180f219f-97a8-486d-99d9-ed631fe4fc60" />
+            <reference value="urn:uuid:180f219f-97a8-486d-99d9-ed631fe4fc60" />
         </entry>
     </section>
     <section>
@@ -61,7 +60,7 @@
                     RelativeURL:
                     Organization/446a540f-7d08-4926-98fe-2abd3094aa92
             -->                    
-            <reference value="Organization/446a540f-7d08-4926-98fe-2abd3094aa92" />
+            <reference value="urn:uuid:446a540f-7d08-4926-98fe-2abd3094aa92" />
         </entry>
     </section>
     <section>
@@ -72,7 +71,7 @@
                     RelativeURL:
                     Coverage/475c6d854-876e-4b9d-8ea9-327a46c9c50f
             -->                    
-            <reference value="Coverage/475c6d854-876e-4b9d-8ea9-327a46c9c50f" />
+            <reference value="urn:uuid:475c6d854-876e-4b9d-8ea9-327a46c9c50f" />
         </entry>
     </section>
     <section>
@@ -83,7 +82,7 @@
                     RelativeURL:
                     Organization/bf64ac16-926b-4082-968a-f7c088364b83f
             -->                    
-            <reference value="Organization/bf64ac16-926b-4082-968a-f7c088364b83f" />
+            <reference value="urn:uuid:bf64ac16-926b-4082-968a-f7c088364b83f" />
         </entry>
     </section>
     <section>
@@ -94,7 +93,7 @@
                     RelativeURL:
                     Organization/bef1dc10-a361-4eba-8fcc-073f771df44b
             -->                     
-            <reference value="Organization/bef1dc10-a361-4eba-8fcc-073f771df44b" />
+            <reference value="urn:uuid:bef1dc10-a361-4eba-8fcc-073f771df44b" />
         </entry>
     </section>
     <section>
@@ -105,7 +104,7 @@
                     RelativeURL:
                     Encounter/a33633b7-ab47-4341-b4e9-c856bb5e5878
             -->                    
-            <reference value="Encounter/a33633b7-ab47-4341-b4e9-c856bb5e5878" />
+            <reference value="urn:uuid:a33633b7-ab47-4341-b4e9-c856bb5e5878" />
         </entry>
     </section>
     <section>
@@ -116,7 +115,7 @@
                     RelativeURL:
                     Condition/84507618-4ff5-46d9-9e61-8ab15c9ce2a4
             -->                    
-            <reference value="Condition/84507618-4ff5-46d9-9e61-8ab15c9ce2a4" />
+            <reference value="urn:uuid:84507618-4ff5-46d9-9e61-8ab15c9ce2a4" />
         </entry>
     </section>
     <section>
@@ -127,7 +126,7 @@
                     RelativeURL:
                     Condition/9acff578-cca8-4f9c-9f58-49e5cb91bbab
             -->
-            <reference value="Condition/9acff578-cca8-4f9c-9f58-49e5cb91bbab" />
+            <reference value="urn:uuid:9acff578-cca8-4f9c-9f58-49e5cb91bbab" />
         </entry>
     </section>
     <section>
@@ -138,7 +137,7 @@
                     RelativeURL:
                     Observation/2288ca98-76e8-4daf-bfb3-dd36c0efbb39
             -->                    
-            <reference value="Observation/2288ca98-76e8-4daf-bfb3-dd36c0efbb39" />
+            <reference value="urn:uuid:2288ca98-76e8-4daf-bfb3-dd36c0efbb39" />
         </entry>
     </section>
     <section>
@@ -149,7 +148,7 @@
                     RelativeURL:
                     Observation/08b39f82-9dbf-4315-92f5-5f0011d37a5c
             -->                    
-            <reference value="Observation/08b39f82-9dbf-4315-92f5-5f0011d37a5c" />
+            <reference value="urn:uuid:08b39f82-9dbf-4315-92f5-5f0011d37a5c" />
         </entry>
     </section>
     <section>
@@ -160,7 +159,7 @@
                     RelativeURL:
                     Observation/d39c416d-e1a1-43fd-afef-2763fd66473e
             -->                    
-            <reference value="Observation/d39c416d-e1a1-43fd-afef-2763fd66473e" />
+            <reference value="urn:uuid:d39c416d-e1a1-43fd-afef-2763fd66473e" />
         </entry>
     </section>
     <section>
@@ -171,7 +170,7 @@
                     RelativeURL:
                     Observation/0c6d28f5-2b67-4308-9d90-6a53ecd9ce7e
             -->                    
-            <reference value="Observation/0c6d28f5-2b67-4308-9d90-6a53ecd9ce7e" />
+            <reference value="urn:uuid:0c6d28f5-2b67-4308-9d90-6a53ecd9ce7e" />
         </entry>
     </section>
     <section>
@@ -182,7 +181,7 @@
                     RelativeURL:
                     Observation/0a25be9c-af37-410b-bd43-6c7d3e1f1681
             -->                    
-            <reference value="Observation/0a25be9c-af37-410b-bd43-6c7d3e1f1681" />
+            <reference value="urn:uuid:0a25be9c-af37-410b-bd43-6c7d3e1f1681" />
         </entry>
     </section>
     <section>
@@ -193,7 +192,7 @@
                     RelativeURL:
                     Observation/4f518fd0-15dd-471a-ab4e-fe5ab3fe979e
             -->                    
-            <reference value="Observation/4f518fd0-15dd-471a-ab4e-fe5ab3fe979e" />
+            <reference value="urn:uuid:4f518fd0-15dd-471a-ab4e-fe5ab3fe979e" />
         </entry>
     </section>
     <section>
@@ -204,7 +203,7 @@
                     RelativeURL:
                     DocumentReference/c7b24835-f7b8-4480-a0fe-c0653d6c4050
             -->                    
-            <reference value="DocumentReference/c7b24835-f7b8-4480-a0fe-c0653d6c4050" />
+            <reference value="urn:uuid:c7b24835-f7b8-4480-a0fe-c0653d6c4050" />
         </entry>
     </section>
     <section>
@@ -215,7 +214,7 @@
                     RelativeURL:
                     Observation/f2e30a2a-9070-43aa-9bf2-307ad290eb95
             -->                    
-            <reference value="Observation/f2e30a2a-9070-43aa-9bf2-307ad290eb95" />
+            <reference value="urn:uuid:f2e30a2a-9070-43aa-9bf2-307ad290eb95" />
         </entry>
     </section>
     <section>
@@ -226,7 +225,7 @@
                 RelativeURL:
                 MedicationStatement/cf72d600-1c4d-44bf-a8b3-ec100f1a4947
             -->                    
-            <reference value="MedicationStatement/cf72d600-1c4d-44bf-a8b3-ec100f1a4947" />
+            <reference value="urn:uuid:cf72d600-1c4d-44bf-a8b3-ec100f1a4947" />
         </entry>
     </section>
     <section>
@@ -237,7 +236,7 @@
                 RelativeURL:
                 Medication/8947dca1-69fd-4184-a55f-8f7f32b0a914
             -->                   
-            <reference value="Medication/8947dca1-69fd-4184-a55f-8f7f32b0a914" />
+            <reference value="urn:uuid:8947dca1-69fd-4184-a55f-8f7f32b0a914" />
         </entry>
     </section>
     <section>
@@ -248,7 +247,7 @@
                 RelativeURL:
                 Medication/347b8239-6420-4b3a-a873-6b62e1fa1b0f
             -->                    
-            <reference value="Medication/347b8239-6420-4b3a-a873-6b62e1fa1b0f" />
+            <reference value="urn:uuid:347b8239-6420-4b3a-a873-6b62e1fa1b0f" />
         </entry>
     </section>
     <section>
@@ -259,7 +258,7 @@
                 RelativeURL:
                 Medication/4b28cbef-80e7-4838-b15b-b2d9dfc4461b
             -->                    
-            <reference value="Medication/4b28cbef-80e7-4838-b15b-b2d9dfc4461b" />
+            <reference value="urn:uuid:4b28cbef-80e7-4838-b15b-b2d9dfc4461b" />
         </entry>
     </section>
     <section>
@@ -270,7 +269,7 @@
                 RelativeURL:
                 PractitionerRole/ebd25191-272a-4a2f-9b52-8733963b32b8
             -->                    
-            <reference value="PractitionerRole/ebd25191-272a-4a2f-9b52-8733963b32b8" />
+            <reference value="urn:uuid:ebd25191-272a-4a2f-9b52-8733963b32b8" />
         </entry>
     </section>
     <section>
@@ -281,7 +280,7 @@
                 RelativeURL:
                 Organization/c9643334-ed27-4327-9eff-baff968982a0
             -->                    
-            <reference value="Organization/c9643334-ed27-4327-9eff-baff968982a0" />
+            <reference value="urn:uuid:c9643334-ed27-4327-9eff-baff968982a0" />
         </entry>
     </section>
     <section>
@@ -292,7 +291,7 @@
                 RelativeURL:
                 Observation/0f9b10f1-b311-49e8-b395-608303bdaa2d
             -->                    
-            <reference value="Observation/0f9b10f1-b311-49e8-b395-608303bdaa2d" />
+            <reference value="urn:uuid:0f9b10f1-b311-49e8-b395-608303bdaa2d" />
         </entry>
     </section>
     <section>
@@ -303,7 +302,7 @@
                 RelativeURL:
                 Observation/8d018e14-21b7-4982-b26f-d3b4812f7a1f
             -->                    
-            <reference value="Observation/8d018e14-21b7-4982-b26f-d3b4812f7a1f" />
+            <reference value="urn:uuid:8d018e14-21b7-4982-b26f-d3b4812f7a1f" />
         </entry>
     </section>
     <section>
@@ -314,7 +313,7 @@
                 RelativeURL:
                 Observation/b77a0cc9-62ff-47c5-96b5-a964f313490dl
             -->                    
-            <reference value="Observation/b77a0cc9-62ff-47c5-96b5-a964f313490dl" />
+            <reference value="urn:uuid:b77a0cc9-62ff-47c5-96b5-a964f313490dl" />
         </entry>
     </section>
     <section>
@@ -325,7 +324,7 @@
                 RelativeURL:
                 Observation/3aecc20f-00e2-4d82-ae7b-a703118c9969
             -->                    
-            <reference value="Observation/3aecc20f-00e2-4d82-ae7b-a703118c9969" />
+            <reference value="urn:uuid:3aecc20f-00e2-4d82-ae7b-a703118c9969" />
         </entry>
     </section>
     <section>
@@ -336,7 +335,7 @@
                 RelativeURL:
                 Observation/bbc56617-923d-4076-8bad-43cd861031c7
             -->                    
-            <reference value="Observation/bbc56617-923d-4076-8bad-43cd861031c7" />
+            <reference value="urn:uuid:bbc56617-923d-4076-8bad-43cd861031c7" />
         </entry>
     </section>
     <section>
@@ -347,7 +346,7 @@
                 RelativeURL:
                 Observation/f8412800-04b9-446b-b83d-2d772af8099b
             -->                    
-            <reference value="Observation/f8412800-04b9-446b-b83d-2d772af8099b" />
+            <reference value="urn:uuid:f8412800-04b9-446b-b83d-2d772af8099b" />
         </entry>
     </section>
     <section>
@@ -358,7 +357,7 @@
                 RelativeURL:
                 Observation/e04aaff2-34c7-4dfa-80cf-b3c5d5a03058
             -->                    
-            <reference value="Observation/e04aaff2-34c7-4dfa-80cf-b3c5d5a03058" />
+            <reference value="urn:uuid:e04aaff2-34c7-4dfa-80cf-b3c5d5a03058" />
         </entry>
     </section>
     <section>
@@ -369,7 +368,7 @@
                 RelativeURL:
                 Observation/dc5b40d7-1c69-401a-a649-145c79c4b571
             -->                    
-            <reference value="Observation/dc5b40d7-1c69-401a-a649-145c79c4b571" />
+            <reference value="urn:uuid:dc5b40d7-1c69-401a-a649-145c79c4b571" />
         </entry>
     </section>
     <section>
@@ -380,7 +379,7 @@
                 RelativeURL:
                 PractitionerRole/93ad5198-d79b-4436-9e1e-aaa69acb2d08
             -->                    
-            <reference value="PractitionerRole/93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
+            <reference value="urn:uuid:93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
         </entry>
     </section>
     <section>
@@ -391,7 +390,7 @@
                 RelativeURL:
                 Organization/cdc0ceec-dc27-44e5-a7c7-567a754dc912
             -->                    
-            <reference value="Organization/93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
+            <reference value="urn:uuid:93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
         </entry>
     </section>
     <section>
@@ -402,7 +401,7 @@
                 RelativeURL:
                 Organization/f952b0d1-bb04-402d-b0e6-cef800858f98
             -->                    
-            <reference value="Organization/f952b0d1-bb04-402d-b0e6-cef800858f98" />
+            <reference value="urn:uuid:f952b0d1-bb04-402d-b0e6-cef800858f98" />
         </entry>
     </section>
 </Composition>
