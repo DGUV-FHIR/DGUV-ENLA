@@ -17,12 +17,10 @@
   <meta>
       <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Arbeitsunfaehigkeit" />
   </meta>
-<!-- Ist der Wert des status zu verifizieren? -->  
+  <!-- Observation status -->  
   <status value="final"/>
 
-<!--
-  Welche Art der überprüfung ist für den Teilbereichsinhalt notwendig und ausreichend?
--->  
+  <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
   <code>
       <coding>
           <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
@@ -30,30 +28,16 @@
           <display value="Arbeitsunfähigkeit" />
       </coding>
   </code>
-<!--  
-    Es muss überprüft werden, dass die hier auftretende Referenz nicht leer ist und
-    die korrekte Form
-         <reference value="http://fhir.dguv.de/ENLA/Patient/VersichertePerson" />
-    oder
-        "Patient/(UUDI oder Referenz id)"
-    einhalten.
--->
+
+  <!-- VersichertePerson-->
   <subject>
       <reference value="Patient/T37501234" />
   </subject>
 
-<!-- 
-    Das Feld effectiveDateTime sollte vorhanden sein und ein gültiges Datumsformat einhalten.
--->
+  <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
   <effectiveDateTime value="2025-07-03" />
-  <!--  
-    Es muss überprüft werden, dass die hier auftretende Referenz nicht leer ist und
-    die korrekte Form
-         <reference value="http://fhir.dguv.de/ENLA/Patient/VersichertePerson" />
-    oder
-        "Patient/(UUDI oder Referenz id)"
-    einhalten.
--->
+
+  <!-- Behandelnde(-r) Ärtztin/Arzt-->
   <performer>
       <reference value="DArzt/T37501234" />
   </performer>
@@ -65,13 +49,15 @@
     ausgefüllt sein.
     Attribut "value[x]"
     Bei "AF" ("Arbeitsfähig") gibt es KEINE Wiedereingliederung (vgl. DGUV_ENLA_PR_stufenweiseWiedereingliederung).
--->  
+-->
+
+  <!-- FlexAU -->
   <valueCodeableConcept>
     <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-FlexAU">
-      <Flexible_AU>
-        <Duration value="2" />
+      <valueDuration>
+        <value value="2" />
         <unit value="Wochen" />
-      </Flexible_AU>
+      </valueDuration>
     </extension>
     <coding>
         <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Arbeitsunfaehigkeit" />
