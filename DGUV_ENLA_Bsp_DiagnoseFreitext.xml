@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    Author: 
-    Datum:  
-
-    Die vorliegende Beispiel Datei .... dient der Validierung 
-    der Datenaufnahme zu dem ......
-    
-    Zu beachten ist dabei ...
-
-    Durchzuführende Massnahmen:
-
+    Author: Friedhelm Matten
+    Datum:  30.09.2025
 
 -->
  <Condition xmlns="http://hl7.org/fhir">
@@ -17,6 +9,9 @@
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseFreitext"/>
     </meta>
+
+
+    <!-- AO Klassifikation-->
     <extension url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-Frakturklassifikation">
         <extension url="Fraktur">
             <valueBoolean value="true"/>
@@ -25,9 +20,13 @@
             <valueString value="12A 12B 12C"/>
         </extension>
     </extension>
+
+    <!-- Freitextliche Diagnose -->
     <code>
         <text value="Hier steht der Freitext!"/>
     </code>
+
+    <!-- Referenz auf die VersichertePerson -->
     <subject>
         <reference value="Patient/T37501234"/>
     </subject>
