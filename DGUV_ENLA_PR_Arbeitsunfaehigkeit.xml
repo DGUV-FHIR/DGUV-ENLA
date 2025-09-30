@@ -174,7 +174,7 @@
       <representation value="xmlAttr" />
       <short value="Unique id for inter-element referencing" />
       <definition value="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Element.id" />
@@ -5188,10 +5188,6 @@
       <path value="Observation.meta" />
       <min value="1" />
       <mustSupport value="true" />
-    </element>
-    <element id="Observation.meta.id">
-      <path value="Observation.meta.id" />
-      <min value="1" />
     </element>
     <element id="Observation.meta.profile">
       <path value="Observation.meta.profile" />
