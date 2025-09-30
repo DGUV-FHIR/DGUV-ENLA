@@ -7,6 +7,8 @@
 
   <!-- Observation status -->
   <status value="final"/>
+
+  <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
   <code>
       <coding>
           <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
