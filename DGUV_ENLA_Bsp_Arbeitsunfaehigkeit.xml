@@ -4,6 +4,8 @@
   <meta>
       <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Arbeitsunfaehigkeit" />
   </meta>
+
+  <!-- Observation status -->
   <status value="final"/>
   <code>
       <coding>
@@ -12,10 +14,16 @@
           <display value="Arbeitsunfähigkeit" />
       </coding>
   </code>
+
+  <!-- VersichertePerson-->
   <subject>
       <reference value="Patient/T37501234" />
   </subject>
+
+  <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
   <effectiveDateTime value="2025-07-03" />
+
+  <!-- Behandelnde(-r) Ärtztin/Arzt-->
   <performer>
       <reference value="DArzt/T37501234" />
   </performer>  
@@ -40,7 +48,7 @@
     </valueCodeableConcept>
 
 -->
-
+  <!-- Art der Arbeitsunfaehigkeit -->  
   <valueCodeableConcept>
     <coding>
         <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Arbeitsunfaehigkeit" />
