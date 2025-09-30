@@ -3,12 +3,7 @@
     Author: 
     Datum:  
 
-    Die vorliegende Beispiel Datei .... dient der Validierung 
-    der Datenaufnahme zu dem ......
-    
-    Zu beachten ist dabei ...
-
-    Durchzuführende Massnahmen:
+    Anlass: Validierung und Dokumentation
 
 
 -->
@@ -46,7 +41,7 @@
         </code>
     </effectiveTiming>
 
-    <!-- Behandelnder Arzt/Ärtztin-->
+    <!-- Behandelnde(-r) Ärtztin/Arzt-->
     <performer>
         <reference value="DArzt/gh45434" />
     </performer>
