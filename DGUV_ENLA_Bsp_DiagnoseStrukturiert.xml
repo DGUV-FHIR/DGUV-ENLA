@@ -17,6 +17,8 @@
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseStrukturiert"/>
     </meta>
+
+    <!-- Diagnosecode verpflichtend-->
     <code>
         <coding>
             <system value="http://fhir.de/CodeSystem/bfarm/icd-10-gm"/>
@@ -25,7 +27,10 @@
             <display value="Gehirnerschütterung"/>
         </coding>
     </code>
+
+    <!-- VersichertePerson Referenz -->
     <subject>
         <reference value="Patient/T37501234"/>
     </subject>
+
 </Condition>
