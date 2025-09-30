@@ -23,8 +23,10 @@
       <extension url="Pflegeunfall">
         <valueBoolean value="true"/>
       </extension>
-      <extension url="Pflegekasse"> 
-          <valueReference value="Pflegekasse/123" />
+      <extension url="Pflegekasse">
+        <valueReference>
+          <reference value="Pflegekasse/123" />
+        </valueReference>  
       </extension>
   </extension>
 
@@ -34,7 +36,7 @@
   <!-- Beispiel Durchgangsarztverfahren  -->
   <code>
     <coding>
-      <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-Durchgangsarztverfahren"/>
+      <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-Verletzungsartenverzeichnis"/>
       <code value="10.1V"/>
       <display value="Schwere Verletzungen und Verletzungskombinationen (Polytrauma) mit einem Injury Severity Score (ISS) zwischen 16 und 24."/>
     </coding>
