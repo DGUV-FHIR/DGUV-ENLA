@@ -40,6 +40,6 @@
         <reference value="Performer/DArzt"/>
     </performer>
 
-    <!-- Kennzeichen bzgl. Datenschutzhinweisgebung -->
+    <!-- Kennzeichen bzgl. Datenschutzhinweisgebung  -->
     <valueBoolean value="false" />
 </Observation>
