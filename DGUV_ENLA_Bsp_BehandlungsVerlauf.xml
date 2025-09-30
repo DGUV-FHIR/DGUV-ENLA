@@ -3,7 +3,7 @@
     Author: Friedhelm Matten
     Datum:  30.09.2025
 
-    
+    Anlass: Validierung und Dokumentation    
 
 
 -->
@@ -42,7 +42,7 @@
     <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
     <effectiveDateTime value="2025-09-30T09:30:00+02:00"/>
 
-    <!-- Behandelnder Arzt/Ärtztin-->
+    <!-- Behandelnde(-r) Ärtztin/Arzt-->
     <performer>
         <reference value="DArzt/gh45434" />
     </performer>

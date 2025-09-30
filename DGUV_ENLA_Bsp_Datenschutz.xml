@@ -17,7 +17,11 @@
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Datenschutz" />
     </meta>
+
+    <!-- Observation status -->
     <status value="final"/>
+
+    <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
     <code>
         <coding>
             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
@@ -25,11 +29,17 @@
             <display value="Datenschutz" />
         </coding>
     </code>
+
+    <!-- Versicherte Person -->
     <subject>
         <reference value="Patient/VersichertePerson-1"/>
     </subject>
+
+    <!-- Behandelnde(-r) Ärtztin/Arzt-->
     <performer>
         <reference value="Performer/DArzt"/>
     </performer>
+
+    <!-- Kennzeichen bzgl. Datenschutzhinweisgebung  -->
     <valueBoolean value="false" />
 </Observation>

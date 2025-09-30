@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Author: 
-    Datum:  
+    Author: Friedhelm Matten
+    Datum:  30.09.2025
 
-    Die vorliegende Beispiel Datei .... dient der Validierung 
-    der Datenaufnahme zu dem ......
-    
-    Zu beachten ist dabei ...
-
-    Durchzuführende Massnahmen:
+    Anlass: Validierung und Dokumentation
 
 
 -->
@@ -17,12 +12,18 @@
   <meta>
     <profile value="http://fhir.dguv.de/ENLA/PractitionerRole/DGUV-ENLA-PR-DArzt" />
   </meta>
+
+  <!-- Behandelnde(-r) Ärtztin/Arzt--> 
   <practitioner>
     <reference value="Practitioner/Arzt-1" />
   </practitioner>
+
+  <!-- Behandelnde Einrichtung-->
   <organization>
     <reference value="Organization/DArzt-Einrichtung-234" />
   </organization>
+
+  <!-- Rolle der Einrichtung-->
   <code>
     <coding>
       <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_Base_Role_Care" />
@@ -31,6 +32,8 @@
       <display value="&#196;rztliche(r) DirektorIn" />
     </coding>
   </code>
+
+  <!-- KBV Fachgruppe -->
   <specialty>
     <coding>
       <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BAR2_ARZTNRFACHGRUPPE" />
@@ -39,4 +42,5 @@
       <display value="Allgemeinmedizin" />
     </coding>
   </specialty>
+
 </PractitionerRole>

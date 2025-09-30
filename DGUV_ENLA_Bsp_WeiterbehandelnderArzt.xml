@@ -17,12 +17,18 @@
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/PractitionerRole/DGUV-ENLA-PR-WeiterbehandelnderArzt" />
     </meta>
+
+    <!-- Behandelnde(-r) Ärtztin/Arzt-->
     <practitioner>
         <reference value="Practitioner/Arzt-14" />
     </practitioner>
+
+    <!-- Weiterbehandelnde Einrichtung-->
     <organization>
         <reference value="Organization/WeiterbehandelndeOrganisation-cf042e44-086a-4d51-9c77-172f9a972e3b" />
     </organization>
+
+    <!-- Rolle der Einrichtung-->
     <code>
         <coding>
             <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_Base_Role_Care" />
@@ -31,6 +37,8 @@
             <display value="Fachärztin/-arzt" />
         </coding>
     </code>
+
+    <!-- KBV Fachgruppe -->
     <specialty>
         <coding>
             <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BAR2_ARZTNRFACHGRUPPE" />
