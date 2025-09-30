@@ -17,7 +17,11 @@
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Hilfsmittel" />
     </meta>
+
+    <!-- Observation status-->
     <status value="final"/>
+
+    <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
     <code>  
         <coding>
             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
@@ -25,9 +29,13 @@
             <display value="Hilfsmittel" />
         </coding>
     </code>
+
+    <!-- Referenz zur versicherten Person-->
     <subject>
         <reference value="Farad, Rudi/T995030511"/>
     </subject>
+
+    <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
     <effectiveTiming>
         <code>
             <coding>
@@ -37,6 +45,8 @@
             </coding>
         </code>
     </effectiveTiming>
+
+    <!-- verordnete Hilfsmittel-->
     <valueCodeableConcept>  
         <coding>
             <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-IstVerordnet">
