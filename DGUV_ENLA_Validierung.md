@@ -28,7 +28,7 @@
 [Leistungserbringer](#Leistungserbringer) :running:
 [MedikationArzneimittel](#MedikationArzneimittel) :running:
 [MedikationRezeptur](#MedikationRezeptur) :running:
-[MedikationsInformation](#MedikationsInformation)
+[MedikationsInformation](#MedikationsInformation) :fire:
 [MedikationWirkstoff](#MedikationWirkstoff)
 [Pflegekasse](#Pflegekasse)
 [Wiedereingliederung](#stufenweiseWiedereingliederung)
@@ -723,11 +723,25 @@ C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_MedikationsI
 | Value Set(s)     |                         |           |
 | Basis Profil(-e) |                         |           |
 | Constraints:     |                         |           |
-| Validiert am:    |                         |           |
+| Validiert am:    | 01.10.2025              |           |
 
-**Validierung: xx.xx.xxxx**
+**Validierung: 01.10.2025**
 
 ```
+
+----------------------------------------------------------------------------------
+C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_MedikationWirkstoff_1.xml 01:20:32
+[2, 41] Medication: Error - Medication.status: mindestens erforderlich = 1, aber nur gefunden 0
+[2, 41] Medication: Warning - Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
+[7, 9] Medication.code.coding[0].system: Warning - A definition for CodeSystem 'http://fhir.de/CodeSystem/bfarm/atc' could not be found, so the code cannot be validated
+[7, 9] Medication.code.coding[1].system: Warning - A definition for CodeSystem 'http://fhir.de/CodeSystem/ifa/pzn' could not be found, so the code cannot be validated
+[25, 26] Medication.ingredient[0].item.ofType(CodeableConcept).coding[0].system: Warning - A definition for CodeSystem 'http://fhir.de/CodeSystem/bfarm/atc' could not be found, so the code cannot be validated
+[25, 26] Medication.ingredient[0].item.ofType(CodeableConcept): Error - Durch das Profil http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationWirkstoff|0.0.2 angegeben, ist das Element 'itemCodeableConcept' außerhalb der definierten Reihenfolge.
+[25, 26] Medication.ingredient[0].item.ofType(CodeableConcept): Error - Durch das Profil http://hl7.org/fhir/StructureDefinition/Medication|4.0.1 angegeben, ist das Element 'itemCodeableConcept' außerhalb der definierten Reihenfolge.
+[26, 15] Medication.ingredient[0].item.ofType(CodeableConcept).coding[0]: Error - Profil http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationWirkstoff|0.0.2, Element stimmt mit mehr als einem Slice überein - ASK, ATC-DE
+[26, 15] Medication.ingredient[0].item.ofType(CodeableConcept).coding[0]: Error - Profil http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationWirkstoff|0.0.2, Element stimmt mit mehr als einem Slice überein - ASK, PZN
+[26, 15] Medication.ingredient[0].item.ofType(CodeableConcept).coding[0]: Error - Profil http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationWirkstoff|0.0.2, Element stimmt mit mehr als einem Slice überein - ASK, WG14
+[27, 62] Medication.ingredient[0].item.ofType(CodeableConcept).coding[0].system: Error - !!!!Der Wert ist 'http://fhir.de/CodeSystem/bfarm/atc', muss aber 'http://fhir.de/CodeSystem/ask' sein.
 
 ```
 
@@ -741,19 +755,22 @@ C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_MedikationsI
 
 <a id="Pflegekasse">Pflegekasse</a>
 
-| Art              | Bezeichnung     | Bemerkung |
-| ---------------- | --------------- | --------- |
-| Beispieldatei    | Pflegekasse.xml |           |
-| Profil           | Pflegekasse.xml |           |
-| Code Set(s)      |                 |           |
-| Value Set(s)     |                 |           |
-| Basis Profil(-e) |                 |           |
-| Constraints:     |                 |           |
-| Validiert am:    |                 |           |
+| Art              | Bezeichnung                   | Bemerkung |
+| ---------------- | ----------------------------- | --------- |
+| Beispieldatei    | DGUV_ENLA_Bsp_Pflegekasse.xml |           |
+| Profil           | DGUV_ENLA_PR_Pflegekasse.xml  |           |
+| Code Set(s)      |                               |           |
+| Value Set(s)     |                               |           |
+| Basis Profil(-e) |                               |           |
+| Constraints:     |                               |           |
+| Validiert am:    | 01.10.2025                    |           |
 
-**Validierung: xx.xx.xxxx**
+**Validierung 01.10.2025: **  
 
 ```
+----------------------------------------------------------------------------------
+C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_Pflegekasse.xml 01:31:43
+[15, 43] Organization: Warning - Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 
 ```
 
