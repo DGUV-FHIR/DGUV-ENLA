@@ -19,7 +19,7 @@
     </meta>
 
 
-
+      <!--   -->
       <code>
         <coding>
             <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type" />
@@ -30,12 +30,12 @@
       <!-- Medication status -->
       <status value="active"/>
 
-
+      <!-- Herstelle des Medikament  -->
       <manufacturer>
         <display value="AbZ Pharma GmbH"/>     
       </manufacturer>
 
-
+      <!--  -->
       <form>
         <coding>
           <system value="http://standardterms.edqm.eu"/>
@@ -45,7 +45,7 @@
         </coding>
       </form>
 
-
+      <!-- Inhaltsstoffe der Rezeptur -->
       <ingredient>
         <itemCodeableConcept>
           <coding>
@@ -55,10 +55,10 @@
         </itemCodeableConcept>
       </ingredient>
 
-
+      <!-- Angaben zur Charge -->
       <batch>
         <lotNumber value="1234"/>
       </batch>
 
-      
+
 </Medication>
