@@ -7,7 +7,7 @@
 
 :fire: Fehler in der Validierung​
 
-30 Profile ohne Bundle und Composition
+32 Profile ohne Bundle und Composition
 
 [Arbeitsunfähigkeit](#Arbeitsunfähigkeit) :running:
 [Aufenthaltsinformationen](#Aufenthaltsinformationen) :running:
@@ -30,12 +30,14 @@
 [MedikationRezeptur](#MedikationRezeptur) :running:
 [MedikationsInformation](#MedikationsInformation)
 [MedikationWirkstoff](#MedikationWirkstoff)
-[Pflegekasse](#Pflegekasse)
+[Pflegekasse](#Pflegekasse) :running:
 [Wiedereingliederung](#stufenweiseWiedereingliederung)
+[Therapie](#Therapie)
 [Therapieempfehlung](#Therapieempfehlung)
 [Unfallbetrieb](#Unfallbetrieb)
 [Unfallereignis](#Unfallereignis) :running:
-[VersichertePerson](#VersichertePerson)
+[Unfallversicherungstraeger](#Unfallversicherungstraeger) :running:
+[VersichertePerson](#VersichertePerson) :running:
 [WeiterbehandelndeOrganisation](#WeiterbehandelndeOrganisation)
 [WeiterbehandelnderArzt](#WeiterbehandelnderArzt) :running:
 
@@ -830,9 +832,9 @@ C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_MedikationsI
 | Value Set(s)     |                                    |           |
 | Basis Profil(-e) |                                    |           |
 | Constraints:     |                                    |           |
-| Validiert am:    |                                    |           |
+| Validiert am:    | 01.10.2025                         |           |
 
-**Validierung: 30.05.2025**
+**Validierung: 01.10.2025**
 
 ```
 
@@ -861,13 +863,16 @@ C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_MedikationsI
 | Value Set(s)     |              |           |
 | Basis Profil(-e) |              |           |
 | Constraints:     |              |           |
-| Validiert am:    |              |           |
+| Validiert am:    | 01.10.2025   |           |
 
-**Validierung: xx.xx.xxxx**
+**Validierung: 01.10.2025**
 
 ```
 
-
+----------------------------------------------------------------------------------
+C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_Therapieempfehlung.xml 02:36:45
+[7, 42] Observation: Warning - Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
+[17, 11] Observation.code: Information - Reference to draft CodeSystem http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt|0.0.2
 ```
 
 **Validiert am: xx.xx.xxxx**
@@ -888,12 +893,16 @@ C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_MedikationsI
 | Value Set(s)     |                        |           |
 | Basis Profil(-e) |                        |           |
 | Constraints:     |                        |           |
-| Validiert am:    |                        |           |
+| Validiert am:    | 01.10.2025             |           |
 
-**Validierung: xx.xx.xxxx**
+**Validierung: 01.10.2025**
 
 ```
 
+----------------------------------------------------------------------------------
+C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_Therapieempfehlung.xml 02:36:45
+[7, 42] Observation: Warning - Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
+[17, 11] Observation.code: Information - Reference to draft CodeSystem http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt|0.0.2
 ```
 
 **Validiert am: xx.xx.xxxx**
@@ -914,12 +923,15 @@ C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_MedikationsI
 | Value Set(s)     |                   |           |
 | Basis Profil(-e) |                   |           |
 | Constraints:     |                   |           |
-| Validiert am:    |                   |           |
+| Validiert am:    | 01.10.2025        |           |
 
-**Validierung: xx.xx.xxxx**
+**Validierung: 01.10.2025**
 
 ```
 
+----------------------------------------------------------------------------------
+C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_Unfallbetrieb.xml 01:56:22
+[15, 43] Organization: Warning - Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 ```
 
 **Validiert am: xx.xx.xxxx**
@@ -940,14 +952,13 @@ C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_MedikationsI
 | Value Set(s)     |                    |           |
 | Basis Profil(-e) |                    |           |
 | Constraints      |                    |           |
-| Validiert am:    |                    |           |
+| Validiert am:    | 01.10.2025         |           |
 
-**Validierung: 26.09.2025**
+**Validierung: 01.10.2025**
 
 ```
-
 ----------------------------------------------------------------------------------
-C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_Unfallereignis.xml 02:14:35
+C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_Unfallereignis.xml 01:53:21
 [15, 42] Observation: Warning - !!Alle Observations sollten einen Performer haben
 [15, 42] Observation: Warning - Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 [37, 9] Observation.code: Information - Reference to draft CodeSystem http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-Verletzungsartenverzeichnis|1.3
@@ -975,11 +986,14 @@ C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_Unfallereign
 | Value Set(s)     |                                |           |
 | Basis Profil(-e) |                                |           |
 | Constraints:     |                                |           |
-| Validiert am:    |                                |           |
+| Validiert am:    | 01.10.2025                     |           |
 
-**Validierung: xx.xx.xxxx**
+**Validierung: 01.10.2025**
 
 ```
+----------------------------------------------------------------------------------
+C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_Unfallversicherungstraeger.xml 01:50:29
+[7, 43] Organization: Warning - Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 
 ```
 
