@@ -10,23 +10,23 @@
 30 Profile ohne Bundle und Composition
 
 [Arbeitsunfähigkeit](#Arbeitsunfähigkeit) :running:
-[Aufenthaltsinformationen](#Aufenthaltsinformationen) :ambulance:
-[AufnahmeBefunde](#AufnahmeBefunde) :ambulance:
+[Aufenthaltsinformationen](#Aufenthaltsinformationen) :running:
+[AufnahmeBefunde](#AufnahmeBefunde) :running:
 [BehandelndeEinrichtung](#BehandelndeEinrichtung) :running:
 [BehandlungsVerlauf](#BehandlungsVerlauf) :running:
-[BesondereMassnahme](#BesondereMassnahme) :ambulance:
-[DArzt](#DArzt) :ambulance:
+[BesondereMassnahme](#BesondereMassnahme) :running:
+[DArzt](#DArzt) :running:
 [DArztOrganisation](#DArztOrganisation) :running:
 [Datenschutz](#Datenschutz) :running:
 [DiagnoseFreitext](#DiagnoseFreitext) :running:
 [DiagnoseStrukturiert](#DiagnoseStrukturiert) :running:
 [Entlassbefunde](#Entlassbefunde) :running:
-[Heilmittel](#Heilmittel) :ambulance:
-[Hilfsmittel](#Hilfsmittel) :ambulance:
-[Konsiliarbefunde](#Konsiliarbefunde) :ambulance:
+[Heilmittel](#Heilmittel) :running:
+[Hilfsmittel](#Hilfsmittel) :running:
+[Konsiliarbefunde](#Konsiliarbefunde) :running:
 [Krankenkasse](#Krankenkasse) :running:
 [Leistungserbringer](#Leistungserbringer) :running:
-[MedikationArzneimittel](#MedikationArzneimittel) :bomb:
+[MedikationArzneimittel](#MedikationArzneimittel) :running:
 [MedikationRezeptur](#MedikationRezeptur) :running:
 [MedikationsInformation](#MedikationsInformation)
 [MedikationWirkstoff](#MedikationWirkstoff)
@@ -37,7 +37,7 @@
 [Unfallereignis](#Unfallereignis) :running:
 [VersichertePerson](#VersichertePerson)
 [WeiterbehandelndeOrganisation](#WeiterbehandelndeOrganisation)
-[WeiterbehandelnderArzt](#WeiterbehandelnderArzt) :ambulance:
+[WeiterbehandelnderArzt](#WeiterbehandelnderArzt) :running:
 
 
 
@@ -632,8 +632,9 @@ C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_Leistungserb
 **Validierung: **  01.10.2025
 
 ```
+
 ----------------------------------------------------------------------------------
-C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_MedikationArzneimittel.xml 08:50:07
+C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_MedikationArzneimittel.xml 11:41:16
 [15, 41] Medication: Warning - Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 [22, 13] Medication.code.coding[0].system: Warning - A definition for CodeSystem 'http://fhir.de/CodeSystem/ifa/pzn' could not be found, so the code cannot be validated
 [39, 13] Medication.form.coding[0].system: Warning - A definition for CodeSystem 'https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM' version '1.15' could not be found, so the code cannot be validated. Valid versions: []
@@ -691,12 +692,17 @@ C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_MedikationRe
 | Value Set(s)     |                            |           |
 | Basis Profil(-e) |                            |           |
 | Constraints:     |                            |           |
-| Validiert am:    |                            |           |
+| Validiert am:    | 01.10.2025                 |           |
 
-**Validierung: xx.xx.xxxx**
+**Validierung: 01.10.2025**
 
 ```
-
+----------------------------------------------------------------------------------
+C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_MedikationsInformation.xml 12:08:36
+[15, 50] MedicationStatement: Warning - Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
+[32, 13] MedicationStatement.dosage[0]: Error - Dieses Element stimmt mit keinem bekannten Slice defined in the profile http://fhir.dguv.de/ENLA/MedicationStatement/DGUV-ENLA-PR-MedikationsInformation|0.0.2 überein, und das Slicing ist CLOSED: MedicationStatement.dosage[0]: Stimmt nicht mit Slice 'strukturierteDosierung' überein, MedicationStatement.dosage[0]: Stimmt nicht mit Slice 'freitextlicheDosierung' überein
+[34, 19] MedicationStatement.dosage[0].timing.code: Information - !!Keiner der angegebenen Codes ist im Valueset 'TimingAbbreviation' (http://hl7.org/fhir/ValueSet/timing-abbreviation|4.0.1), und es wird empfohlen, einen Code aus dieserm Valueset zu verwenden) (Codes = http://hl7.org/fhir/event-timing#MORN)
+[47, 16] MedicationStatement.dosage[0].route.coding[0].system: Warning - A definition for CodeSystem 'https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_Route_of_Administration_German' version '1.0.0' could not be found, so the code cannot be validated. Valid versions: []
 ```
 
 **Validiert am: xx.xx.xxxx**
