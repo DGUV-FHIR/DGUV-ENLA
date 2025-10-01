@@ -17,7 +17,11 @@
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Konsiliarbefunde" />
     </meta>
+
+    <!-- Observation status -->
     <status value="final" />
+
+    <!-- Klassifikation des Befundtyps -->
     <category>
         <coding>
             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-BefundKategorie" />
@@ -25,6 +29,8 @@
                 <display value="Vitalparameter" />
         </coding>
     </category>
+
+    <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
     <code>
         <coding>
             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
@@ -32,8 +38,16 @@
             <display value="Konsiliarbefund" />
         </coding>
     </code>
+
+    <!-- VersichertePerson Referenz -->
     <subject>
         <reference value="Patient/T37501234" />
     </subject>
+
+    <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
+    <effectiveDateTime value="2025-09-30T09:30:00+02:00"/>
+
+    <!-- Befund Narrativ -->
     <valueString value="Befundergebnis" />
+    
 </Observation>
