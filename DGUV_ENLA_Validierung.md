@@ -3,6 +3,10 @@
 :running:  vollständig validiert!
 :ambulance: validiert aber mit VS/CS Anmerkungen bzw. Problemen​
 
+:bomb: validiert mit Umfangreichen VS/CS Anmerkungen bzw. Problemen
+
+:fire: Fehler in der Validierung​
+
 30 Profile ohne Bundle und Composition
 
 [Arbeitsunfähigkeit](#Arbeitsunfähigkeit) :running:
@@ -22,8 +26,8 @@
 [Konsiliarbefunde](#Konsiliarbefunde) :ambulance:
 [Krankenkasse](#Krankenkasse) :running:
 [Leistungserbringer](#Leistungserbringer) :running:
-[MedikationArzneimittel](#MedikationArzneimittel)
-[MedikationRezeptur](#MedikationRezeptur)
+[MedikationArzneimittel](#MedikationArzneimittel) :bomb:
+[MedikationRezeptur](#MedikationRezeptur) :running:
 [MedikationsInformation](#MedikationsInformation)
 [MedikationWirkstoff](#MedikationWirkstoff)
 [Pflegekasse](#Pflegekasse)
@@ -649,20 +653,22 @@ C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_MedikationAr
 
 <a id="MedikationRezeptur">MedikationRezeptur</a>
 
-| Art              | Bezeichnung            | Bemerkung |
-| ---------------- | ---------------------- | --------- |
-| Beispieldatei    | MedikationRezeptur.xml |           |
-| Profil           | MedikationRezeptur.xml |           |
-| Code Set(s)      |                        |           |
-| Value Set(s)     |                        |           |
-| Basis Profil(-e) |                        |           |
-| Constraints:     |                        |           |
-| Validiert am:    |                        |           |
+| Art              | Bezeichnung              | Bemerkung |
+| ---------------- | ------------------------ | --------- |
+| Beispieldatei    | MedikationRezeptur_1.xml |           |
+| Profil           | MedikationRezeptur.xml   |           |
+| Code Set(s)      |                          |           |
+| Value Set(s)     |                          |           |
+| Basis Profil(-e) |                          |           |
+| Constraints:     |                          |           |
+| Validiert am:    | 01.10.2025               |           |
 
-**Validierung: xx.xx.xxxx** 
+**Validierung: 01.10.2025** 
 
 ```
-
+----------------------------------------------------------------------------------
+C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_MedikationRezeptur_1.xml 09:58:36
+[17, 9] Medication.code.coding[0]: Warning - !!!!!!!!Das CodeSystem https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type ist unbekannt
 ```
 
 **Validiert am: xx.xx.xxxx**
@@ -989,12 +995,14 @@ C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_Unfallereign
 | Value Set(s)     |                       |           |
 | Basis Profil(-e) |                       |           |
 | Constraints:     |                       |           |
-| Validiert am:    |                       |           |
+| Validiert am:    | 01.10.2025            |           |
 
-**Validierung:** **xx.xx.xxxx**
+**Validierung:** **01.10.2025**
 
 ```
-
+----------------------------------------------------------------------------------
+C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_VersichertePerson.xml 09:15:32
+[-1, -1] n/a: Information - Alles OK
 ```
 
 **Validiert am: xx.xx.xxxx**
