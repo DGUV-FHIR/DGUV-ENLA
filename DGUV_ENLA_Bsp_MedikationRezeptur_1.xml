@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Medication xmlns="http://hl7.org/fhir">
+  <id value="example-rezeptur-1"/>
+  <meta>
+    <!-- must be exactly this profile URL -->
+    <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationRezeptur"/>
+  </meta>
+
+  <!-- Text narrative -->
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p><b>Rezeptur</b>: Salicyl-Vaselin 5% (5 g Salicylsäure / 95 g Vaselin auf 100 g)</p>
+    </div>
+  </text>
+
+  <code>
+    <coding>
+      <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type"/>
+      <code value="rezeptur"/>
+    </coding>
+    <text value="Rezeptur: Salicyl-Vaselin 5 %"/>
+  </code>
+
+  <!-- Medication status -->
+  <status value="active"/>
+
+
+  <!-- -->
+  <ingredient>
+    <itemCodeableConcept>
+      <text value="Acidum salicylicum (Salicylsäure)"/>
+    </itemCodeableConcept>
+    <strength>
+      <numerator>
+        <value value="5"/>
+        <unit value="g"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="g"/>
+      </numerator>
+      <denominator>
+        <value value="100"/>
+        <unit value="g"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="g"/>
+      </denominator>
+    </strength>
+  </ingredient>
+
+  <ingredient>
+    <itemCodeableConcept>
+      <text value="Vaselinum album"/>
+    </itemCodeableConcept>
+    <strength>
+      <numerator>
+        <value value="95"/>
+        <unit value="g"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="g"/>
+      </numerator>
+      <denominator>
+        <value value="100"/>
+        <unit value="g"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="g"/>
+      </denominator>
+    </strength>
+  </ingredient>
+
+</Medication>
