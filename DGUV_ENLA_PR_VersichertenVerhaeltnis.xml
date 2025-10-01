@@ -3466,7 +3466,6 @@
       <sliceName value="Familienversicherung" />
       <short value="Beschreibung des Patientenverhältnisses zur Versicherung" />
       <min value="1" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Coverage.extension:Familienversicherung.extension">
@@ -3493,7 +3492,6 @@
     <element id="Coverage.extension:Familienversicherung.extension:Mitgliedsname.value[x]">
       <path value="Coverage.extension.extension.value[x]" />
       <comment value="Nur wenn in Familienversichert.value[x] &quot;true&quot; eingetragen ist, muss hier zwingend der Name des eigentlich Versicherten angegeben werden" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Coverage.status">
