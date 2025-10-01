@@ -17,11 +17,17 @@
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Unfallbetrieb" />
     </meta>
+
+    <!-- Bezeichnung des Unfallbetriebs-->
     <name value="Sankt Augustiner 6 Tage Rennen GmbH"/>
+
+    <!-- Telefon Kontakt Unfallbetrieb -->
     <telecom>
         <system value="phone"/>
         <value value="01761234"/>
     </telecom>
+
+    <!-- Strassen Adresse des Unfallbetriebs und Postfach -->
     <address>
         <type value="both"/>
         <line value="Johann-Lafer-Gasse 2">
@@ -36,4 +42,5 @@
         <postalCode value="53757"/>
         <country value="DE"/>
     </address>
+
 </Organization>

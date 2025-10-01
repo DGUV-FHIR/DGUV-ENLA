@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Author: 
-    Datum:  
-
-    Die vorliegende Beispiel Datei .... dient der Validierung 
-    der Datenaufnahme zu dem ......
-    
-    Zu beachten ist dabei ...
-
-    Durchzuführende Massnahmen:
-
+    Author: Friedhelm Matten
+    Datum:  01.10.2025
 
 -->
 <Observation xmlns="http://hl7.org/fhir">
@@ -17,7 +9,11 @@
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-PrognoseWiederaufnahmeTaetigkeit" />
     </meta>
+
+    <!-- Observation status -->
     <status value="final"/>
+
+    <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
     <code>
         <coding>
             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
@@ -25,9 +21,20 @@
             <display value="PrognoseWiederaufnahmeTätigkeit" />
         </coding>
     </code>
+
+    <!-- Referenz Versicherte Person -->
     <subject>
         <reference value="Patient/T37501234" />
     </subject>
+
+    <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
+    <effectiveDateTime value="2025-09-30T09:30:00+02:00"/>
+
+    <!-- Behandelnde(-r) Ärtztin/Arzt-->
+    <performer>
+        <reference value="DArzt/gh45434" />
+    </performer>
+
     <valueCodeableConcept>
         <coding>
             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-PrognoseWiederaufnahmeTaetigkeit" />

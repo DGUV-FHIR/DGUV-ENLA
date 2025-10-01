@@ -30,7 +30,7 @@
         </coding>
     </code>
 
-    <!-- Versicherte Person -->
+    <!-- Referenz Versicherte Person -->
     <subject>
         <reference value="Patient/VersichertePerson-1"/>
     </subject>

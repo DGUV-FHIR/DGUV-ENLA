@@ -17,7 +17,11 @@
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-RehaMassnahmen" />
     </meta>
+
+    <!-- Observation status -->
     <status value="final"/>
+
+    <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
     <code>  
         <coding>
             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
@@ -25,9 +29,13 @@
             <display value="RehaMaßnahmen" />
         </coding>
     </code>
+
+    <!-- Referenz Versicherte Person -->
     <subject>
         <reference value="Farad, Rudi/T995030511"/>
     </subject>
+
+    <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
     <effectiveTiming>
         <code>  
             <coding>
@@ -37,6 +45,13 @@
             </coding>
         </code>
     </effectiveTiming>
+
+    <!-- Behandelnde(-r) Ärtztin/Arzt -->
+    <performer>
+        <reference value="DArzt/gh45434" />
+    </performer>
+
+    <!-- Angaben über notwendige Reha-Maßnahmen -->
     <valueCodeableConcept>  
         <coding>
                 <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-IstVerordnet">

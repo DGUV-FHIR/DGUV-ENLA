@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Author: 
-    Datum:  
-
-    Die vorliegende Beispiel Datei .... dient der Validierung 
-    der Datenaufnahme zu dem ......
-    
-    Zu beachten ist dabei ...
-
-    Durchzuführende Massnahmen:
-
+    Author: Friedhelm Matten
+    Datum:  01.10.2025
 
 -->
 <Observation xmlns="http://hl7.org/fhir">
@@ -17,7 +9,11 @@
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Therapieempfehlung" />
     </meta>
+
+    <!-- Observation status-->
     <status value="final"/>
+
+    <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
     <code>  
         <coding>
             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
@@ -25,8 +21,20 @@
             <display value="Therapieempfehlung" />
         </coding>
     </code>
+
+    <!-- Referenz Versicherte Person -->
     <subject>
         <reference value="Farad, Rudi/T995030511"/>
     </subject>
+
+    <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
+    <effectiveDateTime value="2025-09-30T09:30:00+02:00"/>
+
+    <!-- Behandelnde(-r) Ärtztin/Arzt-->
+    <performer>
+        <reference value="DArzt/gh45434" />
+    </performer>
+
+    <!-- Freitext für Empfehlungen für weitere therapeutische und diagnostische Maßnahmen -->
     <valueString value="Regelmässige Wundkontrollen, im Bereich des linken Oberarmes empfehlen wir eine funktionelle lastfreie Behandlung für 6 Wochen postoperationem, etc." />
 </Observation>
