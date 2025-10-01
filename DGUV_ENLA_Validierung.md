@@ -533,12 +533,18 @@ C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_Hilfsmittel.
 | Value Set(s)     |                      |           |
 | Basis Profil(-e) |                      |           |
 | Constraints:     |                      |           |
-| Validiert am:    |                      |           |
+| Validiert am:    | 01.10.2025           |           |
 
-**Validierung: xx.xx.xxxx**
+**Validierung: 01.10.2025**
 
 ```
-
+----------------------------------------------------------------------------------
+C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_Konsiliarbefunde.xml 07:34:44
+[2, 42] Observation: Warning - !!Alle Observations sollten einen Performer haben
+[2, 42] Observation: Warning - Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
+[25, 15] Observation.category[0]: Information - !!Keiner der angegebenen Codes ist im Valueset 'Observation Category Codes' (http://hl7.org/fhir/ValueSet/observation-category|4.0.1), und es wird empfohlen, einen Code aus dieserm Valueset zu verwenden) (Codes = http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-BefundKategorie#vitalparameter)
+[26, 17] Observation.category[0].coding[0]: Information - Reference to draft CodeSystem http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-BefundKategorie|0.0.2
+[34, 11] Observation.code: Information - Reference to draft CodeSystem http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt|0.0.2
 ```
 
 **Validiert am: xx.xx.xxxx**
