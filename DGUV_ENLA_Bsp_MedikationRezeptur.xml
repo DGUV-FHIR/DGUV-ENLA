@@ -17,16 +17,25 @@
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationRezeptur" />
     </meta>
+
+
+
       <code>
         <coding>
             <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type" />
             <code value="rezeptur" />
         </coding>
       </code>
+
+      <!-- Medication status -->
       <status value="active"/>
+
+
       <manufacturer>
         <display value="AbZ Pharma GmbH"/>     
       </manufacturer>
+
+
       <form>
         <coding>
           <system value="http://standardterms.edqm.eu"/>
@@ -35,6 +44,8 @@
           <display value="Concentrate for oral suspension"/>
         </coding>
       </form>
+
+
       <ingredient>
         <itemCodeableConcept>
           <coding>
@@ -43,7 +54,11 @@
           </coding>
         </itemCodeableConcept>
       </ingredient>
+
+
       <batch>
         <lotNumber value="1234"/>
       </batch>
+
+      
 </Medication>
