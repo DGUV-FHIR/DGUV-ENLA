@@ -15,7 +15,7 @@
     </telecom>
   </contact>
   <description value="Dieses CodeSystem enthält Codes und Displays zur Beschreibung der Prognose, inwiefern die versicherte Person ihre bisherige Tätigkeit dauerhaft wieder ausüben kann." />
-  <content value="complete"/>
+  <content value="complete" />
   <concept>
     <code value="WAOE" />
     <display value="Die bisherige Tätigkeit kann voraussichtlich ohne wesentliche Einschränkungen ausgeübt werden." />

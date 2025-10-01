@@ -15,7 +15,7 @@
     </telecom>
   </contact>
   <description value="Dieses Code-System enthält die Codes zur Beschreibung der Aufnahmeart." />
-  <content value="complete"/>
+  <content value="complete" />
   <concept>
     <code value="EB" />
     <display value="Erstbehandlung" />

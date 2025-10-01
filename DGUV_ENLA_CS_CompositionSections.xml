@@ -1,74 +1,73 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
-  <id value="dguv-enla-cs-composition-sections"/>
-  <url value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
-  <version value="1.0.0"/>
-  <name value="DGUVENLACompositionSections"/>
-  <title value="DGUV ENLA Composition Sections"/>
-  <status value="active"/>
-  <content value="complete"/>
-  
+  <id value="dguv-enla-cs-composition-sections" />
+  <url value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+  <version value="1.0.0" />
+  <name value="DGUVENLACompositionSections" />
+  <title value="DGUV ENLA Composition Sections" />
+  <status value="active" />
+  <content value="complete" />
   <concept>
-    <code value="unfallversicherungstraeger"/>
-    <display value="Unfallversicherungsträger"/>
+    <code value="unfallversicherungstraeger" />
+    <display value="Unfallversicherungsträger" />
   </concept>
   <concept>
-    <code value="krankenkasse"/>
-    <display value="Krankenkasse"/>
+    <code value="krankenkasse" />
+    <display value="Krankenkasse" />
   </concept>
   <concept>
-    <code value="versichertenverhaeltnis"/>
-    <display value="Versichertenverhältnis"/>
+    <code value="versichertenverhaeltnis" />
+    <display value="Versichertenverhältnis" />
   </concept>
   <concept>
-    <code value="pflegekasse"/>
-    <display value="Pflegekasse"/>
+    <code value="pflegekasse" />
+    <display value="Pflegekasse" />
   </concept>
   <concept>
-    <code value="unfallbetrieb"/>
-    <display value="Unfallbetrieb"/>
+    <code value="unfallbetrieb" />
+    <display value="Unfallbetrieb" />
   </concept>
   <concept>
-    <code value="aufenthaltsinformationen"/>
-    <display value="Aufenthaltsinformationen"/>
+    <code value="aufenthaltsinformationen" />
+    <display value="Aufenthaltsinformationen" />
   </concept>
   <concept>
-    <code value="diagnosefreitext"/>
-    <display value="DiagnoseFreitext"/>
+    <code value="diagnosefreitext" />
+    <display value="DiagnoseFreitext" />
   </concept>
   <concept>
-    <code value="diagnosestrukturiert"/>
-    <display value="DiagnoseStrukturiert"/>
+    <code value="diagnosestrukturiert" />
+    <display value="DiagnoseStrukturiert" />
   </concept>
   <concept>
-    <code value="therapie"/>
-    <display value="Therapie"/>
+    <code value="therapie" />
+    <display value="Therapie" />
   </concept>
   <concept>
-    <code value="unfallereignis"/>
-    <display value="Unfallereignis"/>
+    <code value="unfallereignis" />
+    <display value="Unfallereignis" />
   </concept>
   <concept>
-    <code value="aufnahmebefunde"/>
-    <display value="Aufnahmebefunde"/>
+    <code value="aufnahmebefunde" />
+    <display value="Aufnahmebefunde" />
   </concept>
   <concept>
-    <code value="behandlungsverlauf"/>
-    <display value="Behandlungsverlauf"/>
+    <code value="behandlungsverlauf" />
+    <display value="Behandlungsverlauf" />
   </concept>
   <concept>
-    <code value="konsiliarbefunde"/>
-    <display value="Konsiliarbefunde"/>
+    <code value="konsiliarbefunde" />
+    <display value="Konsiliarbefunde" />
   </concept>
   <concept>
-    <code value="entlassbefunde"/>
-    <display value="Entlassbefunde"/>
+    <code value="entlassbefunde" />
+    <display value="Entlassbefunde" />
   </concept>
   <concept>
-    <code value="dokumentenreferenz"/>
-    <display value="Dokumentenreferenz"/>
+    <code value="dokumentenreferenz" />
+    <display value="Dokumentenreferenz" />
   </concept>
   <concept>
-    <code value="therapieempfehlung"/>
-    <display value="Therapieempfehlung"/>
+    <code value="therapieempfehlung" />
+    <display value="Therapieempfehlung" />
   </concept>
 </CodeSystem>

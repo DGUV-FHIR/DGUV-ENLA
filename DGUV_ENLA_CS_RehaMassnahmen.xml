@@ -32,7 +32,7 @@
     <code value="NR" />
     <display value="Neurologische Reha Phase C/D" />
   </concept>
-    <concept>
+  <concept>
     <code value="REHASP" />
     <display value="Reha-Sport/Funktionstraining" />
   </concept>

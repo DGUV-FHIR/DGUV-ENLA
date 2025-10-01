@@ -18,7 +18,7 @@
   <caseSensitive value="true" />
   <valueSet value="http://fhir.dguv.de/ENLA/ValueSet/DGUV-ENLA-VS-EntlassungsVerlegungsgrund" />
   <compositional value="false" />
-  <content value="complete"/>
+  <content value="complete" />
   <concept>
     <code value="01" />
     <display value="Behandlung regulär beendet" />
@@ -65,31 +65,31 @@
   </concept>
   <concept>
     <code value="12" />
-    <display value="interne Verlegung"	/>
+    <display value="interne Verlegung" />
   </concept>
   <concept>
     <code value="13" />
-    <display value="externe Verlegung zur psychiatrischen Behandlung"	/>
+    <display value="externe Verlegung zur psychiatrischen Behandlung" />
   </concept>
   <concept>
     <code value="14" />
-    <display value="Behandlung aus sonstigen Gründen beendet, nachstationäre Behandlung vorgesehen"	/>
+    <display value="Behandlung aus sonstigen Gründen beendet, nachstationäre Behandlung vorgesehen" />
   </concept>
   <concept>
     <code value="15" />
-    <display value="Behandlung gegen ärztlichen Rat beendet, nachstationäre Behandlung vorgesehen"	/>
+    <display value="Behandlung gegen ärztlichen Rat beendet, nachstationäre Behandlung vorgesehen" />
   </concept>
   <concept>
     <code value="16" />
-    <display value="externe Verlegung mit Rückverlegung oder Wechsel zwischen den Entgeltbereichen der DRG–Fallpauschalen, nach der BPflV oder für besondere Einrichtungen nach § 17b Abs. 1 Satz 15 KHG mit Rückverlegung"	/>
+    <display value="externe Verlegung mit Rückverlegung oder Wechsel zwischen den Entgeltbereichen der DRG–Fallpauschalen, nach der BPflV oder für besondere Einrichtungen nach § 17b Abs. 1 Satz 15 KHG mit Rückverlegung" />
   </concept>
   <concept>
     <code value="17" />
-    <display value="interne Verlegung mit Wechsel zwischen den Entgeltbereichen der DRG-Fallpauschalen, nach der BPflV oder für besondere Einrichtungen nach § 17b Abs. 1 Satz 15 KHG"	/>
+    <display value="interne Verlegung mit Wechsel zwischen den Entgeltbereichen der DRG-Fallpauschalen, nach der BPflV oder für besondere Einrichtungen nach § 17b Abs. 1 Satz 15 KHG" />
   </concept>
   <concept>
     <code value="18" />
-    <display value="Rückverlegung"	/>
+    <display value="Rückverlegung" />
   </concept>
   <concept>
     <code value="19" />
@@ -103,7 +103,7 @@
     <code value="21" />
     <display value="Entlassung oder Verlegung mit nachfolgender Wiederaufnahme" />
   </concept>
-   <concept>
+  <concept>
     <code value="22" />
     <display value="Fallabschluss (interne Verlegung) bei Wechsel zwischen voll-, teilstationärer und stationsäquivalenter Behandlung" />
   </concept>
@@ -113,22 +113,22 @@
   </concept>
   <concept>
     <code value="24" />
-    <display value="Beendigung eines externen Aufenthalts mit Abwesenheit über Mitternacht (BPflV-Bereich – für Pseudo-Fachabteilung 0003)"	/>
+    <display value="Beendigung eines externen Aufenthalts mit Abwesenheit über Mitternacht (BPflV-Bereich – für Pseudo-Fachabteilung 0003)" />
   </concept>
   <concept>
     <code value="25" />
-    <display value="Entlassung zum Jahresende bei Aufnahme im Vorjahr (für Zwecke der Abrechnung – § 4 PEPPV)"	/>
+    <display value="Entlassung zum Jahresende bei Aufnahme im Vorjahr (für Zwecke der Abrechnung – § 4 PEPPV)" />
   </concept>
   <concept>
     <code value="26" />
-    <display value="Beginn eines Zeitraumes ohne direkten Patientenkontakt (stationsäquivalente Behandlung)"	/>
+    <display value="Beginn eines Zeitraumes ohne direkten Patientenkontakt (stationsäquivalente Behandlung)" />
   </concept>
   <concept>
     <code value="27" />
-    <display value="Beendigung eines Zeitraumes ohne direkten Patientenkontakt (stationsäquivalente Behandlung – für Pseudo-Fachabteilung 0004)"	/>
+    <display value="Beendigung eines Zeitraumes ohne direkten Patientenkontakt (stationsäquivalente Behandlung – für Pseudo-Fachabteilung 0004)" />
   </concept>
   <concept>
     <code value="30" />
-    <display value="Behandlung regulär beendet, Überleitung in die Übergangspflege"	/>
+    <display value="Behandlung regulär beendet, Überleitung in die Übergangspflege" />
   </concept>
 </CodeSystem>
