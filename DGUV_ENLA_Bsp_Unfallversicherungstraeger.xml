@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Author: 
-    Datum:  
-
-    Die vorliegende Beispiel Datei .... dient der Validierung 
-    der Datenaufnahme zu dem ......
-    
-    Zu beachten ist dabei ...
-
-    Durchzuführende Massnahmen:
-
+    Author: Friedhelm Matten
+    Datum:  01.10.2025
 
 -->
 <Organization xmlns="http://hl7.org/fhir">
@@ -17,6 +9,7 @@
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Unfallversicherungstraeger" />
     </meta>
+
     <!--   Institutionskennzeichen   -->
     <identifier>
         <type>
@@ -29,11 +22,17 @@
         <system value="http://fhir.de/sid/arge-ik/iknr" />
         <value value="121192344" />
     </identifier>
+
+    <!-- Bezeichnung des Unfallversicherungstragers-->
     <name value="BG Verwaltung Berlin" />
+
+    <!-- Telefon Kontakt Unfallversicherungstrager -->
     <telecom>
 		<system value="phone"/>
 		<value value="030 77003-0"/>
 	</telecom>
+
+    <!-- Strassen Adresse des Unfallversicherungstragers und Postfach -->
     <address>
         <type value="both" />
         <line value="Markgrafenstraße 18">
