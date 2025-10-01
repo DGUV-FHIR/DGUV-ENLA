@@ -19,9 +19,9 @@
 [Entlassbefunde](#Entlassbefunde) :running:
 [Heilmittel](#Heilmittel) :ambulance:
 [Hilfsmittel](#Hilfsmittel) :ambulance:
-[Konsiliarbefunde](#Konsiliarbefunde)
-[Krankenkasse](#Krankenkasse)
-[Leistungserbringer](#Leistungserbringer)
+[Konsiliarbefunde](#Konsiliarbefunde) :ambulance:
+[Krankenkasse](#Krankenkasse) :running:
+[Leistungserbringer](#Leistungserbringer) :running:
 [MedikationArzneimittel](#MedikationArzneimittel)
 [MedikationRezeptur](#MedikationRezeptur)
 [MedikationsInformation](#MedikationsInformation)
@@ -567,12 +567,14 @@ C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_Konsiliarbef
 | Value Set(s)     |                  |           |
 | Basis Profil(-e) |                  |           |
 | Constraints:     |                  |           |
-| Validiert am:    |                  |           |
+| Validiert am:    | 01.10.2025       |           |
 
-**Validierung: xx.xx.xxxx**
+**Validierung: 01.10.2025**
 
 ```
-
+----------------------------------------------------------------------------------
+C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_Krankenkasse.xml 07:47:26
+[15, 43] Organization: Warning - Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 ```
 
 **Validiert am: xx.xx.xxxx**
@@ -585,20 +587,22 @@ C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_Konsiliarbef
 
 <a id="Leistungserbringer">Leistungserbringer</a>
 
-| Art              | Bezeichnung            | Bemerkung |
-| ---------------- | ---------------------- | --------- |
-| Beispieldatei    | ---                    |           |
-| Profil           | Leistungserbringer.xml |           |
-| Code Set(s)      |                        |           |
-| Value Set(s)     |                        |           |
-| Basis Profil(-e) |                        |           |
-| Constraints:     |                        |           |
-| Validiert am:    |                        |           |
+| Art              | Bezeichnung                          | Bemerkung |
+| ---------------- | ------------------------------------ | --------- |
+| Beispieldatei    | DGUV_ENLA_Bsp_Leistungserbringer.xml |           |
+| Profil           | DGUV_ENLA_PR_Leistungserbringer.xml  |           |
+| Code Set(s)      |                                      |           |
+| Value Set(s)     |                                      |           |
+| Basis Profil(-e) |                                      |           |
+| Constraints:     |                                      |           |
+| Validiert am:    | 01.10.2025                           |           |
 
-**Validierung: xx.xx.xxxx**
+**Validierung: 01.10.2025**
 
 ```
-
+----------------------------------------------------------------------------------
+C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_Leistungserbringer.xml 08:19:10
+[1, 43] Practitioner: Warning - Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 ```
 
 **Validiert am: xx.xx.xxxx**
@@ -619,12 +623,18 @@ C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_Konsiliarbef
 | Value Set(s)     |                            |           |
 | Basis Profil(-e) |                            |           |
 | Constraints:     |                            |           |
-| Validiert am:    |                            |           |
+| Validiert am:    | 01.10.2025                 |           |
 
-**Validierung: xx.xx.xxxx**
+**Validierung: **  01.10.2025
 
 ```
-
+----------------------------------------------------------------------------------
+C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_MedikationArzneimittel.xml 08:50:07
+[15, 41] Medication: Warning - Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
+[22, 13] Medication.code.coding[0].system: Warning - A definition for CodeSystem 'http://fhir.de/CodeSystem/ifa/pzn' could not be found, so the code cannot be validated
+[39, 13] Medication.form.coding[0].system: Warning - A definition for CodeSystem 'https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM' version '1.15' could not be found, so the code cannot be validated. Valid versions: []
+[40, 17] Medication.form.coding[0]: Information - !!!!!!!!Das CodeSystem https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM ist unbekannt
+[40, 17] Medication.form.coding[0]: Warning - !!ValueSet https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_KBV_DARREICHUNGSFORM vom Validator nicht gefunden
 ```
 
 **Validiert am: xx.xx.xxxx**
