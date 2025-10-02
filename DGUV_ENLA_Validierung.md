@@ -283,7 +283,7 @@ C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_DArzt.xml 11
 | Value Set(s)     |                       |           |
 | Basis Profil(-e) |                       |           |
 | Constaints:      |                       |           |
-| Validiert am:    | 30.09.2025            |           |
+| Validiert am:    | 02.10.2025            |           |
 
 **Validierung: 30.09.2025**
 
@@ -293,10 +293,14 @@ C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_DArztOrganis
 [15, 43] Organization: Warning - Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 ```
 
-**Validiert am: xx.xx.xxxx**
+**Validiert am: 02.10.2025**
 
 ```
+Einbau 'contact' in das Beispiel:
 
+----------------------------------------------------------------------------------
+C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_DArztOrganisation.xml 11:36:44
+[15, 43] Organization: Warning - Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 ```
 
 
