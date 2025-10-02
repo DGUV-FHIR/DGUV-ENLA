@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Author: 
+    Datum:  
+
+    Die vorliegende Beispiel Datei .... dient der Validierung 
+    der Datenaufnahme zu dem ......
+    
+    Zu beachten ist dabei ...
+
+    Durchzuführende Massnahmen:
+
+
+-->
+<Organization xmlns="http://hl7.org/fhir">
+    <id value="DGUV-ENLA-Bsp-DArztOrganisation" />
+    <meta>
+        <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-DArztOrganisation" />
+    </meta>
+
+    <!-- Identifikation DArzt Organisation -->
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+                <code value="XX" />
+                <display value="Organization identifier" />
+            </coding>
+        </type>
+        <system value="http://fhir.de/sid/arge-ik/iknr" />
+        <value value="123456789" />
+    </identifier>
+    <!--identifier>
+        <type>
+            <coding>
+                <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_ENLA_identifier_type|1.7.0" />
+                <code value="KSN" />
+            </coding>
+        </type>
+        <system value="http://fhir.de/sid/dkgev/standortnummer" />
+        <value value="243234999" />
+    </identifier-->
+
+    <!-- Name der DArzt Organisation-->
+    <name value="Unfallkrankenhaus Berlin"/>
+
+    <!-- telefonischer Kontakt -->
+    <telecom>
+        <system value="phone"/>
+        <value value="+1-1234565789"/>
+    </telecom>
+
+    <!-- Vollständige Adresse -->
+    <address>
+        <type value="both"/>
+        <line value="Musterstraße 1">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                <valueString value="Musterstraße"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                <valueString value="1"/>
+            </extension>
+        </line>
+        <city value="Berlin"/>
+        <postalCode value="11111"/>
+        <country value="DE"/>
+    </address>
+
+    <contact>
+        <extension url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-NichtAerztlicherAnsprechpartner">
+            <extension url="NichtAerztlicherKontakt">
+            <valueBoolean value="false"/>
+        </extension>
+        <extension url="Funktionseinheit">
+            <valueString value="Physiotherapie"/>
+        </extension>
+        </extension>
+        <!-- telefonischer Kontakt -->
+        <telecom>
+            <system value="phone"/>
+            <value value="+1-1234565789"/>
+        </telecom>
+   </contact>
+   
+</Organization>
