@@ -7,6 +7,7 @@
   <title value="ENLA-Bundle" />
   <status value="draft" />
   <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
+  <description value="Das Profil Bundle dient als bündelndes Element für den Krankenhausentlassbericht (ENLA). Es enthält als Klammer alle durch die Composition zusammengefassten Profile und sonstigen Elemente und könnte bei Bedarf auch noch mit einer digitalen Signatur versehen werden." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
