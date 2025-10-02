@@ -8915,8 +8915,8 @@
       <sliceName value="VersichertenVerhaeltnis" />
       <short value="Entry in the bundle - will have a resource or information" />
       <definition value="An entry in a bundle resource - will either contain a resource or information about a resource (transactions and history only)." />
-      <min value="0" />
-      <max value="*" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="Bundle.entry" />
         <min value="0" />
@@ -10185,7 +10185,7 @@
       <short value="Entry in the bundle - will have a resource or information" />
       <definition value="An entry in a bundle resource - will either contain a resource or information about a resource (transactions and history only)." />
       <min value="0" />
-      <max value="*" />
+      <max value="1" />
       <base>
         <path value="Bundle.entry" />
         <min value="0" />
@@ -11464,8 +11464,8 @@
       <sliceName value="Unfallbetrieb" />
       <short value="Entry in the bundle - will have a resource or information" />
       <definition value="An entry in a bundle resource - will either contain a resource or information about a resource (transactions and history only)." />
-      <min value="0" />
-      <max value="*" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="Bundle.entry" />
         <min value="0" />
@@ -12744,8 +12744,8 @@
       <sliceName value="Aufenthaltsinformationen" />
       <short value="Entry in the bundle - will have a resource or information" />
       <definition value="An entry in a bundle resource - will either contain a resource or information about a resource (transactions and history only)." />
-      <min value="0" />
-      <max value="*" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="Bundle.entry" />
         <min value="0" />
@@ -14013,7 +14013,7 @@
       <sliceName value="DiagnoseFreitext" />
       <short value="Entry in the bundle - will have a resource or information" />
       <definition value="An entry in a bundle resource - will either contain a resource or information about a resource (transactions and history only)." />
-      <min value="0" />
+      <min value="1" />
       <max value="*" />
       <base>
         <path value="Bundle.entry" />
@@ -15319,7 +15319,7 @@
       <sliceName value="DiagnoseStrukturiert" />
       <short value="Entry in the bundle - will have a resource or information" />
       <definition value="An entry in a bundle resource - will either contain a resource or information about a resource (transactions and history only)." />
-      <min value="0" />
+      <min value="1" />
       <max value="*" />
       <base>
         <path value="Bundle.entry" />
@@ -17922,8 +17922,8 @@
       <sliceName value="Unfallereignis" />
       <short value="Entry in the bundle - will have a resource or information" />
       <definition value="An entry in a bundle resource - will either contain a resource or information about a resource (transactions and history only)." />
-      <min value="0" />
-      <max value="*" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="Bundle.entry" />
         <min value="0" />
@@ -20516,8 +20516,8 @@
       <sliceName value="Behandlungsverlauf" />
       <short value="Entry in the bundle - will have a resource or information" />
       <definition value="An entry in a bundle resource - will either contain a resource or information about a resource (transactions and history only)." />
-      <min value="0" />
-      <max value="*" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="Bundle.entry" />
         <min value="0" />
@@ -25685,7 +25685,7 @@
       <short value="Entry in the bundle - will have a resource or information" />
       <definition value="An entry in a bundle resource - will either contain a resource or information about a resource (transactions and history only)." />
       <min value="0" />
-      <max value="*" />
+      <max value="1" />
       <base>
         <path value="Bundle.entry" />
         <min value="0" />
@@ -32075,8 +32075,8 @@
       <sliceName value="WeiterbehandelnderArzt" />
       <short value="Entry in the bundle - will have a resource or information" />
       <definition value="An entry in a bundle resource - will either contain a resource or information about a resource (transactions and history only)." />
-      <min value="0" />
-      <max value="*" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="Bundle.entry" />
         <min value="0" />
@@ -38535,8 +38535,8 @@
       <sliceName value="Arbeitsunfaehigkeit" />
       <short value="Entry in the bundle - will have a resource or information" />
       <definition value="An entry in a bundle resource - will either contain a resource or information about a resource (transactions and history only)." />
-      <min value="0" />
-      <max value="*" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="Bundle.entry" />
         <min value="0" />
@@ -39832,8 +39832,8 @@
       <sliceName value="PrognoseWiederaufnahmeTaetigkeit" />
       <short value="Entry in the bundle - will have a resource or information" />
       <definition value="An entry in a bundle resource - will either contain a resource or information about a resource (transactions and history only)." />
-      <min value="0" />
-      <max value="*" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="Bundle.entry" />
         <min value="0" />
@@ -42426,8 +42426,8 @@
       <sliceName value="Datenschutz" />
       <short value="Entry in the bundle - will have a resource or information" />
       <definition value="An entry in a bundle resource - will either contain a resource or information about a resource (transactions and history only)." />
-      <min value="0" />
-      <max value="*" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="Bundle.entry" />
         <min value="0" />
@@ -43723,8 +43723,8 @@
       <sliceName value="DArzt" />
       <short value="Entry in the bundle - will have a resource or information" />
       <definition value="An entry in a bundle resource - will either contain a resource or information about a resource (transactions and history only)." />
-      <min value="0" />
-      <max value="*" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="Bundle.entry" />
         <min value="0" />
@@ -44995,8 +44995,8 @@
       <sliceName value="DArztOrganisation" />
       <short value="Entry in the bundle - will have a resource or information" />
       <definition value="An entry in a bundle resource - will either contain a resource or information about a resource (transactions and history only)." />
-      <min value="0" />
-      <max value="*" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="Bundle.entry" />
         <min value="0" />
@@ -47727,6 +47727,8 @@
     <element id="Bundle.entry:VersichertenVerhaeltnis">
       <path value="Bundle.entry" />
       <sliceName value="VersichertenVerhaeltnis" />
+      <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Bundle.entry:VersichertenVerhaeltnis.resource">
@@ -47741,6 +47743,7 @@
     <element id="Bundle.entry:Pflegekasse">
       <path value="Bundle.entry" />
       <sliceName value="Pflegekasse" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Bundle.entry:Pflegekasse.resource">
@@ -47755,6 +47758,8 @@
     <element id="Bundle.entry:Unfallbetrieb">
       <path value="Bundle.entry" />
       <sliceName value="Unfallbetrieb" />
+      <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Bundle.entry:Unfallbetrieb.resource">
@@ -47769,6 +47774,8 @@
     <element id="Bundle.entry:Aufenthaltsinformationen">
       <path value="Bundle.entry" />
       <sliceName value="Aufenthaltsinformationen" />
+      <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Bundle.entry:Aufenthaltsinformationen.resource">
@@ -47783,6 +47790,7 @@
     <element id="Bundle.entry:DiagnoseFreitext">
       <path value="Bundle.entry" />
       <sliceName value="DiagnoseFreitext" />
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Bundle.entry:DiagnoseFreitext.resource">
@@ -47797,6 +47805,7 @@
     <element id="Bundle.entry:DiagnoseStrukturiert">
       <path value="Bundle.entry" />
       <sliceName value="DiagnoseStrukturiert" />
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Bundle.entry:DiagnoseStrukturiert.resource">
@@ -47825,6 +47834,8 @@
     <element id="Bundle.entry:Unfallereignis">
       <path value="Bundle.entry" />
       <sliceName value="Unfallereignis" />
+      <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Bundle.entry:Unfallereignis.resource">
@@ -47853,6 +47864,8 @@
     <element id="Bundle.entry:Behandlungsverlauf">
       <path value="Bundle.entry" />
       <sliceName value="Behandlungsverlauf" />
+      <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Bundle.entry:Behandlungsverlauf.resource">
@@ -47910,6 +47923,7 @@
     <element id="Bundle.entry:Therapieempfehlung">
       <path value="Bundle.entry" />
       <sliceName value="Therapieempfehlung" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Bundle.entry:Therapieempfehlung.resource">
@@ -47980,6 +47994,8 @@
     <element id="Bundle.entry:WeiterbehandelnderArzt">
       <path value="Bundle.entry" />
       <sliceName value="WeiterbehandelnderArzt" />
+      <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Bundle.entry:WeiterbehandelnderArzt.resource">
@@ -48050,6 +48066,8 @@
     <element id="Bundle.entry:Arbeitsunfaehigkeit">
       <path value="Bundle.entry" />
       <sliceName value="Arbeitsunfaehigkeit" />
+      <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Bundle.entry:Arbeitsunfaehigkeit.resource">
@@ -48064,6 +48082,8 @@
     <element id="Bundle.entry:PrognoseWiederaufnahmeTaetigkeit">
       <path value="Bundle.entry" />
       <sliceName value="PrognoseWiederaufnahmeTaetigkeit" />
+      <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Bundle.entry:PrognoseWiederaufnahmeTaetigkeit.resource">
@@ -48092,6 +48112,8 @@
     <element id="Bundle.entry:Datenschutz">
       <path value="Bundle.entry" />
       <sliceName value="Datenschutz" />
+      <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Bundle.entry:Datenschutz.resource">
@@ -48106,6 +48128,8 @@
     <element id="Bundle.entry:DArzt">
       <path value="Bundle.entry" />
       <sliceName value="DArzt" />
+      <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Bundle.entry:DArzt.resource">
@@ -48120,6 +48144,8 @@
     <element id="Bundle.entry:DArztOrganisation">
       <path value="Bundle.entry" />
       <sliceName value="DArztOrganisation" />
+      <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Bundle.entry:DArztOrganisation.resource">
