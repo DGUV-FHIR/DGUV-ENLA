@@ -22,6 +22,7 @@
             <system value="http://fhir.de/CodeSystem/ifa/pzn" />
             <code value="98765432" />
         </coding>
+        <text value="98765432" />
       </code>
       <status value="active"/>
       <ingredient>
