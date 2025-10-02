@@ -66,14 +66,15 @@
         <country value="DE"/>
     </address>
 
+    <!-- Nicht Ärztlicher Kontakt -->
     <contact>
         <extension url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-NichtAerztlicherAnsprechpartner">
             <extension url="NichtAerztlicherKontakt">
-            <valueBoolean value="true"/>
-        </extension>
-        <extension url="Funktionseinheit">
-            <valueString value="Physiotherapie"/>
-        </extension>
+                <valueBoolean value="true"/>
+            </extension>
+            <extension url="Funktionseinheit">
+                <valueString value="Physiotherapie"/>
+            </extension>
         </extension>
         <!-- telefonischer Kontakt -->
         <telecom>
