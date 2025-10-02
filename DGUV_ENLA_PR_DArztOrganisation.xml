@@ -13929,6 +13929,13 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <constraint>
+        <key value="nonaertzl-1" />
+        <severity value="error" />
+        <human value="Falls der Wert im NichtAerztlichenKontakt Falsch ist muss die Funktionseinheit leer sein" />
+        <expression value="(extension('NichtAertzlicherKontakt').valueBoolean != false or extension('Funktionseinheit').empty()  )" />
+        <source value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-DArztOrganisation" />
+      </constraint>
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -15613,6 +15620,12 @@
     <element id="Organization.contact.extension:NichtAerztlicherKontakt.extension">
       <path value="Organization.contact.extension.extension" />
       <min value="1" />
+      <constraint>
+        <key value="nonaertzl-1" />
+        <severity value="error" />
+        <human value="Falls der Wert im NichtAerztlichenKontakt Falsch ist muss die Funktionseinheit leer sein" />
+        <expression value="(extension('NichtAertzlicherKontakt').valueBoolean != false or extension('Funktionseinheit').empty()  )" />
+      </constraint>
     </element>
     <element id="Organization.contact.extension:NichtAerztlicherKontakt.extension:NichtAerztlicherKontakt">
       <path value="Organization.contact.extension.extension" />
