@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="DGUV-ENLA-PR-TestBundle" />
+  <id value="DGUV-ENLA-PR-Bundle" />
   <url value="http://fhir.dguv.de/ENLA/Bundle/DGUV-ENLA-PR-Bundle" />
   <version value="0.0.2" />
   <name value="DGUV_ENLA_PR_Bundle" />
@@ -351,7 +351,7 @@
         <code value="canonical" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/StructureDefinition" />
       </type>
-      <fixedCanonical value="http://fhir.dguv.de/ENLA/Bundle/DGUV-ENLA-PR-TestBundle-2" />
+      <fixedCanonical value="http://fhir.dguv.de/ENLA/Bundle/DGUV-ENLA-PR-TestBundle" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -47605,7 +47605,7 @@
       <path value="Bundle.meta.profile" />
       <min value="1" />
       <max value="1" />
-      <fixedCanonical value="http://fhir.dguv.de/ENLA/Bundle/DGUV-ENLA-PR-TestBundle-2" />
+      <fixedCanonical value="http://fhir.dguv.de/ENLA/Bundle/DGUV-ENLA-PR-TestBundle" />
       <mustSupport value="true" />
     </element>
     <element id="Bundle.identifier">
