@@ -13734,6 +13734,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -13781,8 +13782,8 @@
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="0" />
-      <max value="*" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -13825,8 +13826,8 @@
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="0" />
-      <max value="*" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -13901,7 +13902,7 @@
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="0" />
+      <min value="1" />
       <max value="*" />
       <base>
         <path value="Element.extension" />
@@ -13945,8 +13946,8 @@
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="0" />
-      <max value="*" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -13972,6 +13973,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -14084,7 +14086,7 @@
       <path value="Organization.contact.extension.extension.value[x]" />
       <short value="Kennzeichnung Ansprechpartner als nicht-ärztlichen (true) oder ärztlichen (false) Kontakt" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Extension.value[x]" />
@@ -14103,6 +14105,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -14121,7 +14124,7 @@
       <alias value="extensions" />
       <alias value="user content" />
       <min value="0" />
-      <max value="*" />
+      <max value="1" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -14147,6 +14150,7 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -14259,7 +14263,7 @@
       <path value="Organization.contact.extension.extension.value[x]" />
       <short value="Konkrete Funktionseinheit des nicht-ärztlichen Ansprechpartners als Freitext" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Extension.value[x]" />
@@ -14278,6 +14282,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -14618,6 +14623,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -14645,12 +14651,12 @@
     </element>
     <element id="Organization.contact.telecom">
       <path value="Organization.contact.telecom" />
-      <short value="Angaben zu bestehenden Kontaktmöglichkeiten (Telefon, Fax, E-Mail usw.)" />
+      <short value="Angaben zu bestehenden Kontaktmöglichkeiten (Telefon)" />
       <definition value="Details for all kinds of technology mediated contact points for a person or organization, including telephone, email, etc." />
-      <comment value="Kontaktmöglichkeiten hier des Ansprechpartners für Rückfragen" />
+      <comment value="Kontaktmöglichkeiten des Ansprechpartners für Rückfragen" />
       <requirements value="People have (primary) ways to contact them in some way such as phone, email." />
-      <min value="0" />
-      <max value="*" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="Organization.contact.telecom" />
         <min value="0" />
@@ -14677,6 +14683,7 @@
         <xpath value="not(exists(f:value)) or exists(f:system)" />
         <source value="http://hl7.org/fhir/StructureDefinition/ContactPoint" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -14791,6 +14798,7 @@
       <type>
         <code value="code" />
       </type>
+      <fixedCode value="phone" />
       <condition value="ele-1" />
       <condition value="cpt-2" />
       <constraint>
@@ -14801,6 +14809,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -14829,7 +14838,7 @@
     </element>
     <element id="Organization.contact.telecom.value">
       <path value="Organization.contact.telecom.value" />
-      <short value="The actual contact point details" />
+      <short value="Konkrete Telefonnummer des Ansprechpartners" />
       <definition value="The actual contact point details, in a form that is meaningful to the designated communication system (i.e. phone number or email address)." />
       <comment value="Additional text data such as phone extension numbers, or notes about use of the contact are sometimes included in the value." />
       <requirements value="Need to support legacy numbers that are not in a tightly controlled format." />
@@ -14852,6 +14861,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -15584,6 +15594,70 @@
       <sliceName value="Postfach" />
       <comment value="Postfach in diesem Kontext nicht gewünscht" />
       <max value="0" />
+    </element>
+    <element id="Organization.contact">
+      <path value="Organization.contact" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.contact.extension">
+      <path value="Organization.contact.extension" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Organization.contact.extension:NichtAerztlicherKontakt">
+      <path value="Organization.contact.extension" />
+      <sliceName value="NichtAerztlicherKontakt" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Organization.contact.extension:NichtAerztlicherKontakt.extension">
+      <path value="Organization.contact.extension.extension" />
+      <min value="1" />
+    </element>
+    <element id="Organization.contact.extension:NichtAerztlicherKontakt.extension:NichtAerztlicherKontakt">
+      <path value="Organization.contact.extension.extension" />
+      <sliceName value="NichtAerztlicherKontakt" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.contact.extension:NichtAerztlicherKontakt.extension:NichtAerztlicherKontakt.value[x]">
+      <path value="Organization.contact.extension.extension.value[x]" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.contact.extension:NichtAerztlicherKontakt.extension:Funktionseinheit">
+      <path value="Organization.contact.extension.extension" />
+      <sliceName value="Funktionseinheit" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.contact.extension:NichtAerztlicherKontakt.extension:Funktionseinheit.value[x]">
+      <path value="Organization.contact.extension.extension.value[x]" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.contact.name">
+      <path value="Organization.contact.name" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.contact.telecom">
+      <path value="Organization.contact.telecom" />
+      <short value="Angaben zu bestehenden Kontaktmöglichkeiten (Telefon)" />
+      <comment value="Kontaktmöglichkeiten des Ansprechpartners für Rückfragen" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.contact.telecom.system">
+      <path value="Organization.contact.telecom.system" />
+      <fixedCode value="phone" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.contact.telecom.value">
+      <path value="Organization.contact.telecom.value" />
+      <short value="Konkrete Telefonnummer des Ansprechpartners" />
+      <mustSupport value="true" />
     </element>
   </differential>
 </StructureDefinition>
