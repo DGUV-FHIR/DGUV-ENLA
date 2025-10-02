@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<CodeSystem xmlns:ns0="http://hl7.org/fhir">
+<CodeSystem xmlns="http://hl7.org/fhir">
   <id value="DGUV-ENLA-CS-CompositionSections" />
   <url value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
-  <version value="2.0.0" />
+  <version value="0.0.2" />
   <name value="DGUV_ENLA_CS_CompositionSections" />
   <title value="Composition Sections (4-letter codes)" />
   <status value="active" />
