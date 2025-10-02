@@ -299,7 +299,17 @@ C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_DArztOrganis
 Einbau 'contact' in das Beispiel:
 
 ----------------------------------------------------------------------------------
-C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_DArztOrganisation.xml 11:36:44
+C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_DArztOrganisation.xml 05:58:36
+[15, 43] Organization: Warning - Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
+```
+
+**Validiert am: 02.10.2025**
+
+```
+Einbau constraint nonaertzl-1 in 'contact' 
+
+----------------------------------------------------------------------------------
+C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_DArztOrganisation.xml 05:58:36
 [15, 43] Organization: Warning - Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 ```
 
