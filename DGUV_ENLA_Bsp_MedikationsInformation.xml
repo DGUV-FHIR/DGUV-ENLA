@@ -28,17 +28,19 @@
     <!-- Referenz zur Versicherten Person -->
     <subject>
         <reference value="Farad, Rudi/T995030511"/>     
-    </subject>  
+    </subject>
+     
+    <!-- Dosage zum Medikation Arzneimittel -->
     <dosage>
         <timing>
             <code>
                 <coding>
-                    <system value="http://hl7.org/fhir/event-timing"/>
-                    <version value="1.0"/>
-                    <code value="MORN"/>
+                    <system value="http://hl7.org/fhir/event-timing" />
+                    <version value="1.0" />
+                    <code value="MORN" />
                     <display value="Morning">
                         <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-AnzeigenameDeutsch">
-                        <valueString value="Morgens"/>
+                        <valueString value="Morgens" />
                         </extension>
                     </display>
                 </coding>
@@ -46,11 +48,20 @@
         </timing>
         <route>
             <coding>
-                    <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_Route_of_Administration_German"/>
-                    <version value="1.0.0"/>
-                    <code value="oral"/>
-                    <display value="oral"/>
+                    <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_Route_of_Administration_German" />
+                    <version value="1.0.0" />
+                    <code value="oral" />
+                    <display value="oral" />
             </coding>
         </route>
+
+        <doseAndRate>
+            <doseQuantity>
+                <value value="500" />
+                <unit value="mg" />
+                <system value="http://unitsofmeasure.org" />
+                <code value="mg" />
+            </doseQuantity>
+        </doseAndRate>
     </dosage>
 </MedicationStatement>
