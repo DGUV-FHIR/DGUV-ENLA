@@ -41,7 +41,7 @@
         <value value="243234999" />
     </identifier-->
 
-    <!-- Name der DAzrt Organisation-->
+    <!-- Name der DArzt Organisation-->
     <name value="Unfallkrankenhaus Berlin"/>
 
     <!-- telefonischer Kontakt -->
@@ -65,4 +65,16 @@
         <postalCode value="11111"/>
         <country value="DE"/>
     </address>
+
+    <contact>
+        <extension url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-NichtAerztlicherAnsprechpartner">
+            <extension url="NichtAerztlicherKontakt">
+            <valueBoolean value="true"/>
+        </extension>
+        <extension url="Funktionseinheit">
+            <valueString value="Physiotherapie"/>
+        </extension>
+    </extension>
+   </contact>
+   
 </Organization>
