@@ -81,12 +81,12 @@
             <coding>
                 <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
                 <code value="VSVH"/>
-                <display value="VersichertenVerhaeltnis"/>
+                <display value="Versichertenverhältnis"/>
             </coding>
         </code>
         <entry>
             <!-- 
-                    Auswahl des VersichertenVerhaeltnis Objektes:
+                    Auswahl des Versichertenverhältnis Objektes:
                     RelativeURL:
                     urn:uuid:475c6d854-876e-4b9d-8ea9-327a46c9c50f
             -->                    
@@ -149,7 +149,7 @@
             <coding>
                 <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
                 <code value="DGFT"/>
-                <display value="Diagnose Freitext"/>
+                <display value="DiagnoseFreitext"/>
             </coding>
         </code>
         <entry>
@@ -166,7 +166,7 @@
             <coding>
                 <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
                 <code value="DGST"/>
-                <display value="Diagnose Strukturiert"/>
+                <display value="DiagnoseStrukturiert"/>
             </coding>
         </code>
         <entry>
@@ -285,12 +285,12 @@
             <coding>
                 <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
                 <code value="DORE"/>
-                <display value="DokumentenReferenz"/>
+                <display value="Dokumentenreferenz"/>
             </coding>
         </code>    
         <entry>
             <!-- 
-                    Auswahl des DocumentReference Objektes:
+                    Auswahl des Dokumentenreferenz Objektes:
                     RelativeURL:
                     urn:uuid:c7b24835-f7b8-4480-a0fe-c0653d6c4050
             -->                    
@@ -525,7 +525,7 @@
             <coding>
                 <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
                 <code value="STWG"/>
-                <display value="StufenweiseWiedereingliederung"/>
+                <display value="stufenweiseWiedereingliederung"/>
             </coding>
         </code>
         <entry>
