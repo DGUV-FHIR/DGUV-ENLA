@@ -351,7 +351,7 @@
         <code value="canonical" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/StructureDefinition" />
       </type>
-      <fixedCanonical value="http://fhir.dguv.de/ENLA/Bundle/DGUV-ENLA-PR-TestBundle" />
+      <fixedCanonical value="http://fhir.dguv.de/ENLA/Bundle/DGUV-ENLA-PR-Bundle" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -4084,6 +4084,13 @@
         <human value="Falls die Geschlechtsangabe 'other' gewählt wird, muss die amtliche Differenzierung per Extension angegeben werden." />
         <expression value="gender.exists() and gender='other' implies gender.extension('http://fhir.de/StructureDefinition/gender-amtlich-de').exists()" />
         <source value="http://fhir.dguv.de/Basis/Patient/DGUV-Basis-PR-VersichertePerson" />
+      </constraint>
+      <constraint>
+        <key value="dguv-pat-identifier-exclude-gkv-pkv" />
+        <severity value="error" />
+        <human value="Die gleichzeitige Verwendung von VersichertenId_GKV und Versichertennummer_PKV ist verboten" />
+        <expression value="not(identifier.where(type.coding.where(system='http://fhir.de/CodeSystem/identifier-type-de-basis' and code='GKV').exists()).value.exists() and identifier.where(type.coding.where(system='http://fhir.de/CodeSystem/identifier-type-de-basis' and code='PKV').exists()).value.exists())" />
+        <source value="http://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson" />
       </constraint>
       <mustSupport value="true" />
       <isSummary value="true" />
@@ -13014,6 +13021,20 @@
         <expression value="contained.meta.security.empty()" />
         <xpath value="not(exists(f:contained/*/f:meta/f:security))" />
         <source value="http://hl7.org/fhir/StructureDefinition/DomainResource" />
+      </constraint>
+      <constraint>
+        <key value="dguv-hospital-1" />
+        <severity value="error" />
+        <human value="Beschreibung" />
+        <expression value="(hospitalization.admitSource.coding.where(code = 'FB' or display = 'Folgebehandlung').exists())" />
+        <source value="http://fhir.dguv.de/ENLA/Encounter/DGUV-ENLA-PR-Aufenthaltsinformationen" />
+      </constraint>
+      <constraint>
+        <key value="dguv-hospital-2" />
+        <severity value="error" />
+        <human value="Beschreibung 2" />
+        <expression value="(hospitalization.admitSource.coding.where(code = 'FB' or display = 'Folgebehandlung').empty())" />
+        <source value="http://fhir.dguv.de/ENLA/Encounter/DGUV-ENLA-PR-Aufenthaltsinformationen" />
       </constraint>
       <mustSupport value="true" />
       <isSummary value="true" />
@@ -47605,7 +47626,7 @@
       <path value="Bundle.meta.profile" />
       <min value="1" />
       <max value="1" />
-      <fixedCanonical value="http://fhir.dguv.de/ENLA/Bundle/DGUV-ENLA-PR-TestBundle" />
+      <fixedCanonical value="http://fhir.dguv.de/ENLA/Bundle/DGUV-ENLA-PR-Bundle" />
       <mustSupport value="true" />
     </element>
     <element id="Bundle.identifier">
