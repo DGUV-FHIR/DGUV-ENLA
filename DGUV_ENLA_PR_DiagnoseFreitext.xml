@@ -779,6 +779,13 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <constraint>
+        <key value="dguv-Fractur-1" />
+        <severity value="error" />
+        <human value="Wenn Fraktur = true, muss AO-Klassifikation gesetzt sein. Wenn Fraktur = false, muss AO-Klassifikation leer sein." />
+        <expression value="(extension('Fraktur').valueBoolean = true implies extension('AO-Klassifikation').value.exists()) or (extension('Fraktur').valueBoolean = false implies extension('AO-Klassifikation').value.empty())" />
+        <source value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseFreitext" />
+      </constraint>
       <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
@@ -3370,6 +3377,12 @@
     </element>
     <element id="Condition.extension:Frakturklassifikation.extension">
       <path value="Condition.extension.extension" />
+      <constraint>
+        <key value="dguv-Fractur-1" />
+        <severity value="error" />
+        <human value="Wenn Fraktur = true, muss AO-Klassifikation gesetzt sein. Wenn Fraktur = false, muss AO-Klassifikation leer sein." />
+        <expression value="(extension('Fraktur').valueBoolean = true implies extension('AO-Klassifikation').value.exists()) or (extension('Fraktur').valueBoolean = false implies extension('AO-Klassifikation').value.empty())" />
+      </constraint>
       <mustSupport value="true" />
     </element>
     <element id="Condition.extension:Frakturklassifikation.extension:Fraktur">
