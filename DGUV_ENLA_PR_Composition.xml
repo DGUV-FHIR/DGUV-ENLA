@@ -600,7 +600,7 @@
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="DomainResource.extension" />
@@ -645,7 +645,7 @@
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="DomainResource.extension" />
@@ -787,7 +787,7 @@
       <path value="Composition.extension.value[x]" />
       <short value="Sonstige Bemerkungen zum stationären Entlassbericht" />
       <definition value="Sonstige Bemerkungen, z. B. Beratungsbedarf durch Reha-Management des UV-Trägers, Schul- und Schulsportfähigkeit, Kontextfaktoren, besondere Umstände" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Extension.value[x]" />
@@ -3383,7 +3383,7 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="code" />
+          <path value="code.coding.code" />
         </discriminator>
         <ordered value="true" />
         <rules value="closed" />
@@ -40913,7 +40913,6 @@
     </element>
     <element id="Composition.extension">
       <path value="Composition.extension" />
-      <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
@@ -40922,7 +40921,6 @@
       <sliceName value="SonstigeBemerkungen" />
       <short value="Sonstige Bemerkungen zum stationären Entlassbericht" />
       <definition value="Sonstige Bemerkungen, z. B. Beratungsbedarf durch Reha-Management des UV-Trägers, Schul- und Schulsportfähigkeit, Kontextfaktoren, besondere Umstände" />
-      <min value="1" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -40933,6 +40931,7 @@
     </element>
     <element id="Composition.extension:SonstigeBemerkungen.value[x]">
       <path value="Composition.extension.value[x]" />
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.status">
@@ -41021,7 +41020,7 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="code" />
+          <path value="code.coding.code" />
         </discriminator>
         <ordered value="true" />
         <rules value="closed" />
