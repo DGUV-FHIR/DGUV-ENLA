@@ -27,6 +27,7 @@
 [Krankenkasse](#Krankenkasse) :running:
 [Leistungserbringer](#Leistungserbringer) :running:
 [MedikationArzneimittel](#MedikationArzneimittel) :running:
+[MedicationFreitext](#MedikationFreitext)
 [MedikationRezeptur](#MedikationRezeptur) :running:
 [MedikationsInformation](#MedikationsInformation) :fire:
 [MedikationWirkstoff](#MedikationWirkstoff)
@@ -656,6 +657,39 @@ C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_MedikationAr
 [39, 13] Medication.form.coding[0].system: Warning - A definition for CodeSystem 'https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM' version '1.15' could not be found, so the code cannot be validated. Valid versions: []
 [40, 17] Medication.form.coding[0]: Information - !!!!!!!!Das CodeSystem https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM ist unbekannt
 [40, 17] Medication.form.coding[0]: Warning - !!ValueSet https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_KBV_DARREICHUNGSFORM vom Validator nicht gefunden
+```
+
+**Validiert am: xx.xx.xxxx**
+
+```
+
+```
+
+
+
+<a id="MedikationRezeptur">MedikationRezeptur</a>
+
+| Art              | Bezeichnung            | Bemerkung |
+| ---------------- | ---------------------- | --------- |
+| Beispieldatei    | MedikationFreitext.xml |           |
+| Profil           | MedikationFreitext.xml |           |
+| Code Set(s)      |                        |           |
+| Value Set(s)     |                        |           |
+| Basis Profil(-e) |                        |           |
+| Constraints:     |                        |           |
+| Validiert am:    | 06.10.2025             |           |
+
+**Validierung: 06.10.2025** 
+
+```
+----------------------------------------------------------------------------------
+C:\Users\Ext.Matten.Friedhelm\sources\repos\DGUV-ENLA\DGUV_ENLA_Bsp_MedikationFreitext.xml 01:41:34
+[15, 41] Medication.meta.profile[0]: Warning - !!Die Profilreferenz 'http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-MedikationFreitext' wurde nicht geprüft, da sie unbekannt ist, und das Abrufen führte zu dem Fehler org.hl7.fhir.r4.utils.client.EFhirClientException: Error from http://fhir.dguv.de/ENLA: HTTP Status 404 – nicht gefundenbody {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}HTTP Status 404 – nicht gefunden Type Status Report Message Datei [/dguv/dale-uv/weitere_datenaustauschverfahren/digitalisierung-im-gesundheitswesen/index.jsp] nicht gefunden Beschreibung The origin server did not find a current representation for the target resource or is not willing to disclose that one exists. Application Server
+[15, 41] Medication: Warning - Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
+[18, 97] Medication.meta.profile[0]: Information - Canonical URL 'http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-MedikationFreitext' kann nicht aufgelöst werden
+[21, 11] Medication.code.coding[0]: Warning - !!!!!!!!Das CodeSystem https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type ist unbekannt
+[21, 11] Medication.code: Error - Durch das Profil http://hl7.org/fhir/StructureDefinition/Medication|4.0.1 angegeben, ist das Element 'code' außerhalb der definierten Reihenfolge.
+
 ```
 
 **Validiert am: xx.xx.xxxx**
