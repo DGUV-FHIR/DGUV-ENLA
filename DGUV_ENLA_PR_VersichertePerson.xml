@@ -80,6 +80,13 @@
         <expression value="gender.exists() and gender='other' implies gender.extension('http://fhir.de/StructureDefinition/gender-amtlich-de').exists()" />
         <source value="http://fhir.dguv.de/Basis/Patient/DGUV-Basis-PR-VersichertePerson" />
       </constraint>
+      <constraint>
+        <key value="dguv-pat-identifier-exclude-gkv-pkv" />
+        <severity value="error" />
+        <human value="Die gleichzeitige Verwendung von VersichertenId_GKV und Versichertennummer_PKV ist verboten" />
+        <expression value="not(identifier.where(type.coding.where(system='http://fhir.de/CodeSystem/identifier-type-de-basis' and code='GKV').exists()).value.exists() and identifier.where(type.coding.where(system='http://fhir.de/CodeSystem/identifier-type-de-basis' and code='PKV').exists()).value.exists())" />
+        <source value="http://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson" />
+      </constraint>
       <mapping>
         <identity value="rim" />
         <map value="Entity. Role, or Act" />
@@ -16695,6 +16702,15 @@
     </element>
   </snapshot>
   <differential>
+    <element id="Patient">
+      <path value="Patient" />
+      <constraint>
+        <key value="dguv-pat-identifier-exclude-gkv-pkv" />
+        <severity value="error" />
+        <human value="Die gleichzeitige Verwendung von VersichertenId_GKV und Versichertennummer_PKV ist verboten" />
+        <expression value="not(identifier.where(type.coding.where(system='http://fhir.de/CodeSystem/identifier-type-de-basis' and code='GKV').exists()).value.exists() and identifier.where(type.coding.where(system='http://fhir.de/CodeSystem/identifier-type-de-basis' and code='PKV').exists()).value.exists())" />
+      </constraint>
+    </element>
     <element id="Patient.id">
       <path value="Patient.id" />
       <mustSupport value="true" />
