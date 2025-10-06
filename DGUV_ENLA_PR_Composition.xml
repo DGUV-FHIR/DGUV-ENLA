@@ -4231,14 +4231,14 @@
     </element>
     <element id="Composition.section:Unfallversicherungstraeger.title">
       <path value="Composition.section.title" />
-      <short value="Kriterium für section-Diskriminator" />
+      <short value="Label for section (e.g. for ToC)" />
       <definition value="The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents." />
       <comment value="The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents, it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element." />
       <requirements value="Section headings are often standardized for different types of documents.  They give guidance to humans on how the document is organized." />
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -4248,7 +4248,6 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="Unfallversicherungstraeger" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -4258,7 +4257,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -5617,7 +5615,7 @@
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -5627,7 +5625,6 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="Krankenkasse" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -5637,7 +5634,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -6761,7 +6757,7 @@
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -6771,7 +6767,6 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="VersichertenVerhaeltnis" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -6781,7 +6776,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -7905,7 +7899,7 @@
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -7915,7 +7909,6 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="Pflegekasse" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -7925,7 +7918,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -9048,7 +9040,7 @@
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -9058,7 +9050,6 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="Unfallbetrieb" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -9068,7 +9059,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -10192,7 +10182,7 @@
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -10202,7 +10192,6 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="Aufenthaltsinformationen" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -10212,7 +10201,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -11336,7 +11324,7 @@
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -11346,7 +11334,6 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="DiagnoseFreitext" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -11356,7 +11343,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -12480,7 +12466,7 @@
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -12490,7 +12476,6 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="DiagnoseStrukturiert" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -12500,7 +12485,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -13624,7 +13608,7 @@
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -13634,7 +13618,6 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="Therapie" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -13644,7 +13627,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -14768,7 +14750,7 @@
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -14778,7 +14760,6 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="Unfallereignis" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -14788,7 +14769,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -15913,7 +15893,7 @@
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -15923,7 +15903,6 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="Aufnahmebefunde" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -15933,7 +15912,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -17057,7 +17035,7 @@
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -17067,7 +17045,6 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="Behandlungsverlauf" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -17077,7 +17054,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -18201,7 +18177,7 @@
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -18211,7 +18187,6 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="Konsiliarbefunde" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -18221,7 +18196,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -19345,7 +19319,7 @@
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -19355,7 +19329,6 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="DokumentenReferenz" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -19365,7 +19338,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -20489,7 +20461,7 @@
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -20499,7 +20471,6 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="Therapieempfehlung" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -20509,7 +20480,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -21633,7 +21603,7 @@
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -21643,7 +21613,6 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="MedikationsInformation" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -21653,7 +21622,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -22777,7 +22745,7 @@
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -22787,7 +22755,6 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="MedikationWirkstoff" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -22797,7 +22764,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -23921,7 +23887,7 @@
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -23931,7 +23897,6 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="MedikationRezeptur" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -23941,7 +23906,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -25065,7 +25029,7 @@
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -25075,7 +25039,6 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="MedikationArzneimittel" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -25085,7 +25048,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -26209,7 +26171,7 @@
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -26219,7 +26181,6 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="WeiterbehandelnderArzt" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -26229,7 +26190,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -27353,7 +27313,7 @@
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -27363,7 +27323,6 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="WeiterbehandelndeOrganisation" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -27373,7 +27332,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -28497,7 +28455,7 @@
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -28507,7 +28465,6 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="RehaMassnahmen" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -28517,7 +28474,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -29651,7 +29607,6 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="Heilmittel" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -29661,7 +29616,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -30785,7 +30739,7 @@
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -30795,7 +30749,6 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="Hilfsmittel" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -30805,7 +30758,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -31929,7 +31881,7 @@
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -31939,7 +31891,6 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="BesondereMassnahmen" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -31949,7 +31900,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -33073,7 +33023,7 @@
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -33083,7 +33033,6 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="Arbeitsunfaehigkeit" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -33093,7 +33042,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -34217,7 +34165,7 @@
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -34227,7 +34175,6 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="PrognoseWiederaufnahmeTaetigkeit" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -34237,7 +34184,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -35361,7 +35307,7 @@
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -35371,7 +35317,6 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="stufenweiseWiedereingliederung" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -35381,7 +35326,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -36505,7 +36449,7 @@
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -36515,7 +36459,6 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="Datenschutz" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -36525,7 +36468,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -37649,7 +37591,7 @@
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -37659,7 +37601,6 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="DArzt" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -37669,7 +37610,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -38793,7 +38733,7 @@
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -38803,7 +38743,6 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="DArztOrganisation" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -38813,7 +38752,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -39937,7 +39875,7 @@
       <alias value="header" />
       <alias value="label" />
       <alias value="caption" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Composition.section.title" />
@@ -39947,7 +39885,6 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="BehandelndeEinrichtung" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -39957,7 +39894,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -41036,13 +40972,6 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:Unfallversicherungstraeger.title">
-      <path value="Composition.section.title" />
-      <short value="Kriterium für section-Diskriminator" />
-      <min value="1" />
-      <fixedString value="Unfallversicherungstraeger" />
-      <mustSupport value="true" />
-    </element>
     <element id="Composition.section:Unfallversicherungstraeger.code">
       <path value="Composition.section.code" />
       <min value="1" />
@@ -41097,12 +41026,6 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:Krankenkasse.title">
-      <path value="Composition.section.title" />
-      <min value="1" />
-      <fixedString value="Krankenkasse" />
-      <mustSupport value="true" />
-    </element>
     <element id="Composition.section:Krankenkasse.code">
       <path value="Composition.section.code" />
       <min value="1" />
@@ -41149,12 +41072,6 @@
       <sliceName value="VersichertenVerhaeltnis" />
       <min value="1" />
       <max value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Composition.section:VersichertenVerhaeltnis.title">
-      <path value="Composition.section.title" />
-      <min value="1" />
-      <fixedString value="VersichertenVerhaeltnis" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:VersichertenVerhaeltnis.code">
@@ -41204,12 +41121,6 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:Pflegekasse.title">
-      <path value="Composition.section.title" />
-      <min value="1" />
-      <fixedString value="Pflegekasse" />
-      <mustSupport value="true" />
-    </element>
     <element id="Composition.section:Pflegekasse.code">
       <path value="Composition.section.code" />
       <min value="1" />
@@ -41253,12 +41164,6 @@
       <sliceName value="Unfallbetrieb" />
       <min value="1" />
       <max value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Composition.section:Unfallbetrieb.title">
-      <path value="Composition.section.title" />
-      <min value="1" />
-      <fixedString value="Unfallbetrieb" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:Unfallbetrieb.code">
@@ -41309,12 +41214,6 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:Aufenthaltsinformationen.title">
-      <path value="Composition.section.title" />
-      <min value="1" />
-      <fixedString value="Aufenthaltsinformationen" />
-      <mustSupport value="true" />
-    </element>
     <element id="Composition.section:Aufenthaltsinformationen.code">
       <path value="Composition.section.code" />
       <min value="1" />
@@ -41360,12 +41259,6 @@
       <path value="Composition.section" />
       <sliceName value="DiagnoseFreitext" />
       <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Composition.section:DiagnoseFreitext.title">
-      <path value="Composition.section.title" />
-      <min value="1" />
-      <fixedString value="DiagnoseFreitext" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:DiagnoseFreitext.code">
@@ -41415,12 +41308,6 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:DiagnoseStrukturiert.title">
-      <path value="Composition.section.title" />
-      <min value="1" />
-      <fixedString value="DiagnoseStrukturiert" />
-      <mustSupport value="true" />
-    </element>
     <element id="Composition.section:DiagnoseStrukturiert.code">
       <path value="Composition.section.code" />
       <min value="1" />
@@ -41465,12 +41352,6 @@
     <element id="Composition.section:Therapie">
       <path value="Composition.section" />
       <sliceName value="Therapie" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Composition.section:Therapie.title">
-      <path value="Composition.section.title" />
-      <min value="1" />
-      <fixedString value="Therapie" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:Therapie.code">
@@ -41521,12 +41402,6 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:Unfallereignis.title">
-      <path value="Composition.section.title" />
-      <min value="1" />
-      <fixedString value="Unfallereignis" />
-      <mustSupport value="true" />
-    </element>
     <element id="Composition.section:Unfallereignis.code">
       <path value="Composition.section.code" />
       <min value="1" />
@@ -41572,12 +41447,6 @@
       <path value="Composition.section" />
       <sliceName value="Aufnahmebefunde" />
       <sliceIsConstraining value="false" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Composition.section:Aufnahmebefunde.title">
-      <path value="Composition.section.title" />
-      <min value="1" />
-      <fixedString value="Aufnahmebefunde" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:Aufnahmebefunde.code">
@@ -41628,12 +41497,6 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:Behandlungsverlauf.title">
-      <path value="Composition.section.title" />
-      <min value="1" />
-      <fixedString value="Behandlungsverlauf" />
-      <mustSupport value="true" />
-    </element>
     <element id="Composition.section:Behandlungsverlauf.code">
       <path value="Composition.section.code" />
       <min value="1" />
@@ -41680,12 +41543,6 @@
       <sliceName value="Konsiliarbefunde" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:Konsiliarbefunde.title">
-      <path value="Composition.section.title" />
-      <min value="1" />
-      <fixedString value="Konsiliarbefunde" />
-      <mustSupport value="true" />
-    </element>
     <element id="Composition.section:Konsiliarbefunde.code">
       <path value="Composition.section.code" />
       <min value="1" />
@@ -41730,12 +41587,6 @@
     <element id="Composition.section:DokumentenReferenz">
       <path value="Composition.section" />
       <sliceName value="DokumentenReferenz" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Composition.section:DokumentenReferenz.title">
-      <path value="Composition.section.title" />
-      <min value="1" />
-      <fixedString value="DokumentenReferenz" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:DokumentenReferenz.code">
@@ -41785,12 +41636,6 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:Therapieempfehlung.title">
-      <path value="Composition.section.title" />
-      <min value="1" />
-      <fixedString value="Therapieempfehlung" />
-      <mustSupport value="true" />
-    </element>
     <element id="Composition.section:Therapieempfehlung.code">
       <path value="Composition.section.code" />
       <min value="1" />
@@ -41835,12 +41680,6 @@
     <element id="Composition.section:MedikationsInformation">
       <path value="Composition.section" />
       <sliceName value="MedikationsInformation" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Composition.section:MedikationsInformation.title">
-      <path value="Composition.section.title" />
-      <min value="1" />
-      <fixedString value="MedikationsInformation" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:MedikationsInformation.code">
@@ -41889,12 +41728,6 @@
       <sliceName value="MedikationWirkstoff" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:MedikationWirkstoff.title">
-      <path value="Composition.section.title" />
-      <min value="1" />
-      <fixedString value="MedikationWirkstoff" />
-      <mustSupport value="true" />
-    </element>
     <element id="Composition.section:MedikationWirkstoff.code">
       <path value="Composition.section.code" />
       <min value="1" />
@@ -41941,12 +41774,6 @@
       <sliceName value="MedikationRezeptur" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:MedikationRezeptur.title">
-      <path value="Composition.section.title" />
-      <min value="1" />
-      <fixedString value="MedikationRezeptur" />
-      <mustSupport value="true" />
-    </element>
     <element id="Composition.section:MedikationRezeptur.code">
       <path value="Composition.section.code" />
       <min value="1" />
@@ -41991,12 +41818,6 @@
     <element id="Composition.section:MedikationArzneimittel">
       <path value="Composition.section" />
       <sliceName value="MedikationArzneimittel" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Composition.section:MedikationArzneimittel.title">
-      <path value="Composition.section.title" />
-      <min value="1" />
-      <fixedString value="MedikationArzneimittel" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:MedikationArzneimittel.code">
@@ -42047,12 +41868,6 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:WeiterbehandelnderArzt.title">
-      <path value="Composition.section.title" />
-      <min value="1" />
-      <fixedString value="WeiterbehandelnderArzt" />
-      <mustSupport value="true" />
-    </element>
     <element id="Composition.section:WeiterbehandelnderArzt.code">
       <path value="Composition.section.code" />
       <min value="1" />
@@ -42098,12 +41913,6 @@
       <path value="Composition.section" />
       <sliceName value="WeiterbehandelndeOrganisation" />
       <max value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Composition.section:WeiterbehandelndeOrganisation.title">
-      <path value="Composition.section.title" />
-      <min value="1" />
-      <fixedString value="WeiterbehandelndeOrganisation" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:WeiterbehandelndeOrganisation.code">
@@ -42152,12 +41961,6 @@
       <sliceName value="RehaMassnahmen" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:RehaMassnahmen.title">
-      <path value="Composition.section.title" />
-      <min value="1" />
-      <fixedString value="RehaMassnahmen" />
-      <mustSupport value="true" />
-    </element>
     <element id="Composition.section:RehaMassnahmen.code">
       <path value="Composition.section.code" />
       <min value="1" />
@@ -42202,11 +42005,6 @@
     <element id="Composition.section:Heilmittel">
       <path value="Composition.section" />
       <sliceName value="Heilmittel" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Composition.section:Heilmittel.title">
-      <path value="Composition.section.title" />
-      <fixedString value="Heilmittel" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:Heilmittel.code">
@@ -42255,12 +42053,6 @@
       <sliceName value="Hilfsmittel" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:Hilfsmittel.title">
-      <path value="Composition.section.title" />
-      <min value="1" />
-      <fixedString value="Hilfsmittel" />
-      <mustSupport value="true" />
-    </element>
     <element id="Composition.section:Hilfsmittel.code">
       <path value="Composition.section.code" />
       <min value="1" />
@@ -42305,12 +42097,6 @@
     <element id="Composition.section:BesondereMassnahmen">
       <path value="Composition.section" />
       <sliceName value="BesondereMassnahmen" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Composition.section:BesondereMassnahmen.title">
-      <path value="Composition.section.title" />
-      <min value="1" />
-      <fixedString value="BesondereMassnahmen" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:BesondereMassnahmen.code">
@@ -42361,12 +42147,6 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:Arbeitsunfaehigkeit.title">
-      <path value="Composition.section.title" />
-      <min value="1" />
-      <fixedString value="Arbeitsunfaehigkeit" />
-      <mustSupport value="true" />
-    </element>
     <element id="Composition.section:Arbeitsunfaehigkeit.code">
       <path value="Composition.section.code" />
       <min value="1" />
@@ -42415,12 +42195,6 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:PrognoseWiederaufnahmeTaetigkeit.title">
-      <path value="Composition.section.title" />
-      <min value="1" />
-      <fixedString value="PrognoseWiederaufnahmeTaetigkeit" />
-      <mustSupport value="true" />
-    </element>
     <element id="Composition.section:PrognoseWiederaufnahmeTaetigkeit.code">
       <path value="Composition.section.code" />
       <min value="1" />
@@ -42465,12 +42239,6 @@
     <element id="Composition.section:stufenweiseWiedereingliederung">
       <path value="Composition.section" />
       <sliceName value="stufenweiseWiedereingliederung" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Composition.section:stufenweiseWiedereingliederung.title">
-      <path value="Composition.section.title" />
-      <min value="1" />
-      <fixedString value="stufenweiseWiedereingliederung" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:stufenweiseWiedereingliederung.code">
@@ -42521,12 +42289,6 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:Datenschutz.title">
-      <path value="Composition.section.title" />
-      <min value="1" />
-      <fixedString value="Datenschutz" />
-      <mustSupport value="true" />
-    </element>
     <element id="Composition.section:Datenschutz.code">
       <path value="Composition.section.code" />
       <min value="1" />
@@ -42573,12 +42335,6 @@
       <sliceName value="DArzt" />
       <min value="1" />
       <max value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Composition.section:DArzt.title">
-      <path value="Composition.section.title" />
-      <min value="1" />
-      <fixedString value="DArzt" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:DArzt.code">
@@ -42629,12 +42385,6 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:DArztOrganisation.title">
-      <path value="Composition.section.title" />
-      <min value="1" />
-      <fixedString value="DArztOrganisation" />
-      <mustSupport value="true" />
-    </element>
     <element id="Composition.section:DArztOrganisation.code">
       <path value="Composition.section.code" />
       <min value="1" />
@@ -42679,12 +42429,6 @@
     <element id="Composition.section:BehandelndeEinrichtung">
       <path value="Composition.section" />
       <sliceName value="BehandelndeEinrichtung" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Composition.section:BehandelndeEinrichtung.title">
-      <path value="Composition.section.title" />
-      <min value="1" />
-      <fixedString value="BehandelndeEinrichtung" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:BehandelndeEinrichtung.code">
