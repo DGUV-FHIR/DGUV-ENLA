@@ -74,15 +74,8 @@
       <constraint>
         <key value="dguv-hospital-1" />
         <severity value="error" />
-        <human value="Beschreibung" />
-        <expression value="(hospitalization.admitSource.coding.where(code = 'FB' or display = 'Folgebehandlung').exists())" />
-        <source value="http://fhir.dguv.de/ENLA/Encounter/DGUV-ENLA-PR-Aufenthaltsinformationen" />
-      </constraint>
-      <constraint>
-        <key value="dguv-hospital-2" />
-        <severity value="error" />
-        <human value="Beschreibung 2" />
-        <expression value="(hospitalization.admitSource.coding.where(code = 'FB' or display = 'Folgebehandlung').empty())" />
+        <human value="Wenn es sich nicht um eine Folgebehandlung handelt, darf  das Textfeld  keinen Text enthalten!" />
+        <expression value="hospitalization.admitSource.coding.where(code != 'FB' ).exists()  implies hospitalization.admitSource.text.exists()" />
         <source value="http://fhir.dguv.de/ENLA/Encounter/DGUV-ENLA-PR-Aufenthaltsinformationen" />
       </constraint>
       <mapping>
@@ -4668,8 +4661,8 @@
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
-      <min value="0" />
-      <max value="*" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="CodeableConcept.coding" />
         <min value="0" />
@@ -6341,14 +6334,8 @@
       <constraint>
         <key value="dguv-hospital-1" />
         <severity value="error" />
-        <human value="Beschreibung" />
-        <expression value="(hospitalization.admitSource.coding.where(code = 'FB' or display = 'Folgebehandlung').exists())" />
-      </constraint>
-      <constraint>
-        <key value="dguv-hospital-2" />
-        <severity value="error" />
-        <human value="Beschreibung 2" />
-        <expression value="(hospitalization.admitSource.coding.where(code = 'FB' or display = 'Folgebehandlung').empty())" />
+        <human value="Wenn es sich nicht um eine Folgebehandlung handelt, darf  das Textfeld  keinen Text enthalten!" />
+        <expression value="hospitalization.admitSource.coding.where(code != 'FB' ).exists()  implies hospitalization.admitSource.text.exists()" />
       </constraint>
     </element>
     <element id="Encounter.id">
@@ -6510,6 +6497,8 @@
     <element id="Encounter.hospitalization.admitSource.coding">
       <path value="Encounter.hospitalization.admitSource.coding" />
       <short value="Aufnahmeart in kodierter Form" />
+      <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
