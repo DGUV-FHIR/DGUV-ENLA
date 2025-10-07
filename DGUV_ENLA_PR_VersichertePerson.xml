@@ -84,7 +84,7 @@
         <key value="dguv-pat-identifier-exclude-gkv-pkv" />
         <severity value="error" />
         <human value="Die gleichzeitige Verwendung von VersichertenId_GKV und Versichertennummer_PKV ist verboten" />
-        <expression value="not(identifier.where(type.coding.where(system='http://fhir.de/CodeSystem/identifier-type-de-basis' and code='GKV').exists()).value.exists() and identifier.where(type.coding.where(system='http://fhir.de/CodeSystem/identifier-type-de-basis' and code='PKV').exists()).value.exists())" />
+        <expression value="(identifier.where(type.coding.where(system='http://fhir.de/CodeSystem/identifier-type-de-basis' and code='GKV').exists()).value.exists() and identifier.where(type.coding.where(system='http://fhir.de/CodeSystem/identifier-type-de-basis' and code='PKV').exists()).value.exists()).not()" />
         <source value="http://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson" />
       </constraint>
       <mapping>
@@ -16708,7 +16708,7 @@
         <key value="dguv-pat-identifier-exclude-gkv-pkv" />
         <severity value="error" />
         <human value="Die gleichzeitige Verwendung von VersichertenId_GKV und Versichertennummer_PKV ist verboten" />
-        <expression value="not(identifier.where(type.coding.where(system='http://fhir.de/CodeSystem/identifier-type-de-basis' and code='GKV').exists()).value.exists() and identifier.where(type.coding.where(system='http://fhir.de/CodeSystem/identifier-type-de-basis' and code='PKV').exists()).value.exists())" />
+        <expression value="(identifier.where(type.coding.where(system='http://fhir.de/CodeSystem/identifier-type-de-basis' and code='GKV').exists()).value.exists() and identifier.where(type.coding.where(system='http://fhir.de/CodeSystem/identifier-type-de-basis' and code='PKV').exists()).value.exists()).not()" />
       </constraint>
     </element>
     <element id="Patient.id">
