@@ -73,6 +73,7 @@
                 <valueBoolean value="true"/>
             </extension>
             <extension url="Funktionseinheit">
+                <valueString value=""/>
             </extension>
         </extension>
         <!-- telefonischer Kontakt -->
