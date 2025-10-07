@@ -694,6 +694,20 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <constraint>
+        <key value="dguv-pflegeunfall-1" />
+        <severity value="error" />
+        <human value="Wenn es sich um einen Pflegeunfall handelt, muss die Referenz zur Pflegekasse vorhanden sein." />
+        <expression value="extension.where(url = 'Pflegeunfall').value = true and extension.where(url = 'Pflegekasse').exists()" />
+        <source value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Unfallereignis" />
+      </constraint>
+      <constraint>
+        <key value="dguv-pflegeunfall-2" />
+        <severity value="error" />
+        <human value="Wenn es sich um einen keinen Pflegeunfall handelt, darf die Referenz zur Pflegekasse nicht vorhanden sein." />
+        <expression value="extension.where(url = 'Pflegeunfall').value = false and extension.where(url = 'Pflegekasse').empty()" />
+        <source value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Unfallereignis" />
+      </constraint>
       <mustSupport value="true" />
       <isModifier value="false" />
       <mapping>
@@ -769,13 +783,6 @@
         <expression value="extension.exists() != value.exists()" />
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
-      </constraint>
-      <constraint>
-        <key value="dguv-pflegeunfall-1" />
-        <severity value="error" />
-        <human value="Wenn es sich um einen Pfleeunfall handelt, muss die Referenz zur Pflegekasse  vorhanden sein sonst darf sie nicht existieren." />
-        <expression value="(extension('Pflegeunfall').valueBoolean = true and extension('Pflegekasse').value.as(Reference).reference.exists()) or (extension('Pflegeunfall').valueBoolean = false and extension('Pflegekasse').empty())" />
-        <source value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Unfallereignis" />
       </constraint>
       <mustSupport value="true" />
       <mapping>
@@ -11269,16 +11276,22 @@
     <element id="Observation.extension:Pflegeunfall">
       <path value="Observation.extension" />
       <sliceName value="Pflegeunfall" />
+      <constraint>
+        <key value="dguv-pflegeunfall-1" />
+        <severity value="error" />
+        <human value="Wenn es sich um einen Pflegeunfall handelt, muss die Referenz zur Pflegekasse vorhanden sein." />
+        <expression value="extension.where(url = 'Pflegeunfall').value = true and extension.where(url = 'Pflegekasse').exists()" />
+      </constraint>
+      <constraint>
+        <key value="dguv-pflegeunfall-2" />
+        <severity value="error" />
+        <human value="Wenn es sich um einen keinen Pflegeunfall handelt, darf die Referenz zur Pflegekasse nicht vorhanden sein." />
+        <expression value="extension.where(url = 'Pflegeunfall').value = false and extension.where(url = 'Pflegekasse').empty()" />
+      </constraint>
       <mustSupport value="true" />
     </element>
     <element id="Observation.extension:Pflegeunfall.extension">
       <path value="Observation.extension.extension" />
-      <constraint>
-        <key value="dguv-pflegeunfall-1" />
-        <severity value="error" />
-        <human value="Wenn es sich um einen Pfleeunfall handelt, muss die Referenz zur Pflegekasse  vorhanden sein sonst darf sie nicht existieren." />
-        <expression value="(extension('Pflegeunfall').valueBoolean = true and extension('Pflegekasse').value.as(Reference).reference.exists()) or (extension('Pflegeunfall').valueBoolean = false and extension('Pflegekasse').empty())" />
-      </constraint>
       <mustSupport value="true" />
     </element>
     <element id="Observation.extension:Pflegeunfall.extension:Pflegeunfall">
