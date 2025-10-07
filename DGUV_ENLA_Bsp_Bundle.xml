@@ -946,7 +946,7 @@
                 </meta>
                 <status value="finished" />
                 <class>
-                    <system value="http://terminology.hl7.org/ValueSet/v3-ActEncounterCode" />
+                    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode" />
                     <code value="IMP" />
                     <display value="inpatient encounter" />
                 </class>
@@ -964,6 +964,7 @@
                             <code value="FB" />
                             <display value="Folgebehandlung" />
                         </coding>
+                        <text value="text" />
                     </admitSource>
                     <dischargeDisposition>
                         <coding>
