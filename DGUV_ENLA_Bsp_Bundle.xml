@@ -130,9 +130,9 @@
                         <!-- 
                                 Auswahl des Pflegekasse Objektes:
                                 RelativeURL:
-                                urn:uuid:bf64ac16-926b-4082-968a-f7c088364b83f
+                                urn:uuid:bf64ac16-926b-4082-968a-f7c088364b83
                         -->                    
-                        <reference value="urn:uuid:bf64ac16-926b-4082-968a-f7c088364b83f" />
+                        <reference value="urn:uuid:bf64ac16-926b-4082-968a-f7c088364b83" />
                     </entry>
                 </section>
                 <section>
@@ -453,7 +453,7 @@
                         <!-- 
                             Auswahl des RehaMassnahmen Objektes:
                             RelativeURL:
-                            urn:uuid:0f9b10f1-b311-49e8-b395-608303bdaa2d
+                            urn:uuid:f9b10f1-b311-49e8-b395-608303bdaa2d
                         -->                    
                         <reference value="urn:uuid:f9b10f1-b311-49e8-b395-608303bdaa2d" />
                     </entry>
@@ -487,9 +487,9 @@
                         <!-- 
                             Auswahl des Hilfsmittel Objektes:
                             RelativeURL:
-                            urn:uuid:b77a0cc9-62ff-47c5-96b5-a964f313490dl
+                            urn:uuid:b77a0cc9-62ff-47c5-96b5-a964f313490d
                         -->                    
-                        <reference value="urn:uuid:b77a0cc9-62ff-47c5-96b5-a964f313490dl" />
+                        <reference value="urn:uuid:b77a0cc9-62ff-47c5-96b5-a964f313490d" />
                     </entry>
                 </section>
                 <section>
@@ -837,10 +837,10 @@
     </entry>
     <entry>
         <!-- 5 -->
-        <fullUrl value="urn:uuid:75c6d854-876e-4b9d-8ea9-327a46c9c50f" />
+        <fullUrl value="urn:uuid:475c6d854-876e-4b9d-8ea9-327a46c9c50f" />
         <resource>
             <Coverage xmlns="http://hl7.org/fhir">
-                <id value="75c6d854-876e-4b9d-8ea9-327a46c9c50f" />
+                <id value="475c6d854-876e-4b9d-8ea9-327a46c9c50f" />
                 <meta>
                     <profile value="http://fhir.dguv.de/ENLA/Coverage/DGUV-ENLA-PR-VersichertenVerhaeltnis" />
                 </meta>
@@ -1533,10 +1533,10 @@
     </entry>
     <entry>
         <!-- 25 -->
-        <fullUrl value="urn:uuid:0f9b10f1-b311-49e8-b395-608303bdaa2d" />
+        <fullUrl value="urn:uuid:f9b10f1-b311-49e8-b395-608303bdaa2d" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
-                <id value="0f9b10f1-b311-49e8-b395-608303bdaa2d" />
+                <id value="f9b10f1-b311-49e8-b395-608303bdaa2d" />
                 <meta>
                     <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-RehaMassnahmen" />
                 </meta>
