@@ -329,6 +329,7 @@
         <code value="canonical" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/StructureDefinition" />
       </type>
+      <fixedCanonical value="http://fhir.dguv.de/ENLA/Composition/DGUV-ENLA-PR-Composition" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -41987,6 +41988,7 @@
       <path value="Composition.meta.profile" />
       <min value="1" />
       <max value="1" />
+      <fixedCanonical value="http://fhir.dguv.de/ENLA/Composition/DGUV-ENLA-PR-Composition" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.extension">
