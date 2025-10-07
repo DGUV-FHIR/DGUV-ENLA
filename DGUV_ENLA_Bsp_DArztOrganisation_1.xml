@@ -72,7 +72,7 @@
             <valueBoolean value="false"/>
         </extension>
         <extension url="Funktionseinheit">
-            <valueString value="Physiotherapie"/>
+            <valueString value=""/>
         </extension>
         </extension>
         <!-- telefonischer Kontakt -->
