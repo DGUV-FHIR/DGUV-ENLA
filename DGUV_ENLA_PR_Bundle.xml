@@ -2753,7 +2753,7 @@
       </base>
       <type>
         <code value="Resource" />
-        <profile value="http://fhir.dguv.de/ENLA/Composition/DGUV-ENLA-PR-TestComposition" />
+        <profile value="http://fhir.dguv.de/ENLA/Composition/DGUV-ENLA-PR-Composition" />
       </type>
       <constraint>
         <key value="dom-2" />
@@ -4089,7 +4089,7 @@
         <key value="dguv-pat-identifier-exclude-gkv-pkv" />
         <severity value="error" />
         <human value="Die gleichzeitige Verwendung von VersichertenId_GKV und Versichertennummer_PKV ist verboten" />
-        <expression value="not(identifier.where(type.coding.where(system='http://fhir.de/CodeSystem/identifier-type-de-basis' and code='GKV').exists()).value.exists() and identifier.where(type.coding.where(system='http://fhir.de/CodeSystem/identifier-type-de-basis' and code='PKV').exists()).value.exists())" />
+        <expression value="(identifier.where(type.coding.where(system='http://fhir.de/CodeSystem/identifier-type-de-basis' and code='KVZ10').exists()).value.exists() and identifier.where(type.coding.where(system='http://fhir.de/CodeSystem/identifier-type-de-basis' and code='PKV').exists()).value.exists()).not()" />
         <source value="http://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson" />
       </constraint>
       <mustSupport value="true" />
@@ -13025,15 +13025,15 @@
       <constraint>
         <key value="dguv-hospital-1" />
         <severity value="error" />
-        <human value="Beschreibung" />
-        <expression value="(hospitalization.admitSource.coding.where(code = 'FB' or display = 'Folgebehandlung').exists())" />
+        <human value="Wenn es sich  um eine Folgebehandlung handelt, muss das Textfeld  Text enthalten!" />
+        <expression value="hospitalization.admitSource.coding.where(code = 'FB').exists() implies hospitalization.admitSource.text.exists()" />
         <source value="http://fhir.dguv.de/ENLA/Encounter/DGUV-ENLA-PR-Aufenthaltsinformationen" />
       </constraint>
       <constraint>
         <key value="dguv-hospital-2" />
         <severity value="error" />
-        <human value="Beschreibung 2" />
-        <expression value="(hospitalization.admitSource.coding.where(code = 'FB' or display = 'Folgebehandlung').empty())" />
+        <human value="Wenn es sich nicht um eine Folgebehandlung handelt, darf  das Textfeld  keinen Text enthalten!" />
+        <expression value="hospitalization.admitSource.exists() implies hospitalization.admitSourcecoding.all(code = 'FB')" />
         <source value="http://fhir.dguv.de/ENLA/Encounter/DGUV-ENLA-PR-Aufenthaltsinformationen" />
       </constraint>
       <mustSupport value="true" />
@@ -47679,7 +47679,7 @@
       <min value="1" />
       <type>
         <code value="Resource" />
-        <profile value="http://fhir.dguv.de/ENLA/Composition/DGUV-ENLA-PR-TestComposition" />
+        <profile value="http://fhir.dguv.de/ENLA/Composition/DGUV-ENLA-PR-Composition" />
       </type>
       <mustSupport value="true" />
     </element>
