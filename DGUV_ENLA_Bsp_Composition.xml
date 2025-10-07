@@ -315,7 +315,6 @@
         </entry>
     </section>
     <section>
-        <title value="MedikationsInformation" />
         <code>
             <coding>
                 <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
@@ -333,7 +332,6 @@
         </entry>
     </section>
     <section>
-        <title value="MedikationWirkstoff" />
         <code>
             <coding>
                 <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
