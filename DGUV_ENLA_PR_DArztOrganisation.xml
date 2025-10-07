@@ -13933,7 +13933,7 @@
         <key value="nonaertzl-1" />
         <severity value="error" />
         <human value="Falls der Wert im NichtAerztlichenKontakt Falsch ist muss die Funktionseinheit leer sein" />
-        <expression value="(extension('NichtAertzlicherKontakt').valueBoolean != false or extension('Funktionseinheit').ValueString.empty()  )" />
+        <expression value="(extension('NichtAertzlicherKontakt').valueBoolean != false or extension('Funktionseinheit').ValueString.length())" />
         <source value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-DArztOrganisation" />
       </constraint>
       <mapping>
@@ -15624,7 +15624,7 @@
         <key value="nonaertzl-1" />
         <severity value="error" />
         <human value="Falls der Wert im NichtAerztlichenKontakt Falsch ist muss die Funktionseinheit leer sein" />
-        <expression value="(extension('NichtAertzlicherKontakt').valueBoolean != false or extension('Funktionseinheit').ValueString.empty()  )" />
+        <expression value="(extension('NichtAertzlicherKontakt').valueBoolean != false or extension('Funktionseinheit').ValueString.length())" />
       </constraint>
     </element>
     <element id="Organization.contact.extension:NichtAerztlicherKontakt.extension:NichtAerztlicherKontakt">
