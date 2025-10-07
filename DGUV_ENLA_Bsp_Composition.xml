@@ -105,9 +105,9 @@
             <!-- 
                     Auswahl des Pflegekasse Objektes:
                     RelativeURL:
-                    urn:uuid:bf64ac16-926b-4082-968a-f7c088364b83f
+                    urn:uuid:bf64ac16-926b-4082-968a-f7c088364b83
             -->                    
-            <reference value="urn:uuid:bf64ac16-926b-4082-968a-f7c088364b83f" />
+            <reference value="urn:uuid:bf64ac16-926b-4082-968a-f7c088364b83" />
         </entry>
     </section>
     <section>
