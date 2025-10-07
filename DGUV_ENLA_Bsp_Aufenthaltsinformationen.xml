@@ -37,6 +37,7 @@
                 <code value="FB" />
                 <display value="Folgebehandlung" />
             </coding>
+            <text value="text" />
         </admitSource>
         <dischargeDisposition>
             <coding>
