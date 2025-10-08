@@ -746,7 +746,7 @@
         <key value="dguv-famvers-1" />
         <severity value="error" />
         <human value="Wenn Familienversichert vorliegt , muss ein Mitgliedsname eingetragen sein andernfalls darf kein Eintrag vorliegen." />
-        <expression value="(extension('Familienversichert').valueBoolean = true and extension('Mitgliedsname').value.as(string).matches(&quot;\\S.&quot;)) or (extension('Familienversichert').valueBoolean = false  and extension('Mitgliedsname').empty())" />
+        <expression value="(extension('Familienversichert').valueBoolean = true and extension('Mitgliedsname').value.as(string).matches('\\S.')) or (extension('Familienversichert').valueBoolean = false  and extension('Mitgliedsname').empty())" />
         <source value="http://fhir.dguv.de/ENLA/Coverage/DGUV-ENLA-PR-VersichertenVerhaeltnis" />
       </constraint>
       <mustSupport value="true" />
@@ -3483,7 +3483,7 @@
         <key value="dguv-famvers-1" />
         <severity value="error" />
         <human value="Wenn Familienversichert vorliegt , muss ein Mitgliedsname eingetragen sein andernfalls darf kein Eintrag vorliegen." />
-        <expression value="(extension('Familienversichert').valueBoolean = true and extension('Mitgliedsname').value.as(string).matches(&quot;\\S.&quot;)) or (extension('Familienversichert').valueBoolean = false  and extension('Mitgliedsname').empty())" />
+        <expression value="(extension('Familienversichert').valueBoolean = true and extension('Mitgliedsname').value.as(string).matches('\\S.')) or (extension('Familienversichert').valueBoolean = false  and extension('Mitgliedsname').empty())" />
       </constraint>
       <mustSupport value="true" />
     </element>
