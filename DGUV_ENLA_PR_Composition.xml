@@ -42606,7 +42606,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="Leistungserbringer" />
+      <fixedString value="MedikationFreitext" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -44833,7 +44833,7 @@
     <element id="Composition.section:MedikationFreitext.code.coding.display">
       <path value="Composition.section.code.coding.display" />
       <min value="1" />
-      <fixedString value="Leistungserbringer" />
+      <fixedString value="MedikationFreitext" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:MedikationFreitext.entry">
