@@ -24,11 +24,14 @@
         <system value="urn:ietf:rfc:3986"/>
         <value value="urn:uuid:5d75b64f-a8a1-49b8-8d33-bd16423b3e6e" />
     </identifier> 
+
     <!-- Dokumenten Art -->
     <type value="document" />
 
     <!-- Zeitpunkt -->
     <timestamp value="2025-06-10T12:00:00+01:00" />
+    
+    <!-- Erster Eintrag Composition -->
     <entry>
         <!-- 0 -->
         <fullUrl value="urn:uuid:c00f7826-5a3e-49aa-b499-3f8c6599bd2b" />
@@ -36,7 +39,7 @@
             <Composition>
                 <id value="DGUV-ENLA-PR-Composition"/> 
                 <meta> 
-                    <profile value="http://fhir.dguv.de/ENLA/Composition/DGUV-ENLA-PR-Composition" />
+                    <profile value="http://fhir.dguv.de/ENLA/Composition/DGUV-ENLA-PR-Composition|0.0.2" />
                 </meta> 
                 <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-SonstigeBemerkungen">    
                     <valueString value="Die sonstige Bemerkung." />
@@ -840,7 +843,7 @@
         <fullUrl value="urn:uuid:475c6d854-876e-4b9d-8ea9-327a46c9c50f" />
         <resource>
             <Coverage xmlns="http://hl7.org/fhir">
-                <id value="VersichertenVerhaeltnis" />
+                <id value="DGUV-ENLA-PR-VersichertenVerhaeltnis" />
                 <meta>
                     <profile value="http://fhir.dguv.de/ENLA/Coverage/DGUV-ENLA-PR-VersichertenVerhaeltnis" />
                 </meta>
@@ -1454,7 +1457,7 @@
                     <profile value="http://fhir.dguv.de/ENLA/PractitionerRole/DGUV-ENLA-PR-WeiterbehandelnderArzt" />
                 </meta>
                 <practitioner>
-                    <reference value="urn:uuid:ebd25191-272a-4a2f-9b52-8733963b32b8" />
+                    <reference value="urn:uuid:53192032-6365-4659-8cc2-f9a7df67a466" />
                 </practitioner>
                 <organization>
                     <reference value="urn:uuid:c9643334-ed27-4327-9eff-baff968982a0" />
