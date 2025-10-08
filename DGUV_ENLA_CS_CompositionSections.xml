@@ -77,8 +77,16 @@
     <display value="Krankenkasse" />
   </concept>
   <concept>
+    <code value="​​LEST" />
+    <display value="Leistungserbringer" />
+  </concept>
+  <concept>
     <code value="MDAM" />
     <display value="MedikationArzneimittel" />
+  </concept>
+  <concept>
+    <code value="MDFX" />
+    <display value="MedicationFreitex" />
   </concept>
   <concept>
     <code value="MDIN" />
@@ -131,6 +139,10 @@
   <concept>
     <code value="VSVH" />
     <display value="Versichertenverhältnis" />
+  </concept>
+  <concept>
+    <code value="VSPN" />
+    <display value="VersichertePerson" />
   </concept>
   <concept>
     <code value="WBAR" />
