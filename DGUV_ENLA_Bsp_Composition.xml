@@ -603,4 +603,21 @@
             <reference value="urn:uuid:f952b0d1-bb04-402d-b0e6-cef800858f98" />
         </entry>
     </section>
+    <section>
+        <code>
+            <coding>
+                <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                <code value="MDFX"/>
+                <display value="MedikationFreitext"/>
+            </coding>
+        </code>
+        <entry>
+            <!-- 
+                Auswahl des MedikationFreitext Objektes:
+                RelativeURL:
+                urn:uuid:4c88e3c8-821d-40eb-87fa-1e129b3ccace
+            -->                    
+            <reference value="urn:uuid:4c88e3c8-821d-40eb-87fa-1e129b3ccace" />
+        </entry>
+    </section>
 </Composition>
