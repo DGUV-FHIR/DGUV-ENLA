@@ -39,7 +39,7 @@
             <Composition>
                 <id value="DGUV-ENLA-PR-Composition"/> 
                 <meta> 
-                    <profile value="http://fhir.dguv.de/ENLA/Composition/DGUV-ENLA-PR-Composition|0.0.2" />
+                    <profile value="http://fhir.dguv.de/ENLA/Composition/DGUV-ENLA-PR-Composition" />
                 </meta> 
                 <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-SonstigeBemerkungen">    
                     <valueString value="Die sonstige Bemerkung." />
@@ -634,6 +634,23 @@
             </Composition>    
         </resource>
     </entry>
+    <section>
+        <code>
+            <coding>
+                <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                <code value="MDFX"/>
+                <display value="MedikationFreitext"/>
+            </coding>
+        </code>
+        <entry>
+            <!-- 
+                Auswahl des MedikationFreitext Objektes:
+                RelativeURL:
+                urn:uuid:f952b0d1-bb04-402d-b0e6-cef800858f98
+            -->                    
+            <reference value="urn:uuid:f952b0d1-bb04-402d-b0e6-cef800858f98" />
+        </entry>
+    </section>
     <entry>
         <!-- 1 -->
         <fullUrl value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
@@ -1944,33 +1961,23 @@
     </entry>
     <entry>
         <!-- 36 -->
-        <fullUrl value="urn:uuid:3011936a-df87-4144-a35a-bbaae96bb2cc" />
+        <fullUrl value="urn:uuid:4c88e3c8-821d-40eb-87fa-1e129b3ccace" />
         <resource>
-            <PractitionerRole xmlns="http://hl7.org/fhir">
-                <id value="DGUV-ENLA-PR-AnsprechpartnerFuerRueckfragen"/>
+            <Medication xmlns="http://hl7.org/fhir">
+                <id value="DGUV-ENLA-Bsp-MedicationFreitext" />
                 <meta>
-                    <profile value="http://fhir.dguv.de/ENLA/PractitionerRole/DGUV-ENLA-PR-AnsprechpartnerFuerRueckfragen" />
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-MedikationFreitext" />
                 </meta>
-                <extension url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-NichtAerztlicherAnsprechpartner">
-                    <extension url="NichtAerztlicherKontakt">          
-                        <valueBoolean value="true"/>
-                    </extension>
-                    <extension url="Funktionseinheit">          
-                        <valueString value="Patientenmanagement"/>
-                    </extension>
-                </extension>
-                <practitioner>
-                <!-- Vorerst wird der Leistungserbringer 53192032-6365-4659-8cc2-f9a7df67a466 verwendet -->
-                    <reference value="urn:uuid:53192032-6365-4659-8cc2-f9a7df67a466" />
-                </practitioner>
-                <organization>
-                    <reference value="urn:uuid:f952b0d1-bb04-402d-b0e6-cef800858f98" />
-                </organization>
-                <telecom>
-                    <system value="phone"/>
-                    <value value="+1-1234565789"/>
-                </telecom>
-            </PractitionerRole>
+                <status value="active"/>
+                <code>
+                    <coding>
+                        <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type"/>
+                        <code value="freitext"/>
+                        <display value="Freitext-Medikation"/>
+                    </coding>
+                    <text value="Hier steht ein Freitext zur Medikation"/>
+                </code>
+            </Medication> 
         </resource>
     </entry>
 </Bundle>
