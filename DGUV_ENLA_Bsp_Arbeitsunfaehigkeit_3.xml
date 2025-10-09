@@ -56,7 +56,7 @@
     <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-FlexAU">
       <valueDuration>
         <value value="2" />
-        <unit value="Wochen" />
+        <unit value="" />
       </valueDuration>
     </extension>
     <coding>
