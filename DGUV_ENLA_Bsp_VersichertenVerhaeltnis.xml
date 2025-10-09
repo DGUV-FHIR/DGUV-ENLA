@@ -25,7 +25,9 @@
                 <valueString value="Rudi Fahrad" />
             </extension>
     </extension>
+
     <status value="active"/>
+    
     <beneficiary>
         <reference value="Patient/T37501234" />
     </beneficiary>
