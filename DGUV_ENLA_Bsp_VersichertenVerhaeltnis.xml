@@ -12,10 +12,11 @@
 
 -->
 <Coverage xmlns="http://hl7.org/fhir">
-<id value="DGUV-ENLA-Bsp-VersichertenVerhaeltnis" />
+    <id value="DGUV-ENLA-Bsp-VersichertenVerhaeltnis" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Coverage/DGUV-ENLA-PR-VersichertenVerhaeltnis" />
     </meta>
+
     <extension  url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-Familienversicherung">
             <extension url="Familienversichert">
                 <valueBoolean value="true" />
