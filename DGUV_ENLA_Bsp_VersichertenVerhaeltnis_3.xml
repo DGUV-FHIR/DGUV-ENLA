@@ -27,7 +27,7 @@
 -->
     <extension  url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-Familienversicherung">
             <extension url="Familienversichert">
-                <valueBoolean value="true" />
+                <valueBoolean value="false" />
             </extension>
             <extension url="Mitgliedsname">  
                 <valueString value="" />
