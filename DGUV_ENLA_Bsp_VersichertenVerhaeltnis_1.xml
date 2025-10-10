@@ -30,7 +30,7 @@
                 <valueBoolean value="true" />
             </extension>
             <extension url="Mitgliedsname">  
-                <valueString value="Rudi Fahrad" />
+                <valueString value="" />
             </extension>
     </extension>
 
@@ -45,9 +45,16 @@
         "Patient/f0f85552-7960-49ab-ad6f-666b3d71f94d"
     haben.
 -->
+<!--
+    Es muss sichergestellt werden, dass an dieser Stelle kein leer Eintrag vorliegt!
+    Ferner muss der Eintrage die Form 
+        <reference value="http://fhir.dguv.de/ENLA/Patient/VersichertePerson" />
+    oder
+        "Patient/f0f85552-7960-49ab-ad6f-666b3d71f94d"
+    haben.
+-->
     <beneficiary>
-        <!-- reference value="Patient/T37501234" /-->
-        <reference value="" />
+        <reference value="Patient/T37501234" />
     </beneficiary>
 <!--
     Es muss sichergestellt werden, dass an dieser Stelle kein leer Eintrag vorliegt!
@@ -58,7 +65,6 @@
     haben.
 -->
     <payor>
-        <reference value="http://fhir.dguv.de/ENLA/Coverage/DGUV-ENLA-PR-Unfallversicherungstraeger" />
-        <!-- reference value="Organization/f0f85552-7960-49ab-ad6f-666b3d71f94d"/ -->
+        <reference value="Organization/f0f85552-7960-49ab-ad6f-666b3d71f94d"/>
     </payor>
 </Coverage>
