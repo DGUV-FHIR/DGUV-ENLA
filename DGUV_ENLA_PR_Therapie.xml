@@ -2238,7 +2238,7 @@
       <alias value="extensions" />
       <alias value="user content" />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -2283,7 +2283,7 @@
       <alias value="extensions" />
       <alias value="user content" />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -5085,13 +5085,11 @@
     </element>
     <element id="Observation.value[x].extension">
       <path value="Observation.value[x].extension" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.value[x].extension:OPSCode">
       <path value="Observation.value[x].extension" />
       <sliceName value="OPSCode" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://fhir.dguv.de/ENLA/DGUV-ENLA-EX-OPSCode" />
