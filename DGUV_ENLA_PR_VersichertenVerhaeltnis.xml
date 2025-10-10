@@ -666,6 +666,20 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
+      <constraint>
+        <key value="dguv-famvers-1" />
+        <severity value="error" />
+        <human value="Wenn Familienversichert vorliegt , muss ein Mitgliedsname eingetragen sein." />
+        <expression value="(extension('Familienversichert').valueBoolean = true)  implies (extension('Mitgliedsname').value.as(string).matches('\\S.'))" />
+        <source value="http://fhir.dguv.de/ENLA/Coverage/DGUV-ENLA-PR-VersichertenVerhaeltnis" />
+      </constraint>
+      <constraint>
+        <key value="dguv-famvers-2" />
+        <severity value="error" />
+        <human value="Wenn Familienversichert nicht vorliegt , darf kein Eintrag  in Mitgliedsname vorliegen." />
+        <expression value="(extension('Familienversichert').valueBoolean = false)  implies (extension('Mitgliedsname').exists()).not()" />
+        <source value="http://fhir.dguv.de/ENLA/Coverage/DGUV-ENLA-PR-VersichertenVerhaeltnis" />
+      </constraint>
       <mustSupport value="true" />
       <isModifier value="false" />
       <mapping>
@@ -741,13 +755,6 @@
         <expression value="extension.exists() != value.exists()" />
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
-      </constraint>
-      <constraint>
-        <key value="dguv-famvers-1" />
-        <severity value="error" />
-        <human value="Wenn Familienversichert vorliegt , muss ein Mitgliedsname eingetragen sein andernfalls darf kein Eintrag vorliegen." />
-        <expression value="(extension('Familienversichert').valueBoolean = true and extension('Mitgliedsname').value.as(string).matches('\\S.')) or (extension('Familienversichert').valueBoolean = false  and extension('Mitgliedsname').empty())" />
-        <source value="http://fhir.dguv.de/ENLA/Coverage/DGUV-ENLA-PR-VersichertenVerhaeltnis" />
       </constraint>
       <mustSupport value="true" />
       <mapping>
@@ -3475,16 +3482,22 @@
       <sliceName value="Familienversicherung" />
       <short value="Beschreibung des Patientenverhältnisses zur Versicherung" />
       <min value="1" />
+      <constraint>
+        <key value="dguv-famvers-1" />
+        <severity value="error" />
+        <human value="Wenn Familienversichert vorliegt , muss ein Mitgliedsname eingetragen sein." />
+        <expression value="(extension('Familienversichert').valueBoolean = true)  implies (extension('Mitgliedsname').value.as(string).matches('\\S.'))" />
+      </constraint>
+      <constraint>
+        <key value="dguv-famvers-2" />
+        <severity value="error" />
+        <human value="Wenn Familienversichert nicht vorliegt , darf kein Eintrag  in Mitgliedsname vorliegen." />
+        <expression value="(extension('Familienversichert').valueBoolean = false)  implies (extension('Mitgliedsname').exists()).not()" />
+      </constraint>
       <mustSupport value="true" />
     </element>
     <element id="Coverage.extension:Familienversicherung.extension">
       <path value="Coverage.extension.extension" />
-      <constraint>
-        <key value="dguv-famvers-1" />
-        <severity value="error" />
-        <human value="Wenn Familienversichert vorliegt , muss ein Mitgliedsname eingetragen sein andernfalls darf kein Eintrag vorliegen." />
-        <expression value="(extension('Familienversichert').valueBoolean = true and extension('Mitgliedsname').value.as(string).matches('\\S.')) or (extension('Familienversichert').valueBoolean = false  and extension('Mitgliedsname').empty())" />
-      </constraint>
       <mustSupport value="true" />
     </element>
     <element id="Coverage.extension:Familienversicherung.extension:Familienversichert">
