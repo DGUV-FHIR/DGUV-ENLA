@@ -36,6 +36,10 @@
                     <code value="1-203.1" />
                     <display value="Invasive Funktionsdiagnostik des Nervensystems: Mit Stimulationselektroden, spinal;Invasive Funktionsdiagnostik des Nervensystems;Mit Stimulationselektroden, spinal" />
                 </coding>
+            </valueCodeableConcept>
+        </extension>
+        <extension url="http://fhir.dguv.de/ENLA/DGUV-ENLA-EX-OPSCode">
+            <valueCodeableConcept>
                 <coding>
                     <system value="http://fhir.de/CodeSystem/bfarm/ops" />
                     <code value="1-20a.20" />
