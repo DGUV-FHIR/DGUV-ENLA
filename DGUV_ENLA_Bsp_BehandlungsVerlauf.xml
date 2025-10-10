@@ -1,13 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Author: Friedhelm Matten
+    Datum:  30.09.2025
+
+    Anlass: Validierung und Dokumentation    
+
+
+-->
 <Observation xmlns="http://hl7.org/fhir">
     <id value="DGUV-ENLA-Bsp-Behandlungsverlauf" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Behandlungsverlauf" />
     </meta>
+
+    <!-- Besonderheiten im Behandlungsverlauf -->
     <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-Besonderheiten">
         <valueString value="Komplikation" />
     </extension>
+    <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-Besonderheiten">
+        <valueString value="Psychische Belastungssymtome nach dem Unfall" />
+    </extension>
+
+    <!-- Observation status -->
     <status value="final"/>
+    
+    <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
     <code>
         <coding>
             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
@@ -15,11 +32,21 @@
             <display value="Behandlungsverlauf" />
         </coding>
     </code>
+
+
+    <!-- Versicherte Person -->
     <subject>
         <reference value="Patient/T37501234" />
     </subject>
+
+    <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
+    <effectiveDateTime value="2025-09-30T09:30:00+02:00"/>
+
+    <!-- Behandelnde(-r) Ärtztin/Arzt-->
     <performer>
         <reference value="DArzt/gh45434" />
     </performer>
-    <valueString value="Freitext" />
+
+    <!-- Möglichkeit einen Freitext einzugeben -->
+    <valueString value="Eingabe eines Freitext" />
 </Observation>

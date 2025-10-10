@@ -4,7 +4,11 @@
   <meta>
       <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Arbeitsunfaehigkeit" />
   </meta>
+
+  <!-- Observation status -->
   <status value="final"/>
+
+  <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
   <code>
       <coding>
           <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
@@ -12,13 +16,41 @@
           <display value="Arbeitsunfähigkeit" />
       </coding>
   </code>
+
+  <!-- VersichertePerson-->
   <subject>
       <reference value="Patient/T37501234" />
   </subject>
+
+  <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
   <effectiveDateTime value="2025-07-03" />
+
+  <!-- Behandelnde(-r) Ärtztin/Arzt-->
   <performer>
       <reference value="DArzt/T37501234" />
   </performer>  
+<!-- 
+    Attribut "value[x].extension. … .FlexibleAU.value[x].value"
+    Attribut "value[x].extension. … .FlexibleAU.value[x].unit"
+    Diese Felder dürfen nur (!) befüllt werden, wenn unter value[x].coding.code/display "AUFLEX"/"Arbeitsunfähig vor aussichtliche Dauer" steht.
+    Und dann müssen sie es auch.
+    Attribut "value[x]"
+    Bei "AF" ("Arbeitsfähig") gibt es KEINE Wiedereingliederung (vgl. DGUV_ENLA_PR_stufenweiseWiedereingliederung).
+
+    <FlexibleAU>
+        <value
+    </FlexibleAU>
+
+    <valueCodeableConcept>
+        <coding>
+            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Arbeitsunfaehigkeit" />
+            <code value="AUFLEX" />
+            <display value="Arbeitsunfähig vor aussichtliche Dauer" />
+        </coding>
+    </valueCodeableConcept>
+
+-->
+  <!-- Art der Arbeitsunfaehigkeit -->  
   <valueCodeableConcept>
     <coding>
         <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Arbeitsunfaehigkeit" />

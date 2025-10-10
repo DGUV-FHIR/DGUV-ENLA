@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Author: friedhelm.matten.ext@dguv.de
+    Datum:  21.07.2025
+
+    Die vorliegende Beispiel Datei DGUV_ENLA_Bsp_VersichertenVerhaeltnis_2 dient der Validierung 
+    der Datenaufnahme zu dem Versicherten Verhaeltnis.
+    
+    Zu beachten ist dabei ...
+
+    Durchzuführende Massnahmen:
+
+
+-->
+<Coverage xmlns="http://hl7.org/fhir">
+<id value="DGUV-ENLA-Bsp-VersichertenVerhaeltnis-2" />
+    <meta>
+        <profile value="http://fhir.dguv.de/ENLA/Coverage/DGUV-ENLA-PR-VersichertenVerhaeltnis" />
+    </meta>
+
+<!--
+    Notwendige überprüfungen:
+
+    Falls die verunfallte Person Familienversichert ist, muss überprüft werden:
+        Das Element <extension url="Mitgliedsname"> muss existieren und 
+        das Element valueString value="Rudi Fahrad" /> muss einen String.length > 0 enthalten.
+-->
+    <extension  url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-Familienversicherung">
+            <extension url="Familienversichert">
+                <valueBoolean value="false" />
+            </extension>
+    </extension>
+
+<!-- Ist es notwendig den Wert des status zu überprüfen? -->    
+    <status value="active"/>
+
+    <beneficiary>
+        <reference value="Patient/f0f85552-7960-49ab-ad6f-666b3d71f94d" />
+    </beneficiary>
+
+    <payor>
+        <reference value="Organization/f0f85552-7960-49ab-ad6f-666b3d71f94d"/>
+    </payor>
+</Coverage>

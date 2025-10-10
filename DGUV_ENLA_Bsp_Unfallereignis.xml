@@ -1,15 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Author: 
+    Datum:  
+
+    Die vorliegende Beispiel Datei .... dient der Validierung 
+    der Datenaufnahme zu dem ......
+    
+    Zu beachten ist dabei ...
+
+    Durchzuführende Massnahmen:
+
+
+-->
 <Observation xmlns="http://hl7.org/fhir">
   <id value="DGUV-ENLA-Bsp-Unfallereignis"/>
   <meta>
     <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Unfallereignis"/>
   </meta>
-    <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-Pflegeunfall">
-          <extension url="Pflegeunfall">
-              <valueBoolean value="false" />
-          </extension>
-    </extension>
+
+  <!-- Pflegeunfall slicing -->
+  <extension url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-Pflegeunfall">
+      <extension url="Pflegeunfall">
+        <valueBoolean value="true"/>
+      </extension>
+      <extension url="Pflegekasse">
+        <valueReference>
+          <reference value="Pflegekasse/123" />
+        </valueReference>  
+      </extension>
+  </extension>
+
+  <!-- Observation status -->
   <status value="final"/>
+
+  <!-- Beispiel Durchgangsarztverfahren  -->
   <code>
     <coding>
       <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-Verletzungsartenverzeichnis"/>
@@ -17,10 +41,16 @@
       <display value="Schwere Verletzungen und Verletzungskombinationen (Polytrauma) mit einem Injury Severity Score (ISS) zwischen 16 und 24."/>
     </coding>
   </code>
+
+  <!-- VersichertePerson Referenz -->
   <subject> 
     <reference value="Farad, Rudi/T995030511" />
   </subject>
+
+  <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
   <effectiveDateTime value="2018-08-24T13:00:00+00:00"/>
+
+  <!-- Unfallereignis Komponente -->
   <component>
     <code>
       <coding>
@@ -31,6 +61,8 @@
     </code>
     <valueString value="Der Versicherte ist auf dem Weg zum Sechstagerennen mit seinem Motorrad mit einer geschätzten Geschwindigkeit von 60 km/h gegen eine Leitplanke gefahren"/>
   </component>
+
+  <!-- Unfallereignis Komponente -->
   <component>
     <code>
       <coding>
@@ -41,6 +73,8 @@
     </code>
     <valueString value="Starke Schmerzen rechter Oberschenkel, Gefühlsstörung im Fuss"/>
   </component>
+
+  <!-- Unfallereignis Komponente -->
   <component>
     <code>
       <coding>
@@ -51,6 +85,8 @@
     </code>
     <valueString value="Schrittmacher"/>
   </component>
+
+  <!-- Unfallereignis Komponente -->
   <component>
     <code>
       <coding>
@@ -61,4 +97,5 @@
     </code>
     <valueDateTime value="2021-04-01"/>
   </component>
+
 </Observation>

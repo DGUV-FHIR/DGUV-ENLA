@@ -1,10 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Author: 
+    Datum:  
+
+    Die vorliegende Beispiel Datei .... dient der Validierung 
+    der Datenaufnahme zu dem ......
+    
+    Zu beachten ist dabei ...
+
+    Durchzuführende Massnahmen:
+
+
+-->
 <Observation xmlns="http://hl7.org/fhir">
     <id value="DGUV-ENLA-Bsp-Aufnahmebefunde" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Aufnahmebefunde" />
     </meta>
+
+    <!-- Observation status -->
     <status value="final" />
+
+    <!-- Klassifikation des Befundtyps -->
     <category>
         <coding>
             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-BefundKategorie" />
@@ -12,6 +29,8 @@
                 <display value="Vitalparameter" />
         </coding>
     </category>
+
+    <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
     <code>
         <coding>
             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
@@ -19,8 +38,15 @@
             <display value="Aufnahmebefund" />
         </coding>
     </code>
+
+    <!-- VersichertePerson Referenz -->
     <subject>
         <reference value="Patient/T37501234" />
     </subject>
+
+    <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
+    <effectiveDateTime value="2025-09-30T09:30:00+02:00"/>
+
+    <!-- Befund Narrativ -->
     <valueString value="Befundergebnis" />
 </Observation>

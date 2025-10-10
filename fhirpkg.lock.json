@@ -1,16 +1,16 @@
 {
-  "updated": "2025-06-02T11:39:54.9020947+02:00",
+  "updated": "2025-10-09T07:22:46.7003345+02:00",
   "dependencies": {
-    "de.medizininformatikinitiative.kerndatensatz.fall": "1.0.1",
-    "de.medizininformatikinitiative.kerndatensatz.meta": "1.0.3",
     "hl7.fhir.r4.core": "4.0.1",
-    "de.gematik.isik-medikation": "3.0.1",
+    "dguv.basis": "1.3.0",
+    "kbv.basis": "1.7.0",
+    "de.medizininformatikinitiative.kerndatensatz.fall": "2025.0.0",
+    "de.basisprofil.r4": "1.5.4",
+    "de.medizininformatikinitiative.kerndatensatz.meta": "2025.0.1",
+    "de.gematik.isik-medikation": "3.0.6",
     "de.medizininformatikinitiative.kerndatensatz.medikation": "1.0.11",
     "hl7.fhir.uv.ips": "1.0.0",
-    "de.gematik.isik-basismodul": "3.0.1",
-    "de.basisprofil.r4": "1.5.0",
-    "dguv.basis": "1.3.0-Kommentierung",
-    "kbv.basis": "1.6.0"
+    "de.gematik.isik-basismodul": "3.0.1"
   },
   "missing": {}
 }

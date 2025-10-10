@@ -1,20 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Bundle xmlns="http://hl7.org/fhir">
-    <id value="DGUV-ENLA-Bsp-Bundle" />
+<!--
+    Author: 
+    Datum:  
+
+    Die vorliegende Beispiel Datei .... dient der Validierung 
+    der Datenaufnahme zu dem ......
+    
+    Zu beachten ist dabei ...
+
+    Durchzuführende Massnahmen:
+
+
+-->
+<Bundle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns="http://hl7.org/fhir">
+    <id value="5d75b64f-a8a1-49b8-8d33-bd16423b3e6e" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Bundle/DGUV-ENLA-PR-Bundle" />
     </meta>
+
+    <identifier>
+     <!-- Server Anteil der URL--> 
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="urn:uuid:5d75b64f-a8a1-49b8-8d33-bd16423b3e6e" />
+    </identifier> 
+
+    <!-- Dokumenten Art -->
     <type value="document" />
+
+    <!-- Zeitpunkt -->
     <timestamp value="2025-06-10T12:00:00+01:00" />
+    
+    <!-- Erster Eintrag Composition -->
     <entry>
-        <!--fullUrl value="http://fhir.dguv.de/ENLA/180f219f-97a8-486d-99d9-ed631fe4fc57" /-->
-        <fullUrl value="#DGUV-ENLA-Bsp-Composition.xml" />
+        <!-- 0 -->
+        <fullUrl value="urn:uuid:c00f7826-5a3e-49aa-b499-3f8c6599bd2b" />
         <resource>
             <Composition>
-                <id value="180f219f-97a8-486d-99d9-ed631fe4fc57"/> 
-                <!--meta> 
-                    <lastUpdated value="2013-05-28T22:12:21Z"/> 
-                </meta--> 
+                <id value="DGUV-ENLA-PR-Composition"/> 
+                <meta> 
+                    <profile value="http://fhir.dguv.de/ENLA/Composition/DGUV-ENLA-PR-Composition" />
+                </meta> 
                 <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-SonstigeBemerkungen">    
                     <valueString value="Die sonstige Bemerkung." />
                 </extension>    
@@ -23,25 +49,1935 @@
                     <coding>
                         <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-Formtexte" />
                         <code value="F 2102" />
-                        <display value="Entlassungsbericht aus stationärer Behandlung (DAV/VAV/SAV)" />  
+                        <display value="Entlassungsbericht aus stationärer Behandlung (DAV/VAV/SAV)" />
                     </coding>
                 </type>
                 <subject>
-                    <reference value="Patient/4213443" />
+                    <!-- 
+                    Lokale Referenz auf das Profil VersichertePerson:
+                    RelativeURL:
+                    Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba
+                    -->
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba" />
                 </subject>
-                <date value="2025-06-10T11:40:00+01:00" />
+                <date value="2025-06-10T12:00:00+01:00" />
                 <author>
-                    <reference value="Practioner/52436636" />
+                    <!-- 
+                    Lokale Referenz auf das Profil Leistungserbringer:
+                    RelativeURL:
+                    Practitioner/53192032-6365-4659-8cc2-f9a7df67a466
+                    -->
+                    <reference value="urn:uuid:53192032-6365-4659-8cc2-f9a7df67a466" />
                 </author>
-                <title value="Entlassbericht zum Fall ..." />
+                <title value="Entlassungsbericht aus stationärer Behandlung" />
                 <section>
-                    <title value="Unfallversicherungstraeger" />
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="UVTR"/>
+                            <display value="Unfallversicherungsträger"/>
+                        </coding>
+                    </code>
                     <entry>
-                        <!--reference value="#DGUV-ENLA-Bsp-Unfallversicherungstraeger.xml" /-->
-                        <reference value="Organization/Unfallversicherungstraeger" /> 
+                        <!-- 
+                        Auswahl des Unfallversicherungstraeger Objektes:
+                        RelativeURL:
+                        urn:uuid:180f219f-97a8-486d-99d9-ed631fe4fc60
+                        -->
+                        <reference value="urn:uuid:180f219f-97a8-486d-99d9-ed631fe4fc60" />
+                    </entry>
+                </section>
+                <section>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="KRKA"/>
+                            <display value="Krankenkasse"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <!-- 
+                                Auswahl des Krankenkasse Objektes:
+                                RelativeURL:
+                                urn:uuid:446a540f-7d08-4926-98fe-2abd3094aa92
+                        -->                    
+                        <reference value="urn:uuid:446a540f-7d08-4926-98fe-2abd3094aa92" />
+                    </entry>
+                </section>
+                <section>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="VSVH"/>
+                            <display value="Versichertenverhältnis"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <!-- 
+                                Auswahl des Versichertenverhältnis Objektes:
+                                RelativeURL:
+                                urn:uuid:475c6d854-876e-4b9d-8ea9-327a46c9c50f
+                        -->                    
+                        <reference value="urn:uuid:475c6d854-876e-4b9d-8ea9-327a46c9c50f" />
+                    </entry>
+                </section>
+                <section>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="PFKA"/>
+                            <display value="Pflegekasse"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <!-- 
+                                Auswahl des Pflegekasse Objektes:
+                                RelativeURL:
+                                urn:uuid:bf64ac16-926b-4082-968a-f7c088364b83
+                        -->                    
+                        <reference value="urn:uuid:bf64ac16-926b-4082-968a-f7c088364b83" />
+                    </entry>
+                </section>
+                <section>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="UNBT"/>
+                            <display value="Unfallbetrieb"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <!-- 
+                                Auswahl des Unfallbetrieb Objektes:
+                                RelativeURL:
+                                urn:uuid:ef1dc10-a361-4eba-8fcc-073f771df44b
+                        -->                     
+                        <reference value="urn:uuid:bef1dc10-a361-4eba-8fcc-073f771df44b" />
+                    </entry>
+                </section>
+                <section>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="AUIN"/>
+                            <display value="Aufenthaltsinformationen"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <!-- 
+                                Auswahl des Aufenthaltsinformationen Objektes:
+                                RelativeURL:
+                                urn:uuid:a33633b7-ab47-4341-b4e9-c856bb5e5878
+                        -->                    
+                        <reference value="urn:uuid:a33633b7-ab47-4341-b4e9-c856bb5e5878" />
+                    </entry>
+                </section>
+                <section>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="DGFT"/>
+                            <display value="DiagnoseFreitext"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <!-- 
+                                Auswahl des DiagnoseFreitext Objektes:
+                                RelativeURL:
+                                urn:uuid:84507618-4ff5-46d9-9e61-8ab15c9ce2a4
+                        -->                    
+                        <reference value="urn:uuid:84507618-4ff5-46d9-9e61-8ab15c9ce2a4" />
+                    </entry>
+                </section>
+                <section>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="DGST"/>
+                            <display value="DiagnoseStrukturiert"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <!-- 
+                                Auswahl des DiagnoseStrukturiert Objektes:
+                                RelativeURL:
+                                urn:uuid:9acff578-cca8-4f9c-9f58-49e5cb91bbab
+                        -->
+                        <reference value="urn:uuid:9acff578-cca8-4f9c-9f58-49e5cb91bbab" />
+                    </entry>
+                </section>
+                <section>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="THER"/>
+                            <display value="Therapie"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <!-- 
+                                Auswahl des Therapie Objektes:
+                                RelativeURL:
+                                urn:uuid:2288ca98-76e8-4daf-bfb3-dd36c0efbb39
+                        -->                    
+                        <reference value="urn:uuid:2288ca98-76e8-4daf-bfb3-dd36c0efbb39" />
+                    </entry>
+                </section>
+                <section>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="UFER"/>
+                            <display value="Unfallereignis"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <!-- 
+                                Auswahl des Unfallereignis Objektes:
+                                RelativeURL:
+                                urn:uuid:08b39f82-9dbf-4315-92f5-5f0011d37a5c
+                        -->                    
+                        <reference value="urn:uuid:08b39f82-9dbf-4315-92f5-5f0011d37a5c" />
+                    </entry>
+                </section>
+                <section>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="AUBF"/>
+                            <display value="Aufnahmebefunde"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <!-- 
+                                Auswahl des Aufnahmebefunde Objektes:
+                                RelativeURL:
+                                urn:uuid:d39c416d-e1a1-43fd-afef-2763fd66473e
+                        -->                    
+                        <reference value="urn:uuid:d39c416d-e1a1-43fd-afef-2763fd66473e" />
+                    </entry>
+                </section>
+                <section>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="BHVF"/>
+                            <display value="Behandlungsverlauf"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <!-- 
+                                Auswahl des Behandlungsverlauf Objektes:
+                                RelativeURL:
+                                urn:uuid:0c6d28f5-2b67-4308-9d90-6a53ecd9ce7e
+                        -->                    
+                        <reference value="urn:uuid:0c6d28f5-2b67-4308-9d90-6a53ecd9ce7e" />
+                    </entry>
+                </section>
+                <section>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="KOBF"/>
+                            <display value="Konsiliarbefunde"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <!-- 
+                                Auswahl des Konsiliarbefunde Objektes:
+                                RelativeURL:
+                                urn:uuid:0a25be9c-af37-410b-bd43-6c7d3e1f1681
+                        -->                    
+                        <reference value="urn:uuid:0a25be9c-af37-410b-bd43-6c7d3e1f1681" />
+                    </entry>
+                </section>
+                <section>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="ENBF"/>
+                            <display value="Entlassbefunde"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <!-- 
+                                Auswahl des Entlassbefunde Objektes:
+                                RelativeURL:
+                                urn:uuid:4f518fd0-15dd-471a-ab4e-fe5ab3fe979e
+                        -->                    
+                        <reference value="urn:uuid:4f518fd0-15dd-471a-ab4e-fe5ab3fe979e" />
+                    </entry>
+                </section>
+                <section>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="DORE"/>
+                            <display value="Dokumentenreferenz"/>
+                        </coding>
+                    </code>    
+                    <entry>
+                        <!-- 
+                                Auswahl des Dokumentenreferenz Objektes:
+                                RelativeURL:
+                                urn:uuid:c7b24835-f7b8-4480-a0fe-c0653d6c4050
+                        -->                    
+                        <reference value="urn:uuid:c7b24835-f7b8-4480-a0fe-c0653d6c4050" />
+                    </entry>
+                </section>
+                <section>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="THEM"/>
+                            <display value="Therapieempfehlung"/>
+                        </coding>
+                    </code> 
+                    <entry>
+                        <!-- 
+                                Auswahl des Therapieempfehlung Objektes:
+                                RelativeURL:
+                                urn:uuid:f2e30a2a-9070-43aa-9bf2-307ad290eb95
+                        -->                    
+                        <reference value="urn:uuid:f2e30a2a-9070-43aa-9bf2-307ad290eb95" />
+                    </entry>
+                </section>
+                <section>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="MDIN"/>
+                            <display value="MedikationsInformation"/>
+                        </coding>
+                    </code> 
+                    <entry>
+                        <!-- 
+                            Auswahl des MedikationsInformation Objektes:
+                            RelativeURL:
+                            urn:uuid:cf72d600-1c4d-44bf-a8b3-ec100f1a4947
+                        -->                    
+                        <reference value="urn:uuid:cf72d600-1c4d-44bf-a8b3-ec100f1a4947" />
+                    </entry>
+                </section>
+                <section>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="MDWS"/>
+                            <display value="MedikationWirkstoff"/>
+                        </coding>
+                    </code>    
+                    <entry>
+                        <!-- 
+                            Auswahl des MedikationWirkstoff Objektes:
+                            RelativeURL:
+                            urn:uuid:8947dca1-69fd-4184-a55f-8f7f32b0a914
+                        -->                   
+                        <reference value="urn:uuid:8947dca1-69fd-4184-a55f-8f7f32b0a914" />
+                    </entry>
+                </section>
+                <section>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="MDRZ"/>
+                            <display value="MedikationRezeptur"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <!-- 
+                            Auswahl des MedikationRezeptur Objektes:
+                            RelativeURL:
+                            urn:uuid:347b8239-6420-4b3a-a873-6b62e1fa1b0f
+                        -->                    
+                        <reference value="urn:uuid:347b8239-6420-4b3a-a873-6b62e1fa1b0f" />
+                    </entry>
+                </section>
+                <section>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="MDAM"/>
+                            <display value="MedikationArzneimittel"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <!-- 
+                            Auswahl des MedikationArzneimittel Objektes:
+                            RelativeURL:
+                            urn:uuid:4b28cbef-80e7-4838-b15b-b2d9dfc4461b
+                        -->                    
+                        <reference value="urn:uuid:4b28cbef-80e7-4838-b15b-b2d9dfc4461b" />
+                    </entry>
+                </section>
+                <section>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="WBAR"/>
+                            <display value="WeiterbehandelnderArzt"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <!-- 
+                            Auswahl des WeiterbehandelnderArzt Objektes:
+                            RelativeURL:
+                            urn:uuid:ebd25191-272a-4a2f-9b52-8733963b32b8
+                        -->                    
+                        <reference value="urn:uuid:ebd25191-272a-4a2f-9b52-8733963b32b8" />
+                    </entry>
+                </section>
+                <section>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="WBOR"/>
+                            <display value="WeiterbehandelndeOrganisation"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <!-- 
+                            Auswahl des WeiterbehandelndeOrganisation Objektes:
+                            RelativeURL:
+                            urn:uuid:c9643334-ed27-4327-9eff-baff968982a0
+                        -->                    
+                        <reference value="urn:uuid:c9643334-ed27-4327-9eff-baff968982a0" />
+                    </entry>
+                </section>
+                <section>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="RHMS"/>
+                            <display value="RehaMassnahmen"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <!-- 
+                            Auswahl des RehaMassnahmen Objektes:
+                            RelativeURL:
+                            urn:uuid:f9b10f1-b311-49e8-b395-608303bdaa2d
+                        -->                    
+                        <reference value="urn:uuid:f9b10f1-b311-49e8-b395-608303bdaa2d" />
+                    </entry>
+                </section>
+                <section>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="HEMI"/>
+                            <display value="Heilmittel"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <!-- 
+                            Auswahl des Heilmittel Objektes:
+                            RelativeURL:
+                            urn:uuid:8d018e14-21b7-4982-b26f-d3b4812f7a1f
+                        -->                    
+                        <reference value="urn:uuid:8d018e14-21b7-4982-b26f-d3b4812f7a1f" />
+                    </entry>
+                </section>
+                <section>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="HILM"/>
+                            <display value="Hilfsmittel"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <!-- 
+                            Auswahl des Hilfsmittel Objektes:
+                            RelativeURL:
+                            urn:uuid:b77a0cc9-62ff-47c5-96b5-a964f313490d
+                        -->                    
+                        <reference value="urn:uuid:b77a0cc9-62ff-47c5-96b5-a964f313490d" />
+                    </entry>
+                </section>
+                <section>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="BEMS"/>
+                            <display value="BesondereMassnahmen"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <!-- 
+                            Auswahl des BesondereMassnahmen Objektes:
+                            RelativeURL:
+                            urn:uuid:3aecc20f-00e2-4d82-ae7b-a703118c9969
+                        -->                    
+                        <reference value="urn:uuid:3aecc20f-00e2-4d82-ae7b-a703118c9969" />
+                    </entry>
+                </section>
+                <section>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="ARUF"/>
+                            <display value="Arbeitsunfaehigkeit"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <!-- 
+                            Auswahl des Arbeitsunfaehigkeit Objektes:
+                            RelativeURL:
+                            urn:uuid:bbc56617-923d-4076-8bad-43cd861031c7
+                        -->                    
+                        <reference value="urn:uuid:bbc56617-923d-4076-8bad-43cd861031c7" />
+                    </entry>
+                </section>
+                <section>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="PRWT"/>
+                            <display value="PrognoseWiederaufnahmeTaetigkeit"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <!-- 
+                            Auswahl des PrognoseWiederaufnahmeTaetigkeit Objektes:
+                            RelativeURL:
+                            urn:uuid:f8412800-04b9-446b-b83d-2d772af8099b
+                        -->                    
+                        <reference value="urn:uuid:f8412800-04b9-446b-b83d-2d772af8099b" />
+                    </entry>
+                </section>
+                <section>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="STWG"/>
+                            <display value="stufenweiseWiedereingliederung"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <!-- 
+                            Auswahl des stufenweiseWiedereingliederung Objektes:
+                            RelativeURL:
+                            urn:uuid:e04aaff2-34c7-4dfa-80cf-b3c5d5a03058
+                        -->                    
+                        <reference value="urn:uuid:e04aaff2-34c7-4dfa-80cf-b3c5d5a03058" />
+                    </entry>
+                </section>
+                <section>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="DATS"/>
+                            <display value="Datenschutz"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <!-- 
+                            Auswahl des Datenschutz Objektes:
+                            RelativeURL:
+                            urn:uuid:dc5b40d7-1c69-401a-a649-145c79c4b571
+                        -->                    
+                        <reference value="urn:uuid:dc5b40d7-1c69-401a-a649-145c79c4b571" />
+                    </entry>
+                </section>
+                <section>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="DARZ"/>
+                            <display value="DArzt"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <!-- 
+                            Auswahl des DArzt Objektes:
+                            RelativeURL:
+                            urn:uuid:93ad5198-d79b-4436-9e1e-aaa69acb2d08
+                        -->                    
+                        <reference value="urn:uuid:93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
+                    </entry>
+                </section>
+                <section>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="DAOR"/>
+                            <display value="DArztOrganisation"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <!-- 
+                            Auswahl des DArztOrganisation Objektes:
+                            RelativeURL:
+                            urn:uuid:cdc0ceec-dc27-44e5-a7c7-567a754dc912
+                        -->                    
+                        <reference value="urn:uuid:cdc0ceec-dc27-44e5-a7c7-567a754dc912" />
+                    </entry>
+                </section>
+                <section>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="BNEN"/>
+                            <display value="BehandelndeEinrichtung"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <!-- 
+                            Auswahl des BehandelndeEinrichtung Objektes:
+                            RelativeURL:
+                            urn:uuid:f952b0d1-bb04-402d-b0e6-cef800858f98
+                        -->                    
+                        <reference value="urn:uuid:f952b0d1-bb04-402d-b0e6-cef800858f98" />
                     </entry>
                 </section>
             </Composition>    
+        </resource>
+    </entry>
+    <section>
+        <code>
+            <coding>
+                <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                <code value="MDFX"/>
+                <display value="MedikationFreitext"/>
+            </coding>
+        </code>
+        <entry>
+            <!-- 
+                Auswahl des MedikationFreitext Objektes:
+                RelativeURL:
+                urn:uuid:f952b0d1-bb04-402d-b0e6-cef800858f98
+            -->                    
+            <reference value="urn:uuid:f952b0d1-bb04-402d-b0e6-cef800858f98" />
+        </entry>
+    </section>
+    <entry>
+        <!-- 1 -->
+        <fullUrl value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
+        <resource>
+            <Patient xmlns="http://hl7.org/fhir">
+                <id value="DGUV-ENLA-PR-VersichertePerson"/>
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson"/>
+                </meta>   
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                    <h1>Hier finden Sie ein Beispiel einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+                <extension url="http://hl7.org/fhir/StructureDefinition/patient-nationality">
+                <!--extension url="http://hl7.org/fhir/ValueSet/iso3166-1-2|4.0.1" -->      
+                    <extension url="code" >
+                        <valueCodeableConcept>
+                        <coding>
+                            <system value="urn:iso:std:iso:3166" />
+                            <code value="DE" />
+                            <display value="Germany" />
+                        </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="period" >
+                    <valuePeriod>
+                        <start value="2004-11-12"/>
+                        <end value="2024-01-01"/>
+                    </valuePeriod>
+                    </extension>
+                </extension>
+                <identifier>
+                    <type>
+                        <coding>
+                            <system value="http://fhir.de/CodeSystem/identifier-type-de-basis" />
+                            <code value="KVZ10" />
+                        </coding>
+                    </type>
+                    <system value="http://fhir.de/sid/gkv/kvid-10" />
+                    <value value="S123456789" />
+                </identifier>
+                <name>
+                    <use value="official" />
+                    <family value="Mustermann">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+                            <valueString value="Mustermann" />
+                        </extension>
+                    </family> 
+                    <given value="Lionel" />
+                </name>
+                <telecom>
+                    <system value="phone"/>
+                    <value value="0049177/00000000"/>
+                </telecom>
+                <gender value="male"/>
+                <birthDate value="2004-11-12"/>
+                <address>
+                    <type value="both" />
+                    <line value="Musterweg 1">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                            <valueString value="Musterweg" />
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                            <valueString value="1" />
+                        </extension>
+                    </line>
+                    <city value="Musterhausen" />
+                    <postalCode value="11111" />
+                    <country value="DE" />
+                </address>
+            </Patient>
+        </resource>
+    </entry>
+    <entry>
+        <!-- 2 -->
+        <fullUrl value="urn:uuid:53192032-6365-4659-8cc2-f9a7df67a466" />
+        <resource>
+            <Practitioner xmlns="http://hl7.org/fhir">
+                <id value="DGUV-ENLA-PR-Leistungserbringer" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringer"/> 
+                </meta>
+                <identifier> 
+                    <type>
+                        <coding>
+                            <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+                            <code value="LANR" />
+                            <display value="Lifelong physician number" />
+                        </coding>
+                    </type>
+                    <system value="https://fhir.kbv.de/NamingSystem/KBV_NS_Base_ANR" />
+                    <value value="123456799" />
+                </identifier>
+                <name>
+                    <use value="official"/>
+                    <family value="Musteraerztin14">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+                            <valueString value="Musteraerztin14" />
+                        </extension>
+                    </family>
+                    <given value="Maria"/>
+                    <prefix value="Dr.">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+                            <valueCode value="AC" />
+                        </extension>
+                    </prefix>
+                </name>
+            </Practitioner>
+        </resource>
+    </entry>
+    <entry>
+        <!-- 3 -->
+        <fullUrl value="urn:uuid:180f219f-97a8-486d-99d9-ed631fe4fc60" />
+        <resource>            
+            <Organization xmlns="http://hl7.org/fhir">
+                <id value="DGUV-ENLA-PR-Unfallversicherungstraeger" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Unfallversicherungstraeger" />
+                </meta>
+                <!--   Institutionskennzeichen   -->
+                <identifier>
+                    <type>
+                        <coding>
+                            <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+                            <code value="XX" />
+                            <display value="Organization identifier" />
+                        </coding>
+                    </type>
+                    <system value="http://fhir.de/sid/arge-ik/iknr" />
+                    <value value="121192344" />
+                </identifier>
+                <name value="BG Verwaltung Berlin" />
+                <telecom>
+                    <system value="phone"/>
+                    <value value="030 77003-0"/>
+                </telecom>
+                <address>
+                    <type value="both" />
+                    <line value="Markgrafenstraße 18">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                            <valueString value="18" />
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                            <valueString value="Markgrafenstraße." />
+                        </extension>
+                    </line>
+                    <city value="Berlin" />
+                    <postalCode value="10969" />
+                </address>
+            </Organization>
+        </resource>
+    </entry>
+    <entry>
+        <!-- 4 -->
+        <fullUrl value="urn:uuid:446a540f-7d08-4926-98fe-2abd3094aa92" />
+        <resource>
+            <Organization xmlns="http://hl7.org/fhir">
+                <id value="DGUV-ENLA-PR-Krankenkasse" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Krankenkasse" />
+                </meta>
+                <!--Bei einer Familienversicherung wird hier die hauptversicherte Person angegeben.-->
+                <!--extension url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-Mitgliedsname">          
+                <valueHumanName>
+                <family value="Farad" />
+                <given value="Friedrich" />
+                </valueHumanName>
+                </extension -->
+                <!--IK-Nummer-->
+                <identifier>
+                    <type>
+                        <coding>
+                            <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                            <code value="XX"/>
+                            <display value="Organization identifier" />
+                        </coding>
+                    </type>
+                    <system value="http://fhir.de/sid/arge-ik/iknr"/>
+                    <value value="107202793"/>
+                </identifier>
+                <name value="AOK Herzogtum Lauenburg"/>
+                <telecom>
+                    <system value="phone"/>
+                    <value value="01771234"/>
+                </telecom>
+                <address>
+                    <type value="both"/>
+                    <line value="Hauptstr. 91">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                            <valueString value="Hauptstraße"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                            <valueString value="91"/>
+                        </extension>
+                    </line>
+                    <city value="Mölln"/>
+                    <postalCode value="23879"/>
+                    <country value="DE"/>
+                </address>
+            </Organization>
+        </resource>
+    </entry>
+    <entry>
+        <!-- 5 -->
+        <fullUrl value="urn:uuid:475c6d854-876e-4b9d-8ea9-327a46c9c50f" />
+        <resource>
+            <Coverage xmlns="http://hl7.org/fhir">
+                <id value="DGUV-ENLA-PR-VersichertenVerhaeltnis" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Coverage/DGUV-ENLA-PR-VersichertenVerhaeltnis" />
+                </meta>
+                <extension  url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-Familienversicherung">
+                    <extension url="Familienversichert">
+                        <valueBoolean value="true" />
+                    </extension>
+                    <extension url="Mitgliedsname">  
+                        <valueString value="Rudi Fahrad" />
+                    </extension>
+                </extension>
+                <status value="active"/>
+                <beneficiary>
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </beneficiary>
+                <payor>
+                    <reference value="Payor/Versicherung"/>
+                </payor>
+            </Coverage>
+        </resource>
+    </entry>
+    <entry>
+        <!-- 6 -->
+        <fullUrl value="urn:uuid:bf64ac16-926b-4082-968a-f7c088364b83" />
+        <resource>
+            <Organization xmlns="http://hl7.org/fhir">
+                <id value="DGUV-ENLA-PR-Pflegekasse" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Pflegekasse" />
+                </meta>
+                <identifier>
+                    <type>
+                        <coding>
+                            <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+                            <code value="XX" />
+                            <display value="Organization identifier" />
+                        </coding>
+                    </type>
+                    <system value="http://fhir.de/sid/arge-ik/iknr" />
+                    <value value="999999999" />
+                </identifier>
+                <name value="Pflegekasse Nord-Ostwestfalen Süd"/>
+                <telecom>
+                    <system value="phone"/>
+                    <value value="01751234"/>
+                </telecom>
+                <address>
+                    <type value="both"/>
+                    <line value="Nebenstr. 82">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                            <valueString value="Nebenstraße"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                            <valueString value="82"/>
+                        </extension>
+                    </line>
+                    <city value="Mölln"/>
+                    <postalCode value="23879"/>
+                    <country value="DE"/>
+                </address>
+            </Organization>
+        </resource>
+    </entry>
+    <entry>
+        <!-- 7 -->
+        <fullUrl value="urn:uuid:bef1dc10-a361-4eba-8fcc-073f771df44b" />
+        <resource>
+            <Organization xmlns="http://hl7.org/fhir">
+                <id value="DGUV-ENLA-PR-Unfallbetrieb" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Unfallbetrieb" />
+                </meta>
+                <name value="Sankt Augustiner 6 Tage Rennen GmbH"/>
+                <telecom>
+                    <system value="phone"/>
+                    <value value="01761234"/>
+                </telecom>
+                <address>
+                    <type value="both"/>
+                    <line value="Johann-Lafer-Gasse 2">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                            <valueString value="Johann-Lafer-Gasse"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                            <valueString value="2"/>
+                        </extension>
+                    </line>
+                    <city value="Sankt Augustin"/>
+                    <postalCode value="53757"/>
+                    <country value="DE"/>
+                </address>
+            </Organization>
+        </resource>
+    </entry>
+    <entry>
+        <!-- 8 -->
+        <fullUrl value="urn:uuid:a33633b7-ab47-4341-b4e9-c856bb5e5878" />
+        <resource>
+            <Encounter xmlns="http://hl7.org/fhir">
+                <id value="DGUV-ENLA-PR-Aufenthaltsinformationen" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Encounter/DGUV-ENLA-PR-Aufenthaltsinformationen" />
+                </meta>
+                <status value="finished" />
+                <class>
+                    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode" />
+                    <code value="IMP" />
+                    <display value="inpatient encounter" />
+                </class>
+                <subject>
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </subject>
+                <period>
+                    <start value="2024-06-10T12:00:00+01:00" />
+                    <end value="2024-06-17T12:00:00+01:00" />
+                </period>
+                <hospitalization>
+                    <admitSource>
+                        <coding>
+                            <system  value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Aufnahmeart" />
+                            <code value="FB" />
+                            <display value="Folgebehandlung" />
+                        </coding>
+                        <text value="text" />
+                    </admitSource>
+                    <dischargeDisposition>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-EntlassungsVerlegungsgrund" />
+                            <code value="01" />
+                            <display value="Behandlung regulär beendet" />
+                        </coding>
+                    </dischargeDisposition>
+                </hospitalization>
+            </Encounter>
+        </resource>
+    </entry>
+    <entry>
+        <!-- 9 -->
+        <fullUrl value="urn:uuid:84507618-4ff5-46d9-9e61-8ab15c9ce2a4" />
+        <resource>
+            <Condition xmlns="http://hl7.org/fhir">
+                <id value="DGUV-ENLA-PR-DiagnoseFreitext"/>
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseFreitext"/>
+                </meta>
+                <extension url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-Frakturklassifikation">
+                    <extension url="Fraktur">
+                        <valueBoolean value="true"/>
+                    </extension>
+                    <extension url="AO-Klassifikation">
+                        <valueString value="12A 12B 12C"/>
+                    </extension>
+                </extension>
+                <code>
+                    <text value="Hier steht der Freitext!"/>
+                </code>
+                <subject>
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
+                </subject>
+            </Condition>
+        </resource>
+    </entry>
+    <entry>
+        <!-- 10 -->
+        <fullUrl value="urn:uuid:9acff578-cca8-4f9c-9f58-49e5cb91bbab" />
+        <resource>
+            <Condition xmlns="http://hl7.org/fhir">
+                <id value="DGUV-ENLA-PR-DiagnoseStrukturiert"/>
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseStrukturiert"/>
+                </meta>
+                <code>
+                    <coding>
+                        <system value="http://fhir.de/CodeSystem/bfarm/icd-10-gm"/>
+                        <version value="2019"/>
+                        <code value="S06.0"/>
+                        <display value="Gehirnerschütterung"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
+                </subject>
+            </Condition>
+          </resource>
+    </entry>
+    <entry>
+        <!-- 11 -->
+        <fullUrl value="urn:uuid:2288ca98-76e8-4daf-bfb3-dd36c0efbb39" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="DGUV-ENLA-PR-Therapie" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Therapie" />
+                </meta>
+                <status value="final"/>
+                <code>  
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+                        <code value="TH" />
+                        <display value="Therapie" />
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
+                </subject>
+                <valueString value="neurologisches und inneres konsil" />
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <!-- 12 -->
+        <fullUrl value="urn:uuid:08b39f82-9dbf-4315-92f5-5f0011d37a5c" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="DGUV-ENLA-PR-Unfallereignis"/>
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Unfallereignis"/>
+                </meta>
+                <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-Pflegeunfall">
+                    <extension url="Pflegeunfall">
+                        <valueBoolean value="false" />
+                    </extension>
+                </extension>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-Verletzungsartenverzeichnis"/>
+                        <code value="10.1V"/>
+                        <display value="Schwere Verletzungen und Verletzungskombinationen (Polytrauma) mit einem Injury Severity Score (ISS) zwischen 16 und 24."/>
+                    </coding>
+                </code>
+                <subject> 
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </subject>
+                <effectiveDateTime value="2018-08-24T13:00:00+00:00"/>
+                <component>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-UnfallereignisComponents"/>
+                            <code value="03"/>
+                            <display value="Unfallhergang"/>
+                        </coding>
+                    </code>
+                    <valueString value="Der Versicherte ist auf dem Weg zum Sechstagerennen mit seinem Motorrad mit einer geschätzten Geschwindigkeit von 60 km/h gegen eine Leitplanke gefahren"/>
+                </component>
+                <component>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-UnfallereignisComponents"/>
+                            <code value="04"/>
+                            <display value="Beschwerden/Klagen"/>
+                        </coding>
+                    </code>
+                    <valueString value="Starke Schmerzen rechter Oberschenkel, Gefühlsstörung im Fuss"/>
+                </component>
+                <component>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-UnfallereignisComponents"/>
+                            <code value="05"/>
+                            <display value="Beschäftigt als"/>
+                        </coding>
+                    </code>
+                    <valueString value="Schrittmacher"/>
+                </component>
+                <component>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-UnfallereignisComponents"/>
+                            <code value="06"/>
+                            <display value="Beschäftigungsbeginn"/>
+                        </coding>
+                    </code>
+                    <valueDateTime value="2021-04-01"/>
+                </component>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <!-- 13 -->
+        <fullUrl value="urn:uuid:d39c416d-e1a1-43fd-afef-2763fd66473e" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="DGUV-ENLA-PR-Aufnahmebefunde" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Aufnahmebefunde" />
+                </meta>
+                <status value="final" />
+                <category>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-BefundKategorie" />
+                        <code value="vitalparameter" />
+                        <display value="Vitalparameter" />
+                    </coding>
+                </category>
+                <code>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+                        <code value="Aufnahme" />
+                        <display value="Aufnahmebefund" />
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </subject>
+                <valueString value="Befundergebnis" />
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <!-- 14 -->
+        <fullUrl value="urn:uuid:0c6d28f5-2b67-4308-9d90-6a53ecd9ce7e" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="DGUV-ENLA-PR-Behandlungsverlauf" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Behandlungsverlauf" />
+                </meta>
+                <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-Besonderheiten">
+                    <valueString value="Komplikation" />
+                </extension>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+                        <code value="BV" />
+                        <display value="Behandlungsverlauf" />
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </subject>
+                <performer>
+                    <reference value="urn:uuid:93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
+                </performer>
+                <valueString value="Freitext" />
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <!-- 15 -->
+        <fullUrl value="urn:uuid:0a25be9c-af37-410b-bd43-6c7d3e1f1681" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="DGUV-ENLA-PR-Konsiliarbefunde" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Konsiliarbefunde" />
+                </meta>
+                <status value="final" />
+                <category>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-BefundKategorie" />
+                        <code value="vitalparameter" />
+                        <display value="Vitalparameter" />
+                    </coding>
+                </category>
+                <code>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+                        <code value="Konsiliar" />
+                        <display value="Konsiliarbefund" />
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </subject>
+                <valueString value="Befundergebnis" />
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <!-- 16 -->
+        <fullUrl value="urn:uuid:4f518fd0-15dd-471a-ab4e-fe5ab3fe979e" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="DGUV-ENLA-PR-Entlassbefunde" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Entlassbefunde" />
+                </meta>
+                <status value="final" />
+                <category>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-BefundKategorie" />
+                        <code value="vitalparameter" />
+                        <display value="Vitalparameter" />
+                    </coding>
+                </category>
+                <code>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+                        <code value="Entlass" />
+                        <display value="Entlassungsbefund" />
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </subject>
+                <valueString value="Befundergebnis" />
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <!-- 17 -->
+        <fullUrl value="urn:uuid:c7b24835-f7b8-4480-a0fe-c0653d6c4050" />
+        <resource>
+            <DocumentReference xmlns="http://hl7.org/fhir">
+                <id value="DGUV-ENLA-PR-DokumentenReferenz" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/DocumentReference/DGUV-ENLA-PR-DokumentenReferenz"/>
+                </meta>
+                <status value="current" />
+                <subject>
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </subject>
+                <content>
+                    <attachment> 
+                        <contentType value="application/hl7-v3+xml"/> 
+                        <language value="de-DE"/>
+                        <data value="YWRzYWdzYWd2ZnNhdnggMzE0OTMxMGlyaW04NDI3Y29ub3o=" />
+                        <url value="urn:uuid:c7b24835-f7b8-4480-a0fe-c0653d6c4050"/>
+                        <size value="35"/> 
+                        <hash value="2jmj7l5rSw0yVb/vlWAYkK/YBwk="/> 
+                        <title value="Physical"/> 
+                        <creation value="2005-12-24T09:35:00+11:00"/> 
+                    </attachment> 
+                </content>
+            </DocumentReference>
+        </resource>
+    </entry>
+    <entry>
+        <!-- 18 -->
+        <fullUrl value="urn:uuid:f2e30a2a-9070-43aa-9bf2-307ad290eb95" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="DGUV-ENLA-PR-Therapieempfehlung" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Therapieempfehlung" />
+                </meta>
+                <status value="final"/>
+                <code>  
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+                        <code value="THE" />
+                        <display value="Therapieempfehlung" />
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
+                </subject>
+                <valueString value="Regelmässige Wundkontrollen, im Bereich des linken Oberarmes empfehlen wir eine funktionelle lastfreie Behandlung für 6 Wochen postoperationem, etc." />
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <!-- 19 -->
+        <fullUrl value="urn:uuid:cf72d600-1c4d-44bf-a8b3-ec100f1a4947" />
+        <resource>
+            <MedicationStatement xmlns="http://hl7.org/fhir">
+                <id value="DGUV-ENLA-PR-MedikationsInformation" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/MedicationStatement/DGUV-ENLA-PR-MedikationsInformation" />
+                </meta>
+                <status value="active" />
+                <medicationReference>
+                    <reference value="urn:uuid:8947dca1-69fd-4184-a55f-8f7f32b0a914"/>     
+                </medicationReference>
+                <subject>
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba"/>     
+                </subject>  
+                <dosage>
+                    <timing>
+                        <code>
+                            <coding>
+                                <system value="http://hl7.org/fhir/event-timing"/>
+                                <version value="1.0"/>
+                                <code value="MORN"/>
+                                <display value="Morning">
+                                    <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-AnzeigenameDeutsch">
+                                        <valueString value="Morgens"/>
+                                    </extension>
+                                </display>
+                            </coding>
+                        </code>
+                    </timing>
+                    <route>
+                        <coding>
+                            <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_Route_of_Administration_German"/>
+                            <version value="1.0.0"/>
+                            <code value="oral"/>
+                            <display value="oral"/>
+                        </coding>
+                    </route>
+                </dosage>
+            </MedicationStatement>
+        </resource>
+    </entry>
+    <entry>
+        <!-- 20 -->
+        <fullUrl value="urn:uuid:8947dca1-69fd-4184-a55f-8f7f32b0a914" />
+        <resource>
+            <Medication xmlns="http://hl7.org/fhir">
+                <id value="DGUV-ENLA-PR-MedikationWirkstoff" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationWirkstoff" />
+                </meta>
+                <code>
+                    <coding>
+                        <system value="http://fhir.de/CodeSystem/ifa/pzn" />
+                        <code value="98765432" />
+                    </coding>
+                </code>
+                <status value="active"/>
+                <ingredient>
+                    <itemCodeableConcept>
+                        <coding>
+                            <system value="http://fhir.de/CodeSystem/ifa/pzn"/>
+                            <version value="1.0"/>
+                            <code value="98765432"/>
+                            <display value="Paracetamol"/>
+                        </coding>
+                    </itemCodeableConcept>
+                </ingredient>
+                <batch>
+                    <lotNumber value="1234"/>
+                </batch>
+            </Medication>
+        </resource>
+    </entry>
+    <entry>
+        <!-- 21 -->
+        <fullUrl value="urn:uuid:347b8239-6420-4b3a-a873-6b62e1fa1b0f" />
+        <resource>
+            <Medication xmlns="http://hl7.org/fhir">
+                <id value="DGUV-ENLA-PR-MedikationRezeptur" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationRezeptur" />
+                </meta>
+                <code>
+                    <coding>
+                        <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type" />
+                        <code value="rezeptur" />
+                    </coding>
+                </code>
+                <status value="active"/>
+                <manufacturer>
+                    <display value="AbZ Pharma GmbH"/>     
+                </manufacturer>
+                <form>
+                    <coding>
+                        <system value="http://standardterms.edqm.eu"/>
+                        <version value=" 4.0.1"/>
+                        <code value="10100500"/>
+                        <display value="Concentrate for oral suspension"/>
+                    </coding>
+                </form>
+                <ingredient>
+                    <itemCodeableConcept>
+                        <coding>
+                            <system value= "http://fhir.de/CodeSystem/ifa/pzn"/>
+                            <code value="09999011"/>
+                        </coding>
+                    </itemCodeableConcept>
+                </ingredient>
+                <batch>
+                    <lotNumber value="1234"/>
+                </batch>
+            </Medication>
+        </resource>
+    </entry>
+    <entry>
+        <!-- 22 -->
+        <fullUrl value="urn:uuid:4b28cbef-80e7-4838-b15b-b2d9dfc4461b" />
+        <resource>
+            <Medication xmlns="http://hl7.org/fhir">
+                <id value="DGUV-ENLA-PR-MedikationArzneimittel" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationArzneimittel" />
+                </meta>
+                <code>
+                    <coding>
+                        <system value="http://fhir.de/CodeSystem/ifa/pzn" />
+                        <code value="04823572" />
+                    </coding>
+                    <text value="ACC long 600mg" />
+                </code>
+                <status value="active"/>
+                <manufacturer>
+                    <display value="Hexal AG"/>     
+                </manufacturer>
+                <form>
+                    <coding>
+                        <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM" />
+                        <version value="1.15"/>
+                        <code value="BTA"/>
+                        <display value="Brausetabletten"/>
+                    </coding>
+                </form>
+                <batch>
+                    <lotNumber value="1234"/>
+                </batch>
+            </Medication>
+        </resource>
+    </entry>
+    <entry>
+        <!-- 23 -->
+        <fullUrl value="urn:uuid:ebd25191-272a-4a2f-9b52-8733963b32b8" />
+        <resource>
+            <PractitionerRole xmlns="http://hl7.org/fhir">
+                <id value="DGUV-ENLA-PR-WeiterbehandelnderArzt"/>
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/PractitionerRole/DGUV-ENLA-PR-WeiterbehandelnderArzt" />
+                </meta>
+                <practitioner>
+                    <reference value="urn:uuid:53192032-6365-4659-8cc2-f9a7df67a466" />
+                </practitioner>
+                <organization>
+                    <reference value="urn:uuid:c9643334-ed27-4327-9eff-baff968982a0" />
+                </organization>
+                <code>
+                    <coding>
+                        <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_Base_Role_Care" />
+                        <version value="1.6.0"/>
+                        <code value="FA" />
+                        <display value="Fachärztin/-arzt" />
+                    </coding>
+                </code>
+                <specialty>
+                    <coding>
+                        <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BAR2_ARZTNRFACHGRUPPE" />
+                        <version value="1.03"/>
+                        <code value="57" />
+                        <display value="Physikalische und Rehabilitative Medizin/Physiotherapie" />
+                    </coding>
+                </specialty>
+            </PractitionerRole>
+        </resource>
+    </entry>
+    <entry>
+        <!-- 24 -->
+        <fullUrl value="urn:uuid:c9643334-ed27-4327-9eff-baff968982a0" />
+        <resource>
+            <Organization xmlns="http://hl7.org/fhir">
+                <id value="DGUV-ENLA-PR-WeiterbehandelndeOrganisation" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-WeiterbehandelndeOrganisation" />
+                </meta>
+                <identifier>
+                    <type>
+                        <coding>
+                            <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+                            <code value="BSNR" />
+                            <display value="Primary physician office number" />
+                        </coding>
+                    </type>
+                    <system value="https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR" />
+                    <value value="012300004" />
+                </identifier>
+                <identifier>
+                    <type>
+                        <coding>
+                            <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+                            <code value="XX" />
+                            <display value="Organization identifier" />
+                        </coding>
+                    </type>
+                    <system value="http://fhir.de/sid/arge-ik/iknr" />
+                    <value value="123456789" />
+                </identifier>
+                <name value="Praxis Dr. med. Hans Peter Haas" />
+                <telecom>
+                    <system value="phone"/>
+                    <value value="0049 458 66 888"/>
+                </telecom>
+                <address>
+                    <type value="both" />
+                    <line value="Musterstr. 99">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                            <valueString value="99" />
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                            <valueString value="Musterstr." />
+                        </extension>
+                    </line>
+                    <city value="Dortmund" />
+                    <postalCode value="44227" />
+                    <country value="DE" />
+                </address>
+            </Organization>
+        </resource>
+    </entry>
+    <entry>
+        <!-- 25 -->
+        <fullUrl value="urn:uuid:f9b10f1-b311-49e8-b395-608303bdaa2d" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="DGUV-ENLA-PR-RehaMassnahmen" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-RehaMassnahmen" />
+                </meta>
+                <status value="final"/>
+                <code>  
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+                        <code value="RM" />
+                        <display value="RehaMaßnahmen" />
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
+                </subject>
+                <effectiveTiming>
+                    <code>  
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-MassnahmenZeitpunkt" />
+                            <code value="Festzul" />
+                            <display value="Durch Weiterbehandler festzulegen" />
+                        </coding>
+                    </code>
+                </effectiveTiming>
+                <valueCodeableConcept>  
+                    <coding>
+                        <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-IstVerordnet">
+                            <valueBoolean value="true"/>
+                        </extension>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-RehaMassnahmen" />
+                        <code value="EAP" />
+                        <display value="Erweiterte Ambulante Physiotherapie (EAP)" />
+                    </coding>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <!-- 26 -->
+        <fullUrl value="urn:uuid:8d018e14-21b7-4982-b26f-d3b4812f7a1f" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="DGUV-ENLA-PR-Heilmittel" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Heilmittel" />
+                </meta>
+                <status value="final"/>
+                <code>  
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+                        <code value="HEILM" />
+                        <display value="Heilmittel" />
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
+                </subject>
+                <effectiveTiming>
+                    <code  value="http://fhir.dguv.de/ENLA/CodingSystem/DGUV-ENLA-CS-MassnahmenZeitpunkt">
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/ValueSet/DGUV-ENLA-VS-MassnahmenZeitpunkt" />
+                            <code value="Festzul" />
+                            <display value="Durch Weiterbehandler festzulegen" />
+                        </coding>
+                    </code>
+                </effectiveTiming>
+                <valueCodeableConcept>  
+                    <coding>
+                        <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-IstVerordnet">
+                            <valueBoolean value="true"/>
+                        </extension>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Heilmittel" />
+                        <code value="PHYSIO" />
+                        <display value="Physiotherapie" />
+                    </coding>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <!-- 27 -->
+        <fullUrl value="urn:uuid:b77a0cc9-62ff-47c5-96b5-a964f313490d" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="DGUV-ENLA-PR-Hilfsmittel" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Hilfsmittel" />
+                </meta>
+                <status value="final"/>
+                <code>  
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+                        <code value="HILFSM" />
+                        <display value="Hilfsmittel" />
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
+                </subject>
+                <effectiveTiming>
+                    <code  value="http://fhir.dguv.de/ENLA/CodingSystem/DGUV-ENLA-CS-MassnahmenZeitpunkt">
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/ValueSet/DGUV-ENLA-VS-MassnahmenZeitpunkt" />
+                            <code value="Festzul" />
+                            <display value="Durch Weiterbehandler festzulegen" />
+                        </coding>
+                    </code>
+                </effectiveTiming>
+                <valueCodeableConcept>  
+                    <coding>
+                        <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-IstVerordnet">
+                            <valueBoolean value="true"/>
+                        </extension>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Hilfsmittel" />
+                        <code value="PHM" />
+                        <display value="Pflegehilfsmittel" />
+                    </coding>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <!-- 28 -->
+        <fullUrl value="urn:uuid:3aecc20f-00e2-4d82-ae7b-a703118c9969" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="DGUV-ENLA-PR-BesondereMassnahmen" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-BesondereMassnahmen" />
+                </meta>
+                <status value="final"/>
+                <code>  
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+                        <code value="BM" />
+                        <display value="BesondereMaßnahmen" />
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
+                </subject>
+                <effectiveTiming>
+                    <code>  
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-MassnahmenZeitpunkt" />
+                            <code value="Festzul" />
+                            <display value="Durch Weiterbehandler festzulegen" />
+                        </coding>
+                    </code>
+                </effectiveTiming>
+                <valueString value="BesondereMassnahme"/> 
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <!-- 29 -->
+        <fullUrl value="urn:uuid:bbc56617-923d-4076-8bad-43cd861031c7" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="DGUV-ENLA-PR-Arbeitsunfaehigkeit" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Arbeitsunfaehigkeit" />
+                </meta>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+                        <code value="AU" />
+                        <display value="Arbeitsunfähigkeit" />
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </subject>
+                <effectiveDateTime value="2025-07-03" />
+                <performer>
+                    <reference value="urn:uuid:93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
+                </performer>  
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Arbeitsunfaehigkeit" />
+                        <code value="AUBIS" />
+                        <display value="Arbeitsunfähig bis" />
+                    </coding>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <!-- 30 -->
+        <fullUrl value="urn:uuid:f8412800-04b9-446b-b83d-2d772af8099b" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="DGUV-ENLA-PR-PrognoseWiederaufnahmeTaetigkeit" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-PrognoseWiederaufnahmeTaetigkeit" />
+                </meta>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+                        <code value="PT" />
+                        <display value="PrognoseWiederaufnahmeTätigkeit" />
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </subject>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-PrognoseWiederaufnahmeTaetigkeit" />
+                        <code value="WANM" />
+                        <display value="Die bisherige Tätigkeit kann voraussichtlich nicht wiederaufgenommen werden." />
+                    </coding>    
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <!-- 31 -->
+        <fullUrl value="urn:uuid:e04aaff2-34c7-4dfa-80cf-b3c5d5a03058" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="DGUV-ENLA-PR-stufenweiseWiedereingliederung" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-stufenweiseWiedereingliederung" />
+                </meta>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+                        <code value="WE" />
+                        <display value="Wiedereingliederung" />
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </subject>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-stufenweiseWiedereingliederung" />
+                        <code value="Ja" />
+                        <display value="Ja, stufenweise Wiedereingliederung erforderlich" />
+                    </coding>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <!-- 32 -->
+        <fullUrl value="urn:uuid:dc5b40d7-1c69-401a-a649-145c79c4b571" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="DGUV-ENLA-PR-Datenschutz" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Datenschutz" />
+                </meta>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+                        <code value="DS" />
+                        <display value="Datenschutz" />
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
+                </subject>
+                <performer>
+                    <reference value="urn:uuid:93ad5198-d79b-4436-9e1e-aaa69acb2d08"/>
+                </performer>
+                <valueBoolean value="false" />
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <!-- 33 -->
+        <fullUrl value="urn:uuid:93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
+        <resource>
+            <PractitionerRole xmlns="http://hl7.org/fhir">
+                <id value="DGUV-ENLA-PR-DArzt"/>
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/PractitionerRole/DGUV-ENLA-PR-DArzt" />
+                </meta>
+                <practitioner>
+                    <!-- Vorerst wird der Leistungserbringer 53192032-6365-4659-8cc2-f9a7df67a466 verwendet -->
+                    <reference value="urn:uuid:53192032-6365-4659-8cc2-f9a7df67a466" />
+                </practitioner>
+                <organization>
+                    <reference value="urn:uuid:cdc0ceec-dc27-44e5-a7c7-567a754dc912" />
+                </organization>
+                <code>
+                    <coding>
+                        <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_Base_Role_Care" />
+                        <version value="1.6.0" />
+                        <code value="AD" />
+                        <display value="&#196;rztliche(r) DirektorIn" />
+                    </coding>
+                </code>
+                <specialty>
+                    <coding>
+                        <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BAR2_ARZTNRFACHGRUPPE" />
+                        <version value="1.03"/>
+                        <code value="01" />
+                        <display value="Allgemeinmedizin" />
+                    </coding>
+                </specialty>
+            </PractitionerRole>
+        </resource>
+    </entry>
+    <entry>
+        <!-- 34 -->
+        <fullUrl value="urn:uuid:cdc0ceec-dc27-44e5-a7c7-567a754dc912" />
+        <resource>
+            <Organization xmlns="http://hl7.org/fhir">
+                <id value="DGUV-ENLA-PR-DArztOrganisation" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-DArztOrganisation" />
+                </meta>
+                <identifier>
+                    <type>
+                        <coding>
+                            <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+                            <code value="XX" />
+                            <display value="Organization identifier" />
+                        </coding>
+                    </type>
+                    <system value="http://fhir.de/sid/arge-ik/iknr" />
+                    <value value="123456789" />
+                </identifier>
+
+                <name value="Unfallkrankenhaus Berlin"/>
+                <telecom>
+                    <system value="phone"/>
+                    <value value="+1-1234565789"/>
+                </telecom>
+                <address>
+                    <type value="both"/>
+                    <line value="Musterstraße 1">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                            <valueString value="Musterstraße"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                            <valueString value="1"/>
+                        </extension>
+                    </line>
+                    <city value="Berlin"/>
+                    <postalCode value="11111"/>
+                    <country value="DE"/>
+                </address>
+            </Organization>
+        </resource>
+    </entry>
+    <entry>
+        <!-- 35 -->
+        <fullUrl value="urn:uuid:f952b0d1-bb04-402d-b0e6-cef800858f98" />
+        <resource>
+            <Organization xmlns="http://hl7.org/fhir">
+                <id value="DGUV-ENLA-PR-BehandelndeEinrichtung" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-BehandelndeEinrichtung" />
+                </meta>
+                <identifier>
+                    <type>
+                        <coding>
+                            <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+                            <code value="XX" />
+                            <display value="Organization identifier" />
+                        </coding>
+                    </type>
+                    <system value="http://fhir.de/sid/arge-ik/iknr" />
+                    <value value="260530784" />
+                </identifier>
+                <type>  
+                    <coding>
+                        <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel" />
+                        <version value="1.5.0" />
+                        <code value="0100" />
+                        <display value="Innere Medizin" />
+                    </coding>
+                </type>
+                <name value="Unfallkrankenhaus Frechen"/>
+                <telecom>
+                    <system value="phone"/>
+                    <value value="+1-1234565789"/>
+                </telecom>
+                <address>
+                    <type value="both"/>
+                    <line value="Genesungsweg 4">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                            <valueString value="Genesungsweg"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                            <valueString value="4"/>
+                        </extension>
+                    </line>
+                    <city value="Frechen"/>
+                    <postalCode value="50226"/>
+                    <country value="DE"/>
+                </address>
+            </Organization>
+        </resource>
+    </entry>
+    <entry>
+        <!-- 36 -->
+        <fullUrl value="urn:uuid:4c88e3c8-821d-40eb-87fa-1e129b3ccace" />
+        <resource>
+            <Medication xmlns="http://hl7.org/fhir">
+                <id value="DGUV-ENLA-Bsp-MedicationFreitext" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-MedikationFreitext" />
+                </meta>
+                <status value="active"/>
+                <code>
+                    <coding>
+                        <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type"/>
+                        <code value="freitext"/>
+                        <display value="Freitext-Medikation"/>
+                    </coding>
+                    <text value="Hier steht ein Freitext zur Medikation"/>
+                </code>
+            </Medication> 
         </resource>
     </entry>
 </Bundle>

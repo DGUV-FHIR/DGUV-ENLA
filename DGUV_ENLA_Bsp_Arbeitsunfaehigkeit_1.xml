@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="DGUV-ENLA-Bsp-Arbeitsunfaehigkeit" />
+  <meta>
+      <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Arbeitsunfaehigkeit" />
+  </meta>
+
+  <!-- Observation status -->
+  <status value="final"/>
+
+  <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
+  <code>
+      <coding>
+          <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+          <code value="AU" />
+          <display value="Arbeitsunfähigkeit" />
+      </coding>
+  </code>
+
+  <!-- VersichertePerson-->
+  <subject>
+      <reference value="Patient/T37501234" />
+  </subject>
+
+  <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
+  <!-- effectiveDateTime value="2025-07-03" /> -->
+
+  <!-- Behandelnde(-r) Ärtztin/Arzt-->
+  <performer>
+      <reference value="DArzt/T37501234" />
+  </performer>  
+
+  <!-- Art der Arbeitsunfaehigkeit -->  
+  <valueCodeableConcept>
+    <coding>
+        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Arbeitsunfaehigkeit" />
+        <code value="AUBIS" />
+        <display value="Arbeitsunfähig bis" />
+    </coding>
+  </valueCodeableConcept>
+</Observation>

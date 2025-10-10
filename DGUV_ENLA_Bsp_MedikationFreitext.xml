@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Author: Friedhelm Matten
+    Datum:  09.10.2025
+
+    Die vorliegende Beispiel Datei .... dient der Validierung 
+    der Datenaufnahme zu dem ......
+    
+    
+    Zu beachten ist dabei ...
+
+    Durchzuführende Massnahmen:
+
+
+-->
+<Medication xmlns="http://hl7.org/fhir">
+    <id value="DGUV-ENLA-Bsp-MedicationFreitext" />
+    <meta>
+        <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationFreitext" />
+    </meta>
+    
+    <!-- CodeableConcept mit (Frei-)textfeld -->
+    <code>
+        <coding>
+            <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type"/>
+            <code value="freitext"/>
+            <display value="Freitext-Medikation"/>
+        </coding>
+        <text value="Hier steht ein Freitext zur Medikation"/>
+    </code>
+
+    <!-- Medication Status-->
+    <status value="active"/>
+</Medication> 

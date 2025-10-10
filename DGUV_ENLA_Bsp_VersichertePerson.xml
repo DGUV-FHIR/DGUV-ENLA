@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Author: 
+    Datum:  
+
+    Die vorliegende Beispiel Datei .... dient der Validierung 
+    der Datenaufnahme zu dem ......
+    
+    Zu beachten ist dabei ...
+
+    Durchzuführende Massnahmen:
+
+
+-->
 <Patient xmlns="http://hl7.org/fhir">
   <id value="DGUV-ENLA-Bsp-VersichertePerson"/>
   <meta>
@@ -28,6 +41,7 @@
       </valuePeriod>
     </extension>
   </extension>
+
   <identifier>
     <type>
         <coding>
@@ -38,6 +52,7 @@
     <system value="http://fhir.de/sid/gkv/kvid-10" />
     <value value="S123456789" />
   </identifier>
+
   <name>
     <use value="official" />
     <family value="Mustermann">
@@ -47,12 +62,16 @@
     </family> 
     <given value="Lionel" />
   </name>
+
   <telecom>
     <system value="phone"/>
     <value value="0049177/00000000"/>
   </telecom>
+
   <gender value="male"/>
+
   <birthDate value="2004-11-12"/>
+  
   <address>
     <type value="both" />
     <line value="Musterweg 1">

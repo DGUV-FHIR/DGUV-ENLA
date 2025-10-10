@@ -1,10 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Author: 
+    Datum:  
+
+    Die vorliegende Beispiel Datei .... dient der Validierung 
+    der Datenaufnahme zu dem ......
+    
+    Zu beachten ist dabei ...
+
+    Durchzuführende Massnahmen:
+
+
+-->
 <Observation xmlns="http://hl7.org/fhir">
     <id value="DGUV-ENLA-Bsp-Entlassbefunde" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Entlassbefunde" />
     </meta>
+
+    <!-- Observation status -->
     <status value="final" />
+
+    <!-- Kennzeichnung der Befund Kategorie -->
     <category>
         <coding>
             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-BefundKategorie" />
@@ -12,6 +29,8 @@
                 <display value="Vitalparameter" />
         </coding>
     </category>
+
+    <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
     <code>
         <coding>
             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
@@ -19,8 +38,12 @@
             <display value="Entlassungsbefund" />
         </coding>
     </code>
+
+    <!-- Referenz zur versicherten Person-->
     <subject>
         <reference value="Patient/T37501234" />
     </subject>
+
+    <!-- Freitextliches Befund Ergebnis -->
     <valueString value="Befundergebnis" />
 </Observation>

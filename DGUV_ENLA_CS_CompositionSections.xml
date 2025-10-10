@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='utf-8'?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="DGUV-ENLA-CS-CompositionSections" />
+  <url value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+  <version value="0.0.2" />
+  <name value="DGUV_ENLA_CS_CompositionSections" />
+  <title value="Composition Sections (4-letter codes)" />
+  <status value="active" />
+  <caseSensitive value="true" />
+  <content value="complete" />
+  <concept>
+    <code value="ARUF" />
+    <display value="Arbeitsunfaehigkeit" />
+  </concept>
+  <concept>
+    <code value="AUIN" />
+    <display value="Aufenthaltsinformationen" />
+  </concept>
+  <concept>
+    <code value="AUBF" />
+    <display value="Aufnahmebefunde" />
+  </concept>
+  <concept>
+    <code value="BEMS" />
+    <display value="BesondereMassnahmen" />
+  </concept>
+  <concept>
+    <code value="BHVF" />
+    <display value="Behandlungsverlauf" />
+  </concept>
+  <concept>
+    <code value="BNEN" />
+    <display value="BehandelndeEinrichtung" />
+  </concept>
+  <concept>
+    <code value="DATS" />
+    <display value="Datenschutz" />
+  </concept>
+  <concept>
+    <code value="DARZ" />
+    <display value="DArzt" />
+  </concept>
+  <concept>
+    <code value="DAOR" />
+    <display value="DArztOrganisation" />
+  </concept>
+  <concept>
+    <code value="DGFT" />
+    <display value="DiagnoseFreitext" />
+  </concept>
+  <concept>
+    <code value="DGST" />
+    <display value="DiagnoseStrukturiert" />
+  </concept>
+  <concept>
+    <code value="DORE" />
+    <display value="Dokumentenreferenz" />
+  </concept>
+  <concept>
+    <code value="ENBF" />
+    <display value="Entlassbefunde" />
+  </concept>
+  <concept>
+    <code value="HEMI" />
+    <display value="Heilmittel" />
+  </concept>
+  <concept>
+    <code value="HILM" />
+    <display value="Hilfsmittel" />
+  </concept>
+  <concept>
+    <code value="KOBF" />
+    <display value="Konsiliarbefunde" />
+  </concept>
+  <concept>
+    <code value="KRKA" />
+    <display value="Krankenkasse" />
+  </concept>
+  <concept>
+    <code value="​​LEST" />
+    <display value="Leistungserbringer" />
+  </concept>
+  <concept>
+    <code value="MDAM" />
+    <display value="MedikationArzneimittel" />
+  </concept>
+  <concept>
+    <code value="MDFX" />
+    <display value="MedicationFreitext" />
+  </concept>
+  <concept>
+    <code value="MDIN" />
+    <display value="MedikationsInformation" />
+  </concept>
+  <concept>
+    <code value="MDRZ" />
+    <display value="MedikationRezeptur" />
+  </concept>
+  <concept>
+    <code value="MDWS" />
+    <display value="MedikationWirkstoff" />
+  </concept>
+  <concept>
+    <code value="PFKA" />
+    <display value="Pflegekasse" />
+  </concept>
+  <concept>
+    <code value="PRWT" />
+    <display value="PrognoseWiederaufnahmeTaetigkeit" />
+  </concept>
+  <concept>
+    <code value="RHMS" />
+    <display value="RehaMassnahmen" />
+  </concept>
+  <concept>
+    <code value="STWG" />
+    <display value="stufenweiseWiedereingliederung" />
+  </concept>
+  <concept>
+    <code value="THEM" />
+    <display value="Therapieempfehlung" />
+  </concept>
+  <concept>
+    <code value="THER" />
+    <display value="Therapie" />
+  </concept>
+  <concept>
+    <code value="UFER" />
+    <display value="Unfallereignis" />
+  </concept>
+  <concept>
+    <code value="UNBT" />
+    <display value="Unfallbetrieb" />
+  </concept>
+  <concept>
+    <code value="UVTR" />
+    <display value="Unfallversicherungsträger" />
+  </concept>
+  <concept>
+    <code value="VSVH" />
+    <display value="Versichertenverhältnis" />
+  </concept>
+  <concept>
+    <code value="VSPN" />
+    <display value="VersichertePerson" />
+  </concept>
+  <concept>
+    <code value="WBAR" />
+    <display value="WeiterbehandelnderArzt" />
+  </concept>
+  <concept>
+    <code value="WBOR" />
+    <display value="WeiterbehandelndeOrganisation" />
+  </concept>
+  </CodeSystem>

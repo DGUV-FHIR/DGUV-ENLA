@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Author: Friedhelm Matten
+    Datum:  30.09.2025
+
+-->
 <Observation xmlns="http://hl7.org/fhir">
     <id value="DGUV-ENLA-Bsp-Heilmittel" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Heilmittel" />
     </meta>
+
+    <!-- Observation status-->
     <status value="final"/>
+
+    <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
     <code>  
         <coding>
             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
@@ -12,18 +21,24 @@
             <display value="Heilmittel" />
         </coding>
     </code>
+
+    <!-- Referenz zur versicherten Person-->
     <subject>
         <reference value="Farad, Rudi/T995030511"/>
     </subject>
+
+    <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
     <effectiveTiming>
-        <code  value="http://fhir.dguv.de/ENLA/CodingSystem/DGUV-ENLA-CS-MassnahmenZeitpunkt">
+        <code>
             <coding>
-                <system value="http://fhir.dguv.de/ENLA/ValueSet/DGUV-ENLA-VS-MassnahmenZeitpunkt" />
+                <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-MassnahmenZeitpunkt" />
                 <code value="Festzul" />
                 <display value="Durch Weiterbehandler festzulegen" />
             </coding>
         </code>
     </effectiveTiming>
+
+    <!-- verordnete Heilmittel-->
     <valueCodeableConcept>  
         <coding>
             <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-IstVerordnet">
@@ -34,4 +49,6 @@
             <display value="Physiotherapie" />
         </coding>
     </valueCodeableConcept>
+
+
 </Observation>

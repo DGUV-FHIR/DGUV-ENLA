@@ -58,7 +58,7 @@
   </concept>
   <concept>
     <code value="MHM" />
-    <display value="Medizinische Hilfsmittel" />
+    <display value="Medizintechnische Hilfsmittel" />
   </concept>
   <concept>
     <code value="PHM" />
@@ -75,17 +75,5 @@
   <concept>
     <code value="ROLLMOBI" />
     <display value="Rollstühle und Mobilitätshilfen" />
-  </concept>
-  <concept>
-    <code value="KFZH" />
-    <display value="Kraftfahrzeughilfe im Rahmen der medizinischen Rehabilitation" />
-  </concept>
-  <concept>
-    <code value="LTEILHA" />
-    <display value="Leistungen zur Teilhabe am Arbeitsleben (einschl. schulische Rehabilitation)" />
-  </concept>
-  <concept>
-    <code value="HMTEILHL" />
-    <display value="Hilfsmittel zur Teilhabe am Leben in der Gemeinschaft" />
   </concept>
 </CodeSystem>

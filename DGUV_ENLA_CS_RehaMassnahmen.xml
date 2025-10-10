@@ -22,14 +22,18 @@
   </concept>
   <concept>
     <code value="BGSW" />
-    <display value="Berufsgenossenschaftliche stationäre Weiterbehandlung (BGSW) muskuloskeletal oder neurologisch" />
+    <display value="Berufsgenossenschaftliche stationäre Weiterbehandlung (BGSW) muskuloskelettal" />
   </concept>
   <concept>
     <code value="ABMR" />
-    <display value="Arbeitsplatzbezogene Muskuloskeletale Rehabilitation (ABMR)" />
+    <display value="Arbeitsplatzbezogene Muskuloskelettale Rehabilitation (ABMR)" />
   </concept>
   <concept>
     <code value="NR" />
     <display value="Neurologische Reha Phase C/D" />
+  </concept>
+  <concept>
+    <code value="REHASP" />
+    <display value="Reha-Sport/Funktionstraining" />
   </concept>
 </CodeSystem>

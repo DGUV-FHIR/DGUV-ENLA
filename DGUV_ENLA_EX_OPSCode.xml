@@ -1,33 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="DGUV-ENLA-EX-GrundFolgebehandlung" />
-  <url value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-GrundFolgebehandlung" />
+  <id value="DGUV-ENLA-EX-OPSCode" />
+  <url value="http://fhir.dguv.de/ENLA/DGUV-ENLA-EX-OPSCode" />
   <version value="0.0.2" />
-  <name value="DGUV_ENLA_EX_GrundFolgebehandlung" />
-  <title value="Grund einer Folgebehandlung (Erweiterung)" />
+  <name value="DGUV_ENLA_EX_OPSCode" />
+  <title value="OPS-Code (Erweiterung)" />
   <status value="draft" />
   <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
-  <description value="Möglichkeit zur zusätzlichen Angabe des Grundes einer Folgebehandlung" />
+  <description value="Diese Extension ermöglicht die Erweiterung des Attributs “value[x]” in einem Profil vom Typ “Observation” um ein CodeableConcept für OPS-Codes." />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <context>
     <type value="element" />
-    <expression value="Encounter.hospitalization.admitSource" />
+    <expression value="Observation.value[x]" />
   </context>
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
   <snapshot>
     <element id="Extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Extension" />
-      <short value="Optional Extensions Element" />
+      <short value="Optionale Erweiterung für OPSCodes" />
       <definition value="Optional Extension Element - found in all resources." />
       <min value="0" />
       <max value="*" />
@@ -86,12 +80,6 @@
       </mapping>
     </element>
     <element id="Extension.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Extension.extension" />
       <slicing>
         <discriminator>
@@ -107,7 +95,7 @@
       <alias value="extensions" />
       <alias value="user content" />
       <min value="0" />
-      <max value="*" />
+      <max value="0" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -161,19 +149,13 @@
         </extension>
         <code value="http://hl7.org/fhirpath/System.String" />
       </type>
-      <fixedUri value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-GrundFolgebehandlung" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/DGUV-ENLA-EX-OPSCode" />
       <mapping>
         <identity value="rim" />
         <map value="N/A" />
       </mapping>
     </element>
     <element id="Extension.value[x]">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Extension.value[x]" />
       <short value="Value of extension" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
@@ -185,7 +167,7 @@
         <max value="1" />
       </base>
       <type>
-        <code value="string" />
+        <code value="CodeableConcept" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -207,14 +189,22 @@
     </element>
   </snapshot>
   <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="Optionale Erweiterung für OPSCodes" />
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <max value="0" />
+    </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-GrundFolgebehandlung" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/DGUV-ENLA-EX-OPSCode" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
       <type>
-        <code value="string" />
+        <code value="CodeableConcept" />
       </type>
     </element>
   </differential>

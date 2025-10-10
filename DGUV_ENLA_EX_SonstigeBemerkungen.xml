@@ -4,9 +4,10 @@
   <url value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-SonstigeBemerkungen" />
   <version value="0.0.2" />
   <name value="DGUV_ENLA_EX_SonstigeBemerkungen" />
+  <title value="Sonstige Bemerkungen (Erweiterung)" />
   <status value="draft" />
   <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
-  <description value="Sonstige Bemerkungen, z. B. Beratungsbedarf durch Reha-Management des UV-Trägers, Schul- und Schulsportfähigkeit, Kontextfaktoren, besondere Umstände" />
+  <description value="Diese Extension ermöglicht die Angabe sonstiger Bemerkungen zum Gesamt-ENLA, z. B. Beratungsbedarf durch Reha-Management des UV-Trägers, Schul- und Schulsportfähigkeit, Kontextfaktoren, besondere Umstände als Freitext." />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
@@ -19,12 +20,6 @@
   <derivation value="constraint" />
   <snapshot>
     <element id="Extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Extension" />
       <short value="Optional Extensions Element" />
       <definition value="Optional Extension Element - found in all resources." />
@@ -85,12 +80,6 @@
       </mapping>
     </element>
     <element id="Extension.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Extension.extension" />
       <slicing>
         <discriminator>
@@ -106,7 +95,7 @@
       <alias value="extensions" />
       <alias value="user content" />
       <min value="0" />
-      <max value="*" />
+      <max value="0" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -167,12 +156,6 @@
       </mapping>
     </element>
     <element id="Extension.value[x]">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Extension.value[x]" />
       <short value="Sonstige Bemerkungen zum stationären Entlassbericht" />
       <definition value="Sonstige Bemerkungen, z. B. Beratungsbedarf durch Reha-Management des UV-Trägers, Schul- und Schulsportfähigkeit, Kontextfaktoren, besondere Umstände" />
@@ -206,6 +189,10 @@
     </element>
   </snapshot>
   <differential>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <max value="0" />
+    </element>
     <element id="Extension.url">
       <path value="Extension.url" />
       <fixedUri value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-SonstigeBemerkungen" />

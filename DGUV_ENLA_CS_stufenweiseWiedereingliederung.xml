@@ -15,8 +15,8 @@
     </telecom>
   </contact>
   <description value="Dieses CodeSystem enthält Codes und Displays zur Beschreibung der Erfordernis einer stufenweisen Wiedereingliederung." />
- <content value="complete"/>
- <concept>
+  <content value="complete" />
+  <concept>
     <code value="Ja" />
     <display value="Ja, stufenweise Wiedereingliederung erforderlich" />
   </concept>
