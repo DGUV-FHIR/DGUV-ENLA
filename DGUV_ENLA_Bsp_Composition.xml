@@ -88,9 +88,9 @@
             <!-- 
                     Auswahl des Versichertenverhältnis Objektes:
                     RelativeURL:
-                    urn:uuid:475c6d854-876e-4b9d-8ea9-327a46c9c50f
+                    urn:uuid:75c6d854-876e-4b9d-8ea9-327a46c9c50f
             -->                    
-            <reference value="urn:uuid:475c6d854-876e-4b9d-8ea9-327a46c9c50f" />
+            <reference value="urn:uuid:75c6d854-876e-4b9d-8ea9-327a46c9c50f" />
         </entry>
     </section>
     <section>
@@ -430,7 +430,7 @@
                 RelativeURL:
                 urn:uuid:0f9b10f1-b311-49e8-b395-608303bdaa2d
             -->                    
-            <reference value="urn:uuid:f9b10f1-b311-49e8-b395-608303bdaa2d" />
+            <reference value="urn:uuid:0f9b10f1-b311-49e8-b395-608303bdaa2d" />
         </entry>
     </section>
     <section>
@@ -462,9 +462,9 @@
             <!-- 
                 Auswahl des Hilfsmittel Objektes:
                 RelativeURL:
-                urn:uuid:b77a0cc9-62ff-47c5-96b5-a964f313490dl
+                urn:uuid:b77a0cc9-62ff-47c5-96b5-a964f313490d
             -->                    
-            <reference value="urn:uuid:b77a0cc9-62ff-47c5-96b5-a964f313490dl" />
+            <reference value="urn:uuid:b77a0cc9-62ff-47c5-96b5-a964f313490d" />
         </entry>
     </section>
     <section>
