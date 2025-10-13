@@ -631,26 +631,27 @@
                         <reference value="urn:uuid:f952b0d1-bb04-402d-b0e6-cef800858f98" />
                     </entry>
                 </section>
+                <section>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="MDFX"/>
+                            <display value="MedikationFreitext"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <!-- 
+                            Auswahl des MedikationFreitext Objektes:
+                            RelativeURL:
+                            urn:uuid:f952b0d1-bb04-402d-b0e6-cef800858f98
+                        -->                    
+                        <reference value="urn:uuid:f952b0d1-bb04-402d-b0e6-cef800858f98" />
+                    </entry>
+                </section>
             </Composition>    
         </resource>
     </entry>
-    <section>
-        <code>
-            <coding>
-                <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
-                <code value="MDFX"/>
-                <display value="MedikationFreitext"/>
-            </coding>
-        </code>
-        <entry>
-            <!-- 
-                Auswahl des MedikationFreitext Objektes:
-                RelativeURL:
-                urn:uuid:f952b0d1-bb04-402d-b0e6-cef800858f98
-            -->                    
-            <reference value="urn:uuid:f952b0d1-bb04-402d-b0e6-cef800858f98" />
-        </entry>
-    </section>
+
     <entry>
         <!-- 1 -->
         <fullUrl value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
