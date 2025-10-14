@@ -900,7 +900,7 @@
                     <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba" />
                 </beneficiary>
 
-                <!-- Versicherung, die zahlet-->
+                <!-- Versicherung, die zahlt-->
                 <payor>
                     <reference value="urn:uuid:f0f85552-7960-49ab-ad6f-666b3d71f94d"/>
                 </payor>
@@ -1971,6 +1971,72 @@
                 <!-- Möglichkeit einen Freitext einzugeben -->
                 <valueString value="BesondereMassnahme"/> 
             </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <!-- 29 -->
+        <fullUrl value="urn:uuid:bbc56617-923d-4076-8bad-43cd861031c7" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="bbc56617-923d-4076-8bad-43cd861031c7" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Arbeitsunfaehigkeit" />
+                </meta>
+
+                <!-- Observation status -->
+                <status value="final"/>
+
+                <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
+                <code>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+                        <code value="AU" />
+                        <display value="Arbeitsunfähigkeit" />
+                    </coding>
+                </code>
+
+                <!-- VersichertePerson-->
+                <subject>
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </subject>
+
+                <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
+                <effectiveDateTime value="2025-07-03" />
+
+                <!-- Behandelnde(-r) Ärtztin/Arzt-->
+                <performer>
+                    <reference value="urn:uuid:93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
+                </performer>  
+                <!-- 
+                    Attribut "value[x].extension. … .FlexibleAU.value[x].value"
+                    Attribut "value[x].extension. … .FlexibleAU.value[x].unit"
+                    Diese Felder dürfen nur (!) befüllt werden, wenn unter value[x].coding.code/display "AUFLEX"/"Arbeitsunfähig vor aussichtliche Dauer" steht.
+                    Und dann müssen sie es auch.
+                    Attribut "value[x]"
+                    Bei "AF" ("Arbeitsfähig") gibt es KEINE Wiedereingliederung (vgl. DGUV_ENLA_PR_stufenweiseWiedereingliederung).
+
+                    <FlexibleAU>
+                        <value
+                    </FlexibleAU>
+
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Arbeitsunfaehigkeit" />
+                            <code value="AUFLEX" />
+                            <display value="Arbeitsunfähig vor aussichtliche Dauer" />
+                        </coding>
+                    </valueCodeableConcept>
+
+                -->
+                <!-- Art der Arbeitsunfaehigkeit -->  
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Arbeitsunfaehigkeit" />
+                        <code value="AUBIS" />
+                        <display value="Arbeitsunfähig bis" />
+                    </coding>
+                </valueCodeableConcept>
+                </Observation>
         </resource>
     </entry>
     <entry>
