@@ -29,7 +29,7 @@
         <reference value="Farad, Rudi/T995030511"/>
     </subject>
     <valueString value="neurologisches und inneres konsil" >
-        <extension url="http://fhir.dguv.de/ENLA/DGUV-ENLA-EX-OPSCode">
+        <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-OPSCode">
             <valueCodeableConcept>
                 <coding>
                     <system value="http://fhir.de/CodeSystem/bfarm/ops" />
@@ -38,7 +38,7 @@
                 </coding>
             </valueCodeableConcept>
         </extension>
-        <extension url="http://fhir.dguv.de/ENLA/DGUV-ENLA-EX-OPSCode">
+        <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-OPSCode">
             <valueCodeableConcept>
                 <coding>
                     <system value="http://fhir.de/CodeSystem/bfarm/ops" />
