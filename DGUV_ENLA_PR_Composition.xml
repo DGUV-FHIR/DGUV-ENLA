@@ -36744,7 +36744,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Heilmittel" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Heilmittel" />
       </type>
       <condition value="ele-1" />
       <condition value="cmp-2" />
@@ -38121,7 +38121,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Hilfsmittel" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Hilfsmittel" />
       </type>
       <condition value="ele-1" />
       <condition value="cmp-2" />
@@ -52240,7 +52240,7 @@
       <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Heilmittel" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Heilmittel" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -52291,7 +52291,7 @@
       <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Hilfsmittel" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Hilfsmittel" />
       </type>
       <mustSupport value="true" />
     </element>

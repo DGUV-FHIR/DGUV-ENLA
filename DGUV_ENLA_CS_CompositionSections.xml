@@ -86,7 +86,7 @@
   </concept>
   <concept>
     <code value="MDFX" />
-    <display value="MedicationFreitext" />
+    <display value="MedikationFreitext" />
   </concept>
   <concept>
     <code value="MDIN" />

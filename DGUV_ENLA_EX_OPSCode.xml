@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="DGUV-ENLA-EX-OPSCode" />
-  <url value="http://fhir.dguv.de/ENLA/DGUV-ENLA-EX-OPSCode" />
+  <url value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-OPSCode" />
   <version value="0.0.2" />
   <name value="DGUV_ENLA_EX_OPSCode" />
   <title value="OPS-Code (Erweiterung)" />
@@ -149,7 +149,7 @@
         </extension>
         <code value="http://hl7.org/fhirpath/System.String" />
       </type>
-      <fixedUri value="http://fhir.dguv.de/ENLA/DGUV-ENLA-EX-OPSCode" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-OPSCode" />
       <mapping>
         <identity value="rim" />
         <map value="N/A" />
@@ -199,7 +199,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://fhir.dguv.de/ENLA/DGUV-ENLA-EX-OPSCode" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-OPSCode" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
