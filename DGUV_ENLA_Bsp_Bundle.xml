@@ -1050,9 +1050,10 @@
                 <!-- AO Klassifikation-->
                 <extension url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-Frakturklassifikation">
                     <extension url="Fraktur">
-                        <valueBoolean value="false"/>
+                        <valueBoolean value="true"/>
                     </extension>
                     <extension url="AO-Klassifikation">
+                        <valueString value="12A 12B 12C"/>
                     </extension>
                 </extension>
 
@@ -1162,7 +1163,7 @@
                 </extension>
                 <extension url="Pflegekasse">
                     <valueReference>
-                        <reference value="Pflegekasse/123" />
+                        <reference value="urn:uuid:bf64ac16-926b-4082-968a-f7c088364b83" />
                     </valueReference>  
                 </extension>
             </extension>
