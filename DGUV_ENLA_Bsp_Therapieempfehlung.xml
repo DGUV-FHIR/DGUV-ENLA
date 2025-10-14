@@ -24,7 +24,7 @@
 
     <!-- Referenz Versicherte Person -->
     <subject>
-        <reference value="Farad, Rudi/T995030511"/>
+        <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
     </subject>
 
     <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
@@ -32,7 +32,7 @@
 
     <!-- Behandelnde(-r) Ärtztin/Arzt-->
     <performer>
-        <reference value="DArzt/gh45434" />
+        <reference value="urn:uuid:93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
     </performer>
 
     <!-- Freitext für Empfehlungen für weitere therapeutische und diagnostische Maßnahmen -->
