@@ -902,7 +902,7 @@
 
                 <!-- Versicherung, die zahlt-->
                 <payor>
-                    <reference value="urn:uuid:f0f85552-7960-49ab-ad6f-666b3d71f94d"/>
+                    <reference value="urn:uuid:180f219f-97a8-486d-99d9-ed631fe4fc60"/>
                 </payor>
             </Coverage>
         </resource>
@@ -1181,7 +1181,7 @@
 
             <!-- VersichertePerson Referenz -->
             <subject> 
-                <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8b" />
+                <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba" />
             </subject>
 
             <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
