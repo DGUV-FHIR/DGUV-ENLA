@@ -122,7 +122,7 @@
             <!-- 
                     Auswahl des Unfallbetrieb Objektes:
                     RelativeURL:
-                    urn:uuid:ef1dc10-a361-4eba-8fcc-073f771df44b
+                    urn:uuid:bef1dc10-a361-4eba-8fcc-073f771df44b
             -->                     
             <reference value="urn:uuid:bef1dc10-a361-4eba-8fcc-073f771df44b" />
         </entry>
