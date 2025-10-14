@@ -2291,7 +2291,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="http://fhir.dguv.de/ENLA/DGUV-ENLA-EX-OPSCode" />
+        <profile value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-OPSCode" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -2414,7 +2414,7 @@
         </extension>
         <code value="http://hl7.org/fhirpath/System.String" />
       </type>
-      <fixedUri value="http://fhir.dguv.de/ENLA/DGUV-ENLA-EX-OPSCode" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-OPSCode" />
       <mapping>
         <identity value="rim" />
         <map value="N/A" />
@@ -5092,7 +5092,7 @@
       <sliceName value="OPSCode" />
       <type>
         <code value="Extension" />
-        <profile value="http://fhir.dguv.de/ENLA/DGUV-ENLA-EX-OPSCode" />
+        <profile value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-OPSCode" />
       </type>
       <mustSupport value="true" />
       <isModifier value="false" />
