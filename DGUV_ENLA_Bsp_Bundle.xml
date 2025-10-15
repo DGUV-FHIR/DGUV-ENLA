@@ -16,7 +16,7 @@
  xmlns="http://hl7.org/fhir">
     <id value="5d75b64f-a8a1-49b8-8d33-bd16423b3e6e" />
     <meta>
-        <profile value="http://fhir.dguv.de/ENLA/Bundle/DGUV-ENLA-PR-Bundle" />
+        <profile value="http://fhir.dguv.de/ENLA/Bundle/DGUV-ENLA-PR-Bundle|0.0.2" />
     </meta>
 
     <identifier>
@@ -152,7 +152,7 @@
                                 RelativeURL:
                                 urn:uuid:bef1dc10-a361-4eba-8fcc-073f771df44b
                         -->                     
-                        <reference value="urn:uuid:4c88e3c8-821d-40eb-87fa-1e129b3ccacedie " />
+                        <reference value="urn:uuid:bef1dc10-a361-4eba-8fcc-073f771df44b " />
                     </entry>
                 </section>
                 <section>
@@ -643,9 +643,9 @@
                         <!-- 
                             Auswahl des MedikationFreitext Objektes:
                             RelativeURL:
-                            urn:uuid:f952b0d1-bb04-402d-b0e6-cef800858f98
+                            urn:uuid:4c88e3c8-821d-40eb-87fa-1e129b3ccace
                         -->                    
-                        <reference value="urn:uuid:f952b0d1-bb04-402d-b0e6-cef800858f98" />
+                        <reference value="urn:uuid:4c88e3c8-821d-40eb-87fa-1e129b3ccace" />
                     </entry>
                 </section>
             </Composition>    
