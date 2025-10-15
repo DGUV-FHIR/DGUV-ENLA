@@ -707,7 +707,7 @@
         <key value="dguv-Fraktur-1" />
         <severity value="error" />
         <human value="Wenn Fraktur vorliegt, muss AO-Klassifikation gesetzt sein. Wenn keine Fraktur vorliegt, muss AO-Klassifikation leer sein." />
-        <expression value="extension.where(url = 'Fractur').valueBoolean = false or extension.where('AO-Klassifikation').exists()" />
+        <expression value="extension.where(url = 'Fraktur').valueBoolean != false or extension.where('AO-Klassifikation').exists()" />
         <source value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseFreitext" />
       </constraint>
       <mustSupport value="true" />
@@ -3377,7 +3377,7 @@
         <key value="dguv-Fraktur-1" />
         <severity value="error" />
         <human value="Wenn Fraktur vorliegt, muss AO-Klassifikation gesetzt sein. Wenn keine Fraktur vorliegt, muss AO-Klassifikation leer sein." />
-        <expression value="extension.where(url = 'Fractur').valueBoolean = false or extension.where('AO-Klassifikation').exists()" />
+        <expression value="extension.where(url = 'Fraktur').valueBoolean != false or extension.where('AO-Klassifikation').exists()" />
       </constraint>
       <mustSupport value="true" />
     </element>
