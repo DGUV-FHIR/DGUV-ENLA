@@ -16,7 +16,7 @@
  xmlns="http://hl7.org/fhir">
     <id value="5d75b64f-a8a1-49b8-8d33-bd16423b3e6e" />
     <meta>
-        <profile value="http://fhir.dguv.de/ENLA/Bundle/DGUV-ENLA-PR-Bundle|0.0.2" />
+        <profile value="http://fhir.dguv.de/ENLA/Bundle/DGUV-ENLA-PR-Bundle" />
     </meta>
 
     <identifier>
@@ -39,7 +39,7 @@
             <Composition>
                 <id value="c00f7826-5a3e-49aa-b499-3f8c6599bd2b"/> 
                 <meta> 
-                    <profile value="http://fhir.dguv.de/ENLA/Composition/DGUV-ENLA-PR-Composition|0.0.2" />
+                    <profile value="http://fhir.dguv.de/ENLA/Composition/DGUV-ENLA-PR-Composition" />
                 </meta> 
                 <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-SonstigeBemerkungen">    
                     <valueString value="Die sonstige Bemerkung." />
@@ -152,7 +152,7 @@
                                 RelativeURL:
                                 urn:uuid:bef1dc10-a361-4eba-8fcc-073f771df44b
                         -->                     
-                        <reference value="urn:uuid:bef1dc10-a361-4eba-8fcc-073f771df44b " />
+                        <reference value="urn:uuid:bef1dc10-a361-4eba-8fcc-073f771df44b" />
                     </entry>
                 </section>
                 <section>
@@ -659,7 +659,7 @@
             <Patient xmlns="http://hl7.org/fhir">
             <id value="482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
             <meta>
-                <profile value="http://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson|0.0.2"/>
+                <profile value="http://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson"/>
             </meta>   
             <text>
                 <status value="generated"/>
@@ -743,7 +743,7 @@
             <Practitioner xmlns="http://hl7.org/fhir">
                 <id value="53192032-6365-4659-8cc2-f9a7df67a466" />
                 <meta>
-                    <profile value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringer|0.0.2"/> 
+                    <profile value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringer"/> 
                 </meta>
                 <identifier> 
                     <type>
@@ -780,7 +780,7 @@
             <Organization xmlns="http://hl7.org/fhir">
                 <id value="180f219f-97a8-486d-99d9-ed631fe4fc60" />
                 <meta>
-                    <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Unfallversicherungstraeger|0.0.2" />
+                    <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Unfallversicherungstraeger" />
                 </meta>
                 <!--   Institutionskennzeichen   -->
                 <identifier>
@@ -822,7 +822,7 @@
             <Organization xmlns="http://hl7.org/fhir">
                 <id value="446a540f-7d08-4926-98fe-2abd3094aa92" />
                 <meta>
-                    <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Krankenkasse|0.0.2" />
+                    <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Krankenkasse" />
                 </meta>
 
                 <!--IK-Nummer-->
@@ -872,7 +872,7 @@
             <Coverage xmlns="http://hl7.org/fhir">
             <id value="75c6d854-876e-4b9d-8ea9-327a46c9c50f" />
                 <meta>
-                    <profile value="http://fhir.dguv.de/ENLA/Coverage/DGUV-ENLA-PR-VersichertenVerhaeltnis|0.0.2" />
+                    <profile value="http://fhir.dguv.de/ENLA/Coverage/DGUV-ENLA-PR-VersichertenVerhaeltnis" />
                 </meta>
 
             <!--
@@ -914,7 +914,7 @@
             <Organization xmlns="http://hl7.org/fhir">
                 <id value="bf64ac16-926b-4082-968a-f7c088364b83" />
                 <meta>
-                    <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Pflegekasse|0.0.2" />
+                    <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Pflegekasse" />
                 </meta>
                 <!-- Identifikation der Pflegekasse -->
                 <identifier>
@@ -963,7 +963,7 @@
             <Organization xmlns="http://hl7.org/fhir">
                 <id value="bef1dc10-a361-4eba-8fcc-073f771df44b" />
                 <meta>
-                    <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Unfallbetrieb|0.0.2" />
+                    <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Unfallbetrieb" />
                 </meta>
 
                 <!-- Bezeichnung des Unfallbetriebs-->
@@ -1001,7 +1001,7 @@
             <Encounter xmlns="http://hl7.org/fhir">
                 <id value="a33633b7-ab47-4341-b4e9-c856bb5e5878" />
                 <meta>
-                    <profile value="http://fhir.dguv.de/ENLA/Encounter/DGUV-ENLA-PR-Aufenthaltsinformationen|0.0.2" />
+                    <profile value="http://fhir.dguv.de/ENLA/Encounter/DGUV-ENLA-PR-Aufenthaltsinformationen" />
                 </meta>
                 <status value="finished" />
                 <class>
@@ -1043,7 +1043,7 @@
             <Condition xmlns="http://hl7.org/fhir">
                 <id value="84507618-4ff5-46d9-9e61-8ab15c9ce2a4"/>
                 <meta>
-                    <profile value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseFreitext|0.0.2"/>
+                    <profile value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseFreitext"/>
                 </meta>
 
 
@@ -1076,7 +1076,7 @@
             <Condition xmlns="http://hl7.org/fhir">
                 <id value="DGUV-ENLA-Bsp-DiagnoseStrukturiert"/>
                 <meta>
-                    <profile value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseStrukturiert|0.0.2"/>
+                    <profile value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseStrukturiert"/>
                 </meta>
 
                 <!-- Diagnosecode verpflichtend-->
@@ -1104,7 +1104,7 @@
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="2288ca98-76e8-4daf-bfb3-dd36c0efbb39" />
                 <meta>
-                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Therapie|0.0.2" />
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Therapie" />
                 </meta>
 
                 <!-- Observation status-->
@@ -1153,7 +1153,7 @@
             <Observation xmlns="http://hl7.org/fhir">
             <id value="08b39f82-9dbf-4315-92f5-5f0011d37a5c"/>
             <meta>
-                <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Unfallereignis|0.0.2"/>
+                <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Unfallereignis"/>
             </meta>
 
             <!-- Pflegeunfall slicing -->
@@ -1246,7 +1246,7 @@
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="d39c416d-e1a1-43fd-afef-2763fd66473e" />
                 <meta>
-                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Aufnahmebefunde|0.0.2" />
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Aufnahmebefunde" />
                 </meta>
 
                 <!-- Observation status -->
@@ -1290,7 +1290,7 @@
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="0c6d28f5-2b67-4308-9d90-6a53ecd9ce7e" />
                 <meta>
-                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Behandlungsverlauf|0.0.2" />
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Behandlungsverlauf" />
                 </meta>
 
                 <!-- Besonderheiten im Behandlungsverlauf -->
@@ -1340,7 +1340,7 @@
 
                 <id value="DGUV-ENLA-Bsp-Konsiliarbefunde" />
                 <meta>
-                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Konsiliarbefunde|0.0.2" />
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Konsiliarbefunde" />
                 </meta>
 
                 <!-- Observation status -->
@@ -1385,7 +1385,7 @@
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="4f518fd0-15dd-471a-ab4e-fe5ab3fe979e" />
                 <meta>
-                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Entlassbefunde|0.0.2" />
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Entlassbefunde" />
                 </meta>
 
                 <!-- Observation status -->
@@ -1426,7 +1426,7 @@
             <DocumentReference xmlns="http://hl7.org/fhir">
             <id value="c7b24835-f7b8-4480-a0fe-c0653d6c4050" />
             <meta>
-                <profile value="http://fhir.dguv.de/ENLA/DocumentReference/DGUV-ENLA-PR-DokumentenReferenz|0.0.2"/>
+                <profile value="http://fhir.dguv.de/ENLA/DocumentReference/DGUV-ENLA-PR-DokumentenReferenz"/>
             </meta>
 
             <!-- Dokumenten Referenz status -->
@@ -1461,7 +1461,7 @@
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="f2e30a2a-9070-43aa-9bf2-307ad290eb95" />
                 <meta>
-                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Therapieempfehlung|0.0.2" />
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Therapieempfehlung" />
                 </meta>
 
                 <!-- Observation status-->
@@ -1501,7 +1501,7 @@
             <MedicationStatement xmlns="http://hl7.org/fhir">
                 <id value="cf72d600-1c4d-44bf-a8b3-ec100f1a4947" />
                 <meta>
-                    <profile value="http://fhir.dguv.de/ENLA/MedicationStatement/DGUV-ENLA-PR-MedikationsInformation|0.0.2" />
+                    <profile value="http://fhir.dguv.de/ENLA/MedicationStatement/DGUV-ENLA-PR-MedikationsInformation" />
                 </meta>
                 <!-- Medikation status-->
                 <status value="active" />
@@ -1561,7 +1561,7 @@
             <Medication xmlns="http://hl7.org/fhir">
                 <id value="8947dca1-69fd-4184-a55f-8f7f32b0a914" />
                 <meta>
-                    <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationWirkstoff|0.0.2" />
+                    <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationWirkstoff" />
                 </meta>
                 <code>
                     <coding>
@@ -1593,7 +1593,7 @@
             <Medication xmlns="http://hl7.org/fhir">
             <id value="347b8239-6420-4b3a-a873-6b62e1fa1b0f" />
             <meta>
-                <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationWirkstoff|0.0.2" />
+                <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationWirkstoff" />
             </meta>
 
             <code>
@@ -1631,7 +1631,7 @@
             <Medication xmlns="http://hl7.org/fhir">
                 <id value="4b28cbef-80e7-4838-b15b-b2d9dfc4461b" />
                 <meta>
-                    <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationArzneimittel|0.0.2" />
+                    <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationArzneimittel" />
                 </meta>
 
                 <!-- Medikament in codierter Form oder ggf. als Freitext -->
@@ -1675,7 +1675,7 @@
             <PractitionerRole xmlns="http://hl7.org/fhir">
                 <id value="ebd25191-272a-4a2f-9b52-8733963b32b8"/>
                 <meta>
-                    <profile value="http://fhir.dguv.de/ENLA/PractitionerRole/DGUV-ENLA-PR-WeiterbehandelnderArzt|0.0.2" />
+                    <profile value="http://fhir.dguv.de/ENLA/PractitionerRole/DGUV-ENLA-PR-WeiterbehandelnderArzt" />
                 </meta>
 
                 <!-- Behandelnde(-r) Ärtztin/Arzt-->
@@ -1717,7 +1717,7 @@
             <Organization xmlns="http://hl7.org/fhir">
                 <id value="c9643334-ed27-4327-9eff-baff968982a0" />
                 <meta>
-                    <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-WeiterbehandelndeOrganisation|0.0.2" />
+                    <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-WeiterbehandelndeOrganisation" />
                 </meta>
                 <identifier>
                     <type>
@@ -1772,7 +1772,7 @@
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="0f9b10f1-b311-49e8-b395-608303bdaa2d" />
                 <meta>
-                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-RehaMassnahmen|0.0.2" />
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-RehaMassnahmen" />
                 </meta>
 
                 <!-- Observation status -->
@@ -1829,7 +1829,7 @@
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="8d018e14-21b7-4982-b26f-d3b4812f7a1f" />
                 <meta>
-                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Heilmittel|0.0.2" />
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Heilmittel" />
                 </meta>
 
                 <!-- Observation status-->
@@ -1881,7 +1881,7 @@
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="b77a0cc9-62ff-47c5-96b5-a964f313490d" />
                 <meta>
-                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Hilfsmittel|0.0.2" />
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Hilfsmittel" />
                 </meta>
 
                 <!-- Observation status-->
@@ -1933,7 +1933,7 @@
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="3aecc20f-00e2-4d82-ae7b-a703118c9969" />
                 <meta>
-                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-BesondereMassnahmen|0.0.2" />
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-BesondereMassnahmen" />
                 </meta>
 
                 <!-- Observation status -->
@@ -1981,7 +1981,7 @@
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="bbc56617-923d-4076-8bad-43cd861031c7" />
                 <meta>
-                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Arbeitsunfaehigkeit|0.0.2" />
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Arbeitsunfaehigkeit" />
                 </meta>
 
                 <!-- Observation status -->
@@ -2047,7 +2047,7 @@
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="f8412800-04b9-446b-b83d-2d772af8099b" />
                 <meta>
-                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-PrognoseWiederaufnahmeTaetigkeit|0.0.2" />
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-PrognoseWiederaufnahmeTaetigkeit" />
                 </meta>
 
                 <!-- Observation status -->
@@ -2092,7 +2092,7 @@
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="e04aaff2-34c7-4dfa-80cf-b3c5d5a03058" />
                 <meta>
-                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-stufenweiseWiedereingliederung|0.0.2" />
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-stufenweiseWiedereingliederung" />
                 </meta>
 
                 <!-- Observation status -->
@@ -2139,7 +2139,7 @@
             <Observation xmlns="http://hl7.org/fhir">
                 <id value="dc5b40d7-1c69-401a-a649-145c79c4b571" />
                 <meta>
-                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Datenschutz|0.0.2" />
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Datenschutz" />
                 </meta>
 
                 <!-- Observation status -->
@@ -2176,7 +2176,7 @@
             <PractitionerRole xmlns="http://hl7.org/fhir">
             <id value="93ad5198-d79b-4436-9e1e-aaa69acb2d08"/>
             <meta>
-                <profile value="http://fhir.dguv.de/ENLA/PractitionerRole/DGUV-ENLA-PR-DArzt|0.0.2" />
+                <profile value="http://fhir.dguv.de/ENLA/PractitionerRole/DGUV-ENLA-PR-DArzt" />
             </meta>
 
             <!-- Behandelnde(-r) Ärtztin/Arzt--> 
@@ -2219,7 +2219,7 @@
             <Organization xmlns="http://hl7.org/fhir">
                 <id value="cdc0ceec-dc27-44e5-a7c7-567a754dc912" />
                 <meta>
-                    <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-DArztOrganisation|0.0.2" />
+                    <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-DArztOrganisation" />
                 </meta>
 
                 <!-- Identifikation DArzt Organisation -->
@@ -2297,7 +2297,7 @@
            <Organization xmlns="http://hl7.org/fhir">
                 <id value="f952b0d1-bb04-402d-b0e6-cef800858f98" />
                 <meta>
-                    <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-BehandelndeEinrichtung|0.0.2" />
+                    <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-BehandelndeEinrichtung" />
                 </meta>
 
                 <!-- Identifizierung der behandelnde Einrichtung-->
@@ -2357,7 +2357,7 @@
             <Medication xmlns="http://hl7.org/fhir">
                 <id value="4c88e3c8-821d-40eb-87fa-1e129b3ccace" />
                 <meta>
-                    <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationFreitext|0.0.2" />
+                    <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationFreitext" />
                 </meta>
                 
                 <!-- CodeableConcept mit (Frei-)textfeld -->
