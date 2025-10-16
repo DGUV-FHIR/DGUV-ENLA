@@ -707,14 +707,14 @@
         <key value="dguv-Fraktur-1" />
         <severity value="error" />
         <human value="Wenn Fraktur vorliegt, muss AO-Klassifikation gesetzt sein." />
-        <expression value="(extension.where(url = 'Fraktur').valueBoolean = true) implies (extension.where('AO-Klassifikation').value.exists())" />
+        <expression value="(extension.where(url = 'Fraktur').valueBoolean = true) implies (extension.where('AO-Klassifikation').value.exists() and extension.where('AO-Klassifikation').value.as(string).matches('\\S' ))" />
         <source value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseFreitext" />
       </constraint>
       <constraint>
         <key value="dguv-Fraktur-2" />
         <severity value="error" />
         <human value="Wenn keine Fraktur vorliegt, muss AO-Klassifikation leer sein." />
-        <expression value="(extension.where(url = 'Fraktur').value = false) implies (extension.where('AO-Klassifikation').empty or extension.where('AO-Klassifikation').value.empty)" />
+        <expression value="(extension.where(url = 'Fraktur').valueBoolean = false) implies (extension.where('AO-Klassifikation').empty or extension.where('AO-Klassifikation').value.empty)" />
         <source value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseFreitext" />
       </constraint>
       <mustSupport value="true" />
@@ -3384,13 +3384,13 @@
         <key value="dguv-Fraktur-1" />
         <severity value="error" />
         <human value="Wenn Fraktur vorliegt, muss AO-Klassifikation gesetzt sein." />
-        <expression value="(extension.where(url = 'Fraktur').valueBoolean = true) implies (extension.where('AO-Klassifikation').value.exists())" />
+        <expression value="(extension.where(url = 'Fraktur').valueBoolean = true) implies (extension.where('AO-Klassifikation').value.exists() and extension.where('AO-Klassifikation').value.as(string).matches('\\S' ))" />
       </constraint>
       <constraint>
         <key value="dguv-Fraktur-2" />
         <severity value="error" />
         <human value="Wenn keine Fraktur vorliegt, muss AO-Klassifikation leer sein." />
-        <expression value="(extension.where(url = 'Fraktur').value = false) implies (extension.where('AO-Klassifikation').empty or extension.where('AO-Klassifikation').value.empty)" />
+        <expression value="(extension.where(url = 'Fraktur').valueBoolean = false) implies (extension.where('AO-Klassifikation').empty or extension.where('AO-Klassifikation').value.empty)" />
       </constraint>
       <mustSupport value="true" />
     </element>
