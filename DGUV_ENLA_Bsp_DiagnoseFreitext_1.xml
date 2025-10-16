@@ -16,9 +16,6 @@
         <extension url="Fraktur">
             <valueBoolean value="true"/> 
         </extension>
-        <extension url="AO-Klassifikation">
-            <valueString value=""/>
-        </extension>
     </extension>
 
     <!-- Freitextliche Diagnose -->
