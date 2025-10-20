@@ -1074,7 +1074,7 @@
         <fullUrl value="urn:uuid:9acff578-cca8-4f9c-9f58-49e5cb91bbab" />
         <resource>
             <Condition xmlns="http://hl7.org/fhir">
-                <id value="DGUV-ENLA-Bsp-DiagnoseStrukturiert"/>
+                <id value="9acff578-cca8-4f9c-9f58-49e5cb91bbab"/>
                 <meta>
                     <profile value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseStrukturiert"/>
                 </meta>
@@ -1124,7 +1124,7 @@
                 </subject>
                 <!-- OPS-Codes mit Freitext-->
                 <valueString value="neurologisches und inneres konsil" >
-                    <extension url="http://fhir.dguv.de/ENLA/DGUV-ENLA-EX-OPSCode">
+                    <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-OPSCode">
                         <valueCodeableConcept>
                             <coding>
                                 <system value="http://fhir.de/CodeSystem/bfarm/ops" />
@@ -1133,7 +1133,7 @@
                             </coding>
                         </valueCodeableConcept>
                     </extension>
-                    <extension url="http://fhir.dguv.de/ENLA/DGUV-ENLA-EX-OPSCode">
+                    <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-OPSCode">
                         <valueCodeableConcept>
                             <coding>
                                 <system value="http://fhir.de/CodeSystem/bfarm/ops" />
@@ -1338,7 +1338,7 @@
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
 
-                <id value="DGUV-ENLA-Bsp-Konsiliarbefunde" />
+                <id value="0a25be9c-af37-410b-bd43-6c7d3e1f1681" />
                 <meta>
                     <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Konsiliarbefunde" />
                 </meta>
