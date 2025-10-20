@@ -74,6 +74,40 @@
                     <code>
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="VSPN"/>
+                            <display value="VersichertePerson"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <!-- 
+                        Auswahl des VersichertePerson Objektes:
+                        RelativeURL:
+                        urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba
+                        -->
+                        <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                    </entry>
+                </section>
+                <section>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="​​LEST"/>
+                            <display value="Leistungserbringer"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <!-- 
+                        Auswahl des Leistungserbringer Objektes:
+                        RelativeURL:
+                        urn:uuid:53192032-6365-4659-8cc2-f9a7df67a466
+                        -->
+                        <reference value="urn:uuid:53192032-6365-4659-8cc2-f9a7df67a466" />
+                    </entry>
+                </section>
+                <section>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
                             <code value="UVTR"/>
                             <display value="Unfallversicherungsträger"/>
                         </coding>
@@ -614,6 +648,23 @@
                         <reference value="urn:uuid:cdc0ceec-dc27-44e5-a7c7-567a754dc912" />
                     </entry>
                 </section>
+                                <section>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="MDFX"/>
+                            <display value="MedikationFreitext"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <!-- 
+                            Auswahl des MedikationFreitext Objektes:
+                            RelativeURL:
+                            urn:uuid:4c88e3c8-821d-40eb-87fa-1e129b3ccace
+                        -->                    
+                        <reference value="urn:uuid:4c88e3c8-821d-40eb-87fa-1e129b3ccace" />
+                    </entry>
+                </section>
                 <section>
                     <code>
                         <coding>
@@ -631,27 +682,9 @@
                         <reference value="urn:uuid:f952b0d1-bb04-402d-b0e6-cef800858f98" />
                     </entry>
                 </section>
-                <section>
-                    <code>
-                        <coding>
-                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
-                            <code value="MDFX"/>
-                            <display value="MedikationFreitext"/>
-                        </coding>
-                    </code>
-                    <entry>
-                        <!-- 
-                            Auswahl des MedikationFreitext Objektes:
-                            RelativeURL:
-                            urn:uuid:4c88e3c8-821d-40eb-87fa-1e129b3ccace
-                        -->                    
-                        <reference value="urn:uuid:4c88e3c8-821d-40eb-87fa-1e129b3ccace" />
-                    </entry>
-                </section>
             </Composition>    
         </resource>
     </entry>
-
     <entry>
         <!-- 1 -->
         <fullUrl value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
