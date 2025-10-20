@@ -13974,7 +13974,7 @@
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
       <constraint>
-        <key value="nonaertzl-1" />
+        <key value="nonaerztl-1" />
         <severity value="error" />
         <human value="Falls der Wert im NichtAerztlichenKontakt false ist muss die Funktionseinheit leer sein." />
         <expression value="(extension('NichtAertzlicherKontakt').valueBoolean = false) implies (extension('Funktionseinheit').exists().not())" />
@@ -15627,7 +15627,7 @@
       <min value="1" />
       <max value="1" />
       <constraint>
-        <key value="nonaertzl-1" />
+        <key value="nonaerztl-1" />
         <severity value="error" />
         <human value="Falls der Wert im NichtAerztlichenKontakt false ist muss die Funktionseinheit leer sein." />
         <expression value="(extension('NichtAertzlicherKontakt').valueBoolean = false) implies (extension('Funktionseinheit').exists().not())" />
