@@ -25,7 +25,7 @@
       </extension>
       <extension url="Pflegekasse">
         <valueReference>
-          <reference value="Pflegekasse/123" />
+          <reference value="urn:uuid:bf64ac16-926b-4082-968a-f7c088364b83" />
         </valueReference>  
       </extension>
   </extension>
@@ -44,7 +44,7 @@
 
   <!-- VersichertePerson Referenz -->
   <subject> 
-    <reference value="Farad, Rudi/T995030511" />
+    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba" />
   </subject>
 
   <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->

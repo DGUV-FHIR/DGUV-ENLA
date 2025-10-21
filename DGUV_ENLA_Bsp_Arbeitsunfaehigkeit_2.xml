@@ -27,7 +27,7 @@
   </subject>
 
   <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
-  <effectiveDateTime value="2025-07-03" />
+  <!-- <effectiveDateTime value="2025-07-03" />  -->
 
   <!-- Behandelnde(-r) Ärtztin/Arzt-->
   <performer>

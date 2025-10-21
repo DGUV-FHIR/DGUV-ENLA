@@ -11,11 +11,10 @@
     </meta>
 
 
-
     <!-- AO Klassifikation-->
     <extension url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-Frakturklassifikation">
         <extension url="Fraktur">
-            <valueBoolean value="true"/> 
+            <valueBoolean value="false"/> 
         </extension>
         <extension url="AO-Klassifikation">
             <valueString value="12A 12B 12C"/>

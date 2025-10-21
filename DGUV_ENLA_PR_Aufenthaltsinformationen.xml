@@ -72,13 +72,6 @@
         <source value="http://hl7.org/fhir/StructureDefinition/DomainResource" />
       </constraint>
       <constraint>
-        <key value="dguv-hospital-1" />
-        <severity value="error" />
-        <human value="Wenn es sich  um eine Folgebehandlung handelt, muss das Textfeld  Text enthalten!" />
-        <expression value="hospitalization.admitSource.coding.where(code = 'FB').exists() implies hospitalization.admitSource.text.exists()" />
-        <source value="http://fhir.dguv.de/ENLA/Encounter/DGUV-ENLA-PR-Aufenthaltsinformationen" />
-      </constraint>
-      <constraint>
         <key value="dguv-hospital-2" />
         <severity value="error" />
         <human value="Wenn es sich nicht um eine Folgebehandlung handelt, darf  das Textfeld  keinen Text enthalten!" />
@@ -6338,12 +6331,6 @@
       <path value="Encounter" />
       <short value="Falldaten (Aufenhaltszeitraum, Entlassungsgrund und Aufnahmegrund)" />
       <definition value="Dieses Profil enthält Informationen zum Aufenthaltszeitraum sowie Gründe für Aufnahme und Entlassung." />
-      <constraint>
-        <key value="dguv-hospital-1" />
-        <severity value="error" />
-        <human value="Wenn es sich  um eine Folgebehandlung handelt, muss das Textfeld  Text enthalten!" />
-        <expression value="hospitalization.admitSource.coding.where(code = 'FB').exists() implies hospitalization.admitSource.text.exists()" />
-      </constraint>
       <constraint>
         <key value="dguv-hospital-2" />
         <severity value="error" />

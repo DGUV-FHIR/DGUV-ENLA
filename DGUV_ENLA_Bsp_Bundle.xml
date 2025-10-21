@@ -37,7 +37,7 @@
         <fullUrl value="urn:uuid:c00f7826-5a3e-49aa-b499-3f8c6599bd2b" />
         <resource>
             <Composition>
-                <id value="DGUV-ENLA-PR-Composition"/> 
+                <id value="c00f7826-5a3e-49aa-b499-3f8c6599bd2b"/> 
                 <meta> 
                     <profile value="http://fhir.dguv.de/ENLA/Composition/DGUV-ENLA-PR-Composition" />
                 </meta> 
@@ -71,6 +71,43 @@
                 </author>
                 <title value="Entlassungsbericht aus stationärer Behandlung" />
                 <section>
+                    <!-- 1 -->
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="VSPN"/>
+                            <display value="VersichertePerson"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <!-- 
+                        Auswahl des VersichertePerson Objektes:
+                        RelativeURL:
+                        urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba
+                        -->
+                        <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                    </entry>
+                </section>
+                <section>
+                    <!-- 2 -->
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="LEST" />
+                            <display value="Leistungserbringer"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <!-- 
+                        Auswahl des Leistungserbringer Objektes:
+                        RelativeURL:
+                        urn:uuid:53192032-6365-4659-8cc2-f9a7df67a466
+                        -->
+                        <reference value="urn:uuid:53192032-6365-4659-8cc2-f9a7df67a466" />
+                    </entry>
+                </section>
+                <section>
+                    <!-- 3 -->
                     <code>
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
@@ -88,6 +125,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!-- 4 -->
                     <code>
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
@@ -105,6 +143,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!-- 5 -->
                     <code>
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
@@ -122,6 +161,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!-- 6 -->
                     <code>
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
@@ -139,6 +179,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!-- 7 -->
                     <code>
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
@@ -156,6 +197,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!-- 8 -->
                     <code>
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
@@ -173,6 +215,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!-- 9 -->
                     <code>
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
@@ -190,6 +233,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!-- 10 -->
                     <code>
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
@@ -207,6 +251,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!-- 11 -->
                     <code>
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
@@ -224,6 +269,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!-- 12 -->
                     <code>
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
@@ -241,6 +287,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!-- 13 -->
                     <code>
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
@@ -258,6 +305,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!-- 14 -->
                     <code>
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
@@ -275,6 +323,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!-- 15 -->
                     <code>
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
@@ -292,6 +341,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!-- 16 -->
                     <code>
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
@@ -309,6 +359,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!-- 17 -->
                     <code>
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
@@ -326,6 +377,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!-- 18 -->
                     <code>
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
@@ -343,6 +395,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!-- 19 -->
                     <code>
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
@@ -360,6 +413,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!-- 20 -->
                     <code>
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
@@ -377,6 +431,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!-- 21 -->
                     <code>
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
@@ -394,6 +449,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!-- 22 -->
                     <code>
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
@@ -411,6 +467,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!-- 23 -->
                     <code>
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
@@ -428,6 +485,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!-- 24 -->
                     <code>
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
@@ -445,6 +503,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!-- 25 -->
                     <code>
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
@@ -462,6 +521,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!-- 26 -->
                     <code>
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
@@ -479,6 +539,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!-- 27 -->
                     <code>
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
@@ -496,6 +557,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!-- 28 -->
                     <code>
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
@@ -513,6 +575,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!-- 29 -->
                     <code>
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
@@ -530,6 +593,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!-- 30 -->
                     <code>
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
@@ -547,6 +611,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!-- 31 -->
                     <code>
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
@@ -564,6 +629,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!-- 32 -->
                     <code>
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
@@ -581,6 +647,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!-- 33 -->
                     <code>
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
@@ -598,6 +665,7 @@
                     </entry>
                 </section>
                 <section>
+                    <!-- 34 -->
                     <code>
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
@@ -615,6 +683,25 @@
                     </entry>
                 </section>
                 <section>
+                    <!-- 35 -->
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="MDFX"/>
+                            <display value="MedikationFreitext"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <!-- 
+                            Auswahl des MedikationFreitext Objektes:
+                            RelativeURL:
+                            urn:uuid:4c88e3c8-821d-40eb-87fa-1e129b3ccace
+                        -->                    
+                        <reference value="urn:uuid:4c88e3c8-821d-40eb-87fa-1e129b3ccace" />
+                    </entry>
+                </section>
+                <section>
+                    <!-- 36 -->
                     <code>
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
@@ -631,27 +718,9 @@
                         <reference value="urn:uuid:f952b0d1-bb04-402d-b0e6-cef800858f98" />
                     </entry>
                 </section>
-                <section>
-                    <code>
-                        <coding>
-                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
-                            <code value="MDFX"/>
-                            <display value="MedikationFreitext"/>
-                        </coding>
-                    </code>
-                    <entry>
-                        <!-- 
-                            Auswahl des MedikationFreitext Objektes:
-                            RelativeURL:
-                            urn:uuid:f952b0d1-bb04-402d-b0e6-cef800858f98
-                        -->                    
-                        <reference value="urn:uuid:f952b0d1-bb04-402d-b0e6-cef800858f98" />
-                    </entry>
-                </section>
             </Composition>    
         </resource>
     </entry>
-
     <entry>
         <!-- 1 -->
         <fullUrl value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
@@ -900,9 +969,9 @@
                     <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba" />
                 </beneficiary>
 
-                <!-- Versicherung, die zahlet-->
+                <!-- Versicherung, die zahlt-->
                 <payor>
-                    <reference value="urn:uuid:f0f85552-7960-49ab-ad6f-666b3d71f94d"/>
+                    <reference value="urn:uuid:180f219f-97a8-486d-99d9-ed631fe4fc60"/>
                 </payor>
             </Coverage>
         </resource>
@@ -1050,9 +1119,10 @@
                 <!-- AO Klassifikation-->
                 <extension url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-Frakturklassifikation">
                     <extension url="Fraktur">
-                        <valueBoolean value="false"/>
+                        <valueBoolean value="true"/>
                     </extension>
                     <extension url="AO-Klassifikation">
+                        <valueString value="12A 12B 12C"/>
                     </extension>
                 </extension>
 
@@ -1073,7 +1143,7 @@
         <fullUrl value="urn:uuid:9acff578-cca8-4f9c-9f58-49e5cb91bbab" />
         <resource>
             <Condition xmlns="http://hl7.org/fhir">
-                <id value="DGUV-ENLA-Bsp-DiagnoseStrukturiert"/>
+                <id value="9acff578-cca8-4f9c-9f58-49e5cb91bbab"/>
                 <meta>
                     <profile value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseStrukturiert"/>
                 </meta>
@@ -1123,7 +1193,7 @@
                 </subject>
                 <!-- OPS-Codes mit Freitext-->
                 <valueString value="neurologisches und inneres konsil" >
-                    <extension url="http://fhir.dguv.de/ENLA/DGUV-ENLA-EX-OPSCode">
+                    <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-OPSCode">
                         <valueCodeableConcept>
                             <coding>
                                 <system value="http://fhir.de/CodeSystem/bfarm/ops" />
@@ -1132,7 +1202,7 @@
                             </coding>
                         </valueCodeableConcept>
                     </extension>
-                    <extension url="http://fhir.dguv.de/ENLA/DGUV-ENLA-EX-OPSCode">
+                    <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-OPSCode">
                         <valueCodeableConcept>
                             <coding>
                                 <system value="http://fhir.de/CodeSystem/bfarm/ops" />
@@ -1162,7 +1232,7 @@
                 </extension>
                 <extension url="Pflegekasse">
                     <valueReference>
-                        <reference value="Pflegekasse/123" />
+                        <reference value="urn:uuid:bf64ac16-926b-4082-968a-f7c088364b83" />
                     </valueReference>  
                 </extension>
             </extension>
@@ -1181,7 +1251,7 @@
 
             <!-- VersichertePerson Referenz -->
             <subject> 
-                <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8b" />
+                <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba" />
             </subject>
 
             <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
@@ -1337,7 +1407,7 @@
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
 
-                <id value="DGUV-ENLA-Bsp-Konsiliarbefunde" />
+                <id value="0a25be9c-af37-410b-bd43-6c7d3e1f1681" />
                 <meta>
                     <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Konsiliarbefunde" />
                 </meta>
@@ -1590,36 +1660,72 @@
         <fullUrl value="urn:uuid:347b8239-6420-4b3a-a873-6b62e1fa1b0f" />
         <resource>
             <Medication xmlns="http://hl7.org/fhir">
-            <id value="347b8239-6420-4b3a-a873-6b62e1fa1b0f" />
-            <meta>
-                <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationWirkstoff" />
-            </meta>
+                <id value="example-rezeptur-1"/>
+                <meta>
+                    <!-- must be exactly this profile URL -->
+                    <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationRezeptur"/>
+                </meta>
 
-            <code>
-                <coding>
-                    <system value="http://fhir.de/CodeSystem/ifa/pzn" />
-                    <code value="98765432" />
-                </coding>
-                <text value="98765432" />
-            </code>
+                <!-- Text narrative -->
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                    <p><b>Rezeptur</b>: Salicyl-Vaselin 5% (5 g Salicylsäure / 95 g Vaselin auf 100 g)</p>
+                    </div>
+                </text>
 
-            <!-- Medication status -->
-            <status value="active"/>
+                <code>
+                    <coding>
+                        <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type"/>
+                        <code value="rezeptur"/>
+                    </coding>
+                    <text value="Rezeptur: Salicyl-Vaselin 5 %"/>
+                </code>
 
-            <ingredient>
-                <itemCodeableConcept>
-                <coding>
-                    <system value="http://fhir.de/CodeSystem/ifa/pzn"/>
-                    <version value="1.0"/>
-                    <code value="98765432"/>
-                    <display value="Paracetamol"/>
-                </coding>
-                </itemCodeableConcept>
-            </ingredient>
+                <!-- Medication status -->
+                <status value="active"/>
 
-            <batch>
-                <lotNumber value="1234"/>
-                </batch>
+
+                <!-- -->
+                <ingredient>
+                    <itemCodeableConcept>
+                        <text value="Acidum salicylicum (Salicylsäure)"/>
+                    </itemCodeableConcept>
+                    <strength>
+                    <numerator>
+                        <value value="5"/>
+                        <unit value="g"/>
+                        <system value="http://unitsofmeasure.org"/>
+                        <code value="g"/>
+                    </numerator>
+                    <denominator>
+                        <value value="100"/>
+                        <unit value="g"/>
+                        <system value="http://unitsofmeasure.org"/>
+                        <code value="g"/>
+                    </denominator>
+                    </strength>
+                </ingredient>
+
+                <ingredient>
+                    <itemCodeableConcept>
+                        <text value="Vaselinum album"/>
+                    </itemCodeableConcept>
+                    <strength>
+                    <numerator>
+                        <value value="95"/>
+                        <unit value="g"/>
+                        <system value="http://unitsofmeasure.org"/>
+                        <code value="g"/>
+                    </numerator>
+                    <denominator>
+                        <value value="100"/>
+                        <unit value="g"/>
+                        <system value="http://unitsofmeasure.org"/>
+                        <code value="g"/>
+                    </denominator>
+                    </strength>
+                </ingredient>
             </Medication>
         </resource>
     </entry>
@@ -1669,6 +1775,31 @@
     </entry>
     <entry>
         <!-- 23 -->
+        <fullUrl value="urn:uuid:4c88e3c8-821d-40eb-87fa-1e129b3ccace" />
+        <resource>
+            <Medication xmlns="http://hl7.org/fhir">
+                <id value="4c88e3c8-821d-40eb-87fa-1e129b3ccace" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationFreitext" />
+                </meta>
+                
+                <!-- CodeableConcept mit (Frei-)textfeld -->
+                <code>
+                    <coding>
+                        <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type"/>
+                        <code value="freitext"/>
+                        <display value="Freitext-Medikation"/>
+                    </coding>
+                    <text value="Hier steht ein Freitext zur Medikation"/>
+                </code>
+
+                <!-- Medication Status-->
+                <status value="active"/>
+            </Medication> 
+        </resource>
+    </entry>
+    <entry>
+        <!-- 24 -->
         <fullUrl value="urn:uuid:ebd25191-272a-4a2f-9b52-8733963b32b8" />
         <resource>
             <PractitionerRole xmlns="http://hl7.org/fhir">
@@ -1710,7 +1841,7 @@
         </resource>
     </entry>
     <entry>
-        <!-- 24 -->
+        <!-- 25 -->
         <fullUrl value="urn:uuid:c9643334-ed27-4327-9eff-baff968982a0" />
         <resource>
             <Organization xmlns="http://hl7.org/fhir">
@@ -1765,7 +1896,7 @@
         </resource>
     </entry>
     <entry>
-        <!-- 25 -->
+        <!-- 26 -->
         <fullUrl value="urn:uuid:0f9b10f1-b311-49e8-b395-608303bdaa2d" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
@@ -1810,9 +1941,9 @@
                 <!-- Angaben über notwendige Reha-Maßnahmen -->
                 <valueCodeableConcept>  
                     <coding>
-                            <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-IstVerordnet">
+                        <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-IstVerordnet">
                             <valueBoolean value="true"/>
-                            </extension>
+                        </extension>
                         <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-RehaMassnahmen" />
                         <code value="EAP" />
                         <display value="Erweiterte Ambulante Physiotherapie (EAP)" />
@@ -1822,7 +1953,7 @@
         </resource>
     </entry>
     <entry>
-        <!-- 26 -->
+        <!-- 27 -->
         <fullUrl value="urn:uuid:8d018e14-21b7-4982-b26f-d3b4812f7a1f" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
@@ -1874,7 +2005,7 @@
         </resource>
     </entry>
     <entry>
-        <!-- 27 -->
+        <!-- 28 -->
         <fullUrl value="urn:uuid:b77a0cc9-62ff-47c5-96b5-a964f313490d" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
@@ -1926,7 +2057,7 @@
         </resource>
     </entry>
     <entry>
-        <!-- 28 -->
+        <!-- 29 -->
         <fullUrl value="urn:uuid:3aecc20f-00e2-4d82-ae7b-a703118c9969" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
@@ -1975,6 +2106,72 @@
     </entry>
     <entry>
         <!-- 30 -->
+        <fullUrl value="urn:uuid:bbc56617-923d-4076-8bad-43cd861031c7" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="bbc56617-923d-4076-8bad-43cd861031c7" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Arbeitsunfaehigkeit" />
+                </meta>
+
+                <!-- Observation status -->
+                <status value="final"/>
+
+                <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
+                <code>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+                        <code value="AU" />
+                        <display value="Arbeitsunfähigkeit" />
+                    </coding>
+                </code>
+
+                <!-- VersichertePerson-->
+                <subject>
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </subject>
+
+                <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
+                <effectiveDateTime value="2025-07-03" />
+
+                <!-- Behandelnde(-r) Ärtztin/Arzt-->
+                <performer>
+                    <reference value="urn:uuid:93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
+                </performer>  
+                <!-- 
+                    Attribut "value[x].extension. … .FlexibleAU.value[x].value"
+                    Attribut "value[x].extension. … .FlexibleAU.value[x].unit"
+                    Diese Felder dürfen nur (!) befüllt werden, wenn unter value[x].coding.code/display "AUFLEX"/"Arbeitsunfähig vor aussichtliche Dauer" steht.
+                    Und dann müssen sie es auch.
+                    Attribut "value[x]"
+                    Bei "AF" ("Arbeitsfähig") gibt es KEINE Wiedereingliederung (vgl. DGUV_ENLA_PR_stufenweiseWiedereingliederung).
+
+                    <FlexibleAU>
+                        <value
+                    </FlexibleAU>
+
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Arbeitsunfaehigkeit" />
+                            <code value="AUFLEX" />
+                            <display value="Arbeitsunfähig vor aussichtliche Dauer" />
+                        </coding>
+                    </valueCodeableConcept>
+
+                -->
+                <!-- Art der Arbeitsunfaehigkeit -->  
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Arbeitsunfaehigkeit" />
+                        <code value="AUBIS" />
+                        <display value="Arbeitsunfähig bis" />
+                    </coding>
+                </valueCodeableConcept>
+                </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <!-- 31 -->
         <fullUrl value="urn:uuid:f8412800-04b9-446b-b83d-2d772af8099b" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
@@ -2019,7 +2216,7 @@
         </resource>
     </entry>
     <entry>
-        <!-- 31 -->
+        <!-- 32 -->
         <fullUrl value="urn:uuid:e04aaff2-34c7-4dfa-80cf-b3c5d5a03058" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
@@ -2066,7 +2263,7 @@
         </resource>
     </entry>
     <entry>
-        <!-- 32 -->
+        <!-- 33 -->
         <fullUrl value="urn:uuid:dc5b40d7-1c69-401a-a649-145c79c4b571" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
@@ -2082,7 +2279,7 @@
                 <code>
                     <coding>
                         <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
-                        <code value="DS" />
+                        <code value="DATS" />
                         <display value="Datenschutz" />
                     </coding>
                 </code>
@@ -2103,7 +2300,7 @@
         </resource>
     </entry>
     <entry>
-        <!-- 33 -->
+        <!-- 34 -->
         <fullUrl value="urn:uuid:93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
         <resource>
             <PractitionerRole xmlns="http://hl7.org/fhir">
@@ -2146,7 +2343,7 @@
         </resource>
     </entry>
     <entry>
-        <!-- 34 -->
+        <!-- 35 -->
         <fullUrl value="urn:uuid:cdc0ceec-dc27-44e5-a7c7-567a754dc912" />
         <resource>
             <Organization xmlns="http://hl7.org/fhir">
@@ -2224,7 +2421,7 @@
         </resource>
     </entry>
     <entry>
-        <!-- 35 -->
+        <!-- 36 -->
         <fullUrl value="urn:uuid:f952b0d1-bb04-402d-b0e6-cef800858f98" />
         <resource>
            <Organization xmlns="http://hl7.org/fhir">
@@ -2281,31 +2478,6 @@
                     <country value="DE"/>
                 </address>
             </Organization>
-        </resource>
-    </entry>
-    <entry>
-        <!-- 36 -->
-        <fullUrl value="urn:uuid:4c88e3c8-821d-40eb-87fa-1e129b3ccace" />
-        <resource>
-            <Medication xmlns="http://hl7.org/fhir">
-                <id value="4c88e3c8-821d-40eb-87fa-1e129b3ccace" />
-                <meta>
-                    <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationFreitext" />
-                </meta>
-                
-                <!-- CodeableConcept mit (Frei-)textfeld -->
-                <code>
-                    <coding>
-                        <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type"/>
-                        <code value="freitext"/>
-                        <display value="Freitext-Medikation"/>
-                    </coding>
-                    <text value="Hier steht ein Freitext zur Medikation"/>
-                </code>
-
-                <!-- Medication Status-->
-                <status value="active"/>
-            </Medication> 
         </resource>
     </entry>
 </Bundle>

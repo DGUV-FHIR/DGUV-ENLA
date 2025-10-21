@@ -706,8 +706,15 @@
       <constraint>
         <key value="dguv-Fraktur-1" />
         <severity value="error" />
-        <human value="Wenn Fraktur vorliegt, muss AO-Klassifikation gesetzt sein. Wenn keine Fraktur vorliegt, muss AO-Klassifikation leer sein." />
-        <expression value="extension.where(url = 'Fractur').valueBoolean = false or extension.where('AO-Klassifikation').exists()" />
+        <human value="Wenn Fraktur vorliegt, muss AO-Klassifikation gesetzt sein." />
+        <expression value="(extension.where(url = 'Fraktur').valueBoolean = true) implies (extension.where('AO-Klassifikation').value.exists() and extension.where('AO-Klassifikation').value.as(string).matches('\\S' ))" />
+        <source value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseFreitext" />
+      </constraint>
+      <constraint>
+        <key value="dguv-Fraktur-2" />
+        <severity value="error" />
+        <human value="Wenn keine Fraktur vorliegt, muss AO-Klassifikation leer sein." />
+        <expression value="(extension.where(url = 'Fraktur').valueBoolean = false) implies (where(url = 'AO-Klassifikation').empty())" />
         <source value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseFreitext" />
       </constraint>
       <mustSupport value="true" />
@@ -3376,8 +3383,14 @@
       <constraint>
         <key value="dguv-Fraktur-1" />
         <severity value="error" />
-        <human value="Wenn Fraktur vorliegt, muss AO-Klassifikation gesetzt sein. Wenn keine Fraktur vorliegt, muss AO-Klassifikation leer sein." />
-        <expression value="extension.where(url = 'Fractur').valueBoolean = false or extension.where('AO-Klassifikation').exists()" />
+        <human value="Wenn Fraktur vorliegt, muss AO-Klassifikation gesetzt sein." />
+        <expression value="(extension.where(url = 'Fraktur').valueBoolean = true) implies (extension.where('AO-Klassifikation').value.exists() and extension.where('AO-Klassifikation').value.as(string).matches('\\S' ))" />
+      </constraint>
+      <constraint>
+        <key value="dguv-Fraktur-2" />
+        <severity value="error" />
+        <human value="Wenn keine Fraktur vorliegt, muss AO-Klassifikation leer sein." />
+        <expression value="(extension.where(url = 'Fraktur').valueBoolean = false) implies (where(url = 'AO-Klassifikation').empty())" />
       </constraint>
       <mustSupport value="true" />
     </element>
