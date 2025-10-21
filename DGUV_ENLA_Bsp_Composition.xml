@@ -63,7 +63,7 @@
         <code>
             <coding>
                 <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
-                <code value="LEST"/>
+                <code value="LEST" />
                 <display value="Leistungserbringer"/>
             </coding>
         </code>
