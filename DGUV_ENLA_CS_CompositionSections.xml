@@ -77,7 +77,7 @@
     <display value="Krankenkasse" />
   </concept>
   <concept>
-    <code value="​​LEST" />
+    <code value="LEST" />
     <display value="Leistungserbringer" />
   </concept>
   <concept>
