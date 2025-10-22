@@ -1314,7 +1314,7 @@
           <type value="value" />
           <path value="resource.meta.profile" />
         </discriminator>
-        <rules value="open" />
+        <rules value="closed" />
       </slicing>
       <short value="Entry in the bundle - will have a resource or information" />
       <definition value="An entry in a bundle resource - will either contain a resource or information about a resource (transactions and history only)." />
@@ -3808,7 +3808,7 @@
       <short value="Entry in the bundle - will have a resource or information" />
       <definition value="An entry in a bundle resource - will either contain a resource or information about a resource (transactions and history only)." />
       <min value="1" />
-      <max value="*" />
+      <max value="1" />
       <base>
         <path value="Bundle.entry" />
         <min value="0" />
@@ -48957,7 +48957,7 @@
           <type value="value" />
           <path value="resource.meta.profile" />
         </discriminator>
-        <rules value="open" />
+        <rules value="closed" />
       </slicing>
       <min value="1" />
       <mustSupport value="true" />
@@ -48982,6 +48982,7 @@
       <path value="Bundle.entry" />
       <sliceName value="VersichertePerson" />
       <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Bundle.entry:VersichertePerson.resource">
