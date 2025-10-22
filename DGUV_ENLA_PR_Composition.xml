@@ -4059,7 +4059,7 @@
       <short value="Composition is broken into sections" />
       <definition value="The root of the sections that make up the composition." />
       <min value="1" />
-      <max value="*" />
+      <max value="1" />
       <base>
         <path value="Composition.section" />
         <min value="0" />
@@ -53526,6 +53526,7 @@
       <path value="Composition.section" />
       <sliceName value="VersichertePerson" />
       <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:VersichertePerson.code">
