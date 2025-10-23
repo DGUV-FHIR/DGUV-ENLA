@@ -10,7 +10,7 @@
   <content value="complete" />
   <concept>
     <code value="ARUF" />
-    <display value="Arbeitsunfaehigkeit" />
+    <display value="Arbeitsunfähigkeit" />
   </concept>
   <concept>
     <code value="AUIN" />
@@ -22,7 +22,7 @@
   </concept>
   <concept>
     <code value="BEMS" />
-    <display value="BesondereMassnahmen" />
+    <display value="Besondere Maßnahmen" />
   </concept>
   <concept>
     <code value="BHVF" />
@@ -30,7 +30,7 @@
   </concept>
   <concept>
     <code value="BNEN" />
-    <display value="BehandelndeEinrichtung" />
+    <display value="Behandelnde Einrichtung" />
   </concept>
   <concept>
     <code value="DATS" />
@@ -38,19 +38,19 @@
   </concept>
   <concept>
     <code value="DARZ" />
-    <display value="DArzt" />
+    <display value="D-Arzt" />
   </concept>
   <concept>
     <code value="DAOR" />
-    <display value="DArztOrganisation" />
+    <display value="D-Arzt-Organisation" />
   </concept>
   <concept>
     <code value="DGFT" />
-    <display value="DiagnoseFreitext" />
+    <display value="Diagnose - Freitext" />
   </concept>
   <concept>
     <code value="DGST" />
-    <display value="DiagnoseStrukturiert" />
+    <display value="Diagnose - strukturiert" />
   </concept>
   <concept>
     <code value="DORE" />
@@ -82,23 +82,23 @@
   </concept>
   <concept>
     <code value="MDAM" />
-    <display value="MedikationArzneimittel" />
+    <display value="Medikation - Arzneimittel" />
   </concept>
   <concept>
     <code value="MDFX" />
-    <display value="MedikationFreitext" />
+    <display value="Medikation - Freitext" />
   </concept>
   <concept>
     <code value="MDIN" />
-    <display value="MedikationsInformation" />
+    <display value="Medikationsinformation" />
   </concept>
   <concept>
     <code value="MDRZ" />
-    <display value="MedikationRezeptur" />
+    <display value="Medikation - Rezeptur" />
   </concept>
   <concept>
     <code value="MDWS" />
-    <display value="MedikationWirkstoff" />
+    <display value="Medikation - Wirkstoff" />
   </concept>
   <concept>
     <code value="PFKA" />
@@ -106,15 +106,15 @@
   </concept>
   <concept>
     <code value="PRWT" />
-    <display value="PrognoseWiederaufnahmeTaetigkeit" />
+    <display value="Prognose Wiederaufnahme Tätigkeit" />
   </concept>
   <concept>
     <code value="RHMS" />
-    <display value="RehaMassnahmen" />
+    <display value="Reha-Maßnahmen" />
   </concept>
   <concept>
     <code value="STWG" />
-    <display value="stufenweiseWiedereingliederung" />
+    <display value="Stufenweise Wiedereingliederung" />
   </concept>
   <concept>
     <code value="THEM" />
@@ -142,14 +142,14 @@
   </concept>
   <concept>
     <code value="VSPN" />
-    <display value="VersichertePerson" />
+    <display value="Versicherte Person" />
   </concept>
   <concept>
     <code value="WBAR" />
-    <display value="WeiterbehandelnderArzt" />
+    <display value="Weiterbehandelnder Arzt" />
   </concept>
   <concept>
     <code value="WBOR" />
-    <display value="WeiterbehandelndeOrganisation" />
+    <display value="Weiterbehandelnde Organisation" />
   </concept>
   </CodeSystem>

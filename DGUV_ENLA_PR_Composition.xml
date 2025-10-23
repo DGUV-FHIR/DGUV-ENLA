@@ -3386,7 +3386,6 @@
           <type value="value" />
           <path value="code.coding.code" />
         </discriminator>
-        <ordered value="true" />
         <rules value="closed" />
       </slicing>
       <short value="Auflistung ENLA-Profiltypen in ENLA" />
@@ -4060,7 +4059,7 @@
       <short value="Composition is broken into sections" />
       <definition value="The root of the sections that make up the composition." />
       <min value="1" />
-      <max value="*" />
+      <max value="1" />
       <base>
         <path value="Composition.section" />
         <min value="0" />
@@ -4277,7 +4276,7 @@
       <definition value="A code identifying the kind of content contained within the section. This must be consistent with the section title." />
       <comment value="The code identifies the section for an automated processor of the document. This is particularly relevant when using profiles to control the structure of the document.   &#xA;&#xA;If the section has content (instead of sub-sections), the section.code does not change the meaning or interpretation of the resource that is the content of the section in the comments for the section.code." />
       <requirements value="Provides computable standardized labels to topics within the document." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section.code" />
@@ -4296,6 +4295,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="CompositionSectionType" />
@@ -4327,6 +4327,479 @@
       <mapping>
         <identity value="cda" />
         <map value=".code" />
+      </mapping>
+    </element>
+    <element id="Composition.section:VersichertePerson.code.id">
+      <path value="Composition.section.code.id" />
+      <representation value="xmlAttr" />
+      <short value="Unique id for inter-element referencing" />
+      <definition value="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Element.id" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
+          <valueUrl value="string" />
+        </extension>
+        <code value="http://hl7.org/fhirpath/System.String" />
+      </type>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+    </element>
+    <element id="Composition.section:VersichertePerson.code.extension">
+      <path value="Composition.section.code.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <description value="Extensions are always sliced by (at least) url" />
+        <rules value="open" />
+      </slicing>
+      <short value="Additional content defined by implementations" />
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
+      <alias value="extensions" />
+      <alias value="user content" />
+      <min value="0" />
+      <max value="*" />
+      <base>
+        <path value="Element.extension" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="Extension" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="Composition.section:VersichertePerson.code.coding">
+      <path value="Composition.section.code.coding" />
+      <short value="Code defined by a terminology system" />
+      <definition value="A reference to a code defined by a terminology system." />
+      <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
+      <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
+      <min value="1" />
+      <max value="1" />
+      <base>
+        <path value="CodeableConcept.coding" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="Coding" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <mustSupport value="true" />
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="CE/CNE/CWE subset one of the sets of component 1-3 or 4-6" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="CV" />
+      </mapping>
+      <mapping>
+        <identity value="orim" />
+        <map value="fhir:Coding rdfs:subClassOf dt:CDCoding" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="C*E.1-8, C*E.10-22" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="union(., ./translation)" />
+      </mapping>
+      <mapping>
+        <identity value="orim" />
+        <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" />
+      </mapping>
+    </element>
+    <element id="Composition.section:VersichertePerson.code.coding.id">
+      <path value="Composition.section.code.coding.id" />
+      <representation value="xmlAttr" />
+      <short value="Unique id for inter-element referencing" />
+      <definition value="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Element.id" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
+          <valueUrl value="string" />
+        </extension>
+        <code value="http://hl7.org/fhirpath/System.String" />
+      </type>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+    </element>
+    <element id="Composition.section:VersichertePerson.code.coding.extension">
+      <path value="Composition.section.code.coding.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <description value="Extensions are always sliced by (at least) url" />
+        <rules value="open" />
+      </slicing>
+      <short value="Additional content defined by implementations" />
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
+      <alias value="extensions" />
+      <alias value="user content" />
+      <min value="0" />
+      <max value="*" />
+      <base>
+        <path value="Element.extension" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="Extension" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="Composition.section:VersichertePerson.code.coding.system">
+      <path value="Composition.section.code.coding.system" />
+      <short value="Werteraum der Section-Typen" />
+      <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
+      <comment value="The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously." />
+      <requirements value="Need to be unambiguous about the source of the definition of the symbol." />
+      <min value="1" />
+      <max value="1" />
+      <base>
+        <path value="Coding.system" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="uri" />
+      </type>
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <mustSupport value="true" />
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="C*E.3" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="./codeSystem" />
+      </mapping>
+      <mapping>
+        <identity value="orim" />
+        <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
+      </mapping>
+    </element>
+    <element id="Composition.section:VersichertePerson.code.coding.version">
+      <path value="Composition.section.code.coding.version" />
+      <short value="Version of the system - if relevant" />
+      <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
+      <comment value="Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Coding.version" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="string" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="C*E.7" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="./codeSystemVersion" />
+      </mapping>
+      <mapping>
+        <identity value="orim" />
+        <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
+      </mapping>
+    </element>
+    <element id="Composition.section:VersichertePerson.code.coding.code">
+      <path value="Composition.section.code.coding.code" />
+      <short value="Kürzel des Section-Typs" />
+      <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
+      <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
+      <requirements value="Need to refer to a particular code in the system." />
+      <min value="1" />
+      <max value="1" />
+      <base>
+        <path value="Coding.code" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="code" />
+      </type>
+      <fixedCode value="VSPN" />
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <mustSupport value="true" />
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="C*E.1" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="./code" />
+      </mapping>
+      <mapping>
+        <identity value="orim" />
+        <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
+      </mapping>
+    </element>
+    <element id="Composition.section:VersichertePerson.code.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Composition.section.code.coding.display" />
+      <short value="Bezeichnung des Section-Typs" />
+      <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
+      <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
+      <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Coding.display" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="string" />
+      </type>
+      <fixedString value="Versicherte Person" />
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <mustSupport value="true" />
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="C*E.2 - but note this is not well followed" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="CV.displayName" />
+      </mapping>
+      <mapping>
+        <identity value="orim" />
+        <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
+      </mapping>
+    </element>
+    <element id="Composition.section:VersichertePerson.code.coding.userSelected">
+      <path value="Composition.section.code.coding.userSelected" />
+      <short value="If this coding was chosen directly by the user" />
+      <definition value="Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays)." />
+      <comment value="Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely." />
+      <requirements value="This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Coding.userSelected" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="boolean" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="Sometimes implied by being first" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="CD.codingRationale" />
+      </mapping>
+      <mapping>
+        <identity value="orim" />
+        <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
+      </mapping>
+    </element>
+    <element id="Composition.section:VersichertePerson.code.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Composition.section.code.text" />
+      <short value="Plain text representation of the concept" />
+      <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user." />
+      <comment value="Very often the text is the same as a displayName of one of the codings." />
+      <requirements value="The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="CodeableConcept.text" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="string" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="C*E.9. But note many systems use C*E.2 for this" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="./originalText[mediaType/code=&quot;text/plain&quot;]/data" />
+      </mapping>
+      <mapping>
+        <identity value="orim" />
+        <map value="fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText" />
       </mapping>
     </element>
     <element id="Composition.section:VersichertePerson.author">
@@ -4587,7 +5060,7 @@
     </element>
     <element id="Composition.section:VersichertePerson.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil VersichertePerson" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -4599,12 +5072,8 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson" />
       </type>
-      <fixedReference>
-        <reference value="http://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson" />
-        <type value="StructureDefinition" />
-      </fixedReference>
       <condition value="ele-1" />
       <condition value="cmp-2" />
       <constraint>
@@ -4949,7 +5418,7 @@
       <definition value="A code identifying the kind of content contained within the section. This must be consistent with the section title." />
       <comment value="The code identifies the section for an automated processor of the document. This is particularly relevant when using profiles to control the structure of the document.   &#xA;&#xA;If the section has content (instead of sub-sections), the section.code does not change the meaning or interpretation of the resource that is the content of the section in the comments for the section.code." />
       <requirements value="Provides computable standardized labels to topics within the document." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Composition.section.code" />
@@ -4968,6 +5437,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="CompositionSectionType" />
@@ -4999,6 +5469,479 @@
       <mapping>
         <identity value="cda" />
         <map value=".code" />
+      </mapping>
+    </element>
+    <element id="Composition.section:Leistungserbringer.code.id">
+      <path value="Composition.section.code.id" />
+      <representation value="xmlAttr" />
+      <short value="Unique id for inter-element referencing" />
+      <definition value="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Element.id" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
+          <valueUrl value="string" />
+        </extension>
+        <code value="http://hl7.org/fhirpath/System.String" />
+      </type>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+    </element>
+    <element id="Composition.section:Leistungserbringer.code.extension">
+      <path value="Composition.section.code.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <description value="Extensions are always sliced by (at least) url" />
+        <rules value="open" />
+      </slicing>
+      <short value="Additional content defined by implementations" />
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
+      <alias value="extensions" />
+      <alias value="user content" />
+      <min value="0" />
+      <max value="*" />
+      <base>
+        <path value="Element.extension" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="Extension" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="Composition.section:Leistungserbringer.code.coding">
+      <path value="Composition.section.code.coding" />
+      <short value="Code defined by a terminology system" />
+      <definition value="A reference to a code defined by a terminology system." />
+      <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
+      <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
+      <min value="1" />
+      <max value="1" />
+      <base>
+        <path value="CodeableConcept.coding" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="Coding" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <mustSupport value="true" />
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="CE/CNE/CWE subset one of the sets of component 1-3 or 4-6" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="CV" />
+      </mapping>
+      <mapping>
+        <identity value="orim" />
+        <map value="fhir:Coding rdfs:subClassOf dt:CDCoding" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="C*E.1-8, C*E.10-22" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="union(., ./translation)" />
+      </mapping>
+      <mapping>
+        <identity value="orim" />
+        <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" />
+      </mapping>
+    </element>
+    <element id="Composition.section:Leistungserbringer.code.coding.id">
+      <path value="Composition.section.code.coding.id" />
+      <representation value="xmlAttr" />
+      <short value="Unique id for inter-element referencing" />
+      <definition value="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Element.id" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
+          <valueUrl value="string" />
+        </extension>
+        <code value="http://hl7.org/fhirpath/System.String" />
+      </type>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+    </element>
+    <element id="Composition.section:Leistungserbringer.code.coding.extension">
+      <path value="Composition.section.code.coding.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <description value="Extensions are always sliced by (at least) url" />
+        <rules value="open" />
+      </slicing>
+      <short value="Additional content defined by implementations" />
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
+      <alias value="extensions" />
+      <alias value="user content" />
+      <min value="0" />
+      <max value="*" />
+      <base>
+        <path value="Element.extension" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="Extension" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="Composition.section:Leistungserbringer.code.coding.system">
+      <path value="Composition.section.code.coding.system" />
+      <short value="Werteraum der Section-Typen" />
+      <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
+      <comment value="The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously." />
+      <requirements value="Need to be unambiguous about the source of the definition of the symbol." />
+      <min value="1" />
+      <max value="1" />
+      <base>
+        <path value="Coding.system" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="uri" />
+      </type>
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <mustSupport value="true" />
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="C*E.3" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="./codeSystem" />
+      </mapping>
+      <mapping>
+        <identity value="orim" />
+        <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
+      </mapping>
+    </element>
+    <element id="Composition.section:Leistungserbringer.code.coding.version">
+      <path value="Composition.section.code.coding.version" />
+      <short value="Version of the system - if relevant" />
+      <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
+      <comment value="Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Coding.version" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="string" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="C*E.7" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="./codeSystemVersion" />
+      </mapping>
+      <mapping>
+        <identity value="orim" />
+        <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
+      </mapping>
+    </element>
+    <element id="Composition.section:Leistungserbringer.code.coding.code">
+      <path value="Composition.section.code.coding.code" />
+      <short value="Kürzel des Section-Typs" />
+      <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
+      <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
+      <requirements value="Need to refer to a particular code in the system." />
+      <min value="1" />
+      <max value="1" />
+      <base>
+        <path value="Coding.code" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="code" />
+      </type>
+      <fixedCode value="LEST" />
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <mustSupport value="true" />
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="C*E.1" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="./code" />
+      </mapping>
+      <mapping>
+        <identity value="orim" />
+        <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
+      </mapping>
+    </element>
+    <element id="Composition.section:Leistungserbringer.code.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Composition.section.code.coding.display" />
+      <short value="Bezeichnung des Section-Typs" />
+      <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
+      <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
+      <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Coding.display" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="string" />
+      </type>
+      <fixedString value="Leistungserbringer" />
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <mustSupport value="true" />
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="C*E.2 - but note this is not well followed" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="CV.displayName" />
+      </mapping>
+      <mapping>
+        <identity value="orim" />
+        <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
+      </mapping>
+    </element>
+    <element id="Composition.section:Leistungserbringer.code.coding.userSelected">
+      <path value="Composition.section.code.coding.userSelected" />
+      <short value="If this coding was chosen directly by the user" />
+      <definition value="Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays)." />
+      <comment value="Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely." />
+      <requirements value="This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Coding.userSelected" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="boolean" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="Sometimes implied by being first" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="CD.codingRationale" />
+      </mapping>
+      <mapping>
+        <identity value="orim" />
+        <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
+      </mapping>
+    </element>
+    <element id="Composition.section:Leistungserbringer.code.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Composition.section.code.text" />
+      <short value="Plain text representation of the concept" />
+      <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user." />
+      <comment value="Very often the text is the same as a displayName of one of the codings." />
+      <requirements value="The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="CodeableConcept.text" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="string" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="C*E.9. But note many systems use C*E.2 for this" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="./originalText[mediaType/code=&quot;text/plain&quot;]/data" />
+      </mapping>
+      <mapping>
+        <identity value="orim" />
+        <map value="fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText" />
       </mapping>
     </element>
     <element id="Composition.section:Leistungserbringer.author">
@@ -5259,7 +6202,7 @@
     </element>
     <element id="Composition.section:Leistungserbringer.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil Leistungserbringer" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -5271,12 +6214,8 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringer" />
       </type>
-      <fixedReference>
-        <reference value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringer" />
-        <type value="StructureDefinition" />
-      </fixedReference>
       <condition value="ele-1" />
       <condition value="cmp-2" />
       <constraint>
@@ -8017,7 +8956,7 @@
     </element>
     <element id="Composition.section:Krankenkasse.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil Krankenkasse" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -9394,7 +10333,7 @@
     </element>
     <element id="Composition.section:VersichertenVerhaeltnis.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil VersichertenVerhaeltnis" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -10771,7 +11710,7 @@
     </element>
     <element id="Composition.section:Pflegekasse.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil Pflegekasse" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="0" />
@@ -12147,7 +13086,7 @@
     </element>
     <element id="Composition.section:Unfallbetrieb.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil Unfallbetrieb" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -13524,7 +14463,7 @@
     </element>
     <element id="Composition.section:Aufenthaltsinformationen.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil Aufenthaltsinformation" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -14525,7 +15464,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="DiagnoseFreitext" />
+      <fixedString value="Diagnose - Freitext" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -14901,7 +15840,7 @@
     </element>
     <element id="Composition.section:DiagnoseFreitext.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil DiagnoseFreitext" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -15902,7 +16841,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="DiagnoseStrukturiert" />
+      <fixedString value="Diagnose - strukturiert" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -16278,7 +17217,7 @@
     </element>
     <element id="Composition.section:DiagnoseStrukturiert.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil DiagnoseStrukturiert" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -17655,7 +18594,7 @@
     </element>
     <element id="Composition.section:Therapie.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil Therapie" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -19032,7 +19971,7 @@
     </element>
     <element id="Composition.section:Unfallereignis.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil Unfallereignis" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -20410,7 +21349,7 @@
     </element>
     <element id="Composition.section:Aufnahmebefunde.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil Aufnahmebefunde" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -21787,7 +22726,7 @@
     </element>
     <element id="Composition.section:Behandlungsverlauf.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil Behandlungsverlauf" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -23164,7 +24103,7 @@
     </element>
     <element id="Composition.section:Konsiliarbefunde.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil Konsiliarbefunde" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -24541,7 +25480,7 @@
     </element>
     <element id="Composition.section:Entlassbefunde.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil Entlassbefunde" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -25918,7 +26857,7 @@
     </element>
     <element id="Composition.section:DokumentenReferenz.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil DokumentenReferenz" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -27295,7 +28234,7 @@
     </element>
     <element id="Composition.section:Therapieempfehlung.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil Therapieempfehlung" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -28296,7 +29235,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="MedikationsInformation" />
+      <fixedString value="Medikationsinformation" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -28672,7 +29611,7 @@
     </element>
     <element id="Composition.section:MedikationsInformation.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil MedikationsInformation" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -29673,7 +30612,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="MedikationWirkstoff" />
+      <fixedString value="Medikation - Wirkstoff" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -30049,7 +30988,7 @@
     </element>
     <element id="Composition.section:MedikationWirkstoff.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil MedikationWirkstoff" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -31050,7 +31989,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="MedikationRezeptur" />
+      <fixedString value="Medikation - Rezeptur" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -31426,7 +32365,7 @@
     </element>
     <element id="Composition.section:MedikationRezeptur.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil MedikationRezeptur" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -32427,7 +33366,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="MedikationArzneimittel" />
+      <fixedString value="Medikation - Arzneimittel" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -32803,7 +33742,7 @@
     </element>
     <element id="Composition.section:MedikationArzneimittel.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil MedikationArzneimittel" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -33804,7 +34743,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="MedikationFreitext" />
+      <fixedString value="Medikation - Freitext" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -34180,7 +35119,7 @@
     </element>
     <element id="Composition.section:MedikationFreitext.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil MedikationFreitext" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -35181,7 +36120,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="WeiterbehandelnderArzt" />
+      <fixedString value="Weiterbehandelnder Arzt" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -35557,7 +36496,7 @@
     </element>
     <element id="Composition.section:WeiterbehandelnderArzt.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil WeiterbehandelnderArzt" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -36558,7 +37497,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="WeiterbehandelndeOrganisation" />
+      <fixedString value="Weiterbehandelnde Organisation" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -36934,7 +37873,7 @@
     </element>
     <element id="Composition.section:WeiterbehandelndeOrganisation.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil WeiterbehandelndeOrganisation" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -37935,7 +38874,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="RehaMassnahmen" />
+      <fixedString value="Reha-Maßnahmen" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -38311,7 +39250,7 @@
     </element>
     <element id="Composition.section:RehaMassnahmen.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil RehaMassnahmen" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -39688,7 +40627,7 @@
     </element>
     <element id="Composition.section:Heilmittel.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil Heilmittel" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -41065,7 +42004,7 @@
     </element>
     <element id="Composition.section:Hilfsmittel.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil Hilfsmittel" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -42066,7 +43005,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="BesondereMassnahmen" />
+      <fixedString value="Besondere Maßnahmen" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -42442,7 +43381,7 @@
     </element>
     <element id="Composition.section:BesondereMassnahmen.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil BesondereMassnahmen" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -43443,7 +44382,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="Arbeitsunfaehigkeit" />
+      <fixedString value="Arbeitsunfähigkeit" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -43819,7 +44758,7 @@
     </element>
     <element id="Composition.section:Arbeitsunfaehigkeit.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil Arbeitsunfaehigkeit" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -44820,7 +45759,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="PrognoseWiederaufnahmeTaetigkeit" />
+      <fixedString value="Prognose Wiederaufnahme Tätigkeit" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -45196,7 +46135,7 @@
     </element>
     <element id="Composition.section:PrognoseWiederaufnahmeTaetigkeit.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil PrognoseWiederaufnahmeTaetigkeit" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -46197,7 +47136,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="stufenweiseWiedereingliederung" />
+      <fixedString value="Stufenweise Wiedereingliederung" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -46573,7 +47512,7 @@
     </element>
     <element id="Composition.section:stufenweiseWiedereingliederung.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil stufenweiseWiedereingliederung" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -47950,7 +48889,7 @@
     </element>
     <element id="Composition.section:Datenschutz.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil Datenschutz" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -48951,7 +49890,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="DArzt" />
+      <fixedString value="D-Arzt" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -49327,7 +50266,7 @@
     </element>
     <element id="Composition.section:DArzt.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil DArzt" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -50328,7 +51267,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="DArztOrganisation" />
+      <fixedString value="D-Arzt-Organisation" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -50704,7 +51643,7 @@
     </element>
     <element id="Composition.section:DArztOrganisation.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil DArztOrganisation" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -51705,7 +52644,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="BehandelndeEinrichtung" />
+      <fixedString value="Behandelnde Einrichtung" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -52081,7 +53020,7 @@
     </element>
     <element id="Composition.section:BehandelndeEinrichtung.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil BehandelndeEinrichtung" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -52577,7 +53516,6 @@
           <type value="value" />
           <path value="code.coding.code" />
         </discriminator>
-        <ordered value="true" />
         <rules value="closed" />
       </slicing>
       <short value="Auflistung ENLA-Profiltypen in ENLA" />
@@ -52588,16 +53526,49 @@
       <path value="Composition.section" />
       <sliceName value="VersichertePerson" />
       <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:VersichertePerson.code">
+      <path value="Composition.section.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:VersichertePerson.code.coding">
+      <path value="Composition.section.code.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:VersichertePerson.code.coding.system">
+      <path value="Composition.section.code.coding.system" />
+      <short value="Werteraum der Section-Typen" />
+      <min value="1" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:VersichertePerson.code.coding.code">
+      <path value="Composition.section.code.coding.code" />
+      <short value="Kürzel des Section-Typs" />
+      <min value="1" />
+      <fixedCode value="VSPN" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:VersichertePerson.code.coding.display">
+      <path value="Composition.section.code.coding.display" />
+      <short value="Bezeichnung des Section-Typs" />
+      <fixedString value="Versicherte Person" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:VersichertePerson.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil VersichertePerson" />
       <min value="1" />
       <max value="1" />
-      <fixedReference>
-        <reference value="http://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson" />
-        <type value="StructureDefinition" />
-      </fixedReference>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson" />
+      </type>
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:Leistungserbringer">
@@ -52606,14 +53577,46 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:Leistungserbringer.entry">
-      <path value="Composition.section.entry" />
+    <element id="Composition.section:Leistungserbringer.code">
+      <path value="Composition.section.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Leistungserbringer.code.coding">
+      <path value="Composition.section.code.coding" />
       <min value="1" />
       <max value="1" />
-      <fixedReference>
-        <reference value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringer" />
-        <type value="StructureDefinition" />
-      </fixedReference>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Leistungserbringer.code.coding.system">
+      <path value="Composition.section.code.coding.system" />
+      <short value="Werteraum der Section-Typen" />
+      <min value="1" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Leistungserbringer.code.coding.code">
+      <path value="Composition.section.code.coding.code" />
+      <short value="Kürzel des Section-Typs" />
+      <min value="1" />
+      <fixedCode value="LEST" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Leistungserbringer.code.coding.display">
+      <path value="Composition.section.code.coding.display" />
+      <short value="Bezeichnung des Section-Typs" />
+      <fixedString value="Leistungserbringer" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Leistungserbringer.entry">
+      <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil Leistungserbringer" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringer" />
+      </type>
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:Leistungserbringer.entry.reference">
@@ -52715,6 +53718,7 @@
     </element>
     <element id="Composition.section:Krankenkasse.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil Krankenkasse" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -52768,6 +53772,7 @@
     </element>
     <element id="Composition.section:VersichertenVerhaeltnis.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil VersichertenVerhaeltnis" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -52820,6 +53825,7 @@
     </element>
     <element id="Composition.section:Pflegekasse.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil Pflegekasse" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Pflegekasse" />
@@ -52870,6 +53876,7 @@
     </element>
     <element id="Composition.section:Unfallbetrieb.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil Unfallbetrieb" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -52923,6 +53930,7 @@
     </element>
     <element id="Composition.section:Aufenthaltsinformationen.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil Aufenthaltsinformation" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -52970,11 +53978,12 @@
     <element id="Composition.section:DiagnoseFreitext.code.coding.display">
       <path value="Composition.section.code.coding.display" />
       <short value="Bezeichnung des Section-Typs" />
-      <fixedString value="DiagnoseFreitext" />
+      <fixedString value="Diagnose - Freitext" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:DiagnoseFreitext.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil DiagnoseFreitext" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -53022,11 +54031,12 @@
     <element id="Composition.section:DiagnoseStrukturiert.code.coding.display">
       <path value="Composition.section.code.coding.display" />
       <short value="Bezeichnung des Section-Typs" />
-      <fixedString value="DiagnoseStrukturiert" />
+      <fixedString value="Diagnose - strukturiert" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:DiagnoseStrukturiert.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil DiagnoseStrukturiert" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -53078,6 +54088,7 @@
     </element>
     <element id="Composition.section:Therapie.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil Therapie" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -53131,6 +54142,7 @@
     </element>
     <element id="Composition.section:Unfallereignis.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil Unfallereignis" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -53183,6 +54195,7 @@
     </element>
     <element id="Composition.section:Aufnahmebefunde.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil Aufnahmebefunde" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -53236,6 +54249,7 @@
     </element>
     <element id="Composition.section:Behandlungsverlauf.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil Behandlungsverlauf" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -53287,6 +54301,7 @@
     </element>
     <element id="Composition.section:Konsiliarbefunde.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil Konsiliarbefunde" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -53338,6 +54353,7 @@
     </element>
     <element id="Composition.section:Entlassbefunde.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil Entlassbefunde" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -53389,6 +54405,7 @@
     </element>
     <element id="Composition.section:DokumentenReferenz.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil DokumentenReferenz" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -53441,6 +54458,7 @@
     </element>
     <element id="Composition.section:Therapieempfehlung.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil Therapieempfehlung" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -53487,11 +54505,12 @@
     <element id="Composition.section:MedikationsInformation.code.coding.display">
       <path value="Composition.section.code.coding.display" />
       <short value="Bezeichnung des Section-Typs" />
-      <fixedString value="MedikationsInformation" />
+      <fixedString value="Medikationsinformation" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:MedikationsInformation.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil MedikationsInformation" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -53538,11 +54557,12 @@
     <element id="Composition.section:MedikationWirkstoff.code.coding.display">
       <path value="Composition.section.code.coding.display" />
       <short value="Bezeichnung des Section-Typs" />
-      <fixedString value="MedikationWirkstoff" />
+      <fixedString value="Medikation - Wirkstoff" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:MedikationWirkstoff.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil MedikationWirkstoff" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -53589,11 +54609,12 @@
     <element id="Composition.section:MedikationRezeptur.code.coding.display">
       <path value="Composition.section.code.coding.display" />
       <short value="Bezeichnung des Section-Typs" />
-      <fixedString value="MedikationRezeptur" />
+      <fixedString value="Medikation - Rezeptur" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:MedikationRezeptur.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil MedikationRezeptur" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -53640,11 +54661,12 @@
     <element id="Composition.section:MedikationArzneimittel.code.coding.display">
       <path value="Composition.section.code.coding.display" />
       <short value="Bezeichnung des Section-Typs" />
-      <fixedString value="MedikationArzneimittel" />
+      <fixedString value="Medikation - Arzneimittel" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:MedikationArzneimittel.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil MedikationArzneimittel" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -53688,11 +54710,12 @@
     <element id="Composition.section:MedikationFreitext.code.coding.display">
       <path value="Composition.section.code.coding.display" />
       <min value="1" />
-      <fixedString value="MedikationFreitext" />
+      <fixedString value="Medikation - Freitext" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:MedikationFreitext.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil MedikationFreitext" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -53741,11 +54764,12 @@
     <element id="Composition.section:WeiterbehandelnderArzt.code.coding.display">
       <path value="Composition.section.code.coding.display" />
       <short value="Bezeichnung des Section-Typs" />
-      <fixedString value="WeiterbehandelnderArzt" />
+      <fixedString value="Weiterbehandelnder Arzt" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:WeiterbehandelnderArzt.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil WeiterbehandelnderArzt" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -53793,11 +54817,12 @@
     <element id="Composition.section:WeiterbehandelndeOrganisation.code.coding.display">
       <path value="Composition.section.code.coding.display" />
       <short value="Bezeichnung des Section-Typs" />
-      <fixedString value="WeiterbehandelndeOrganisation" />
+      <fixedString value="Weiterbehandelnde Organisation" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:WeiterbehandelndeOrganisation.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil WeiterbehandelndeOrganisation" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -53844,11 +54869,12 @@
     <element id="Composition.section:RehaMassnahmen.code.coding.display">
       <path value="Composition.section.code.coding.display" />
       <short value="Bezeichnung des Section-Typs" />
-      <fixedString value="RehaMassnahmen" />
+      <fixedString value="Reha-Maßnahmen" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:RehaMassnahmen.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil RehaMassnahmen" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -53900,6 +54926,7 @@
     </element>
     <element id="Composition.section:Heilmittel.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil Heilmittel" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -53951,6 +54978,7 @@
     </element>
     <element id="Composition.section:Hilfsmittel.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil Hilfsmittel" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -53997,11 +55025,12 @@
     <element id="Composition.section:BesondereMassnahmen.code.coding.display">
       <path value="Composition.section.code.coding.display" />
       <short value="Bezeichnung des Section-Typs" />
-      <fixedString value="BesondereMassnahmen" />
+      <fixedString value="Besondere Maßnahmen" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:BesondereMassnahmen.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil BesondereMassnahmen" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -54050,11 +55079,12 @@
     <element id="Composition.section:Arbeitsunfaehigkeit.code.coding.display">
       <path value="Composition.section.code.coding.display" />
       <short value="Bezeichnung des Section-Typs" />
-      <fixedString value="Arbeitsunfaehigkeit" />
+      <fixedString value="Arbeitsunfähigkeit" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:Arbeitsunfaehigkeit.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil Arbeitsunfaehigkeit" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -54103,11 +55133,12 @@
     <element id="Composition.section:PrognoseWiederaufnahmeTaetigkeit.code.coding.display">
       <path value="Composition.section.code.coding.display" />
       <short value="Bezeichnung des Section-Typs" />
-      <fixedString value="PrognoseWiederaufnahmeTaetigkeit" />
+      <fixedString value="Prognose Wiederaufnahme Tätigkeit" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:PrognoseWiederaufnahmeTaetigkeit.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil PrognoseWiederaufnahmeTaetigkeit" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -54154,11 +55185,12 @@
     <element id="Composition.section:stufenweiseWiedereingliederung.code.coding.display">
       <path value="Composition.section.code.coding.display" />
       <short value="Bezeichnung des Section-Typs" />
-      <fixedString value="stufenweiseWiedereingliederung" />
+      <fixedString value="Stufenweise Wiedereingliederung" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:stufenweiseWiedereingliederung.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil stufenweiseWiedereingliederung" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -54212,6 +55244,7 @@
     </element>
     <element id="Composition.section:Datenschutz.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil Datenschutz" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -54260,11 +55293,12 @@
     <element id="Composition.section:DArzt.code.coding.display">
       <path value="Composition.section.code.coding.display" />
       <short value="Bezeichnung des Section-Typs" />
-      <fixedString value="DArzt" />
+      <fixedString value="D-Arzt" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:DArzt.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil DArzt" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -54313,11 +55347,12 @@
     <element id="Composition.section:DArztOrganisation.code.coding.display">
       <path value="Composition.section.code.coding.display" />
       <short value="Bezeichnung des Section-Typs" />
-      <fixedString value="DArztOrganisation" />
+      <fixedString value="D-Arzt-Organisation" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:DArztOrganisation.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil DArztOrganisation" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -54364,11 +55399,12 @@
     <element id="Composition.section:BehandelndeEinrichtung.code.coding.display">
       <path value="Composition.section.code.coding.display" />
       <short value="Bezeichnung des Section-Typs" />
-      <fixedString value="BehandelndeEinrichtung" />
+      <fixedString value="Behandelnde Einrichtung" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:BehandelndeEinrichtung.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil BehandelndeEinrichtung" />
       <min value="1" />
       <max value="1" />
       <type>
