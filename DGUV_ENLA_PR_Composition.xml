@@ -4535,7 +4535,7 @@
     </element>
     <element id="Composition.section:VersichertePerson.code.coding.system">
       <path value="Composition.section.code.coding.system" />
-      <short value="Identity of the terminology system" />
+      <short value="Werteraum der Section-Typen" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
       <comment value="The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously." />
       <requirements value="Need to be unambiguous about the source of the definition of the symbol." />
@@ -4622,7 +4622,7 @@
     </element>
     <element id="Composition.section:VersichertePerson.code.coding.code">
       <path value="Composition.section.code.coding.code" />
-      <short value="Symbol in syntax defined by the system" />
+      <short value="Kürzel des Section-Typs" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to refer to a particular code in the system." />
@@ -4670,7 +4670,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Composition.section.code.coding.display" />
-      <short value="Representation defined by the system" />
+      <short value="Bezeichnung des Section-Typs" />
       <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
@@ -5060,7 +5060,7 @@
     </element>
     <element id="Composition.section:VersichertePerson.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil VersichertePerson" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -5677,7 +5677,7 @@
     </element>
     <element id="Composition.section:Leistungserbringer.code.coding.system">
       <path value="Composition.section.code.coding.system" />
-      <short value="Identity of the terminology system" />
+      <short value="Werteraum der Section-Typen" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
       <comment value="The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously." />
       <requirements value="Need to be unambiguous about the source of the definition of the symbol." />
@@ -5764,7 +5764,7 @@
     </element>
     <element id="Composition.section:Leistungserbringer.code.coding.code">
       <path value="Composition.section.code.coding.code" />
-      <short value="Symbol in syntax defined by the system" />
+      <short value="Kürzel des Section-Typs" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to refer to a particular code in the system." />
@@ -5812,7 +5812,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Composition.section.code.coding.display" />
-      <short value="Representation defined by the system" />
+      <short value="Bezeichnung des Section-Typs" />
       <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
@@ -6202,7 +6202,7 @@
     </element>
     <element id="Composition.section:Leistungserbringer.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil Leistungserbringer" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -6214,7 +6214,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringe" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringer" />
       </type>
       <condition value="ele-1" />
       <condition value="cmp-2" />
@@ -8956,7 +8956,7 @@
     </element>
     <element id="Composition.section:Krankenkasse.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil Krankenkasse" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -10333,7 +10333,7 @@
     </element>
     <element id="Composition.section:VersichertenVerhaeltnis.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil VersichertenVerhaeltnis" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -11710,7 +11710,7 @@
     </element>
     <element id="Composition.section:Pflegekasse.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil Pflegekasse" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="0" />
@@ -13086,7 +13086,7 @@
     </element>
     <element id="Composition.section:Unfallbetrieb.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil Unfallbetrieb" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -14463,7 +14463,7 @@
     </element>
     <element id="Composition.section:Aufenthaltsinformationen.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil Aufenthaltsinformation" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -15840,7 +15840,7 @@
     </element>
     <element id="Composition.section:DiagnoseFreitext.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil DiagnoseFreitext" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -17217,7 +17217,7 @@
     </element>
     <element id="Composition.section:DiagnoseStrukturiert.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil DiagnoseStrukturiert" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -18594,7 +18594,7 @@
     </element>
     <element id="Composition.section:Therapie.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil Therapie" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -19971,7 +19971,7 @@
     </element>
     <element id="Composition.section:Unfallereignis.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil Unfallereignis" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -21349,7 +21349,7 @@
     </element>
     <element id="Composition.section:Aufnahmebefunde.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil Aufnahmebefunde" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -22726,7 +22726,7 @@
     </element>
     <element id="Composition.section:Behandlungsverlauf.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil Behandlungsverlauf" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -24103,7 +24103,7 @@
     </element>
     <element id="Composition.section:Konsiliarbefunde.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil Konsiliarbefunde" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -25480,7 +25480,7 @@
     </element>
     <element id="Composition.section:Entlassbefunde.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil Entlassbefunde" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -26857,7 +26857,7 @@
     </element>
     <element id="Composition.section:DokumentenReferenz.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil DokumentenReferenz" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -28234,7 +28234,7 @@
     </element>
     <element id="Composition.section:Therapieempfehlung.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil Therapieempfehlung" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -29611,7 +29611,7 @@
     </element>
     <element id="Composition.section:MedikationsInformation.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil MedikationsInformation" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -30988,7 +30988,7 @@
     </element>
     <element id="Composition.section:MedikationWirkstoff.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil MedikationWirkstoff" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -32365,7 +32365,7 @@
     </element>
     <element id="Composition.section:MedikationRezeptur.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil MedikationRezeptur" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -33742,7 +33742,7 @@
     </element>
     <element id="Composition.section:MedikationArzneimittel.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil MedikationArzneimittel" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -35119,7 +35119,7 @@
     </element>
     <element id="Composition.section:MedikationFreitext.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil MedikationFreitext" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -36496,7 +36496,7 @@
     </element>
     <element id="Composition.section:WeiterbehandelnderArzt.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil WeiterbehandelnderArzt" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -37873,7 +37873,7 @@
     </element>
     <element id="Composition.section:WeiterbehandelndeOrganisation.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil WeiterbehandelndeOrganisation" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -39250,7 +39250,7 @@
     </element>
     <element id="Composition.section:RehaMassnahmen.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil RehaMassnahmen" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -40627,7 +40627,7 @@
     </element>
     <element id="Composition.section:Heilmittel.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil Heilmittel" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -42004,7 +42004,7 @@
     </element>
     <element id="Composition.section:Hilfsmittel.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil Hilfsmittel" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -43381,7 +43381,7 @@
     </element>
     <element id="Composition.section:BesondereMassnahmen.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil BesondereMassnahmen" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -44758,7 +44758,7 @@
     </element>
     <element id="Composition.section:Arbeitsunfaehigkeit.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil Arbeitsunfaehigkeit" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -46135,7 +46135,7 @@
     </element>
     <element id="Composition.section:PrognoseWiederaufnahmeTaetigkeit.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil PrognoseWiederaufnahmeTaetigkeit" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -47512,7 +47512,7 @@
     </element>
     <element id="Composition.section:stufenweiseWiedereingliederung.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil stufenweiseWiedereingliederung" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -48889,7 +48889,7 @@
     </element>
     <element id="Composition.section:Datenschutz.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil Datenschutz" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -50266,7 +50266,7 @@
     </element>
     <element id="Composition.section:DArzt.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil DArzt" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -51643,7 +51643,7 @@
     </element>
     <element id="Composition.section:DArztOrganisation.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil DArztOrganisation" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -53020,7 +53020,7 @@
     </element>
     <element id="Composition.section:BehandelndeEinrichtung.entry">
       <path value="Composition.section.entry" />
-      <short value="A reference to data that supports this section" />
+      <short value="Verweis auf das ENLA-Profil BehandelndeEinrichtung" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
       <min value="1" />
@@ -53542,23 +53542,27 @@
     </element>
     <element id="Composition.section:VersichertePerson.code.coding.system">
       <path value="Composition.section.code.coding.system" />
+      <short value="Werteraum der Section-Typen" />
       <min value="1" />
       <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:VersichertePerson.code.coding.code">
       <path value="Composition.section.code.coding.code" />
+      <short value="Kürzel des Section-Typs" />
       <min value="1" />
       <fixedCode value="VSPN" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:VersichertePerson.code.coding.display">
       <path value="Composition.section.code.coding.display" />
+      <short value="Bezeichnung des Section-Typs" />
       <fixedString value="VersichertePerson" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:VersichertePerson.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil VersichertePerson" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -53586,28 +53590,32 @@
     </element>
     <element id="Composition.section:Leistungserbringer.code.coding.system">
       <path value="Composition.section.code.coding.system" />
+      <short value="Werteraum der Section-Typen" />
       <min value="1" />
       <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:Leistungserbringer.code.coding.code">
       <path value="Composition.section.code.coding.code" />
+      <short value="Kürzel des Section-Typs" />
       <min value="1" />
       <fixedCode value="LEST" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:Leistungserbringer.code.coding.display">
       <path value="Composition.section.code.coding.display" />
+      <short value="Bezeichnung des Section-Typs" />
       <fixedString value="Leistungserbringer" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:Leistungserbringer.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil Leistungserbringer" />
       <min value="1" />
       <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringe" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringer" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -53710,6 +53718,7 @@
     </element>
     <element id="Composition.section:Krankenkasse.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil Krankenkasse" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -53763,6 +53772,7 @@
     </element>
     <element id="Composition.section:VersichertenVerhaeltnis.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil VersichertenVerhaeltnis" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -53815,6 +53825,7 @@
     </element>
     <element id="Composition.section:Pflegekasse.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil Pflegekasse" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Pflegekasse" />
@@ -53865,6 +53876,7 @@
     </element>
     <element id="Composition.section:Unfallbetrieb.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil Unfallbetrieb" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -53918,6 +53930,7 @@
     </element>
     <element id="Composition.section:Aufenthaltsinformationen.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil Aufenthaltsinformation" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -53970,6 +53983,7 @@
     </element>
     <element id="Composition.section:DiagnoseFreitext.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil DiagnoseFreitext" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -54022,6 +54036,7 @@
     </element>
     <element id="Composition.section:DiagnoseStrukturiert.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil DiagnoseStrukturiert" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -54073,6 +54088,7 @@
     </element>
     <element id="Composition.section:Therapie.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil Therapie" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -54126,6 +54142,7 @@
     </element>
     <element id="Composition.section:Unfallereignis.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil Unfallereignis" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -54178,6 +54195,7 @@
     </element>
     <element id="Composition.section:Aufnahmebefunde.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil Aufnahmebefunde" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -54231,6 +54249,7 @@
     </element>
     <element id="Composition.section:Behandlungsverlauf.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil Behandlungsverlauf" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -54282,6 +54301,7 @@
     </element>
     <element id="Composition.section:Konsiliarbefunde.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil Konsiliarbefunde" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -54333,6 +54353,7 @@
     </element>
     <element id="Composition.section:Entlassbefunde.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil Entlassbefunde" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -54384,6 +54405,7 @@
     </element>
     <element id="Composition.section:DokumentenReferenz.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil DokumentenReferenz" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -54436,6 +54458,7 @@
     </element>
     <element id="Composition.section:Therapieempfehlung.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil Therapieempfehlung" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -54487,6 +54510,7 @@
     </element>
     <element id="Composition.section:MedikationsInformation.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil MedikationsInformation" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -54538,6 +54562,7 @@
     </element>
     <element id="Composition.section:MedikationWirkstoff.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil MedikationWirkstoff" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -54589,6 +54614,7 @@
     </element>
     <element id="Composition.section:MedikationRezeptur.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil MedikationRezeptur" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -54640,6 +54666,7 @@
     </element>
     <element id="Composition.section:MedikationArzneimittel.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil MedikationArzneimittel" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -54688,6 +54715,7 @@
     </element>
     <element id="Composition.section:MedikationFreitext.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil MedikationFreitext" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -54741,6 +54769,7 @@
     </element>
     <element id="Composition.section:WeiterbehandelnderArzt.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil WeiterbehandelnderArzt" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -54793,6 +54822,7 @@
     </element>
     <element id="Composition.section:WeiterbehandelndeOrganisation.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil WeiterbehandelndeOrganisation" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -54844,6 +54874,7 @@
     </element>
     <element id="Composition.section:RehaMassnahmen.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil RehaMassnahmen" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -54895,6 +54926,7 @@
     </element>
     <element id="Composition.section:Heilmittel.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil Heilmittel" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -54946,6 +54978,7 @@
     </element>
     <element id="Composition.section:Hilfsmittel.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil Hilfsmittel" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -54997,6 +55030,7 @@
     </element>
     <element id="Composition.section:BesondereMassnahmen.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil BesondereMassnahmen" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -55050,6 +55084,7 @@
     </element>
     <element id="Composition.section:Arbeitsunfaehigkeit.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil Arbeitsunfaehigkeit" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -55103,6 +55138,7 @@
     </element>
     <element id="Composition.section:PrognoseWiederaufnahmeTaetigkeit.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil PrognoseWiederaufnahmeTaetigkeit" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -55154,6 +55190,7 @@
     </element>
     <element id="Composition.section:stufenweiseWiedereingliederung.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil stufenweiseWiedereingliederung" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -55207,6 +55244,7 @@
     </element>
     <element id="Composition.section:Datenschutz.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil Datenschutz" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -55260,6 +55298,7 @@
     </element>
     <element id="Composition.section:DArzt.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil DArzt" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -55313,6 +55352,7 @@
     </element>
     <element id="Composition.section:DArztOrganisation.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil DArztOrganisation" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -55364,6 +55404,7 @@
     </element>
     <element id="Composition.section:BehandelndeEinrichtung.entry">
       <path value="Composition.section.entry" />
+      <short value="Verweis auf das ENLA-Profil BehandelndeEinrichtung" />
       <min value="1" />
       <max value="1" />
       <type>
