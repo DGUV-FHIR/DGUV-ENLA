@@ -76,12 +76,12 @@
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
                             <code value="VSPN"/>
-                            <display value="VersichertePerson"/>
+                            <display value="Versicherte Person"/>
                         </coding>
                     </code>
                     <entry>
                         <!-- 
-                        Auswahl des VersichertePerson Objektes:
+                        Auswahl des Versicherte Person Objektes:
                         RelativeURL:
                         urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba
                         -->
@@ -220,12 +220,12 @@
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
                             <code value="DGFT"/>
-                            <display value="DiagnoseFreitext"/>
+                            <display value="Diagnose - Freitext"/>
                         </coding>
                     </code>
                     <entry>
                         <!-- 
-                                Auswahl des DiagnoseFreitext Objektes:
+                                Auswahl des Diagnose - Freitext Objektes:
                                 RelativeURL:
                                 urn:uuid:84507618-4ff5-46d9-9e61-8ab15c9ce2a4
                         -->                    
@@ -238,12 +238,12 @@
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
                             <code value="DGST"/>
-                            <display value="DiagnoseStrukturiert"/>
+                            <display value="Diagnose - strukturiert"/>
                         </coding>
                     </code>
                     <entry>
                         <!-- 
-                                Auswahl des DiagnoseStrukturiert Objektes:
+                                Auswahl des Diagnose - strukturiert Objektes:
                                 RelativeURL:
                                 urn:uuid:9acff578-cca8-4f9c-9f58-49e5cb91bbab
                         -->
@@ -400,12 +400,12 @@
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
                             <code value="MDIN"/>
-                            <display value="MedikationsInformation"/>
+                            <display value="Medikationsinformation"/>
                         </coding>
                     </code> 
                     <entry>
                         <!-- 
-                            Auswahl des MedikationsInformation Objektes:
+                            Auswahl des Medikationsinformation Objektes:
                             RelativeURL:
                             urn:uuid:cf72d600-1c4d-44bf-a8b3-ec100f1a4947
                         -->                    
@@ -418,12 +418,12 @@
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
                             <code value="MDWS"/>
-                            <display value="MedikationWirkstoff"/>
+                            <display value="Medikation - Wirkstoff"/>
                         </coding>
                     </code>    
                     <entry>
                         <!-- 
-                            Auswahl des MedikationWirkstoff Objektes:
+                            Auswahl des Medikation - Wirkstoff Objektes:
                             RelativeURL:
                             urn:uuid:8947dca1-69fd-4184-a55f-8f7f32b0a914
                         -->                   
@@ -436,12 +436,12 @@
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
                             <code value="MDRZ"/>
-                            <display value="MedikationRezeptur"/>
+                            <display value="Medikation - Rezeptur"/>
                         </coding>
                     </code>
                     <entry>
                         <!-- 
-                            Auswahl des MedikationRezeptur Objektes:
+                            Auswahl des Medikation - Rezeptur Objektes:
                             RelativeURL:
                             urn:uuid:347b8239-6420-4b3a-a873-6b62e1fa1b0f
                         -->                    
@@ -454,12 +454,12 @@
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
                             <code value="MDAM"/>
-                            <display value="MedikationArzneimittel"/>
+                            <display value="Medikation - Arzneimittel"/>
                         </coding>
                     </code>
                     <entry>
                         <!-- 
-                            Auswahl des MedikationArzneimittel Objektes:
+                            Auswahl des Medikation - Arzneimittel Objektes:
                             RelativeURL:
                             urn:uuid:4b28cbef-80e7-4838-b15b-b2d9dfc4461b
                         -->                    
@@ -472,12 +472,12 @@
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
                             <code value="WBAR"/>
-                            <display value="WeiterbehandelnderArzt"/>
+                            <display value="Weiterbehandelnder Arzt"/>
                         </coding>
                     </code>
                     <entry>
                         <!-- 
-                            Auswahl des WeiterbehandelnderArzt Objektes:
+                            Auswahl des Weiterbehandelnder Arzt Objektes:
                             RelativeURL:
                             urn:uuid:ebd25191-272a-4a2f-9b52-8733963b32b8
                         -->                    
@@ -490,12 +490,12 @@
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
                             <code value="WBOR"/>
-                            <display value="WeiterbehandelndeOrganisation"/>
+                            <display value="Weiterbehandelnde Organisation"/>
                         </coding>
                     </code>
                     <entry>
                         <!-- 
-                            Auswahl des WeiterbehandelndeOrganisation Objektes:
+                            Auswahl des Weiterbehandelnde Organisation Objektes:
                             RelativeURL:
                             urn:uuid:c9643334-ed27-4327-9eff-baff968982a0
                         -->                    
@@ -508,12 +508,12 @@
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
                             <code value="RHMS"/>
-                            <display value="RehaMassnahmen"/>
+                            <display value="Reha-Maßnahmen"/>
                         </coding>
                     </code>
                     <entry>
                         <!-- 
-                            Auswahl des RehaMassnahmen Objektes:
+                            Auswahl des Reha-Maßnahmen Objektes:
                             RelativeURL:
                             urn:uuid:0f9b10f1-b311-49e8-b395-608303bdaa2d
                         -->                    
@@ -562,12 +562,12 @@
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
                             <code value="BEMS"/>
-                            <display value="BesondereMassnahmen"/>
+                            <display value="Besondere Maßnahmen"/>
                         </coding>
                     </code>
                     <entry>
                         <!-- 
-                            Auswahl des BesondereMassnahmen Objektes:
+                            Auswahl des Besondere Maßnahmen Objektes:
                             RelativeURL:
                             urn:uuid:3aecc20f-00e2-4d82-ae7b-a703118c9969
                         -->                    
@@ -580,12 +580,12 @@
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
                             <code value="ARUF"/>
-                            <display value="Arbeitsunfaehigkeit"/>
+                            <display value="Arbeitsunfähigkeit"/>
                         </coding>
                     </code>
                     <entry>
                         <!-- 
-                            Auswahl des Arbeitsunfaehigkeit Objektes:
+                            Auswahl des Arbeitsunfähigkeit Objektes:
                             RelativeURL:
                             urn:uuid:bbc56617-923d-4076-8bad-43cd861031c7
                         -->                    
@@ -598,12 +598,12 @@
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
                             <code value="PRWT"/>
-                            <display value="PrognoseWiederaufnahmeTaetigkeit"/>
+                            <display value="Prognose Wiederaufnahme Tätigkeit"/>
                         </coding>
                     </code>
                     <entry>
                         <!-- 
-                            Auswahl des PrognoseWiederaufnahmeTaetigkeit Objektes:
+                            Auswahl des Prognose Wiederaufnahme Tätigkeit Objektes:
                             RelativeURL:
                             urn:uuid:f8412800-04b9-446b-b83d-2d772af8099b
                         -->                    
@@ -616,12 +616,12 @@
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
                             <code value="STWG"/>
-                            <display value="stufenweiseWiedereingliederung"/>
+                            <display value="Stufenweise Wiedereingliederung"/>
                         </coding>
                     </code>
                     <entry>
                         <!-- 
-                            Auswahl des stufenweiseWiedereingliederung Objektes:
+                            Auswahl des Stufenweise Wiedereingliederung Objektes:
                             RelativeURL:
                             urn:uuid:e04aaff2-34c7-4dfa-80cf-b3c5d5a03058
                         -->                    
@@ -652,12 +652,12 @@
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
                             <code value="DARZ"/>
-                            <display value="DArzt"/>
+                            <display value="D-Arzt"/>
                         </coding>
                     </code>
                     <entry>
                         <!-- 
-                            Auswahl des DArzt Objektes:
+                            Auswahl des D-Arzt Objektes:
                             RelativeURL:
                             urn:uuid:93ad5198-d79b-4436-9e1e-aaa69acb2d08
                         -->                    
@@ -670,12 +670,12 @@
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
                             <code value="DAOR"/>
-                            <display value="DArztOrganisation"/>
+                            <display value="D-Arzt-Organisation"/>
                         </coding>
                     </code>
                     <entry>
                         <!-- 
-                            Auswahl des DArztOrganisation Objektes:
+                            Auswahl des D-Arzt-Organisation Objektes:
                             RelativeURL:
                             urn:uuid:cdc0ceec-dc27-44e5-a7c7-567a754dc912
                         -->                    
@@ -688,12 +688,12 @@
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
                             <code value="MDFX"/>
-                            <display value="MedikationFreitext"/>
+                            <display value="Medikation - Freitext"/>
                         </coding>
                     </code>
                     <entry>
                         <!-- 
-                            Auswahl des MedikationFreitext Objektes:
+                            Auswahl des Medikation - Freitext Objektes:
                             RelativeURL:
                             urn:uuid:4c88e3c8-821d-40eb-87fa-1e129b3ccace
                         -->                    
@@ -706,12 +706,12 @@
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
                             <code value="BNEN"/>
-                            <display value="BehandelndeEinrichtung"/>
+                            <display value="Behandelnde Einrichtung"/>
                         </coding>
                     </code>
                     <entry>
                         <!-- 
-                            Auswahl des BehandelndeEinrichtung Objektes:
+                            Auswahl des Behandelnde Einrichtung Objektes:
                             RelativeURL:
                             urn:uuid:f952b0d1-bb04-402d-b0e6-cef800858f98
                         -->                    

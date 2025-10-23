@@ -4684,7 +4684,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="VersichertePerson" />
+      <fixedString value="Versicherte Person" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -15464,7 +15464,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="DiagnoseFreitext" />
+      <fixedString value="Diagnose - Freitext" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -16841,7 +16841,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="DiagnoseStrukturiert" />
+      <fixedString value="Diagnose - strukturiert" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -29235,7 +29235,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="MedikationsInformation" />
+      <fixedString value="Medikationsinformation" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -30612,7 +30612,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="MedikationWirkstoff" />
+      <fixedString value="Medikation - Wirkstoff" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -31989,7 +31989,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="MedikationRezeptur" />
+      <fixedString value="Medikation - Rezeptur" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -33366,7 +33366,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="MedikationArzneimittel" />
+      <fixedString value="Medikation - Arzneimittel" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -34743,7 +34743,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="MedikationFreitext" />
+      <fixedString value="Medikation - Freitext" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -36120,7 +36120,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="WeiterbehandelnderArzt" />
+      <fixedString value="Weiterbehandelnder Arzt" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -37497,7 +37497,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="WeiterbehandelndeOrganisation" />
+      <fixedString value="Weiterbehandelnde Organisation" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -38874,7 +38874,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="RehaMassnahmen" />
+      <fixedString value="Reha-Maßnahmen" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -43005,7 +43005,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="BesondereMassnahmen" />
+      <fixedString value="Besondere Maßnahmen" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -44382,7 +44382,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="Arbeitsunfaehigkeit" />
+      <fixedString value="Arbeitsunfähigkeit" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -45759,7 +45759,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="PrognoseWiederaufnahmeTaetigkeit" />
+      <fixedString value="Prognose Wiederaufnahme Tätigkeit" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -47136,7 +47136,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="stufenweiseWiedereingliederung" />
+      <fixedString value="Stufenweise Wiedereingliederung" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -49890,7 +49890,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="DArzt" />
+      <fixedString value="D-Arzt" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -51267,7 +51267,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="DArztOrganisation" />
+      <fixedString value="D-Arzt-Organisation" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -52644,7 +52644,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="BehandelndeEinrichtung" />
+      <fixedString value="Behandelnde Einrichtung" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -53557,7 +53557,7 @@
     <element id="Composition.section:VersichertePerson.code.coding.display">
       <path value="Composition.section.code.coding.display" />
       <short value="Bezeichnung des Section-Typs" />
-      <fixedString value="VersichertePerson" />
+      <fixedString value="Versicherte Person" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:VersichertePerson.entry">
@@ -53978,7 +53978,7 @@
     <element id="Composition.section:DiagnoseFreitext.code.coding.display">
       <path value="Composition.section.code.coding.display" />
       <short value="Bezeichnung des Section-Typs" />
-      <fixedString value="DiagnoseFreitext" />
+      <fixedString value="Diagnose - Freitext" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:DiagnoseFreitext.entry">
@@ -54031,7 +54031,7 @@
     <element id="Composition.section:DiagnoseStrukturiert.code.coding.display">
       <path value="Composition.section.code.coding.display" />
       <short value="Bezeichnung des Section-Typs" />
-      <fixedString value="DiagnoseStrukturiert" />
+      <fixedString value="Diagnose - strukturiert" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:DiagnoseStrukturiert.entry">
@@ -54505,7 +54505,7 @@
     <element id="Composition.section:MedikationsInformation.code.coding.display">
       <path value="Composition.section.code.coding.display" />
       <short value="Bezeichnung des Section-Typs" />
-      <fixedString value="MedikationsInformation" />
+      <fixedString value="Medikationsinformation" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:MedikationsInformation.entry">
@@ -54557,7 +54557,7 @@
     <element id="Composition.section:MedikationWirkstoff.code.coding.display">
       <path value="Composition.section.code.coding.display" />
       <short value="Bezeichnung des Section-Typs" />
-      <fixedString value="MedikationWirkstoff" />
+      <fixedString value="Medikation - Wirkstoff" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:MedikationWirkstoff.entry">
@@ -54609,7 +54609,7 @@
     <element id="Composition.section:MedikationRezeptur.code.coding.display">
       <path value="Composition.section.code.coding.display" />
       <short value="Bezeichnung des Section-Typs" />
-      <fixedString value="MedikationRezeptur" />
+      <fixedString value="Medikation - Rezeptur" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:MedikationRezeptur.entry">
@@ -54661,7 +54661,7 @@
     <element id="Composition.section:MedikationArzneimittel.code.coding.display">
       <path value="Composition.section.code.coding.display" />
       <short value="Bezeichnung des Section-Typs" />
-      <fixedString value="MedikationArzneimittel" />
+      <fixedString value="Medikation - Arzneimittel" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:MedikationArzneimittel.entry">
@@ -54710,7 +54710,7 @@
     <element id="Composition.section:MedikationFreitext.code.coding.display">
       <path value="Composition.section.code.coding.display" />
       <min value="1" />
-      <fixedString value="MedikationFreitext" />
+      <fixedString value="Medikation - Freitext" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:MedikationFreitext.entry">
@@ -54764,7 +54764,7 @@
     <element id="Composition.section:WeiterbehandelnderArzt.code.coding.display">
       <path value="Composition.section.code.coding.display" />
       <short value="Bezeichnung des Section-Typs" />
-      <fixedString value="WeiterbehandelnderArzt" />
+      <fixedString value="Weiterbehandelnder Arzt" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:WeiterbehandelnderArzt.entry">
@@ -54817,7 +54817,7 @@
     <element id="Composition.section:WeiterbehandelndeOrganisation.code.coding.display">
       <path value="Composition.section.code.coding.display" />
       <short value="Bezeichnung des Section-Typs" />
-      <fixedString value="WeiterbehandelndeOrganisation" />
+      <fixedString value="Weiterbehandelnde Organisation" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:WeiterbehandelndeOrganisation.entry">
@@ -54869,7 +54869,7 @@
     <element id="Composition.section:RehaMassnahmen.code.coding.display">
       <path value="Composition.section.code.coding.display" />
       <short value="Bezeichnung des Section-Typs" />
-      <fixedString value="RehaMassnahmen" />
+      <fixedString value="Reha-Maßnahmen" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:RehaMassnahmen.entry">
@@ -55025,7 +55025,7 @@
     <element id="Composition.section:BesondereMassnahmen.code.coding.display">
       <path value="Composition.section.code.coding.display" />
       <short value="Bezeichnung des Section-Typs" />
-      <fixedString value="BesondereMassnahmen" />
+      <fixedString value="Besondere Maßnahmen" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:BesondereMassnahmen.entry">
@@ -55079,7 +55079,7 @@
     <element id="Composition.section:Arbeitsunfaehigkeit.code.coding.display">
       <path value="Composition.section.code.coding.display" />
       <short value="Bezeichnung des Section-Typs" />
-      <fixedString value="Arbeitsunfaehigkeit" />
+      <fixedString value="Arbeitsunfähigkeit" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:Arbeitsunfaehigkeit.entry">
@@ -55133,7 +55133,7 @@
     <element id="Composition.section:PrognoseWiederaufnahmeTaetigkeit.code.coding.display">
       <path value="Composition.section.code.coding.display" />
       <short value="Bezeichnung des Section-Typs" />
-      <fixedString value="PrognoseWiederaufnahmeTaetigkeit" />
+      <fixedString value="Prognose Wiederaufnahme Tätigkeit" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:PrognoseWiederaufnahmeTaetigkeit.entry">
@@ -55185,7 +55185,7 @@
     <element id="Composition.section:stufenweiseWiedereingliederung.code.coding.display">
       <path value="Composition.section.code.coding.display" />
       <short value="Bezeichnung des Section-Typs" />
-      <fixedString value="stufenweiseWiedereingliederung" />
+      <fixedString value="Stufenweise Wiedereingliederung" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:stufenweiseWiedereingliederung.entry">
@@ -55293,7 +55293,7 @@
     <element id="Composition.section:DArzt.code.coding.display">
       <path value="Composition.section.code.coding.display" />
       <short value="Bezeichnung des Section-Typs" />
-      <fixedString value="DArzt" />
+      <fixedString value="D-Arzt" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:DArzt.entry">
@@ -55347,7 +55347,7 @@
     <element id="Composition.section:DArztOrganisation.code.coding.display">
       <path value="Composition.section.code.coding.display" />
       <short value="Bezeichnung des Section-Typs" />
-      <fixedString value="DArztOrganisation" />
+      <fixedString value="D-Arzt-Organisation" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:DArztOrganisation.entry">
@@ -55399,7 +55399,7 @@
     <element id="Composition.section:BehandelndeEinrichtung.code.coding.display">
       <path value="Composition.section.code.coding.display" />
       <short value="Bezeichnung des Section-Typs" />
-      <fixedString value="BehandelndeEinrichtung" />
+      <fixedString value="Behandelnde Einrichtung" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:BehandelndeEinrichtung.entry">
