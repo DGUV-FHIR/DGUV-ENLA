@@ -8531,7 +8531,7 @@
       <path value="Organization.type.coding" />
       <sliceName value="IHE-Code" />
       <short value="Code defined by a terminology system" />
-      <definition value="A reference to a code defined by a terminology system." />
+      <definition value="Hier wird der Typus der Einrichtung anhand eines Codes aus dem Codesystem IHE Deutschland e.V. angegeben." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
       <min value="0" />
@@ -8887,7 +8887,7 @@
       <path value="Organization.type.coding" />
       <sliceName value="HL7-Fachschluesselgruppe" />
       <short value="Code defined by a terminology system" />
-      <definition value="A reference to a code defined by a terminology system." />
+      <definition value="Hier wird die Fachrichtung/Fachabteilung anhand eines Codes aus dem Codesystem 'Fachabteilungsschlüssel' der HL7 Basis Deutschland angegeben." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
       <min value="0" />
@@ -9243,7 +9243,7 @@
       <path value="Organization.type.coding" />
       <sliceName value="HL7-Fachschluesselgruppe-erweitert" />
       <short value="Code defined by a terminology system" />
-      <definition value="A reference to a code defined by a terminology system." />
+      <definition value="Hier wird die Fachrichtung/Fachabteilung anhand eines Codes aus dem Codesystem &quot;FachabteilungsschlüsselErweitert&quot; der HL7 Basis Deutschland angegeben." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
       <min value="0" />
@@ -15425,6 +15425,7 @@
     <element id="Organization.type.coding:IHE-Code">
       <path value="Organization.type.coding" />
       <sliceName value="IHE-Code" />
+      <definition value="Hier wird der Typus der Einrichtung anhand eines Codes aus dem Codesystem IHE Deutschland e.V. angegeben." />
       <mustSupport value="true" />
     </element>
     <element id="Organization.type.coding:IHE-Code.system">
@@ -15446,6 +15447,7 @@
     <element id="Organization.type.coding:HL7-Fachschluesselgruppe">
       <path value="Organization.type.coding" />
       <sliceName value="HL7-Fachschluesselgruppe" />
+      <definition value="Hier wird die Fachrichtung/Fachabteilung anhand eines Codes aus dem Codesystem 'Fachabteilungsschlüssel' der HL7 Basis Deutschland angegeben." />
       <mustSupport value="true" />
     </element>
     <element id="Organization.type.coding:HL7-Fachschluesselgruppe.system">
@@ -15467,6 +15469,7 @@
     <element id="Organization.type.coding:HL7-Fachschluesselgruppe-erweitert">
       <path value="Organization.type.coding" />
       <sliceName value="HL7-Fachschluesselgruppe-erweitert" />
+      <definition value="Hier wird die Fachrichtung/Fachabteilung anhand eines Codes aus dem Codesystem &quot;FachabteilungsschlüsselErweitert&quot; der HL7 Basis Deutschland angegeben." />
       <mustSupport value="true" />
     </element>
     <element id="Organization.type.coding:HL7-Fachschluesselgruppe-erweitert.system">
