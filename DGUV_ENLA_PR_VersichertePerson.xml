@@ -1916,7 +1916,7 @@
       <sliceName value="VersichertenId" />
       <short value="Lebenslange Krankenversichertennummer" />
       <definition value="Hier wird der unveränderliche Teil der einheitlichen Krankenversicherungsnummer der GKV gemäß § 290 SGB V angegeben. Die 10-stellige Zeichenfolge beginnt mit einem zufällig vergebene Großbuchstaben, darauf folgen 8 zufällige Ziffern. Das 10.Zeichen ist eine Prüfziffer." />
-      <comment value="Die als 'KVZ10' kodierte Versichertennummer ist der 10-stellige, unveränderbare Teil der Versichertennummer, der lesbar auf die Elektronische Gesundheitskarte aufgedruckt ist. Er gilt für alle Krankenversichertennummern, unabhängig davon, ob es sich um GKV, PKV oder Sonderkostenträger handelt." />
+      <comment value="Die als 'KVZ10' kodierte Versichertennummer ist der 10-stellige, unveränderbare Teil der Versichertennummer. Er gilt für alle Krankenversichertennummern, unabhängig davon, ob es sich um GKV, PKV oder Sonderkostenträger handelt." />
       <requirements value="Patients are almost always assigned specific numerical identifiers." />
       <min value="0" />
       <max value="1" />
@@ -16788,6 +16788,7 @@
     <element id="Patient.identifier:VersichertenId">
       <path value="Patient.identifier" />
       <sliceName value="VersichertenId" />
+      <comment value="Die als 'KVZ10' kodierte Versichertennummer ist der 10-stellige, unveränderbare Teil der Versichertennummer. Er gilt für alle Krankenversichertennummern, unabhängig davon, ob es sich um GKV, PKV oder Sonderkostenträger handelt." />
       <mustSupport value="true" />
     </element>
     <element id="Patient.identifier:VersichertenId.type">
