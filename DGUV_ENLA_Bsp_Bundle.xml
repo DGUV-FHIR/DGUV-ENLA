@@ -1555,7 +1555,7 @@
 
                 <!-- Behandelnde(-r) Ärtztin/Arzt-->
                 <performer>
-                    <reference value="DArzt/gh45434" />
+                    <reference value="urn:uuid:93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
                 </performer>
 
                 <!-- Freitext für Empfehlungen für weitere therapeutische und diagnostische Maßnahmen -->
