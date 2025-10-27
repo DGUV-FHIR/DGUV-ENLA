@@ -466,6 +466,24 @@
                         <reference value="urn:uuid:4b28cbef-80e7-4838-b15b-b2d9dfc4461b" />
                     </entry>
                 </section>
+                                <section>
+                    <!-- 35 -->
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="MDFX"/>
+                            <display value="Medikation - Freitext"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <!-- 
+                            Auswahl des Medikation - Freitext Objektes:
+                            RelativeURL:
+                            urn:uuid:4c88e3c8-821d-40eb-87fa-1e129b3ccace
+                        -->                    
+                        <reference value="urn:uuid:4c88e3c8-821d-40eb-87fa-1e129b3ccace" />
+                    </entry>
+                </section>
                 <section>
                     <!-- 23 -->
                     <code>
@@ -680,24 +698,6 @@
                             urn:uuid:cdc0ceec-dc27-44e5-a7c7-567a754dc912
                         -->                    
                         <reference value="urn:uuid:cdc0ceec-dc27-44e5-a7c7-567a754dc912" />
-                    </entry>
-                </section>
-                <section>
-                    <!-- 35 -->
-                    <code>
-                        <coding>
-                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
-                            <code value="MDFX"/>
-                            <display value="Medikation - Freitext"/>
-                        </coding>
-                    </code>
-                    <entry>
-                        <!-- 
-                            Auswahl des Medikation - Freitext Objektes:
-                            RelativeURL:
-                            urn:uuid:4c88e3c8-821d-40eb-87fa-1e129b3ccace
-                        -->                    
-                        <reference value="urn:uuid:4c88e3c8-821d-40eb-87fa-1e129b3ccace" />
                     </entry>
                 </section>
                 <section>
