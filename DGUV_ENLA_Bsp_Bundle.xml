@@ -48,7 +48,7 @@
                 <type>
                     <coding>
                         <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-Formtexte" />
-                        <code value="F 2102" />
+                        <code value="F2102" />
                         <display value="Entlassungsbericht aus stationärer Behandlung (DAV/VAV/SAV)" />
                     </coding>
                 </type>
@@ -1152,7 +1152,7 @@
                 <code>
                     <coding>
                         <system value="http://fhir.de/CodeSystem/bfarm/icd-10-gm"/>
-                        <version value="2019"/>
+                        <version value="2025"/>
                         <code value="S06.0"/>
                         <display value="Gehirnerschütterung"/>
                     </coding>
