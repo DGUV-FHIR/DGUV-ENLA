@@ -1375,7 +1375,7 @@
       <type>
         <code value="code" />
       </type>
-      <fixedCode value="F 2102" />
+      <fixedCode value="F2102" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -11713,8 +11713,8 @@
       <short value="Verweis auf das ENLA-Profil Pflegekasse" />
       <definition value="A reference to the actual resource from which the narrative in the section is derived." />
       <comment value="If there are no entries in the list, an emptyReason SHOULD be provided." />
-      <min value="0" />
-      <max value="*" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="Composition.section.entry" />
         <min value="0" />
@@ -11742,6 +11742,7 @@
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Reference" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -53456,7 +53457,7 @@
       <path value="Composition.type.coding.code" />
       <short value="Kürzel der konkreten Formtext-Variante" />
       <min value="1" />
-      <fixedCode value="F 2102" />
+      <fixedCode value="F2102" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.type.coding.display">
@@ -53826,10 +53827,13 @@
     <element id="Composition.section:Pflegekasse.entry">
       <path value="Composition.section.entry" />
       <short value="Verweis auf das ENLA-Profil Pflegekasse" />
+      <min value="1" />
+      <max value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Pflegekasse" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:Pflegekasse.entry.reference">
       <path value="Composition.section.entry.reference" />
