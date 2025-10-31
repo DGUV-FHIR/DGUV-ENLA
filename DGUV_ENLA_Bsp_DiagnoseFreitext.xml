@@ -1,21 +1,34 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Condition xmlns="http://hl7.org/fhir">
-    <id value="84507618-4ff5-46d9-9e61-8ab15c9ce2a4"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Author: Friedhelm Matten
+    Datum:  30.09.2025
+
+-->
+ <Condition xmlns="http://hl7.org/fhir">
+    <id value="DGUV-ENLA-PR-DiagnoseFreitext"/>
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseFreitext"/>
     </meta>
+
+
+
+    <!-- AO Klassifikation-->
     <extension url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-Frakturklassifikation">
         <extension url="Fraktur">
-            <valueBoolean value="true"/>
+            <valueBoolean value="true"/> 
         </extension>
         <extension url="AO-Klassifikation">
             <valueString value="12A 12B 12C"/>
         </extension>
     </extension>
+
+    <!-- Freitextliche Diagnose -->
     <code>
         <text value="Hier steht der Freitext!"/>
     </code>
+
+    <!-- Referenz auf die VersichertePerson -->
     <subject>
-        <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
+        <reference value="Patient/T37501234"/>
     </subject>
 </Condition>

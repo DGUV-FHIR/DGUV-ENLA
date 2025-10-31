@@ -94,7 +94,7 @@
     </element>
     <element id="Medication.id">
       <path value="Medication.id" />
-      <short value="eindeutige ID der Ressource auf dem Server" />
+      <short value="Logical id of this artifact" />
       <definition value="The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes." />
       <comment value="The only time that a resource does not have an id is when it is being submitted to the server using a create operation." />
       <min value="0" />
@@ -889,7 +889,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <short value="Code defined by a terminology system" />
+      <short value="Medikament in codierter Form" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
@@ -946,12 +946,12 @@
     <element id="Medication.code.coding:PZN">
       <path value="Medication.code.coding" />
       <sliceName value="PZN" />
-      <short value="Code defined by a terminology system" />
+      <short value="Pharmazentralnummer" />
       <definition value="A reference to a code defined by a terminology system." />
-      <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
+      <comment value="Mehrfachcodierung ist zulässig, da für ein abstraktes Medikament auch mehrere PZN-Codes existieren können, z. B. existieren für Aspirin 3 verschiedene Packungsgrößen." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
       <min value="1" />
-      <max value="1" />
+      <max value="*" />
       <base>
         <path value="CodeableConcept.coding" />
         <min value="0" />
@@ -1079,7 +1079,7 @@
     </element>
     <element id="Medication.code.coding:PZN.system">
       <path value="Medication.code.coding.system" />
-      <short value="Identity of the terminology system" />
+      <short value="CodeSystem für Pharmazentralnummer" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
       <comment value="The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously." />
       <requirements value="Need to be unambiguous about the source of the definition of the symbol." />
@@ -1166,7 +1166,7 @@
     </element>
     <element id="Medication.code.coding:PZN.code">
       <path value="Medication.code.coding.code" />
-      <short value="Symbol in syntax defined by the system" />
+      <short value="Code der konkreten Pharmazentralnummer" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to refer to a particular code in the system." />
@@ -1213,9 +1213,9 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Medication.code.coding.display" />
-      <short value="Representation defined by the system" />
-      <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
-      <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
+      <short value="Handelsname des verordneten Präparats" />
+      <definition value="Handelsname des verordneten Präparates, aus der PZN abgeleitet. Ist eine PZN vorhanden, so muss diese hier angeben werden." />
+      <comment value="Der durch PZN vorgegebene Handelsname ist in code.text verpflichtend und in code.coding.PZN.display optional. Wenn er an beiden Stellen gepflegt wird, dann müssen beide Einträge identisch sein." />
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
       <min value="0" />
       <max value="1" />
@@ -1303,7 +1303,7 @@
       <sliceName value="ATC-DE" />
       <short value="Code defined by a terminology system" />
       <definition value="A reference to a code defined by a terminology system." />
-      <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
+      <comment value="Mehrfachcodierung ist zulässig, da für ein abstraktes Medikament auch mehrere ATC-Codes existieren können, z. B. existieren für Aspirin 4 verschiedene Codes, je nachdem wofür das Medikament angewendet wird." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
       <min value="0" />
       <max value="0" />
@@ -2011,9 +2011,9 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Medication.code.text" />
-      <short value="Arzneimittelname / Handelsname" />
+      <short value="Arzneimittelname / Handelsname als Freitext" />
       <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user." />
-      <comment value="Very often the text is the same as a displayName of one of the codings." />
+      <comment value="Der durch PZN vorgegebene Handelsname ist in code.text verpflichtend und in code.coding.PZN.display optional. Wenn er an beiden Stellen gepflegt wird, dann müssen beide Einträge identisch sein." />
       <requirements value="The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source." />
       <min value="1" />
       <max value="1" />
@@ -2360,7 +2360,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Medication.manufacturer.display" />
-      <short value="Text alternative for the resource" />
+      <short value="Hersteller des Medikaments als Freitext" />
       <definition value="Plain text narrative that identifies the resource in addition to the resource reference." />
       <comment value="This is generally not the same as the Resource.text of the referenced resource.  The purpose is to identify what's being referenced, not to fully describe it." />
       <min value="1" />
@@ -2538,7 +2538,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <short value="Code defined by a terminology system" />
+      <short value="Abgabeform in codiertem Format" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
@@ -2595,7 +2595,7 @@
     <element id="Medication.form.coding:EDQM">
       <path value="Medication.form.coding" />
       <sliceName value="EDQM" />
-      <short value="Code defined by a terminology system" />
+      <short value="Abgabeform im EDQM-Format" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
@@ -2951,7 +2951,7 @@
     <element id="Medication.form.coding:kbvDarreichungsform">
       <path value="Medication.form.coding" />
       <sliceName value="kbvDarreichungsform" />
-      <short value="Code defined by a terminology system" />
+      <short value="Abgabeform als KBV-Darreichungsform" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
@@ -3112,6 +3112,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -3154,6 +3155,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -3197,6 +3199,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -3243,6 +3246,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -7621,6 +7625,7 @@
       <path value="Medication.batch" />
       <short value="Angaben zur Charge" />
       <definition value="Information that only applies to packages (not products)." />
+      <comment value="Bitte beachten Sie gegebenenfalls die Regelungen der zwischen GKV-SV und DAV: https://www.gkv-datenaustausch.de/leistungserbringer/apotheken/apotheken.jsp . Insbesondere den Technischen Anhang 7 (TA7) zur Arzneimittelabrechnungsvereinbarung gemäß § 300 Absatz 3 SGB V in der aktuellsten Fassung." />
       <min value="0" />
       <max value="1" />
       <base>
@@ -7780,7 +7785,7 @@
       <path value="Medication.batch.lotNumber" />
       <short value="Chargennummer" />
       <definition value="The assigned lot number of a batch of the specified product." />
-      <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
+      <comment value="Gemäß Anlage 1 der TA7 kann hier übergangsweise bis zum 30. Juni 2025 eine Musterchargennummer (&quot;STELLEN&quot;) eingetragen werden. Wenn die Übermittlung der Chargenbezeichnung beim Stellen von Arzneimitteln technisch nicht möglich ist, z.B. beim Verblistern, wird von der Verpflichtung zur Chargendokumentation abgesehen. Dementsprechend kann anstatt der tatsächlichen Chargenbezeichnungen &quot;STELLEN&quot; in das hierbeschirebene Datenfeld eingetragen werden." />
       <min value="0" />
       <max value="1" />
       <base>
@@ -7860,6 +7865,10 @@
     </element>
   </snapshot>
   <differential>
+    <element id="Medication.id">
+      <path value="Medication.id" />
+      <mustSupport value="true" />
+    </element>
     <element id="Medication.meta">
       <path value="Medication.meta" />
       <min value="1" />
@@ -7878,17 +7887,30 @@
     </element>
     <element id="Medication.code.coding">
       <path value="Medication.code.coding" />
+      <short value="Medikament in codierter Form" />
       <min value="1" />
       <max value="1" />
     </element>
     <element id="Medication.code.coding:PZN">
       <path value="Medication.code.coding" />
       <sliceName value="PZN" />
+      <short value="Pharmazentralnummer" />
       <min value="1" />
     </element>
     <element id="Medication.code.coding:PZN.system">
       <path value="Medication.code.coding.system" />
+      <short value="CodeSystem für Pharmazentralnummer" />
       <fixedUri value="http://fhir.de/CodeSystem/ifa/pzn" />
+    </element>
+    <element id="Medication.code.coding:PZN.code">
+      <path value="Medication.code.coding.code" />
+      <short value="Code der konkreten Pharmazentralnummer" />
+    </element>
+    <element id="Medication.code.coding:PZN.display">
+      <path value="Medication.code.coding.display" />
+      <short value="Handelsname des verordneten Präparats" />
+      <definition value="Handelsname des verordneten Präparates, aus der PZN abgeleitet. Ist eine PZN vorhanden, so muss diese hier angeben werden." />
+      <comment value="Der durch PZN vorgegebene Handelsname ist in code.text verpflichtend und in code.coding.PZN.display optional. Wenn er an beiden Stellen gepflegt wird, dann müssen beide Einträge identisch sein." />
     </element>
     <element id="Medication.code.coding:ATC-DE">
       <path value="Medication.code.coding" />
@@ -7902,12 +7924,22 @@
     </element>
     <element id="Medication.code.text">
       <path value="Medication.code.text" />
-      <short value="Arzneimittelname / Handelsname" />
+      <short value="Arzneimittelname / Handelsname als Freitext" />
+      <comment value="Der durch PZN vorgegebene Handelsname ist in code.text verpflichtend und in code.coding.PZN.display optional. Wenn er an beiden Stellen gepflegt wird, dann müssen beide Einträge identisch sein." />
       <min value="1" />
+    </element>
+    <element id="Medication.manufacturer.display">
+      <path value="Medication.manufacturer.display" />
+      <short value="Hersteller des Medikaments als Freitext" />
+    </element>
+    <element id="Medication.form.coding">
+      <path value="Medication.form.coding" />
+      <short value="Abgabeform in codiertem Format" />
     </element>
     <element id="Medication.form.coding:EDQM">
       <path value="Medication.form.coding" />
       <sliceName value="EDQM" />
+      <short value="Abgabeform im EDQM-Format" />
     </element>
     <element id="Medication.form.coding:EDQM.system">
       <path value="Medication.form.coding.system" />
@@ -7916,6 +7948,7 @@
     <element id="Medication.form.coding:kbvDarreichungsform">
       <path value="Medication.form.coding" />
       <sliceName value="kbvDarreichungsform" />
+      <short value="Abgabeform als KBV-Darreichungsform" />
       <min value="1" />
       <max value="1" />
       <patternCoding>
@@ -7930,18 +7963,22 @@
       <path value="Medication.form.coding.system" />
       <min value="1" />
       <fixedUri value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM" />
+      <mustSupport value="true" />
     </element>
     <element id="Medication.form.coding:kbvDarreichungsform.version">
       <path value="Medication.form.coding.version" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Medication.form.coding:kbvDarreichungsform.code">
       <path value="Medication.form.coding.code" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Medication.form.coding:kbvDarreichungsform.display">
       <path value="Medication.form.coding.display" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Medication.amount.numerator.system">
       <path value="Medication.amount.numerator.system" />

@@ -1715,7 +1715,7 @@
     </element>
     <element id="Observation.subject.reference">
       <path value="Observation.subject.reference" />
-      <short value="Literal reference, Relative, internal or absolute URL" />
+      <short value="Konkreter Verweis auf versicherte Person" />
       <definition value="A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources." />
       <comment value="Using absolute URLs provides a stable scalable approach suitable for a cloud/web context, while using relative/logical references provides a flexible approach suitable for use when trading across closed eco-system boundaries.   Absolute URLs do not need to point to a FHIR RESTful server, though this is the preferred approach. If the URL conforms to the structure &quot;/[type]/[id]&quot; then it should be assumed that the reference is to a FHIR RESTful server." />
       <min value="1" />
@@ -2003,7 +2003,7 @@
     </element>
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
-      <short value="Beginn" />
+      <short value="Anwendungsbeginn Heilmittel" />
       <definition value="The time or time-period the observed value is asserted as being true. For biological subjects - e.g. human patients - this is usually called the &quot;physiologically relevant time&quot;. This is usually either the time of the procedure or of specimen collection, but very often the source of the date/time is not known, only the date/time itself." />
       <comment value="At least a date should be present unless this observation is a historical report.  For recording imprecise or &quot;fuzzy&quot; times (For example, a blood glucose measurement taken &quot;after breakfast&quot;) use the [Timing](datatypes.html#timing) datatype which allow the measurement to be tied to regular life events." />
       <requirements value="Knowing when an observation was deemed true is important to its relevance as well as determining trends." />
@@ -2931,7 +2931,7 @@
     </element>
     <element id="Observation.effective[x].code">
       <path value="Observation.effective[x].code" />
-      <short value="Direkt | Festzul | Azpkt |" />
+      <short value="Direkt | Festzul | Azpkt" />
       <definition value="A code for the timing schedule (or just text in code.text). Some codes such as BID are ubiquitous, but many institutions define their own additional codes. If a code is provided, the code is understood to be a complete statement of whatever is specified in the structured timing data, and either the code or the data may be used to interpret the Timing, with the exception that .repeat.bounds still applies over the code (and is not contained in the code)." />
       <comment value="BID etc. are defined as 'at institutionally specified times'. For example, an institution may choose that BID is &quot;always at 7am and 6pm&quot;.  If it is inappropriate for this choice to be made, the code BID should not be used. Instead, a distinct organization-specific code should be used in place of the HL7-defined BID code and/or a structured representation should be used (in this case, specifying the two event times)." />
       <min value="1" />
@@ -3204,7 +3204,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="&quot;http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Heilmittel" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-MassnahmenZeitpunkt" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -3414,7 +3414,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Observation.effective[x].code.text" />
-      <short value="Plain text representation of the concept" />
+      <short value="Anwendungsbeginn des Heilmittels als Freitext" />
       <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user." />
       <comment value="Very often the text is the same as a displayName of one of the codings." />
       <requirements value="The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source." />
@@ -3775,7 +3775,7 @@
         <description value="Extensions are always sliced by (at least) url" />
         <rules value="open" />
       </slicing>
-      <short value="Erweiterung für Maßnahmenkennzeichnung als verordnet" />
+      <short value="Erweiterung für Heilmittelkennzeichnung als verordnet" />
       <definition value="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
@@ -3820,7 +3820,7 @@
     <element id="Observation.value[x].coding.extension:IstVerordnet">
       <path value="Observation.value[x].coding.extension" />
       <sliceName value="IstVerordnet" />
-      <short value="Kennzeichnung von Maßnahme als verordnet / nicht verordnet" />
+      <short value="Kennzeichnung von Heilmittel als verordnet / nicht verordnet" />
       <definition value="Optional Extension Element - found in all resources." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
@@ -3903,7 +3903,7 @@
       <alias value="extensions" />
       <alias value="user content" />
       <min value="0" />
-      <max value="*" />
+      <max value="0" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -3965,7 +3965,7 @@
     </element>
     <element id="Observation.value[x].coding.extension:IstVerordnet.value[x]">
       <path value="Observation.value[x].coding.extension.value[x]" />
-      <short value="Kennzeichnung von Maßnahme als verordnet (true) / nicht verordnet (false)" />
+      <short value="Kennzeichnung von Heilmittel als verordnet (true) / nicht verordnet (false)" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
       <min value="1" />
       <max value="1" />
@@ -4222,9 +4222,9 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Observation.value[x].text" />
-      <short value="Freitext" />
+      <short value="Angaben über Heilmittel als Freitext" />
       <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user." />
-      <comment value="Very often the text is the same as a displayName of one of the codings." />
+      <comment value="Sollen zusätzlich Heilmittel als Freitext beschrieben werden, muss im Freitext auch eine Information darüber enthalten sein, ob sie schon verordnet sind oder nicht." />
       <requirements value="The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source." />
       <min value="0" />
       <max value="1" />
@@ -6390,6 +6390,7 @@
     </element>
     <element id="Observation.subject.reference">
       <path value="Observation.subject.reference" />
+      <short value="Konkreter Verweis auf versicherte Person" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -6405,7 +6406,7 @@
     </element>
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
-      <short value="Beginn" />
+      <short value="Anwendungsbeginn Heilmittel" />
       <min value="1" />
       <type>
         <code value="Timing" />
@@ -6414,7 +6415,7 @@
     </element>
     <element id="Observation.effective[x].code">
       <path value="Observation.effective[x].code" />
-      <short value="Direkt | Festzul | Azpkt |" />
+      <short value="Direkt | Festzul | Azpkt" />
       <min value="1" />
       <mustSupport value="true" />
       <binding>
@@ -6431,7 +6432,7 @@
     <element id="Observation.effective[x].code.coding.system">
       <path value="Observation.effective[x].code.coding.system" />
       <min value="1" />
-      <fixedUri value="&quot;http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Heilmittel" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-MassnahmenZeitpunkt" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.effective[x].code.coding.code">
@@ -6446,6 +6447,7 @@
     </element>
     <element id="Observation.effective[x].code.text">
       <path value="Observation.effective[x].code.text" />
+      <short value="Anwendungsbeginn des Heilmittels als Freitext" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.value[x]">
@@ -6464,7 +6466,7 @@
     </element>
     <element id="Observation.value[x].coding.extension">
       <path value="Observation.value[x].coding.extension" />
-      <short value="Erweiterung für Maßnahmenkennzeichnung als verordnet" />
+      <short value="Erweiterung für Heilmittelkennzeichnung als verordnet" />
       <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
@@ -6472,7 +6474,7 @@
     <element id="Observation.value[x].coding.extension:IstVerordnet">
       <path value="Observation.value[x].coding.extension" />
       <sliceName value="IstVerordnet" />
-      <short value="Kennzeichnung von Maßnahme als verordnet / nicht verordnet" />
+      <short value="Kennzeichnung von Heilmittel als verordnet / nicht verordnet" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -6484,7 +6486,7 @@
     </element>
     <element id="Observation.value[x].coding.extension:IstVerordnet.value[x]">
       <path value="Observation.value[x].coding.extension.value[x]" />
-      <short value="Kennzeichnung von Maßnahme als verordnet (true) / nicht verordnet (false)" />
+      <short value="Kennzeichnung von Heilmittel als verordnet (true) / nicht verordnet (false)" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -6509,7 +6511,8 @@
     </element>
     <element id="Observation.value[x].text">
       <path value="Observation.value[x].text" />
-      <short value="Freitext" />
+      <short value="Angaben über Heilmittel als Freitext" />
+      <comment value="Sollen zusätzlich Heilmittel als Freitext beschrieben werden, muss im Freitext auch eine Information darüber enthalten sein, ob sie schon verordnet sind oder nicht." />
       <mustSupport value="true" />
     </element>
   </differential>

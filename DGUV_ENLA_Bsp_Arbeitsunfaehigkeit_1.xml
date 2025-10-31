@@ -1,28 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-    Author: 
-    Datum:  
-
-    Die vorliegende Beispiel Datei .... dient der Validierung 
-    der Datenaufnahme zu dem ......
-    
-    Zu beachten ist dabei ...
-
-    Durchzuführende Massnahmen:
-
-
--->
 <Observation xmlns="http://hl7.org/fhir">
-  <id value="DGUV-ENLA-Bsp-Arbeitsunfaehigkeit-1" />
+  <id value="DGUV-ENLA-Bsp-Arbeitsunfaehigkeit" />
   <meta>
       <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Arbeitsunfaehigkeit" />
   </meta>
-<!-- Ist der Wert des status zu verifizieren? -->  
+
+  <!-- Observation status -->
   <status value="final"/>
 
-<!--
-  Welche Art der überprüfung ist für den Teilbereichsinhalt notwendig und ausreichend?
--->  
+  <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
   <code>
       <coding>
           <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
@@ -30,53 +16,26 @@
           <display value="Arbeitsunfähigkeit" />
       </coding>
   </code>
-<!--  
-    Es muss überprüft werden, dass die hier auftretende Referenz nicht leer ist und
-    die korrekte Form
-         <reference value="http://fhir.dguv.de/ENLA/Patient/VersichertePerson" />
-    oder
-        "Patient/(UUDI oder Referenz id)"
-    einhalten.
--->
+
+  <!-- VersichertePerson-->
   <subject>
       <reference value="Patient/T37501234" />
   </subject>
 
-<!-- 
-    Das Feld effectiveDateTime sollte vorhanden sein und ein gültiges Datumsformat einhalten.
--->
-  <effectiveDateTime value="2025-07-03" />
-  <!--  
-    Es muss überprüft werden, dass die hier auftretende Referenz nicht leer ist und
-    die korrekte Form
-         <reference value="http://fhir.dguv.de/ENLA/Patient/VersichertePerson" />
-    oder
-        "Patient/(UUDI oder Referenz id)"
-    einhalten.
--->
+  <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
+  <!-- effectiveDateTime value="2025-07-03" /> -->
+
+  <!-- Behandelnde(-r) Ärtztin/Arzt-->
   <performer>
       <reference value="DArzt/T37501234" />
-  </performer>
+  </performer>  
 
-<!--  
-    In dem Fall, dass der code value="AUFLEX" und der Displaywert display="Arbeitsunfähig voraussichtliche Dauer" ist, müssen die Felder
-      Attribut "value[x].extension. … .FlexibleAU.value[x].value"
-      Attribut "value[x].extension. … .FlexibleAU.value[x].unit"
-    ausgefüllt sein.
-    Attribut "value[x]"
-    Bei "AF" ("Arbeitsfähig") gibt es KEINE Wiedereingliederung (vgl. DGUV_ENLA_PR_stufenweiseWiedereingliederung).
--->  
+  <!-- Art der Arbeitsunfaehigkeit -->  
   <valueCodeableConcept>
-    <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-FlexAU">
-      <Flexible_AU>
-        <Duration value="2" />
-        <unit value="Wochen" />
-      </Flexible_AU>
-    </extension>
     <coding>
         <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Arbeitsunfaehigkeit" />
-        <code value="AUFLEX" />
-        <display value="Arbeitsunfähig voraussichtliche Dauer" />
+        <code value="AUBIS" />
+        <display value="Arbeitsunfähig bis" />
     </coding>
   </valueCodeableConcept>
 </Observation>

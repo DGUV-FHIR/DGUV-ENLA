@@ -1,14 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Author: 
+    Datum:  
+
+    Die vorliegende Beispiel Datei .... dient der Validierung 
+    der Datenaufnahme zu dem ......
+    
+    Zu beachten ist dabei ...
+
+    Durchzuführende Massnahmen:
+
+
+-->
 <Organization xmlns="http://hl7.org/fhir">
-    <id value="bef1dc10-a361-4eba-8fcc-073f771df44b" />
+    <id value="DGUV-ENLA-Bsp-Unfallbetrieb" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Unfallbetrieb" />
     </meta>
+
+    <!-- Bezeichnung des Unfallbetriebs-->
     <name value="Sankt Augustiner 6 Tage Rennen GmbH"/>
+
+    <!-- Telefon Kontakt Unfallbetrieb -->
     <telecom>
         <system value="phone"/>
         <value value="01761234"/>
     </telecom>
+
+    <!-- Strassen Adresse des Unfallbetriebs und Postfach -->
     <address>
         <type value="both"/>
         <line value="Johann-Lafer-Gasse 2">
@@ -23,4 +42,5 @@
         <postalCode value="53757"/>
         <country value="DE"/>
     </address>
+
 </Organization>

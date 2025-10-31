@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Author: 
+    Datum:  
+
+    Die vorliegende Beispiel Datei .... dient der Validierung 
+    der Datenaufnahme zu dem ......
+    
+    Zu beachten ist dabei ...
+
+    Durchzuführende Massnahmen:
+
+
+-->
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="2288ca98-76e8-4daf-bfb3-dd36c0efbb39" />
+    <id value="DGUV-ENLA-Bsp-Therapie" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Therapie" />
     </meta>
@@ -13,7 +26,28 @@
         </coding>
     </code>
     <subject>
-        <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
+        <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
     </subject>
-    <valueString value="neurologisches und inneres konsil" />
+    <valueString value="neurologisches und inneres konsil" >
+        <!--  erster Eintrag -->
+        <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-OPSCode">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://fhir.de/CodeSystem/bfarm/ops" />
+                    <code value="1-203.1" />
+                    <display value="Invasive Funktionsdiagnostik des Nervensystems: Mit Stimulationselektroden, spinal;Invasive Funktionsdiagnostik des Nervensystems;Mit Stimulationselektroden, spinal" />
+                </coding>
+            </valueCodeableConcept>
+        </extension>
+        <!--  zweiter Eintrag -->
+        <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-OPSCode">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://fhir.de/CodeSystem/bfarm/ops" />
+                    <code value="1-20a.20" />
+                    <display value="Andere neurophysiologische Untersuchungen: Neurologische Untersuchung bei Bewegungsstörungen: Untersuchung der Pharmakosensitivität mit quantitativer Testung;Andere neurophysiologische Untersuchungen;Neurologische Untersuchung bei Bewegungsstörungen;Untersuchung der Pharmakosensitivität mit quantitativer Testung" />
+                </coding>
+            </valueCodeableConcept>
+        </extension>
+    </valueString>
 </Observation>

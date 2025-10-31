@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Author: 
+    Datum:  
+
+    Die vorliegende Beispiel Datei .... dient der Validierung 
+    der Datenaufnahme zu dem ......
+    
+    Zu beachten ist dabei ...
+
+    Durchzuführende Massnahmen:
+
+
+-->
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="DGUV-ENLA-Bsp-Arbeitsunfaehigkeit-1" />
+  <meta>
+      <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Arbeitsunfaehigkeit" />
+  </meta>
+  <!-- Observation status -->  
+  <status value="final"/>
+
+  <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
+  <code>
+      <coding>
+          <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+          <code value="AU" />
+          <display value="Arbeitsunfähigkeit" />
+      </coding>
+  </code>
+
+  <!-- VersichertePerson-->
+  <subject>
+      <reference value="Patient/T37501234" />
+  </subject>
+
+  <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
+  <!-- effectiveDateTime value="2025-07-03" /> -->
+
+  <!-- Behandelnde(-r) Ärtztin/Arzt-->
+  <performer>
+      <reference value="DArzt/T37501234" />
+  </performer>
+
+<!--  
+    In dem Fall, dass der code value="AUFLEX" und der Displaywert display="Arbeitsunfähig voraussichtliche Dauer" ist, müssen die Felder
+      Attribut "value[x].extension. … .FlexibleAU.value[x].value"
+      Attribut "value[x].extension. … .FlexibleAU.value[x].unit"
+    ausgefüllt sein.
+    Attribut "value[x]"
+    Bei "AF" ("Arbeitsfähig") gibt es KEINE Wiedereingliederung (vgl. DGUV_ENLA_PR_stufenweiseWiedereingliederung).
+-->
+
+  <!-- FlexAU -->
+  <valueCodeableConcept>
+    <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-FlexAU">
+      <valueDuration>
+        <value value="2" />
+        <unit value="" />
+      </valueDuration>
+    </extension>
+    <coding>
+        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Arbeitsunfaehigkeit" />
+        <code value="AUFLEX" />
+        <display value="Arbeitsunfähig voraussichtliche Dauer" />
+    </coding>
+  </valueCodeableConcept>
+</Observation>

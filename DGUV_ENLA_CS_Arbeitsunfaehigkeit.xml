@@ -15,7 +15,7 @@
     </telecom>
   </contact>
   <description value="Dieses CodeSystem enthält Codes und Displays zur Einschätzung der Arbeitsunfaehigkeit der versicherten Person durch den behandelnden Arzt." />
-  <content value="complete"/>
+  <content value="complete" />
   <concept>
     <code value="AF" />
     <display value="Arbeitsfähig" />

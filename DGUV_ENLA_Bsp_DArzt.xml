@@ -1,30 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Author: Friedhelm Matten
+    Datum:  30.09.2025
+
+    Anlass: Validierung und Dokumentation
+
+
+-->
 <PractitionerRole xmlns="http://hl7.org/fhir">
-    <id value="93ad5198-d79b-4436-9e1e-aaa69acb2d08"/>
-    <meta>
-        <profile value="http://fhir.dguv.de/ENLA/PractitionerRole/DGUV-ENLA-PR-DArzt" />
-    </meta>
-    <practitioner>
-        <!--  Hier muss noch die UUID eines Arztes eingegeben werden NEUE UUID -->
-        <reference value="Practitioner/4e07b001-b6fa-42bd-b41f-7f0c457f12fc" />
-    </practitioner>
-    <organization>
-        <reference value="Organization/cdc0ceec-dc27-44e5-a7c7-567a754dc912" />
-    </organization>
-    <code>
-        <coding>
-            <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_Base_Role_Care" />
-            <version value="1.6.0" />
-            <code value="AD" />
-            <display value="&#196;rztliche(r) DirektorIn" />
-        </coding>
-    </code>
-    <specialty>
-        <coding>
-            <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BAR2_ARZTNRFACHGRUPPE" />
-            <version value="1.03"/>
-            <code value="01" />
-            <display value="Allgemeinmedizin" />
-        </coding>
-    </specialty>
+  <id value="DGUV-ENLA-Bsp-DArzt"/>
+  <meta>
+    <profile value="http://fhir.dguv.de/ENLA/PractitionerRole/DGUV-ENLA-PR-DArzt" />
+  </meta>
+
+  <!-- Behandelnde(-r) Ärtztin/Arzt--> 
+  <practitioner>
+    <reference value="Practitioner/Arzt-1" />
+  </practitioner>
+
+  <!-- Behandelnde Einrichtung-->
+  <organization>
+    <reference value="Organization/DArzt-Einrichtung-234" />
+  </organization>
+
+  <!-- Rolle der Einrichtung-->
+  <code>
+    <coding>
+      <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_Base_Role_Care" />
+      <version value="1.7.0" />
+      <code value="AD" />
+      <display value="&#196;rztliche(r) DirektorIn" />
+    </coding>
+  </code>
+
+  <!-- KBV Fachgruppe -->
+  <specialty>
+    <coding>
+      <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BAR2_ARZTNRFACHGRUPPE" />
+      <version value="1.03"/>
+      <code value="01" />
+      <display value="Allgemeinmedizin" />
+    </coding>
+  </specialty>
+
 </PractitionerRole>

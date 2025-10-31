@@ -562,171 +562,6 @@
         <map value="Act.text?" />
       </mapping>
     </element>
-    <element id="Organization.text.id">
-      <path value="Organization.text.id" />
-      <representation value="xmlAttr" />
-      <short value="Unique id for inter-element referencing" />
-      <definition value="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." />
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="Element.id" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
-          <valueUrl value="string" />
-        </extension>
-        <code value="http://hl7.org/fhirpath/System.String" />
-      </type>
-      <mapping>
-        <identity value="rim" />
-        <map value="n/a" />
-      </mapping>
-    </element>
-    <element id="Organization.text.extension">
-      <path value="Organization.text.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <description value="Extensions are always sliced by (at least) url" />
-        <rules value="open" />
-      </slicing>
-      <short value="Additional content defined by implementations" />
-      <definition value="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
-      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
-      <alias value="extensions" />
-      <alias value="user content" />
-      <min value="0" />
-      <max value="*" />
-      <base>
-        <path value="Element.extension" />
-        <min value="0" />
-        <max value="*" />
-      </base>
-      <type>
-        <code value="Extension" />
-      </type>
-      <condition value="ele-1" />
-      <constraint>
-        <key value="ele-1" />
-        <severity value="error" />
-        <human value="All FHIR elements must have a @value or children" />
-        <expression value="hasValue() or (children().count() &gt; id.count())" />
-        <xpath value="@value|f:*|h:div" />
-        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
-      </constraint>
-      <constraint>
-        <key value="ext-1" />
-        <severity value="error" />
-        <human value="Must have either extensions or value[x], not both" />
-        <expression value="extension.exists() != value.exists()" />
-        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
-        <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
-      </constraint>
-      <mapping>
-        <identity value="rim" />
-        <map value="n/a" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
-        <map value="N/A" />
-      </mapping>
-    </element>
-    <element id="Organization.text.status">
-      <path value="Organization.text.status" />
-      <short value="generated | extensions | additional | empty" />
-      <definition value="The status of the narrative - whether it's entirely generated (from just the defined data or the extensions too), or whether a human authored it and it may contain additional data." />
-      <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
-      <min value="1" />
-      <max value="1" />
-      <base>
-        <path value="Narrative.status" />
-        <min value="1" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="code" />
-      </type>
-      <condition value="ele-1" />
-      <constraint>
-        <key value="ele-1" />
-        <severity value="error" />
-        <human value="All FHIR elements must have a @value or children" />
-        <expression value="hasValue() or (children().count() &gt; id.count())" />
-        <xpath value="@value|f:*|h:div" />
-        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
-      </constraint>
-      <mustSupport value="false" />
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="NarrativeStatus" />
-        </extension>
-        <strength value="required" />
-        <description value="The status of a resource narrative." />
-        <valueSet value="http://hl7.org/fhir/ValueSet/narrative-status|4.0.1" />
-      </binding>
-      <mapping>
-        <identity value="rim" />
-        <map value="n/a" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
-        <map value="N/A" />
-      </mapping>
-    </element>
-    <element id="Organization.text.div">
-      <path value="Organization.text.div" />
-      <short value="Limited xhtml content" />
-      <definition value="The actual narrative content, a stripped down version of XHTML." />
-      <comment value="The contents of the html element are an XHTML fragment containing only the basic html formatting elements described in chapters 7-11 and 15 of the HTML 4.0 standard, &lt;a&gt; elements (either name or href), images and internally contained stylesheets. The XHTML content SHALL NOT contain a head, a body, external stylesheet references, scripts, forms, base/link/xlink, frames, iframes and objects." />
-      <min value="1" />
-      <max value="1" />
-      <base>
-        <path value="Narrative.div" />
-        <min value="1" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="xhtml" />
-      </type>
-      <condition value="ele-1" />
-      <constraint>
-        <key value="ele-1" />
-        <severity value="error" />
-        <human value="All FHIR elements must have a @value or children" />
-        <expression value="hasValue() or (children().count() &gt; id.count())" />
-        <xpath value="@value|f:*|h:div" />
-        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
-      </constraint>
-      <constraint>
-        <key value="txt-1" />
-        <severity value="error" />
-        <human value="The narrative SHALL contain only the basic html formatting elements and attributes described in chapters 7-11 (except section 4 of chapter 9) and 15 of the HTML 4.0 standard, &lt;a&gt; elements (either name or href), images and internally contained style attributes" />
-        <expression value="htmlChecks()" />
-        <xpath value="not(descendant-or-self::*[not(local-name(.)=('a', 'abbr', 'acronym', 'b', 'big', 'blockquote', 'br', 'caption', 'cite', 'code', 'col', 'colgroup', 'dd', 'dfn', 'div', 'dl', 'dt', 'em', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'hr', 'i', 'img', 'li', 'ol', 'p', 'pre', 'q', 'samp', 'small', 'span', 'strong', 'sub', 'sup', 'table', 'tbody', 'td', 'tfoot', 'th', 'thead', 'tr', 'tt', 'ul', 'var'))]) and not(descendant-or-self::*/@*[not(name(.)=('abbr', 'accesskey', 'align', 'alt', 'axis', 'bgcolor', 'border', 'cellhalign', 'cellpadding', 'cellspacing', 'cellvalign', 'char', 'charoff', 'charset', 'cite', 'class', 'colspan', 'compact', 'coords', 'dir', 'frame', 'headers', 'height', 'href', 'hreflang', 'hspace', 'id', 'lang', 'longdesc', 'name', 'nowrap', 'rel', 'rev', 'rowspan', 'rules', 'scope', 'shape', 'span', 'src', 'start', 'style', 'summary', 'tabindex', 'title', 'type', 'valign', 'value', 'vspace', 'width'))])" />
-        <source value="http://hl7.org/fhir/StructureDefinition/Narrative" />
-      </constraint>
-      <constraint>
-        <key value="txt-2" />
-        <severity value="error" />
-        <human value="The narrative SHALL have some non-whitespace content" />
-        <expression value="htmlChecks()" />
-        <xpath value="descendant::text()[normalize-space(.)!=''] or descendant::h:img[@src]" />
-        <source value="http://hl7.org/fhir/StructureDefinition/Narrative" />
-      </constraint>
-      <mapping>
-        <identity value="rim" />
-        <map value="n/a" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
-        <map value="N/A" />
-      </mapping>
-    </element>
     <element id="Organization.contained">
       <path value="Organization.contained" />
       <short value="Contained, inline Resources" />
@@ -3047,7 +2882,6 @@
         <xpath value="count(f:use[@value='home']) = 0" />
         <source value="http://hl7.org/fhir/StructureDefinition/Organization" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -3176,7 +3010,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <isSummary value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -3228,7 +3061,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -3433,7 +3265,6 @@
         <xpath value="count(f:use[@value='home']) = 0" />
         <source value="http://hl7.org/fhir/StructureDefinition/Organization" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -3558,7 +3389,6 @@
         <expression value="extension('http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct').empty() or all(line contains extension('http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct').value.ofType(string))" />
         <source value="http://fhir.de/StructureDefinition/address-de-basis" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -3928,7 +3758,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <isSummary value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -4042,7 +3871,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -4130,7 +3958,6 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -4176,7 +4003,6 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -4312,7 +4138,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -4358,7 +4183,6 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -4494,7 +4318,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -4540,7 +4363,6 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -4676,7 +4498,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -4918,7 +4739,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -5065,7 +4885,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -5112,7 +4931,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <isSummary value="true" />
       <binding>
         <strength value="preferred" />
@@ -5300,7 +5118,6 @@
         <expression value="extension('http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct').empty() or all(line contains extension('http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct').value.ofType(string))" />
         <source value="http://fhir.de/StructureDefinition/address-de-basis" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -5670,7 +5487,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <isSummary value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -5784,7 +5600,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -5872,7 +5687,6 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -6458,7 +6272,6 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
         <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -6594,7 +6407,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -6656,7 +6468,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -6803,7 +6614,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -6850,7 +6660,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <isSummary value="true" />
       <binding>
         <strength value="preferred" />
@@ -7427,13 +7236,6 @@
       <fixedCanonical value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Pflegekasse" />
       <mustSupport value="true" />
     </element>
-    <element id="Organization.text">
-      <path value="Organization.text" />
-    </element>
-    <element id="Organization.text.status">
-      <path value="Organization.text.status" />
-      <mustSupport value="false" />
-    </element>
     <element id="Organization.identifier">
       <path value="Organization.identifier" />
       <short value="Identifikator für die Pflegekasse" />
@@ -7566,138 +7368,97 @@
     <element id="Organization.telecom">
       <path value="Organization.telecom" />
       <comment value="Basis-Profil wird beim Typ nicht durch ein ENLA-Profil ersetzt, da es sich hier nur um ein erweitertes Attribut handelt." />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.telecom.system">
-      <path value="Organization.telecom.system" />
-      <mustSupport value="true" />
     </element>
     <element id="Organization.telecom.value">
       <path value="Organization.telecom.value" />
       <short value="Konkrete Kontaktdaten" />
-      <mustSupport value="true" />
     </element>
     <element id="Organization.address">
       <path value="Organization.address" />
       <short value="Adresse der Pflegekasse" />
-      <mustSupport value="true" />
     </element>
     <element id="Organization.address:Strassenanschrift">
       <path value="Organization.address" />
       <sliceName value="Strassenanschrift" />
       <max value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.address:Strassenanschrift.type">
-      <path value="Organization.address.type" />
-      <mustSupport value="true" />
     </element>
     <element id="Organization.address:Strassenanschrift.line">
       <path value="Organization.address.line" />
       <min value="1" />
       <max value="1" />
-      <mustSupport value="true" />
     </element>
     <element id="Organization.address:Strassenanschrift.line.extension">
       <path value="Organization.address.line.extension" />
       <min value="2" />
       <max value="3" />
-      <mustSupport value="true" />
     </element>
     <element id="Organization.address:Strassenanschrift.line.extension:Strasse">
       <path value="Organization.address.line.extension" />
       <sliceName value="Strasse" />
       <min value="1" />
-      <mustSupport value="true" />
     </element>
     <element id="Organization.address:Strassenanschrift.line.extension:Strasse.value[x]">
       <path value="Organization.address.line.extension.value[x]" />
       <short value="Konkreter Strassenname" />
-      <mustSupport value="true" />
     </element>
     <element id="Organization.address:Strassenanschrift.line.extension:Hausnummer">
       <path value="Organization.address.line.extension" />
       <sliceName value="Hausnummer" />
       <min value="1" />
-      <mustSupport value="true" />
     </element>
     <element id="Organization.address:Strassenanschrift.line.extension:Hausnummer.value[x]">
       <path value="Organization.address.line.extension.value[x]" />
       <short value="Konkrete Hausnummer" />
-      <mustSupport value="true" />
     </element>
     <element id="Organization.address:Strassenanschrift.line.extension:Adresszusatz">
       <path value="Organization.address.line.extension" />
       <sliceName value="Adresszusatz" />
-      <mustSupport value="true" />
     </element>
     <element id="Organization.address:Strassenanschrift.line.extension:Adresszusatz.value[x]">
       <path value="Organization.address.line.extension.value[x]" />
       <short value="Konkreter Adresszusatz" />
-      <mustSupport value="true" />
     </element>
     <element id="Organization.address:Strassenanschrift.city">
       <path value="Organization.address.city" />
       <short value="Name der Stadt" />
       <min value="1" />
-      <mustSupport value="true" />
     </element>
     <element id="Organization.address:Strassenanschrift.postalCode">
       <path value="Organization.address.postalCode" />
       <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.address:Strassenanschrift.country">
-      <path value="Organization.address.country" />
-      <mustSupport value="true" />
     </element>
     <element id="Organization.address:Postfach">
       <path value="Organization.address" />
       <sliceName value="Postfach" />
       <max value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.address:Postfach.type">
-      <path value="Organization.address.type" />
-      <mustSupport value="true" />
     </element>
     <element id="Organization.address:Postfach.line">
       <path value="Organization.address.line" />
       <min value="1" />
       <max value="1" />
-      <mustSupport value="true" />
     </element>
     <element id="Organization.address:Postfach.line.extension">
       <path value="Organization.address.line.extension" />
       <min value="1" />
       <max value="1" />
-      <mustSupport value="true" />
     </element>
     <element id="Organization.address:Postfach.line.extension:Postfach">
       <path value="Organization.address.line.extension" />
       <sliceName value="Postfach" />
       <min value="1" />
-      <mustSupport value="true" />
     </element>
     <element id="Organization.address:Postfach.line.extension:Postfach.value[x]">
       <path value="Organization.address.line.extension.value[x]" />
       <short value="Konkrete Postfachbezeichnung" />
-      <mustSupport value="true" />
     </element>
     <element id="Organization.address:Postfach.city">
       <path value="Organization.address.city" />
       <short value="Name der Stadt" />
       <min value="1" />
-      <mustSupport value="true" />
     </element>
     <element id="Organization.address:Postfach.postalCode">
       <path value="Organization.address.postalCode" />
       <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.address:Postfach.country">
-      <path value="Organization.address.country" />
-      <mustSupport value="true" />
     </element>
   </differential>
 </StructureDefinition>

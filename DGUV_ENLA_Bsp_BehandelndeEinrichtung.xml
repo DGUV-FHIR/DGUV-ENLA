@@ -4,6 +4,8 @@
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-BehandelndeEinrichtung" />
     </meta>
+
+    <!-- Identifizierung der behandelnde Einrichtung-->
     <identifier>
         <type>
             <coding>
@@ -15,6 +17,8 @@
         <system value="http://fhir.de/sid/arge-ik/iknr" />
         <value value="260530784" />
     </identifier>
+
+    <!-- behandelnde Fachabteilung -->
     <type>  
         <coding>
             <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel" />
@@ -23,11 +27,17 @@
             <display value="Innere Medizin" />
         </coding>
     </type>
+
+    <!-- Name der Einrichtung -->
     <name value="Unfallkrankenhaus Frechen"/>
+
+    <!-- Telefon contact-->
     <telecom>
         <system value="phone"/>
         <value value="+1-1234565789"/>
     </telecom>
+
+    <!-- Vollständige Adresse -->
     <address>
         <type value="both"/>
         <line value="Genesungsweg 4">
@@ -42,4 +52,6 @@
         <postalCode value="50226"/>
         <country value="DE"/>
     </address>
+
+
 </Organization>

@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Author: Friedhelm
+    Datum:  Matten
+
+-->
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="e04aaff2-34c7-4dfa-80cf-b3c5d5a03058" />
+    <id value="DGUV-ENLA-Bsp-stufenweiseWiedereingliederung" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-stufenweiseWiedereingliederung" />
     </meta>
+
+    <!-- Observation status -->
     <status value="final"/>
+
+
+    <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
     <code>
         <coding>
             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
@@ -12,14 +22,26 @@
             <display value="Wiedereingliederung" />
         </coding>
     </code>
+
+    <!-- Referenz auf Versicherte Person -->
     <subject>
-        <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+        <reference value="Patient/T37501234" />
     </subject>
+
+    <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
+    <effectiveDateTime value="2025-09-30T09:30:00+02:00"/>
+
+    <!-- Behandelnde(-r) Ärtztin/Arzt-->
+    <performer>
+        <reference value="DArzt/gh45434" />
+    </performer>
+
+    <!-- Code-System mit Wiedereingliederungsvarianten -->
     <valueCodeableConcept>
         <coding>
-            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-stufenweiseWiedereingliederung" />
-            <code value="Ja" />
-            <display value="Ja, stufenweise Wiedereingliederung erforderlich" />
+                <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-stufenweiseWiedereingliederung" />
+                <code value="Ja" />
+                <display value="Ja, stufenweise Wiedereingliederung erforderlich" />
         </coding>
     </valueCodeableConcept>
 </Observation>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MedicationStatement xmlns="http://hl7.org/fhir">
+  <id value="medstmt-1"/>
+  <meta>
+    <profile value="http://fhir.dguv.de/ENLA/MedicationStatement/DGUV-ENLA-PR-MedikationsInformation"/>
+  </meta>
+
+  <!-- Optional, aber empfohlen: kurzer Narrative-Text -->
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>Patient nimmt Beispielmedikament ein (Freitext-Dosierung).</p>
+    </div>
+  </text>
+
+  <status value="active"/>
+
+  <subject>
+    <reference value="Patient/123"/>
+  </subject>
+
+  <!-- Referenz auf Medication; hier als contained Resource -->
+  <medicationReference>
+    <reference value="#med1"/>
+  </medicationReference>
+
+  <!-- Freitextliche Dosierung (Slice mit fixiertem Text; kein Timing erlaubt) -->
+  <dosage>
+    <text value="Freitextliche Dosierung"/>
+    <patientInstruction value="Nach dem Essen einnehmen"/>
+  </dosage>
+
+  <!-- Enthaltene Medication, z. B. Profil 'MedikationArzneimittel' -->
+  <contained>
+    <Medication>
+      <id value="med1"/>
+      <meta>
+        <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationArzneimittel"/>
+      </meta>
+      <code>
+        <coding>
+          <system value="http://fhir.de/CodeSystem/ifa/pzn"/>
+          <code value="12345678"/>
+          <display value="Beispielmedikament 500 mg Tablette"/>
+        </coding>
+        <text value="Beispielmedikament"/>
+      </code>
+    </Medication>
+  </contained>
+</MedicationStatement>

@@ -4,7 +4,11 @@
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Aufnahmebefunde" />
     </meta>
+
+    <!-- Observation status -->
     <status value="final" />
+
+    <!-- Klassifikation des Befundtyps -->
     <category>
         <coding>
             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-BefundKategorie" />
@@ -12,6 +16,8 @@
             <display value="Vitalparameter" />
         </coding>
     </category>
+
+    <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
     <code>
         <coding>
             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
@@ -19,8 +25,15 @@
             <display value="Aufnahmebefund" />
         </coding>
     </code>
+
+    <!-- VersichertePerson Referenz -->
     <subject>
         <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
     </subject>
+
+    <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
+    <effectiveDateTime value="2025-09-30T09:30:00+02:00"/>
+
+    <!-- Befund Narrativ -->
     <valueString value="Befundergebnis" />
 </Observation>

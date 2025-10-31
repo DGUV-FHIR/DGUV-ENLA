@@ -71,6 +71,13 @@
         <xpath value="not(exists(f:contained/*/f:meta/f:security))" />
         <source value="http://hl7.org/fhir/StructureDefinition/DomainResource" />
       </constraint>
+      <constraint>
+        <key value="dguv-hospital-2" />
+        <severity value="error" />
+        <human value="Wenn es sich nicht um eine Folgebehandlung handelt, darf  das Textfeld  keinen Text enthalten!" />
+        <expression value="hospitalization.admitSource.exists() implies hospitalization.admitSourcecoding.all(code = 'FB')" />
+        <source value="http://fhir.dguv.de/ENLA/Encounter/DGUV-ENLA-PR-Aufenthaltsinformationen" />
+      </constraint>
       <mapping>
         <identity value="rim" />
         <map value="Entity. Role, or Act" />
@@ -89,7 +96,7 @@
       <short value="Logical id of this artifact" />
       <definition value="The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes." />
       <comment value="The only time that a resource does not have an id is when it is being submitted to the server using a create operation." />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Resource.id" />
@@ -683,7 +690,7 @@
     </element>
     <element id="Encounter.identifier">
       <path value="Encounter.identifier" />
-      <short value="Identifier bildet die Fallnummer ab" />
+      <short value="Identifier bildet Fallnummer ab" />
       <definition value="An identifier - identifies some entity uniquely and unambiguously. Typically this is used for business identifiers." />
       <min value="0" />
       <max value="1" />
@@ -865,7 +872,7 @@
     </element>
     <element id="Encounter.identifier.type">
       <path value="Encounter.identifier.type" />
-      <short value="Description of identifier" />
+      <short value="Typ des Identifiers" />
       <definition value="A coded type for the identifier that can be used to determine which identifier to use for a specific purpose." />
       <comment value="This element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage.   Where the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type." />
       <requirements value="Allows users to make use of identifiers when the identifier system is not known." />
@@ -881,8 +888,7 @@
       </type>
       <patternCodeableConcept>
         <coding>
-          <version value="v2" />
-          <display value="Kontonummer" />
+          <code value="VN" />
         </coding>
         <text value="An identifier that is unique to an account." />
       </patternCodeableConcept>
@@ -1006,11 +1012,11 @@
     </element>
     <element id="Encounter.identifier.type.coding">
       <path value="Encounter.identifier.type.coding" />
-      <short value="Code defined by a terminology system" />
+      <short value="Typ des Identifiers in kodierter Form" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
-      <min value="0" />
+      <min value="1" />
       <max value="*" />
       <base>
         <path value="CodeableConcept.coding" />
@@ -1020,6 +1026,10 @@
       <type>
         <code value="Coding" />
       </type>
+      <patternCoding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+        <code value="VN" />
+      </patternCoding>
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -1136,11 +1146,11 @@
     </element>
     <element id="Encounter.identifier.type.coding.system">
       <path value="Encounter.identifier.type.coding.system" />
-      <short value="Identity of the terminology system" />
+      <short value="Werteraum des Identifier-Typs" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
       <comment value="The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously." />
       <requirements value="Need to be unambiguous about the source of the definition of the symbol." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Coding.system" />
@@ -1150,6 +1160,7 @@
       <type>
         <code value="uri" />
       </type>
+      <patternUri value="http://terminology.hl7.org/CodeSystem/v2-0203" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -1222,11 +1233,11 @@
     </element>
     <element id="Encounter.identifier.type.coding.code">
       <path value="Encounter.identifier.type.coding.code" />
-      <short value="Symbol in syntax defined by the system" />
+      <short value="Kürzel des Identifier-Typs" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to refer to a particular code in the system." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Coding.code" />
@@ -1236,6 +1247,7 @@
       <type>
         <code value="code" />
       </type>
+      <patternCode value="VN" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -1292,7 +1304,6 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
-      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -1402,7 +1413,7 @@
     </element>
     <element id="Encounter.identifier.system">
       <path value="Encounter.identifier.system" />
-      <short value="The namespace for the identifier value" />
+      <short value="Wertebereich für die Fallnummern" />
       <definition value="Establishes the namespace for the value - that is, a URL that describes a set values that are unique." />
       <comment value="Identifier.system is always case sensitive." />
       <requirements value="There are many sets  of identifiers.  To perform matching of two identifiers, we need to know what set we're dealing with. The system identifies a particular set of unique identifiers." />
@@ -1450,7 +1461,7 @@
     </element>
     <element id="Encounter.identifier.value">
       <path value="Encounter.identifier.value" />
-      <short value="The value that is unique" />
+      <short value="Konkrete eindeutige Fallnummer" />
       <definition value="The portion of the identifier typically relevant to the user and which is unique within the context of the system." />
       <comment value="If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](extension-rendered-value.html). Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe." />
       <min value="1" />
@@ -1610,9 +1621,9 @@
     </element>
     <element id="Encounter.status">
       <path value="Encounter.status" />
-      <short value="planned | arrived | triaged | in-progress | onleave | finished | cancelled +" />
-      <definition value="planned | arrived | triaged | in-progress | onleave | finished | cancelled +." />
-      <comment value="Note that internal business rules will determine the appropriate transitions that may occur between statuses (and also classes)." />
+      <short value="Status des stationären Aufenthalts eines Patienten" />
+      <definition value="planned | arrived | triaged | in-progress | onleave | finished | cancelled +" />
+      <comment value="Wenn ein Entlassbericht ausgestellt wird, dann muss der stationäre Aufenthalt des Patienten beendet sein." />
       <min value="1" />
       <max value="1" />
       <base>
@@ -1633,6 +1644,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isModifier value="true" />
       <isModifierReason value="This element is labeled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid" />
       <isSummary value="true" />
@@ -1903,7 +1915,7 @@
     </element>
     <element id="Encounter.class">
       <path value="Encounter.class" />
-      <short value="Classification of patient encounter" />
+      <short value="Art des Aufenthalts eines Patienten" />
       <definition value="Concepts representing classification of patient encounter such as ambulatory (outpatient), inpatient, emergency, home health or others due to local variations." />
       <comment value="Codes may be defined very casually in enumerations or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information." />
       <min value="1" />
@@ -2040,11 +2052,11 @@
     </element>
     <element id="Encounter.class.system">
       <path value="Encounter.class.system" />
-      <short value="Identity of the terminology system" />
+      <short value="CodeSystem für die Art des Aufenthalts eines Patienten" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
       <comment value="The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously." />
       <requirements value="Need to be unambiguous about the source of the definition of the symbol." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Coding.system" />
@@ -2054,6 +2066,7 @@
       <type>
         <code value="uri" />
       </type>
+      <fixedUri value="http://terminology.hl7.org/CodeSystem/v3-ActCode" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -2126,11 +2139,11 @@
     </element>
     <element id="Encounter.class.code">
       <path value="Encounter.class.code" />
-      <short value="Symbol in syntax defined by the system" />
+      <short value="Kürzel für einen stationären Krankenhausaufenthalt" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to refer to a particular code in the system." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Coding.code" />
@@ -2174,11 +2187,11 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Encounter.class.display" />
-      <short value="Representation defined by the system" />
+      <short value="Bezeichnung als stationärer Krankenhausaufenthalt" />
       <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Coding.display" />
@@ -2833,7 +2846,7 @@
     </element>
     <element id="Encounter.subject.reference">
       <path value="Encounter.subject.reference" />
-      <short value="Literal reference, Relative, internal or absolute URL" />
+      <short value="Konkreter Verweis auf versicherte Person" />
       <definition value="A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources." />
       <comment value="Using absolute URLs provides a stable scalable approach suitable for a cloud/web context, while using relative/logical references provides a flexible approach suitable for use when trading across closed eco-system boundaries.   Absolute URLs do not need to point to a FHIR RESTful server, though this is the preferred approach. If the URL conforms to the structure &quot;/[type]/[id]&quot; then it should be assumed that the reference is to a FHIR RESTful server." />
       <min value="1" />
@@ -3494,9 +3507,9 @@
     </element>
     <element id="Encounter.period">
       <path value="Encounter.period" />
-      <short value="The start and end time of the encounter" />
+      <short value="Zeitraum des stationären Aufenthalts" />
       <definition value="The start and end time of the encounter." />
-      <comment value="If not (yet) known, the end of the Period may be omitted." />
+      <comment value="Im Fall der Ausstellung eines Entlassberichts muss der Aufenthalt beendet sein. Deshalb darf &quot;end&quot; nicht leer sein." />
       <min value="1" />
       <max value="1" />
       <base>
@@ -3630,7 +3643,7 @@
     </element>
     <element id="Encounter.period.start">
       <path value="Encounter.period.start" />
-      <short value="Starting time with inclusive boundary" />
+      <short value="Erster Tag des stationären Aufenthalts (inkl.)" />
       <definition value="The start of the period. The boundary is inclusive." />
       <comment value="If the low element is missing, the meaning is that the low boundary is not known." />
       <min value="1" />
@@ -3670,7 +3683,7 @@
     </element>
     <element id="Encounter.period.end">
       <path value="Encounter.period.end" />
-      <short value="End time with inclusive boundary, if not ongoing" />
+      <short value="Letzter Tag des stationären Aufenthalts (inkl.)" />
       <definition value="The end of the period. If the end of the period is missing, it means no end was known or planned at the time the instance was created. The start may be in the past, and the end date in the future, which means that period is expected/planned to end at that time." />
       <comment value="The high value includes any matching date/time. i.e. 2012-02-03T10:00:00 is in a period that has an end value of 2012-02-03." />
       <min value="1" />
@@ -4261,7 +4274,7 @@
     </element>
     <element id="Encounter.hospitalization">
       <path value="Encounter.hospitalization" />
-      <short value="Details about the admission to a healthcare service" />
+      <short value="Details zum stationären Aufenthalt" />
       <definition value="Details about the admission to a healthcare service." />
       <comment value="An Encounter may cover more than just the inpatient stay. Contexts such as outpatients, community clinics, and aged care facilities are also included.&#xD;&#xD;The duration recorded in the period of this encounter covers the entire scope of this hospitalization record." />
       <min value="1" />
@@ -4512,7 +4525,7 @@
     </element>
     <element id="Encounter.hospitalization.admitSource">
       <path value="Encounter.hospitalization.admitSource" />
-      <short value="From where patient was admitted (physician referral, transfer)" />
+      <short value="Aufnahmeart" />
       <definition value="From where patient was admitted (physician referral, transfer)." />
       <comment value="Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination." />
       <min value="1" />
@@ -4642,60 +4655,14 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Encounter.hospitalization.admitSource.extension:GrundFolgebehandlung">
-      <path value="Encounter.hospitalization.admitSource.extension" />
-      <sliceName value="GrundFolgebehandlung" />
-      <short value="Optional Extensions Element" />
-      <definition value="Optional Extension Element - found in all resources." />
-      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
-      <alias value="extensions" />
-      <alias value="user content" />
-      <min value="0" />
-      <max value="*" />
-      <base>
-        <path value="Element.extension" />
-        <min value="0" />
-        <max value="*" />
-      </base>
-      <type>
-        <code value="Extension" />
-        <profile value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-GrundFolgebehandlung" />
-      </type>
-      <condition value="ele-1" />
-      <constraint>
-        <key value="ele-1" />
-        <severity value="error" />
-        <human value="All FHIR elements must have a @value or children" />
-        <expression value="hasValue() or (children().count() &gt; id.count())" />
-        <xpath value="@value|f:*|h:div" />
-        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
-      </constraint>
-      <constraint>
-        <key value="ext-1" />
-        <severity value="error" />
-        <human value="Must have either extensions or value[x], not both" />
-        <expression value="extension.exists() != value.exists()" />
-        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
-        <source value="http://hl7.org/fhir/StructureDefinition/Extension" />
-      </constraint>
-      <isModifier value="false" />
-      <mapping>
-        <identity value="rim" />
-        <map value="n/a" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
-        <map value="N/A" />
-      </mapping>
-    </element>
     <element id="Encounter.hospitalization.admitSource.coding">
       <path value="Encounter.hospitalization.admitSource.coding" />
-      <short value="Code defined by a terminology system" />
+      <short value="Aufnahmeart in kodierter Form" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
-      <min value="0" />
-      <max value="*" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="CodeableConcept.coding" />
         <min value="0" />
@@ -4717,7 +4684,7 @@
       <isSummary value="true" />
       <binding>
         <strength value="required" />
-        <description value="Beschreibung der Aufnahmeart (Erstbehandlung (EB), Folgebehandlung (FB))" />
+        <description value="Werteraum der Aufnahmeart (Erstbehandlung (EB), Folgebehandlung (FB))" />
         <valueSet value="http://fhir.dguv.de/ENLA/ValueSet/DGUV-ENLA-VS-Aufnahmeart" />
       </binding>
       <mapping>
@@ -4825,7 +4792,7 @@
     </element>
     <element id="Encounter.hospitalization.admitSource.coding.system">
       <path value="Encounter.hospitalization.admitSource.coding.system" />
-      <short value="Identity of the terminology system" />
+      <short value="Werteraum für die Aufnahmeart" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
       <comment value="The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously." />
       <requirements value="Need to be unambiguous about the source of the definition of the symbol." />
@@ -4912,7 +4879,7 @@
     </element>
     <element id="Encounter.hospitalization.admitSource.coding.code">
       <path value="Encounter.hospitalization.admitSource.coding.code" />
-      <short value="Symbol in syntax defined by the system" />
+      <short value="Kürzel für die Aufnahmeart" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to refer to a particular code in the system." />
@@ -4959,7 +4926,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Encounter.hospitalization.admitSource.coding.display" />
-      <short value="Representation defined by the system" />
+      <short value="Bezeichnung der Aufnahmeart" />
       <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
@@ -5049,9 +5016,9 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Encounter.hospitalization.admitSource.text" />
-      <short value="Plain text representation of the concept" />
-      <definition value="Soweit ein Grund für die stationäre Folgebehandlung bekannt ist, soll dieser hier angegeben werden. &#xD;&#xA;A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user." />
-      <comment value="Very often the text is the same as a displayName of one of the codings." />
+      <short value="Gründe für Folgebehandlung als Freitext" />
+      <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user." />
+      <comment value="Soweit ein Grund für die stationäre Folgebehandlung bekannt ist, soll dieser hier angegeben werden." />
       <requirements value="The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source." />
       <min value="0" />
       <max value="1" />
@@ -5369,8 +5336,8 @@
     </element>
     <element id="Encounter.hospitalization.dischargeDisposition">
       <path value="Encounter.hospitalization.dischargeDisposition" />
-      <short value="Beschreibung des Entlassungs- oder Verlegungsgrunds" />
-      <definition value="Beschreibung des Entlassungsgrunds (nach Hause, in andere Rehabilitationsinstitution, etc.)" />
+      <short value="Entlassungs- oder Verlegungsgrund" />
+      <definition value="Entlassungs- oder Verlegungsgrund (nach Hause, in andere Rehabilitationsinstitution, etc.)" />
       <comment value="Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination." />
       <min value="1" />
       <max value="1" />
@@ -5501,8 +5468,8 @@
     </element>
     <element id="Encounter.hospitalization.dischargeDisposition.coding">
       <path value="Encounter.hospitalization.dischargeDisposition.coding" />
-      <short value="Codes zur Beschreibung von Entlassungsgrund" />
-      <definition value="Codes zur Beschreibung von Entlassungsgrund (nach Hause, in andere Rehabilitationsinstitution, etc.)." />
+      <short value="Entlassungs- oder Verlegungsgrund in kodierter Form" />
+      <definition value="Beschreibung von Entlassungs- oder Verlegungsgründen (nach Hause, in andere Rehabilitationsinstitution, etc.) in kodierter Form" />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
       <min value="1" />
@@ -5528,7 +5495,7 @@
       <isSummary value="true" />
       <binding>
         <strength value="required" />
-        <description value="Entlassungsgrund" />
+        <description value="Werteraum der Entlassungs- und Verlegungsgründe" />
         <valueSet value="http://fhir.dguv.de/ENLA/ValueSet/DGUV-ENLA-VS-EntlassungsVerlegungsgrund" />
       </binding>
       <mapping>
@@ -5636,7 +5603,7 @@
     </element>
     <element id="Encounter.hospitalization.dischargeDisposition.coding.system">
       <path value="Encounter.hospitalization.dischargeDisposition.coding.system" />
-      <short value="Identity of the terminology system" />
+      <short value="Werteraum der Entlassungs- und Verlegungsgründe" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
       <comment value="The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously." />
       <requirements value="Need to be unambiguous about the source of the definition of the symbol." />
@@ -5770,7 +5737,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Encounter.hospitalization.dischargeDisposition.coding.display" />
-      <short value="Representation defined by the system" />
+      <short value="Beschreibung des Entlassungs- oder Verlegungsgrundes" />
       <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
@@ -5860,9 +5827,9 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Encounter.hospitalization.dischargeDisposition.text" />
-      <short value="Plain text representation of the concept" />
-      <definition value="Bei einer Verlegung muss hier die Begründung angegeben werden.&#xD;&#xA;A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user." />
-      <comment value="Very often the text is the same as a displayName of one of the codings." />
+      <short value="Entlassungs- oder Verlegungsgrund als Freitext" />
+      <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user." />
+      <comment value="Entlassungs- oder Verlegungsgrund als Freitext, falls es kodiert nicht geht oder Ergänzungen nötig sind" />
       <requirements value="The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source." />
       <min value="0" />
       <max value="1" />
@@ -6364,10 +6331,15 @@
       <path value="Encounter" />
       <short value="Falldaten (Aufenhaltszeitraum, Entlassungsgrund und Aufnahmegrund)" />
       <definition value="Dieses Profil enthält Informationen zum Aufenthaltszeitraum sowie Gründe für Aufnahme und Entlassung." />
+      <constraint>
+        <key value="dguv-hospital-2" />
+        <severity value="error" />
+        <human value="Wenn es sich nicht um eine Folgebehandlung handelt, darf  das Textfeld  keinen Text enthalten!" />
+        <expression value="hospitalization.admitSource.exists() implies hospitalization.admitSourcecoding.all(code = 'FB')" />
+      </constraint>
     </element>
     <element id="Encounter.id">
       <path value="Encounter.id" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.meta">
@@ -6384,7 +6356,7 @@
     </element>
     <element id="Encounter.identifier">
       <path value="Encounter.identifier" />
-      <short value="Identifier bildet die Fallnummer ab" />
+      <short value="Identifier bildet Fallnummer ab" />
       <max value="1" />
       <type>
         <code value="Identifier" />
@@ -6394,10 +6366,10 @@
     </element>
     <element id="Encounter.identifier.type">
       <path value="Encounter.identifier.type" />
+      <short value="Typ des Identifiers" />
       <patternCodeableConcept>
         <coding>
-          <version value="v2" />
-          <display value="Kontonummer" />
+          <code value="VN" />
         </coding>
         <text value="An identifier that is unique to an account." />
       </patternCodeableConcept>
@@ -6409,47 +6381,69 @@
     </element>
     <element id="Encounter.identifier.type.coding">
       <path value="Encounter.identifier.type.coding" />
+      <short value="Typ des Identifiers in kodierter Form" />
+      <min value="1" />
+      <patternCoding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+        <code value="VN" />
+      </patternCoding>
       <mustSupport value="true" />
     </element>
     <element id="Encounter.identifier.type.coding.system">
       <path value="Encounter.identifier.type.coding.system" />
+      <short value="Werteraum des Identifier-Typs" />
+      <min value="1" />
+      <patternUri value="http://terminology.hl7.org/CodeSystem/v2-0203" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.identifier.type.coding.code">
       <path value="Encounter.identifier.type.coding.code" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Encounter.identifier.type.coding.display">
-      <path value="Encounter.identifier.type.coding.display" />
+      <short value="Kürzel des Identifier-Typs" />
+      <min value="1" />
+      <patternCode value="VN" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.identifier.system">
       <path value="Encounter.identifier.system" />
+      <short value="Wertebereich für die Fallnummern" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.identifier.value">
       <path value="Encounter.identifier.value" />
+      <short value="Konkrete eindeutige Fallnummer" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.status">
       <path value="Encounter.status" />
+      <short value="Status des stationären Aufenthalts eines Patienten" />
+      <definition value="planned | arrived | triaged | in-progress | onleave | finished | cancelled +" />
+      <comment value="Wenn ein Entlassbericht ausgestellt wird, dann muss der stationäre Aufenthalt des Patienten beendet sein." />
       <fixedCode value="finished" />
+      <mustSupport value="true" />
     </element>
     <element id="Encounter.class">
       <path value="Encounter.class" />
+      <short value="Art des Aufenthalts eines Patienten" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.class.system">
       <path value="Encounter.class.system" />
+      <short value="CodeSystem für die Art des Aufenthalts eines Patienten" />
+      <min value="1" />
+      <fixedUri value="http://terminology.hl7.org/CodeSystem/v3-ActCode" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.class.code">
       <path value="Encounter.class.code" />
+      <short value="Kürzel für einen stationären Krankenhausaufenthalt" />
+      <min value="1" />
       <fixedCode value="IMP" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.class.display">
       <path value="Encounter.class.display" />
+      <short value="Bezeichnung als stationärer Krankenhausaufenthalt" />
+      <min value="1" />
       <fixedString value="inpatient encounter" />
       <mustSupport value="true" />
     </element>
@@ -6465,95 +6459,101 @@
     </element>
     <element id="Encounter.subject.reference">
       <path value="Encounter.subject.reference" />
+      <short value="Konkreter Verweis auf versicherte Person" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.period">
       <path value="Encounter.period" />
+      <short value="Zeitraum des stationären Aufenthalts" />
+      <comment value="Im Fall der Ausstellung eines Entlassberichts muss der Aufenthalt beendet sein. Deshalb darf &quot;end&quot; nicht leer sein." />
       <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.period.start">
       <path value="Encounter.period.start" />
+      <short value="Erster Tag des stationären Aufenthalts (inkl.)" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.period.end">
       <path value="Encounter.period.end" />
+      <short value="Letzter Tag des stationären Aufenthalts (inkl.)" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.hospitalization">
       <path value="Encounter.hospitalization" />
+      <short value="Details zum stationären Aufenthalt" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.hospitalization.admitSource">
       <path value="Encounter.hospitalization.admitSource" />
+      <short value="Aufnahmeart" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Encounter.hospitalization.admitSource.extension:GrundFolgebehandlung">
-      <path value="Encounter.hospitalization.admitSource.extension" />
-      <sliceName value="GrundFolgebehandlung" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-GrundFolgebehandlung" />
-      </type>
-      <isModifier value="false" />
-    </element>
     <element id="Encounter.hospitalization.admitSource.coding">
       <path value="Encounter.hospitalization.admitSource.coding" />
+      <short value="Aufnahmeart in kodierter Form" />
+      <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <description value="Beschreibung der Aufnahmeart (Erstbehandlung (EB), Folgebehandlung (FB))" />
+        <description value="Werteraum der Aufnahmeart (Erstbehandlung (EB), Folgebehandlung (FB))" />
         <valueSet value="http://fhir.dguv.de/ENLA/ValueSet/DGUV-ENLA-VS-Aufnahmeart" />
       </binding>
     </element>
     <element id="Encounter.hospitalization.admitSource.coding.system">
       <path value="Encounter.hospitalization.admitSource.coding.system" />
+      <short value="Werteraum für die Aufnahmeart" />
       <min value="1" />
       <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Aufnahmeart" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.hospitalization.admitSource.coding.code">
       <path value="Encounter.hospitalization.admitSource.coding.code" />
+      <short value="Kürzel für die Aufnahmeart" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.hospitalization.admitSource.coding.display">
       <path value="Encounter.hospitalization.admitSource.coding.display" />
+      <short value="Bezeichnung der Aufnahmeart" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.hospitalization.admitSource.text">
       <path value="Encounter.hospitalization.admitSource.text" />
-      <definition value="Soweit ein Grund für die stationäre Folgebehandlung bekannt ist, soll dieser hier angegeben werden. &#xD;&#xA;A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user." />
+      <short value="Gründe für Folgebehandlung als Freitext" />
+      <comment value="Soweit ein Grund für die stationäre Folgebehandlung bekannt ist, soll dieser hier angegeben werden." />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.hospitalization.dischargeDisposition">
       <path value="Encounter.hospitalization.dischargeDisposition" />
-      <short value="Beschreibung des Entlassungs- oder Verlegungsgrunds" />
-      <definition value="Beschreibung des Entlassungsgrunds (nach Hause, in andere Rehabilitationsinstitution, etc.)" />
+      <short value="Entlassungs- oder Verlegungsgrund" />
+      <definition value="Entlassungs- oder Verlegungsgrund (nach Hause, in andere Rehabilitationsinstitution, etc.)" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.hospitalization.dischargeDisposition.coding">
       <path value="Encounter.hospitalization.dischargeDisposition.coding" />
-      <short value="Codes zur Beschreibung von Entlassungsgrund" />
-      <definition value="Codes zur Beschreibung von Entlassungsgrund (nach Hause, in andere Rehabilitationsinstitution, etc.)." />
+      <short value="Entlassungs- oder Verlegungsgrund in kodierter Form" />
+      <definition value="Beschreibung von Entlassungs- oder Verlegungsgründen (nach Hause, in andere Rehabilitationsinstitution, etc.) in kodierter Form" />
       <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <description value="Entlassungsgrund" />
+        <description value="Werteraum der Entlassungs- und Verlegungsgründe" />
         <valueSet value="http://fhir.dguv.de/ENLA/ValueSet/DGUV-ENLA-VS-EntlassungsVerlegungsgrund" />
       </binding>
     </element>
     <element id="Encounter.hospitalization.dischargeDisposition.coding.system">
       <path value="Encounter.hospitalization.dischargeDisposition.coding.system" />
+      <short value="Werteraum der Entlassungs- und Verlegungsgründe" />
       <min value="1" />
       <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-EntlassungsVerlegungsgrund" />
       <mustSupport value="true" />
@@ -6566,12 +6566,14 @@
     </element>
     <element id="Encounter.hospitalization.dischargeDisposition.coding.display">
       <path value="Encounter.hospitalization.dischargeDisposition.coding.display" />
+      <short value="Beschreibung des Entlassungs- oder Verlegungsgrundes" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Encounter.hospitalization.dischargeDisposition.text">
       <path value="Encounter.hospitalization.dischargeDisposition.text" />
-      <definition value="Bei einer Verlegung muss hier die Begründung angegeben werden.&#xD;&#xA;A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user." />
+      <short value="Entlassungs- oder Verlegungsgrund als Freitext" />
+      <comment value="Entlassungs- oder Verlegungsgrund als Freitext, falls es kodiert nicht geht oder Ergänzungen nötig sind" />
       <mustSupport value="true" />
     </element>
   </differential>

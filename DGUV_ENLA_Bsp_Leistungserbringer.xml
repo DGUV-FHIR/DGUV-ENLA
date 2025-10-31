@@ -4,6 +4,8 @@
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringer"/> 
     </meta>
+
+    <!--  Lebenslange Arztnummer-->
     <identifier> 
         <type>
             <coding>
@@ -15,6 +17,8 @@
         <system value="https://fhir.kbv.de/NamingSystem/KBV_NS_Base_ANR" />
         <value value="123456799" />
     </identifier>
+
+    <!-- Name Ärztin/Arzt-->
     <name>
         <use value="official"/>
         <family value="Musteraerztin14">
@@ -29,4 +33,5 @@
             </extension>
         </prefix>
     </name>
+
 </Practitioner>

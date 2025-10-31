@@ -7,7 +7,7 @@
   <title value="Hilfsmittel" />
   <status value="draft" />
   <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
-  <description value="Dieses Profil bildet die erforderlichen Heilmittel ab." />
+  <description value="Dieses Profil bildet die erforderlichen Hilfsmittel ab." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -1711,7 +1711,7 @@
     </element>
     <element id="Observation.subject.reference">
       <path value="Observation.subject.reference" />
-      <short value="Literal reference, Relative, internal or absolute URL" />
+      <short value="Konkreter Verweis auf versicherte Person" />
       <definition value="A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources." />
       <comment value="Using absolute URLs provides a stable scalable approach suitable for a cloud/web context, while using relative/logical references provides a flexible approach suitable for use when trading across closed eco-system boundaries.   Absolute URLs do not need to point to a FHIR RESTful server, though this is the preferred approach. If the URL conforms to the structure &quot;/[type]/[id]&quot; then it should be assumed that the reference is to a FHIR RESTful server." />
       <min value="1" />
@@ -1992,7 +1992,7 @@
     </element>
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
-      <short value="Beginn" />
+      <short value="Anwendungsbeginn Hilfsmittel" />
       <definition value="The time or time-period the observed value is asserted as being true. For biological subjects - e.g. human patients - this is usually called the &quot;physiologically relevant time&quot;. This is usually either the time of the procedure or of specimen collection, but very often the source of the date/time is not known, only the date/time itself." />
       <comment value="At least a date should be present unless this observation is a historical report.  For recording imprecise or &quot;fuzzy&quot; times (For example, a blood glucose measurement taken &quot;after breakfast&quot;) use the [Timing](datatypes.html#timing) datatype which allow the measurement to be tied to regular life events." />
       <requirements value="Knowing when an observation was deemed true is important to its relevance as well as determining trends." />
@@ -3193,7 +3193,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="http://fhir.dguv.de/ENLA/CodingSystem/DGUV-ENLA-CS-MassnahmenZeitpunkt" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-MassnahmenZeitpunkt" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -3892,7 +3892,7 @@
       <alias value="extensions" />
       <alias value="user content" />
       <min value="0" />
-      <max value="*" />
+      <max value="0" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -4211,9 +4211,9 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Observation.value[x].text" />
-      <short value="Freitext" />
+      <short value="Angaben über Hilfsmittel als Freitext" />
       <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user." />
-      <comment value="Very often the text is the same as a displayName of one of the codings." />
+      <comment value="Sollen zusätzlich Hilfsmittel als Freitext beschrieben werden, muss im Freitext auch eine Information darüber enthalten sein, ob sie schon verordnet sind oder nicht." />
       <requirements value="The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source." />
       <min value="0" />
       <max value="1" />
@@ -6375,12 +6375,13 @@
     </element>
     <element id="Observation.subject.reference">
       <path value="Observation.subject.reference" />
+      <short value="Konkreter Verweis auf versicherte Person" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
-      <short value="Beginn" />
+      <short value="Anwendungsbeginn Hilfsmittel" />
       <min value="1" />
       <type>
         <code value="Timing" />
@@ -6406,7 +6407,7 @@
     <element id="Observation.effective[x].code.coding.system">
       <path value="Observation.effective[x].code.coding.system" />
       <min value="1" />
-      <fixedUri value="http://fhir.dguv.de/ENLA/CodingSystem/DGUV-ENLA-CS-MassnahmenZeitpunkt" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-MassnahmenZeitpunkt" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.effective[x].code.coding.code">
@@ -6484,7 +6485,8 @@
     </element>
     <element id="Observation.value[x].text">
       <path value="Observation.value[x].text" />
-      <short value="Freitext" />
+      <short value="Angaben über Hilfsmittel als Freitext" />
+      <comment value="Sollen zusätzlich Hilfsmittel als Freitext beschrieben werden, muss im Freitext auch eine Information darüber enthalten sein, ob sie schon verordnet sind oder nicht." />
       <mustSupport value="true" />
     </element>
   </differential>

@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Author: Friedhelm Matten
+    Datum:  01.10.2025
+
+-->
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="f2e30a2a-9070-43aa-9bf2-307ad290eb95" />
+    <id value="DGUV-ENLA-Bsp-Therapieempfehlung" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Therapieempfehlung" />
     </meta>
+
+    <!-- Observation status-->
     <status value="final"/>
+
+    <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
     <code>  
         <coding>
             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
@@ -12,8 +21,20 @@
             <display value="Therapieempfehlung" />
         </coding>
     </code>
+
+    <!-- Referenz Versicherte Person -->
     <subject>
-        <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
+        <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
     </subject>
+
+    <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
+    <effectiveDateTime value="2025-09-30T09:30:00+02:00"/>
+
+    <!-- Behandelnde(-r) Ärtztin/Arzt-->
+    <performer>
+        <reference value="urn:uuid:93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
+    </performer>
+
+    <!-- Freitext für Empfehlungen für weitere therapeutische und diagnostische Maßnahmen -->
     <valueString value="Regelmässige Wundkontrollen, im Bereich des linken Oberarmes empfehlen wir eine funktionelle lastfreie Behandlung für 6 Wochen postoperationem, etc." />
-</Observation> 
+</Observation>

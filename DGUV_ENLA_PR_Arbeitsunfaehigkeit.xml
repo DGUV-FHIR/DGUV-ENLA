@@ -93,6 +93,34 @@
         <xpath value="not(exists(f:dataAbsentReason)) or (not(exists(*[starts-with(local-name(.), 'value')])))" />
         <source value="http://hl7.org/fhir/StructureDefinition/Observation" />
       </constraint>
+      <constraint>
+        <key value="dguv-auflex-1" />
+        <severity value="error" />
+        <human value="Wenn der Wert 'AUFLEX'  ist, muss Flexible_AU gefüllt sein und es dürfen nur 'Woche(n) oder Monat(e) als Einheit auftreten." />
+        <expression value="(value.coding.where(code='AUFLEX').exists()) implies ((value.extension('http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-FlexAU').exists()) and  (value.extension('http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-FlexAU').value.ofType(Duration).unit.matches('^(Woche(n)?|Monat(e)?)$')))" />
+        <source value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Arbeitsunfaehigkeit" />
+      </constraint>
+      <constraint>
+        <key value="dguv-aubis-1" />
+        <severity value="error" />
+        <human value="Wenn der Wert 'AUBIS' ist, muss effective existieren." />
+        <expression value="(value.coding.code ='AUBIS') implies effective.exists()" />
+        <source value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Arbeitsunfaehigkeit" />
+      </constraint>
+      <constraint>
+        <key value="dguv-nicht-aubis-1" />
+        <severity value="error" />
+        <human value="Wenn code nicht 'AUBIS', darf effective[x] nicht genutzt/gefüllt sein." />
+        <expression value="(value.coding.code !='AUBIS') implies effective.empty()" />
+        <source value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Arbeitsunfaehigkeit" />
+      </constraint>
+      <constraint>
+        <key value="dguv-nicht-auflex-1" />
+        <severity value="error" />
+        <human value="Wenn der Wert nicht  'AUFLEX'  ist, darf Flexible_AU nicht genutzt/gefüllt sein." />
+        <expression value="(value.coding.where(code!='AUFLEX').exists()) implies ((value.extension('http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-FlexAU').exists().not()))" />
+        <source value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Arbeitsunfaehigkeit" />
+      </constraint>
       <mapping>
         <identity value="rim" />
         <map value="Entity. Role, or Act" />
@@ -119,7 +147,7 @@
       <short value="Logical id of this artifact" />
       <definition value="The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes." />
       <comment value="The only time that a resource does not have an id is when it is being submitted to the server using a create operation." />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Resource.id" />
@@ -174,7 +202,7 @@
       <representation value="xmlAttr" />
       <short value="Unique id for inter-element referencing" />
       <definition value="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Element.id" />
@@ -187,7 +215,6 @@
         </extension>
         <code value="http://hl7.org/fhirpath/System.String" />
       </type>
-      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -2353,7 +2380,7 @@
       <alias value="extensions" />
       <alias value="user content" />
       <min value="0" />
-      <max value="*" />
+      <max value="0" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -5181,18 +5208,39 @@
     </element>
   </snapshot>
   <differential>
+    <element id="Observation">
+      <path value="Observation" />
+      <constraint>
+        <key value="dguv-auflex-1" />
+        <severity value="error" />
+        <human value="Wenn der Wert 'AUFLEX'  ist, muss Flexible_AU gefüllt sein und es dürfen nur 'Woche(n) oder Monat(e) als Einheit auftreten." />
+        <expression value="(value.coding.where(code='AUFLEX').exists()) implies ((value.extension('http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-FlexAU').exists()) and  (value.extension('http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-FlexAU').value.ofType(Duration).unit.matches('^(Woche(n)?|Monat(e)?)$')))" />
+      </constraint>
+      <constraint>
+        <key value="dguv-aubis-1" />
+        <severity value="error" />
+        <human value="Wenn der Wert 'AUBIS' ist, muss effective existieren." />
+        <expression value="(value.coding.code ='AUBIS') implies effective.exists()" />
+      </constraint>
+      <constraint>
+        <key value="dguv-nicht-aubis-1" />
+        <severity value="error" />
+        <human value="Wenn code nicht 'AUBIS', darf effective[x] nicht genutzt/gefüllt sein." />
+        <expression value="(value.coding.code !='AUBIS') implies effective.empty()" />
+      </constraint>
+      <constraint>
+        <key value="dguv-nicht-auflex-1" />
+        <severity value="error" />
+        <human value="Wenn der Wert nicht  'AUFLEX'  ist, darf Flexible_AU nicht genutzt/gefüllt sein." />
+        <expression value="(value.coding.where(code!='AUFLEX').exists()) implies ((value.extension('http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-FlexAU').exists().not()))" />
+      </constraint>
+    </element>
     <element id="Observation.id">
       <path value="Observation.id" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.meta">
       <path value="Observation.meta" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.meta.id">
-      <path value="Observation.meta.id" />
       <min value="1" />
       <mustSupport value="true" />
     </element>

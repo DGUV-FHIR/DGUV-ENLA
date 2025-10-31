@@ -94,7 +94,7 @@
     </element>
     <element id="Medication.id">
       <path value="Medication.id" />
-      <short value="eindeutige ID der Ressource auf dem Server" />
+      <short value="Logical id of this artifact" />
       <definition value="The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes." />
       <comment value="The only time that a resource does not have an id is when it is being submitted to the server using a create operation." />
       <min value="0" />
@@ -889,7 +889,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <short value="Code defined by a terminology system" />
+      <short value="Medikament in codierter Form" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
@@ -948,7 +948,7 @@
       <sliceName value="PZN" />
       <short value="Code defined by a terminology system" />
       <definition value="A reference to a code defined by a terminology system." />
-      <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
+      <comment value="Mehrfachcodierung ist zulässig, da für ein abstraktes Medikament auch mehrere PZN-Codes existieren können, z. B. existieren für Aspirin 3 verschiedene Packungsgrößen." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
       <min value="0" />
       <max value="0" />
@@ -1302,7 +1302,7 @@
       <sliceName value="ATC-DE" />
       <short value="Code defined by a terminology system" />
       <definition value="A reference to a code defined by a terminology system." />
-      <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
+      <comment value="Mehrfachcodierung ist zulässig, da für ein abstraktes Medikament auch mehrere ATC-Codes existieren können, z. B. existieren für Aspirin 4 verschiedene Codes, je nachdem wofür das Medikament angewendet wird." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
       <min value="0" />
       <max value="0" />
@@ -2165,6 +2165,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -2251,6 +2252,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -2363,7 +2365,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Medication.code.text" />
-      <short value="Plain text representation of the concept" />
+      <short value="Medikament als Freitext" />
       <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user." />
       <comment value="Very often the text is the same as a displayName of one of the codings." />
       <requirements value="The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source." />
@@ -2712,7 +2714,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Medication.manufacturer.display" />
-      <short value="Text alternative for the resource" />
+      <short value="Hersteller des Medikaments als Freitext" />
       <definition value="Plain text narrative that identifies the resource in addition to the resource reference." />
       <comment value="This is generally not the same as the Resource.text of the referenced resource.  The purpose is to identify what's being referenced, not to fully describe it." />
       <min value="1" />
@@ -2890,7 +2892,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <short value="Code defined by a terminology system" />
+      <short value="Abgabeform in codiertem Format" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
@@ -2947,7 +2949,7 @@
     <element id="Medication.form.coding:EDQM">
       <path value="Medication.form.coding" />
       <sliceName value="EDQM" />
-      <short value="Code defined by a terminology system" />
+      <short value="Abgabeform im EDQM-Format" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
@@ -4266,7 +4268,7 @@
     <element id="Medication.ingredient.extension:wirkstofftyp">
       <path value="Medication.ingredient.extension" />
       <sliceName value="wirkstofftyp" />
-      <short value="Optional Extensions Element" />
+      <short value="Wirkstofftyp" />
       <definition value="Optional Extension Element - found in all resources." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
@@ -4410,7 +4412,7 @@
     </element>
     <element id="Medication.ingredient.extension:wirkstofftyp.value[x]">
       <path value="Medication.ingredient.extension.value[x]" />
-      <short value="Value of extension" />
+      <short value="Wirkstofftyp" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
       <min value="1" />
       <max value="1" />
@@ -4521,7 +4523,7 @@
     </element>
     <element id="Medication.ingredient.extension:wirkstofftyp.value[x].system">
       <path value="Medication.ingredient.extension.value[x].system" />
-      <short value="Identity of the terminology system" />
+      <short value="CodeSystem für Wirkstofftypen" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
       <comment value="The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously." />
       <requirements value="Need to be unambiguous about the source of the definition of the symbol." />
@@ -4608,7 +4610,7 @@
     </element>
     <element id="Medication.ingredient.extension:wirkstofftyp.value[x].code">
       <path value="Medication.ingredient.extension.value[x].code" />
-      <short value="Symbol in syntax defined by the system" />
+      <short value="Code des konkreten Wirkstofftyps" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to refer to a particular code in the system." />
@@ -4655,7 +4657,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Medication.ingredient.extension.value[x].display" />
-      <short value="Representation defined by the system" />
+      <short value="Bezeichnung des konkreten Wirkstofftyps" />
       <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
@@ -4678,6 +4680,7 @@
         <xpath value="@value|f:*|h:div" />
         <source value="http://hl7.org/fhir/StructureDefinition/Element" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -4797,7 +4800,7 @@
         <ordered value="false" />
         <rules value="open" />
       </slicing>
-      <short value="The actual ingredient or content" />
+      <short value="Bestandteil" />
       <definition value="The actual ingredient - either a substance (simple ingredient) or another medication of a medication." />
       <requirements value="The ingredient may reference a substance (for example, amoxicillin) or another medication (for example in the case of a compounded product, Glaxal Base)." />
       <min value="1" />
@@ -4962,7 +4965,7 @@
       <path value="Medication.ingredient.item[x].coding" />
       <slicing>
         <discriminator>
-          <type value="pattern" />
+          <type value="type" />
           <path value="$this" />
         </discriminator>
         <rules value="open" />
@@ -5024,7 +5027,7 @@
     <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:ASK">
       <path value="Medication.ingredient.item[x].coding" />
       <sliceName value="ASK" />
-      <short value="Code defined by a terminology system" />
+      <short value="ASK-Code" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
@@ -5378,7 +5381,7 @@
     <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:ATC-DE">
       <path value="Medication.ingredient.item[x].coding" />
       <sliceName value="ATC-DE" />
-      <short value="Code defined by a terminology system" />
+      <short value="Anatomisch-Therapeutisch-Chemische (ATC) Klassifikation" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
@@ -5732,7 +5735,7 @@
     <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:PZN">
       <path value="Medication.ingredient.item[x].coding" />
       <sliceName value="PZN" />
-      <short value="Code defined by a terminology system" />
+      <short value="Pharmazentralnummer" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
@@ -6086,7 +6089,7 @@
     <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:WG14">
       <path value="Medication.ingredient.item[x].coding" />
       <sliceName value="WG14" />
-      <short value="Code defined by a terminology system" />
+      <short value="WG14-Nummer" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems." />
@@ -6442,7 +6445,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Medication.ingredient.item[x].text" />
-      <short value="Plain text representation of the concept" />
+      <short value="Freitextbeschreibung des Bestandteils" />
       <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user." />
       <comment value="Very often the text is the same as a displayName of one of the codings." />
       <requirements value="The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source." />
@@ -7618,6 +7621,7 @@
       <path value="Medication.batch" />
       <short value="Angaben zur Charge" />
       <definition value="Information that only applies to packages (not products)." />
+      <comment value="Bitte beachten Sie gegebenenfalls die Regelungen der zwischen GKV-SV und DAV: https://www.gkv-datenaustausch.de/leistungserbringer/apotheken/apotheken.jsp . Insbesondere den Technischen Anhang 7 (TA7) zur Arzneimittelabrechnungsvereinbarung gemäß § 300 Absatz 3 SGB V in der aktuellsten Fassung." />
       <min value="0" />
       <max value="1" />
       <base>
@@ -7777,7 +7781,7 @@
       <path value="Medication.batch.lotNumber" />
       <short value="Chargennummer" />
       <definition value="The assigned lot number of a batch of the specified product." />
-      <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size" />
+      <comment value="Gemäß Anlage 1 der TA7 kann hier übergangsweise bis zum 30. Juni 2025 eine Musterchargennummer (&quot;STELLEN&quot;) eingetragen werden. Wenn die Übermittlung der Chargenbezeichnung beim Stellen von Arzneimitteln technisch nicht möglich ist, z.B. beim Verblistern, wird von der Verpflichtung zur Chargendokumentation abgesehen. Dementsprechend kann anstatt der tatsächlichen Chargenbezeichnungen &quot;STELLEN&quot; in das hierbeschirebene Datenfeld eingetragen werden." />
       <min value="0" />
       <max value="1" />
       <base>
@@ -7857,6 +7861,10 @@
     </element>
   </snapshot>
   <differential>
+    <element id="Medication.id">
+      <path value="Medication.id" />
+      <mustSupport value="true" />
+    </element>
     <element id="Medication.meta">
       <path value="Medication.meta" />
       <min value="1" />
@@ -7875,6 +7883,7 @@
     </element>
     <element id="Medication.code.coding">
       <path value="Medication.code.coding" />
+      <short value="Medikament in codierter Form" />
       <min value="1" />
       <max value="1" />
     </element>
@@ -7906,6 +7915,7 @@
       <path value="Medication.code.coding.system" />
       <min value="1" />
       <fixedUri value="https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type" />
+      <mustSupport value="true" />
     </element>
     <element id="Medication.code.coding:verordnungskategorieCode.version">
       <path value="Medication.code.coding.version" />
@@ -7915,6 +7925,7 @@
       <path value="Medication.code.coding.code" />
       <min value="1" />
       <fixedCode value="rezeptur" />
+      <mustSupport value="true" />
     </element>
     <element id="Medication.code.coding:verordnungskategorieCode.display">
       <path value="Medication.code.coding.display" />
@@ -7924,6 +7935,23 @@
       <path value="Medication.code.coding.userSelected" />
       <max value="0" />
     </element>
+    <element id="Medication.code.text">
+      <path value="Medication.code.text" />
+      <short value="Medikament als Freitext" />
+    </element>
+    <element id="Medication.manufacturer.display">
+      <path value="Medication.manufacturer.display" />
+      <short value="Hersteller des Medikaments als Freitext" />
+    </element>
+    <element id="Medication.form.coding">
+      <path value="Medication.form.coding" />
+      <short value="Abgabeform in codiertem Format" />
+    </element>
+    <element id="Medication.form.coding:EDQM">
+      <path value="Medication.form.coding" />
+      <sliceName value="EDQM" />
+      <short value="Abgabeform im EDQM-Format" />
+    </element>
     <element id="Medication.ingredient">
       <path value="Medication.ingredient" />
       <min value="1" />
@@ -7931,18 +7959,69 @@
     <element id="Medication.ingredient.extension:wirkstofftyp">
       <path value="Medication.ingredient.extension" />
       <sliceName value="wirkstofftyp" />
+      <short value="Wirkstofftyp" />
     </element>
     <element id="Medication.ingredient.extension:wirkstofftyp.value[x]">
       <path value="Medication.ingredient.extension.value[x]" />
+      <short value="Wirkstofftyp" />
       <mustSupport value="true" />
     </element>
     <element id="Medication.ingredient.extension:wirkstofftyp.value[x].system">
       <path value="Medication.ingredient.extension.value[x].system" />
+      <short value="CodeSystem für Wirkstofftypen" />
       <mustSupport value="true" />
     </element>
     <element id="Medication.ingredient.extension:wirkstofftyp.value[x].code">
       <path value="Medication.ingredient.extension.value[x].code" />
+      <short value="Code des konkreten Wirkstofftyps" />
       <mustSupport value="true" />
+    </element>
+    <element id="Medication.ingredient.extension:wirkstofftyp.value[x].display">
+      <path value="Medication.ingredient.extension.value[x].display" />
+      <short value="Bezeichnung des konkreten Wirkstofftyps" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.ingredient.item[x]">
+      <path value="Medication.ingredient.item[x]" />
+      <short value="Bestandteil" />
+    </element>
+    <element id="Medication.ingredient.item[x]:itemCodeableConcept">
+      <path value="Medication.ingredient.item[x]" />
+      <sliceName value="itemCodeableConcept" />
+    </element>
+    <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding">
+      <path value="Medication.ingredient.item[x].coding" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:ASK">
+      <path value="Medication.ingredient.item[x].coding" />
+      <sliceName value="ASK" />
+      <short value="ASK-Code" />
+    </element>
+    <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:ATC-DE">
+      <path value="Medication.ingredient.item[x].coding" />
+      <sliceName value="ATC-DE" />
+      <short value="Anatomisch-Therapeutisch-Chemische (ATC) Klassifikation" />
+    </element>
+    <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:PZN">
+      <path value="Medication.ingredient.item[x].coding" />
+      <sliceName value="PZN" />
+      <short value="Pharmazentralnummer" />
+    </element>
+    <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:WG14">
+      <path value="Medication.ingredient.item[x].coding" />
+      <sliceName value="WG14" />
+      <short value="WG14-Nummer" />
+    </element>
+    <element id="Medication.ingredient.item[x]:itemCodeableConcept.text">
+      <path value="Medication.ingredient.item[x].text" />
+      <short value="Freitextbeschreibung des Bestandteils" />
     </element>
   </differential>
 </StructureDefinition>

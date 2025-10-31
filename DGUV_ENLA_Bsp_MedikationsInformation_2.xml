@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MedicationStatement xmlns="http://hl7.org/fhir">
+  <id value="medstmt-strukturiert-1"/>
+  <meta>
+    <profile value="http://fhir.dguv.de/ENLA/MedicationStatement/DGUV-ENLA-PR-MedikationsInformation"/>
+  </meta>
+
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>Strukturierte Dosierung: 500 mg zweimal täglich, oral.</p>
+    </div>
+  </text>
+
+  <status value="active"/>
+
+  <subject>
+    <reference value="Patient/123"/>
+  </subject>
+
+  <!-- Referenz auf eine DGUV-Medication (hier: als contained) -->
+  <medicationReference>
+    <reference value="#med1"/>
+  </medicationReference>
+
+  <!-- *** Strukturiertes Dosierungs-Slice *** -->
+  <dosage>
+    <!-- Discriminator: exakt dieser Text ist gefordert -->
+    <text value="Strukturierte Dosierung"/>
+
+    <!-- timing 1..1; repeat ist im Slice verboten (0..0) -->
+    <timing>
+      <code>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"/>
+          <code value="BID"/>
+          <display value="zweimal täglich">
+            <!-- Pflicht-Erweiterung: AnzeigenameDeutsch -->
+            <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-AnzeigenameDeutsch">
+              <valueString value="Zweimal täglich"/>
+            </extension>
+          </display>
+        </coding>
+      </code>
+    </timing>
+
+    <!-- route 1..1 (Binding: KBV ValueSet, extensible) -->
+    <route>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="26643006"/>
+        <display value="Orale Anwendung"/>
+      </coding>
+    </route>
+
+    <!-- doseAndRate.dose[x] 1..1 als SimpleQuantity -->
+    <doseAndRate>
+      <doseQuantity>
+        <value value="500"/>
+        <unit value="mg"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mg"/>
+      </doseQuantity>
+    </doseAndRate>
+
+  </dosage>
+
+  <!-- Enthaltene Medication (DGUV-Profilreferenz) -->
+  <contained>
+    <Medication>
+      <id value="med1"/>
+      <meta>
+        <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationArzneimittel"/>
+      </meta>
+      <code>
+        <coding>
+          <system value="http://fhir.de/CodeSystem/ifa/pzn"/>
+          <code value="12345678"/>
+          <display value="Beispielmedikament 500 mg Tablette"/>
+        </coding>
+      </code>
+    </Medication>
+  </contained>
+</MedicationStatement>

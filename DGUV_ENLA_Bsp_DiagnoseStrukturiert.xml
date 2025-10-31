@@ -1,9 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Author: 
+    Datum:  
+
+    Die vorliegende Beispiel Datei .... dient der Validierung 
+    der Datenaufnahme zu dem ......
+    
+    Zu beachten ist dabei ...
+
+    Durchzuführende Massnahmen:
+
+
+-->
 <Condition xmlns="http://hl7.org/fhir">
-    <id value="9acff578-cca8-4f9c-9f58-49e5cb91bbab"/>
+    <id value="DGUV-ENLA-Bsp-DiagnoseStrukturiert"/>
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseStrukturiert"/>
     </meta>
+
+    <!-- Diagnosecode verpflichtend-->
     <code>
         <coding>
             <system value="http://fhir.de/CodeSystem/bfarm/icd-10-gm"/>
@@ -12,7 +27,10 @@
             <display value="Gehirnerschütterung"/>
         </coding>
     </code>
+
+    <!-- VersichertePerson Referenz -->
     <subject>
-        <reference value="Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
+        <reference value="Patient/T37501234"/>
     </subject>
+
 </Condition>
