@@ -613,8 +613,12 @@
       <path value="Bundle.entry" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="resourrce.meta.profile" />
+          <type value="profile" />
+          <path value="resource" />
+        </discriminator>
+        <discriminator>
+          <type value="type" />
+          <path value="resource" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -2052,7 +2056,7 @@
         <max value="1" />
       </base>
       <type>
-        <code value="Resource" />
+        <code value="Composition" />
         <profile value="http://fhir.dguv.de/ENLA/Composition/DGUV-ENLA-PR-Composition" />
       </type>
       <constraint>
@@ -3106,8 +3110,8 @@
       <sliceName value="VersichertePerson" />
       <short value="Entry in the bundle - will have a resource or information" />
       <definition value="An entry in a bundle resource - will either contain a resource or information about a resource (transactions and history only)." />
-      <min value="0" />
-      <max value="*" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="Bundle.entry" />
         <min value="0" />
@@ -3327,7 +3331,7 @@
         <max value="1" />
       </base>
       <type>
-        <code value="Resource" />
+        <code value="Patient" />
         <profile value="http://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson" />
       </type>
       <constraint>
@@ -4427,8 +4431,12 @@
       <path value="Bundle.entry" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="resourrce.meta.profile" />
+          <type value="profile" />
+          <path value="resource" />
+        </discriminator>
+        <discriminator>
+          <type value="type" />
+          <path value="resource" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -4442,18 +4450,20 @@
     <element id="Bundle.entry:Compositon.resource">
       <path value="Bundle.entry.resource" />
       <type>
-        <code value="Resource" />
+        <code value="Composition" />
         <profile value="http://fhir.dguv.de/ENLA/Composition/DGUV-ENLA-PR-Composition" />
       </type>
     </element>
     <element id="Bundle.entry:VersichertePerson">
       <path value="Bundle.entry" />
       <sliceName value="VersichertePerson" />
+      <min value="1" />
+      <max value="1" />
     </element>
     <element id="Bundle.entry:VersichertePerson.resource">
       <path value="Bundle.entry.resource" />
       <type>
-        <code value="Resource" />
+        <code value="Patient" />
         <profile value="http://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson" />
       </type>
     </element>
