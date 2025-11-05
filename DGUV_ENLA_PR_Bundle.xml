@@ -34,7 +34,7 @@
       <path value="Bundle.entry.resource" />
       <min value="1" />
       <type>
-        <code value="Composition" />
+        <code value="Resource" />
         <profile value="http://fhir.dguv.de/ENLA/Composition/DGUV-ENLA-PR-Composition" />
       </type>
     </element>
@@ -48,7 +48,7 @@
       <path value="Bundle.entry.resource" />
       <min value="1" />
       <type>
-        <code value="Patient" />
+        <code value="Resource" />
         <profile value="http://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson" />
       </type>
     </element>
