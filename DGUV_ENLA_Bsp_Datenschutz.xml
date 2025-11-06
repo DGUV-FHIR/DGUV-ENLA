@@ -35,6 +35,9 @@
         <reference value="Patient/VersichertePerson-1"/>
     </subject>
 
+    <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
+    <effectiveDateTime value="2018-08-24T13:00:00+00:00"/>
+
     <!-- Behandelnde(-r) Ärtztin/Arzt-->
     <performer>
         <reference value="Performer/DArzt"/>
