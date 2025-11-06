@@ -238,12 +238,12 @@
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
                             <code value="DGST"/>
-                            <display value="Diagnose - Strukturiert"/>
+                            <display value="Diagnose - strukturiert"/>
                         </coding>
                     </code>
                     <entry>
                         <!-- 
-                                Auswahl des Diagnose - Strukturiert Objektes:
+                                Auswahl des Diagnose - strukturiert Objektes:
                                 RelativeURL:
                                 urn:uuid:9acff578-cca8-4f9c-9f58-49e5cb91bbab
                         -->
