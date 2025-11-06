@@ -1191,6 +1191,16 @@
                 <subject>
                     <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
                 </subject>
+
+                <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
+                <effectiveDateTime value="2018-08-24T13:00:00+00:00"/>
+
+                <!-- Performer -->
+                <performer>
+                    <reference value="urn:uuid:93ad5198-d79b-4436-9e1e-aaa69acb2d08"/>
+                </performer>
+
+
                 <!-- OPS-Codes mit Freitext-->
                 <valueString value="neurologisches und inneres konsil" >
                     <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-OPSCode">
@@ -1256,6 +1266,11 @@
 
             <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
             <effectiveDateTime value="2018-08-24T13:00:00+00:00"/>
+
+            <!-- Performer -->
+            <performer>
+                <reference value="urn:uuid:93ad5198-d79b-4436-9e1e-aaa69acb2d08"/>
+            </performer>
 
             <!-- Unfallereignis Komponente -->
             <component>
@@ -1346,6 +1361,11 @@
 
                 <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
                 <effectiveDateTime value="2025-09-30T09:30:00+02:00"/>
+
+                <!-- Performer -->
+                <performer>
+                    <reference value="urn:uuid:93ad5198-d79b-4436-9e1e-aaa69acb2d08"/>
+                </performer>
 
                 <!-- Befund Narrativ -->
                 <valueString value="Befundergebnis" />
@@ -1441,6 +1461,11 @@
                 <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
                 <effectiveDateTime value="2025-09-30T09:30:00+02:00"/>
 
+                <!-- Performer -->
+                <performer>
+                    <reference value="urn:uuid:93ad5198-d79b-4436-9e1e-aaa69acb2d08"/>
+                </performer>
+
                 <!-- Befund Narrativ -->
                 <valueString value="Befundergebnis" />
                 
@@ -1482,6 +1507,14 @@
                 <subject>
                     <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba" />
                 </subject>
+
+                <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
+                <effectiveDateTime value="2025-09-30T09:30:00+02:00"/>
+
+                <!-- Performer -->
+                <performer>
+                    <reference value="urn:uuid:93ad5198-d79b-4436-9e1e-aaa69acb2d08"/>
+                </performer>
 
                 <!-- Freitextliches Befund Ergebnis -->
                 <valueString value="Befundergebnis" />
@@ -1991,6 +2024,11 @@
                     </code>
                 </effectiveTiming>
 
+                <!-- Behandelnde(-r) Ärtztin/Arzt -->
+                <performer>
+                    <reference value="urn:uuid:93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
+                </performer>
+
                 <!-- verordnete Heilmittel-->
                 <valueCodeableConcept>  
                     <coding>
@@ -2042,6 +2080,11 @@
                         </coding>
                     </code>
                 </effectiveTiming>
+
+                <!-- Behandelnde(-r) Ärtztin/Arzt -->
+                <performer>
+                    <reference value="urn:uuid:93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
+                </performer>
 
                 <!-- verordnete Hilfsmittel-->
                 <valueCodeableConcept>  
@@ -2289,6 +2332,9 @@
                 <subject>
                     <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
                 </subject>
+
+                <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
+                <effectiveDateTime value="2025-09-30T09:30:00+02:00"/>
 
                 <!-- Behandelnde(-r) Ärtztin/Arzt-->
                 <performer>
