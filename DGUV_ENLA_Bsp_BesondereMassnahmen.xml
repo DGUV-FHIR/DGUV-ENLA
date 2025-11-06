@@ -27,7 +27,7 @@
 
     <!-- Versicherte Person -->
     <subject>
-        <reference value="Farad, Rudi/T995030511"/>
+        <reference value="Farad_Rudi/T995030511"/>
     </subject>
 
     <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
