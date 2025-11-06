@@ -1592,7 +1592,7 @@
                         <code>
                             <coding>
                                 <system value="http://hl7.org/fhir/event-timing" />
-                                <version value="1.0" />
+                                <version value="4.0.1" />
                                 <code value="MORN" />
                                 <display value="Morning">
                                     <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-AnzeigenameDeutsch">
@@ -2292,7 +2292,7 @@
 
                 <!-- Behandelnde(-r) Ärtztin/Arzt-->
                 <performer>
-                    <reference value="urn:uuid:93ad5198-d79b-4436-9e1e-aaa69acb2d08"/>
+                    <reference value="urn:uuid:53192032-6365-4659-8cc2-f9a7df67a466"/>
                 </performer>
 
                 <!-- Kennzeichen bzgl. Datenschutzhinweisgebung  -->
