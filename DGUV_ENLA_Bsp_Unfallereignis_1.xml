@@ -45,11 +45,16 @@
 
   <!-- VersichertePerson Referenz -->
   <subject> 
-    <reference value="Farad, Rudi/T995030511" />
+    <reference value="Farad_Rudi/T995030511" />
   </subject>
 
   <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
   <effectiveDateTime value="2018-08-24T13:00:00+00:00"/>
+
+  <!-- Behandelnde(-r) Ärtztin/Arzt-->
+  <performer>
+    <reference value="urn:uuid:53192032-6365-4659-8cc2-f9a7df67a466"/>
+  </performer>
 
   <!-- Unfallereignis Komponente -->
   <component>
