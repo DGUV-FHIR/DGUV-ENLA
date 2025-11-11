@@ -1142,54 +1142,6 @@
       <path value="Composition.section.entry.reference" />
       <min value="1" />
     </element>
-    <element id="Composition.section:MedikationWirkstoff">
-      <path value="Composition.section" />
-      <sliceName value="MedikationWirkstoff" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Composition.section:MedikationWirkstoff.code">
-      <path value="Composition.section.code" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Composition.section:MedikationWirkstoff.code.coding">
-      <path value="Composition.section.code.coding" />
-      <min value="1" />
-      <max value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Composition.section:MedikationWirkstoff.code.coding.system">
-      <path value="Composition.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Composition.section:MedikationWirkstoff.code.coding.code">
-      <path value="Composition.section.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="MDWS" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Composition.section:MedikationWirkstoff.code.coding.display">
-      <path value="Composition.section.code.coding.display" />
-      <fixedString value="Medikation - Wirkstoff" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Composition.section:MedikationWirkstoff.entry">
-      <path value="Composition.section.entry" />
-      <min value="1" />
-      <max value="1" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationWirkstoff" />
-      </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="Composition.section:MedikationWirkstoff.entry.reference">
-      <path value="Composition.section.entry.reference" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
     <element id="Composition.section:WeiterbehandelnderArzt">
       <path value="Composition.section" />
       <sliceName value="WeiterbehandelnderArzt" />
