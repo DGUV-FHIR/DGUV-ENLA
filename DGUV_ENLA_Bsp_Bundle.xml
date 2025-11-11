@@ -411,25 +411,7 @@
                         -->                    
                         <reference value="urn:uuid:cf72d600-1c4d-44bf-a8b3-ec100f1a4947" />
                     </entry>
-                </section>
-                                <section>
-                    <!-- 20 -->
-                    <code>
-                        <coding>
-                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
-                            <code value="MDWS"/>
-                            <display value="Medikation - Wirkstoff"/>
-                        </coding>
-                    </code> 
-                    <entry>
-                        <!-- 
-                                Auswahl des Medikationsinformation Objektes:
-                                RelativeURL:
-                                urn:uuid:8947dca1-69fd-4184-a55f-8f7f32b0a914
-                        -->                    
-                        <reference value="urn:uuid:8947dca1-69fd-4184-a55f-8f7f32b0a914" />
-                    </entry>
-                </section>
+                </section>               
                 <section>
                     <!-- 23 -->
                     <code>
@@ -1545,99 +1527,61 @@
     <entry>
         <!-- 19 -->
         <fullUrl value="urn:uuid:cf72d600-1c4d-44bf-a8b3-ec100f1a4947" />
-            <resource>
-                <MedicationStatement xmlns="http://hl7.org/fhir">
-                    <id value="DGUV-ENLA-Bsp-MedikationsInformation" />
-                    <meta>
-                        <profile value="http://fhir.dguv.de/ENLA/MedicationStatement/DGUV-ENLA-PR-MedikationsInformation" />
-                    </meta>
-                    <!-- Medikation status-->
-                    <status value="active" />
-
-                    <!-- Referenz zum Medikation Arzneimittel -->
-                    <medicationReference>
-                        <reference value="Medication/MedikationArzneimittel"/>     
-                    </medicationReference>
-
-                    <!-- Referenz zur Versicherten Person -->
-                    <subject>
-                        <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba"/>     
-                    </subject>
-                    
-                    <!-- Dosage zum Medikation Arzneimittel -->
-                    <dosage>
-                        <text value="Strukturierte Dosierung" />
-                        <timing>
-                            <code>
-                                <coding>
-                                    <system value="http://hl7.org/fhir/event-timing" />
-                                    <version value="4.0.1" />
-                                    <code value="MORN" />
-                                    <display value="Morning">
-                                        <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-AnzeigenameDeutsch">
-                                        <valueString value="Morgens" />
-                                        </extension>
-                                    </display>
-                                </coding>
-                            </code>
-                        </timing>
-                        <route>
-                            <coding>
-                                    <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_Route_of_Administration_German" />
-                                    <version value="1.0.0" />
-                                    <code value="oral" />
-                                    <display value="oral" />
-                            </coding>
-                        </route>
-
-                        <doseAndRate>
-                            <doseQuantity>
-                                <value value="500" />
-                                <unit value="mg" />
-                                <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BMP_DOSIEREINHEIT" />
-                                <code value="mg" />
-                            </doseQuantity>
-                        </doseAndRate>
-                    </dosage>
-                </MedicationStatement>
-            </resource>
-    </entry>
-    <entry>
-        <!-- 20 -->
-        <fullUrl value="urn:uuid:8947dca1-69fd-4184-a55f-8f7f32b0a914" />
         <resource>
-            <Medication xmlns="http://hl7.org/fhir">
-            <id value="DGUV-ENLA-Bsp-MedikationWirkstoff" />
-            <meta>
-                <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationWirkstoff" />
-            </meta>
+            <MedicationStatement xmlns="http://hl7.org/fhir">
+                <id value="cf72d600-1c4d-44bf-a8b3-ec100f1a4947" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/MedicationStatement/DGUV-ENLA-PR-MedikationsInformation" />
+                </meta>
+                <!-- Medikation status-->
+                <status value="active" />
 
-            <code>
-                <coding>
-                    <system value="http://fhir.de/CodeSystem/ifa/pzn" />
-                    <code value="98765432" />
-                </coding>
-                <text value="98765432" />
-            </code>
+                <!-- Referenz zum Medikation Arzneimittel -->
+                <medicationReference>
+                    <reference value="urn:uuid:4b28cbef-80e7-4838-b15b-b2d9dfc4461b"/>     
+                </medicationReference>
 
-            <!-- Medication status -->
-            <status value="active"/>
+                <!-- Referenz zur Versicherten Person -->
+                <subject>
+                    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba"/>     
+                </subject>
+                    
+                <!-- Dosage zum Medikation Arzneimittel -->
+                <dosage>
+                    <text value="Strukturierte Dosierung" />
+                    <timing>
+                        <code>
+                            <coding>
+                                <system value="http://hl7.org/fhir/event-timing" />
+                                <version value="4.0.1" />
+                                <code value="MORN" />
+                                <display value="Morning">
+                                    <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-AnzeigenameDeutsch">
+                                    <valueString value="Morgens" />
+                                    </extension>
+                                </display>
+                            </coding>
+                        </code>
+                    </timing>
+                    <route>
+                        <coding>
+                            <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_Route_of_Administration_German" />
+                            <version value="1.0.0" />
+                            <code value="oral" />
+                            <display value="oral" />
+                        </coding>
+                    </route>
 
-            <ingredient>
-                <itemCodeableConcept>
-                <coding>
-                    <system value="http://fhir.de/CodeSystem/ifa/pzn"/>
-                    <version value="1.0"/>
-                    <code value="98765432"/>
-                    <display value="Paracetamol"/>
-                </coding>
-                </itemCodeableConcept>
-            </ingredient>
-
-            <batch>
-                <lotNumber value="1234"/>
-                </batch>
-            </Medication>
+                    <doseAndRate>
+                        <doseQuantity>
+                            <value value="500" />
+                            <unit value="mg" />
+                            <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BMP_DOSIEREINHEIT" />
+                            <code value="mg" />
+                        </doseQuantity>
+                    </doseAndRate>
+                </dosage>
+            </MedicationStatement>
         </resource>
     </entry>
     <entry>
