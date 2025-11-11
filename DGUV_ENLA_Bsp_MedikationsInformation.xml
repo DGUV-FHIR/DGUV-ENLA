@@ -27,7 +27,7 @@
 
     <!-- Referenz zur Versicherten Person -->
     <subject>
-        <reference value="Farad, Rudi/T995030511"/>     
+        <reference value="Farad_Rudi/T995030511"/>     
     </subject>
      
     <!-- Dosage zum Medikation Arzneimittel -->
