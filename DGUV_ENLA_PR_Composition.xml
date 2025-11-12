@@ -1109,25 +1109,30 @@
     <element id="Composition.section:MedikationsInformation.code">
       <path value="Composition.section.code" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:MedikationsInformation.code.coding">
       <path value="Composition.section.code.coding" />
       <min value="1" />
       <max value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:MedikationsInformation.code.coding.system">
       <path value="Composition.section.code.coding.system" />
       <min value="1" />
       <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:MedikationsInformation.code.coding.code">
       <path value="Composition.section.code.coding.code" />
       <min value="1" />
       <fixedCode value="MDIN" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:MedikationsInformation.code.coding.display">
       <path value="Composition.section.code.coding.display" />
       <fixedString value="Medikationsinformation" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:MedikationsInformation.entry">
       <path value="Composition.section.entry" />
@@ -1137,10 +1142,202 @@
         <code value="Reference" />
         <targetProfile value="http://fhir.dguv.de/ENLA/MedicationStatement/DGUV-ENLA-PR-MedikationsInformation" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:MedikationsInformation.entry.reference">
       <path value="Composition.section.entry.reference" />
       <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:MedikationWirkstoff">
+      <path value="Composition.section" />
+      <sliceName value="MedikationWirkstoff" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:MedikationWirkstoff.code">
+      <path value="Composition.section.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:MedikationWirkstoff.code.coding">
+      <path value="Composition.section.code.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:MedikationWirkstoff.code.coding.system">
+      <path value="Composition.section.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:MedikationWirkstoff.code.coding.code">
+      <path value="Composition.section.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="MDWS" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:MedikationWirkstoff.code.coding.display">
+      <path value="Composition.section.code.coding.display" />
+      <fixedString value="Medikation - Wirkstoff" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:MedikationWirkstoff.entry">
+      <path value="Composition.section.entry" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationWirkstoff" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:MedikationWirkstoff.entry.reference">
+      <path value="Composition.section.entry.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:MedikationRezeptur">
+      <path value="Composition.section" />
+      <sliceName value="MedikationRezeptur" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:MedikationRezeptur.code">
+      <path value="Composition.section.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:MedikationRezeptur.code.coding">
+      <path value="Composition.section.code.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:MedikationRezeptur.code.coding.system">
+      <path value="Composition.section.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:MedikationRezeptur.code.coding.code">
+      <path value="Composition.section.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="MDRZ" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:MedikationRezeptur.code.coding.display">
+      <path value="Composition.section.code.coding.display" />
+      <fixedString value="Medikation - Rezeptur" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:MedikationRezeptur.entry">
+      <path value="Composition.section.entry" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationRezeptur" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:MedikationRezeptur.entry.reference">
+      <path value="Composition.section.entry.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:MedikationArzneimittel">
+      <path value="Composition.section" />
+      <sliceName value="MedikationArzneimittel" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:MedikationArzneimittel.code">
+      <path value="Composition.section.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:MedikationArzneimittel.code.coding">
+      <path value="Composition.section.code.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:MedikationArzneimittel.code.coding.system">
+      <path value="Composition.section.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:MedikationArzneimittel.code.coding.code">
+      <path value="Composition.section.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="MDAM" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:MedikationArzneimittel.code.coding.display">
+      <path value="Composition.section.code.coding.display" />
+      <fixedString value="Medikation - Arzneimittel" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:MedikationArzneimittel.entry">
+      <path value="Composition.section.entry" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationArzneimittel" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:MedikationArzneimittel.entry.reference">
+      <path value="Composition.section.entry.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:MedikationFreitext">
+      <path value="Composition.section" />
+      <sliceName value="MedikationFreitext" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:MedikationFreitext.code">
+      <path value="Composition.section.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:MedikationFreitext.code.coding">
+      <path value="Composition.section.code.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:MedikationFreitext.code.coding.system">
+      <path value="Composition.section.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:MedikationFreitext.code.coding.code">
+      <path value="Composition.section.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="MDFX" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:MedikationFreitext.code.coding.display">
+      <path value="Composition.section.code.coding.display" />
+      <fixedString value="Medikation - Freitext" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:MedikationFreitext.entry">
+      <path value="Composition.section.entry" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationFreitext" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:MedikationFreitext.entry.reference">
+      <path value="Composition.section.entry.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:WeiterbehandelnderArzt">
       <path value="Composition.section" />
