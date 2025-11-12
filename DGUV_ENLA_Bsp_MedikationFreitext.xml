@@ -31,4 +31,9 @@
 
     <!-- Medication Status-->
     <status value="active"/>
+
+    <!-- Form Freitext-->
+    <form>
+        <text value="freitext" />
+    </form> 
 </Medication> 
