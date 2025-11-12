@@ -413,6 +413,78 @@
                     </entry>
                 </section>
                 <section>
+                    <!-- 20 -->
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="MDWS"/>
+                            <display value="Medikation - Wirkstoff"/>
+                        </coding>
+                    </code>    
+                    <entry>
+                        <!-- 
+                            Auswahl des Medikation - Wirkstoff Objektes:
+                            RelativeURL:
+                            urn:uuid:8947dca1-69fd-4184-a55f-8f7f32b0a914
+                        -->                   
+                        <reference value="urn:uuid:8947dca1-69fd-4184-a55f-8f7f32b0a914" />
+                    </entry>
+                </section>
+                <section>
+                    <!-- 21 -->
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="MDRZ"/>
+                            <display value="Medikation - Rezeptur"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <!-- 
+                            Auswahl des Medikation - Rezeptur Objektes:
+                            RelativeURL:
+                            urn:uuid:347b8239-6420-4b3a-a873-6b62e1fa1b0f
+                        -->                    
+                        <reference value="urn:uuid:347b8239-6420-4b3a-a873-6b62e1fa1b0f" />
+                    </entry>
+                </section>
+                <section>
+                    <!-- 22 -->
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="MDAM"/>
+                            <display value="Medikation - Arzneimittel"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <!-- 
+                            Auswahl des Medikation - Arzneimittel Objektes:
+                            RelativeURL:
+                            urn:uuid:4b28cbef-80e7-4838-b15b-b2d9dfc4461b
+                        -->                    
+                        <reference value="urn:uuid:4b28cbef-80e7-4838-b15b-b2d9dfc4461b" />
+                    </entry>
+                </section>
+                <section>
+                    <!-- 23 -->
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="MDFX"/>
+                            <display value="Medikation - Freitext"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <!-- 
+                            Auswahl des Medikation - Freitext Objektes:
+                            RelativeURL:
+                            urn:uuid:4c88e3c8-821d-40eb-87fa-1e129b3ccace
+                        -->                    
+                        <reference value="urn:uuid:4c88e3c8-821d-40eb-87fa-1e129b3ccace" />
+                    </entry>
+                </section>                                                
+                <section>
                     <!-- 23 -->
                     <code>
                         <coding>
@@ -1584,6 +1656,182 @@
             </MedicationStatement>
         </resource>
     </entry>
+    <entry>
+        <!-- 20 -->
+        <fullUrl value="urn:uuid:8947dca1-69fd-4184-a55f-8f7f32b0a914" />
+        <resource>
+            <Medication xmlns="http://hl7.org/fhir">
+                <id value="8947dca1-69fd-4184-a55f-8f7f32b0a914" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationWirkstoff" />
+                </meta>
+                <code>
+                    <coding>
+                        <system value="http://fhir.de/CodeSystem/ifa/pzn" />
+                        <code value="98765432" />
+                    </coding>
+                    <text  value="ein beliebiger text" />
+                </code>
+                <status value="active"/>
+                <ingredient>
+                    <itemCodeableConcept>
+                        <coding>
+                            <system value="http://fhir.de/CodeSystem/ifa/pzn"/>
+                            <version value="1.0"/>
+                            <code value="98765432"/>
+                            <display value="Paracetamol"/>
+                        </coding>
+                    </itemCodeableConcept>
+                </ingredient>
+                <batch>
+                    <lotNumber value="1234"/>
+                </batch>
+            </Medication>
+        </resource>
+    </entry>
+    <entry>
+        <!-- 21 -->
+        <fullUrl value="urn:uuid:347b8239-6420-4b3a-a873-6b62e1fa1b0f" />
+        <resource>
+            <Medication xmlns="http://hl7.org/fhir">
+                <id value="example-rezeptur-1"/>
+                <meta>
+                    <!-- must be exactly this profile URL -->
+                    <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationRezeptur"/>
+                </meta>
+
+                <!-- Text narrative -->
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                    <p><b>Rezeptur</b>: Salicyl-Vaselin 5% (5 g Salicylsäure / 95 g Vaselin auf 100 g)</p>
+                    </div>
+                </text>
+
+                <code>
+                    <coding>
+                        <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type"/>
+                        <code value="rezeptur"/>
+                    </coding>
+                    <text value="Rezeptur: Salicyl-Vaselin 5 %"/>
+                </code>
+
+                <!-- Medication status -->
+                <status value="active"/>
+
+
+                <!-- -->
+                <ingredient>
+                    <itemCodeableConcept>
+                        <text value="Acidum salicylicum (Salicylsäure)"/>
+                    </itemCodeableConcept>
+                    <strength>
+                    <numerator>
+                        <value value="5"/>
+                        <unit value="g"/>
+                        <system value="http://unitsofmeasure.org"/>
+                        <code value="g"/>
+                    </numerator>
+                    <denominator>
+                        <value value="100"/>
+                        <unit value="g"/>
+                        <system value="http://unitsofmeasure.org"/>
+                        <code value="g"/>
+                    </denominator>
+                    </strength>
+                </ingredient>
+
+                <ingredient>
+                    <itemCodeableConcept>
+                        <text value="Vaselinum album"/>
+                    </itemCodeableConcept>
+                    <strength>
+                    <numerator>
+                        <value value="95"/>
+                        <unit value="g"/>
+                        <system value="http://unitsofmeasure.org"/>
+                        <code value="g"/>
+                    </numerator>
+                    <denominator>
+                        <value value="100"/>
+                        <unit value="g"/>
+                        <system value="http://unitsofmeasure.org"/>
+                        <code value="g"/>
+                    </denominator>
+                    </strength>
+                </ingredient>
+            </Medication>
+        </resource>
+    </entry>
+    <entry>
+        <!-- 22 -->
+        <fullUrl value="urn:uuid:4b28cbef-80e7-4838-b15b-b2d9dfc4461b" />
+        <resource>
+            <Medication xmlns="http://hl7.org/fhir">
+                <id value="4b28cbef-80e7-4838-b15b-b2d9dfc4461b" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationArzneimittel" />
+                </meta>
+
+                <!-- Medikament in codierter Form oder ggf. als Freitext -->
+                <code>
+                    <coding>
+                        <system value="http://fhir.de/CodeSystem/ifa/pzn" />
+                        <code value="04823572" />
+                    </coding>
+                    <text value="ACC long 600mg" />
+                </code>
+
+                <!-- Medication status -->
+                <status value="active"/>
+
+                <!-- Hersteller des Medikaments -->
+                <manufacturer>
+                    <display value="Hexal AG"/>     
+                </manufacturer>
+
+                <!-- Abgabeform -->
+                <form>
+                    <coding>
+                    <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM" />
+                    <version value="1.15"/>
+                    <code value="BTA"/>
+                    <display value="Brausetabletten"/>
+                    </coding>
+                </form>
+
+                <!-- Angaben zur Charge -->
+                <batch>
+                    <lotNumber value="1234"/>
+                </batch>
+            </Medication>
+        </resource>
+    </entry>
+    <entry>
+        <!-- 23 -->
+        <fullUrl value="urn:uuid:4c88e3c8-821d-40eb-87fa-1e129b3ccace" />
+        <resource>
+            <Medication xmlns="http://hl7.org/fhir">
+                <id value="4c88e3c8-821d-40eb-87fa-1e129b3ccace" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationFreitext" />
+                </meta>
+                
+                <!-- CodeableConcept mit (Frei-)textfeld -->
+                <code>
+                    <coding>
+                        <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type"/>
+                        <code value="freitext"/>
+                        <display value="Freitext-Medikation"/>
+                    </coding>
+                    <text value="Hier steht ein Freitext zur Medikation"/>
+                </code>
+
+                <!-- Medication Status-->
+                <status value="active"/>
+            </Medication> 
+        </resource>
+    </entry>            
     <entry>
         <!-- 24 -->
         <fullUrl value="urn:uuid:ebd25191-272a-4a2f-9b52-8733963b32b8" />
