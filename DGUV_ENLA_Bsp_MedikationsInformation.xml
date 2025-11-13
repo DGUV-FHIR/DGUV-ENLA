@@ -22,7 +22,7 @@
 
     <!-- Referenz zum Medikation Arzneimittel -->
     <medicationReference>
-        <reference value="Medication/MedikationArzneimittel"/>     
+        <reference value="Medication/MedikationArzneimittel"/>
     </medicationReference>
 
     <!-- Referenz zur Versicherten Person -->
