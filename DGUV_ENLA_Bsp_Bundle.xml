@@ -405,9 +405,9 @@
                     </code> 
                     <entry>
                         <!-- 
-                            Auswahl des Medikationsinformation Objektes:
-                            RelativeURL:
-                            urn:uuid:cf72d600-1c4d-44bf-a8b3-ec100f1a4947
+                                Auswahl des Medikationsinformation Objektes:
+                                RelativeURL:
+                                urn:uuid:cf72d600-1c4d-44bf-a8b3-ec100f1a4947
                         -->                    
                         <reference value="urn:uuid:cf72d600-1c4d-44bf-a8b3-ec100f1a4947" />
                     </entry>
@@ -466,8 +466,8 @@
                         <reference value="urn:uuid:4b28cbef-80e7-4838-b15b-b2d9dfc4461b" />
                     </entry>
                 </section>
-                                <section>
-                    <!-- 35 -->
+                <section>
+                    <!-- 23 -->
                     <code>
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
@@ -483,7 +483,7 @@
                         -->                    
                         <reference value="urn:uuid:4c88e3c8-821d-40eb-87fa-1e129b3ccace" />
                     </entry>
-                </section>
+                </section>                                                
                 <section>
                     <!-- 23 -->
                     <code>
@@ -1610,14 +1610,14 @@
 
                 <!-- Referenz zum Medikation Arzneimittel -->
                 <medicationReference>
-                    <reference value="urn:uuid:8947dca1-69fd-4184-a55f-8f7f32b0a914"/>     
+                    <reference value="urn:uuid:4b28cbef-80e7-4838-b15b-b2d9dfc4461b"/>     
                 </medicationReference>
 
                 <!-- Referenz zur Versicherten Person -->
                 <subject>
                     <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba"/>     
                 </subject>
-                
+                    
                 <!-- Dosage zum Medikation Arzneimittel -->
                 <dosage>
                     <text value="Strukturierte Dosierung" />
@@ -1637,10 +1637,10 @@
                     </timing>
                     <route>
                         <coding>
-                                <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_Route_of_Administration_German" />
-                                <version value="1.0.0" />
-                                <code value="oral" />
-                                <display value="oral" />
+                            <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_Route_of_Administration_German" />
+                            <version value="1.0.0" />
+                            <code value="oral" />
+                            <display value="oral" />
                         </coding>
                     </route>
 
@@ -1831,7 +1831,7 @@
                 <status value="active"/>
             </Medication> 
         </resource>
-    </entry>
+    </entry>            
     <entry>
         <!-- 24 -->
         <fullUrl value="urn:uuid:ebd25191-272a-4a2f-9b52-8733963b32b8" />
