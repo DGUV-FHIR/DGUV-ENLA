@@ -28,10 +28,7 @@
       <path value="Observation.meta.profile" />
       <min value="1" />
       <max value="1" />
-      <type>
-        <code value="canonical" />
-        <targetProfile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-BesondereMassnahmen" />
-      </type>
+      <fixedCanonical value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-BesondereMassnahmen" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.status">
