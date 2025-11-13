@@ -377,6 +377,40 @@
       </type>
       <mustSupport value="true" />
     </element>
+    <element id="Bundle.entry:MedikationWirkstoff.resource.code.coding">
+      <path value="Bundle.entry.resource.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Bundle.entry:MedikationWirkstoff.resource.form.coding">
+      <path value="Bundle.entry.resource.form.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Bundle.entry:MedikationWirkstoff.resource.ingredient.item[x]:itemCodeableConcept">
+      <path value="Bundle.entry.resource.ingredient.item[x]" />
+      <sliceName value="itemCodeableConcept" />
+    </element>
+    <element id="Bundle.entry:MedikationWirkstoff.resource.ingredient.item[x]:itemCodeableConcept.coding">
+      <path value="Bundle.entry.resource.ingredient.item[x].coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
     <element id="Bundle.entry:MedikationRezeptur">
       <path value="Bundle.entry" />
       <sliceName value="MedikationRezeptur" />
@@ -391,6 +425,41 @@
       </type>
       <mustSupport value="true" />
     </element>
+    <element id="Bundle.entry:MedikationRezeptur.resource.code.coding">
+      <path value="Bundle.entry.resource.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Bundle.entry:MedikationRezeptur.resource.form.coding">
+      <path value="Bundle.entry.resource.form.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Bundle.entry:MedikationRezeptur.resource.ingredient.item[x]:itemCodeableConcept">
+      <path value="Bundle.entry.resource.ingredient.item[x]" />
+      <sliceName value="itemCodeableConcept" />
+    </element>
+    <element id="Bundle.entry:MedikationRezeptur.resource.ingredient.item[x]:itemCodeableConcept.coding">
+      <path value="Bundle.entry.resource.ingredient.item[x].coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
     <element id="Bundle.entry:MedikationArzneimittel">
       <path value="Bundle.entry" />
       <sliceName value="MedikationArzneimittel" />
@@ -398,12 +467,45 @@
     </element>
     <element id="Bundle.entry:MedikationArzneimittel.resource">
       <path value="Bundle.entry.resource" />
-      <min value="1" />
       <type>
         <code value="Resource" />
         <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationArzneimittel" />
       </type>
-      <mustSupport value="true" />
+    </element>
+    <element id="Bundle.entry:MedikationArzneimittel.resource.code.coding">
+      <path value="Bundle.entry.resource.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Bundle.entry:MedikationArzneimittel.resource.form.coding">
+      <path value="Bundle.entry.resource.form.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Bundle.entry:MedikationArzneimittel.resource.ingredient.item[x]:itemCodeableConcept">
+      <path value="Bundle.entry.resource.ingredient.item[x]" />
+      <sliceName value="itemCodeableConcept" />
+    </element>
+    <element id="Bundle.entry:MedikationArzneimittel.resource.ingredient.item[x]:itemCodeableConcept.coding">
+      <path value="Bundle.entry.resource.ingredient.item[x].coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
     </element>
     <element id="Bundle.entry:MedikationFreitext">
       <path value="Bundle.entry" />
@@ -412,10 +514,46 @@
     </element>
     <element id="Bundle.entry:MedikationFreitext.resource">
       <path value="Bundle.entry.resource" />
+      <min value="1" />
       <type>
         <code value="Resource" />
         <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationFreitext" />
       </type>
+    </element>
+    <element id="Bundle.entry:MedikationFreitext.resource.code.coding">
+      <path value="Bundle.entry.resource.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Bundle.entry:MedikationFreitext.resource.form.coding">
+      <path value="Bundle.entry.resource.form.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Bundle.entry:MedikationFreitext.resource.ingredient.item[x]:itemCodeableConcept">
+      <path value="Bundle.entry.resource.ingredient.item[x]" />
+      <sliceName value="itemCodeableConcept" />
+    </element>
+    <element id="Bundle.entry:MedikationFreitext.resource.ingredient.item[x]:itemCodeableConcept.coding">
+      <path value="Bundle.entry.resource.ingredient.item[x].coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
     </element>
     <element id="Bundle.entry:WeiterbehandelnderArzt">
       <path value="Bundle.entry" />
