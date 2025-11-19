@@ -51,7 +51,7 @@
       <constraint>
         <key value="dguv-famvers-2" />
         <severity value="error" />
-        <human value="Wenn Familienversichert nicht vorliegt , darf kein Eintrag  in Mitgliedsname vorliegen." />
+        <human value="Wenn Familienversichert nicht vorliegt , darf kein Eintrag in Mitgliedsname vorliegen." />
         <expression value="(extension('Familienversichert').valueBoolean = false)  implies (extension('Mitgliedsname').exists()).not()" />
       </constraint>
       <mustSupport value="true" />
