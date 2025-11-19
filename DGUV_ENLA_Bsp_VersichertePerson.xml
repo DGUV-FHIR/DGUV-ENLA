@@ -16,13 +16,15 @@
   <id value="DGUV-ENLA-Bsp-VersichertePerson"/>
   <meta>
     <profile value="http://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson"/>
-  </meta>   
+  </meta>
+
   <text>
     <status value="generated"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
       <h1>Hier finden Sie ein Beispiel einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
     </div>
   </text>
+  
   <extension url="http://hl7.org/fhir/StructureDefinition/patient-nationality">
   <!--extension url="http://hl7.org/fhir/ValueSet/iso3166-1-2|4.0.1" -->      
     <extension url="code" >
@@ -69,9 +71,9 @@
   </telecom>
 
   <gender value="male"/>
-  
+
   <birthDate value="2004-11-12"/>
-  
+
   <address>
     <type value="both" />
     <line value="Musterweg 1">
