@@ -41,6 +41,9 @@
       </valuePeriod>
     </extension>
   </extension>
+
+  <!-- GKV Identifier -->
+  <!-- Validierung: Constraint wirft einen Fehler, da ein GKV- und ein PKV- Eintrag vorliegt -->
   <identifier>
     <type>
         <coding>
@@ -51,6 +54,8 @@
     <system value="http://fhir.de/sid/gkv/kvid-10" />
     <value value="S123456789" />
   </identifier>
+
+  <!-- PKV Identifier-->
   <identifier>
     <type>
         <coding>
