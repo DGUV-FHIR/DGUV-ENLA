@@ -44,6 +44,8 @@
     </extension>
   </extension>
 
+  <!-- GKV Identifier -->
+  <!-- Validierung: Constraint wirft keinen Fehler, da es nur der GKV Eintrag vorliegt -->
   <identifier>
     <type>
         <coding>
