@@ -18,6 +18,14 @@
       <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationWirkstoff" />
   </meta>
 
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h1>Hier finden Sie ein Beispiel der MedikationsInformation einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+    </div>
+  </text>
+
+
   <code>
     <coding>
         <system value="http://fhir.de/CodeSystem/ifa/pzn" />

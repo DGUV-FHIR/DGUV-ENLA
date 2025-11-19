@@ -10,6 +10,13 @@
         <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Heilmittel" />
     </meta>
 
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <h1>Hier finden Sie ein Beispiel der Heilmittel einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+        </div>
+    </text>
+
     <!-- Observation status-->
     <status value="final"/>
 
@@ -40,7 +47,7 @@
 
       <!-- Behandelnde(-r) Ärtztin/Arzt-->
     <performer>
-        <reference value="urn:uuid:53192032-6365-4659-8cc2-f9a7df67a466"/>
+        <reference value="Leistungsarzt/123456"/>
     </performer>
 
     <!-- verordnete Heilmittel-->
@@ -50,7 +57,7 @@
                 <valueBoolean value="true"/>
             </extension>
             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Heilmittel" />
-            <code value="PHYSIO" />
+                <code value="PHYSIO" />
             <display value="Physiotherapie" />
         </coding>
     </valueCodeableConcept>

@@ -17,6 +17,14 @@
         <profile value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringer"/> 
     </meta>
 
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <h1>Hier finden Sie ein Beispiel des Leistungserbringers einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+        </div>
+    </text>
+
+
     <!--  Lebenslange Arztnummer-->
     <identifier> 
         <type>
