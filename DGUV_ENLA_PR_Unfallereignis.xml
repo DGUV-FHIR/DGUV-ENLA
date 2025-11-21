@@ -83,31 +83,6 @@
       <path value="Observation.status" />
       <mustSupport value="true" />
     </element>
-    <element id="Observation.code">
-      <path value="Observation.code" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.code:SAV-VAV">
-      <path value="Observation.code" />
-      <sliceName value="SAV-VAV" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.code:SAV-VAV.coding">
-      <path value="Observation.code.coding" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.code:SAV-VAV.coding.system">
-      <path value="Observation.code.coding.system" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.code:SAV-VAV.coding.code">
-      <path value="Observation.code.coding.code" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.code:SAV-VAV.coding.display">
-      <path value="Observation.code.coding.display" />
-      <mustSupport value="true" />
-    </element>
     <element id="Observation.code:DAV">
       <path value="Observation.code" />
       <sliceName value="DAV" />
@@ -115,18 +90,43 @@
     </element>
     <element id="Observation.code:DAV.coding">
       <path value="Observation.code.coding" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Observation.code:DAV.coding.system">
+    <element id="Observation.code:DAV.coding:DAV">
+      <path value="Observation.code.coding" />
+      <sliceName value="DAV" />
+      <short value="Die vorliegende Verletzung fällt unter DAV." />
+      <definition value="Die vorliegende Verletzung fällt unter das Durchgangsarztverfahren (DAV). Sie fällt nicht unter das Verletzungsartenverfahren (VAV) oder Schwerstverletzenartenverfahren (SAV)." />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.code:DAV.coding:DAV.system">
       <path value="Observation.code.coding.system" />
       <mustSupport value="true" />
     </element>
-    <element id="Observation.code:DAV.coding.code">
+    <element id="Observation.code:DAV.coding:DAV.code">
       <path value="Observation.code.coding.code" />
       <mustSupport value="true" />
     </element>
-    <element id="Observation.code:DAV.coding.display">
+    <element id="Observation.code:DAV.coding:DAV.display">
+      <path value="Observation.code.coding.display" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.code:DAV.coding:SAV-VAV">
+      <path value="Observation.code.coding" />
+      <sliceName value="SAV-VAV" />
+      <short value="Die vorliegende Verletzung fällt unter SAV/VAV." />
+      <definition value="Die vorliegende Verletzung fällt unter das Verletzungsartenverfahren (VAV) oder Schwerstverletzenartenverfahren (SAV)." />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.code:DAV.coding:SAV-VAV.system">
+      <path value="Observation.code.coding.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.code:DAV.coding:SAV-VAV.code">
+      <path value="Observation.code.coding.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.code:DAV.coding:SAV-VAV.display">
       <path value="Observation.code.coding.display" />
       <mustSupport value="true" />
     </element>
