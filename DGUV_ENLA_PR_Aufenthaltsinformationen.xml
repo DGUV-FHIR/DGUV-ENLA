@@ -21,7 +21,7 @@
         <key value="dguv-hospital-2" />
         <severity value="error" />
         <human value="Wenn es sich nicht um eine Folgebehandlung handelt, darf  das Textfeld  keinen Text enthalten!" />
-        <expression value="hospitalization.admitSource.exists() implies hospitalization.admitSourcecoding.all(code = 'FB')" />
+        <expression value="(hospitalization.admitSource.exists() and hospitalization.admitSource.coding.all(code = 'FB')) implies hospitalization.admitSource.text.exists().not()" />
       </constraint>
     </element>
     <element id="Encounter.id">
