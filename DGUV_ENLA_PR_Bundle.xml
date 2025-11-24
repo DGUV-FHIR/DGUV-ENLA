@@ -36,6 +36,26 @@
       <fixedCanonical value="http://fhir.dguv.de/ENLA/Bundle/DGUV-ENLA-PR-Bundle" />
       <mustSupport value="true" />
     </element>
+    <element id="Bundle.identifier">
+      <path value="Bundle.identifier" />
+      <short value="Identifier für das Bundle" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Bundle.identifier.system">
+      <path value="Bundle.identifier.system" />
+      <short value="Kennzeichnung eines DGUV-Entlassberichts" />
+      <min value="1" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/NamingSystem/DGUV-ENLA-NS-Nachrichtenkennung" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Bundle.identifier.value">
+      <path value="Bundle.identifier.value" />
+      <short value="Eindeutiger Identifier für den Entlassbericht zu einem stationären Krankenhausaufenthalt" />
+      <comment value="Für den Value gibt es eine festgeschriebenes Format, dass im ENLA-Implementation-Guide beschrieben wird." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
     <element id="Bundle.type">
       <path value="Bundle.type" />
       <fixedCode value="document" />
