@@ -20,8 +20,8 @@
 
     <identifier>
      <!-- Server Anteil der URL--> 
-        <system value="urn:ietf:rfc:3986"/>
-        <value value="urn:uuid:5d75b64f-a8a1-49b8-8d33-bd16423b3e6e" />
+        <system value="http://fhir.dguv.de/ENLA/NamingSystem/DGUV-ENLA-NS-Nachrichtenkennung"/>
+        <value value="12345" />
     </identifier> 
 
     <!-- Dokumenten Art -->
