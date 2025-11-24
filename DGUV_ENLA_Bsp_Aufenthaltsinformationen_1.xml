@@ -20,9 +20,10 @@
         <admitSource>
             <coding>
                 <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Aufnahmeart" />
-                <code value="EB" />
-                <display value="Erstbehandlung" />
+                <code value="FB" />
+                <display value="Folgebehandlung" />
             </coding>
+            <text value="text" />
         </admitSource>
         <dischargeDisposition>
             <coding>
