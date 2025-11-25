@@ -7,7 +7,7 @@
   <title value="Aufnahmebefunde" />
   <status value="draft" />
   <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
-  <description value="Dieses Profil bildet Aufnahmebefunde ab und enthält Messwerte und einfache Aussagen über einen Patienten, ein Gerät oder einen anderen Gegenstand ." />
+  <description value="Dieses Profil bildet Aufnahmebefunde ab und enthält Messwerte und einfache Aussagen über einen Patienten, ein Gerät oder einen anderen Gegenstand." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />

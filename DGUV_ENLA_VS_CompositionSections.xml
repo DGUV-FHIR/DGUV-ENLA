@@ -5,7 +5,7 @@
   <name value="DGUVENLACompositionSections" />
   <title value="DGUV ENLA Composition Sections" />
   <status value="active" />
-  <description value="Dieses ValueSet definiert die erlaubten Sections innerhalb einer DGUV ENLA Composition ." />
+  <description value="Dieses ValueSet definiert die erlaubten Sections innerhalb einer DGUV ENLA Composition." />
   <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
   <compose>
     <include>

@@ -7,7 +7,7 @@
   <title value="D-Arzt Organisation" />
   <status value="draft" />
   <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
-  <description value="Dieses Profil stellt die Einrichtung dar, der der D-Arzt zugeordnet ist ." />
+  <description value="Dieses Profil stellt die Einrichtung dar, der der D-Arzt zugeordnet ist." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />

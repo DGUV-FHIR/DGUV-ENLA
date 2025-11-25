@@ -7,7 +7,7 @@
   <title value="MedikationFreitext" />
   <status value="draft" />
   <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
-  <description value="Dieses Profil bildet verordnete Medikamente als freitextliche Dokumentation ab ." />
+  <description value="Dieses Profil bildet verordnete Medikamente als freitextliche Dokumentation ab." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />

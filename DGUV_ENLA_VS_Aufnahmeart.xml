@@ -14,7 +14,7 @@
       <value value="https://www.dguv.de" />
     </telecom>
   </contact>
-  <description value="Dieses Valueset enthält die Codes zur Beschreibung der Aufnahmeart ." />
+  <description value="Dieses Valueset enthält die Codes zur Beschreibung der Aufnahmeart." />
   <compose>
     <include>
       <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Aufnahmeart" />

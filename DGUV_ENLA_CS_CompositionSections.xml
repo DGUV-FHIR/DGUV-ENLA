@@ -8,7 +8,7 @@
   <status value="active" />
   <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
   <caseSensitive value="true" />
-  <description value="Dieses CodeSystem enthält die Codes und Displays zur Kennzeichnung und Unterscheidung der die ENLA-Profile enthaltenden section-Slices im Composition-Profil ." />
+  <description value="Dieses CodeSystem enthält die Codes und Displays zur Kennzeichnung und Unterscheidung der die ENLA-Profile enthaltenden section-Slices im Composition-Profil." />
   <content value="complete" />
   <concept>
     <code value="ARUF" />

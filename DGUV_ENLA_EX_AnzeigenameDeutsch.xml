@@ -7,7 +7,7 @@
   <title value="Anzeige in deutscher Sprache (Erweiterung)" />
   <status value="draft" />
   <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
-  <description value="Möglichkeit zur zusätzlichen Ausgabe einer Anzeige in deutscher Sprache ." />
+  <description value="Möglichkeit zur zusätzlichen Ausgabe einer Anzeige in deutscher Sprache" />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
