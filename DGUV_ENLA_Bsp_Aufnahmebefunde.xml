@@ -18,6 +18,13 @@
         <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Aufnahmebefunde" />
     </meta>
 
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <h1>Hier finden Sie ein Beispiel der Aufnahmebefunde einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+        </div>
+    </text> 
+
     <!-- Observation status -->
     <status value="final" />
 
@@ -46,6 +53,12 @@
 
     <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
     <effectiveDateTime value="2025-09-30T09:30:00+02:00"/>
+
+    <!-- Behandelnde(-r) Ärtztin/Arzt-->
+    <performer>
+        <reference value="urn:uuid:53192032-6365-4659-8cc2-f9a7df67a466"/>
+    </performer>
+
 
     <!-- Befund Narrativ -->
     <valueString value="Befundergebnis" />

@@ -18,7 +18,15 @@
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationFreitext" />
     </meta>
-    
+
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <h1>Hier finden Sie ein Beispiel des MedikationFreitextes einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+        </div>
+    </text>
+
+
     <!-- CodeableConcept mit (Frei-)textfeld -->
     <code>
         <coding>
@@ -31,4 +39,9 @@
 
     <!-- Medication Status-->
     <status value="active"/>
+
+    <!-- Form Freitext-->
+    <form>
+        <text value="freitext" />
+    </form> 
 </Medication> 

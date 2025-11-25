@@ -18,6 +18,14 @@
         <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Hilfsmittel" />
     </meta>
 
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <h1>Hier finden Sie ein Beispiel der Hilfsmittel einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+        </div>
+    </text>
+
+
     <!-- Observation status-->
     <status value="final"/>
 
@@ -32,7 +40,7 @@
 
     <!-- Referenz zur versicherten Person-->
     <subject>
-        <reference value="Farad, Rudi/T995030511"/>
+        <reference value="Farad_Rudi/T995030511"/>
     </subject>
 
     <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
@@ -45,6 +53,11 @@
             </coding>
         </code>
     </effectiveTiming>
+
+      <!-- Behandelnde(-r) Ärtztin/Arzt-->
+    <performer>
+        <reference value="urn:uuid:53192032-6365-4659-8cc2-f9a7df67a466"/>
+    </performer>
 
     <!-- verordnete Hilfsmittel-->
     <valueCodeableConcept>  

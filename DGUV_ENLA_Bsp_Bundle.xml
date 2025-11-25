@@ -12,8 +12,7 @@
 
 
 -->
-<Bundle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xmlns="http://hl7.org/fhir">
+<Bundle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://hl7.org/fhir">
     <id value="5d75b64f-a8a1-49b8-8d33-bd16423b3e6e" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Bundle/DGUV-ENLA-PR-Bundle" />
@@ -21,8 +20,8 @@
 
     <identifier>
      <!-- Server Anteil der URL--> 
-        <system value="urn:ietf:rfc:3986"/>
-        <value value="urn:uuid:5d75b64f-a8a1-49b8-8d33-bd16423b3e6e" />
+        <system value="http://fhir.dguv.de/ENLA/NamingSystem/DGUV-ENLA-NS-Nachrichtenkennung"/>
+        <value value="12345" />
     </identifier> 
 
     <!-- Dokumenten Art -->
@@ -40,15 +39,24 @@
                 <id value="c00f7826-5a3e-49aa-b499-3f8c6599bd2b"/> 
                 <meta> 
                     <profile value="http://fhir.dguv.de/ENLA/Composition/DGUV-ENLA-PR-Composition" />
-                </meta> 
+                </meta>
+
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel der Compositionn einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
                 <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-SonstigeBemerkungen">    
                     <valueString value="Die sonstige Bemerkung." />
-                </extension>    
+                </extension>
+
                 <status value="final" />
                 <type>
                     <coding>
                         <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-Formtexte" />
-                        <code value="F 2102" />
+                        <code value="F2102" />
                         <display value="Entlassungsbericht aus stationärer Behandlung (DAV/VAV/SAV)" />
                     </coding>
                 </type>
@@ -405,9 +413,9 @@
                     </code> 
                     <entry>
                         <!-- 
-                            Auswahl des Medikationsinformation Objektes:
-                            RelativeURL:
-                            urn:uuid:cf72d600-1c4d-44bf-a8b3-ec100f1a4947
+                                Auswahl des Medikationsinformation Objektes:
+                                RelativeURL:
+                                urn:uuid:cf72d600-1c4d-44bf-a8b3-ec100f1a4947
                         -->                    
                         <reference value="urn:uuid:cf72d600-1c4d-44bf-a8b3-ec100f1a4947" />
                     </entry>
@@ -466,6 +474,24 @@
                         <reference value="urn:uuid:4b28cbef-80e7-4838-b15b-b2d9dfc4461b" />
                     </entry>
                 </section>
+                <section>
+                    <!-- 23 -->
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
+                            <code value="MDFX"/>
+                            <display value="Medikation - Freitext"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <!-- 
+                            Auswahl des Medikation - Freitext Objektes:
+                            RelativeURL:
+                            urn:uuid:4c88e3c8-821d-40eb-87fa-1e129b3ccace
+                        -->                    
+                        <reference value="urn:uuid:4c88e3c8-821d-40eb-87fa-1e129b3ccace" />
+                    </entry>
+                </section>                                                
                 <section>
                     <!-- 23 -->
                     <code>
@@ -683,24 +709,6 @@
                     </entry>
                 </section>
                 <section>
-                    <!-- 35 -->
-                    <code>
-                        <coding>
-                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
-                            <code value="MDFX"/>
-                            <display value="Medikation - Freitext"/>
-                        </coding>
-                    </code>
-                    <entry>
-                        <!-- 
-                            Auswahl des Medikation - Freitext Objektes:
-                            RelativeURL:
-                            urn:uuid:4c88e3c8-821d-40eb-87fa-1e129b3ccace
-                        -->                    
-                        <reference value="urn:uuid:4c88e3c8-821d-40eb-87fa-1e129b3ccace" />
-                    </entry>
-                </section>
-                <section>
                     <!-- 36 -->
                     <code>
                         <coding>
@@ -736,6 +744,7 @@
                 <h1>Hier finden Sie ein Beispiel einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
                 </div>
             </text>
+
             <extension url="http://hl7.org/fhir/StructureDefinition/patient-nationality">
             <!--extension url="http://hl7.org/fhir/ValueSet/iso3166-1-2|4.0.1" -->      
                 <extension url="code" >
@@ -765,6 +774,7 @@
                 <system value="http://fhir.de/sid/gkv/kvid-10" />
                 <value value="S123456789" />
             </identifier>
+
             <!-- Patient Vor- und Familienname-->
             <name>
                 <use value="official" />
@@ -814,6 +824,14 @@
                 <meta>
                     <profile value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringer"/> 
                 </meta>
+
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel des Leistungserbringers einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
                 <identifier> 
                     <type>
                         <coding>
@@ -851,6 +869,14 @@
                 <meta>
                     <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Unfallversicherungstraeger" />
                 </meta>
+
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                    <h1>Hier finden Sie ein Beispiel der Unfallversicherungstraeger einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
                 <!--   Institutionskennzeichen   -->
                 <identifier>
                     <type>
@@ -893,6 +919,13 @@
                 <meta>
                     <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Krankenkasse" />
                 </meta>
+
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel der Krankenkasse einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>                
 
                 <!--IK-Nummer-->
                 <identifier>
@@ -944,13 +977,13 @@
                     <profile value="http://fhir.dguv.de/ENLA/Coverage/DGUV-ENLA-PR-VersichertenVerhaeltnis" />
                 </meta>
 
-            <!--
-                Notwendige überprüfungen:
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                    <h1>Hier finden Sie ein Beispiel der VersichertenVerhaeltnis einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
 
-                Falls die verunfallte Person Familienversichert ist, muss überprüft werden:
-                    Das Element <extension url="Mitgliedsname"> muss existieren und 
-                    das Element valueString value="Rudi Fahrad" /> muss einen String.length > 0 enthalten.
-            -->
                 <!-- Familienversichert oder nicht-->
                 <extension  url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-Familienversicherung">
                         <extension url="Familienversichert">
@@ -985,6 +1018,14 @@
                 <meta>
                     <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Pflegekasse" />
                 </meta>
+
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel der MedikationsInformation einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
                 <!-- Identifikation der Pflegekasse -->
                 <identifier>
                     <type>
@@ -1035,6 +1076,13 @@
                     <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Unfallbetrieb" />
                 </meta>
 
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel der Unfallbetrieb einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text> 
+
                 <!-- Bezeichnung des Unfallbetriebs-->
                 <name value="Sankt Augustiner 6 Tage Rennen GmbH"/>
 
@@ -1072,6 +1120,14 @@
                 <meta>
                     <profile value="http://fhir.dguv.de/ENLA/Encounter/DGUV-ENLA-PR-Aufenthaltsinformationen" />
                 </meta>
+
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel der Unfallbetrieb einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text> 
+
                 <status value="finished" />
                 <class>
                     <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode" />
@@ -1092,7 +1148,6 @@
                             <code value="FB" />
                             <display value="Folgebehandlung" />
                         </coding>
-                        <text value="text" />
                     </admitSource>
                     <dischargeDisposition>
                         <coding>
@@ -1115,6 +1170,12 @@
                     <profile value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseFreitext"/>
                 </meta>
 
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel des DiagnoseFreitext einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
 
                 <!-- AO Klassifikation-->
                 <extension url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-Frakturklassifikation">
@@ -1148,11 +1209,18 @@
                     <profile value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseStrukturiert"/>
                 </meta>
 
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel der DiagnoseStrukturiert einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
                 <!-- Diagnosecode verpflichtend-->
                 <code>
                     <coding>
                         <system value="http://fhir.de/CodeSystem/bfarm/icd-10-gm"/>
-                        <version value="2019"/>
+                        <version value="2025"/>
                         <code value="S06.0"/>
                         <display value="Gehirnerschütterung"/>
                     </coding>
@@ -1176,6 +1244,13 @@
                     <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Therapie" />
                 </meta>
 
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel des Bundles einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
                 <!-- Observation status-->
                 <status value="final"/>
 
@@ -1191,6 +1266,16 @@
                 <subject>
                     <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
                 </subject>
+
+                <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
+                <effectiveDateTime value="2018-08-24T13:00:00+00:00"/>
+
+                <!-- Performer -->
+                <performer>
+                    <reference value="urn:uuid:93ad5198-d79b-4436-9e1e-aaa69acb2d08"/>
+                </performer>
+
+
                 <!-- OPS-Codes mit Freitext-->
                 <valueString value="neurologisches und inneres konsil" >
                     <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-OPSCode">
@@ -1225,6 +1310,14 @@
                 <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Unfallereignis"/>
             </meta>
 
+            <text>
+                <status value="generated"/>
+                <div xmlns="http://www.w3.org/1999/xhtml">
+                <h1>Hier finden Sie ein Beispiel der Unfallereignis einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                </div>
+            </text> 
+
+
             <!-- Pflegeunfall slicing -->
             <extension url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-Pflegeunfall">
                 <extension url="Pflegeunfall">
@@ -1256,6 +1349,11 @@
 
             <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
             <effectiveDateTime value="2018-08-24T13:00:00+00:00"/>
+
+            <!-- Performer -->
+            <performer>
+                <reference value="urn:uuid:93ad5198-d79b-4436-9e1e-aaa69acb2d08"/>
+            </performer>
 
             <!-- Unfallereignis Komponente -->
             <component>
@@ -1318,6 +1416,13 @@
                     <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Aufnahmebefunde" />
                 </meta>
 
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel der Aufnahmebefunde einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
                 <!-- Observation status -->
                 <status value="final" />
 
@@ -1347,6 +1452,11 @@
                 <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
                 <effectiveDateTime value="2025-09-30T09:30:00+02:00"/>
 
+                <!-- Performer -->
+                <performer>
+                    <reference value="urn:uuid:93ad5198-d79b-4436-9e1e-aaa69acb2d08"/>
+                </performer>
+
                 <!-- Befund Narrativ -->
                 <valueString value="Befundergebnis" />
             </Observation>
@@ -1361,6 +1471,13 @@
                 <meta>
                     <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Behandlungsverlauf" />
                 </meta>
+
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel des Behandlungsverlauf einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
 
                 <!-- Besonderheiten im Behandlungsverlauf -->
                 <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-Besonderheiten">
@@ -1412,6 +1529,13 @@
                     <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Konsiliarbefunde" />
                 </meta>
 
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel der Konsiliarbefunde einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
                 <!-- Observation status -->
                 <status value="final" />
 
@@ -1441,6 +1565,11 @@
                 <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
                 <effectiveDateTime value="2025-09-30T09:30:00+02:00"/>
 
+                <!-- Performer -->
+                <performer>
+                    <reference value="urn:uuid:93ad5198-d79b-4436-9e1e-aaa69acb2d08"/>
+                </performer>
+
                 <!-- Befund Narrativ -->
                 <valueString value="Befundergebnis" />
                 
@@ -1456,6 +1585,13 @@
                 <meta>
                     <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Entlassbefunde" />
                 </meta>
+
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel der Entlassbefunde einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
 
                 <!-- Observation status -->
                 <status value="final" />
@@ -1483,6 +1619,14 @@
                     <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba" />
                 </subject>
 
+                <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
+                <effectiveDateTime value="2025-09-30T09:30:00+02:00"/>
+
+                <!-- Performer -->
+                <performer>
+                    <reference value="urn:uuid:93ad5198-d79b-4436-9e1e-aaa69acb2d08"/>
+                </performer>
+
                 <!-- Freitextliches Befund Ergebnis -->
                 <valueString value="Befundergebnis" />
             </Observation>
@@ -1497,6 +1641,13 @@
             <meta>
                 <profile value="http://fhir.dguv.de/ENLA/DocumentReference/DGUV-ENLA-PR-DokumentenReferenz"/>
             </meta>
+
+            <text>
+                <status value="generated"/>
+                <div xmlns="http://www.w3.org/1999/xhtml">
+                <h1>Hier finden Sie ein Beispiel der DokumentenReferenz einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                </div>
+            </text>
 
             <!-- Dokumenten Referenz status -->
             <status value="current" />
@@ -1533,6 +1684,13 @@
                     <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Therapieempfehlung" />
                 </meta>
 
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel der Therapieempfehlung einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text> 
+
                 <!-- Observation status-->
                 <status value="final"/>
 
@@ -1555,7 +1713,7 @@
 
                 <!-- Behandelnde(-r) Ärtztin/Arzt-->
                 <performer>
-                    <reference value="DArzt/gh45434" />
+                    <reference value="urn:uuid:93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
                 </performer>
 
                 <!-- Freitext für Empfehlungen für weitere therapeutische und diagnostische Maßnahmen -->
@@ -1572,19 +1730,27 @@
                 <meta>
                     <profile value="http://fhir.dguv.de/ENLA/MedicationStatement/DGUV-ENLA-PR-MedikationsInformation" />
                 </meta>
+
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel der MedikationsInformation einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
                 <!-- Medikation status-->
                 <status value="active" />
 
                 <!-- Referenz zum Medikation Arzneimittel -->
                 <medicationReference>
-                    <reference value="urn:uuid:8947dca1-69fd-4184-a55f-8f7f32b0a914"/>     
+                    <reference value="urn:uuid:4b28cbef-80e7-4838-b15b-b2d9dfc4461b"/>     
                 </medicationReference>
 
                 <!-- Referenz zur Versicherten Person -->
                 <subject>
                     <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba"/>     
                 </subject>
-                
+                    
                 <!-- Dosage zum Medikation Arzneimittel -->
                 <dosage>
                     <text value="Strukturierte Dosierung" />
@@ -1592,7 +1758,7 @@
                         <code>
                             <coding>
                                 <system value="http://hl7.org/fhir/event-timing" />
-                                <version value="1.0" />
+                                <version value="4.0.1" />
                                 <code value="MORN" />
                                 <display value="Morning">
                                     <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-AnzeigenameDeutsch">
@@ -1604,10 +1770,10 @@
                     </timing>
                     <route>
                         <coding>
-                                <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_Route_of_Administration_German" />
-                                <version value="1.0.0" />
-                                <code value="oral" />
-                                <display value="oral" />
+                            <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_Route_of_Administration_German" />
+                            <version value="1.0.0" />
+                            <code value="oral" />
+                            <display value="oral" />
                         </coding>
                     </route>
 
@@ -1632,6 +1798,12 @@
                 <meta>
                     <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationWirkstoff" />
                 </meta>
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                    <h1>Hier finden Sie ein Beispiel der MedikationsWirkstoff einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
                 <code>
                     <coding>
                         <system value="http://fhir.de/CodeSystem/ifa/pzn" />
@@ -1740,6 +1912,13 @@
                     <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationArzneimittel" />
                 </meta>
 
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel der MedikationArzneimittel einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
                 <!-- Medikament in codierter Form oder ggf. als Freitext -->
                 <code>
                     <coding>
@@ -1784,6 +1963,13 @@
                     <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationFreitext" />
                 </meta>
                 
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel des MedikationFreitextes einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
                 <!-- CodeableConcept mit (Frei-)textfeld -->
                 <code>
                     <coding>
@@ -1798,7 +1984,7 @@
                 <status value="active"/>
             </Medication> 
         </resource>
-    </entry>
+    </entry>            
     <entry>
         <!-- 24 -->
         <fullUrl value="urn:uuid:ebd25191-272a-4a2f-9b52-8733963b32b8" />
@@ -1808,6 +1994,13 @@
                 <meta>
                     <profile value="http://fhir.dguv.de/ENLA/PractitionerRole/DGUV-ENLA-PR-WeiterbehandelnderArzt" />
                 </meta>
+
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                    <h1>Hier finden Sie ein Beispiel der WeiterbehandelnderArzt einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
 
                 <!-- Behandelnde(-r) Ärtztin/Arzt-->
                 <practitioner>
@@ -1850,6 +2043,14 @@
                 <meta>
                     <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-WeiterbehandelndeOrganisation" />
                 </meta>
+
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                    <h1>Hier finden Sie ein Beispiel der WeiterbehandelndeOrganisation einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
                 <identifier>
                     <type>
                         <coding>
@@ -1905,6 +2106,13 @@
                 <meta>
                     <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-RehaMassnahmen" />
                 </meta>
+
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel der RehaMassnahmen einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
 
                 <!-- Observation status -->
                 <status value="final"/>
@@ -1963,6 +2171,13 @@
                     <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Heilmittel" />
                 </meta>
 
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel der Heilmittel einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
                 <!-- Observation status-->
                 <status value="final"/>
 
@@ -1991,6 +2206,11 @@
                     </code>
                 </effectiveTiming>
 
+                <!-- Behandelnde(-r) Ärtztin/Arzt -->
+                <performer>
+                    <reference value="urn:uuid:93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
+                </performer>
+
                 <!-- verordnete Heilmittel-->
                 <valueCodeableConcept>  
                     <coding>
@@ -2014,6 +2234,13 @@
                 <meta>
                     <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Hilfsmittel" />
                 </meta>
+
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel der Hilfsmittel einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
 
                 <!-- Observation status-->
                 <status value="final"/>
@@ -2043,6 +2270,11 @@
                     </code>
                 </effectiveTiming>
 
+                <!-- Behandelnde(-r) Ärtztin/Arzt -->
+                <performer>
+                    <reference value="urn:uuid:93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
+                </performer>
+
                 <!-- verordnete Hilfsmittel-->
                 <valueCodeableConcept>  
                     <coding>
@@ -2066,6 +2298,13 @@
                 <meta>
                     <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-BesondereMassnahmen" />
                 </meta>
+
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel der BesondereMassnahmen einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
 
                 <!-- Observation status -->
                 <status value="final"/>
@@ -2114,6 +2353,13 @@
                 <meta>
                     <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Arbeitsunfaehigkeit" />
                 </meta>
+
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                    <h1>Hier finden Sie ein Beispiel der Arbeitsunfähigkeit einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text> 
 
                 <!-- Observation status -->
                 <status value="final"/>
@@ -2181,6 +2427,13 @@
                     <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-PrognoseWiederaufnahmeTaetigkeit" />
                 </meta>
 
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel der PrognoseWiederaufnahmeTaetigkeit einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
                 <!-- Observation status -->
                 <status value="final"/>
 
@@ -2226,9 +2479,15 @@
                     <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-stufenweiseWiedereingliederung" />
                 </meta>
 
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel der stufenweiseWiedereingliederung einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
                 <!-- Observation status -->
                 <status value="final"/>
-
 
                 <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
                 <code>
@@ -2273,6 +2532,13 @@
                     <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Datenschutz" />
                 </meta>
 
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel des Datenschutzes einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
                 <!-- Observation status -->
                 <status value="final"/>
 
@@ -2290,9 +2556,12 @@
                     <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
                 </subject>
 
+                <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
+                <effectiveDateTime value="2025-09-30T09:30:00+02:00"/>
+
                 <!-- Behandelnde(-r) Ärtztin/Arzt-->
                 <performer>
-                    <reference value="urn:uuid:93ad5198-d79b-4436-9e1e-aaa69acb2d08"/>
+                    <reference value="urn:uuid:53192032-6365-4659-8cc2-f9a7df67a466"/>
                 </performer>
 
                 <!-- Kennzeichen bzgl. Datenschutzhinweisgebung  -->
@@ -2309,6 +2578,13 @@
             <meta>
                 <profile value="http://fhir.dguv.de/ENLA/PractitionerRole/DGUV-ENLA-PR-DArzt" />
             </meta>
+
+            <text>
+                <status value="generated"/>
+                <div xmlns="http://www.w3.org/1999/xhtml">
+                    <h1>Hier finden Sie ein Beispiel des DArztes einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                </div>
+            </text>
 
             <!-- Behandelnde(-r) Ärtztin/Arzt--> 
             <practitioner>
@@ -2352,6 +2628,13 @@
                 <meta>
                     <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-DArztOrganisation" />
                 </meta>
+
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel der DArztOrganisation einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
 
                 <!-- Identifikation DArzt Organisation -->
                 <identifier>
@@ -2431,6 +2714,13 @@
                     <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-BehandelndeEinrichtung" />
                 </meta>
 
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel der BehandelndeEinrichtung einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>   
+
                 <!-- Identifizierung der behandelnde Einrichtung-->
                 <identifier>
                     <type>
@@ -2448,7 +2738,7 @@
                 <type>  
                     <coding>
                         <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel" />
-                        <version value="1.5.0" />
+                        <version value="1.5.4" />
                         <code value="0100" />
                         <display value="Innere Medizin" />
                     </coding>

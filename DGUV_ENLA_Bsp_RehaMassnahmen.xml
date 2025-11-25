@@ -18,6 +18,14 @@
         <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-RehaMassnahmen" />
     </meta>
 
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <h1>Hier finden Sie ein Beispiel der RehaMassnahmen einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+        </div>
+    </text>
+
+
     <!-- Observation status -->
     <status value="final"/>
 
@@ -32,7 +40,7 @@
 
     <!-- Referenz Versicherte Person -->
     <subject>
-        <reference value="Farad, Rudi/T995030511"/>
+        <reference value="Farad,Rudi/T995030511"/>
     </subject>
 
     <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->

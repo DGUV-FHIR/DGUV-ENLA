@@ -1,12 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Author: 
-    Datum:  
+    Author: Friedhelm Matten
+    Datum:  19.11.2025
 
-    Die vorliegende Beispiel Datei .... dient der Validierung 
-    der Datenaufnahme zu dem ......
+    Die vorliegende Beispiel Datei dient der Validierung 
+    der nicht Auslösung des Constraint dguv-pflegeunfall-2 in
+    dem Fall, dass die Regel nicht eingehalten wird!
     
-    Zu beachten ist dabei ...
+    Da
+
+      <extension url="Pflegeunfall">
+        <valueBoolean value="false"/>
+      </extension>
+
+    darf die Referenz
+
+      <valueReference>
+            <reference value="Pflegekasse/123" />
+      </valueReference>
+
+    nicht auftreten.
+
 
     Durchzuführende Massnahmen:
 
@@ -17,6 +31,14 @@
   <meta>
     <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Unfallereignis"/>
   </meta>
+
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h1>Hier finden Sie ein Beispiel der Unfallereignis einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+    </div>
+  </text> 
+
 
   <!-- Pflegeunfall slicing -->
   <extension url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-Pflegeunfall">
@@ -49,6 +71,12 @@
 
   <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
   <effectiveDateTime value="2018-08-24T13:00:00+00:00"/>
+
+
+  <!-- Behandelnde(-r) Ärtztin/Arzt-->
+  <performer>
+    <reference value="urn:uuid:53192032-6365-4659-8cc2-f9a7df67a466"/>
+  </performer>
 
   <!-- Unfallereignis Komponente -->
   <component>
