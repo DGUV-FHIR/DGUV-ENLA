@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="DGUV-ENLA-EX-OPSCode" />
   <url value="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-OPSCode" />
-  <version value="0.0.2" />
+  <version value="1.0" />
   <name value="DGUV_ENLA_EX_OPSCode" />
   <title value="OPS-Code (Erweiterung)" />
   <status value="draft" />

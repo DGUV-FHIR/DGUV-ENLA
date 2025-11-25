@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://fhir.dguv.de/ENLA/Encounter/DGUV-ENLA-PR-Aufenthaltsinformationen" />
-  <version value="0.0.2" />
+  <version value="1.0" />
   <name value="DGUV_ENLA_PR_Aufenthaltsinformationen" />
   <title value="Aufenthaltsinformationen" />
   <status value="draft" />

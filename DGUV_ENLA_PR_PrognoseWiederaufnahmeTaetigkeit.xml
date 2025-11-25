@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="DGUV-ENLA-PR-PrognoseWiederaufnahmeTaetigkeit" />
   <url value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-PrognoseWiederaufnahmeTaetigkeit" />
-  <version value="0.0.2" />
+  <version value="1.0" />
   <name value="DGUV_ENLA_PR_PrognoseWiederaufnahmeTaetigkeit" />
   <title value="Prognose Tätigkeitswiederaufnahme" />
   <status value="draft" />

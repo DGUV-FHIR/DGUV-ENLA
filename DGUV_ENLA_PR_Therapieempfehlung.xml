@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="DGUV-ENLA-PR-Therapieempfehlung" />
   <url value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Therapieempfehlung" />
-  <version value="0.0.2" />
+  <version value="1.0" />
   <name value="DGUV_ENLA_PR_Therapieempfehlung" />
   <title value="Therapieempfehlung" />
   <status value="draft" />
