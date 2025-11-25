@@ -7,7 +7,7 @@
   <title value="Leistungserbringer" />
   <status value="draft" />
   <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
-  <description value="Dieses Profil bildet eine Person ab, die formell für die Erbringung von Gesundheitsdienstleistungen oder verwandten Dienstleistungen verantwortlich ist." />
+  <description value="Dieses Profil bildet eine Person ab, die formell für die Erbringung von Gesundheitsdienstleistungen oder verwandten Dienstleistungen verantwortlich ist ." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />

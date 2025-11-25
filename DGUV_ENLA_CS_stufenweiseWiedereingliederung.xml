@@ -14,7 +14,7 @@
       <value value="https://www.dguv.de" />
     </telecom>
   </contact>
-  <description value="Dieses CodeSystem enthält Codes und Displays zur Beschreibung der Erfordernis einer stufenweisen Wiedereingliederung." />
+  <description value="Dieses CodeSystem enthält Codes und Displays zur Beschreibung der Erfordernis einer stufenweisen Wiedereingliederung ." />
   <content value="complete" />
   <concept>
     <code value="Ja" />

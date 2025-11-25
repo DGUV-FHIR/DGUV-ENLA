@@ -7,7 +7,7 @@
   <title value="Versicherte Person" />
   <status value="draft" />
   <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
-  <description value="Dieses Profil beschreibt die versicherte Person." />
+  <description value="Dieses Profil beschreibt die versicherte Person ." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -101,7 +101,6 @@
     <element id="Patient.identifier:VersichertenId">
       <path value="Patient.identifier" />
       <sliceName value="VersichertenId" />
-      <comment value="Die als 'KVZ10' kodierte Versichertennummer ist der 10-stellige, unveränderbare Teil der Versichertennummer. Er gilt für alle Krankenversichertennummern, unabhängig davon, ob es sich um GKV, PKV oder Sonderkostenträger handelt." />
       <mustSupport value="true" />
     </element>
     <element id="Patient.identifier:VersichertenId.type">

@@ -14,7 +14,7 @@
       <value value="https://www.dguv.de" />
     </telecom>
   </contact>
-  <description value="Dieses CodeSystem enthält Codes und Displays zur Einschätzung der Arbeitsunfaehigkeit der versicherten Person durch den behandelnden Arzt." />
+  <description value="Dieses CodeSystem enthält Codes und Displays zur Einschätzung der Arbeitsunfaehigkeit der versicherten Person durch den behandelnden Arzt ." />
   <content value="complete" />
   <concept>
     <code value="AF" />

@@ -7,7 +7,7 @@
   <title value="Behandlungsverlauf" />
   <status value="draft" />
   <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
-  <description value="Behandlungsverlauf, inkl. Besonderheiten, die während der Behandlung aufgetreten sind" />
+  <description value="Behandlungsverlauf, inkl. Besonderheiten, die während der Behandlung aufgetreten sind ." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />

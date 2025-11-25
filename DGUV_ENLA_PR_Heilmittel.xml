@@ -7,7 +7,7 @@
   <title value="Heilmittel" />
   <status value="draft" />
   <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
-  <description value="Dieses Profil bildet die erforderlichen Heilmittel ab." />
+  <description value="Dieses Profil bildet die erforderlichen Heilmittel ab ." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -80,31 +80,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
-        <map value="n/a" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
-        <map value="The target of a resource reference is a RIM entry point (Act, Role, or Entity)" />
-      </mapping>
-      <mapping>
-        <identity value="workflow" />
-        <map value="Event.subject" />
-      </mapping>
-      <mapping>
-        <identity value="w5" />
-        <map value="FiveWs.subject[x]" />
-      </mapping>
-      <mapping>
-        <identity value="v2" />
-        <map value="PID-3" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
         <map value="participation[typeCode=RTGT]" />
-      </mapping>
-      <mapping>
-        <identity value="w5" />
-        <map value="FiveWs.subject" />
       </mapping>
       <mapping>
         <identity value="rim" />

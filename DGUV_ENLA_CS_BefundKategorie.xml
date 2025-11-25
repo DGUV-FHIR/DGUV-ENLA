@@ -14,7 +14,7 @@
       <value value="https://www.dguv.de" />
     </telecom>
   </contact>
-  <description value="Dieses CodeSystem enthält Codes zur Beschreibung der Befundkategorien." />
+  <description value="Dieses CodeSystem enthält Codes zur Beschreibung der Befundkategorien ." />
   <content value="complete" />
   <concept>
     <code value="sozialanamnese" />

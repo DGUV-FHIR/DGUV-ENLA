@@ -14,7 +14,7 @@
       <value value="https://www.dguv.de" />
     </telecom>
   </contact>
-  <description value="Dieses Valueset enthaelt die Codes zur Beschreibung der Startzeitpunkte der Massnahmen." />
+  <description value="Dieses Valueset enthaelt die Codes zur Beschreibung der Startzeitpunkte der Massnahmen ." />
   <compose>
     <include>
       <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-MassnahmenZeitpunkt" />

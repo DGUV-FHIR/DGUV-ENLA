@@ -7,7 +7,7 @@
   <title value="RehaMaßnahmen" />
   <status value="draft" />
   <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
-  <description value="Dieses Profil beschreibt die Erfordernis von Reha-Maßnahmen (z. B. Physiotherapie, EAP, ABMR, BGSW) für die versicherte Person zum Zeitpunkt der Entlassung aus der stationären Behandlung." />
+  <description value="Dieses Profil beschreibt die Erfordernis von Reha-Maßnahmen (z. B. Physiotherapie, EAP, ABMR, BGSW) für die versicherte Person zum Zeitpunkt der Entlassung aus der stationären Behandlung ." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />

@@ -7,7 +7,7 @@
   <title value="Sonstige Bemerkungen (Erweiterung)" />
   <status value="draft" />
   <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
-  <description value="Diese Extension ermöglicht die Angabe sonstiger Bemerkungen zum Gesamt-ENLA, z. B. Beratungsbedarf durch Reha-Management des UV-Trägers, Schul- und Schulsportfähigkeit, Kontextfaktoren, besondere Umstände als Freitext." />
+  <description value="Diese Extension ermöglicht die Angabe sonstiger Bemerkungen zum Gesamt-ENLA, z. B. Beratungsbedarf durch Reha-Management des UV-Trägers, Schul- und Schulsportfähigkeit, Kontextfaktoren, besondere Umstände als Freitext ." />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />

@@ -7,7 +7,7 @@
   <title value="Therapieempfehlung" />
   <status value="draft" />
   <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
-  <description value="Dieses Profil bildet die Empfehlungen für weitere therapeutische und diagnostische Maßnahmen wie regelmäßige Wundkontrolle, kardiologische Kontrolle, Konsiliaruntersuchungen etc. ab." />
+  <description value="Dieses Profil bildet die Empfehlungen für weitere therapeutische und diagnostische Maßnahmen wie regelmäßige Wundkontrolle, kardiologische Kontrolle, Konsiliaruntersuchungen etc. ab ." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
