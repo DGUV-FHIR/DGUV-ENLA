@@ -313,7 +313,6 @@
     <element id="Organization.type.coding:IHE-Code">
       <path value="Organization.type.coding" />
       <sliceName value="IHE-Code" />
-      <definition value="Hier wird der Typus der Einrichtung anhand eines Codes aus dem Codesystem IHE Deutschland e.V. angegeben." />
       <mustSupport value="true" />
     </element>
     <element id="Organization.type.coding:IHE-Code.system">
@@ -335,7 +334,6 @@
     <element id="Organization.type.coding:HL7-Fachschluesselgruppe">
       <path value="Organization.type.coding" />
       <sliceName value="HL7-Fachschluesselgruppe" />
-      <definition value="Hier wird die Fachrichtung/Fachabteilung anhand eines Codes aus dem Codesystem 'Fachabteilungsschlüssel' der HL7 Basis Deutschland angegeben." />
       <mustSupport value="true" />
     </element>
     <element id="Organization.type.coding:HL7-Fachschluesselgruppe.system">
@@ -357,7 +355,6 @@
     <element id="Organization.type.coding:HL7-Fachschluesselgruppe-erweitert">
       <path value="Organization.type.coding" />
       <sliceName value="HL7-Fachschluesselgruppe-erweitert" />
-      <definition value="Hier wird die Fachrichtung/Fachabteilung anhand eines Codes aus dem Codesystem &quot;FachabteilungsschlüsselErweitert&quot; der HL7 Basis Deutschland angegeben." />
       <mustSupport value="true" />
     </element>
     <element id="Organization.type.coding:HL7-Fachschluesselgruppe-erweitert.system">
