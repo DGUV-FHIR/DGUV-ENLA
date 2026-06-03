@@ -37,6 +37,9 @@
     </element>
     <element id="Medication.code.coding">
       <path value="Medication.code.coding" />
+      <slicing>
+        <rules value="open" />
+      </slicing>
       <short value="Medikament in codierter Form" />
       <min value="1" />
       <max value="1" />
@@ -99,6 +102,9 @@
     </element>
     <element id="Medication.form.coding">
       <path value="Medication.form.coding" />
+      <slicing>
+        <rules value="open" />
+      </slicing>
       <short value="Abgabeform in codiertem Format" />
     </element>
     <element id="Medication.form.coding:EDQM">
@@ -143,35 +149,41 @@
       <path value="Medication.ingredient.item[x]" />
       <sliceName value="itemCodeableConcept" />
     </element>
-    <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding">
-      <path value="Medication.ingredient.item[x].coding" />
-      <slicing>
-        <discriminator>
-          <type value="type" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
     <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:ASK">
       <path value="Medication.ingredient.item[x].coding" />
       <sliceName value="ASK" />
       <short value="ASK-Code" />
+    </element>
+    <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:ASK.system">
+      <path value="Medication.ingredient.item[x].coding.system" />
+      <patternUri value="http://fhir.de/CodeSystem/ask" />
     </element>
     <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:ATC-DE">
       <path value="Medication.ingredient.item[x].coding" />
       <sliceName value="ATC-DE" />
       <short value="Anatomisch-Therapeutisch-Chemische (ATC) Klassifikation" />
     </element>
+    <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:ATC-DE.system">
+      <path value="Medication.ingredient.item[x].coding.system" />
+      <patternUri value="http://fhir.de/CodeSystem/bfarm/atc" />
+    </element>
     <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:PZN">
       <path value="Medication.ingredient.item[x].coding" />
       <sliceName value="PZN" />
       <short value="Pharmazentralnummer" />
     </element>
+    <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:PZN.system">
+      <path value="Medication.ingredient.item[x].coding.system" />
+      <patternUri value="http://fhir.de/CodeSystem/ifa/pzn" />
+    </element>
     <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:WG14">
       <path value="Medication.ingredient.item[x].coding" />
       <sliceName value="WG14" />
       <short value="WG14-Nummer" />
+    </element>
+    <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:WG14.system">
+      <path value="Medication.ingredient.item[x].coding.system" />
+      <patternUri value="http://fhir.de/CodeSystem/abdata/wg14" />
     </element>
     <element id="Medication.ingredient.item[x]:itemCodeableConcept.text">
       <path value="Medication.ingredient.item[x].text" />
