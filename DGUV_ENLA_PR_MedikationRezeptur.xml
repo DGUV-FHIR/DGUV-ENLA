@@ -144,6 +144,7 @@
     <element id="Medication.ingredient.item[x]">
       <path value="Medication.ingredient.item[x]" />
       <short value="Bestandteil" />
+      <mustSupport value="true" />
     </element>
     <element id="Medication.ingredient.item[x]:itemCodeableConcept">
       <path value="Medication.ingredient.item[x]" />
