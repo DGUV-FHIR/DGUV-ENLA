@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Author: LSc
+ Datum: 08.06.2026
+
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_MedikationRezeptur_0.xml" dient der Validierung
+ folgenden Szenarios (Standardfall):
+
+ P: Maximalbefüllung einer Instanz Medication - Rezeptur (Meta-Daten, Kennzeichnung als Rezeptur, Status, Hersteller, Abgabeform, Menge,
+    Bestandteile mit Wirkstofftyp, Bestandteil, Aktiv? und Stärke sowie Chargenangaben)
+-->
+<Medication xmlns="http://hl7.org/fhir">
+
+  <!--Meta-Daten-->
+  <id value="medikationrezeptur-01"/>
+  <meta>
+    <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationRezeptur"/>
+  </meta>
+
+  <!--Medikamentencode-->
+  <code>
+    <coding>
+      <!--System-->
+      <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type"/>
+      <!--Code rezeptur-->
+      <code value="rezeptur"/>
+    </coding>
+    <!--Freitext-->
+    <text value="Individuell hergestellte Rezeptur"/>
+  </code>
+
+  <!--Status-->
+  <status value="active"/>
+
+  <!--Hersteller-->
+  <manufacturer>
+    <display value="Beispiel Apotheke GmbH"/>
+  </manufacturer>
+
+  <!--Abgabeform-->
+  <form>
+    <coding>
+      <system value="http://standardterms.edqm.eu"/>
+      <code value="10504000"/>
+      <display value="Ointment"/>
+    </coding>
+  </form>
+
+  <!--Menge-->
+  <amount>
+    <numerator>
+      <value value="12"/>
+      <unit value="Gramm"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="g"/>
+    </numerator>
+    <denominator>
+      <value value="1"/>
+      <unit value="kilogram"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="kg"/>
+    </denominator>
+  </amount>
+
+  <!--Bestandteile-->
+  <ingredient>
+
+    <!--Wirkstofftyp Extension-->
+    <extension url="https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstofftyp">
+      <valueCoding>
+        <system value="https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/CodeSystem/wirkstofftyp"/>
+        <code value="MIN"/>
+        <display value="multiple ingredients"/>
+      </valueCoding>
+    </extension>
+
+    <!--Bestandteil-->
+    <itemCodeableConcept>
+      <coding>
+        <!--ASK-Code optional aber erlaubt-->
+        <system value="http://fhir.de/CodeSystem/ask"/>
+        <code value="123456"/>
+      </coding>
+      <text value="Hydrocortison"/>
+    </itemCodeableConcept>
+
+    <!--Aktiver Bestandteil Kennzeichnung-->
+    <isActive value="true"/>
+
+    <!--Stärke-->
+    <strength>
+      <numerator>
+        <value value="1"/>
+        <unit value="Gramm"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="g"/>
+      </numerator>
+      <denominator>
+        <value value="100"/>
+        <unit value="Gramm"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="g"/>
+      </denominator>
+    </strength>
+
+  </ingredient>
+
+  <!--Chargeninformation-->
+  <batch>
+    <lotNumber value="CH123456"/>
+  </batch>
+
+</Medication>
