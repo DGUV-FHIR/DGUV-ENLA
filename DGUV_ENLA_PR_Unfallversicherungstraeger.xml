@@ -30,15 +30,11 @@
       <fixedCanonical value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Unfallversicherungstraeger" />
       <mustSupport value="true" />
     </element>
-    <element id="Organization.text">
-      <path value="Organization.text" />
-    </element>
-    <element id="Organization.text.status">
-      <path value="Organization.text.status" />
-      <mustSupport value="false" />
-    </element>
     <element id="Organization.identifier">
       <path value="Organization.identifier" />
+      <slicing>
+        <rules value="open" />
+      </slicing>
       <short value="Identifikator für den Unfallversicherungsträger" />
       <min value="1" />
       <max value="2" />
@@ -173,6 +169,9 @@
     </element>
     <element id="Organization.address">
       <path value="Organization.address" />
+      <slicing>
+        <rules value="open" />
+      </slicing>
       <short value="Adresse des Unfallversicherungsträgers" />
       <max value="1" />
     </element>
