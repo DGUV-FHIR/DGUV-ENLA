@@ -1,31 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Author: Friedhelm Matten
-    Datum:  19.11.2025
+ Author: FMa / LSc
+ Datum: 09.06.2026
 
-    Die vorliegende Beispiel Datei dient der Validierung 
-    das der Constraint dguv-pflegeunfall-2 in
-    dem Fall, dass die Regel  eingehalten wird!
-    
-    Da
-
-      <extension url="Pflegeunfall">
-        <valueBoolean value="false"/>
-      </extension>
-
-    darf die Referenz
-
-    <valueReference>
-          <reference value="Pflegekasse/123" />
-    </valueReference>
-
-    nicht auftreten.
-
-
-    Durchzuführende Massnahmen:
-
-
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_Unfallereignis_1.xml" dient der Validierung
+ folgenden Szenarios:
+ N: Ausgehend von Standardfall:
+    Maximalbefüllung einer Instanz Unfallereignis (Meta-Daten, Narrative,
+    Auslösung Constraints dguv-pflegeunfall-2 (also Pflegeunfall: nein und trotzdem Pflegekasse vorhanden),
+    Aktenzeichen, Berichtsstatus, Verletzungseinordnung, Ref. auf verunfallte Person, Unfallzeitpunkt, beh. Arzt,
+    Unfallhergang, Beschwerden/Klagen, ausgeübte Tätigkeit, Beschäftigungsbeginn)
 -->
+
 <Observation xmlns="http://hl7.org/fhir">
   <id value="DGUV-ENLA-Bsp-Unfallereignis"/>
   <meta>
@@ -52,6 +38,12 @@
       </extension>
   </extension>
 
+  <!-- Aktenzeichen als Identifier -->
+  <identifier>
+    <system value="http://fhir.dguv.de/Basis/NamingSystem/DGUV-Basis-NS-Aktenzeichen"/>
+    <value value="BGV-AZ-2025/365" />
+  </identifier>
+
   <!-- Observation status -->
   <status value="final"/>
 
@@ -72,7 +64,7 @@
   <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
   <effectiveDateTime value="2018-08-24T13:00:00+00:00"/>
 
-  <!-- Behandelnde(-r) Ärtztin/Arzt-->
+  <!-- Behandelnde(-r) Ärztin/Arzt-->
   <performer>
     <reference value="urn:uuid:53192032-6365-4659-8cc2-f9a7df67a466"/>
   </performer>
