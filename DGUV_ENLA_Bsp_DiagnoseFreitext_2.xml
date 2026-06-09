@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-    Author: Friedhelm Matten
-    Datum:  30.09.2025
 
+<!--
+ Author: FMa / LSc
+ Datum: 09.06.2026
+
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_DiagnoseFreitext_2.xml" dient der Validierung
+ folgenden Szenarios:
+ 
+ P: Ausgehend vom Standardfall:
+    Nicht-Auslösung des Constraints dguv-Fraktur-2 (also Fraktur: nein und keine AO-Klassifikation vorhanden)
 -->
+
  <Condition xmlns="http://hl7.org/fhir">
     <id value="DGUV-ENLA-PR-DiagnoseFreitext"/>
     <meta>
