@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <!--
-    Author: 
-    Datum:  
+ Author: FMa / LSc
+ Datum: 09.06.2026
 
-    Die vorliegende Beispiel Datei .... dient der Validierung 
-    der Datenaufnahme zu dem ......
-    
-    Zu beachten ist dabei ...
-
-    Durchzuführende Massnahmen:
-
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_DiagnoseStrukturiert.xml" dient der Validierung
+ folgenden Szenarios (Standardfall):
+ 
+ P: Maximalbefüllung einer Instanz DiagnoseStrukturiert (Meta-Daten, Narrativ, clinical/verificationStatus für Ext. Diagnosesicherheit,
+    Extensions Mehrfachcodierung/Seitenlokalisation/Diagnosesicherheit, Diagnosecode ICD-10, Ref. auf versicherte Person)
 -->
+
 <Condition xmlns="http://hl7.org/fhir">
     <id value="DGUV-ENLA-Bsp-DiagnoseStrukturiert"/>
     <meta>
@@ -24,9 +24,52 @@
         </div>
     </text>
 
+    <!--clinicalStatus-->
+    <clinicalStatus>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+        <code value="active"/>
+        <display value="Active"/>
+      </coding>
+    </clinicalStatus>
+
+    <!--verificationStatus-->
+    <verificationStatus>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+        <code value="confirmed"/>
+        <display value="Confirmed"/>
+      </coding>
+    </verificationStatus>
+
     <!-- Diagnosecode verpflichtend-->
     <code>
         <coding>
+            <!--Mehrfachcodierungs-Kennzeichen-->
+            <extension url="http://fhir.de/StructureDefinition/icd-10-gm-mehrfachcodierungs-kennzeichen">
+              <valueCoding>
+                <system value="http://fhir.de/CodeSystem/icd-10-gm-mehrfachcodierungs-kennzeichen"/>
+                <code value="*"/>
+              </valueCoding>
+            </extension>
+
+            <!--Seitenlokalisation-->
+            <extension url="http://fhir.de/StructureDefinition/seitenlokalisation">
+              <valueCoding>
+                <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ICD_SEITENLOKALISATION"/>
+                <code value="R"/>
+              </valueCoding>
+            </extension>
+
+            <!--Diagnosesicherheit-->
+            <extension url="http://fhir.de/StructureDefinition/icd-10-gm-diagnosesicherheit">
+              <valueCoding>
+                <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ICD_DIAGNOSESICHERHEIT"/>
+                <code value="G"/>
+              </valueCoding>
+            </extension>
+
+            <!--ICD-10-GM: System + Version-->
             <system value="http://fhir.de/CodeSystem/bfarm/icd-10-gm"/>
             <version value="2025"/>
             <code value="S06.0"/>
