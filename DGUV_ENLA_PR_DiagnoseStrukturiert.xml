@@ -37,11 +37,53 @@
     </element>
     <element id="Condition.clinicalStatus">
       <path value="Condition.clinicalStatus" />
-      <max value="0" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.clinicalStatus.coding">
+      <path value="Condition.clinicalStatus.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.clinicalStatus.coding.system">
+      <path value="Condition.clinicalStatus.coding.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.clinicalStatus.coding.code">
+      <path value="Condition.clinicalStatus.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.clinicalStatus.coding.display">
+      <path value="Condition.clinicalStatus.coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Condition.verificationStatus">
       <path value="Condition.verificationStatus" />
-      <max value="0" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.verificationStatus.coding">
+      <path value="Condition.verificationStatus.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.verificationStatus.coding.system">
+      <path value="Condition.verificationStatus.coding.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.verificationStatus.coding.code">
+      <path value="Condition.verificationStatus.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.verificationStatus.coding.display">
+      <path value="Condition.verificationStatus.coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Condition.category">
       <path value="Condition.category" />
@@ -57,6 +99,9 @@
     </element>
     <element id="Condition.code.coding">
       <path value="Condition.code.coding" />
+      <slicing>
+        <rules value="open" />
+      </slicing>
       <mustSupport value="true" />
     </element>
     <element id="Condition.code.coding:ICD-10-GM">
