@@ -1,28 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <!--
-    Author: 
-    Datum:  
+ Author: FMa / LSc
+ Datum: 10.06.2026
 
-    Die vorliegende Beispiel Datei .... dient der Validierung 
-    der Datenaufnahme zu dem ......
-    
-    Zu beachten ist dabei ...
-
-    Durchzuführende Massnahmen:
-
-
+ Ausgehend von Standardfall:
+ 
+ N: Außer GKV-Identifier zusätzlich ein PKV-Identifier -> Auslösung Constraint dguv-pat-identifier-exclude-gkv-pkv
 -->
+
 <Patient xmlns="http://hl7.org/fhir">
+  <!-- Meta-Daten -->
   <id value="DGUV-ENLA-Bsp-VersichertePerson"/>
   <meta>
     <profile value="http://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson"/>
-  </meta>   
+  </meta>
+
+  <!-- Narrativ -->
   <text>
     <status value="generated"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
       <h1>Hier finden Sie ein Beispiel einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
     </div>
   </text>
+  
+  <!-- Nationalität -->
   <extension url="http://hl7.org/fhir/StructureDefinition/patient-nationality">
   <!--extension url="http://hl7.org/fhir/ValueSet/iso3166-1-2|4.0.1" -->      
     <extension url="code" >
@@ -43,7 +45,6 @@
   </extension>
 
   <!-- GKV Identifier -->
-  <!-- Validierung: Constraint wirft einen Fehler, da ein GKV- und ein PKV- Eintrag vorliegt -->
   <identifier>
     <type>
         <coding>
@@ -56,6 +57,7 @@
   </identifier>
 
   <!-- PKV Identifier-->
+  <!-- Validierung: Constraint wirft einen Fehler, da GKV- und PKV-Identifier gleichzeitig existieren. -->
   <identifier>
     <type>
         <coding>
@@ -69,6 +71,7 @@
     </assigner>
   </identifier>
 
+  <!-- Name -->
   <name>
     <use value="official" />
     <family value="Mustermann">
@@ -78,12 +81,20 @@
     </family> 
     <given value="Lionel" />
   </name>
+
+  <!-- Kontaktdaten -->
   <telecom>
     <system value="phone"/>
     <value value="0049177/00000000"/>
   </telecom>
+
+  <!-- Geschlecht -->
   <gender value="male"/>
+
+  <!-- Geburtsdatum -->
   <birthDate value="2004-11-12"/>
+
+  <!-- Straßenadresse -->
   <address>
     <type value="both" />
     <line value="Musterweg 1">
@@ -98,4 +109,18 @@
     <postalCode value="11111" />
     <country value="DE" />
   </address>
+
+  <!-- Postfachadresse -->
+  <address>
+    <type value="postal" />
+    <line value="Postfach 670525">
+        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox">
+            <valueString value="Postfach 670525" />
+        </extension>
+    </line>
+    <city value="Musterhausen" />
+    <postalCode value="11117" />
+    <country value="DE" />
+  </address>
+
 </Patient>
