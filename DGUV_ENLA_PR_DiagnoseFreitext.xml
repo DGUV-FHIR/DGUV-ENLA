@@ -50,8 +50,8 @@
       <constraint>
         <key value="dguv-Fraktur-2" />
         <severity value="error" />
-        <human value="Wenn keine Fraktur vorliegt, muss AO-Klassifikation leer sein." />
-        <expression value="(extension.where(url = 'Fraktur').valueBoolean = false) implies (where(url = 'AO-Klassifikation').empty())" />
+        <human value="Wenn keine Fraktur vorliegt, darf keine AO-Klassifikation vorhanden sein." />
+        <expression value="(extension.where(url = 'Fraktur').valueBoolean = false) implies (extension('AO-Klassifikation').exists()).not()" />
       </constraint>
       <mustSupport value="true" />
     </element>
