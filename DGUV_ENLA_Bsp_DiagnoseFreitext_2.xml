@@ -17,6 +17,12 @@
         <profile value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseFreitext"/>
     </meta>
 
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <h1>Hier finden Sie ein Beispiel eines DiagnoseFreitextes.</h1>
+        </div>
+    </text>
 
     <!-- AO Klassifikation-->
     <extension url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-Frakturklassifikation">
