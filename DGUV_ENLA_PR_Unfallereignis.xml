@@ -49,7 +49,7 @@
         <key value="dguv-pflegeunfall-2" />
         <severity value="error" />
         <human value="Wenn es sich um keinen Pflegeunfall handelt, darf die Referenz zur Pflegekasse nicht vorhanden sein." />
-        <expression value="(extension.where(url = 'Pflegeunfall').value = false) implies (extension.where(url = 'Pflegekasse').empty())" />
+        <expression value="(extension.where(url = 'Pflegeunfall').value = false) implies (extension('Pflegekasse').exists()).not()" />
       </constraint>
       <mustSupport value="true" />
     </element>
