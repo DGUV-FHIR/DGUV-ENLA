@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ Author: FMa / LSc
+ Datum: 18.06.2026
+
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_Unfallereignis_01.xml" dient der Validierung
+ folgenden Szenarios (Standardfall):
+ 
+ N: Ausgehend von Standardfall:
+    Auslösung Constraint dguv-pflegeunfall-1 (also Pflegeunfall: ja, aber keine Pflegekasse vorhanden)
+-->
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="DGUV-ENLA-Bsp-Unfallereignis"/>
+  <meta>
+    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Unfallereignis"/>
+  </meta>
+
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h1>Hier finden Sie ein Beispiel der Unfallereignis einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+    </div>
+  </text> 
+
+
+  <!-- Pflegeunfall slicing, aber ohne Pflegekasse -->
+  <extension url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-Pflegeunfall">
+      <extension url="Pflegeunfall">
+        <valueBoolean value="true"/>
+      </extension>
+  </extension>
+
+  <!-- Aktenzeichen als Identifier -->
+  <identifier>
+    <system value="http://fhir.dguv.de/Basis/NamingSystem/DGUV-Basis-NS-Aktenzeichen"/>
+    <value value="BGV-AZ-2025/365" />
+  </identifier>
+
+  <!-- Observation status -->
+  <status value="final"/>
+
+  <!-- Beispiel Durchgangsarztverfahren  -->
+  <code>
+    <coding>
+      <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-Verletzungsartenverzeichnis"/>
+      <code value="10.1V"/>
+      <display value="Schwere Verletzungen und Verletzungskombinationen (Polytrauma) mit einem Injury Severity Score (ISS) zwischen 16 und 24."/>
+    </coding>
+  </code>
+
+  <!-- VersichertePerson Referenz -->
+  <subject> 
+    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+  </subject>
+
+  <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
+  <effectiveDateTime value="2018-08-24T13:00:00+00:00"/>
+
+
+  <!-- Behandelnde(-r) Ärztin/Arzt-->
+  <performer>
+    <reference value="urn:uuid:53192032-6365-4659-8cc2-f9a7df67a466"/>
+  </performer>
+
+  <!-- Unfallereignis Komponente -->
+  <component>
+    <code>
+      <coding>
+        <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-UnfallereignisComponents"/>
+        <code value="03"/>
+        <display value="Unfallhergang"/>
+      </coding>
+    </code>
+    <valueString value="Der Versicherte ist auf dem Weg zum Sechstagerennen mit seinem Motorrad mit einer geschätzten Geschwindigkeit von 60 km/h gegen eine Leitplanke gefahren"/>
+  </component>
+
+  <!-- Unfallereignis Komponente -->
+  <component>
+    <code>
+      <coding>
+        <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-UnfallereignisComponents"/>
+        <code value="04"/>
+        <display value="Beschwerden/Klagen"/>
+      </coding>
+    </code>
+    <valueString value="Starke Schmerzen rechter Oberschenkel, Gefühlsstörung im Fuss"/>
+  </component>
+
+  <!-- Unfallereignis Komponente -->
+  <component>
+    <code>
+      <coding>
+        <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-UnfallereignisComponents"/>
+        <code value="05"/>
+        <display value="Beschäftigt als"/>
+      </coding>
+    </code>
+    <valueString value="Schrittmacher"/>
+  </component>
+
+  <!-- Unfallereignis Komponente -->
+  <component>
+    <code>
+      <coding>
+        <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-UnfallereignisComponents"/>
+        <code value="06"/>
+        <display value="Beschäftigungsbeginn"/>
+      </coding>
+    </code>
+    <valueDateTime value="2021-04-01"/>
+  </component>
+
+</Observation>
