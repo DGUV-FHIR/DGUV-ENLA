@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
  Author: FMa / LSc
- Datum: 09.06.2026
+ Datum: 18.06.2026
 
- Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_Unfallereignis_1.xml" dient der Validierung
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_Unfallereignis_03.xml" dient der Validierung
  folgenden Szenarios:
  N: Ausgehend von Standardfall:
-    Maximalbefüllung einer Instanz Unfallereignis (Meta-Daten, Narrative,
-    Auslösung Constraints dguv-pflegeunfall-2 (also Pflegeunfall: nein und trotzdem Pflegekasse vorhanden),
-    Aktenzeichen, Berichtsstatus, Verletzungseinordnung, Ref. auf verunfallte Person, Unfallzeitpunkt, beh. Arzt,
-    Unfallhergang, Beschwerden/Klagen, ausgeübte Tätigkeit, Beschäftigungsbeginn)
+    Auslösung Constraint dguv-pflegeunfall-2 (also Pflegeunfall: nein und trotzdem Pflegekasse vorhanden)
 -->
 
 <Observation xmlns="http://hl7.org/fhir">
