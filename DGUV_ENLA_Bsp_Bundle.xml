@@ -1833,7 +1833,7 @@
         <fullUrl value="urn:uuid:347b8239-6420-4b3a-a873-6b62e1fa1b0f" />
         <resource>
             <Medication xmlns="http://hl7.org/fhir">
-                <id value="example-rezeptur-1"/>
+                <id value="347b8239-6420-4b3a-a873-6b62e1fa1b0f"/>
                 <meta>
                     <!-- must be exactly this profile URL -->
                     <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationRezeptur"/>

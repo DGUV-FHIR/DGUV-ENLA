@@ -1,15 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-    Author: Friedhelm Matten
-    Datum:  9.10.2025
 
+<!--
+ Author: FMa / LSc
+ Datum: 19.06.2026
+
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_Arbeitsunfaehigkeit_01.xml" dient der Validierung
+ folgenden Szenarios:
+ 
+ N: Ausgehend vom Standardfall:
+    Auslösung Constraint dguv-aubis-1 (also Value: AUBIS, aber kein effective vorhanden)
 -->
+
 <Observation xmlns="http://hl7.org/fhir">
-  <id value="DGUV-ENLA-Bsp-Arbeitsunfaehigkeit-1" />
+  <id value="DGUV-ENLA-Bsp-Arbeitsunfaehigkeit" />
   <meta>
       <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Arbeitsunfaehigkeit" />
   </meta>
-  <!-- Observation status -->  
+
+  <!-- Narrative -->
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h1>Hier finden Sie ein Beispiel der Arbeitsunfähigkeit einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+    </div>
+  </text> 
+
+  <!-- Observation status -->
   <status value="final"/>
 
   <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
@@ -27,34 +43,19 @@
   </subject>
 
   <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
-  <!-- <effectiveDateTime value="2025-07-03" />  -->
+  <!-- effectiveDateTime value="2025-07-03" /> -->
 
   <!-- Behandelnde(-r) Ärtztin/Arzt-->
   <performer>
       <reference value="DArzt/T37501234" />
-  </performer>
+  </performer>  
 
-<!--  
-    In dem Fall, dass der code value="AUFLEX" und der Displaywert display="Arbeitsunfähig voraussichtliche Dauer" ist, müssen die Felder
-      Attribut "value[x].extension. … .FlexibleAU.value[x].value"
-      Attribut "value[x].extension. … .FlexibleAU.value[x].unit"
-    ausgefüllt sein.
-    Attribut "value[x]"
-    Bei "AF" ("Arbeitsfähig") gibt es KEINE Wiedereingliederung (vgl. DGUV_ENLA_PR_stufenweiseWiedereingliederung).
--->
-
-  <!-- FlexAU -->
+  <!-- Art der Arbeitsunfaehigkeit -->  
   <valueCodeableConcept>
-    <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-FlexAU">
-      <valueDuration>
-        <value value="2" />
-        <unit value="Wochen" />
-      </valueDuration>
-    </extension>
     <coding>
         <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Arbeitsunfaehigkeit" />
-        <code value="AUFLEX" />
-        <display value="Arbeitsunfähig voraussichtliche Dauer" />
+        <code value="AUBIS" />
+        <display value="Arbeitsunfähig bis" />
     </coding>
   </valueCodeableConcept>
 </Observation>

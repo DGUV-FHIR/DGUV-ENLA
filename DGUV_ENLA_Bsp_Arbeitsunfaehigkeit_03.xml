@@ -1,22 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <!--
-    Author: 
-    Datum:  
+ Author: FMa
+ Datum: 2025
 
-    Die vorliegende Beispiel Datei .... dient der Validierung 
-    der Datenaufnahme zu dem ......
-    
-    Zu beachten ist dabei ...
-
-    Durchzuführende Massnahmen:
-
-
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_Arbeitsunfaehigkeit_03.xml" dient der Validierung
+ folgenden Szenarios:
+ 
+ N: Ausgehend vom Standardfall:
+    Auslösung Constraint dguv-auflex-1 (also Value: AUFLEX, aber Flexible AU nicht korrekt gefüllt)
 -->
+
 <Observation xmlns="http://hl7.org/fhir">
   <id value="DGUV-ENLA-Bsp-Arbeitsunfaehigkeit-1" />
   <meta>
       <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Arbeitsunfaehigkeit" />
   </meta>
+
+  <!-- Narrative -->
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h1>Hier finden Sie ein Beispiel der Arbeitsunfähigkeit einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+    </div>
+  </text> 
+
   <!-- Observation status -->  
   <status value="final"/>
 

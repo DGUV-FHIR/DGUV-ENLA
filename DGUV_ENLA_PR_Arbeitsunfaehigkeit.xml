@@ -33,7 +33,7 @@
         <key value="dguv-nicht-aubis-1" />
         <severity value="error" />
         <human value="Wenn code nicht 'AUBIS', darf effective[x] nicht genutzt/gefüllt sein." />
-        <expression value="(value.coding.code !='AUBIS') implies effective.empty()" />
+        <expression value="(value.coding.code !='AUBIS') implies effective.exists().not()" />
       </constraint>
       <constraint>
         <key value="dguv-nicht-auflex-1" />

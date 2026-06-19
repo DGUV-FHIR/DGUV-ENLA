@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ Author: FMa / LSc
+ Datum: 19.06.2026
+
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_Arbeitsunfaehigkeit_00.xml" dient der Validierung
+ folgenden Szenarios (Standardfall):
+ 
+ P: Maximalbefüllung einer Instanz Arbeitsunfaehigkeit (Meta-Daten, Narrativ, Berichtsstatus, Teilberichtskennzeichnung,
+    Ref. auf verunfallte Person, AU-Endedatum, Beh. Arzt, AU-Variante,
+    Nicht-Auslösung Constraint dguv-aubis-1 (also Value: AUBIS und effective vorhanden)
+-->
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="DGUV-ENLA-Bsp-Arbeitsunfaehigkeit" />
+  <meta>
+      <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Arbeitsunfaehigkeit" />
+  </meta>
+
+  <!-- Narrative -->
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h1>Hier finden Sie ein Beispiel der Arbeitsunfähigkeit einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+    </div>
+  </text> 
+
+  <!-- Observation status -->
+  <status value="final"/>
+
+  <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
+  <code>
+      <coding>
+          <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+          <code value="AU" />
+          <display value="Arbeitsunfähigkeit" />
+      </coding>
+  </code>
+
+  <!-- VersichertePerson-->
+  <subject>
+      <reference value="Patient/T37501234" />
+  </subject>
+
+  <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
+  <effectiveDateTime value="2025-07-03" />
+
+  <!-- Behandelnde(-r) Ärtztin/Arzt-->
+  <performer>
+      <reference value="DArzt/T37501234" />
+  </performer>  
+<!-- 
+    Attribut "value[x].extension. … .FlexibleAU.value[x].value"
+    Attribut "value[x].extension. … .FlexibleAU.value[x].unit"
+    Diese Felder dürfen nur (!) befüllt werden, wenn unter value[x].coding.code/display "AUFLEX"/"Arbeitsunfähig vor aussichtliche Dauer" steht.
+    Und dann müssen sie es auch.
+    Attribut "value[x]"
+    Bei "AF" ("Arbeitsfähig") gibt es KEINE Wiedereingliederung (vgl. DGUV_ENLA_PR_stufenweiseWiedereingliederung).
+
+    <FlexibleAU>
+        <value
+    </FlexibleAU>
+
+    <valueCodeableConcept>
+        <coding>
+            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Arbeitsunfaehigkeit" />
+            <code value="AUFLEX" />
+            <display value="Arbeitsunfähig vor aussichtliche Dauer" />
+        </coding>
+    </valueCodeableConcept>
+
+-->
+  <!-- Art der Arbeitsunfaehigkeit -->  
+  <valueCodeableConcept>
+    <coding>
+        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Arbeitsunfaehigkeit" />
+        <code value="AUBIS" />
+        <display value="Arbeitsunfähig bis" />
+    </coding>
+  </valueCodeableConcept>
+</Observation>

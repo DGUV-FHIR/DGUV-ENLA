@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    Author: Friedhelm Matten
-    Datum:  30.09.2025
+ Author: FMa / LSc
+ Datum: 09.06.2026
 
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_DiagnoseFreitext.xml" dient der Validierung
+ folgenden Szenarios (Standardfall):
+ 
+ P: Maximalbefüllung einer Instanz DiagnoseFreitext (Meta-Daten, Narrativ,
+    Nicht-Auslösung des Constraints dguv-Fraktur-1 (also Fraktur: ja und AO-Klassifikation vorhanden),
+    Freitextdiagnose, Ref. auf verunfallte Person)
 -->
+
  <Condition xmlns="http://hl7.org/fhir">
     <id value="DGUV-ENLA-PR-DiagnoseFreitext"/>
     <meta>
@@ -13,7 +20,7 @@
     <text>
         <status value="generated"/>
         <div xmlns="http://www.w3.org/1999/xhtml">
-            <h1>Hier finden Sie ein Beispiel des DiagnoseFreitext einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+            <h1>Hier finden Sie ein Beispiel eines DiagnoseFreitextes.</h1>
         </div>
     </text>
 

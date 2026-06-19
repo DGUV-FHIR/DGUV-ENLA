@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <!--
-    Author: 
-    Datum:  
+ Author: FMa / LSc
+ Datum: 2025
 
-    Die vorliegende Beispiel Datei .... dient der Validierung 
-    der Datenaufnahme zu dem ......
-    
-    Zu beachten ist dabei ...
-
-    Durchzuführende Massnahmen:
-
-
+Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_BehandelndeEinrichtung.xml" dient der Validierung
+ folgenden Szenarios (Standardfall):
+ 
+ P: Maximalbefüllung einer Instanz BehandelndeEinrichtung (Meta-Daten, Narrativ,
+    Identifier IKNR, behandelnde Fachabteilung, Einrichtungsname, Telefonkontaktdaten, 
+    nur Staßenadresse und damit Nicht-Auslösung des Constraints add-7, da gar keine Stadtteilangabe vorhanden)
 -->
+
 <Organization xmlns="http://hl7.org/fhir">
     <id value="BehandelndeEinrichtung-234" />
     <meta>

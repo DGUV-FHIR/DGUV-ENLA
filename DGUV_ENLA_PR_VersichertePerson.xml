@@ -94,6 +94,9 @@
     </element>
     <element id="Patient.identifier">
       <path value="Patient.identifier" />
+      <slicing>
+        <rules value="open" />
+      </slicing>
       <comment value="Kardinalität 0..3, da - 1. - im ENLA kein Identifikator zwingend ist und - 2. - sich VersichertenId_GKV und Versichertennummer_PKV gegenseitig ausschließen und somit max. 3 Identifikatoren angegeben werden können." />
       <max value="3" />
       <mustSupport value="true" />
@@ -184,6 +187,9 @@
     </element>
     <element id="Patient.name">
       <path value="Patient.name" />
+      <slicing>
+        <rules value="open" />
+      </slicing>
       <short value="Name der versicherten Person" />
       <max value="1" />
       <mustSupport value="true" />
@@ -296,6 +302,7 @@
     <element id="Patient.gender">
       <path value="Patient.gender" />
       <comment value="Für die Geschlechtskennzeichen &quot;unbestimmt&quot; und &quot;divers&quot; ist der code &quot;other&quot; zu verwenden. Falls ein administratives Geschlecht &quot;divers&quot; abzubilden ist (z. B. da dieses Geschlecht auf offiziellen Ausweisen eingetragen ist) muss eine Differenzierung zwischen &quot;other&quot; und &quot;divers&quot; als positiver Geschlechtseintrag erfolgen. Hierfür ist die &quot;gender-amtlich&quot;-Extension zu verwenden." />
+      <min value="1" />
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
@@ -352,7 +359,11 @@
     </element>
     <element id="Patient.address">
       <path value="Patient.address" />
+      <slicing>
+        <rules value="open" />
+      </slicing>
       <short value="Adresse der versicherten Person" />
+      <min value="1" />
       <max value="2" />
       <mustSupport value="true" />
     </element>
