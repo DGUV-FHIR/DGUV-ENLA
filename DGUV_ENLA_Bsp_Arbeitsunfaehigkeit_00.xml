@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ Author: FMa / LSc
+ Datum: 19.06.2026
+
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_Arbeitsunfaehigkeit_00.xml" dient der Validierung
+ folgenden Szenarios (Standardfall):
+ 
+ P: Maximalbefüllung einer Instanz Arbeitsunfaehigkeit (Meta-Daten, Narrativ, Berichtsstatus, Teilberichtskennzeichnung,
+    Ref. auf verunfallte Person, AU-Endedatum, Beh. Arzt, AU-Variante,
+    Nicht-Auslösung Constraint dguv-aubis-1 (also Value: AUBIS und effective vorhanden)
+-->
+
 <Observation xmlns="http://hl7.org/fhir">
   <id value="DGUV-ENLA-Bsp-Arbeitsunfaehigkeit" />
   <meta>
       <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Arbeitsunfaehigkeit" />
   </meta>
 
+  <!-- Narrative -->
   <text>
     <status value="generated"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
