@@ -1,22 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <!--
-    Author: 
-    Datum:  
+ Author: FMa
+ Datum: 09.10.2025
 
-    Die vorliegende Beispiel Datei .... dient der Validierung 
-    der Datenaufnahme zu dem ......
-    
-    Zu beachten ist dabei ...
-
-    Durchzuführende Massnahmen:
-
-
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_Arbeitsunfaehigkeit_02.xml" dient der Validierung
+ folgenden Szenarios:
+ 
+ P: Ausgehend vom Standardfall:
+    Nicht-Auslösung Constraint dguv-auflex-1 (also Value: AUFLEX und Flexible AU korrekt gefüllt)
 -->
+
 <Observation xmlns="http://hl7.org/fhir">
   <id value="DGUV-ENLA-Bsp-Arbeitsunfaehigkeit-1" />
   <meta>
       <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Arbeitsunfaehigkeit" />
   </meta>
+
+  <!-- Narrative -->
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h1>Hier finden Sie ein Beispiel der Arbeitsunfähigkeit einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+    </div>
+  </text> 
+
   <!-- Observation status -->  
   <status value="final"/>
 
@@ -35,7 +43,7 @@
   </subject>
 
   <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
-  <!-- effectiveDateTime value="2025-07-03" /> -->
+  <!-- <effectiveDateTime value="2025-07-03" />  -->
 
   <!-- Behandelnde(-r) Ärtztin/Arzt-->
   <performer>
@@ -56,7 +64,7 @@
     <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-FlexAU">
       <valueDuration>
         <value value="2" />
-        <unit value="" />
+        <unit value="Wochen" />
       </valueDuration>
     </extension>
     <coding>
