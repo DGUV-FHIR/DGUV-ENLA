@@ -35,6 +35,19 @@
     </element>
     <element id="Patient.meta.profile">
       <path value="Patient.meta.profile" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.meta.profile:enlaProfile">
+      <path value="Patient.meta.profile" />
+      <sliceName value="enlaProfile" />
       <min value="1" />
       <max value="1" />
       <fixedCanonical value="http://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson" />
@@ -76,7 +89,7 @@
     </element>
     <element id="Patient.extension:nationality.extension:code.value[x].coding.system">
       <path value="Patient.extension.extension.value[x].coding.system" />
-      <short value="ValueSet mit Nationalitäten" />
+      <short value="CodeSystem mit Nationalitäten" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -94,11 +107,6 @@
     </element>
     <element id="Patient.identifier">
       <path value="Patient.identifier" />
-      <slicing>
-        <rules value="open" />
-      </slicing>
-      <comment value="Kardinalität 0..3, da - 1. - im ENLA kein Identifikator zwingend ist und - 2. - sich VersichertenId_GKV und Versichertennummer_PKV gegenseitig ausschließen und somit max. 3 Identifikatoren angegeben werden können." />
-      <max value="3" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.identifier:VersichertenId">
@@ -118,26 +126,6 @@
     </element>
     <element id="Patient.identifier:VersichertenId.value">
       <path value="Patient.identifier.value" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Patient.identifier:VersichertenId_GKV">
-      <path value="Patient.identifier" />
-      <sliceName value="VersichertenId_GKV" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Patient.identifier:VersichertenId_GKV.type">
-      <path value="Patient.identifier.type" />
-      <short value="Kennzeichnung des Identifikators als GKV-Versichertennummer" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Patient.identifier:VersichertenId_GKV.system">
-      <path value="Patient.identifier.system" />
-      <short value="Menge der verfügbaren GKV-Versichertennummern" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Patient.identifier:VersichertenId_GKV.value">
-      <path value="Patient.identifier.value" />
-      <short value="Konkrete GKV-Versichertennummer" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.identifier:Patientennummer">
@@ -187,9 +175,6 @@
     </element>
     <element id="Patient.name">
       <path value="Patient.name" />
-      <slicing>
-        <rules value="open" />
-      </slicing>
       <short value="Name der versicherten Person" />
       <max value="1" />
       <mustSupport value="true" />
@@ -359,9 +344,6 @@
     </element>
     <element id="Patient.address">
       <path value="Patient.address" />
-      <slicing>
-        <rules value="open" />
-      </slicing>
       <short value="Adresse der versicherten Person" />
       <min value="1" />
       <max value="2" />
@@ -397,12 +379,11 @@
       <short value="Straßenname mit Hausnummer sowie weitere Angaben zur Zustellung" />
       <definition value="Diese Komponente kann Straßennamen, Hausnummer, Appartmentnummer, c/o sowie weitere Zustellungshinweise enthalten. Die Informationen können in mehrere line-Komponenten aufgeteilt werden.&#xD;&#xA;Bei Verwendung der Extensions, um Straße, Hausnnummer und Postleitzahl strukturiert zu übermitteln, müssen diese Informationen stets vollständig auch in der line-Komponente, die sie erweitern, enthalten sein, um es Systemen, die diese Extensions nicht verwenden zu ermöglichen, auf diese Informationen zugreifen zu können." />
       <min value="1" />
-      <max value="1" />
+      <max value="2" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.address:Strassenanschrift.line.extension">
       <path value="Patient.address.line.extension" />
-      <min value="2" />
       <max value="3" />
       <mustSupport value="true" />
     </element>
@@ -410,7 +391,6 @@
       <path value="Patient.address.line.extension" />
       <sliceName value="Strasse" />
       <short value="Straßenname (ohne Hausnummer)" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.address:Strassenanschrift.line.extension:Strasse.value[x]">
@@ -421,7 +401,6 @@
     <element id="Patient.address:Strassenanschrift.line.extension:Hausnummer">
       <path value="Patient.address.line.extension" />
       <sliceName value="Hausnummer" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.address:Strassenanschrift.line.extension:Hausnummer.value[x]">
@@ -460,14 +439,6 @@
       <short value="Postfachadresse" />
       <mustSupport value="true" />
     </element>
-    <element id="Patient.address:Postfach.extension:Stadtteil">
-      <path value="Patient.address.extension" />
-      <sliceName value="Stadtteil" />
-    </element>
-    <element id="Patient.address:Postfach.extension:Stadtteil.value[x]">
-      <path value="Patient.address.extension.value[x]" />
-      <short value="Konkreter Name des Stadt- oder Ortsteils" />
-    </element>
     <element id="Patient.address:Postfach.type">
       <path value="Patient.address.type" />
       <mustSupport value="true" />
@@ -476,19 +447,17 @@
       <path value="Patient.address.line" />
       <short value="Postfach" />
       <min value="1" />
-      <max value="1" />
+      <max value="2" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.address:Postfach.line.extension">
       <path value="Patient.address.line.extension" />
-      <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.address:Postfach.line.extension:Postfach">
       <path value="Patient.address.line.extension" />
       <sliceName value="Postfach" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.address:Postfach.line.extension:Postfach.value[x]">
@@ -510,10 +479,6 @@
     <element id="Patient.address:Postfach.country">
       <path value="Patient.address.country" />
       <mustSupport value="true" />
-    </element>
-    <element id="Patient.maritalStatus">
-      <path value="Patient.maritalStatus" />
-      <max value="0" />
     </element>
   </differential>
 </StructureDefinition>
