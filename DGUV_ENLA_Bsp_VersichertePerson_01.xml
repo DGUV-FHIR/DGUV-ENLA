@@ -2,14 +2,14 @@
 
 <!--
  Author: FMa / LSc
- Datum: 10.06.2026
+ Datum: 21.10.2026
 
- Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_VersichertePerson.xml" dient der Validierung
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_VersichertePerson_01.xml" dient der Validierung
  folgenden Szenarios (Standardfall):
  
  P: Maximalbefüllung einer Instanz VersichertePerson (Meta-Daten, Narrative, Nationalität,
-    Nichtauslösung Constraint dguv-pat-identifier-exclude-gkv-pkv (also: nur GKV-Identifier und nicht PKV-Identifier),
-    Name, Kontaktmöglichkeiten (Telefon), Geschlecht, Geburtsdatum, Straßen-/Postfachadresse)
+    Nichtauslösung Constraint dguv-pat-identifier-exclude-gkv-pkv (also: nur VersichertenId und nicht GKV-Identifier und nicht PKV-Identifier),
+    Name, Kontaktmöglichkeiten (Telefon), Geschlecht, Geburtsdatum, Straßen-/Postfachadresse jeweils mit Stadtteil)
 -->
 
 <Patient xmlns="http://hl7.org/fhir">
@@ -94,6 +94,9 @@
             <valueString value="1" />
         </extension>
     </line>
+    <!-- Stadtteil für Straßenadresse -->
+    <line value="Zentrale Altstadt"/>
+
     <city value="Musterhausen" />
     <postalCode value="11111" />
     <country value="DE" />
@@ -107,6 +110,10 @@
             <valueString value="Postfach 670525" />
         </extension>
     </line>
+
+    <!-- Stadtteil für Postfachadresse -->
+    <line value="Zweites Postamt"/>
+
     <city value="Musterhausen" />
     <postalCode value="11117" />
     <country value="DE" />
