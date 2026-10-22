@@ -1,7 +1,7 @@
 {
   "name": "dguv.enla",
   "version": "1.0.1",
-  "description": "Put a description here",
+  "description": "Entlassungsbericht aus stationärer Behandlung (F 2102)",
   "dependencies": {
     "de.basisprofil.r4": "1.5.4",
     "dguv.basis": "1.5.2",
