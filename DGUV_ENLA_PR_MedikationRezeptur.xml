@@ -26,6 +26,19 @@
     </element>
     <element id="Medication.meta.profile">
       <path value="Medication.meta.profile" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.meta.profile:enlaProfile">
+      <path value="Medication.meta.profile" />
+      <sliceName value="enlaProfile" />
       <min value="1" />
       <max value="1" />
       <fixedCanonical value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationRezeptur" />
@@ -37,9 +50,6 @@
     </element>
     <element id="Medication.code.coding">
       <path value="Medication.code.coding" />
-      <slicing>
-        <rules value="open" />
-      </slicing>
       <short value="Medikament in codierter Form" />
       <min value="1" />
       <max value="1" />
@@ -102,9 +112,6 @@
     </element>
     <element id="Medication.form.coding">
       <path value="Medication.form.coding" />
-      <slicing>
-        <rules value="open" />
-      </slicing>
       <short value="Abgabeform in codiertem Format" />
     </element>
     <element id="Medication.form.coding:EDQM">

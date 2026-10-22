@@ -26,6 +26,19 @@
     </element>
     <element id="Organization.meta.profile">
       <path value="Organization.meta.profile" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.meta.profile:enlaProfile">
+      <path value="Organization.meta.profile" />
+      <sliceName value="enlaProfile" />
       <min value="1" />
       <max value="1" />
       <fixedCanonical value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Unfallbetrieb" />

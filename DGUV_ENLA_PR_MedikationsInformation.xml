@@ -26,6 +26,19 @@
     </element>
     <element id="MedicationStatement.meta.profile">
       <path value="MedicationStatement.meta.profile" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.meta.profile:enlaProfile">
+      <path value="MedicationStatement.meta.profile" />
+      <sliceName value="enlaProfile" />
       <min value="1" />
       <max value="1" />
       <fixedCanonical value="http://fhir.dguv.de/ENLA/MedicationStatement/DGUV-ENLA-PR-MedikationsInformation" />

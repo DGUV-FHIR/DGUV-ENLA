@@ -26,6 +26,19 @@
     </element>
     <element id="Condition.meta.profile">
       <path value="Condition.meta.profile" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.meta.profile:enlaProfile">
+      <path value="Condition.meta.profile" />
+      <sliceName value="enlaProfile" />
       <min value="1" />
       <max value="1" />
       <fixedCanonical value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseStrukturiert" />
@@ -99,9 +112,6 @@
     </element>
     <element id="Condition.code.coding">
       <path value="Condition.code.coding" />
-      <slicing>
-        <rules value="open" />
-      </slicing>
       <mustSupport value="true" />
     </element>
     <element id="Condition.code.coding:ICD-10-GM">
