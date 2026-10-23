@@ -2,19 +2,19 @@
 
 <!--
  Author: FMa / LSc
- Datum: 21.10.2026
+ Datum: 23.10.2026
 
  Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_VersichertePerson_01.xml" dient der Validierung
  folgenden Szenarios (Standardfall):
  
  P: Maximalbefüllung einer Instanz VersichertePerson (Meta-Daten, Narrative, Nationalität,
-    Nichtauslösung Constraint dguv-pat-identifier-exclude-gkv-pkv (also: nur VersichertenId und nicht GKV-Identifier und nicht PKV-Identifier),
-    Name, Kontaktmöglichkeiten (Telefon), Geschlecht, Geburtsdatum, Straßen-/Postfachadresse jeweils mit Stadtteil)
+    1 VersichertenId, 2 Patientennummern, 1 PKV-Identifier, 
+    Name ausführlich, Kontaktmöglichkeiten (Telefon), Geschlecht, Geburtsdatum, Straßen-/Postfachadresse jeweils mit Stadtteil)
 -->
 
 <Patient xmlns="http://hl7.org/fhir">
   <!-- Meta-Daten -->
-  <id value="DGUV-ENLA-Bsp-VersichertePerson"/>
+  <id value="DGUV-ENLA-Bsp-VersichertePerson-01"/>
   <meta>
     <profile value="http://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson"/>
   </meta>
@@ -23,7 +23,7 @@
   <text>
     <status value="generated"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
-      <h1>Hier finden Sie ein Beispiel einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+      <h1>Dies ist das Beispiel einer verunfallten Person entsprechend dem VersichertePerson-Profil der DGUV.</h1>
     </div>
   </text>
   
@@ -47,8 +47,7 @@
     </extension>
   </extension>
 
-  <!-- GKV Identifier -->
-  <!-- Validierung: Constraint wirft keinen Fehler, da GKV- und PKV-Identifier nicht gleichzeitig vorhanden sind. -->
+  <!-- VersichertenId - Lebenslange Krankenversichertennummer -->
   <identifier>
     <type>
         <coding>
@@ -60,15 +59,72 @@
     <value value="S123456789" />
   </identifier>
 
-  <!-- Name -->
+  <!-- Patientennummer 1 - Krankenhausspezifisch -->
+  <identifier>
+    <type>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+            <code value="MR" />
+        </coding>
+    </type>
+    <system value="http://marthakrankenhaus.de/patientennummern" />
+    <value value="MKH111111111" />
+  </identifier>
+
+  <!-- Patientennummer 2 - Krankenhausspezifisch -->
+  <identifier>
+    <type>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+            <code value="MR" />
+        </coding>
+    </type>
+    <system value="http://lazarusklinik.de/patientennummern" />
+    <value value="LKH222222222" />
+  </identifier>
+
+  <!-- Versichertennummer_PKV -->
+  <identifier>
+    <type>
+        <coding>
+            <system value="http://fhir.de/CodeSystem/identifier-type-de-basis" />
+            <code value="PKV" />
+        </coding>
+    </type>
+    <value value="S12874238" />
+    <assigner>
+      <display value="AXA-Nummernvergabestelle" />
+    </assigner>
+  </identifier>
+
+  <!--Namenszusatz, Name, Namensnachsatz, Vorsatzwort, Vorname, Präfix(-Qualifier) der versicherten Person-->
   <name>
     <use value="official" />
-    <family value="Mustermann">
-        <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
-            <valueString value="Mustermann" />
-        </extension>
-    </family> 
-    <given value="Lionel" />
+
+    <family value="Prof. Dr. Dr. Gräfin vom Auengrund jun. Univ. MdB">
+      <extension url="http://fhir.de/StructureDefinition/humanname-namenszusatz">
+        <valueString value="Gräfin" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+        <valueString value="Auengrund" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix">
+        <valueString value="vom" />
+      </extension>
+    </family>
+
+    <given value="Kunigunde" />
+
+    <prefix value="Prof. Dr. Dr.">
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+        <valueCode value="AC" />
+      </extension>
+    </prefix>
+
+    <suffix value="jun." />
+    <suffix value="Univ." />
+    <suffix value="MdB" />
+
   </name>
 
   <!-- Kontaktdaten -->
