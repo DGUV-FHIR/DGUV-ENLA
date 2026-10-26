@@ -2,22 +2,24 @@
 
 <!--
  Author: FMa / LSc
- Datum: 2025
+ Datum: 26.10.2026
 
-Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_BehandelndeEinrichtung.xml" dient der Validierung
+Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_BehandelndeEinrichtung_01.xml" dient der Validierung
  folgenden Szenarios (Standardfall):
  
- P: Maximalbefüllung einer Instanz BehandelndeEinrichtung (Meta-Daten, Narrativ,
-    Identifier IKNR, behandelnde Fachabteilung, Einrichtungsname, Telefonkontaktdaten, 
-    nur Staßenadresse und damit Nicht-Auslösung des Constraints add-7, da gar keine Stadtteilangabe vorhanden)
+P: Maximalbefüllung einer Instanz BehandelndeEinrichtung (Meta-Daten, Narrativ, Identifier IKNR, behandelnde Fachabteilung,
+   Einrichtungsname, Telefonkontaktdaten, Straßenadresse mit Stadtteilangabe inkl. dafür eigenen line-Eintrag
+   und damit Nicht-Auslösung des Constraints add-7)
 -->
 
 <Organization xmlns="http://hl7.org/fhir">
+    <!--Meta-Daten-->
     <id value="BehandelndeEinrichtung-234" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-BehandelndeEinrichtung" />
     </meta>
 
+    <!--Narrativ-->
     <text>
         <status value="generated"/>
         <div xmlns="http://www.w3.org/1999/xhtml">
@@ -25,7 +27,8 @@ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_BehandelndeEinrichtung.xml" dient 
         </div>
     </text>    
 
-    <!-- Identifizierung der behandelnde Einrichtung-->
+    <!--Identifikatoren der behandelnden Einrichtung-->
+    <!--Institutionskennzeichen (IKNR) - Slice "Institutionskennzeichen"-->
     <identifier>
         <type>
             <coding>
@@ -38,7 +41,8 @@ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_BehandelndeEinrichtung.xml" dient 
         <value value="260530784" />
     </identifier>
 
-    <!-- behandelnde Fachabteilung -->
+    <!-- Typ der behandelnden Einrichtung -->
+    <!-- Hier: Behandelnde Fachabteilung -->
     <type>  
         <coding>
             <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel" />
@@ -48,30 +52,55 @@ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_BehandelndeEinrichtung.xml" dient 
         </coding>
     </type>
 
-    <!-- Name der Einrichtung -->
+    <!-- Name der behandelnden Einrichtung -->
     <name value="Unfallkrankenhaus Frechen"/>
 
-    <!-- Telefon contact-->
+    <!-- Kontaktdaten -->
+    <!-- Hier: Telefonnummer -->
     <telecom>
         <system value="phone"/>
         <value value="+1-1234565789"/>
     </telecom>
 
-    <!-- Vollständige Adresse -->
+    <!--Adresse der behandelnden Einrichtung (Straßenanschrift) -->
     <address>
+        <!-- Stadt-/Ortsteil (Erweiterung an Address) -->
+        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct">
+          <valueString value="Zentrale Altstadt"/>
+        </extension>
+
+        <!-- Kennzeichnung als Straßenadresse -->
         <type value="both"/>
+
+        <!--Adresszeile mit strukturierten Erweiterungen (Straße, Hausnummer, optionaler Zusatz) -->
         <line value="Genesungsweg 4">
+            <!-- Straßenname -->
             <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
                 <valueString value="Genesungsweg"/>
             </extension>
+
+            <!-- Hausnummer -->
             <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
                 <valueString value="4"/>
             </extension>
+    
+            <!--Adresszusatz (optional) -->
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator">
+              <valueString value="Haus B"/>
+            </extension>
         </line>
+
+        <!-- Extra-Adresszeile für Stadt-/Ortsteil -->
+        <line value="Zentrale Altstadt"/>
+
+        <!-- Stadt/Ort -->
         <city value="Frechen"/>
+
+        <!-- Postleitzahl -->
         <postalCode value="50226"/>
+
+        <!-- Staat -->
         <country value="DE"/>
     </address>
-
 
 </Organization>
