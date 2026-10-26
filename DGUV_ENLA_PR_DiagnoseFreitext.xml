@@ -55,14 +55,8 @@
       <min value="1" />
       <max value="1" />
       <constraint>
-        <key value="dguv-Fraktur-1" />
-        <severity value="error" />
-        <human value="Wenn Fraktur vorliegt, muss AO-Klassifikation gesetzt sein." />
-        <expression value="(extension.where(url = 'Fraktur').valueBoolean = true) implies (extension.where('AO-Klassifikation').value.exists() and extension.where('AO-Klassifikation').value.as(string).matches('\\S' ))" />
-      </constraint>
-      <constraint>
         <key value="dguv-Fraktur-2" />
-        <severity value="error" />
+        <severity value="warning" />
         <human value="Wenn keine Fraktur vorliegt, darf keine AO-Klassifikation vorhanden sein." />
         <expression value="(extension.where(url = 'Fraktur').valueBoolean = false) implies (extension('AO-Klassifikation').exists()).not()" />
       </constraint>
@@ -79,7 +73,7 @@
     </element>
     <element id="Condition.extension:Frakturklassifikation.extension:Fraktur.value[x]">
       <path value="Condition.extension.extension.value[x]" />
-      <comment value="Wenn hier &quot;true&quot; eingetragen ist, muss in AO-Klassifikation.value[x] zwingend die AO-Klassifikation angegeben werden." />
+      <comment value="Wenn hier &quot;true&quot; eingetragen ist, sollte in AO-Klassifikation.value[x] die AO-Klassifikation angegeben werden, sofern es eine gibt." />
       <mustSupport value="true" />
     </element>
     <element id="Condition.extension:Frakturklassifikation.extension:AO-Klassifikation">
@@ -89,7 +83,7 @@
     </element>
     <element id="Condition.extension:Frakturklassifikation.extension:AO-Klassifikation.value[x]">
       <path value="Condition.extension.extension.value[x]" />
-      <comment value="Nur wenn in Fraktur.value[x] &quot;true&quot; eingetragen ist, muss hier zwingend die AO-Klassifikation angegeben werden (vgl. https://www.aofoundation.org bzw. https://classification.aoeducation.org/files/download/AOOTA_Classification_2018_Classification_brochure_1807031108.pdf)." />
+      <comment value="Nur wenn in Fraktur.value[x] &quot;true&quot; eingetragen ist, sollte hier die AO-Klassifikation angegeben werden, sofern es eine gibt (vgl. https://www.aofoundation.org bzw. https://classification.aoeducation.org/files/download/AOOTA_Classification_2018_Classification_brochure_1807031108.pdf). Andernfalls erfolgt eine Warnung." />
       <mustSupport value="true" />
     </element>
     <element id="Condition.identifier">
