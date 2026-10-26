@@ -8,7 +8,7 @@ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_BehandelndeEinrichtung_01.xml" die
  folgenden Szenarios (Standardfall):
  
 P: Maximalbefüllung einer Instanz BehandelndeEinrichtung (Meta-Daten, Narrativ, Identifier IKNR, behandelnde Fachabteilung,
-   Einrichtungsname, Telefonkontaktdaten, Straßenadresse mit Stadtteilangabe inkl. dafür eigenen line-Eintrag
+   Einrichtungsname, Kontaktdaten: Telefon/E-Mail, Straßenadresse mit Stadtteilangabe inkl. dafür eigenen line-Eintrag
    und damit Nicht-Auslösung des Constraints add-7)
 -->
 
@@ -56,10 +56,16 @@ P: Maximalbefüllung einer Instanz BehandelndeEinrichtung (Meta-Daten, Narrativ,
     <name value="Unfallkrankenhaus Frechen"/>
 
     <!-- Kontaktdaten -->
-    <!-- Hier: Telefonnummer -->
+    <!-- Telefonnummer -->
     <telecom>
         <system value="phone"/>
         <value value="+1-1234565789"/>
+    </telecom>
+
+    <!-- E-Mail -->
+    <telecom>
+        <system value="email"/>
+        <value value="irgendwer@ukh-fre.de"/>
     </telecom>
 
     <!--Adresse der behandelnden Einrichtung (Straßenanschrift) -->
@@ -73,7 +79,7 @@ P: Maximalbefüllung einer Instanz BehandelndeEinrichtung (Meta-Daten, Narrativ,
         <type value="both"/>
 
         <!--Adresszeile mit strukturierten Erweiterungen (Straße, Hausnummer, optionaler Zusatz) -->
-        <line value="Genesungsweg 4">
+        <line value="Genesungsweg 4, Haus B">
             <!-- Straßenname -->
             <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
                 <valueString value="Genesungsweg"/>

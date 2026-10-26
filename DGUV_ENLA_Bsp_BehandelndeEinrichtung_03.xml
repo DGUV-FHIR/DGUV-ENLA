@@ -5,7 +5,7 @@
  Datum: 26.10.2026
 
 Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_BehandelndeEinrichtung_03.xml" dient der Validierung
- folgenden Szenarios:
+folgenden Szenarios:
  
 N: Ausgehend von Standardfall:
 Weglassung des line-Elements für Stadtteil -> Auslösung Constraint add-7
@@ -55,10 +55,16 @@ Weglassung des line-Elements für Stadtteil -> Auslösung Constraint add-7
     <name value="Unfallkrankenhaus Frechen"/>
 
     <!-- Kontaktdaten -->
-    <!-- Hier: Telefonnummer -->
+    <!-- Telefonnummer -->
     <telecom>
         <system value="phone"/>
         <value value="+1-1234565789"/>
+    </telecom>
+
+    <!-- E-Mail -->
+    <telecom>
+        <system value="email"/>
+        <value value="irgendwer@ukh-fre.de"/>
     </telecom>
 
     <!--Adresse der behandelnden Einrichtung (Straßenanschrift) -->
@@ -72,7 +78,7 @@ Weglassung des line-Elements für Stadtteil -> Auslösung Constraint add-7
         <type value="both"/>
 
         <!--Adresszeile mit strukturierten Erweiterungen (Straße, Hausnummer, optionaler Zusatz) -->
-        <line value="Genesungsweg 4">
+        <line value="Genesungsweg 4, Haus B">
             <!-- Straßenname -->
             <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
                 <valueString value="Genesungsweg"/>
