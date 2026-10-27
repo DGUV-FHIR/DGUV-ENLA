@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ Author: FMa / LSc
+ Datum: 27.10.2026
+
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_Unfallversicherungstraeger_01.xml" dient der Validierung
+ folgenden Szenarios (Standardfall):
+ 
+ P: Maximalbefüllung einer Instanz Unfallversicherungstraeger (Meta-Daten, Narrativ, Identifier IKNR, 
+    Name des UV-Ts, Kontaktdaten: Telefon/E-Mail, Straßenadresse mit Stadtteilangabe inkl. dafür eigenen line-Eintrag
+    und damit Nicht-Auslösung des Constraints "add-7")
+-->
+
+<Organization xmlns="http://hl7.org/fhir">
+    <!--Meta-Daten-->
+    <id value="180f219f-97a8-486d-99d9-ed631fe4fc60" />
+    <meta>
+        <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Unfallversicherungstraeger" />
+    </meta>
+
+    <!--Narrativ-->
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+        <h1>Hier finden Sie das Beispiel eines Unfallversicherungsträgers für die verunfallte Person.</h1>
+        </div>
+    </text> 
+
+    <!-- Identifikatoren des Unfallversicherungstägers -->
+    <!-- Institutionskennzeichen (IKNR) -->
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+                <code value="XX" />
+                <display value="Organization identifier" />
+            </coding>
+        </type>
+        <system value="http://fhir.de/sid/arge-ik/iknr" />
+        <value value="121192344" />
+    </identifier>
+
+    <!-- Bezeichnung des Unfallversicherungsträgers -->
+    <name value="BG Verwaltung Berlin" />
+
+    <!-- Kontaktdaten -->
+    <!-- Telefon -->
+    <telecom>
+		<system value="phone"/>
+		<value value="030 77003-0"/>
+	</telecom>
+
+    <!-- E-Mail -->
+    <telecom>
+        <system value="email"/>
+        <value value="irgendeine@bg-vw-ber.de"/>
+    </telecom>
+
+    <!-- Adresse des Unfallversicherungsträgers (Straßenanschrift) -->
+    <address>
+        <!-- Stadt-/Ortsteil (Erweiterung an Address) -->
+        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct">
+          <valueString value="Quartier Latin"/>
+        </extension>
+
+        <!-- Kennzeichnung als Straßenadresse -->
+        <type value="both"/>
+
+        <!--Adresszeile mit strukturierten Erweiterungen (Straße, Hausnummer, optionaler Zusatz) -->
+        <line value="Markgrafenstraße 18, Besenkammer">
+            <!-- Straßenname -->
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                <valueString value="Markgrafenstraße"/>
+            </extension>
+
+            <!-- Hausnummer -->
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                <valueString value="18"/>
+            </extension>
+    
+            <!--Adresszusatz (optional) -->
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator">
+              <valueString value="Besenkammer"/>
+            </extension>
+        </line>
+
+        <!-- Extra-Adresszeile für Stadt-/Ortsteil -->
+        <line value="Quartier Latin"/>
+
+        <!-- Stadt/Ort -->
+        <city value="Berlin"/>
+
+        <!-- Postleitzahl -->
+        <postalCode value="10969"/>
+
+        <!-- Staat -->
+        <country value="DE"/>
+    </address>
+
+</Organization>
