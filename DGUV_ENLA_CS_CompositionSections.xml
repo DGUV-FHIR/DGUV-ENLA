@@ -79,6 +79,10 @@
     <display value="Krankenkasse" />
   </concept>
   <concept>
+    <code value="LEED" />
+    <display value="Leistungserbringende" />
+  </concept>
+  <concept>
     <code value="LEST" />
     <display value="Leistungserbringer" />
   </concept>

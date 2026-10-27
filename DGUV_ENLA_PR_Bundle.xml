@@ -74,7 +74,7 @@
           <type value="value" />
           <path value="resource.meta.profile" />
         </discriminator>
-        <rules value="closed" />
+        <rules value="open" />
       </slicing>
       <min value="1" />
       <mustSupport value="true" />
