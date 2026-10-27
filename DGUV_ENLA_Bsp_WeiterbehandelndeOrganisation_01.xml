@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ Author: FMa / LSc
+ Datum: 27.10.2026
+
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_WeiterbehandelndeOrganisation_01.xml" dient der Validierung
+ folgenden Szenarios (Standardfall):
+ 
+ P: Maximalbefüllung einer Instanz WeiterbehandelndeOrganisation (Meta-Daten, Narrativ, Identifier: BSNR/IKNR, behandelnde Fachabteilung,
+    Einrichtungsname, Kontaktdaten: Telefon/E-Mail, Straßenadresse mit Stadtteilangabe inkl. dafür eigenen line-Eintrag
+    und damit Nicht-Auslösung des Constraints add-7)
+-->
+
+<Organization xmlns="http://hl7.org/fhir">
+    <!--Meta-Daten-->
+    <id value="c9643334-ed27-4327-9eff-baff968982a0" />
+    <meta>
+        <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-WeiterbehandelndeOrganisation" />
+    </meta>
+
+    <!--Narrativ-->
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+        <h1>Hier finden Sie das Beispiel einer die verunfallte Person weiterbehandelnden Organisation.</h1>
+        </div>
+    </text>
+
+    <!-- Identifikatoren der weiterbehandelnden Organisation -->
+    <!-- Betriebsstätten-Nr. (BSNR) -->
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+                <code value="BSNR" />
+                <display value="Primary physician office number" />
+            </coding>
+        </type>
+        <system value="https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR" />
+        <value value="012300004" />
+    </identifier>
+
+    <!-- Institutionskennzeichen (IKNR) -->
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+                <code value="XX" />
+                <display value="Organization identifier" />
+            </coding>
+        </type>
+        <system value="http://fhir.de/sid/arge-ik/iknr" />
+        <value value="123456789" />
+    </identifier>
+
+    <!-- Typ der weiterbehandelnden Organisation -->
+    <!-- Hier: Behandelnde Fachabteilung -->
+    <type>  
+        <coding>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel" />
+            <version value="1.5.4" />
+            <code value="1900" />
+            <display value="Plastische Chirurgie" />
+        </coding>
+    </type>
+
+    <!-- Bezeichnung der weiterbehandelnden Organisation -->
+    <name value="Praxis Dr. med. Hans Peter Haas" />
+
+    <!-- Kontaktdaten -->
+    <!-- Telefon -->
+    <telecom>
+		<system value="phone"/>
+		<value value="0049 458 66 888"/>
+	</telecom>
+
+    <!-- E-Mail -->
+    <telecom>
+        <system value="email"/>
+        <value value="jemand@phph.de"/>
+    </telecom>
+
+    <!-- Adresse der weiterbehandelnden Organisation (Straßenanschrift) -->
+    <address>
+        <!-- Stadt-/Ortsteil (Erweiterung an Address) -->
+        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct">
+          <valueString value="Moritzvorstadt"/>
+        </extension>
+
+        <!-- Kennzeichnung als Straßenadresse -->
+        <type value="both"/>
+
+        <!--Adresszeile mit strukturierten Erweiterungen (Straße, Hausnummer, optionaler Zusatz) -->
+        <line value="Musterstr. 99, Gartenhaus">
+            <!-- Straßenname -->
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                <valueString value="Musterstr."/>
+            </extension>
+
+            <!-- Hausnummer -->
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                <valueString value="99"/>
+            </extension>
+    
+            <!--Adresszusatz (optional) -->
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator">
+              <valueString value="Gartenhaus"/>
+            </extension>
+        </line>
+
+        <!-- Extra-Adresszeile für Stadt-/Ortsteil -->
+        <line value="Moritzvorstadt"/>
+
+        <!-- Stadt/Ort -->
+        <city value="Dortmund"/>
+
+        <!-- Postleitzahl -->
+        <postalCode value="44227"/>
+
+        <!-- Staat -->
+        <country value="DE"/>
+    </address>
+
+</Organization>
