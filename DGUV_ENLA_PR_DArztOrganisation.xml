@@ -514,6 +514,12 @@
       <sliceName value="NichtAerztlicherKontakt" />
       <min value="1" />
       <max value="1" />
+      <constraint>
+        <key value="nonaerztl-1" />
+        <severity value="error" />
+        <human value="Falls &quot;false&quot; der Wert in Eintrag &quot;NichtAerztlicherKontakt&quot; ist, darf das Element &quot;Funktionseinheit&quot; nicht existieren." />
+        <expression value="(extension('NichtAerztlicherKontakt').valueBoolean = false) implies (extension('Funktionseinheit').exists().not())" />
+      </constraint>
     </element>
     <element id="Organization.contact.extension:NichtAerztlicherKontakt.extension">
       <path value="Organization.contact.extension.extension" />
@@ -524,12 +530,6 @@
       <sliceName value="NichtAerztlicherKontakt" />
       <min value="1" />
       <max value="1" />
-      <constraint>
-        <key value="nonaerztl-1" />
-        <severity value="error" />
-        <human value="Falls der Wert im NichtAerztlichenKontakt false ist muss die Funktionseinheit leer sein." />
-        <expression value="(extension('NichtAertzlicherKontakt').valueBoolean = false) implies (extension('Funktionseinheit').exists().not())" />
-      </constraint>
       <mustSupport value="true" />
     </element>
     <element id="Organization.contact.extension:NichtAerztlicherKontakt.extension:NichtAerztlicherKontakt.value[x]">
