@@ -14,7 +14,7 @@
 
 <Organization xmlns="http://hl7.org/fhir">
     <!--Meta-Daten-->
-    <id value="DGUV-ENLA-PR-Krankenkasse-01" />
+    <id value="446a540f-7d08-4926-98fe-2abd3094aa92" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Krankenkasse" />
     </meta>
@@ -23,7 +23,7 @@
     <text>
         <status value="generated"/>
         <div xmlns="http://www.w3.org/1999/xhtml">
-            <h1>Hier finden Sie ein Beispiel der Krankenkasse einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+            <h1>Hier finden Sie das Beispiel einer Krankenkasse der verunfallten Person.</h1>
         </div>
     </text>
 
