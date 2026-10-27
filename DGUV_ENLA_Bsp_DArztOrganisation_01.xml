@@ -9,7 +9,7 @@
  
  P: Maximalbefüllung einer Instanz DArztOrganisation (Meta-Daten, Narrativ, Identifier IKNR, Fachabteilung,
     Einrichtungsname, Telefonkontaktdaten, Straßenadresse mit Stadtteilangabe inkl. dafür eigenen line-Eintrag
-    und damit Nicht-Auslösung des Constraints add-7, nichtärztlicher Kontakt mit fkt.einheit, Name, Telefon-Nr.)
+    und damit Nicht-Auslösung des Constraints "add-7", nichtärztlicher Kontakt mit Funktionseinheit, Name, Telefon-Nr.)
 -->
 
 <Organization xmlns="http://hl7.org/fhir">
