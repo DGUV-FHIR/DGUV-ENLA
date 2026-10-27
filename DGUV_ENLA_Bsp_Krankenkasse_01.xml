@@ -1,23 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <!--
-    Author: Friedhelm Matten
-    Datum:  01.10.2025
+ Author: FMa / LSc
+ Datum: 27.10.2026
 
-
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_Krankenkasse_01.xml" dient der Validierung
+ folgenden Szenarios (Standardfall):
+ 
+ P: Maximalbefüllung einer Instanz Krankenkasse (Meta-Daten, Narrativ, Identifier IKNR, 
+    Krankenkassenname, Kontaktdaten: Telefon/E-Mail, Straßenadresse mit Stadtteilangabe inkl. dafür eigenen line-Eintrag
+    und damit Nicht-Auslösung des Constraints "add-7")
 -->
+
 <Organization xmlns="http://hl7.org/fhir">
+    <!--Meta-Daten-->
     <id value="DGUV-ENLA-Bsp-Krankenkasse" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Krankenkasse" />
     </meta>
 
+    <!--Narrativ-->
     <text>
         <status value="generated"/>
         <div xmlns="http://www.w3.org/1999/xhtml">
             <h1>Hier finden Sie ein Beispiel der Krankenkasse einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
         </div>
     </text>
-
 
     <!--IK-Nummer-->
     <identifier>
@@ -35,27 +43,58 @@
     <!-- Bezeichnung der Krankenkasse-->
     <name value="AOK Herzogtum Lauenburg"/>
 
-    <!-- Telefon Kontakt Krankenkasse -->
+    <!-- Kontaktdaten -->
+    <!-- Telefon -->
     <telecom>
         <system value="phone"/>
         <value value="01771234"/>
     </telecom>
 
-    <!-- Strassen Adresse der Krankenkasse und Postfach -->
+    <!-- E-Mail -->
+    <telecom>
+        <system value="email"/>
+        <value value="irgendwer@aok-lb.de"/>
+    </telecom>
+
+    <!-- Adresse der Krankenkasse (Straßenanschrift) -->
     <address>
+        <!-- Stadt-/Ortsteil (Erweiterung an Address) -->
+        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct">
+          <valueString value="Vorstadt"/>
+        </extension>
+
+        <!-- Kennzeichnung als Straßenadresse -->
         <type value="both"/>
-        <line value="Hauptstr. 91">
+
+        <!--Adresszeile mit strukturierten Erweiterungen (Straße, Hausnummer, optionaler Zusatz) -->
+        <line value="Hauptstraße 91, Souterrain">
+            <!-- Straßenname -->
             <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
                 <valueString value="Hauptstraße"/>
             </extension>
+
+            <!-- Hausnummer -->
             <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
                 <valueString value="91"/>
             </extension>
+    
+            <!--Adresszusatz (optional) -->
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator">
+              <valueString value="Souterrain"/>
+            </extension>
         </line>
+
+        <!-- Extra-Adresszeile für Stadt-/Ortsteil -->
+        <line value="Vorstadt"/>
+
+        <!-- Stadt/Ort -->
         <city value="Mölln"/>
+
+        <!-- Postleitzahl -->
         <postalCode value="23879"/>
+
+        <!-- Staat -->
         <country value="DE"/>
     </address>
-
 
 </Organization>
