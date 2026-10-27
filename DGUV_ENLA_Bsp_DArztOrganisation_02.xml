@@ -2,7 +2,7 @@
 
 <!--
  Author: FMa / LSc
- Datum: 26.10.2026
+ Datum: 27.10.2026
 
  Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_DArztOrganisation_02.xml" dient der Validierung
  folgenden Szenarios:
@@ -13,7 +13,7 @@
 
 <Organization xmlns="http://hl7.org/fhir">
     <!--Meta-Daten-->
-    <id value="DGUV-ENLA-Bsp-DArztOrganisation" />
+    <id value="cdc0ceec-dc27-44e5-a7c7-567a754dc912" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-DArztOrganisation" />
     </meta>
@@ -26,8 +26,8 @@
         </div>
     </text>
 
-    <!--Identifikatoren der D-Arzt-Organisation -->
-    <!--Institutionskennzeichen (IKNR) - Slice "Institutionskennzeichen"-->
+    <!-- Identifikatoren der D-Arzt-Organisation -->
+    <!-- Institutionskennzeichen (IKNR) -->
     <identifier>
         <type>
             <coding>
@@ -56,8 +56,8 @@
     <!-- Hier: Fachabteilung -->
     <type>  
         <coding>
-            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert" />
-            <version value="1.6.0" />
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel" />
+            <version value="1.5.4" />
             <code value="1600" />
             <display value="Unfallchirurgie" />
         </coding>
