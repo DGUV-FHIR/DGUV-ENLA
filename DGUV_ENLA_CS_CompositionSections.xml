@@ -23,6 +23,10 @@
     <display value="Aufnahmebefunde" />
   </concept>
   <concept>
+    <code value="BHAG" />
+    <display value="Behandlung" />
+  </concept>
+  <concept>
     <code value="BEMS" />
     <display value="Besondere Maßnahmen" />
   </concept>
@@ -63,9 +67,14 @@
     <code value="DORE" />
     <display value="Dokumentenreferenz" />
   </concept>
+
   <concept>
     <code value="ENBF" />
     <display value="Entlassbefunde" />
+  </concept>
+  <concept>
+    <code value="ETMG" />
+    <display value="Entlassmanagement" />
   </concept>
   <concept>
     <code value="HEMI" />
@@ -92,6 +101,10 @@
     <display value="Leistungserbringer" />
   </concept>
   <concept>
+    <code value="MDKA" />
+    <display value="Medikation" />
+  </concept>
+  <concept>
     <code value="MDAM" />
     <display value="Medikation - Arzneimittel" />
   </concept>
@@ -102,6 +115,10 @@
   <concept>
     <code value="MDIN" />
     <display value="Medikationsinformation" />
+  </concept>
+  <concept>
+    <code value="MDKA" />
+    <display value="Medikation" />
   </concept>
   <concept>
     <code value="MDRZ" />

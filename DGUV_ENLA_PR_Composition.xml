@@ -1008,5 +1008,557 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung">
+      <path value="Composition.section.section" />
+      <sliceName value="Behandlung" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.code">
+      <path value="Composition.section.section.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.code.coding">
+      <path value="Composition.section.section.code.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.code.coding.system">
+      <path value="Composition.section.section.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.code.coding.code">
+      <path value="Composition.section.section.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="BHAG" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.code.coding.display">
+      <path value="Composition.section.section.code.coding.display" />
+      <min value="1" />
+      <fixedString value="Behandlung" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section">
+      <path value="Composition.section.section.section" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code.coding.code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Therapie">
+      <path value="Composition.section.section.section" />
+      <sliceName value="Therapie" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Therapie.code">
+      <path value="Composition.section.section.section.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Therapie.code.coding">
+      <path value="Composition.section.section.section.code.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Therapie.code.coding.system">
+      <path value="Composition.section.section.section.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Therapie.code.coding.code">
+      <path value="Composition.section.section.section.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="THER" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Therapie.code.coding.display">
+      <path value="Composition.section.section.section.code.coding.display" />
+      <min value="1" />
+      <fixedString value="Therapie" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Therapie.entry">
+      <path value="Composition.section.section.section.entry" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Therapie" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Therapie.entry.reference">
+      <path value="Composition.section.section.section.entry.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Behandlungsverlauf">
+      <path value="Composition.section.section.section" />
+      <sliceName value="Behandlungsverlauf" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Behandlungsverlauf.code">
+      <path value="Composition.section.section.section.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Behandlungsverlauf.code.coding">
+      <path value="Composition.section.section.section.code.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Behandlungsverlauf.code.coding.system">
+      <path value="Composition.section.section.section.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Behandlungsverlauf.code.coding.code">
+      <path value="Composition.section.section.section.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="BHVF" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Behandlungsverlauf.code.coding.display">
+      <path value="Composition.section.section.section.code.coding.display" />
+      <min value="1" />
+      <fixedString value="Behandlungsverlauf" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Behandlungsverlauf.entry">
+      <path value="Composition.section.section.section.entry" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Behandlungsverlauf" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Behandlungsverlauf.entry.reference">
+      <path value="Composition.section.section.section.entry.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Medikation">
+      <path value="Composition.section.section.section" />
+      <sliceName value="Medikation" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Medikation.code">
+      <path value="Composition.section.section.section.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Medikation.code.coding">
+      <path value="Composition.section.section.section.code.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Medikation.code.coding.system">
+      <path value="Composition.section.section.section.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Medikation.code.coding.code">
+      <path value="Composition.section.section.section.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="MDKA" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Medikation.code.coding.display">
+      <path value="Composition.section.section.section.code.coding.display" />
+      <min value="1" />
+      <fixedString value="Medikation" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Medikation.section">
+      <path value="Composition.section.section.section.section" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code.coding.code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Medikation.section:Medikationsinformation">
+      <path value="Composition.section.section.section.section" />
+      <sliceName value="Medikationsinformation" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Medikation.section:Medikationsinformation.code">
+      <path value="Composition.section.section.section.section.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Medikation.section:Medikationsinformation.code.coding">
+      <path value="Composition.section.section.section.section.code.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Medikation.section:Medikationsinformation.code.coding.system">
+      <path value="Composition.section.section.section.section.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Medikation.section:Medikationsinformation.code.coding.code">
+      <path value="Composition.section.section.section.section.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="MDIN" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Medikation.section:Medikationsinformation.code.coding.display">
+      <path value="Composition.section.section.section.section.code.coding.display" />
+      <min value="1" />
+      <fixedString value="Medikationsinformation" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Medikation.section:Medikationsinformation.entry">
+      <path value="Composition.section.section.section.section.entry" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/MedicationStatement/DGUV-ENLA-PR-MedikationsInformation" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Medikation.section:Medikationsinformation.entry.reference">
+      <path value="Composition.section.section.section.section.entry.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Medikation.section:MedikationArzneimittel">
+      <path value="Composition.section.section.section.section" />
+      <sliceName value="MedikationArzneimittel" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Medikation.section:MedikationArzneimittel.code">
+      <path value="Composition.section.section.section.section.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Medikation.section:MedikationArzneimittel.code.coding">
+      <path value="Composition.section.section.section.section.code.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Medikation.section:MedikationArzneimittel.code.coding.system">
+      <path value="Composition.section.section.section.section.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Medikation.section:MedikationArzneimittel.code.coding.code">
+      <path value="Composition.section.section.section.section.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="MDAM" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Medikation.section:MedikationArzneimittel.code.coding.display">
+      <path value="Composition.section.section.section.section.code.coding.display" />
+      <min value="1" />
+      <fixedString value="Medikation - Arzneimittel" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Medikation.section:MedikationArzneimittel.entry">
+      <path value="Composition.section.section.section.section.entry" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationArzneimittel" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Medikation.section:MedikationArzneimittel.entry.reference">
+      <path value="Composition.section.section.section.section.entry.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Medikation.section:MedikationWirkstoff">
+      <path value="Composition.section.section.section.section" />
+      <sliceName value="MedikationWirkstoff" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Medikation.section:MedikationWirkstoff.code">
+      <path value="Composition.section.section.section.section.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Medikation.section:MedikationWirkstoff.code.coding">
+      <path value="Composition.section.section.section.section.code.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Medikation.section:MedikationWirkstoff.code.coding.system">
+      <path value="Composition.section.section.section.section.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Medikation.section:MedikationWirkstoff.code.coding.code">
+      <path value="Composition.section.section.section.section.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="MDWS" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Medikation.section:MedikationWirkstoff.code.coding.display">
+      <path value="Composition.section.section.section.section.code.coding.display" />
+      <min value="1" />
+      <fixedString value="Medikation - Wirkstoff" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Medikation.section:MedikationWirkstoff.entry">
+      <path value="Composition.section.section.section.section.entry" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationWirkstoff" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Medikation.section:MedikationWirkstoff.entry.reference">
+      <path value="Composition.section.section.section.section.entry.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Medikation.section:MedikationRezeptur">
+      <path value="Composition.section.section.section.section" />
+      <sliceName value="MedikationRezeptur" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Medikation.section:MedikationRezeptur.code">
+      <path value="Composition.section.section.section.section.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Medikation.section:MedikationRezeptur.code.coding">
+      <path value="Composition.section.section.section.section.code.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Medikation.section:MedikationRezeptur.code.coding.system">
+      <path value="Composition.section.section.section.section.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Medikation.section:MedikationRezeptur.code.coding.code">
+      <path value="Composition.section.section.section.section.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="MDRZ" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Medikation.section:MedikationRezeptur.code.coding.display">
+      <path value="Composition.section.section.section.section.code.coding.display" />
+      <min value="1" />
+      <fixedString value="Medikation - Rezeptur" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Medikation.section:MedikationRezeptur.entry">
+      <path value="Composition.section.section.section.section.entry" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationRezeptur" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:Medikation.section:MedikationRezeptur.entry.reference">
+      <path value="Composition.section.section.section.section.entry.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:MedikationFreitext">
+      <path value="Composition.section.section.section" />
+      <sliceName value="MedikationFreitext" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:MedikationFreitext.code">
+      <path value="Composition.section.section.section.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:MedikationFreitext.code.coding">
+      <path value="Composition.section.section.section.code.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:MedikationFreitext.code.coding.system">
+      <path value="Composition.section.section.section.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:MedikationFreitext.code.coding.code">
+      <path value="Composition.section.section.section.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="MDFX" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:MedikationFreitext.code.coding.display">
+      <path value="Composition.section.section.section.code.coding.display" />
+      <min value="1" />
+      <fixedString value="Medikation - Freitext" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:MedikationFreitext.entry">
+      <path value="Composition.section.section.section.entry" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationWirkstoff" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:StationaereBehandlung.section:Behandlung.section:MedikationFreitext.entry.reference">
+      <path value="Composition.section.section.section.entry.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement">
+      <path value="Composition.section" />
+      <sliceName value="Entlassmanagement" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.code">
+      <path value="Composition.section.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.code.coding">
+      <path value="Composition.section.code.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.code.coding.system">
+      <path value="Composition.section.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.code.coding.code">
+      <path value="Composition.section.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="ETMG" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.code.coding.display">
+      <path value="Composition.section.code.coding.display" />
+      <min value="1" />
+      <fixedString value="Entlassmanagement" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section">
+      <path value="Composition.section.section" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code.coding.code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <short value="Entlassbefunde" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:Entlassbefunde">
+      <path value="Composition.section.section" />
+      <sliceName value="Entlassbefunde" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:Entlassbefunde.code">
+      <path value="Composition.section.section.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:Entlassbefunde.code.coding">
+      <path value="Composition.section.section.code.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:Entlassbefunde.code.coding.system">
+      <path value="Composition.section.section.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:Entlassbefunde.code.coding.code">
+      <path value="Composition.section.section.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="ENBF" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:Entlassbefunde.code.coding.display">
+      <path value="Composition.section.section.code.coding.display" />
+      <min value="1" />
+      <fixedString value="Entlassbefunde" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:Entlassbefunde.entry">
+      <path value="Composition.section.section.entry" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Entlassbefunde" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:Entlassbefunde.entry.reference">
+      <path value="Composition.section.section.entry.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
   </differential>
 </StructureDefinition>
