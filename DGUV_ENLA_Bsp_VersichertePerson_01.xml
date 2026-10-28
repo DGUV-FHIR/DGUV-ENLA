@@ -2,7 +2,7 @@
 
 <!--
  Author: FMa / LSc
- Datum: 23.10.2026
+ Datum: 28.10.2026
 
  Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_VersichertePerson_01.xml" dient der Validierung
  folgenden Szenarios (Standardfall):
@@ -14,7 +14,7 @@
 
 <Patient xmlns="http://hl7.org/fhir">
   <!-- Meta-Daten -->
-  <id value="DGUV-ENLA-Bsp-VersichertePerson-01"/>
+  <id value="482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
   <meta>
     <profile value="http://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson"/>
   </meta>
@@ -139,40 +139,76 @@
   <!-- Geburtsdatum -->
   <birthDate value="2004-11-12"/>
 
-  <!-- Straßenadresse -->
-  <address>
-    <type value="both" />
-    <line value="Musterweg 1">
-        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
-            <valueString value="Musterweg" />
+    <!-- Adresse der versicherten Person -->
+    <!-- Straßenanschrift -->
+    <address>
+        <!-- Stadt-/Ortsteil -->
+        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct">
+          <valueString value="Zentrale Altstadt"/>
         </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
-            <valueString value="1" />
+
+        <!-- Kennzeichnung als Straßenadresse -->
+        <type value="both"/>
+
+        <!--Adresszeile mit strukturierten Erweiterungen (Straße, Hausnummer, optionaler Zusatz) -->
+        <line value="Musterweg 1, Terrasse">
+            <!-- Straßenname -->
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                <valueString value="Musterweg"/>
+            </extension>
+
+            <!-- Hausnummer -->
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                <valueString value="1"/>
+            </extension>
+    
+            <!--Adresszusatz (optional) -->
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator">
+              <valueString value="Terrasse"/>
+            </extension>
+        </line>
+
+        <!-- Extra-Adresszeile für Stadt-/Ortsteil -->
+        <line value="Zentrale Altstadt"/>
+
+        <!-- Stadt/Ort -->
+        <city value="Musterhausen"/>
+
+        <!-- Postleitzahl -->
+        <postalCode value="11111"/>
+
+        <!-- Staat -->
+        <country value="DE"/>
+    </address>
+
+    <!-- Postfachadresse -->
+    <address>
+        <!-- Stadt-/Ortsteil -->
+        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct">
+          <valueString value="Zweites Postamt"/>
         </extension>
-    </line>
-    <!-- Stadtteil für Straßenadresse -->
-    <line value="Zentrale Altstadt"/>
 
-    <city value="Musterhausen" />
-    <postalCode value="11111" />
-    <country value="DE" />
-  </address>
+        <!-- Kennzeichnung als Postfachadresse -->
+        <type value="postal" />
 
-  <!-- Postfachadresse -->
-  <address>
-    <type value="postal" />
-    <line value="Postfach 670525">
-        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox">
+        <!-- Postfachzeile mit strukturierter Erweiterung (Postfach) -->
+        <line value="Postfach 670525">
+          <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox">
             <valueString value="Postfach 670525" />
-        </extension>
-    </line>
+          </extension>
+        </line>
 
-    <!-- Stadtteil für Postfachadresse -->
-    <line value="Zweites Postamt"/>
+        <!-- Extra-Adresszeile für Stadt-/Ortsteil der Postfachadresse -->
+        <line value="Zweites Postamt"/>
 
-    <city value="Musterhausen" />
-    <postalCode value="11117" />
-    <country value="DE" />
-  </address>
+        <!-- Stadt/Ort -->
+        <city value="Musterhausen" />
+
+        <!-- Postleitzahl -->
+        <postalCode value="11117" />
+
+        <!-- Staat -->
+        <country value="DE" />
+    </address>
 
 </Patient>
