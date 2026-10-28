@@ -1,53 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-    Author: AFW
-    Datum:  27.10.26
-
-    Die vorliegende Beispiel Datei dient der Validierung 
-    der Datenaufnahme zu dem ......
-    
-    Zu beachten ist dabei ...
-
-    Durchzuführende Massnahmen:
-
-
--->
+<!-- Author: AFW Datum: 27.10.26 Die vorliegende Beispiel Datei dient der Validierung der Datenaufnahme zu dem ...... Zu beachten ist dabei ... Durchzuführende Massnahmen: -->
 <Composition xmlns="http://hl7.org/fhir">
-    <id value="c00f7826-5a3e-49aa-b499-3f8c6599bd2b"/>
+    <id value="c00f7826-5a3e-49aa-b499-3f8c6599bd2b" />
     <meta>
-        <profile value="http://fhir.dguv.de/ENLA/Composition/DGUV-ENLA-PR-Composition"/>
+        <profile value="http://fhir.dguv.de/ENLA/Composition/DGUV-ENLA-PR-Composition" />
     </meta>
 
     <text>
-        <status value="generated"/>
+        <status value="generated" />
         <div xmlns="http://www.w3.org/1999/xhtml">
             <h1>Hier finden Sie ein Beispiel der Compositionn einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
         </div>
     </text>
 
     <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-SonstigeBemerkungen">
-        <valueString value="Die sonstige Bemerkung."/>
+        <valueString value="Die sonstige Bemerkung." />
     </extension>
 
-    <status value="final"/>
+    <status value="final" />
     <type>
         <coding>
-            <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-Formtexte"/>
-            <code value="F2102"/>
-            <display value="Entlassungsbericht aus stationärer Behandlung (DAV/VAV/SAV)"/>
+            <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-Formtexte" />
+            <code value="F2102" />
+            <display value="Entlassungsbericht aus stationärer Behandlung (DAV/VAV/SAV)" />
         </coding>
     </type>
     <subject>
-         <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+        <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
     </subject>
 
 
-    <date value="2025-06-10T12:00:00+01:00"/>
+    <date value="2025-06-10T12:00:00+01:00" />
     <author>
-        <reference value="http://fhir.dguv.de/ENLA/Practitioner/DGUV_ENLA_PR_Leistungserbringer/53192032-6365-4659-8cc2-f9a7df67a466" />
+        <reference value="http://fhir.dguv.de/ENLA/Practitioner/53192032-6365-4659-8cc2-f9a7df67a466" />
     </author>
-    <title value="Entlassungsbericht aus stationärer Behandlung"/>
-    <!-- SECTION: Leistungserbringende  { mit [] + [] } -->
+    <title value="Entlassungsbericht aus stationärer Behandlung" />
+    <!-- SECTION: Leistungserbringende { mit [] + [] } -->
     <section>
         <code>
             <coding>
@@ -56,19 +44,204 @@
                 <display value="Leistungserbringende" />
             </coding>
         </code>
-        <!-- Leistungserbringende [Leistungserbringer] --> 
+        <!-- Leistungserbringende [Leistungserbringer] -->
         <section>
             <code>
                 <coding>
-                    <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections"/>
-                    <code value="LEST"/>
-                    <display value="Leistungserbringer"/>
+                    <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                    <code value="LEST" />
+                    <display value="Leistungserbringer" />
                 </coding>
             </code>
             <entry>
-                <reference value="http://fhir.dguv.de/ENLA/Practitioner/53192032-6365-4659-8cc2-f9a7df67a466"/>
+                <reference value="http://fhir.dguv.de/ENLA/Practitioner/53192032-6365-4659-8cc2-f9a7df67a466" />
+            </entry>
+        </section>
+        <!-- Leistungserbringende [D-Arzt] -->
+        <section>
+            <code>
+                <coding>
+                    <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                    <code value="DARZ" />
+                    <display value="D-Arzt" />
+                </coding>
+            </code>
+            <entry>
+                <reference value="http://fhir.dguv.de/ENLA/PractitionerRole/93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
+            </entry>
+        </section>
+        <!-- Leistungserbringende [DArztOrganisation] -->
+        <section>
+            <code>
+                <coding>
+                    <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                    <code value="DAOR" />
+                    <display value="D-Arzt-Organisation" />
+                </coding>
+            </code>
+            <entry>
+                <reference value="http://fhir.dguv.de/ENLA/Organization/cdc0ceec-dc27-44e5-a7c7-567a754dc912" />
+            </entry>
+        </section>
+        <!-- Leistungserbringende [BehandelndeEinrichtung] -->
+        <section>
+            <code>
+                <coding>
+                    <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                    <code value="BNEN" />
+                    <display value="Behandelnde Einrichtung" />
+                </coding>
+            </code>
+            <entry>
+                <reference value="http://fhir.dguv.de/ENLA/Organization/f952b0d1-bb04-402d-b0e6-cef800858f98" />
             </entry>
         </section>
     </section>
-
+    <!-- SECTION: Versicherung { mit [Unfallversicherungsträger] + [] } -->
+    <section>
+        <code>
+            <coding>
+                <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                <code value="VERS" />
+                <display value="Versicherung" />
+            </coding>
+        </code>
+        <!-- Versicherung [Unfallversicherungstraeger] -->
+        <section>
+            <code>
+                <coding>
+                    <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                    <code value="UVTR" />
+                    <display value="Unfallversicherungsträger" />
+                </coding>
+            </code>
+            <entry>
+                <reference value="http://fhir.dguv.de/ENLA/Organization/180f219f-97a8-486d-99d9-ed631fe4fc60" />
+            </entry>
+        </section>
+        <!-- Versicherung [Krankenkasse] -->
+        <section>
+            <code>
+                <coding>
+                    <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                    <code value="KRKA" />
+                    <display value="Krankenkasse" />
+                </coding>
+            </code>
+            <entry>
+                <reference value="http://fhir.dguv.de/ENLA/Organization/446a540f-7d08-4926-98fe-2abd3094aa92" />
+            </entry>
+        </section>
+        <!-- Versicherung [Pflegekasse] -->
+        <section>
+            <code>
+                <coding>
+                    <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                    <code value="PFKA" />
+                    <display value="Pflegekasse" />
+                </coding>
+            </code>
+            <entry>
+                <reference value="http://fhir.dguv.de/ENLA/Organization/bf64ac16-926b-4082-968a-f7c088364b83" />
+            </entry>
+        </section>
+        <!-- Versicherung [VersichertenVerhaeltnis] -->
+        <section>
+            <code>
+                <coding>
+                    <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                    <code value="VSVH" />
+                    <display value="Versichertenverhältnis" />
+                </coding>
+            </code>
+            <entry>
+                <reference value="http://fhir.dguv.de/ENLA/Coverage/75c6d854-876e-4b9d-8ea9-327a46c9c50f" />
+            </entry>
+        </section>
+    </section>
+    <!-- SECTION: Stationäre Behandlung { mit [] + [] } -->
+    <section>
+        <code>
+            <coding>
+                <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                <code value="STBH" />
+                <display value="Stationäre Behandlung" />
+            </coding>
+        </code>
+        <!-- Stationäre Behandlung [Aufenthaltsinformationen] -->
+        <section>
+            <code>
+                <coding>
+                    <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                    <code value="AUIN" />
+                    <display value="Aufenthaltsinformationen" />
+                </coding>
+            </code>
+            <entry>
+                <reference value="http://fhir.dguv.de/ENLA/Encounter/a33633b7-ab47-4341-b4e9-c856bb5e5878" />
+            </entry>
+        </section>
+        <!-- Stationäre Behandlung [Diagnostik] -->
+        <section>
+            <code>
+                <coding>
+                    <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                    <code value="DISK" />
+                    <display value="Diagnostik" />
+                </coding>
+            </code>
+            <!-- Stationäre Behandlung | Diagnostik [Diagnose - Freitext] -->
+            <section>
+                <code>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                        <code value="DGFT" />
+                        <display value="Diagnose - Freitext" />
+                    </coding>
+                </code>
+                <entry>
+                    <reference value="http://fhir.dguv.de/ENLA/Condition/84507618-4ff5-46d9-9e61-8ab15c9ce2a4" />
+                </entry>
+            </section>
+            <!-- Stationäre Behandlung | Diagnostik [Diagnose - Strukturiert] -->
+            <section>
+                <code>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                        <code value="DGST" />
+                        <display value="Diagnose - strukturiert" />
+                    </coding>
+                </code>
+                <entry>
+                    <reference value="http://fhir.dguv.de/ENLA/Condition/9acff578-cca8-4f9c-9f58-49e5cb91bbab" />
+                </entry>
+            </section>
+            <!-- Stationäre Behandlung | Diagnostik [Aufnahmebefunde] -->
+            <section>
+                <code>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                        <code value="AUBF" />
+                        <display value="Aufnahmebefunde" />
+                    </coding>
+                </code>
+                <entry>
+                    <reference value="http://fhir.dguv.de/ENLA/Observation/d39c416d-e1a1-43fd-afef-2763fd66473e" />
+                </entry>
+            </section>
+            <!-- Stationäre Behandlung | Diagnostik [Konsiliarbefunde] -->
+            <section>
+                <code>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                        <code value="KOBF" />
+                        <display value="Konsiliarbefunde" />
+                    </coding>
+                </code>
+                <entry>
+                    <reference value="http://fhir.dguv.de/ENLA/Observation/0a25be9c-af37-410b-bd43-6c7d3e1f1681" />
+                </entry>
+            </section>
+        </section>
+    </section>
 </Composition>
