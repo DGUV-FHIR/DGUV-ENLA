@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="DGUV-ENLA-PR-Unfallbetrieb" />
-  <url value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Unfallbetrieb" />
+  <id value="DGUV-ENLA-PR-Arbeitgeber" />
+  <url value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Arbeitgeber" />
   <version value="1.0" />
-  <name value="DGUV_ENLA_PR_Unfallbetrieb" />
-  <title value="Unfallbetrieb" />
+  <name value="DGUV_ENLA_PR_Arbeitgeber" />
+  <title value="Arbeitgeber" />
   <status value="draft" />
   <publisher value="Deutsche Gesetzliche Unfallversicherung e.V. (DGUV)" />
-  <description value="Dieses Profil bildet den Unfallbetrieb ab." />
+  <description value="Dieses Profil bildet den Arbeitgeber der verunfallten Person ab." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -41,12 +41,12 @@
       <sliceName value="enlaProfile" />
       <min value="1" />
       <max value="1" />
-      <fixedCanonical value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Unfallbetrieb" />
+      <fixedCanonical value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Arbeitgeber" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.name">
       <path value="Organization.name" />
-      <short value="Name des Unfallbetriebs" />
+      <short value="Name des Arbeitgeber" />
       <definition value="Name des Unfallbetriebs, Arbeitgebers, der Kita, der (Hoch-)Schule, - bei Pflegeunfall - der pflegebedürftigen Person" />
       <mustSupport value="true" />
     </element>
@@ -66,7 +66,7 @@
     </element>
     <element id="Organization.address">
       <path value="Organization.address" />
-      <short value="Adresse des Unfallbetriebes" />
+      <short value="Adresse des Arbeitgebers" />
       <max value="2" />
       <mustSupport value="true" />
     </element>
