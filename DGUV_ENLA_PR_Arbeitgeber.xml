@@ -84,19 +84,17 @@
     <element id="Organization.address:Strassenanschrift.line">
       <path value="Organization.address.line" />
       <min value="1" />
-      <max value="1" />
+      <max value="2" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.address:Strassenanschrift.line.extension">
       <path value="Organization.address.line.extension" />
-      <min value="2" />
       <max value="3" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.address:Strassenanschrift.line.extension:Strasse">
       <path value="Organization.address.line.extension" />
       <sliceName value="Strasse" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.address:Strassenanschrift.line.extension:Strasse.value[x]">
@@ -107,7 +105,6 @@
     <element id="Organization.address:Strassenanschrift.line.extension:Hausnummer">
       <path value="Organization.address.line.extension" />
       <sliceName value="Hausnummer" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.address:Strassenanschrift.line.extension:Hausnummer.value[x]">
@@ -153,19 +150,17 @@
     <element id="Organization.address:Postfach.line">
       <path value="Organization.address.line" />
       <min value="1" />
-      <max value="1" />
+      <max value="2" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.address:Postfach.line.extension">
       <path value="Organization.address.line.extension" />
-      <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.address:Postfach.line.extension:Postfach">
       <path value="Organization.address.line.extension" />
       <sliceName value="Postfach" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.address:Postfach.line.extension:Postfach.value[x]">
