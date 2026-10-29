@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
  Author: FMa / LSc
- Datum: 26.10.2026
+ Datum: 29.10.2026
 
  Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_DiagnoseFreitext_02.xml" dient der Validierung
  folgenden Szenarios:
@@ -43,6 +43,6 @@
 
     <!-- Referenz auf die VersichertePerson -->
     <subject>
-        <reference value="Patient/T37501234"/>
+        <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
     </subject>
 </Condition>
