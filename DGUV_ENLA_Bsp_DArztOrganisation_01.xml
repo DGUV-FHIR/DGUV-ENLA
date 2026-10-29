@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ Author: FMa / LSc
+ Datum: 27.10.2026
+
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_DArztOrganisation_01.xml" dient der Validierung
+ folgenden Szenarios (Standardfall):
+ 
+ P: Maximalbefüllung einer Instanz DArztOrganisation (Meta-Daten, Narrativ, Identifier IKNR, Fachabteilung,
+    Einrichtungsname, Telefonkontaktdaten, Straßenadresse mit Stadtteilangabe inkl. dafür eigenen line-Eintrag
+    und damit Nicht-Auslösung des Constraints "add-7", nichtärztlicher Kontakt mit Funktionseinheit, Name, Telefon-Nr.)
+-->
+
+<Organization xmlns="http://hl7.org/fhir">
+    <!--Meta-Daten-->
+    <id value="cdc0ceec-dc27-44e5-a7c7-567a754dc912" />
+    <meta>
+        <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-DArztOrganisation" />
+    </meta>
+
+    <!--Narrativ-->
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <h1>Hier finden Sie das Beispiel einer DArztOrganisation, durch die eine verunfallten Person zuerst behandelt wurde.</h1>
+        </div>
+    </text>
+
+    <!-- Identifikatoren der D-Arzt-Organisation -->
+    <!-- Institutionskennzeichen (IKNR) -->
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+                <code value="XX" />
+                <display value="Organization identifier" />
+            </coding>
+        </type>
+        <system value="http://fhir.de/sid/arge-ik/iknr" />
+        <value value="123456789" />
+    </identifier>
+
+    <!-- Standortnummer -->
+    <!--identifier>
+        <type>
+            <coding>
+                <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_ENLA_identifier_type|1.7.0" />
+                <code value="KSN" />
+            </coding>
+        </type>
+        <system value="http://fhir.de/sid/dkgev/standortnummer" />
+        <value value="243234999" />
+    </identifier-->
+
+    <!-- Typ der D-Arzt-Organisation -->
+    <!-- Hier: Fachabteilung -->
+    <type>  
+        <coding>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel" />
+            <version value="1.5.4" />
+            <code value="1600" />
+            <display value="Unfallchirurgie" />
+        </coding>
+    </type>
+
+    <!-- Name der D-Arzt-Organisation -->
+    <name value="Unfallkrankenhaus Berlin"/>
+
+    <!-- Kontaktdaten -->
+    <!-- Telefon -->
+    <telecom>
+        <system value="phone"/>
+        <value value="+1-1234565789"/>
+    </telecom>
+
+    <!-- 2. Telefonnummer -->
+    <telecom>
+        <system value="phone"/>
+        <value value="+1-1234565999"/>
+    </telecom>
+
+    <!-- Adresse der D-Arzt-Organisation (Straßenanschrift) -->
+    <address>
+        <!-- Stadt-/Ortsteil (Erweiterung an Address) -->
+        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct">
+          <valueString value="Nordteil"/>
+        </extension>
+
+        <!-- Kennzeichnung als Straßenadresse -->
+        <type value="both"/>
+
+        <!--Adresszeile mit strukturierten Erweiterungen (Straße, Hausnummer, optionaler Zusatz) -->
+        <line value="Musterstraße 1, Hinterhaus">
+            <!-- Straßenname -->
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                <valueString value="Musterstraße"/>
+            </extension>
+
+            <!-- Hausnummer -->
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                <valueString value="1"/>
+            </extension>
+    
+            <!--Adresszusatz (optional) -->
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator">
+              <valueString value="Hinterhaus"/>
+            </extension>
+        </line>
+
+        <!-- Extra-Adresszeile für Stadt-/Ortsteil -->
+        <line value="Nordteil"/>
+
+        <!-- Stadt/Ort -->
+        <city value="Berlin"/>
+
+        <!-- Postleitzahl -->
+        <postalCode value="11111"/>
+
+        <!-- Staat -->
+        <country value="DE"/>
+    </address>
+
+    <!-- Nicht Ärztlicher Kontakt -->
+    <contact>
+        <extension url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-NichtAerztlicherAnsprechpartner">
+            <!-- NICHT-ärztlicher Kontakt ? -->
+            <extension url="NichtAerztlicherKontakt">
+                <valueBoolean value="true"/>
+            </extension>
+            <!-- Funktionseinheit bei nicht-ärztlichen Kontakten -->
+            <extension url="Funktionseinheit">
+                <valueString value="Physiotherapie"/>
+            </extension>
+        </extension>
+
+        <!-- Name des Kontakts -->
+        <name>
+          <use value="official" />
+          <!-- Nachname -->
+          <family value="Müller" />
+          <!-- Vorname -->
+          <given value="Lieschen" />
+        </name>
+
+        <!-- telefonischer Kontakt -->
+        <telecom>
+            <system value="phone"/>
+            <value value="+1-1234565789"/>
+        </telecom>
+   </contact>
+   
+</Organization>

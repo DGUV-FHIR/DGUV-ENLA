@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <!--
  Author: FMa / LSc
- Datum: 09.06.2026
+ Datum: 29.10.2026
 
- Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_DiagnoseFreitext.xml" dient der Validierung
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_DiagnoseFreitext_01.xml" dient der Validierung
  folgenden Szenarios (Standardfall):
  
  P: Maximalbefüllung einer Instanz DiagnoseFreitext (Meta-Daten, Narrativ,
-    Nicht-Auslösung des Constraints dguv-Fraktur-1 (also Fraktur: ja und AO-Klassifikation vorhanden),
-    Freitextdiagnose, Ref. auf verunfallte Person)
+    Fraktur: ja, AO-Klassifikation, Freitextdiagnose, Ref. auf verunfallte Person)
 -->
 
  <Condition xmlns="http://hl7.org/fhir">
-    <id value="DGUV-ENLA-PR-DiagnoseFreitext"/>
+    <!--Meta-Daten-->
+    <id value="84507618-4ff5-46d9-9e61-8ab15c9ce2a4"/>
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseFreitext"/>
     </meta>
 
+    <!--Narrativ-->
     <text>
         <status value="generated"/>
         <div xmlns="http://www.w3.org/1999/xhtml">
@@ -24,11 +26,14 @@
         </div>
     </text>
 
-    <!-- AO Klassifikation-->
+    <!--Frakturklassifikation-->
     <extension url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-Frakturklassifikation">
+        <!--Fraktur vorhanden?-->
         <extension url="Fraktur">
             <valueBoolean value="true"/> 
         </extension>
+
+    <!--AO-Klassifikation-->
         <extension url="AO-Klassifikation">
             <valueString value="12A 12B 12C"/>
         </extension>
@@ -41,6 +46,6 @@
 
     <!-- Referenz auf die VersichertePerson -->
     <subject>
-        <reference value="Patient/T37501234"/>
+        <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
     </subject>
 </Condition>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ Author: FMa / LSc
+ Datum: 28.10.2026
+
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_Arbeitgeber_01.xml" dient der Validierung
+ folgenden Szenarios (Standardfall):
+ 
+ P: Maximalbefüllung einer Instanz Arbeitgeber (Meta-Daten, Narrativ, Arbeitgebername, Kontaktdaten: Telefon, Straßen-/Postfachadresse
+    jeweils mit Stadtteilangabe inkl. eines dafür eigenen line-Eintrags und damit Nicht-Auslösung des Constraints add-7)
+-->
+
+<Organization xmlns="http://hl7.org/fhir">
+    <!--Meta-Daten-->
+    <id value="bef1dc10-a361-4eba-8fcc-073f771df44b" />
+    <meta>
+        <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Arbeitgeber" />
+    </meta>
+
+   <!--Narrativ-->
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <h1>Hier finden Sie das Beispiel für den Arbeitgeber der verunfallten Person.</h1>
+        </div>
+    </text> 
+
+    <!-- Bezeichnung des Arbeitgebers-->
+    <name value="Sankt Augustiner 6 Tage Rennen GmbH"/>
+
+    <!-- Kontaktdaten -->
+    <!-- Telefon -->
+    <telecom>
+        <system value="phone"/>
+        <value value="01761234"/>
+    </telecom>
+
+    <!-- Adresse des Arbeitgebers -->
+    <!-- Straßenanschrift -->
+    <address>
+        <!-- Stadt-/Ortsteil -->
+        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct">
+          <valueString value="Birlinghoven"/>
+        </extension>
+
+        <!-- Kennzeichnung als Straßenadresse -->
+        <type value="both"/>
+
+        <!--Adresszeile mit strukturierten Erweiterungen (Straße, Hausnummer, optionaler Zusatz) -->
+        <line value="Johann-Lafer-Gasse 2, Sonnenterrasse">
+            <!-- Straßenname -->
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                <valueString value="Johann-Lafer-Gasse"/>
+            </extension>
+
+            <!-- Hausnummer -->
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                <valueString value="2"/>
+            </extension>
+    
+            <!--Adresszusatz (optional) -->
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator">
+              <valueString value="Sonnenterrasse"/>
+            </extension>
+        </line>
+
+        <!-- Extra-Adresszeile für Stadt-/Ortsteil -->
+        <line value="Birlinghoven"/>
+
+        <!-- Stadt/Ort -->
+        <city value="Sankt Augustin"/>
+
+        <!-- Postleitzahl -->
+        <postalCode value="53757"/>
+
+        <!-- Staat -->
+        <country value="DE"/>
+    </address>
+
+    <!-- Postfachadresse -->
+    <address>
+        <!-- Stadt-/Ortsteil -->
+        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct">
+          <valueString value="Niederpleis - Postfachgebäude"/>
+        </extension>
+
+        <!-- Kennzeichnung als Postfachadresse -->
+        <type value="postal" />
+
+        <!-- Postfachzeile mit strukturierter Erweiterung (Postfach) -->
+        <line value="Postfach 670525">
+          <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox">
+            <valueString value="Postfach 670525" />
+          </extension>
+        </line>
+
+        <!-- Extra-Adresszeile für Stadt-/Ortsteil der Postfachadresse -->
+        <line value="Niederpleis - Postfachgebäude"/>
+
+        <!-- Stadt/Ort -->
+        <city value="Sankt Augustin" />
+
+        <!-- Postleitzahl -->
+        <postalCode value="53758" />
+
+        <!-- Staat -->
+        <country value="DE" />
+    </address>
+
+</Organization>

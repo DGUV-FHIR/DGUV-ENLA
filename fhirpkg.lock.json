@@ -1,16 +1,63 @@
 {
-  "updated": "2026-06-03T15:35:02.3422128+02:00",
-  "dependencies": {
-    "de.basisprofil.r4": "1.5.4",
-    "hl7.fhir.r4.core": "4.0.1",
-    "dguv.basis": "1.5.0",
-    "kbv.basis": "1.7.0",
-    "de.medizininformatikinitiative.kerndatensatz.fall": "2025.0.0",
-    "de.medizininformatikinitiative.kerndatensatz.meta": "2025.0.3",
-    "de.gematik.isik-medikation": "3.1.1",
-    "de.medizininformatikinitiative.kerndatensatz.medikation": "1.0.11",
-    "hl7.fhir.uv.ips": "1.0.0",
-    "de.gematik.isik-basismodul": "3.1.1"
-  },
-  "missing": {}
+  "updated": "2026-10-22T08:25:21.9720065+02:00",
+  "lockFileVersion": 2,
+  "dependencies": [
+    {
+      "name": "de.basisprofil.r4",
+      "version": "1.5.4"
+    },
+    {
+      "name": "hl7.fhir.r4.core",
+      "version": "4.0.1"
+    },
+    {
+      "name": "dguv.basis",
+      "version": "1.5.2"
+    },
+    {
+      "name": "de.basisprofil.r4",
+      "version": "1.5.0"
+    },
+    {
+      "name": "kbv.basis",
+      "version": "1.7.0"
+    },
+    {
+      "name": "de.basisprofil.r4",
+      "version": "1.5.2"
+    },
+    {
+      "name": "de.medizininformatikinitiative.kerndatensatz.fall",
+      "version": "2025.0.0"
+    },
+    {
+      "name": "de.medizininformatikinitiative.kerndatensatz.meta",
+      "version": "2025.0.3"
+    },
+    {
+      "name": "de.gematik.isik-medikation",
+      "version": "3.1.1"
+    },
+    {
+      "name": "de.medizininformatikinitiative.kerndatensatz.medikation",
+      "version": "1.0.11"
+    },
+    {
+      "name": "de.medizininformatikinitiative.kerndatensatz.meta",
+      "version": "1.0.3"
+    },
+    {
+      "name": "hl7.fhir.uv.ips",
+      "version": "1.0.0"
+    },
+    {
+      "name": "de.gematik.isik-basismodul",
+      "version": "3.1.1"
+    },
+    {
+      "name": "de.basisprofil.r4",
+      "version": "1.4.0"
+    }
+  ],
+  "missing": []
 }

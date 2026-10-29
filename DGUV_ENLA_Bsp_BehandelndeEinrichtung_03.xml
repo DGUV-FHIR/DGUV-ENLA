@@ -2,19 +2,23 @@
 
 <!--
  Author: LSc
- Datum: 12.06.2026
+ Datum: 29.10.2026
 
- Ausgehend von Standardfall:
+Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_BehandelndeEinrichtung_03.xml" dient der Validierung
+folgenden Szenarios:
  
- N: Zusätzliche Angabe eines Stadtteils, aber ohne entsprechendes line-Element -> Auslösung Constraint add-7
+N: Ausgehend von Standardfall:
+Weglassung des line-Elements für Stadtteil -> Auslösung Constraint add-7
 -->
 
 <Organization xmlns="http://hl7.org/fhir">
-    <id value="BehandelndeEinrichtung-234" />
+    <!--Meta-Daten-->
+    <id value="f952b0d1-bb04-402d-b0e6-cef800858f98" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-BehandelndeEinrichtung" />
     </meta>
 
+    <!--Narrativ-->
     <text>
         <status value="generated"/>
         <div xmlns="http://www.w3.org/1999/xhtml">
@@ -22,7 +26,8 @@
         </div>
     </text>    
 
-    <!-- Identifizierung der behandelnde Einrichtung-->
+    <!--Identifikatoren der behandelnden Einrichtung-->
+    <!--Institutionskennzeichen (IKNR) - Slice "Institutionskennzeichen"-->
     <identifier>
         <type>
             <coding>
@@ -35,7 +40,8 @@
         <value value="260530784" />
     </identifier>
 
-    <!-- behandelnde Fachabteilung -->
+    <!-- Typ der behandelnden Einrichtung -->
+    <!-- Hier: Behandelnde Fachabteilung -->
     <type>  
         <coding>
             <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel" />
@@ -45,33 +51,60 @@
         </coding>
     </type>
 
-    <!-- Name der Einrichtung -->
+    <!-- Name der behandelnden Einrichtung -->
     <name value="Unfallkrankenhaus Frechen"/>
 
-    <!-- Telefon contact-->
+    <!-- Kontaktdaten -->
+    <!-- Telefonnummer -->
     <telecom>
         <system value="phone"/>
         <value value="+1-1234565789"/>
     </telecom>
 
-    <!-- Vollständige Adresse -->
+    <!-- E-Mail -->
+    <telecom>
+        <system value="email"/>
+        <value value="irgendwer@ukh-fre.de"/>
+    </telecom>
+
+    <!--Adresse der behandelnden Einrichtung (Straßenanschrift) -->
     <address>
+        <!-- Stadt-/Ortsteil (Erweiterung an Address) -->
         <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct">
-                <valueString value="Quartier Latin"/>
+          <valueString value="Zentrale Altstadt"/>
         </extension>
+
+        <!-- Kennzeichnung als Straßenadresse -->
         <type value="both"/>
-        <line value="Genesungsweg 4">
+
+        <!--Adresszeile mit strukturierten Erweiterungen (Straße, Hausnummer, optionaler Zusatz) -->
+        <line value="Genesungsweg 4, Haus B">
+            <!-- Straßenname -->
             <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
                 <valueString value="Genesungsweg"/>
             </extension>
+
+            <!-- Hausnummer -->
             <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
                 <valueString value="4"/>
             </extension>
+    
+            <!--Adresszusatz (optional) -->
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator">
+              <valueString value="Haus B"/>
+            </extension>
         </line>
+
+        <!-- KEINE Extra-Adresszeile für Stadt-/Ortsteil -->
+
+        <!-- Stadt/Ort -->
         <city value="Frechen"/>
+
+        <!-- Postleitzahl -->
         <postalCode value="50226"/>
+
+        <!-- Staat -->
         <country value="DE"/>
     </address>
-
 
 </Organization>

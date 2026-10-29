@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ Author: FMa / LSc
+ Datum: 28.10.2026
+
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_VersichertePerson_01.xml" dient der Validierung
+ folgenden Szenarios (Standardfall):
+ 
+ P: Maximalbefüllung einer Instanz VersichertePerson (Meta-Daten, Narrative, Nationalität,
+    1 VersichertenId, 2 Patientennummern, 1 PKV-Identifier, 
+    Name ausführlich, Kontaktmöglichkeiten (Telefon), Geschlecht, Geburtsdatum, Straßen-/Postfachadresse jeweils mit Stadtteil)
+-->
+
+<Patient xmlns="http://hl7.org/fhir">
+  <!-- Meta-Daten -->
+  <id value="482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
+  <meta>
+    <profile value="http://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson"/>
+  </meta>
+
+  <!-- Narrativ -->
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h1>Dies ist das Beispiel einer verunfallten Person entsprechend dem VersichertePerson-Profil der DGUV.</h1>
+    </div>
+  </text>
+  
+  <!-- Nationalität -->
+  <extension url="http://hl7.org/fhir/StructureDefinition/patient-nationality">
+  <!--extension url="http://hl7.org/fhir/ValueSet/iso3166-1-2|4.0.1" -->      
+    <extension url="code" >
+        <valueCodeableConcept>
+          <coding>
+            <system value="urn:iso:std:iso:3166" />
+            <code value="DE" />
+            <display value="Germany" />
+          </coding>
+        </valueCodeableConcept>
+    </extension>
+     <extension url="period" >
+      <valuePeriod>
+        <start value="2004-11-12"/>
+        <end value="2024-01-01"/>
+      </valuePeriod>
+    </extension>
+  </extension>
+
+  <!-- VersichertenId - Lebenslange Krankenversichertennummer -->
+  <identifier>
+    <type>
+        <coding>
+            <system value="http://fhir.de/CodeSystem/identifier-type-de-basis" />
+            <code value="KVZ10" />
+        </coding>
+    </type>
+    <system value="http://fhir.de/sid/gkv/kvid-10" />
+    <value value="S123456789" />
+  </identifier>
+
+  <!-- Patientennummer 1 - Krankenhausspezifisch -->
+  <identifier>
+    <type>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+            <code value="MR" />
+        </coding>
+    </type>
+    <system value="http://marthakrankenhaus.de/patientennummern" />
+    <value value="MKH111111111" />
+  </identifier>
+
+  <!-- Patientennummer 2 - Krankenhausspezifisch -->
+  <identifier>
+    <type>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+            <code value="MR" />
+        </coding>
+    </type>
+    <system value="http://lazarusklinik.de/patientennummern" />
+    <value value="LKH222222222" />
+  </identifier>
+
+  <!-- Versichertennummer_PKV -->
+  <identifier>
+    <type>
+        <coding>
+            <system value="http://fhir.de/CodeSystem/identifier-type-de-basis" />
+            <code value="PKV" />
+        </coding>
+    </type>
+    <value value="S12874238" />
+    <assigner>
+      <display value="AXA-Nummernvergabestelle" />
+    </assigner>
+  </identifier>
+
+  <!--Namenszusatz, Name, Namensnachsatz, Vorsatzwort, Vorname, Präfix(-Qualifier) der versicherten Person-->
+  <name>
+    <use value="official" />
+
+    <family value="Prof. Dr. Dr. Gräfin vom Auengrund jun. Univ. MdB">
+      <extension url="http://fhir.de/StructureDefinition/humanname-namenszusatz">
+        <valueString value="Gräfin" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+        <valueString value="Auengrund" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix">
+        <valueString value="vom" />
+      </extension>
+    </family>
+
+    <given value="Kunigunde" />
+
+    <prefix value="Prof. Dr. Dr.">
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+        <valueCode value="AC" />
+      </extension>
+    </prefix>
+
+    <suffix value="jun." />
+    <suffix value="Univ." />
+    <suffix value="MdB" />
+
+  </name>
+
+  <!-- Kontaktdaten -->
+  <telecom>
+    <system value="phone"/>
+    <value value="0049177/00000000"/>
+  </telecom>
+
+  <!-- Geschlecht -->
+  <gender value="male"/>
+
+  <!-- Geburtsdatum -->
+  <birthDate value="2004-11-12"/>
+
+    <!-- Adresse der versicherten Person -->
+    <!-- Straßenanschrift -->
+    <address>
+        <!-- Stadt-/Ortsteil -->
+        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct">
+          <valueString value="Zentrale Altstadt"/>
+        </extension>
+
+        <!-- Kennzeichnung als Straßenadresse -->
+        <type value="both"/>
+
+        <!--Adresszeile mit strukturierten Erweiterungen (Straße, Hausnummer, optionaler Zusatz) -->
+        <line value="Musterweg 1, Terrasse">
+            <!-- Straßenname -->
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                <valueString value="Musterweg"/>
+            </extension>
+
+            <!-- Hausnummer -->
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                <valueString value="1"/>
+            </extension>
+    
+            <!--Adresszusatz (optional) -->
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator">
+              <valueString value="Terrasse"/>
+            </extension>
+        </line>
+
+        <!-- Extra-Adresszeile für Stadt-/Ortsteil -->
+        <line value="Zentrale Altstadt"/>
+
+        <!-- Stadt/Ort -->
+        <city value="Musterhausen"/>
+
+        <!-- Postleitzahl -->
+        <postalCode value="11111"/>
+
+        <!-- Staat -->
+        <country value="DE"/>
+    </address>
+
+    <!-- Postfachadresse -->
+    <address>
+        <!-- Stadt-/Ortsteil -->
+        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct">
+          <valueString value="Zweites Postamt"/>
+        </extension>
+
+        <!-- Kennzeichnung als Postfachadresse -->
+        <type value="postal" />
+
+        <!-- Postfachzeile mit strukturierter Erweiterung (Postfach) -->
+        <line value="Postfach 670525">
+          <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox">
+            <valueString value="Postfach 670525" />
+          </extension>
+        </line>
+
+        <!-- Extra-Adresszeile für Stadt-/Ortsteil der Postfachadresse -->
+        <line value="Zweites Postamt"/>
+
+        <!-- Stadt/Ort -->
+        <city value="Musterhausen" />
+
+        <!-- Postleitzahl -->
+        <postalCode value="11117" />
+
+        <!-- Staat -->
+        <country value="DE" />
+    </address>
+
+</Patient>

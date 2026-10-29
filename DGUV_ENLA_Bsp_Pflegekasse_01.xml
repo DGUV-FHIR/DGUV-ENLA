@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ Author: FMa / LSc
+ Datum: 27.10.2026
+
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_Pflegekasse_01.xml" dient der Validierung
+ folgenden Szenarios (Standardfall):
+ 
+ P: Maximalbefüllung einer Instanz Pflegekasse (Meta-Daten, Narrativ, Identifier IKNR, 
+    Pflegekassenname, Kontaktdaten: Telefon/E-Mail, Straßenadresse mit Stadtteilangabe inkl. dafür eigenen line-Eintrag
+    und damit Nicht-Auslösung des Constraints "add-7")
+-->
+
+<Organization xmlns="http://hl7.org/fhir">
+    <!--Meta-Daten-->
+    <id value="bf64ac16-926b-4082-968a-f7c088364b83" />
+    <meta>
+        <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Pflegekasse" />
+    </meta>
+
+    <!--Narrativ-->
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <h1>Hier finden Sie das Beispiel der Pflegekasse einer pflegebedürftigen Person, die durch die verunfallte Person gepflegt wurde.</h1>
+        </div>
+    </text>
+
+    <!-- Identifikatoren der Pflegekasse -->
+    <!-- Institutionskennzeichen (IKNR) -->
+      <identifier>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+                <code value="XX" />
+                <display value="Organization identifier" />
+            </coding>
+        </type>
+        <system value="http://fhir.de/sid/arge-ik/iknr" />
+        <value value="999999999" />
+    </identifier>
+
+    <!-- Bezeichnung der Pflegekasse-->
+    <name value="Pflegekasse Nord-Ostwestfalen Süd"/>
+
+    <!-- Kontaktdaten -->
+    <!-- Telefon -->
+    <telecom>
+        <system value="phone"/>
+        <value value="01751234"/>
+    </telecom>
+
+    <!-- E-Mail -->
+    <telecom>
+        <system value="email"/>
+        <value value="irgendeiner@pkk-nows.de"/>
+    </telecom>
+
+    <!-- Adresse der Pflegekasse (Straßenanschrift) -->
+    <address>
+        <!-- Stadt-/Ortsteil (Erweiterung an Address) -->
+        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct">
+          <valueString value="Tiefstadt"/>
+        </extension>
+
+        <!-- Kennzeichnung als Straßenadresse -->
+        <type value="both"/>
+
+        <!--Adresszeile mit strukturierten Erweiterungen (Straße, Hausnummer, optionaler Zusatz) -->
+        <line value="Nebenstraße 82, Balkon">
+            <!-- Straßenname -->
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                <valueString value="Nebenstraße"/>
+            </extension>
+
+            <!-- Hausnummer -->
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                <valueString value="82"/>
+            </extension>
+    
+            <!--Adresszusatz (optional) -->
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator">
+              <valueString value="Balkon"/>
+            </extension>
+        </line>
+
+        <!-- Extra-Adresszeile für Stadt-/Ortsteil -->
+        <line value="Tiefstadt"/>
+
+        <!-- Stadt/Ort -->
+        <city value="Mölln"/>
+
+        <!-- Postleitzahl -->
+        <postalCode value="23879"/>
+
+        <!-- Staat -->
+        <country value="DE"/>
+    </address>
+
+</Organization>
