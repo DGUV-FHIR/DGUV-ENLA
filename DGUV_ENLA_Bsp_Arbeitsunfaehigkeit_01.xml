@@ -13,7 +13,7 @@
 
 <Observation xmlns="http://hl7.org/fhir">
   <!--Meta-Daten-->
-  <id value="DGUV-ENLA-Bsp-Arbeitsunfaehigkeit" />
+  <id value="bbc56617-923d-4076-8bad-43cd861031c7" />
   <meta>
       <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Arbeitsunfaehigkeit" />
   </meta>
@@ -26,7 +26,7 @@
     </div>
   </text> 
 
-  <!-- Observation status -->
+  <!-- Berichtsstatus -->
   <status value="final"/>
 
   <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
@@ -43,15 +43,14 @@
       <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
   </subject>
 
-  <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
-  <!-- effectiveDateTime value="2025-07-03" /> -->
+  <!-- Letzter Tag der Arbeitsunfähigkeit (nicht eingetragen) -->
 
-  <!-- Behandelnde(-r) Ärztin/Arzt-->
+  <!-- Behandelnde(-r) D-Ärztin/Arzt, Referenz auf Rolle -->
   <performer>
-      <reference value="DArzt/T37501234" />
+      <reference value="http://fhir.dguv.de/ENLA/PractitionerRole/93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
   </performer>  
 
-  <!-- Art der Arbeitsunfaehigkeit -->  
+  <!-- Art der Arbeitsunfähigkeit -->  
   <valueCodeableConcept>
     <coding>
         <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Arbeitsunfaehigkeit" />

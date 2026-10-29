@@ -8,12 +8,13 @@
  folgenden Szenarios:
  
  N: Ausgehend vom Standardfall:
-    Auslösung Constraint dguv-auflex-1 (also Value: AUFLEX, aber Flexible AU nicht korrekt gefüllt)
+    Auslösung Constraint dguv-auflex-1 (also Value: AUFLEX, aber Flexible AU existiert nicht)
+    Alternative Maximalbefüllung (geeignet für Bundle)
 -->
 
 <Observation xmlns="http://hl7.org/fhir">
   <!--Meta-Daten-->
-  <id value="DGUV-ENLA-Bsp-Arbeitsunfaehigkeit-1" />
+  <id value="bbc56617-923d-4076-8bad-43cd861031c7" />
   <meta>
       <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Arbeitsunfaehigkeit" />
   </meta>
@@ -26,7 +27,7 @@
     </div>
   </text> 
 
-  <!-- Observation status -->  
+  <!-- Berichtsstatus -->
   <status value="final"/>
 
   <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
@@ -43,31 +44,17 @@
       <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
   </subject>
 
-  <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
-  <!-- effectiveDateTime value="2025-07-03" /> -->
+  <!-- Letzter Tag der Arbeitsunfähigkeit (nicht eingetragen) -->
 
-  <!-- Behandelnde(-r) Ärztin/Arzt-->
+  <!-- Behandelnde(-r) D-Ärztin/Arzt, Referenz auf Rolle -->
   <performer>
-      <reference value="DArzt/T37501234" />
+      <reference value="http://fhir.dguv.de/ENLA/PractitionerRole/93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
   </performer>
 
-<!--  
-    In dem Fall, dass der code value="AUFLEX" und der Displaywert display="Arbeitsunfähig voraussichtliche Dauer" ist, müssen die Felder
-      Attribut "value[x].extension. … .FlexibleAU.value[x].value"
-      Attribut "value[x].extension. … .FlexibleAU.value[x].unit"
-    ausgefüllt sein.
-    Attribut "value[x]"
-    Bei "AF" ("Arbeitsfähig") gibt es KEINE Wiedereingliederung (vgl. DGUV_ENLA_PR_stufenweiseWiedereingliederung).
--->
-
-  <!-- FlexAU -->
+  <!-- Art der Arbeitsunfähigkeit  -->
   <valueCodeableConcept>
-    <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-FlexAU">
-      <valueDuration>
-        <value value="2" />
-        <unit value="" />
-      </valueDuration>
-    </extension>
+  <!-- Voraussichtlichen AU-Dauer (nicht vorhanden) -->
+
     <coding>
         <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Arbeitsunfaehigkeit" />
         <code value="AUFLEX" />
