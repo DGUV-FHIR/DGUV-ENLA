@@ -2,7 +2,7 @@
 
 <!--
  Author: LSc
- Datum: 26.10.2026
+ Datum: 29.10.2026
 
 Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_BehandelndeEinrichtung_03.xml" dient der Validierung
 folgenden Szenarios:
@@ -13,7 +13,7 @@ Weglassung des line-Elements für Stadtteil -> Auslösung Constraint add-7
 
 <Organization xmlns="http://hl7.org/fhir">
     <!--Meta-Daten-->
-    <id value="BehandelndeEinrichtung-234" />
+    <id value="f952b0d1-bb04-402d-b0e6-cef800858f98" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-BehandelndeEinrichtung" />
     </meta>

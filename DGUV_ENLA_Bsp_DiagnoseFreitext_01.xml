@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <!--
  Author: FMa / LSc
  Datum: 29.10.2026
@@ -12,7 +13,7 @@
 
  <Condition xmlns="http://hl7.org/fhir">
     <!--Meta-Daten-->
-    <id value="DGUV-ENLA-PR-DiagnoseFreitext-01"/>
+    <id value="84507618-4ff5-46d9-9e61-8ab15c9ce2a4"/>
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseFreitext"/>
     </meta>
