@@ -23,6 +23,10 @@
     <display value="Aufnahmebefunde" />
   </concept>
   <concept>
+    <code value="BHAG" />
+    <display value="Behandlung" />
+  </concept>
+  <concept>
     <code value="BEMS" />
     <display value="Besondere Maßnahmen" />
   </concept>
@@ -55,12 +59,22 @@
     <display value="Diagnose - strukturiert" />
   </concept>
   <concept>
+    <code value="DISK" />
+    <display value="Diagnostik" />
+  </concept>
+
+  <concept>
     <code value="DORE" />
     <display value="Dokumentenreferenz" />
   </concept>
+
   <concept>
     <code value="ENBF" />
     <display value="Entlassbefunde" />
+  </concept>
+  <concept>
+    <code value="ETMG" />
+    <display value="Entlassmanagement" />
   </concept>
   <concept>
     <code value="HEMI" />
@@ -79,8 +93,16 @@
     <display value="Krankenkasse" />
   </concept>
   <concept>
+    <code value="LEED" />
+    <display value="Leistungserbringende" />
+  </concept>
+  <concept>
     <code value="LEST" />
     <display value="Leistungserbringer" />
+  </concept>
+  <concept>
+    <code value="MDKA" />
+    <display value="Medikation" />
   </concept>
   <concept>
     <code value="MDAM" />
@@ -93,6 +115,10 @@
   <concept>
     <code value="MDIN" />
     <display value="Medikationsinformation" />
+  </concept>
+  <concept>
+    <code value="MDKA" />
+    <display value="Medikation" />
   </concept>
   <concept>
     <code value="MDRZ" />
@@ -115,9 +141,15 @@
     <display value="Reha-Maßnahmen" />
   </concept>
   <concept>
+    <code value="STBH" />
+    <display value="Stationäre Behandlung" />
+  </concept>
+
+  <concept>
     <code value="STWG" />
     <display value="Stufenweise Wiedereingliederung" />
   </concept>
+
   <concept>
     <code value="THEM" />
     <display value="Therapieempfehlung" />
@@ -137,6 +169,10 @@
   <concept>
     <code value="UVTR" />
     <display value="Unfallversicherungsträger" />
+  </concept>
+  <concept>
+    <code value="VERS" />
+    <display value="Versicherung" />
   </concept>
   <concept>
     <code value="VSVH" />

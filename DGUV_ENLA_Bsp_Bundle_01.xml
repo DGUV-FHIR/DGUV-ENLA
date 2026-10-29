@@ -1,0 +1,1720 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Author: AFW Datum: Die vorliegende Beispiel Datei .... dient der Validierung der Datenaufnahme zu dem ...... Zu beachten ist dabei ... Durchzuführende Massnahmen: -->
+<Bundle xmlns="http://hl7.org/fhir">
+    <id value="5d75b64f-a8a1-49b8-8d33-bd16423b3e6e" />
+    <meta>
+        <profile value="http://fhir.dguv.de/ENLA/Bundle/DGUV-ENLA-PR-Bundle" />
+    </meta>
+
+    <identifier>
+        <!-- Server Anteil der URL-->
+        <system value="http://fhir.dguv.de/ENLA/NamingSystem/DGUV-ENLA-NS-Nachrichtenkennung" />
+        <value value="12345" />
+    </identifier>
+
+    <!-- Dokumenten Art -->
+    <type value="document" />
+
+    <!-- Zeitpunkt -->
+    <timestamp value="2025-06-10T12:00:00+01:00" />
+
+    <!-- ======= ENTRY 00 — COMPOSITION ======= -->
+    <entry>
+        <!-- 0 -->
+        <fullUrl value="http://fhir.dguv.de/ENLA/Composition/c00f7826-5a3e-49aa-b499-3f8c6599bd2b" />
+        <resource>
+            <Composition xmlns="http://hl7.org/fhir">
+                <id value="c00f7826-5a3e-49aa-b499-3f8c6599bd2b" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Composition/DGUV-ENLA-PR-Composition" />
+                </meta>
+
+                <text>
+                    <status value="generated" />
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel der Compositionn einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
+                <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-SonstigeBemerkungen">
+                    <valueString value="Die sonstige Bemerkung." />
+                </extension>
+
+                <status value="final" />
+                <type>
+                    <coding>
+                        <system value="http://fhir.dguv.de/Basis/CodeSystem/DGUV-Basis-CS-Formtexte" />
+                        <code value="F2102" />
+                        <display value="Entlassungsbericht aus stationärer Behandlung (DAV/VAV/SAV)" />
+                    </coding>
+                </type>
+                <subject>
+                    <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </subject>
+
+
+                <date value="2025-06-10T12:00:00+01:00" />
+                <author>
+                    <reference value="http://fhir.dguv.de/ENLA/Practitioner/53192032-6365-4659-8cc2-f9a7df67a466" />
+                </author>
+                <title value="Entlassungsbericht aus stationärer Behandlung" />
+                <!-- SECTION: Leistungserbringende { mit [] + [] } -->
+                <section>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                            <code value="LEED" />
+                            <display value="Leistungserbringende" />
+                        </coding>
+                    </code>
+                    <!-- Leistungserbringende [Leistungserbringer] -->
+                    <section>
+                        <code>
+                            <coding>
+                                <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                                <code value="LEST" />
+                                <display value="Leistungserbringer" />
+                            </coding>
+                        </code>
+                        <entry>
+                            <reference value="http://fhir.dguv.de/ENLA/Practitioner/53192032-6365-4659-8cc2-f9a7df67a466" />
+                        </entry>
+                    </section>
+                    <!-- Leistungserbringende [D-Arzt] -->
+                    <section>
+                        <code>
+                            <coding>
+                                <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                                <code value="DARZ" />
+                                <display value="D-Arzt" />
+                            </coding>
+                        </code>
+                        <entry>
+                            <reference value="http://fhir.dguv.de/ENLA/PractitionerRole/93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
+                        </entry>
+                    </section>
+                    <!-- Leistungserbringende [DArztOrganisation] -->
+                    <section>
+                        <code>
+                            <coding>
+                                <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                                <code value="DAOR" />
+                                <display value="D-Arzt-Organisation" />
+                            </coding>
+                        </code>
+                        <entry>
+                            <reference value="http://fhir.dguv.de/ENLA/Organization/cdc0ceec-dc27-44e5-a7c7-567a754dc912" />
+                        </entry>
+                    </section>
+                    <!-- Leistungserbringende [BehandelndeEinrichtung] -->
+                    <section>
+                        <code>
+                            <coding>
+                                <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                                <code value="BNEN" />
+                                <display value="Behandelnde Einrichtung" />
+                            </coding>
+                        </code>
+                        <entry>
+                            <reference value="http://fhir.dguv.de/ENLA/Organization/f952b0d1-bb04-402d-b0e6-cef800858f98" />
+                        </entry>
+                    </section>
+                </section>
+                <!-- SECTION: Versicherung { mit [Unfallversicherungsträger] + [] } -->
+                <section>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                            <code value="VERS" />
+                            <display value="Versicherung" />
+                        </coding>
+                    </code>
+                    <!-- Versicherung [Unfallversicherungstraeger] -->
+                    <section>
+                        <code>
+                            <coding>
+                                <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                                <code value="UVTR" />
+                                <display value="Unfallversicherungsträger" />
+                            </coding>
+                        </code>
+                        <entry>
+                            <reference value="http://fhir.dguv.de/ENLA/Organization/180f219f-97a8-486d-99d9-ed631fe4fc60" />
+                        </entry>
+                    </section>
+                    <!-- Versicherung [Krankenkasse] -->
+                    <section>
+                        <code>
+                            <coding>
+                                <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                                <code value="KRKA" />
+                                <display value="Krankenkasse" />
+                            </coding>
+                        </code>
+                        <entry>
+                            <reference value="http://fhir.dguv.de/ENLA/Organization/446a540f-7d08-4926-98fe-2abd3094aa92" />
+                        </entry>
+                    </section>
+                    <!-- Versicherung [Pflegekasse] -->
+                    <section>
+                        <code>
+                            <coding>
+                                <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                                <code value="PFKA" />
+                                <display value="Pflegekasse" />
+                            </coding>
+                        </code>
+                        <entry>
+                            <reference value="http://fhir.dguv.de/ENLA/Organization/bf64ac16-926b-4082-968a-f7c088364b83" />
+                        </entry>
+                    </section>
+                    <!-- Versicherung [VersichertenVerhaeltnis] -->
+                    <section>
+                        <code>
+                            <coding>
+                                <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                                <code value="VSVH" />
+                                <display value="Versichertenverhältnis" />
+                            </coding>
+                        </code>
+                        <entry>
+                            <reference value="http://fhir.dguv.de/ENLA/Coverage/75c6d854-876e-4b9d-8ea9-327a46c9c50f" />
+                        </entry>
+                    </section>
+                </section>
+                <!-- SECTION: Stationäre Behandlung { mit [] + [] } -->
+                <section>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                            <code value="STBH" />
+                            <display value="Stationäre Behandlung" />
+                        </coding>
+                    </code>
+                    <!-- Stationäre Behandlung [Aufenthaltsinformationen] -->
+                    <section>
+                        <code>
+                            <coding>
+                                <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                                <code value="AUIN" />
+                                <display value="Aufenthaltsinformationen" />
+                            </coding>
+                        </code>
+                        <entry>
+                            <reference value="http://fhir.dguv.de/ENLA/Encounter/a33633b7-ab47-4341-b4e9-c856bb5e5878" />
+                        </entry>
+                    </section>
+                    <!-- Stationäre Behandlung [Diagnostik] -->
+                    <section>
+                        <code>
+                            <coding>
+                                <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                                <code value="DISK" />
+                                <display value="Diagnostik" />
+                            </coding>
+                        </code>
+                        <!-- Stationäre Behandlung | Diagnostik [Diagnose - Freitext] -->
+                        <section>
+                            <code>
+                                <coding>
+                                    <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                                    <code value="DGFT" />
+                                    <display value="Diagnose - Freitext" />
+                                </coding>
+                            </code>
+                            <entry>
+                                <reference value="http://fhir.dguv.de/ENLA/Condition/84507618-4ff5-46d9-9e61-8ab15c9ce2a4" />
+                            </entry>
+                        </section>
+                        <!-- Stationäre Behandlung | Diagnostik [Diagnose - Strukturiert] -->
+                        <section>
+                            <code>
+                                <coding>
+                                    <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                                    <code value="DGST" />
+                                    <display value="Diagnose - strukturiert" />
+                                </coding>
+                            </code>
+                            <entry>
+                                <reference value="http://fhir.dguv.de/ENLA/Condition/9acff578-cca8-4f9c-9f58-49e5cb91bbab" />
+                            </entry>
+                        </section>
+                        <!-- Stationäre Behandlung | Diagnostik [Aufnahmebefunde] -->
+                        <section>
+                            <code>
+                                <coding>
+                                    <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                                    <code value="AUBF" />
+                                    <display value="Aufnahmebefunde" />
+                                </coding>
+                            </code>
+                            <entry>
+                                <reference value="http://fhir.dguv.de/ENLA/Observation/d39c416d-e1a1-43fd-afef-2763fd66473e" />
+                            </entry>
+                        </section>
+                        <!-- Stationäre Behandlung | Diagnostik [Konsiliarbefunde] -->
+                        <section>
+                            <code>
+                                <coding>
+                                    <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                                    <code value="KOBF" />
+                                    <display value="Konsiliarbefunde" />
+                                </coding>
+                            </code>
+                            <entry>
+                                <reference value="http://fhir.dguv.de/ENLA/Observation/0a25be9c-af37-410b-bd43-6c7d3e1f1681" />
+                            </entry>
+                        </section>
+                    </section>
+                    <!-- Stationäre Behandlung [Behandlung] -->
+                    <section>
+                        <code>
+                            <coding>
+                                <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                                <code value="BHAG" />
+                                <display value="Behandlung" />
+                            </coding>
+                        </code>
+                        <!-- Stationäre Behandlung | Behandlung [Therapie] -->
+                        <section>
+                            <code>
+                                <coding>
+                                    <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                                    <code value="THER" />
+                                    <display value="Therapie" />
+                                </coding>
+                            </code>
+                            <entry>
+                                <reference value="http://fhir.dguv.de/ENLA/Observation/2288ca98-76e8-4daf-bfb3-dd36c0efbb39" />
+                            </entry>
+                        </section>
+                        <!-- Stationäre Behandlung | Behandlung [Behandlungsverlauf] -->
+                        <section>
+                            <code>
+                                <coding>
+                                    <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                                    <code value="BHVF" />
+                                    <display value="Behandlungsverlauf" />
+                                </coding>
+                            </code>
+                            <entry>
+                                <reference value="http://fhir.dguv.de/ENLA/Observation/0c6d28f5-2b67-4308-9d90-6a53ecd9ce7e" />
+                            </entry>
+                        </section>
+                        <!-- Stationäre Behandlung | Behandlung [Medikation] -->
+                        <section>
+                            <code>
+                                <coding>
+                                    <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                                    <code value="MDKA" />
+                                    <display value="Medikation" />
+                                </coding>
+                            </code>
+                            <!-- Stationäre Behandlung | Behandlung | Medikation [MedikationsInformation] -->
+                            <section>
+                                <code>
+                                    <coding>
+                                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                                        <code value="MDIN" />
+                                        <display value="Medikationsinformation" />
+                                    </coding>
+                                </code>
+                                <entry>
+                                    <reference value="http://fhir.dguv.de/ENLA/MedicationStatement/cf72d600-1c4d-44bf-a8b3-ec100f1a4947" />
+                                </entry>
+
+                            </section>
+                            <!-- Stationäre Behandlung | Behandlung | Medikation [MedikationArzneimittel] -->
+                            <section>
+                                <code>
+                                    <coding>
+                                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                                        <code value="MDAM" />
+                                        <display value="Medikation - Arzneimittel" />
+                                    </coding>
+                                </code>
+                                <entry>
+                                    <reference value="http://fhir.dguv.de/ENLA/Medication/4b28cbef-80e7-4838-b15b-b2d9dfc4461b" />
+                                </entry>
+                            </section>
+                            <!-- Stationäre Behandlung | Behandlung | Medikation [MedikationWirkstoff] -->
+                            <section>
+                                <code>
+                                    <coding>
+                                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                                        <code value="MDWS" />
+                                        <display value="Medikation - Wirkstoff" />
+                                    </coding>
+                                </code>
+                                <entry>
+                                    <reference value="http://fhir.dguv.de/ENLA/Medication/8947dca1-69fd-4184-a55f-8f7f32b0a914" />
+                                </entry>
+
+                            </section>
+                            <!-- Stationäre Behandlung | Behandlung | Medikation [MedikationRezeptur] -->
+                            <section>
+                                <code>
+                                    <coding>
+                                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                                        <code value="MDRZ" />
+                                        <display value="Medikation - Rezeptur" />
+                                    </coding>
+                                </code>
+                                <entry>
+                                    <reference value="http://fhir.dguv.de/ENLA/Medication/347b8239-6420-4b3a-a873-6b62e1fa1b0f" />
+                                </entry>
+
+                            </section>
+                            <!-- Stationäre Behandlung | Behandlung | Medikation [MedikationFreitext] -->
+                            <section>
+                                <code>
+                                    <coding>
+                                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                                        <code value="MDFX" />
+                                        <display value="Medikation - Freitext" />
+                                    </coding>
+                                </code>
+                                <entry>
+                                    <reference value="http://fhir.dguv.de/ENLA/Medication/4c88e3c8-821d-40eb-87fa-1e129b3ccace" />
+                                </entry>
+
+                            </section>
+
+
+                        </section>
+                    </section>
+                </section>
+                <!-- SECTION: Entlassmanagement { mit [] + [] } -->
+                <section>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                            <code value="ETMG" />
+                            <display value="Entlassmanagement" />
+                        </coding>
+                    </code>
+                    <!-- Entlassmanagement [Entlassbefunde] -->
+                    <section>
+                        <code>
+                            <coding>
+                                <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                                <code value="ENBF" />
+                                <display value="Entlassbefunde" />
+                            </coding>
+                        </code>
+                        <entry>
+                            <reference value="http://fhir.dguv.de/ENLA/Observation/4f518fd0-15dd-471a-ab4e-fe5ab3fe979e" />
+                        </entry>
+                    </section>
+
+                </section>
+            </Composition>
+        </resource>
+    </entry>
+    <!-- ======= ENTRY 01 — Versicherte Person (PATIENT) ======= -->
+    <entry>
+        <!-- 1 -->
+        <fullUrl value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+        <resource>
+            <Patient xmlns="http://hl7.org/fhir">
+                <!-- Meta-Daten -->
+                <id value="482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Patient/DGUV-ENLA-PR-VersichertePerson" />
+                </meta>
+
+                <!-- Narrativ -->
+                <text>
+                    <status value="generated" />
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
+                <!-- Nationalität -->
+                <extension url="http://hl7.org/fhir/StructureDefinition/patient-nationality">
+                    <!--extension url="http://hl7.org/fhir/ValueSet/iso3166-1-2|4.0.1" -->
+                    <extension url="code">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="urn:iso:std:iso:3166" />
+                                <code value="DE" />
+                                <display value="Germany" />
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="period">
+                        <valuePeriod>
+                            <start value="2004-11-12" />
+                            <end value="2024-01-01" />
+                        </valuePeriod>
+                    </extension>
+                </extension>
+
+                <!-- GKV Identifier -->
+                <!-- Validierung: Constraint wirft keinen Fehler, da GKV- und PKV-Identifier nicht gleichzeitig vorhanden sind. -->
+                <identifier>
+                    <type>
+                        <coding>
+                            <system value="http://fhir.de/CodeSystem/identifier-type-de-basis" />
+                            <code value="KVZ10" />
+                        </coding>
+                    </type>
+                    <system value="http://fhir.de/sid/gkv/kvid-10" />
+                    <value value="S123456789" />
+                </identifier>
+
+                <!-- Name -->
+                <name>
+                    <use value="official" />
+                    <family value="Mustermann">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+                            <valueString value="Mustermann" />
+                        </extension>
+                    </family>
+                    <given value="Lionel" />
+                </name>
+
+                <!-- Kontaktdaten -->
+                <telecom>
+                    <system value="phone" />
+                    <value value="0049177/00000000" />
+                </telecom>
+
+                <!-- Geschlecht -->
+                <gender value="male" />
+
+                <!-- Geburtsdatum -->
+                <birthDate value="2004-11-12" />
+
+                <!-- Straßenadresse -->
+                <address>
+                    <type value="both" />
+                    <line value="Musterweg 1">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                            <valueString value="Musterweg" />
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                            <valueString value="1" />
+                        </extension>
+                    </line>
+                    <!-- Stadtteil für Straßenadresse -->
+                    <line value="Zentrale Altstadt" />
+
+                    <city value="Musterhausen" />
+                    <postalCode value="11111" />
+                    <country value="DE" />
+                </address>
+
+                <!-- Postfachadresse -->
+                <address>
+                    <type value="postal" />
+                    <line value="Postfach 670525">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox">
+                            <valueString value="Postfach 670525" />
+                        </extension>
+                    </line>
+
+                    <!-- Stadtteil für Postfachadresse -->
+                    <line value="Zweites Postamt" />
+
+                    <city value="Musterhausen" />
+                    <postalCode value="11117" />
+                    <country value="DE" />
+                </address>
+            </Patient>
+        </resource>
+    </entry>
+    <!-- ======= ENTRY 02 — Autor (PRACTITIONER) — Herkunft: DGUV_ENLA_Bsp_Leistungserbringer_01 ======= -->
+    <entry>
+        <!-- 2 -->
+        <fullUrl value="http://fhir.dguv.de/ENLA/Practitioner/53192032-6365-4659-8cc2-f9a7df67a466" />
+        <resource>
+            <Practitioner xmlns="http://hl7.org/fhir">
+                <id value="53192032-6365-4659-8cc2-f9a7df67a466" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringer" />
+                </meta>
+
+                <text>
+                    <status value="generated" />
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel des Leistungserbringers einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
+                <identifier>
+                    <type>
+                        <coding>
+                            <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+                            <code value="LANR" />
+                            <display value="Lifelong physician number" />
+                        </coding>
+                    </type>
+                    <system value="https://fhir.kbv.de/NamingSystem/KBV_NS_Base_ANR" />
+                    <value value="123456799" />
+                </identifier>
+                <name>
+                    <use value="official" />
+                    <family value="Musteraerztin14">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+                            <valueString value="Musteraerztin14" />
+                        </extension>
+                    </family>
+                    <given value="Maria" />
+                    <prefix value="Dr.">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+                            <valueCode value="AC" />
+                        </extension>
+                    </prefix>
+                </name>
+            </Practitioner>
+        </resource>
+    </entry>
+    <!-- ======= ENTRY 03 — DArzt (PRACTITIONERROLE) — Herkunft: DGUV_ENLA_Bsp_ ======= -->
+    <entry>
+        <!-- 03 -->
+        <fullUrl value="http://fhir.dguv.de/ENLA/PractitionerRole/93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
+        <resource>
+            <PractitionerRole xmlns="http://hl7.org/fhir">
+                <id value="93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/PractitionerRole/DGUV-ENLA-PR-DArzt" />
+                </meta>
+
+                <text>
+                    <status value="generated" />
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel des DArztes einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
+                <!-- Behandelnde(-r) Ärtztin/Arzt-->
+                <practitioner>
+                    <reference value="http://fhir.dguv.de/ENLA/Practitioner/53192032-6365-4659-8cc2-f9a7df67a466" />
+                </practitioner>
+
+                <!-- DArztOrganisation-->
+                <organization>
+                    <reference value="http://fhir.dguv.de/ENLA/Organization/c27-44e5-a7c7-567a754dc912" />
+                </organization>
+
+                <!-- Rolle der Einrichtung-->
+                <code>
+                    <coding>
+                        <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_Base_Role_Care" />
+                        <version value="1.7.0" />
+                        <code value="AD" />
+                        <display value="Ärztliche(r) DirektorIn" />
+                    </coding>
+                </code>
+
+                <!-- KBV Fachgruppe -->
+                <specialty>
+                    <coding>
+                        <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BAR2_ARZTNRFACHGRUPPE" />
+                        <version value="1.03" />
+                        <code value="01" />
+                        <display value="Allgemeinmedizin" />
+                    </coding>
+                </specialty>
+
+            </PractitionerRole>
+        </resource>
+    </entry>
+    <!-- ======= ENTRY 04 — DArztOrganisation (ORGANISATION) — Herkunft: DGUV_ENLA_Bsp_ ======= -->
+    <entry>
+        <!-- 35 -->
+        <fullUrl value="http://fhir.dguv.de/ENLA/Organization/cdc0ceec-dc27-44e5-a7c7-567a754dc912" />
+        <resource>
+            <Organization xmlns="http://hl7.org/fhir">
+                <id value="cdc0ceec-dc27-44e5-a7c7-567a754dc912" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-DArztOrganisation" />
+                </meta>
+
+                <text>
+                    <status value="generated" />
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel der DArztOrganisation einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
+                <!-- Identifikation DArzt Organisation -->
+                <identifier>
+                    <type>
+                        <coding>
+                            <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+                            <code value="XX" />
+                            <display value="Organization identifier" />
+                        </coding>
+                    </type>
+                    <system value="http://fhir.de/sid/arge-ik/iknr" />
+                    <value value="123456789" />
+                </identifier>
+
+                <!-- Name der DArzt Organisation-->
+                <name value="Unfallkrankenhaus Berlin" />
+
+                <!-- telefonischer Kontakt -->
+                <telecom>
+                    <system value="phone" />
+                    <value value="+1-1234565789" />
+                </telecom>
+
+                <!-- Vollständige Adresse -->
+                <address>
+                    <type value="both" />
+                    <line value="Musterstraße 1">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                            <valueString value="Musterstraße" />
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                            <valueString value="1" />
+                        </extension>
+                    </line>
+                    <city value="Berlin" />
+                    <postalCode value="11111" />
+                    <country value="DE" />
+                </address>
+
+                <!-- Nicht Ärztlicher Kontakt -->
+                <contact>
+                    <extension url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-NichtAerztlicherAnsprechpartner">
+                        <extension url="NichtAerztlicherKontakt">
+                            <valueBoolean value="true" />
+                        </extension>
+                        <extension url="Funktionseinheit">
+                            <valueString value="Physiotherapie" />
+                        </extension>
+                    </extension>
+                    <!-- telefonischer Kontakt -->
+                    <telecom>
+                        <system value="phone" />
+                        <value value="+1-1234565789" />
+                    </telecom>
+                </contact>
+
+            </Organization>
+        </resource>
+    </entry>
+    <!-- ======= ENTRY 05 — BehandelndeEinrichtung (ORGANISATION) — Herkunft: DGUV_ENLA_Bsp_ ======= -->
+    <entry>
+        <fullUrl value="http://fhir.dguv.de/ENLA/Organization/f952b0d1-bb04-402d-b0e6-cef800858f98" />
+        <resource>
+            <Organization xmlns="http://hl7.org/fhir">
+                <id value="f952b0d1-bb04-402d-b0e6-cef800858f98" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-BehandelndeEinrichtung" />
+                </meta>
+
+                <text>
+                    <status value="generated" />
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel der BehandelndeEinrichtung einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
+                <!-- Identifizierung der behandelnde Einrichtung-->
+                <identifier>
+                    <type>
+                        <coding>
+                            <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+                            <code value="XX" />
+                            <display value="Organization identifier" />
+                        </coding>
+                    </type>
+                    <system value="http://fhir.de/sid/arge-ik/iknr" />
+                    <value value="260530784" />
+                </identifier>
+
+                <!-- behandelnde Fachabteilung -->
+                <type>
+                    <coding>
+                        <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel" />
+                        <version value="1.5.4" />
+                        <code value="0100" />
+                        <display value="Innere Medizin" />
+                    </coding>
+                </type>
+
+                <!-- Name der Einrichtung -->
+                <name value="Unfallkrankenhaus Frechen" />
+
+                <!-- Telefon contact-->
+                <telecom>
+                    <system value="phone" />
+                    <value value="+1-1234565789" />
+                </telecom>
+
+                <!-- Vollständige Adresse -->
+                <address>
+                    <type value="both" />
+                    <line value="Genesungsweg 4">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                            <valueString value="Genesungsweg" />
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                            <valueString value="4" />
+                        </extension>
+                    </line>
+                    <city value="Frechen" />
+                    <postalCode value="50226" />
+                    <country value="DE" />
+                </address>
+
+
+            </Organization>
+        </resource>
+    </entry>
+    <!-- ======= ENTRY 06 — Unfallversicherungstraeger (ORGANISATION) — Herkunft: DGUV_ENLA_Bsp_ ======= -->
+    <entry>
+        <fullUrl value="http://fhir.dguv.de/ENLA/Organization/180f219f-97a8-486d-99d9-ed631fe4fc60" />
+        <resource>
+            <Organization xmlns="http://hl7.org/fhir">
+                <id value="180f219f-97a8-486d-99d9-ed631fe4fc60" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Unfallversicherungstraeger" />
+                </meta>
+
+                <text>
+                    <status value="generated" />
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel der Unfallversicherungstraeger einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
+
+                <!-- Institutionskennzeichen -->
+                <identifier>
+                    <type>
+                        <coding>
+                            <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+                            <code value="XX" />
+                            <display value="Organization identifier" />
+                        </coding>
+                    </type>
+                    <system value="http://fhir.de/sid/arge-ik/iknr" />
+                    <value value="121192344" />
+                </identifier>
+                <name value="BG Verwaltung Berlin" />
+                <telecom>
+                    <system value="phone" />
+                    <value value="030 77003-0" />
+                </telecom>
+                <address>
+                    <type value="both" />
+                    <line value="Markgrafenstraße 18">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                            <valueString value="18" />
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                            <valueString value="Markgrafenstraße." />
+                        </extension>
+                    </line>
+                    <city value="Berlin" />
+                    <postalCode value="10969" />
+                </address>
+            </Organization>
+
+        </resource>
+    </entry>
+    <!-- ======= ENTRY 07 — Krankenkasse (ORGANISATION) — Herkunft: DGUV_ENLA_Bsp_ ======= -->
+    <entry>
+        <fullUrl value="http://fhir.dguv.de/ENLA/Organization/446a540f-7d08-4926-98fe-2abd3094aa92" />
+        <resource>
+            <Organization xmlns="http://hl7.org/fhir">
+                <id value="446a540f-7d08-4926-98fe-2abd3094aa92" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Krankenkasse" />
+                </meta>
+
+                <text>
+                    <status value="generated" />
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel der Krankenkasse einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
+
+                <!--IK-Nummer-->
+                <identifier>
+                    <type>
+                        <coding>
+                            <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+                            <code value="XX" />
+                            <display value="Organization identifier" />
+                        </coding>
+                    </type>
+                    <system value="http://fhir.de/sid/arge-ik/iknr" />
+                    <value value="107202793" />
+                </identifier>
+
+                <!-- Bezeichnung der Krankenkasse-->
+                <name value="AOK Herzogtum Lauenburg" />
+
+                <!-- Telefon Kontakt Krankenkasse -->
+                <telecom>
+                    <system value="phone" />
+                    <value value="01771234" />
+                </telecom>
+
+                <!-- Strassen Adresse der Krankenkasse und Postfach -->
+                <address>
+                    <type value="both" />
+                    <line value="Hauptstr. 91">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                            <valueString value="Hauptstraße" />
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                            <valueString value="91" />
+                        </extension>
+                    </line>
+                    <city value="Mölln" />
+                    <postalCode value="23879" />
+                    <country value="DE" />
+                </address>
+
+
+            </Organization>
+        </resource>
+    </entry>
+    <!-- ======= ENTRY 08 — Pflegekasse (ORGANISATION) — Herkunft: DGUV_ENLA_Bsp_ ======= -->
+    <entry>
+        <fullUrl value="http://fhir.dguv.de/ENLA/Organization/bf64ac16-926b-4082-968a-f7c088364b83" />
+        <resource>
+            <Organization xmlns="http://hl7.org/fhir">
+                <id value="bf64ac16-926b-4082-968a-f7c088364b83" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Organization/DGUV-ENLA-PR-Pflegekasse" />
+                </meta>
+
+                <text>
+                    <status value="generated" />
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel der MedikationsInformation einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
+                <identifier>
+                    <type>
+                        <coding>
+                            <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+                            <code value="XX" />
+                            <display value="Organization identifier" />
+                        </coding>
+                    </type>
+                    <system value="http://fhir.de/sid/arge-ik/iknr" />
+                    <value value="999999999" />
+                </identifier>
+                <name value="Pflegekasse Nord-Ostwestfalen Süd" />
+                <telecom>
+                    <system value="phone" />
+                    <value value="01751234" />
+                </telecom>
+                <address>
+                    <type value="both" />
+                    <line value="Nebenstr. 82">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                            <valueString value="Nebenstraße" />
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                            <valueString value="82" />
+                        </extension>
+                    </line>
+                    <city value="Mölln" />
+                    <postalCode value="23879" />
+                    <country value="DE" />
+                </address>
+            </Organization>
+        </resource>
+
+    </entry>
+    <!-- ======= ENTRY 09 — Versichertenverhältnis (COVERAGE) — Herkunft: DGUV_ENLA_Bsp_ ======= -->
+    <entry>
+        <fullUrl value="http://fhir.dguv.de/ENLA/Coverage/75c6d854-876e-4b9d-8ea9-327a46c9c50f" />
+        <resource>
+            <Coverage xmlns="http://hl7.org/fhir">
+                <id value="75c6d854-876e-4b9d-8ea9-327a46c9c50f" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Coverage/DGUV-ENLA-PR-VersichertenVerhaeltnis" />
+                </meta>
+
+                <!-- Notwendige überprüfungen: Falls die verunfallte Person Familienversichert ist, muss überprüft werden: Das Element <extension url="Mitgliedsname"> muss existieren und das Element valueString value="Rudi Fahrad" /> muss einen String.length > 0 enthalten. -->
+                <extension url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-Familienversicherung">
+                    <extension url="Familienversichert">
+                        <valueBoolean value="true" />
+                    </extension>
+                    <extension url="Mitgliedsname">
+                        <valueString value="Müller Peter" />
+                    </extension>
+                </extension>
+
+                <!-- Ist es notwendig den Wert des status zu überprüfen? -->
+                <status value="active" />
+
+                <!-- Es muss sichergestellt werden, dass an dieser Stelle kein leer Eintrag vorliegt! Ferner muss der Eintrage die Form <reference value="http://fhir.dguv.de/ENLA/Patient/VersichertePerson" /> oder "Patient/f0f85552-7960-49ab-ad6f-666b3d71f94d" haben. -->
+                <!-- Es muss sichergestellt werden, dass an dieser Stelle kein leer Eintrag vorliegt! Ferner muss der Eintrage die Form <reference value="http://fhir.dguv.de/ENLA/Patient/VersichertePerson" /> oder "Patient/f0f85552-7960-49ab-ad6f-666b3d71f94d" haben. -->
+                <beneficiary>
+                    <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </beneficiary>
+                <!-- Es muss sichergestellt werden, dass an dieser Stelle kein leer Eintrag vorliegt! Ferner muss der Eintrage die Form <reference value="http://fhir.dguv.de/ENLA/Organization/Unfallversicherungstraeger" /> oder "Organization/f0f85552-7960-49ab-ad6f-666b3d71f94d" haben. -->
+                <payor>
+                    <reference value="http://fhir.dguv.de/ENLA/Organization/180f219f-97a8-486d-99d9-ed631fe4fc60" />
+                </payor>
+            </Coverage>
+        </resource>
+    </entry>
+    <!-- ======= ENTRY 10 — Aufenthaltsinformationen (Encounter) — Herkunft: DGUV_ENLA_Bsp_ ======= -->
+    <entry>
+        <fullUrl value="http://fhir.dguv.de/ENLA/Encounter/a33633b7-ab47-4341-b4e9-c856bb5e5878" />
+        <resource>
+            <Encounter xmlns="http://hl7.org/fhir">
+                <!-- Meta-Daten -->
+                <id value="a33633b7-ab47-4341-b4e9-c856bb5e5878" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Encounter/DGUV-ENLA-PR-Aufenthaltsinformationen" />
+                </meta>
+
+                <!-- Narrativ -->
+                <text>
+                    <status value="generated" />
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel stationärer Aufenthaltsinformationen entsprechend dem Profil Aufenthaltsinformationen der DGUV</h1>
+                        <p>Beispiel für einen abgeschlossenen stationären Aufenthalt mit Folgebehandlung und dokumentiertem Entlassungsgrund.</p>
+                    </div>
+                </text>
+
+                <!-- Fallnummer -->
+                <identifier>
+                    <type>
+                        <coding>
+                            <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+                            <code value="VN" />
+                            <display value="Visit number" />
+                        </coding>
+                    </type>
+                    <system value="http://irgendwas.org/fhir/sid/fallnummer" />
+                    <value value="FALL-2026-0004711" />
+                </identifier>
+
+                <!-- Status des Aufenthalts -->
+                <status value="finished" />
+
+                <!-- Art des Aufenthalts -->
+                <class>
+                    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode" />
+                    <code value="IMP" />
+                    <display value="inpatient encounter" />
+                </class>
+
+                <!-- Verweis auf die versicherte Person -->
+                <subject>
+                    <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </subject>
+
+                <!-- Aufenthaltszeitraum -->
+                <period>
+                    <start value="2026-05-03" />
+                    <end value="2026-05-14" />
+                </period>
+
+                <!-- Details zum stationären Aufenthalt -->
+                <hospitalization>
+                    <!-- Aufnahmeart -->
+                    <admitSource>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Aufnahmeart" />
+                            <code value="EB" />
+                            <display value="Erstbehandlung" />
+                        </coding>
+                        <text value="Stationäre Aufnahme Unfall ganz kurz zuvor." />
+                    </admitSource>
+
+                    <!-- Entlassungs- oder Verlegungsgrund -->
+                    <dischargeDisposition>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-EntlassungsVerlegungsgrund" />
+                            <code value="01" />
+                            <display value="Behandlung regulär beendet" />
+                        </coding>
+                        <text value="Entlassung in die häusliche Weiterbehandlung." />
+                    </dischargeDisposition>
+                </hospitalization>
+            </Encounter>
+        </resource>
+    </entry>
+    <!-- ======= ENTRY 11 — DiagnoseFreitext (Condition) — Herkunft: DGUV_ENLA_Bsp_ ======= -->
+    <entry>
+        <fullUrl value="http://fhir.dguv.de/ENLA/Condition/84507618-4ff5-46d9-9e61-8ab15c9ce2a4" />
+        <resource>
+
+            <Condition xmlns="http://hl7.org/fhir">
+                <id value="84507618-4ff5-46d9-9e61-8ab15c9ce2a4" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseFreitext" />
+                </meta>
+
+                <text>
+                    <status value="generated" />
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel eines DiagnoseFreitextes.</h1>
+                    </div>
+                </text>
+
+                <!-- AO Klassifikation-->
+                <extension url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-Frakturklassifikation">
+                    <extension url="Fraktur">
+                        <valueBoolean value="true" />
+                    </extension>
+                    <extension url="AO-Klassifikation">
+                        <valueString value="12A 12B 12C" />
+                    </extension>
+                </extension>
+
+                <!-- Freitextliche Diagnose -->
+                <code>
+                    <text value="Hier steht der Freitext!" />
+                </code>
+
+                <!-- Referenz auf die VersichertePerson -->
+                <subject>
+                    <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </subject>
+            </Condition>
+        </resource>
+    </entry>
+    <!-- ======= ENTRY 12 — DiagnoseStrukturiert (Condition) — Herkunft: DGUV_ENLA_Bsp_ ======= -->
+    <entry>
+        <fullUrl value="http://fhir.dguv.de/ENLA/Condition/9acff578-cca8-4f9c-9f58-49e5cb91bbab" />
+        <resource>
+            <Condition xmlns="http://hl7.org/fhir">
+                <id value="9acff578-cca8-4f9c-9f58-49e5cb91bbab" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Condition/DGUV-ENLA-PR-DiagnoseStrukturiert" />
+                </meta>
+
+                <text>
+                    <status value="generated" />
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel der DiagnoseStrukturiert einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
+                <!--clinicalStatus-->
+                <clinicalStatus>
+                    <coding>
+                        <system value="http://terminology.hl7.org/CodeSystem/condition-clinical" />
+                        <code value="active" />
+                        <display value="Active" />
+                    </coding>
+                </clinicalStatus>
+
+                <!--verificationStatus-->
+                <verificationStatus>
+                    <coding>
+                        <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status" />
+                        <code value="confirmed" />
+                        <display value="Confirmed" />
+                    </coding>
+                </verificationStatus>
+
+                <!-- Diagnosecode verpflichtend-->
+                <code>
+                    <coding>
+                        <!--Mehrfachcodierungs-Kennzeichen-->
+                        <extension url="http://fhir.de/StructureDefinition/icd-10-gm-mehrfachcodierungs-kennzeichen">
+                            <valueCoding>
+                                <system value="http://fhir.de/CodeSystem/icd-10-gm-mehrfachcodierungs-kennzeichen" />
+                                <code value="*" />
+                            </valueCoding>
+                        </extension>
+
+                        <!--Seitenlokalisation-->
+                        <extension url="http://fhir.de/StructureDefinition/seitenlokalisation">
+                            <valueCoding>
+                                <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ICD_SEITENLOKALISATION" />
+                                <code value="R" />
+                            </valueCoding>
+                        </extension>
+
+                        <!--Diagnosesicherheit-->
+                        <extension url="http://fhir.de/StructureDefinition/icd-10-gm-diagnosesicherheit">
+                            <valueCoding>
+                                <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ICD_DIAGNOSESICHERHEIT" />
+                                <code value="G" />
+                            </valueCoding>
+                        </extension>
+
+                        <!--ICD-10-GM: System + Version-->
+                        <system value="http://fhir.de/CodeSystem/bfarm/icd-10-gm" />
+                        <version value="2025" />
+                        <code value="S06.0" />
+                        <display value="Gehirnerschütterung" />
+                    </coding>
+                </code>
+
+                <!-- VersichertePerson Referenz -->
+                <subject>
+                    <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </subject>
+
+            </Condition>
+        </resource>
+    </entry>
+    <!-- ======= ENTRY 13 — Aufnahmebefunde (Observation) — Herkunft: DGUV_ENLA_Bsp_ ======= -->
+    <entry>
+        <fullUrl value="http://fhir.dguv.de/ENLA/Observation/d39c416d-e1a1-43fd-afef-2763fd66473e" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="d39c416d-e1a1-43fd-afef-2763fd66473e" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Aufnahmebefunde" />
+                </meta>
+
+                <text>
+                    <status value="generated" />
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel der Aufnahmebefunde einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
+                <!-- Observation status -->
+                <status value="final" />
+
+                <!-- Klassifikation des Befundtyps -->
+                <category>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-BefundKategorie" />
+                        <code value="vitalparameter" />
+                        <display value="Vitalparameter" />
+                    </coding>
+                </category>
+
+                <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
+                <code>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+                        <code value="Aufnahme" />
+                        <display value="Aufnahmebefund" />
+                    </coding>
+                </code>
+
+                <!-- VersichertePerson Referenz -->
+                <subject>
+                    <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </subject>
+
+                <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
+                <effectiveDateTime value="2025-09-30T09:30:00+02:00" />
+
+                <!-- Befund Narrativ -->
+                <valueString value="Befundergebnis" />
+            </Observation>
+        </resource>
+    </entry>
+    <!-- ======= ENTRY 13 — Konsiliarbefunde (Observation) — Herkunft: DGUV_ENLA_Bsp_ ======= -->
+    <entry>
+        <fullUrl value="http://fhir.dguv.de/ENLA/Observation/0a25be9c-af37-410b-bd43-6c7d3e1f1681" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+
+                <id value="0a25be9c-af37-410b-bd43-6c7d3e1f1681" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Konsiliarbefunde" />
+                </meta>
+
+                <text>
+                    <status value="generated" />
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel der Konsiliarbefunde einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
+
+                <!-- Observation status -->
+                <status value="final" />
+
+                <!-- Klassifikation des Befundtyps -->
+                <category>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-BefundKategorie" />
+                        <code value="vitalparameter" />
+                        <display value="Vitalparameter" />
+                    </coding>
+                </category>
+
+                <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
+                <code>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+                        <code value="Konsiliar" />
+                        <display value="Konsiliarbefund" />
+                    </coding>
+                </code>
+
+                <!-- VersichertePerson Referenz -->
+                <subject>
+                    <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </subject>
+
+                <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
+                <effectiveDateTime value="2025-09-30T09:30:00+02:00" />
+
+                <!-- Befund Narrativ -->
+                <valueString value="Befundergebnis" />
+            </Observation>
+        </resource>
+    </entry>
+    <!-- ======= ENTRY 14— Therapie (Observation) — Herkunft: DGUV_ENLA_Bsp_ ======= -->
+    <entry>
+        <fullUrl value="http://fhir.dguv.de/ENLA/Observation/2288ca98-76e8-4daf-bfb3-dd36c0efbb39" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="2288ca98-76e8-4daf-bfb3-dd36c0efbb39" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Therapie" />
+                </meta>
+
+                <text>
+                    <status value="generated" />
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel der Therapie einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
+                <status value="final" />
+                <code>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+                        <code value="TH" />
+                        <display value="Therapie" />
+                    </coding>
+                </code>
+
+                <!-- Referenz Versicherte Person -->
+                <subject>
+                    <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </subject>
+
+                <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
+                <effectiveDateTime value="2025-09-30T09:30:00+02:00" />
+
+
+                <valueString value="neurologisches und inneres konsil">
+                    <!-- erster Eintrag -->
+                    <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-OPSCode">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://fhir.de/CodeSystem/bfarm/ops" />
+                                <code value="1-203.1" />
+                                <display value="Invasive Funktionsdiagnostik des Nervensystems: Mit Stimulationselektroden, spinal;Invasive Funktionsdiagnostik des Nervensystems;Mit Stimulationselektroden, spinal" />
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <!-- zweiter Eintrag -->
+                    <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-OPSCode">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://fhir.de/CodeSystem/bfarm/ops" />
+                                <code value="1-20a.20" />
+                                <display value="Andere neurophysiologische Untersuchungen: Neurologische Untersuchung bei Bewegungsstörungen: Untersuchung der Pharmakosensitivität mit quantitativer Testung;Andere neurophysiologische Untersuchungen;Neurologische Untersuchung bei Bewegungsstörungen;Untersuchung der Pharmakosensitivität mit quantitativer Testung" />
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                </valueString>
+            </Observation>
+        </resource>
+    </entry>
+    <!-- ======= ENTRY 15— Behandlungsverlauf (Observation) — Herkunft: DGUV_ENLA_Bsp_ ======= -->
+    <entry>
+        <fullUrl value="http://fhir.dguv.de/ENLA/Observation/0c6d28f5-2b67-4308-9d90-6a53ecd9ce7e" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="0c6d28f5-2b67-4308-9d90-6a53ecd9ce7e" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Behandlungsverlauf" />
+                </meta>
+
+                <text>
+                    <status value="generated" />
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel des Behandlungsverlauf einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
+                <!-- Besonderheiten im Behandlungsverlauf -->
+                <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-Besonderheiten">
+                    <valueString value="Komplikation" />
+                </extension>
+                <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-Besonderheiten">
+                    <valueString value="Psychische Belastungssymtome nach dem Unfall" />
+                </extension>
+
+                <!-- Observation status -->
+                <status value="final" />
+
+                <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
+                <code>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+                        <code value="BV" />
+                        <display value="Behandlungsverlauf" />
+                    </coding>
+                </code>
+
+
+                <!-- Versicherte Person -->
+                <subject>
+                    <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </subject>
+
+                <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
+                <effectiveDateTime value="2025-09-30T09:30:00+02:00" />
+
+
+                <!-- Möglichkeit einen Freitext einzugeben -->
+                <valueString value="Eingabe eines Freitext" />
+            </Observation>
+        </resource>
+    </entry>
+    <!-- ======= ENTRY 16— MedikationsInformation (MedicationStatement) — Herkunft: DGUV_ENLA_Bsp_ ======= -->
+    <entry>
+        <fullUrl value="http://fhir.dguv.de/ENLA/MedicationStatement/cf72d600-1c4d-44bf-a8b3-ec100f1a4947" />
+        <resource>
+            <MedicationStatement xmlns="http://hl7.org/fhir">
+                <id value="cf72d600-1c4d-44bf-a8b3-ec100f1a4947" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/MedicationStatement/DGUV-ENLA-PR-MedikationsInformation" />
+                </meta>
+
+                <text>
+                    <status value="generated" />
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel der MedikationsInformation einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
+                <!-- Medikation status-->
+                <status value="active" />
+
+                <!-- Referenz zum Medikation Arzneimittel -->
+                <medicationReference>
+                    <reference value="http://fhir.dguv.de/ENLA/Medication/4b28cbef-80e7-4838-b15b-b2d9dfc4461b" />
+                </medicationReference>
+
+                <!-- Referenz zur Versicherten Person -->
+                <subject>
+                    <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </subject>
+
+                <!-- Dosage zum Medikation Arzneimittel -->
+                <dosage>
+                    <text value="Strukturierte Dosierung" />
+                    <timing>
+                        <code>
+                            <coding>
+                                <system value="http://hl7.org/fhir/event-timing" />
+                                <version value="4.0.1" />
+                                <code value="MORN" />
+                                <display value="Morning">
+                                    <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-AnzeigenameDeutsch">
+                                        <valueString value="Morgens" />
+                                    </extension>
+                                </display>
+                            </coding>
+                        </code>
+                    </timing>
+                    <route>
+                        <coding>
+                            <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_Route_of_Administration_German" />
+                            <version value="1.0.0" />
+                            <code value="oral" />
+                            <display value="oral" />
+                        </coding>
+                    </route>
+
+                    <doseAndRate>
+                        <doseQuantity>
+                            <value value="500" />
+                            <unit value="mg" />
+                            <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BMP_DOSIEREINHEIT" />
+                            <code value="mg" />
+                        </doseQuantity>
+                    </doseAndRate>
+                </dosage>
+            </MedicationStatement>
+        </resource>
+    </entry>
+    <!-- ======= ENTRY 17 — MedikationArzneimittel (Medication) — Herkunft: DGUV_ENLA_Bsp_ ======= -->
+    <entry>
+        <fullUrl value="http://fhir.dguv.de/ENLA/Medication/4b28cbef-80e7-4838-b15b-b2d9dfc4461b" />
+        <resource>
+            <Medication xmlns="http://hl7.org/fhir">
+                <id value="4b28cbef-80e7-4838-b15b-b2d9dfc4461b" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationArzneimittel" />
+                </meta>
+
+                <text>
+                    <status value="generated" />
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel der MedikationArzneimittel einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
+                <!-- Medikament in codierter Form oder ggf. als Freitext -->
+                <code>
+                    <coding>
+                        <system value="http://fhir.de/CodeSystem/ifa/pzn" />
+                        <code value="04823572" />
+                    </coding>
+                    <text value="ACC long 600mg" />
+                </code>
+
+                <!-- Medication status -->
+                <status value="active" />
+
+                <!-- Hersteller des Medikaments -->
+                <manufacturer>
+                    <display value="Hexal AG" />
+                </manufacturer>
+
+                <!-- Abgabeform -->
+                <form>
+                    <coding>
+                        <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM" />
+                        <version value="1.15" />
+                        <code value="BTA" />
+                        <display value="Brausetabletten" />
+                    </coding>
+                </form>
+
+                <!-- Angaben zur Charge -->
+                <batch>
+                    <lotNumber value="1234" />
+                </batch>
+            </Medication>
+        </resource>
+    </entry>
+    <!-- ======= ENTRY 18 — MedikationWirkstoff (Medication) — Herkunft: DGUV_ENLA_Bsp_ ======= -->
+    <entry>
+        <fullUrl value="http://fhir.dguv.de/ENLA/Medication/8947dca1-69fd-4184-a55f-8f7f32b0a914" />
+        <resource>
+
+            <Medication xmlns="http://hl7.org/fhir">
+                <id value="8947dca1-69fd-4184-a55f-8f7f32b0a914" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationWirkstoff" />
+                </meta>
+
+                <code>
+                    <!-- ATC-DE (optional, mustSupport) -->
+                    <coding>
+                        <system value="http://fhir.de/CodeSystem/bfarm/atc" />
+                        <code value="N02BE01" />
+                        <display value="Paracetamol" />
+                    </coding>
+
+                    <!-- PZN (optional, mustSupport) -->
+                    <coding>
+                        <system value="http://fhir.de/CodeSystem/ifa/pzn" />
+                        <code value="12345678" />
+                        <display value="Paracetamol 500 mg Tabletten" />
+                    </coding>
+                    <text value="Paracetamol 500 mg Tabletten" />
+                </code>
+                <status value="active" />
+                <ingredient>
+                    <itemCodeableConcept>
+                        <coding>
+                            <system value="http://fhir.de/CodeSystem/bfarm/atc" />
+                            <code value="N02BE01" />
+                            <display value="Paracetamol" />
+                        </coding>
+                        <text value="Paracetamol" />
+                    </itemCodeableConcept>
+
+                    <isActive value="true" />
+
+                    <strength>
+                        <numerator>
+                            <value value="500" />
+                            <unit value="mg" />
+                            <system value="http://unitsofmeasure.org" />
+                            <code value="mg" />
+                        </numerator>
+                        <denominator>
+                            <value value="1" />
+                            <unit value="1" />
+                            <system value="http://unitsofmeasure.org" />
+                            <code value="1" />
+                        </denominator>
+                    </strength>
+                </ingredient>
+            </Medication>
+        </resource>
+    </entry>
+    <!-- ======= ENTRY 19 — MedikationRezeptur (Medication) — Herkunft: DGUV_ENLA_Bsp_ ======= -->
+    <entry>
+        <fullUrl value="http://fhir.dguv.de/ENLA/Medication/347b8239-6420-4b3a-a873-6b62e1fa1b0f" />
+        <resource>
+            <Medication xmlns="http://hl7.org/fhir">
+                <id value="347b8239-6420-4b3a-a873-6b62e1fa1b0f" />
+                <meta>
+                    <!-- must be exactly this profile URL -->
+                    <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationRezeptur" />
+                </meta>
+
+                <!-- Text narrative -->
+                <text>
+                    <status value="generated" />
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <p><b>Rezeptur</b>: Salicyl-Vaselin 5% (5 g Salicylsäure / 95 g Vaselin auf 100 g)</p>
+                    </div>
+                </text>
+
+                <code>
+                    <coding>
+                        <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type" />
+                        <code value="rezeptur" />
+                    </coding>
+                    <text value="Rezeptur: Salicyl-Vaselin 5 %" />
+                </code>
+
+                <!-- Medication status -->
+                <status value="active" />
+
+
+                <!-- -->
+                <ingredient>
+                    <itemCodeableConcept>
+                        <text value="Acidum salicylicum (Salicylsäure)" />
+                    </itemCodeableConcept>
+                    <strength>
+                        <numerator>
+                            <value value="5" />
+                            <unit value="g" />
+                            <system value="http://unitsofmeasure.org" />
+                            <code value="g" />
+                        </numerator>
+                        <denominator>
+                            <value value="100" />
+                            <unit value="g" />
+                            <system value="http://unitsofmeasure.org" />
+                            <code value="g" />
+                        </denominator>
+                    </strength>
+                </ingredient>
+
+                <ingredient>
+                    <itemCodeableConcept>
+                        <text value="Vaselinum album" />
+                    </itemCodeableConcept>
+                    <strength>
+                        <numerator>
+                            <value value="95" />
+                            <unit value="g" />
+                            <system value="http://unitsofmeasure.org" />
+                            <code value="g" />
+                        </numerator>
+                        <denominator>
+                            <value value="100" />
+                            <unit value="g" />
+                            <system value="http://unitsofmeasure.org" />
+                            <code value="g" />
+                        </denominator>
+                    </strength>
+                </ingredient>
+            </Medication>
+        </resource>
+    </entry>
+    <!-- ======= ENTRY 19 — MedikationRezeptur (Medication) — Herkunft: DGUV_ENLA_Bsp_ ======= -->
+    <entry>
+        <fullUrl value="http://fhir.dguv.de/ENLA/Medication/4c88e3c8-821d-40eb-87fa-1e129b3ccace" />
+        <resource>
+            <Medication xmlns="http://hl7.org/fhir">
+                <id value="4c88e3c8-821d-40eb-87fa-1e129b3ccace" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationFreitext" />
+                </meta>
+
+                <text>
+                    <status value="generated" />
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel des MedikationFreitextes einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
+                <!-- CodeableConcept mit (Frei-)textfeld -->
+                <code>
+                    <coding>
+                        <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type" />
+                        <code value="freitext" />
+                        <display value="Freitext-Medikation" />
+                    </coding>
+                    <text value="Hier steht ein Freitext zur Medikation" />
+                </code>
+
+                <!-- Medication Status-->
+                <status value="active" />
+            </Medication>
+        </resource>
+    </entry>
+    <!-- ======= ENTRY 20 — Entlassbefunde (Observation) — Herkunft: DGUV_ENLA_Bsp_ ======= -->
+    <entry>
+        <fullUrl value="http://fhir.dguv.de/ENLA/Observation/4f518fd0-15dd-471a-ab4e-fe5ab3fe979e" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="4f518fd0-15dd-471a-ab4e-fe5ab3fe979e" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Entlassbefunde" />
+                </meta>
+
+                <text>
+                    <status value="generated" />
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel der Entlassbefunde einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
+                <!-- Observation status -->
+                <status value="final" />
+
+                <!-- Kennzeichnung der Befund Kategorie -->
+                <category>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-BefundKategorie" />
+                        <code value="vitalparameter" />
+                        <display value="Vitalparameter" />
+                    </coding>
+                </category>
+
+                <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
+                <code>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+                        <code value="Entlass" />
+                        <display value="Entlassungsbefund" />
+                    </coding>
+                </code>
+
+                <!-- Referenz zur versicherten Person-->
+                <subject>
+                    <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </subject>
+
+                <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
+                <effectiveDateTime value="2025-09-30T09:30:00+02:00" />
+
+                <!-- Performer -->
+                <performer>
+                    <reference value="http://fhir.dguv.de/ENLA/Practitioner/93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
+                </performer>
+
+                <!-- Freitextliches Befund Ergebnis -->
+                <valueString value="Befundergebnis" />
+            </Observation>
+        </resource>
+    </entry>
+</Bundle>
