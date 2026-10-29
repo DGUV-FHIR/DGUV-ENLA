@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <!--
  Author: LSc
- Datum: 11.06.2026
+ Datum: 29.10.2026
 
  Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_Aufenthaltsinformationen_02.xml" dient der Validierung
  folgenden Szenarios:
@@ -12,7 +13,7 @@
 
 <Encounter xmlns="http://hl7.org/fhir">
   <!-- Meta-Daten -->
-  <id value="aufenthalt-2026-06-11"/>
+  <id value="a33633b7-ab47-4341-b4e9-c856bb5e5878"/>
   <meta>
     <profile value="http://fhir.dguv.de/ENLA/Encounter/DGUV-ENLA-PR-Aufenthaltsinformationen"/>
   </meta>
@@ -51,7 +52,7 @@
 
   <!-- Verweis auf die versicherte Person -->
   <subject>
-    <reference value="Patient/T37501234"/>
+    <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
   </subject>
 
   <!-- Aufenthaltszeitraum -->
