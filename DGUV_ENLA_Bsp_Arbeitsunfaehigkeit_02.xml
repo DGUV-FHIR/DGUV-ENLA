@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--
- Author: FMa
- Datum: 09.10.2025
+ Author: FMa / LSc
+ Datum: 29.10.2026
 
  Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_Arbeitsunfaehigkeit_02.xml" dient der Validierung
  folgenden Szenarios:
@@ -12,12 +12,13 @@
 -->
 
 <Observation xmlns="http://hl7.org/fhir">
+  <!--Meta-Daten-->
   <id value="DGUV-ENLA-Bsp-Arbeitsunfaehigkeit-1" />
   <meta>
       <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Arbeitsunfaehigkeit" />
   </meta>
 
-  <!-- Narrative -->
+  <!-- Narrativ -->
   <text>
     <status value="generated"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
@@ -39,13 +40,13 @@
 
   <!-- VersichertePerson-->
   <subject>
-      <reference value="Patient/T37501234" />
+      <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
   </subject>
 
   <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
   <!-- <effectiveDateTime value="2025-07-03" />  -->
 
-  <!-- Behandelnde(-r) Ärtztin/Arzt-->
+  <!-- Behandelnde(-r) Ärztin/Arzt-->
   <performer>
       <reference value="DArzt/T37501234" />
   </performer>
