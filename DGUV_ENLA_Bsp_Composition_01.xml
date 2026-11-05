@@ -314,7 +314,7 @@
                         <reference value="http://fhir.dguv.de/ENLA/Medication/4b28cbef-80e7-4838-b15b-b2d9dfc4461b" />
                     </entry>
                 </section>
-                 <!-- Stationäre Behandlung | Behandlung | Medikation [MedikationWirkstoff] -->
+                <!-- Stationäre Behandlung | Behandlung | Medikation [MedikationWirkstoff] -->
                 <section>
                     <code>
                         <coding>
@@ -328,7 +328,7 @@
                     </entry>
 
                 </section>
-                 <!-- Stationäre Behandlung | Behandlung | Medikation [MedikationRezeptur] -->
+                <!-- Stationäre Behandlung | Behandlung | Medikation [MedikationRezeptur] -->
                 <section>
                     <code>
                         <coding>
@@ -342,7 +342,7 @@
                     </entry>
 
                 </section>
-                 <!-- Stationäre Behandlung | Behandlung | Medikation [MedikationFreitext] -->
+                <!-- Stationäre Behandlung | Behandlung | Medikation [MedikationFreitext] -->
                 <section>
                     <code>
                         <coding>
@@ -362,7 +362,7 @@
         </section>
     </section>
     <!-- SECTION: Entlassmanagement { mit [] + [] } -->
-     <section>
+    <section>
         <code>
             <coding>
                 <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
@@ -383,6 +383,33 @@
                 <reference value="http://fhir.dguv.de/ENLA/Observation/4f518fd0-15dd-471a-ab4e-fe5ab3fe979e" />
             </entry>
         </section>
+        <!-- Entlassmanagement [Therapieempfehlung] -->
+        <section>
+            <code>
+                <coding>
+                    <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                    <code value="THEM" />
+                    <display value="Therapieempfehlung" />
+                </coding>
+            </code>
+            <entry>
+                <reference value="http://fhir.dguv.de/ENLA/Observation/f2e30a2a-9070-43aa-9bf2-307ad290eb95" />
+            </entry>
+        </section>
+        <!-- Entlassmanagement [RehaMassnahmen] -->
+        <section>
+            <code>
+                <coding>
+                    <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                    <code value="RHMS" />
+                    <display value="Reha-Maßnahmen" />
+                </coding>
+            </code>
+            <entry>
+                <reference value="http://fhir.dguv.de/ENLA/Observation/0f9b10f1-b311-49e8-b395-608303bdaa2d" />
+            </entry>
+        </section>
 
-     </section>
+
+    </section>
 </Composition>

@@ -1560,5 +1560,110 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Composition.section:Entlassmanagement.section:Therapieempfehlung">
+      <path value="Composition.section.section" />
+      <sliceName value="Therapieempfehlung" />
+      <max value="1" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:Therapieempfehlung.code">
+      <path value="Composition.section.section.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:Therapieempfehlung.code.coding">
+      <path value="Composition.section.section.code.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:Therapieempfehlung.code.coding.system">
+      <path value="Composition.section.section.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:Therapieempfehlung.code.coding.code">
+      <path value="Composition.section.section.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="THEM" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:Therapieempfehlung.code.coding.display">
+      <path value="Composition.section.section.code.coding.display" />
+      <min value="1" />
+      <fixedString value="Therapieempfehlung" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:Therapieempfehlung.entry">
+      <path value="Composition.section.section.entry" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Therapieempfehlung" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:Therapieempfehlung.entry.reference">
+      <path value="Composition.section.section.entry.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:RehaMassnahmen">
+      <path value="Composition.section.section" />
+      <sliceName value="RehaMassnahmen" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:RehaMassnahmen.code">
+      <path value="Composition.section.section.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:RehaMassnahmen.code.coding">
+      <path value="Composition.section.section.code.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:RehaMassnahmen.code.coding.system">
+      <path value="Composition.section.section.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:RehaMassnahmen.code.coding.code">
+      <path value="Composition.section.section.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="RHMS" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:RehaMassnahmen.code.coding.display">
+      <path value="Composition.section.section.code.coding.display" />
+      <min value="1" />
+      <fixedString value="Reha-Maßnahmen" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:RehaMassnahmen.entry">
+      <path value="Composition.section.section.entry" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-RehaMassnahmen" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:RehaMassnahmen.entry.reference">
+      <path value="Composition.section.section.entry.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
   </differential>
 </StructureDefinition>
