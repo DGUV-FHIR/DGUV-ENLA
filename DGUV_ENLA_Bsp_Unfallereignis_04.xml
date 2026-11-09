@@ -3,7 +3,7 @@
  Author: FMa / LSc
  Datum: 18.06.2026
 
- Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_Unfallereignis_03.xml" dient der Validierung
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_Unfallereignis_04.xml" dient der Validierung
  folgenden Szenarios:
  N: Ausgehend von Standardfall:
     Auslösung Constraint dguv-pflegeunfall-2 (also Pflegeunfall: nein und trotzdem Pflegekasse vorhanden)
