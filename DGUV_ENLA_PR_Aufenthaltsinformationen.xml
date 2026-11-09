@@ -15,13 +15,13 @@
   <differential>
     <element id="Encounter">
       <path value="Encounter" />
-      <short value="Falldaten (Aufenhaltszeitraum, Entlassungsgrund und Aufnahmegrund)" />
+      <short value="Falldaten (Aufenthaltszeitraum, Entlassungsgrund und Aufnahmegrund)" />
       <definition value="Dieses Profil enthält Informationen zum Aufenthaltszeitraum sowie Gründe für Aufnahme und Entlassung." />
       <constraint>
         <key value="dguv-hospital-2" />
         <severity value="error" />
         <human value="Wenn es sich nicht um eine Folgebehandlung handelt, darf das Textfeld nicht vorhanden sein!" />
-        <expression value="(hospitalization.admitSource.exists() and hospitalization.admitSource.coding.all(code = 'FB')) implies hospitalization.admitSource.text.exists().not()" />
+        <expression value="(hospitalization.admitSource.exists() and hospitalization.admitSource.coding.all(code != 'FB')) implies hospitalization.admitSource.text.exists().not()" />
       </constraint>
     </element>
     <element id="Encounter.id">
