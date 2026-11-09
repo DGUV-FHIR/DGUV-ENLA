@@ -2,14 +2,14 @@
 
 <!--
  Author: LSc
- Datum: 29.10.2026
+ Datum: 09.11.2026
 
- Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_Aufenthaltsinformationen_00.xml" dient der Validierung
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_Aufenthaltsinformationen_01.xml" dient der Validierung
  folgenden Szenarios (Standardfall):
 
  P: Maximalbefüllung einer Instanz Aufenthaltsinformationen (Meta-Daten,
     Narrativ, Fallnummer, Aufenthaltsstatus, Aufenthaltsart, Referenz auf die versicherte Person,
-    Aufenthaltszeitraum, Aufnahmeart (da nicht "FB" UND text gefüllt: dguv-hospital-2 greift nicht),
+    Aufenthaltszeitraum, Aufnahmeart (da "FB" UND text gefüllt: dguv-hospital-2 greift nicht),
     Entlassungs-/Verlegungsgrund)
 -->
 
@@ -24,8 +24,7 @@
   <text>
     <status value="generated"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
-      <h1>Hier finden Sie ein Beispiel stationärer Aufenthaltsinformationen entsprechend dem Profil Aufenthaltsinformationen der DGUV</h1>
-      <p>Beispiel für einen abgeschlossenen stationären Aufenthalt mit Folgebehandlung und dokumentiertem Entlassungsgrund.</p>
+      <h1>Hier finden Sie ein Beispiel für stationäre Aufenthaltsinformationen entsprechend dem Profil Aufenthaltsinformationen der DGUV.</h1>
     </div>
   </text>
 
@@ -69,10 +68,10 @@
     <admitSource>
       <coding>
         <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Aufnahmeart"/>
-        <code value="EB"/>
-        <display value="Erstbehandlung"/>
+        <code value="FB"/>
+        <display value="Folgebehandlung"/>
       </coding>
-      <text value="Stationäre Aufnahme Unfall ganz kurz zuvor."/>
+      <text value="Stationäre Aufnahme zur weiterführenden Behandlung nach bereits eingeleiteter Erstversorgung in anderem Krankenhaus"/>
     </admitSource>
 
     <!-- Entlassungs- oder Verlegungsgrund -->
@@ -82,7 +81,7 @@
         <code value="01"/>
         <display value="Behandlung regulär beendet"/>
       </coding>
-      <text value="Entlassung in die häusliche Weiterbehandlung."/>
+      <text value="Entlassung in die häusliche Weiterbehandlung"/>
     </dischargeDisposition>
   </hospitalization>
 </Encounter>
