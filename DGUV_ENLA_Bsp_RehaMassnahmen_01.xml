@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <!--
-    Author: 
-    Datum:  
+ Author: FMa / LSc
+ Datum: 10.11.2026
 
-    Die vorliegende Beispiel Datei .... dient der Validierung 
-    der Datenaufnahme zu dem ......
-    
-    Zu beachten ist dabei ...
-
-    Durchzuführende Massnahmen:
-
-
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_RehaMassnahmen_01.xml" dient der Validierung
+ folgenden Szenarios (Standardfall):
+ 
+ P: Maximalbefüllung einer Instanz RehaMassnahme (Meta-Daten, Narrativ, Berichtsstatus, 
+    Observationprofiltyp, Referenz auf verunfallte Person, Startzeit, Referenz auf behandelnden Arzt,
+    strukturierte Angabe der Reha-Maßnahme ggf. mit Verschreibungsvermerk (hier: verordnet), Freitextbeschreibung Reha-Maßnahme)
 -->
+
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="DGUV-ENLA-Bsp-RehaMassnahmen" />
+    <!--Meta-Daten-->
+    <id value="0f9b10f1-b311-49e8-b395-608303bdaa2d" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-RehaMassnahmen" />
     </meta>
 
+    <!--Narrativ-->
     <text>
         <status value="generated"/>
         <div xmlns="http://www.w3.org/1999/xhtml">
@@ -25,11 +27,10 @@
         </div>
     </text>
 
-
-    <!-- Observation status -->
+    <!-- Berichtsstatus -->
     <status value="final"/>
 
-    <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
+    <!-- Kennzeichnung des ENLA-Observationprofiltyps -->
     <code>  
         <coding>
             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
@@ -38,36 +39,40 @@
         </coding>
     </code>
 
-    <!-- Referenz Versicherte Person -->
+    <!-- Referenz auf versicherte Person -->
     <subject>
-        <reference value="Farad,Rudi/T995030511"/>
+        <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
     </subject>
 
-    <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
+    <!-- Anwendungsbeginn Reha-Maßnahme -->
     <effectiveTiming>
         <code>  
             <coding>
                 <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-MassnahmenZeitpunkt" />
-                <code value="Festzul" />
-                <display value="Durch Weiterbehandler festzulegen" />
+                <code value="Azpkt" />
+                <display value="Anderer Zeitpunkt" />
             </coding>
         </code>
     </effectiveTiming>
 
-    <!-- Behandelnde(-r) Ärtztin/Arzt -->
+    <!-- Behandelnde(-r) D-Ärztin/Arzt, Referenz auf Rolle -->
     <performer>
-        <reference value="DArzt/gh45434" />
+        <reference value="http://fhir.dguv.de/ENLA/PractitionerRole/93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
     </performer>
 
-    <!-- Angaben über notwendige Reha-Maßnahmen -->
+    <!-- Angaben zur Reha-Maßnahme -->
     <valueCodeableConcept>  
+        <!-- Strukturierte Angabe einer Reha-Maßnahme (hier: verordnet) -->
         <coding>
                 <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-IstVerordnet">
                    <valueBoolean value="true"/>
                 </extension>
+            <!-- Reha-Maßnahmen-Beschreibung als Code -->
             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-RehaMassnahmen" />
             <code value="EAP" />
             <display value="Erweiterte Ambulante Physiotherapie (EAP)" />
         </coding>
+        <!-- Reha-Maßnahmen-Beschreibung als Freitext -->
+        <text value="Beschreibung der Reha-Massnahme als Freitext"/> 
     </valueCodeableConcept>
 </Observation>

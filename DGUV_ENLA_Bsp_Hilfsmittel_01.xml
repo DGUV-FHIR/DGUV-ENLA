@@ -1,35 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <!--
-    Author: 
-    Datum:  
+ Author: FMa / LSc
+ Datum: 10.11.2026
 
-    Die vorliegende Beispiel Datei .... dient der Validierung 
-    der Datenaufnahme zu dem ......
-    
-    Zu beachten ist dabei ...
-
-    Durchzuführende Massnahmen:
-
-
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_Hilfsmittel_01.xml" dient der Validierung
+ folgenden Szenarios (Standardfall):
+ 
+ P: Maximalbefüllung einer Instanz Hilfsmittel (Meta-Daten, Narrativ, Berichtsstatus, 
+    Observationprofiltyp, Referenz auf verunfallte Person, Startzeit, Referenz auf behandelnden Arzt,
+    strukturierte Angabe des Hilfsmittels ggf. mit Verschreibungsvermerk (hier: nicht verordnet), Freitextbeschreibung Hilfsmittel)
 -->
+
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="DGUV-ENLA-Bsp-Hilfsmittel" />
+    <!--Meta-Daten-->
+    <id value="b77a0cc9-62ff-47c5-96b5-a964f313490d" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Hilfsmittel" />
     </meta>
 
+    <!--Narrativ-->
     <text>
         <status value="generated"/>
         <div xmlns="http://www.w3.org/1999/xhtml">
-            <h1>Hier finden Sie ein Beispiel der Hilfsmittel einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+            <h1>Hier finden Sie das Beispiel eines Hilfsmittels für eine verunfallte Person.</h1>
         </div>
     </text>
 
-
-    <!-- Observation status-->
+    <!-- Berichtsstatus -->
     <status value="final"/>
 
-    <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
+    <!-- Kennzeichnung des ENLA-Observationprofiltyps -->
     <code>  
         <coding>
             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
@@ -38,36 +39,40 @@
         </coding>
     </code>
 
-    <!-- Referenz zur versicherten Person-->
+    <!-- Referenz auf versicherte Person -->
     <subject>
-        <reference value="Farad_Rudi/T995030511"/>
+        <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
     </subject>
 
-    <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
+    <!-- Anwendungsbeginn Hilfsmittel -->
     <effectiveTiming>
         <code>
             <coding>
                 <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-MassnahmenZeitpunkt" />
-                <code value="Festzul" />
-                <display value="Durch Weiterbehandler festzulegen" />
+                <code value="Direkt" />
+                <display value="Direkt im Anschluss" />
             </coding>
         </code>
     </effectiveTiming>
 
-      <!-- Behandelnde(-r) Ärtztin/Arzt-->
+    <!-- Behandelnde(-r) D-Ärztin/Arzt, Referenz auf Rolle -->
     <performer>
-        <reference value="urn:uuid:53192032-6365-4659-8cc2-f9a7df67a466"/>
+        <reference value="http://fhir.dguv.de/ENLA/PractitionerRole/93ad5198-d79b-4436-9e1e-aaa69acb2d08"/>
     </performer>
 
-    <!-- verordnete Hilfsmittel-->
+    <!-- Angaben zum Hilfsmittel -->
     <valueCodeableConcept>  
+        <!-- Strukturierte Angabe eines Hilfsmittels (hier: nicht verordnet) -->
         <coding>
             <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-IstVerordnet">
-                <valueBoolean value="true"/>
+                <valueBoolean value="false"/>
             </extension>
+            <!-- Hilfsmittelbeschreibung als Code -->
             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Hilfsmittel" />
             <code value="PHM" />
             <display value="Pflegehilfsmittel" />
         </coding>
+        <!-- Hilfsmittelbeschreibung als Freitext -->
+        <text value="Beschreibung des Hilfsmittels als Freitext"/> 
     </valueCodeableConcept>
 </Observation>
