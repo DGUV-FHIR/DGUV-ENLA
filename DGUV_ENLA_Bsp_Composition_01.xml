@@ -409,7 +409,30 @@
                 <reference value="http://fhir.dguv.de/ENLA/Observation/0f9b10f1-b311-49e8-b395-608303bdaa2d" />
             </entry>
         </section>
-
-
+        <!-- Entlassmanagement [Heilmittel] -->
+        <section>
+            <code>
+                <coding>
+                    <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                    <code value="HEMI" />
+                    <display value="Heilmittel" />
+                </coding>
+            </code>
+            <entry>
+                <reference value="http://fhir.dguv.de/ENLA/Observation/b77a0cc9-62ff-47c5-96b5-a964f313490d" />
+            </entry>
+        </section>  <!-- Entlassmanagement [Hilfsmittel] -->
+        <section>
+            <code>
+                <coding>
+                    <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                    <code value="HILM" />
+                    <display value="Hilfsmittel" />
+                </coding>
+            </code>
+            <entry>
+                <reference value="http://fhir.dguv.de/ENLA/Observation/b77a0cc9-62ff-47c5-96b5-a964f313490d" />
+            </entry>
+        </section>
     </section>
 </Composition>

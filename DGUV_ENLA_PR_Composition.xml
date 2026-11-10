@@ -1665,5 +1665,108 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Composition.section:Entlassmanagement.section:Heilmittel">
+      <path value="Composition.section.section" />
+      <sliceName value="Heilmittel" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:Heilmittel.code">
+      <path value="Composition.section.section.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:Heilmittel.code.coding">
+      <path value="Composition.section.section.code.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:Heilmittel.code.coding.system">
+      <path value="Composition.section.section.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:Heilmittel.code.coding.code">
+      <path value="Composition.section.section.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="HEMI" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:Heilmittel.code.coding.display">
+      <path value="Composition.section.section.code.coding.display" />
+      <min value="1" />
+      <fixedString value="Heilmittel" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:Heilmittel.entry">
+      <path value="Composition.section.section.entry" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Heilmittel" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:Heilmittel.entry.reference">
+      <path value="Composition.section.section.entry.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:Hilfsmittel">
+      <path value="Composition.section.section" />
+      <sliceName value="Hilfsmittel" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:Hilfsmittel.code">
+      <path value="Composition.section.section.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:Hilfsmittel.code.coding">
+      <path value="Composition.section.section.code.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:Hilfsmittel.code.coding.system">
+      <path value="Composition.section.section.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:Hilfsmittel.code.coding.code">
+      <path value="Composition.section.section.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="HILM" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:Hilfsmittel.code.coding.display">
+      <path value="Composition.section.section.code.coding.display" />
+      <min value="1" />
+      <fixedString value="Hilfsmittel" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:Hilfsmittel.entry">
+      <path value="Composition.section.section.entry" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Hilfsmittel" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:Hilfsmittel.entry.reference">
+      <path value="Composition.section.section.entry.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
   </differential>
 </StructureDefinition>

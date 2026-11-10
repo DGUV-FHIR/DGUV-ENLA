@@ -432,8 +432,31 @@
                             <reference value="http://fhir.dguv.de/ENLA/Observation/0f9b10f1-b311-49e8-b395-608303bdaa2d" />
                         </entry>
                     </section>
-
-
+                    <!-- Entlassmanagement [Heilmittel] -->
+                    <section>
+                        <code>
+                            <coding>
+                                <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                                <code value="HEMI" />
+                                <display value="Heilmittel" />
+                            </coding>
+                        </code>
+                        <entry>
+                            <reference value="http://fhir.dguv.de/ENLA/Observation/b77a0cc9-62ff-47c5-96b5-a964f313490d" />
+                        </entry>
+                    </section>  <!-- Entlassmanagement [Hilfsmittel] -->
+                    <section>
+                        <code>
+                            <coding>
+                                <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                                <code value="HILM" />
+                                <display value="Hilfsmittel" />
+                            </coding>
+                        </code>
+                        <entry>
+                            <reference value="http://fhir.dguv.de/ENLA/Observation/b77a0cc9-62ff-47c5-96b5-a964f313490d" />
+                        </entry>
+                    </section>
                 </section>
             </Composition>
         </resource>
@@ -623,7 +646,7 @@
 
                 <!-- DArztOrganisation-->
                 <organization>
-                    <reference value="http://fhir.dguv.de/ENLA/Organization/c27-44e5-a7c7-567a754dc912" />
+                    <reference value="http://fhir.dguv.de/ENLA/Organization/cdc0ceec-dc27-44e5-a7c7-567a754dc912" />
                 </organization>
 
                 <!-- Rolle der Einrichtung-->
@@ -1776,7 +1799,7 @@
 
                 <!-- Referenz Versicherte Person -->
                 <subject>
-                    <reference value="http://fhir.dguv.de/OPER/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                    <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
                 </subject>
 
                 <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
@@ -1796,24 +1819,24 @@
     <entry>
         <fullUrl value="http://fhir.dguv.de/ENLA/Observation/0f9b10f1-b311-49e8-b395-608303bdaa2d" />
         <resource>
-       <Observation xmlns="http://hl7.org/fhir">
+            <Observation xmlns="http://hl7.org/fhir">
                 <id value="0f9b10f1-b311-49e8-b395-608303bdaa2d" />
                 <meta>
                     <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-RehaMassnahmen" />
                 </meta>
 
                 <text>
-                    <status value="generated"/>
+                    <status value="generated" />
                     <div xmlns="http://www.w3.org/1999/xhtml">
                         <h1>Hier finden Sie ein Beispiel der RehaMassnahmen einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
                     </div>
                 </text>
 
                 <!-- Observation status -->
-                <status value="final"/>
+                <status value="final" />
 
                 <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
-                <code>  
+                <code>
                     <coding>
                         <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
                         <code value="RM" />
@@ -1823,12 +1846,12 @@
 
                 <!-- Referenz Versicherte Person -->
                 <subject>
-                    <reference value="http://fhir.dguv.de/OPER/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
+                    <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
                 </subject>
 
                 <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
                 <effectiveTiming>
-                    <code>  
+                    <code>
                         <coding>
                             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-MassnahmenZeitpunkt" />
                             <code value="Festzul" />
@@ -1839,18 +1862,141 @@
 
                 <!-- Behandelnde(-r) Ärtztin/Arzt -->
                 <performer>
-                    <reference value="http://fhir.dguv.de/OPER/Practitioner/93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
+                    <reference value="http://fhir.dguv.de/ENLA/Practitioner/93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
                 </performer>
 
                 <!-- Angaben über notwendige Reha-Maßnahmen -->
+                <valueCodeableConcept>
+                    <coding>
+                        <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-IstVerordnet">
+                            <valueBoolean value="true" />
+                        </extension>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-RehaMassnahmen" />
+                        <code value="EAP" />
+                        <display value="Erweiterte Ambulante Physiotherapie (EAP)" />
+                    </coding>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <!-- ======= ENTRY 23 — Heilmittel (Observation) — Herkunft: DGUV_ENLA_Bsp_ ======= -->
+    <entry>
+        <fullUrl value="http://fhir.dguv.de/ENLA/Observation/8d018e14-21b7-4982-b26f-d3b4812f7a1f" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="8d018e14-21b7-4982-b26f-d3b4812f7a1f" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Heilmittel" />
+                </meta>
+
+                <text>
+                    <status value="generated" />
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel der Heilmittel einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
+                <!-- Observation status-->
+                <status value="final" />
+
+                <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
+                <code>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+                        <code value="HEILM" />
+                        <display value="Heilmittel" />
+                    </coding>
+                </code>
+
+                <!-- Referenz zur versicherten Person-->
+                <subject>
+                    <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </subject>
+
+                <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
+                <effectiveTiming>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-MassnahmenZeitpunkt" />
+                            <code value="Festzul" />
+                            <display value="Durch Weiterbehandler festzulegen" />
+                        </coding>
+                    </code>
+                </effectiveTiming>
+
+                <!-- verordnete Heilmittel-->
+                <valueCodeableConcept>
+                    <coding>
+                        <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-IstVerordnet">
+                            <valueBoolean value="true" />
+                        </extension>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Heilmittel" />
+                        <code value="PHYSIO" />
+                        <display value="Physiotherapie" />
+                    </coding>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <!-- ======= ENTRY 24 — Heilmittel (Observation) — Herkunft: DGUV_ENLA_Bsp_ ======= -->
+    <entry>
+        <fullUrl value="http://fhir.dguv.de/ENLA/Observation/b77a0cc9-62ff-47c5-96b5-a964f313490d" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="b77a0cc9-62ff-47c5-96b5-a964f313490d" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Hilfsmittel" />
+                </meta>
+
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel der Hilfsmittel einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
+                <!-- Observation status-->
+                <status value="final"/>
+
+                <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
+                <code>  
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+                        <code value="HILFSM" />
+                        <display value="Hilfsmittel" />
+                    </coding>
+                </code>
+
+                <!-- Referenz zur versicherten Person-->
+                <subject>
+                    <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
+                </subject>
+
+                <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
+                <effectiveTiming>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-MassnahmenZeitpunkt" />
+                            <code value="Festzul" />
+                            <display value="Durch Weiterbehandler festzulegen" />
+                        </coding>
+                    </code>
+                </effectiveTiming>
+
+                <!-- Behandelnde(-r) Ärtztin/Arzt -->
+                <performer>
+                    <reference value="http://fhir.dguv.de/ENLA/Practitioner/93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
+                </performer>
+
+                <!-- verordnete Hilfsmittel-->
                 <valueCodeableConcept>  
                     <coding>
                         <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-IstVerordnet">
                             <valueBoolean value="true"/>
                         </extension>
-                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-RehaMassnahmen" />
-                        <code value="EAP" />
-                        <display value="Erweiterte Ambulante Physiotherapie (EAP)" />
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Hilfsmittel" />
+                        <code value="PHM" />
+                        <display value="Pflegehilfsmittel" />
                     </coding>
                 </valueCodeableConcept>
             </Observation>
