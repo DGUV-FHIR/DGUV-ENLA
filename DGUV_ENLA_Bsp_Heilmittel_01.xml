@@ -1,26 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-    Author: Friedhelm Matten
-    Datum:  30.09.2025
 
+<!--
+ Author: FMa / LSc
+ Datum: 10.11.2026
+
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_Heilmittel_01.xml" dient der Validierung
+ folgenden Szenarios (Standardfall):
+ 
+ P: Maximalbefüllung einer Instanz Heilmittel (Meta-Daten, Narrativ, Berichtsstatus, 
+    Observationprofiltyp, Referenz auf verunfallte Person, Startzeit, Referenz auf behandelnden Arzt,
+    strukturierte Angabe des Heilmittels ggf. mit Verschreibungsvermerk, Freitextbeschreibung Heilmittel)
 -->
+
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="DGUV-ENLA-Bsp-Heilmittel" />
+    <!--Meta-Daten-->
+    <id value="8d018e14-21b7-4982-b26f-d3b4812f7a1f" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Heilmittel" />
     </meta>
 
+    <!--Narrativ-->
     <text>
         <status value="generated"/>
         <div xmlns="http://www.w3.org/1999/xhtml">
-            <h1>Hier finden Sie ein Beispiel der Heilmittel einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+            <h1>Hier finden Sie das Beispiel eines Heilmittels für eine verunfallte Person.</h1>
         </div>
     </text>
 
-    <!-- Observation status-->
+    <!-- Berichtsstatus -->
     <status value="final"/>
 
-    <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
+    <!-- Kennzeichnung des ENLA-Observationprofiltyps -->
     <code>  
         <coding>
             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
@@ -29,12 +39,12 @@
         </coding>
     </code>
 
-    <!-- Referenz zur versicherten Person-->
+    <!-- Referenz auf versicherte Person -->
     <subject>
-        <reference value="Farad_Rudi/T995030511"/>
+        <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
     </subject>
 
-    <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
+    <!-- Anwendungsbeginn Heilmittel -->
     <effectiveTiming>
         <code>
             <coding>
@@ -45,22 +55,26 @@
         </code>
     </effectiveTiming>
 
-      <!-- Behandelnde(-r) Ärtztin/Arzt-->
+    <!-- Behandelnde(-r) D-Ärztin/Arzt, Referenz auf Rolle -->
     <performer>
-        <reference value="Leistungsarzt/123456"/>
+        <reference value="http://fhir.dguv.de/ENLA/PractitionerRole/93ad5198-d79b-4436-9e1e-aaa69acb2d08"/>
     </performer>
 
-    <!-- verordnete Heilmittel-->
+    <!-- Angaben zum Heilmittel -->
     <valueCodeableConcept>  
+        <!-- Strukturierte Angabe eines verordneten Heilmittels-->
         <coding>
+            <!-- Kennzeichnung des Heilmittels als verordnet -->
             <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-IstVerordnet">
                 <valueBoolean value="true"/>
             </extension>
+            <!-- Heilmittelbeschreibung als Code -->
             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Heilmittel" />
-                <code value="PHYSIO" />
+            <code value="PHYSIO" />
             <display value="Physiotherapie" />
         </coding>
+        <!-- Heilmittelbeschreibung als Freitext -->
+        <text value="Beschreibung des Heilmittels als Freitext"/> 
     </valueCodeableConcept>
-
 
 </Observation>
