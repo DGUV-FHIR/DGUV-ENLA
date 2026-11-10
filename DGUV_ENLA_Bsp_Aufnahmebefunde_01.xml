@@ -8,7 +8,7 @@
  folgenden Szenarios (Standardfall):
  
  P: Maximalbefüllung einer Instanz Aufnahmebefund (Meta-Daten, Narrativ, Berichtsstatus, Befundtypklassifikation,
-    Observationprofiltyp, Referenz auf verunfallte Person, Zeitpunkt, Referenz auf behandelnden Arzt, Befund)
+    Observationprofiltyp, Referenz auf verunfallte Person, Zeitpunkt, Referenz auf behandelnden Arzt, Aufnahmebefund)
 -->
 
 <Observation xmlns="http://hl7.org/fhir">
@@ -61,5 +61,5 @@
     </performer>
 
     <!-- Befund als Freitext -->
-    <valueString value="Befundergebnis" />
+    <valueString value="Inhalt des Aufnahmebefundes als Freitext" />
 </Observation>
