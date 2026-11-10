@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Observation xmlns="http://hl7.org/fhir">
-    <!--
-    Author: 
-    Datum:  
 
-    Die vorliegende Beispiel Datei .... dient der Validierung 
-    der Datenaufnahme zu dem ......
-    
-    Zu beachten ist dabei ...
+<!--
+ Author: FMa / LSc
+ Datum: 10.11.2026
 
-    Durchzuführende Massnahmen:
-
-
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_Konsiliarbefunde_01.xml" dient der Validierung
+ folgenden Szenarios (Standardfall):
+ 
+ P: Maximalbefüllung einer Instanz Konsiliarbefund (Meta-Daten, Narrativ, Berichtsstatus, Befundtypklassifikation,
+    Observationprofiltyp, Referenz auf verunfallte Person, Zeitpunkt, Referenz auf behandelnden Arzt, Entlassbefund)
 -->
-    <id value="DGUV-ENLA-Bsp-Konsiliarbefunde" />
+
+<Observation xmlns="http://hl7.org/fhir">
+    <!--Meta-Daten-->
+    <id value="0a25be9c-af37-410b-bd43-6c7d3e1f1681" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Konsiliarbefunde" />
     </meta>
 
+    <!--Narrativ-->
     <text>
         <status value="generated"/>
         <div xmlns="http://www.w3.org/1999/xhtml">
-            <h1>Hier finden Sie ein Beispiel der Konsiliarbefunde einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+            <h1>Hier finden Sie das Beispiel für einen Konsiliarbefund der verunfallten Person.</h1>
         </div>
     </text>
 
-
-    <!-- Observation status -->
+    <!-- Berichtsstatus -->
     <status value="final" />
 
     <!-- Klassifikation des Befundtyps -->
@@ -38,7 +38,7 @@
         </coding>
     </category>
 
-    <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
+    <!-- Kennzeichnung des ENLA-Observationprofiltyps -->
     <code>
         <coding>
             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
@@ -47,21 +47,20 @@
         </coding>
     </code>
 
-    <!-- VersichertePerson Referenz -->
+    <!-- Referenz auf versicherte Person -->
     <subject>
-        <reference value="Patient/T37501234" />
+        <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
     </subject>
 
-    <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
+    <!-- Relevante(r) klinische(r) Zeit(Zeitraum) der Observation effective[x]-->
     <effectiveDateTime value="2025-09-30T09:30:00+02:00"/>
 
-    <!-- Behandelnde(-r) Ärtztin/Arzt-->
+    <!-- Behandelnde(-r) D-Ärztin/Arzt, Referenz auf Rolle -->
     <performer>
-        <reference value="urn:uuid:53192032-6365-4659-8cc2-f9a7df67a466"/>
+        <reference value="http://fhir.dguv.de/ENLA/PractitionerRole/93ad5198-d79b-4436-9e1e-aaa69acb2d08"/>
     </performer>
 
-
-    <!-- Befund Narrativ -->
-    <valueString value="Befundergebnis" />
+    <!-- Befund als Freitext -->
+    <valueString value="Inhalt des Konsiliarbefundes als Freitext" />
     
 </Observation>
