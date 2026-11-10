@@ -1,47 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <!--
  Author: FMa / LSc
- Datum: 18.06.2026
+ Datum: 10.11.2026
 
  Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_Unfallereignis_04.xml" dient der Validierung
  folgenden Szenarios:
+ 
  N: Ausgehend von Standardfall:
     Auslösung Constraint dguv-pflegeunfall-2 (also Pflegeunfall: nein und trotzdem Pflegekasse vorhanden)
 -->
 
 <Observation xmlns="http://hl7.org/fhir">
-  <id value="DGUV-ENLA-Bsp-Unfallereignis"/>
+  <!--Meta-Daten-->
+  <id value="08b39f82-9dbf-4315-92f5-5f0011d37a5c"/>
   <meta>
     <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Unfallereignis"/>
   </meta>
 
+  <!--Narrativ-->
   <text>
     <status value="generated"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
-      <h1>Hier finden Sie ein Beispiel der Unfallereignis einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+      <h1>Hier finden Sie das Beispiel eines Unfallereignisses.</h1>
     </div>
   </text> 
 
-
-  <!-- Pflegeunfall slicing -->
+  <!-- Pflegeunfall mit Pflegekasse -->
   <extension url="http://fhir.dguv.de/Basis/Extension/DGUV-Basis-EX-Pflegeunfall">
       <extension url="Pflegeunfall">
         <valueBoolean value="false"/>
       </extension>
       <extension url="Pflegekasse">
         <valueReference>
-          <reference value="Pflegekasse/123" />
-        </valueReference>
+          <reference value="http://fhir.dguv.de/ENLA/Organization/bf64ac16-926b-4082-968a-f7c088364b83" />
+        </valueReference>  
       </extension>
   </extension>
 
-  <!-- Aktenzeichen als Identifier -->
+  <!-- Aktenzeichen -->
   <identifier>
     <system value="http://fhir.dguv.de/Basis/NamingSystem/DGUV-Basis-NS-Aktenzeichen"/>
     <value value="BGV-AZ-2025/365" />
   </identifier>
 
-  <!-- Observation status -->
+  <!-- Berichtsstatus -->
   <status value="final"/>
 
   <!-- Beispiel Durchgangsarztverfahren  -->
@@ -55,18 +58,19 @@
 
   <!-- VersichertePerson Referenz -->
   <subject> 
-    <reference value="Farad_Rudi/T995030511" />
+    <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
   </subject>
 
-  <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
+  <!-- Relevante(r) klinische(r) Zeit(Zeitraum) der Observation effective[x]-->
   <effectiveDateTime value="2018-08-24T13:00:00+00:00"/>
 
-  <!-- Behandelnde(-r) Ärztin/Arzt-->
+  <!-- Behandelnde(-r) D-Ärztin/Arzt, Referenz auf Rolle -->
   <performer>
-    <reference value="urn:uuid:53192032-6365-4659-8cc2-f9a7df67a466"/>
+    <reference value="http://fhir.dguv.de/ENLA/PractitionerRole/93ad5198-d79b-4436-9e1e-aaa69acb2d08"/>
   </performer>
 
-  <!-- Unfallereignis Komponente -->
+  <!-- Komponenten des Unfallereignisses -->
+  <!-- Komponente "Unfallhergang" -->
   <component>
     <code>
       <coding>
@@ -75,10 +79,10 @@
         <display value="Unfallhergang"/>
       </coding>
     </code>
-    <valueString value="Der Versicherte ist auf dem Weg zum Sechstagerennen mit seinem Motorrad mit einer geschätzten Geschwindigkeit von 60 km/h gegen eine Leitplanke gefahren"/>
+    <valueString value="Der Versicherte ist auf dem Weg zum Sechstagerennen mit seinem Motorrad mit einer geschätzten Geschwindigkeit von 60 km/h gegen eine Leitplanke gefahren."/>
   </component>
 
-  <!-- Unfallereignis Komponente -->
+  <!-- Komponente "Beschwerden/Klagen" -->
   <component>
     <code>
       <coding>
@@ -90,7 +94,7 @@
     <valueString value="Starke Schmerzen rechter Oberschenkel, Gefühlsstörung im Fuss"/>
   </component>
 
-  <!-- Unfallereignis Komponente -->
+  <!-- Komponente "Ausgeübte Tätigkeit" -->
   <component>
     <code>
       <coding>
@@ -102,7 +106,7 @@
     <valueString value="Schrittmacher"/>
   </component>
 
-  <!-- Unfallereignis Komponente -->
+  <!-- Komponente "Beschäftigungsbeginn" -->
   <component>
     <code>
       <coding>
