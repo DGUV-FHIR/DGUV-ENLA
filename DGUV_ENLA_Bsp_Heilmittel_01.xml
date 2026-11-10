@@ -9,7 +9,7 @@
  
  P: Maximalbefüllung einer Instanz Heilmittel (Meta-Daten, Narrativ, Berichtsstatus, 
     Observationprofiltyp, Referenz auf verunfallte Person, Startzeit, Referenz auf behandelnden Arzt,
-    strukturierte Angabe des Heilmittels ggf. mit Verschreibungsvermerk, Freitextbeschreibung Heilmittel)
+    strukturierte Angabe des Heilmittels ggf. mit Verschreibungsvermerk (hier: verordnet), Freitextbeschreibung Heilmittel)
 -->
 
 <Observation xmlns="http://hl7.org/fhir">
