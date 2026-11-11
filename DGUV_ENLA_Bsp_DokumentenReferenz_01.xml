@@ -1,51 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <!--
-    Author: 
-    Datum:  
+ Author: FMa / LSc
+ Datum: 11.11.2026
 
-    Die vorliegende Beispiel Datei .... dient der Validierung 
-    der Datenaufnahme zu dem ......
-    
-    Zu beachten ist dabei ...
-
-    Durchzuführende Massnahmen:
-
-
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_DokumentenReferenz_01.xml" dient der Validierung
+ folgenden Szenarios (Standardfall):
+ 
+ P: Maximalbefüllung einer Instanz DokumentenReferenz (Meta-Daten, Narrativ, Dokumentenreferenzstatus,
+    Referenz auf verunfallte Person, Anhang)
 -->
+
 <DocumentReference xmlns="http://hl7.org/fhir">
+  <!--Meta-Daten-->
   <id value="c7b24835-f7b8-4480-a0fe-c0653d6c4050" />
   <meta>
     <profile value="http://fhir.dguv.de/ENLA/DocumentReference/DGUV-ENLA-PR-DokumentenReferenz"/>
   </meta>
 
+  <!--Narrativ-->
   <text>
     <status value="generated"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
-      <h1>Hier finden Sie ein Beispiel der DokumentenReferenz einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+      <h1>Hier finden Sie das Beispiel einer Dokumentenreferenz.</h1>
     </div>
   </text>
 
-
-  <!-- Dokumenten Referenz status -->
+  <!-- Status der Dokumentenreferenz -->
   <status value="current" />
 
-  <!-- VersichertePerson Referenz -->
+  <!-- Referenz auf versicherte Person -->
   <subject>
-    <reference value="urn:uuid:482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+    <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
   </subject>
 
-  <!-- Dokumenten Inhalt -->
+  <!-- Referenzierte Dokumente/Anhänge (erstellt mit KI-/MS CoPilot-Hilfe) -->
   <content>
-    <attachment> 
-        <!-- contentType value="application/hl7-v3+xml"/-->
-        <contentType value="application/pdf"/>
-        <language value="de-DE"/>
-        <data value="YWRzYWdzYWd2ZnNhdnggMzE0OTMxMGlyaW04NDI3Y29ub3o=" />
-        <url value="urn:uuid:c7b24835-f7b8-4480-a0fe-c0653d6c4050"/>
-        <size value="35"/> 
-        <hash value="01o2YC4YB+ZhsGrDmBp5ELEUzvY="/> 
-        <title value="Physical"/> 
-        <creation value="2005-12-24T09:35:00+11:00"/> 
-    </attachment> 
+    <attachment>
+      <!-- MIME-Typ des Anhangs -->
+      <contentType value="application/pdf"/>
+
+      <!-- Sprache des Dokuments -->
+      <language value="de-DE"/>
+
+      <!-- Beispielhafter Anhang als Base64-kodierter Inhalt; möglichst nur alternativ zum Attribut "url" -->
+      <data value="SGFsbG8sIGRpZXMgZXJzdGVsbHQgZWluZW4gYmVpc3BpZWxoYWZ0ZW4gQW5oYW5nLi4u"/>
+
+      <!-- Externe Referenz; möglichst nur alternativ zu Attribut "data"
+      <url value="https://beispiel.dguv.de/dokumente/Operationsbericht.pdf"/> -->
+
+      <!-- Größe des kodierten Dokuments in Bytes -->
+      <size value="51"/>
+
+      <!-- Hashwert des Anhangs zur Integritätsprüfung -->
+      <hash value="645Rw4MKaUi9J9gxDaT3V0Sh8GI="/>
+
+      <!-- z. B. ursprünglicher Dateiname -->
+      <title value="Operationsbericht.pdf"/>
+
+      <!-- Zeitpunkt der Dokumenterstellung -->
+      <creation value="2026-11-10T14:30:00+01:00"/>
+
+    </attachment>
   </content>
+  
 </DocumentReference>
