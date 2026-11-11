@@ -1,27 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-    Author: Friedhelm Matten
-    Datum:  01.10.2025
 
+<!--
+ Author: FMa / LSc
+ Datum: 11.11.2026
+
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_PrognoseWiederaufnahmeTaetigkeit_01.xml" dient der Validierung
+ folgenden Szenarios (Standardfall):
+ 
+ P: Maximalbefüllung einer Instanz PrognoseWiederaufnahmeTaetigkeit (Meta-Daten, Narrativ, Berichtsstatus,
+    Observationprofiltyp, Referenz auf verunfallte Person, Zeitpunkt, Referenz auf behandelnden Arzt, Prognose)
 -->
+
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="DGUV-ENLA-Bsp-PrognoseWiederaufnahmeTaetigkeit" />
+    <!--Meta-Daten-->
+    <id value="f8412800-04b9-446b-b83d-2d772af8099b" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-PrognoseWiederaufnahmeTaetigkeit" />
     </meta>
 
+    <!--Narrativ-->
     <text>
         <status value="generated"/>
         <div xmlns="http://www.w3.org/1999/xhtml">
-            <h1>Hier finden Sie ein Beispiel der PrognoseWiederaufnahmeTaetigkeit einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+            <h1>Hier finden Sie das Beispiel einer Prognose zur Wiederaufnahme der bisherigen Taetigkeit durch die verunfallte Person.</h1>
         </div>
     </text>
 
-
-    <!-- Observation status -->
+    <!-- Berichtsstatus -->
     <status value="final"/>
 
-    <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
+    <!-- Kennzeichnung des ENLA-Observationprofiltyps -->
     <code>
         <coding>
             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
@@ -30,19 +38,20 @@
         </coding>
     </code>
 
-    <!-- Referenz Versicherte Person -->
+    <!-- Referenz auf versicherte Person -->
     <subject>
-        <reference value="Patient/T37501234" />
+        <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
     </subject>
 
-    <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
+    <!-- Relevante(r) klinische(r) Zeit(Zeitraum) der Observation effective[x] -->
     <effectiveDateTime value="2025-09-30T09:30:00+02:00"/>
 
-    <!-- Behandelnde(-r) Ärtztin/Arzt-->
+    <!-- Behandelnde(-r) D-Ärztin/Arzt, Referenz auf Rolle -->
     <performer>
-        <reference value="DArzt/gh45434" />
+        <reference value="http://fhir.dguv.de/ENLA/PractitionerRole/93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
     </performer>
 
+    <!-- Prognose Wiederaufnahme bisheriger Tätigkeit -->
     <valueCodeableConcept>
         <coding>
             <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-PrognoseWiederaufnahmeTaetigkeit" />
