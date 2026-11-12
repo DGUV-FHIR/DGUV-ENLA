@@ -1,38 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <!--
  Author: LSc
- Datum: 08.06.2026
+ Datum: 12.11.2026
 
- Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_MedikationRezeptur_0.xml" dient der Validierung
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_MedikationRezeptur_01.xml" dient der Validierung
  folgenden Szenarios (Standardfall):
 
- P: Maximalbefüllung einer Instanz Medication - Rezeptur (Meta-Daten, Kennzeichnung als Rezeptur, Status, Hersteller, Abgabeform, Menge,
-    Bestandteile mit Wirkstofftyp, Bestandteil, Aktiv? und Stärke sowie Chargenangaben)
+ P: Maximalbefüllung einer Instanz MedikationRezeptur (Meta-Daten, Narrativ, Kennzeichnung als Verordnungskategorie "Rezeptur",
+    Status, Hersteller, Abgabeform, Menge, therap. aktiver Bestandteil mit Wirkstofftyp, nicht akt. Bestandteil, Stärke, Chargenangaben)
 -->
+
 <Medication xmlns="http://hl7.org/fhir">
 
   <!--Meta-Daten-->
-  <id value="medikationrezeptur-01"/>
+  <id value="347b8239-6420-4b3a-a873-6b62e1fa1b0f"/>
   <meta>
     <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationRezeptur"/>
   </meta>
 
-  <!--Medikamentencode-->
+  <!-- Narrativ -->
+  <text>
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+          <h1>Hier finden Sie das Beispiel der Beschreibung einer Medikation als Rezeptur für eine verunfallte Person.</h1>
+      </div>
+  </text>
+
+  <!-- Dokumentation der Medikation -->
   <code>
+    <!-- Kodierung der Verordnungskategorie -->
     <coding>
       <!--System-->
       <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type"/>
       <!--Code rezeptur-->
       <code value="rezeptur"/>
     </coding>
-    <!--Freitext-->
-    <text value="Individuell hergestellte Rezeptur"/>
+    <!-- Dokumentation der Rezeptur als Freitext -->
+    <text value="Hier steht eine freitextliche Beschreibung der Rezeptur."/>
   </code>
 
-  <!--Status-->
+  <!-- Status der Medikation -->
   <status value="active"/>
 
-  <!--Hersteller-->
+  <!-- Hersteller als Freitext -->
   <manufacturer>
     <display value="Beispiel Apotheke GmbH"/>
   </manufacturer>
@@ -49,7 +60,7 @@
   <!--Menge-->
   <amount>
     <numerator>
-      <value value="12"/>
+      <value value="12.37"/>
       <unit value="Gramm"/>
       <system value="http://unitsofmeasure.org"/>
       <code value="g"/>
@@ -62,7 +73,8 @@
     </denominator>
   </amount>
 
-  <!--Bestandteile-->
+  <!-- Informationen zu Bestandteilen (Rezeptur) -->
+  <!-- Therapeutisch wirksamer Bestandteil -->
   <ingredient>
 
     <!--Wirkstofftyp Extension-->
@@ -76,27 +88,29 @@
 
     <!--Bestandteil-->
     <itemCodeableConcept>
+      <!-- Kodierung des Bestandteils als ATC-Code -->
       <coding>
-        <!--ASK-Code optional aber erlaubt-->
-        <system value="http://fhir.de/CodeSystem/ask"/>
-        <code value="123456"/>
+        <system value="http://fhir.de/CodeSystem/bfarm/atc"/>
+        <code value="A10BA02"/>
+        <display value="Metformin"/>
       </coding>
-      <text value="Hydrocortison"/>
+      <!-- Beschreibung des Bestandteils als Freitext -->
+      <text value="Metformin zur Hemmung der Glucose-Neubildung (Gluconeogenese) in der Leber"/>
     </itemCodeableConcept>
 
-    <!--Aktiver Bestandteil Kennzeichnung-->
+    <!-- Kennzeichnung als im Sinne der Therapie wirksamer Bestandteil -->
     <isActive value="true"/>
 
     <!--Stärke-->
     <strength>
       <numerator>
-        <value value="1"/>
-        <unit value="Gramm"/>
+        <value value="1.37"/>
+        <unit value="Milligramm"/>
         <system value="http://unitsofmeasure.org"/>
-        <code value="g"/>
+        <code value="mg"/>
       </numerator>
       <denominator>
-        <value value="100"/>
+        <value value="1"/>
         <unit value="Gramm"/>
         <system value="http://unitsofmeasure.org"/>
         <code value="g"/>
@@ -105,8 +119,22 @@
 
   </ingredient>
 
-  <!--Chargeninformation-->
+  <!-- Therapeutisch nicht wirksamer Bestandteil -->
+  <ingredient>
+    <!--Bestandteil-->
+    <itemCodeableConcept>
+      <!-- Beschreibung des Bestandteils als Freitext -->
+      <text value="Mikrokristalline Cellulose (Füllmittel)"/>
+    </itemCodeableConcept>
+
+    <!-- Kennzeichnung als im Sinne der Therapie NICHT wirksamer Bestandteil -->
+    <isActive value="false"/>
+
+  </ingredient>
+
+  <!-- Angaben zur Charge -->
   <batch>
+  <!-- Chargennummer als Freitext -->
     <lotNumber value="CH123456"/>
   </batch>
 
