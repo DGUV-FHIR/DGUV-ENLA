@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <!--
-    Author: Friedhelm Matten
-    Datum:  09.10.2025
+ Author: FMa / LSc
+ Datum: 12.11.2026
 
-    Die vorliegende Beispiel Datei .... dient der Validierung 
-    der Datenaufnahme zu dem ......
-    
-    
-    Zu beachten ist dabei ...
-
-    Durchzuführende Massnahmen:
-
-
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_MedikationFreitext_01.xml" dient der Validierung
+ folgenden Szenarios (Standardfall):
+ 
+ P: Maximalbefüllung einer Instanz MedikationFreitext (Meta-Daten, Narrativ, Kennzeichnung als Verordnungskategorie "Freitext", Status, Abgabeform)
 -->
+
 <Medication xmlns="http://hl7.org/fhir">
-    <id value="DGUV-ENLA-Bsp-MedicationFreitext" />
+    <!-- Meta-Daten -->
+    <id value="4c88e3c8-821d-40eb-87fa-1e129b3ccace" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationFreitext" />
     </meta>
 
+    <!-- Narrativ -->
     <text>
         <status value="generated"/>
         <div xmlns="http://www.w3.org/1999/xhtml">
-            <h1>Hier finden Sie ein Beispiel des MedikationFreitextes einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+            <h1>Hier finden Sie das Beispiel einer freitextlichen Beschreibung der Medikation für eine verunfallte Person.</h1>
         </div>
     </text>
 
-
-    <!-- CodeableConcept mit (Frei-)textfeld -->
+    <!-- Dokumentation der Medikation -->
     <code>
+        <!-- Kodierung der Verordnungskategorie -->
         <coding>
             <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type"/>
             <code value="freitext"/>
-            <display value="Freitext-Medikation"/>
+            <display value="Freitext"/>
         </coding>
-        <text value="Hier steht ein Freitext zur Medikation"/>
+        <!-- Dokumentation verordneter Medikamente als Freitext -->
+        <text value="Hier steht eine freitextliche Beschreibung der Medikation."/>
     </code>
 
-    <!-- Medication Status-->
+    <!-- Status der Medikation -->
     <status value="active"/>
 
-    <!-- Form Freitext-->
+    <!-- Abgabe-/Darreichungsform als Freitext -->
     <form>
-        <text value="freitext" />
+        <text value="Hier steht eine freitextliche Beschreibung der Abgabe-/Darreichungsform der Medikation." />
     </form> 
 </Medication>
