@@ -1,76 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <!--
-    Author: 
-    Datum:  
+ Author: LSc
+ Datum: 12.11.2026
 
-    Die vorliegende Beispiel Datei .... dient der Validierung 
-    der Datenaufnahme zu dem ......
-    
-    Zu beachten ist dabei ...
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_MedikationsInformationen_01.xml" dient der Validierung
+ folgenden Szenarios (Standardfall):
 
-    Durchzuführende Massnahmen:
-
-
+ P: Maximalbefüllung einer Instanz MedikationsInformationen (Meta-Daten, Narrativ, Status, Medikation m. Referenz auf MedikatRezeptur,
+    Referenz auf verunfallte Person, 2 strukturierte und 1 Freitextdosierung)
 -->
+
 <MedicationStatement xmlns="http://hl7.org/fhir">
-    <id value="DGUV-ENLA-Bsp-MedikationsInformation" />
+    <!--Meta-Daten-->
+    <id value="cf72d600-1c4d-44bf-a8b3-ec100f1a4947" />
     <meta>
         <profile value="http://fhir.dguv.de/ENLA/MedicationStatement/DGUV-ENLA-PR-MedikationsInformation" />
     </meta>
 
+    <!-- Narrativ -->
     <text>
         <status value="generated"/>
         <div xmlns="http://www.w3.org/1999/xhtml">
-            <h1>Hier finden Sie ein Beispiel der MedikationsInformation einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+            <h1>Hier finden Sie das Beispiel einer MedikationsInformation für eine verunfallte Person mit Referenz auf MedikationRezeptur</h1>
         </div>
     </text>
 
-    <!-- Medikation status-->
+    <!-- Status der Medikationsinformation -->
     <status value="active" />
 
-    <!-- Referenz zum Medikation Arzneimittel -->
+    <!-- Referenz auf Medikation Rezeptur -->
     <medicationReference>
-        <reference value="Medication/MedikationArzneimittel"/>
+        <reference value="http://fhir.dguv.de/ENLA/Medication/347b8239-6420-4b3a-a873-6b62e1fa1b0f"/>
     </medicationReference>
 
-    <!-- Referenz zur Versicherten Person -->
+    <!-- Referenz auf versicherte Person -->
     <subject>
-        <reference value="Farad_Rudi/T995030511"/>     
+        <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>     
     </subject>
      
-    <!-- Dosage zum Medikation Arzneimittel -->
+    <!-- Dosierungen zur Medikation Rezeptur -->
+    <!-- 1. strukturierte Dosierung -->
     <dosage>
+        <!-- Kennzeichnung als strukturierte Dosierung -->
         <text value="Strukturierte Dosierung" />
+        <!-- Konkrete Anwendungshinweise für Patienten -->
+        <patientInstruction value="Die Einnahmehinweise bitte genau einhalten. Keine Selbstmedikation !" />
+
+        <!-- Zeit, wann Medikament verabreicht werden soll -->
         <timing>
             <code>
+                <!-- Kodierte Beschreibung der Zeitangaben -->
                 <coding>
                     <system value="http://hl7.org/fhir/event-timing" />
                     <version value="4.0.1" />
                     <code value="MORN" />
                     <display value="Morning">
                         <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-AnzeigenameDeutsch">
-                        <valueString value="Morgens" />
+                            <valueString value="Morgens" />
                         </extension>
                     </display>
                 </coding>
             </code>
         </timing>
+
+        <!-- Verabreichungsweg -->
         <route>
+            <!-- Kodierte Beschreibung des Verabreichungswegs -->
             <coding>
                     <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_Route_of_Administration_German" />
                     <version value="1.0.0" />
                     <code value="oral" />
                     <display value="oral" />
+                    <!-- <code value="26643006" />
+                    <display value="Oral route" /> Dieses Wertepaar stammt aus dem VS. Problem: VS-Binding widerspricht CS ??? -->
             </coding>
+            <!-- Freitextbeschreibung des Verabreichungswegs -->
+            <text value="In den Mund damit und dann runterschlucken!" />
         </route>
 
+        <!-- Menge des verabreichten Medikaments -->
         <doseAndRate>
             <doseQuantity>
-                <value value="500" />
-                <unit value="mg" />
+                <value value="2.5" />
                 <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BMP_DOSIEREINHEIT" />
-                <code value="mg" />
+                <code value="j" />
             </doseQuantity>
         </doseAndRate>
     </dosage>
+
+    <!-- 2. strukturierte Dosierung -->
+    <!-- NOCH IN ARBEIT !!! -->
+
+
+
+    <!-- Freitextlich beschriebene Dosierung -->
+    <dosage>
+        <!-- Freitextbeschreibung der Dosierung -->
+        <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-DosierungFreitext">
+            <valueString value="Hier steht die Freitextbeschreibung der Dosierung einer MedikationRezeptur." />
+        </extension>
+        <!-- Kennzeichnung als Freitext-Dosierung -->
+        <text value="Freitextliche Dosierung" />
+    </dosage>
+
 </MedicationStatement>
