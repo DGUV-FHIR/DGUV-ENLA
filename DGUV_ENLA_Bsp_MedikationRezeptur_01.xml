@@ -12,7 +12,6 @@
 -->
 
 <Medication xmlns="http://hl7.org/fhir">
-
   <!--Meta-Daten-->
   <id value="347b8239-6420-4b3a-a873-6b62e1fa1b0f"/>
   <meta>
