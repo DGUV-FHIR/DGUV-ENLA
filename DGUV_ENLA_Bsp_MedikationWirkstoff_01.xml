@@ -1,41 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <!--
-    Author: 
-    Datum:  
+ Author: FMa / LSc
+ Datum: 13.11.2026
 
-    Die vorliegende Beispiel Datei .... dient der Validierung 
-    der Datenaufnahme zu dem ......
-    
-    Zu beachten ist dabei ...
-
-    Durchzuführende Massnahmen:
-
-
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_MedikationWirkstoff_01.xml" dient der Validierung
+ folgenden Szenarios (Standardfall):
+ 
+ P: Maximalbefüllung einer Instanz MedikationWirkstoff (Meta-Daten, Narrativ, Kennzeichnung als Verordnungskategorie "Freitext", Status, Abgabeform)
 -->
+
 <Medication xmlns="http://hl7.org/fhir">
+  <!--Meta-Daten-->
   <id value="DGUV-ENLA-Bsp-MedikationWirkstoff" />
   <meta>
       <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationWirkstoff" />
   </meta>
 
+  <!-- Narrativ -->
   <text>
     <status value="generated"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
-      <h1>Hier finden Sie ein Beispiel der MedikationsInformation einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+      <h1>Hier finden Sie das Beispiel der Beschreibung einer Medikation als Wirkstoff für eine verunfallte Person.</h1>
     </div>
   </text>
 
-
+  <!-- Medikament/Wirkstoff in codierter Form -->
   <code>
+    <!-- PZN -->
     <coding>
-        <system value="http://fhir.de/CodeSystem/ifa/pzn" />
-        <code value="01162549" />
+      <system value="http://fhir.de/CodeSystem/ifa/pzn"/>
+      <code value="01162549"/>
+      <display value="PARACETAMOL 500 FAIR-MED"/>
     </coding>
-    <text value="Paracetamol 500 Fair-Med" />
+    <!-- ATC-DE -->
+    <coding>
+      <system value="http://fhir.de/CodeSystem/bfarm/atc"/>
+      <code value="N02BE01"/>
+      <display value="Paracetamol"/>
+    </coding>
   </code>
 
-  <!-- Medication status -->
+  <!-- Status der Medikation -->
   <status value="active"/>
+
+  <!--Abgabeform-->
+  <form>
+    <coding>
+      <system value="http://standardterms.edqm.eu"/>
+      <code value="11010"/>
+      <display value="Oral drops"/>
+    </coding>
+  </form>
+
+  <!--Menge-->
+  <amount>
+    <numerator>
+      <value value="2.67"/>
+      <unit value="Gramm"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="g"/>
+    </numerator>
+    <denominator>
+      <value value="1"/>
+      <unit value="kilogram"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="kg"/>
+    </denominator>
+  </amount>
+
+  <!-- Informationen zu Bestandteilen -->
+  <!-- Therapeutisch wirksamer Bestandteil -->
+
+
+
+
+
+
+
+
 
   <ingredient>
     <itemCodeableConcept>
@@ -49,6 +92,6 @@
   </ingredient>
 
   <batch>
-    <lotNumber value="1234"/>
+    <lotNumber value="DE-MU-2026-11"/>
   </batch>
 </Medication>
