@@ -2,13 +2,14 @@
 
 <!--
  Author: LSc
- Datum: 12.11.2026
+ Datum: 17.11.2026
 
  Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_MedikationRezeptur_01.xml" dient der Validierung
  folgenden Szenarios (Standardfall):
 
  P: Maximalbefüllung einer Instanz MedikationRezeptur (Meta-Daten, Narrativ, Kennzeichnung als Verordnungskategorie "Rezeptur",
-    Status, Hersteller, Abgabeform, Menge, therap. aktiver Bestandteil mit Wirkstofftyp, nicht akt. Bestandteil, Stärke, Chargenangaben)
+    Status, Hersteller, Abgabeform, Menge, therap. aktiver Bestandteil mit Wirkstofftyp, Referenz auf akt. Bestandteil,
+    nicht akt. Bestandteil, Stärke, Chargenangaben)
 -->
 
 <Medication xmlns="http://hl7.org/fhir">
@@ -118,9 +119,23 @@
 
   </ingredient>
 
+  <!-- Verweis (!) auf einen anderen therapeutisch wirksamen Bestandteil (hier: Wirkstoff) -->
+  <ingredient>
+    <!-- Bestandteil -->
+    <itemReference>
+      <!-- Referenz auf Bestandteil -->
+      <reference value="http://fhir.dguv.de/ENLA/Medication/8947dca1-69fd-4184-a55f-8f7f32b0a914"/>
+    </itemReference>
+
+    <!-- Kennzeichnung als im Sinne der Therapie wirksamer Bestandteil -->
+    <isActive value="true"/>
+
+  </ingredient>
+
+
   <!-- Therapeutisch nicht wirksamer Bestandteil -->
   <ingredient>
-    <!--Bestandteil-->
+    <!-- Bestandteil -->
     <itemCodeableConcept>
       <!-- Beschreibung des Bestandteils als Freitext -->
       <text value="Mikrokristalline Cellulose (Füllmittel)"/>
