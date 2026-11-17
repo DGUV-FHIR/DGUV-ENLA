@@ -4,7 +4,7 @@
  Author: LSc
  Datum: 12.11.2026
 
- Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_MedikationsInformationen_01.xml" dient der Validierung
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_MedikationsInformationen_02.xml" dient der Validierung
  folgenden Szenarios (Standardfall):
 
  P: Maximalbefüllung einer Instanz MedikationsInformationen (Meta-Daten, Narrativ, Status, Medikation m. Referenz auf MedikatRezeptur,
