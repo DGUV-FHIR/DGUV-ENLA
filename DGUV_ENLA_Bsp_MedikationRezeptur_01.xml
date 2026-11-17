@@ -8,8 +8,8 @@
  folgenden Szenarios (Standardfall):
 
  P: Maximalbefüllung einer Instanz MedikationRezeptur (Meta-Daten, Narrativ, Kennzeichnung als Verordnungskategorie "Rezeptur",
-    Status, Hersteller, Abgabeform, Menge, therap. aktiver Bestandteil mit Wirkstofftyp, Referenz auf akt. Bestandteil,
-    nicht akt. Bestandteil, Stärke, Chargenangaben)
+    Status, Hersteller, Abgabeform, Menge, therap. aktiver Bestandteil mit Wirkstofftyp/Wirkstoff/Stärke, Referenz auf akt. Bestandteil,
+    nicht akt. Bestandteil, Chargenangaben)
 -->
 
 <Medication xmlns="http://hl7.org/fhir">
@@ -29,7 +29,7 @@
 
   <!-- Dokumentation der Medikation -->
   <code>
-    <!-- Kodierung der Verordnungskategorie -->
+    <!-- Nutzung für Kodierung der Verordnungskategorie; Arzneimittel-/Medikamentdokumentation bei Rezeptur überflüssig -->
     <coding>
       <!--System-->
       <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type"/>
@@ -37,7 +37,7 @@
       <code value="rezeptur"/>
     </coding>
     <!-- Dokumentation der Rezeptur als Freitext -->
-    <text value="Hier steht eine freitextliche Beschreibung der Rezeptur."/>
+    <text value="Freitextliche Beschreibung der Rezeptur, d. h. der Zubereitungsweise."/>
   </code>
 
   <!-- Status der Medikation -->
@@ -131,7 +131,6 @@
     <isActive value="true"/>
 
   </ingredient>
-
 
   <!-- Therapeutisch nicht wirksamer Bestandteil -->
   <ingredient>
