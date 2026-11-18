@@ -104,15 +104,24 @@
     <element id="Practitioner.identifier:ZANR.type">
       <path value="Practitioner.identifier.type" />
       <short value="Kennzeichnung des Identifikators als lebenslange Zahnarztnummer" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://fhir.de/CodeSystem/identifier-type-de-basis" />
+        </coding>
+      </patternCodeableConcept>
       <mustSupport value="true" />
     </element>
     <element id="Practitioner.identifier:ZANR.type.coding">
       <path value="Practitioner.identifier.type.coding" />
+      <patternCoding>
+        <system value="http://fhir.de/CodeSystem/identifier-type-de-basis" />
+      </patternCoding>
       <mustSupport value="true" />
     </element>
     <element id="Practitioner.identifier:ZANR.type.coding.system">
       <path value="Practitioner.identifier.type.coding.system" />
       <short value="Menge der verfügbaren Identifikatortypen" />
+      <patternUri value="http://fhir.de/CodeSystem/identifier-type-de-basis" />
       <mustSupport value="true" />
     </element>
     <element id="Practitioner.identifier:ZANR.type.coding.code">
