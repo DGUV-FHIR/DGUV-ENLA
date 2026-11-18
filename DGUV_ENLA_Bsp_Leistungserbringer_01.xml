@@ -2,12 +2,12 @@
 
 <!--
  Author: FMa / LSc
- Datum: 11.11.2026
+ Datum: 18.11.2026
 
  Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_Leistungserbringer_01.xml" dient der Validierung
  folgenden Szenarios (Standardfall):
  
- P: Maximalbefüllung einer Instanz Leistungserbringer (Meta-Daten, Narrativ, Identifikatoren: LANR,( ZANR,) PRN,
+ P: Maximalbefüllung einer Instanz Leistungserbringer (Meta-Daten, Narrativ, Identifikatoren: LANR, ZANR, PRN,
     ausführlicher Name)
 -->
 
@@ -41,9 +41,9 @@
     </identifier>
 
     <!-- Zahnarztnummer -->
-    <!-- Macht noch Probleme, da im Profil DGUV_Basis/ENLA_PR_Leistungserbringer in identifier:ZANR.type.coding.system
-         ein falsches CodeSystem als Pattern eingetragen ist !!!
-         Ist: "http://terminology.hl7.org/CodeSystem/v2-0203", Soll: "http://fhir.de/CodeSystem/identifier-type-de-basis"
+    <!-- Noch abhaken lassen: Im Profil DGUV_Basis/ENLA_PR_Leistungserbringer/OPER_PR_Autor in identifier:ZANR.type.coding.system
+         ein falsches CodeSystem in Pattern austauschen (auf drei Ebenen) !!!
+         Ist: "http://terminology.hl7.org/CodeSystem/v2-0203", Soll: "http://fhir.de/CodeSystem/identifier-type-de-basis" -->
     <identifier> 
         <type>
             <coding>
@@ -54,7 +54,7 @@
         </type>
         <system value="http://fhir.de/sid/kzbv/zahnarztnummer" />
         <value value="987654311" />
-    </identifier> -->
+    </identifier>
 
     <!-- Telematik-ID -->
     <identifier> 
