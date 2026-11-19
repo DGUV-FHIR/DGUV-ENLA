@@ -50,6 +50,7 @@
 
   <!--Abgabeform-->
   <form>
+    <!--Abgabeform im EDQM-Format -->
     <coding>
       <system value="http://standardterms.edqm.eu"/>
       <code value="10504000"/>
