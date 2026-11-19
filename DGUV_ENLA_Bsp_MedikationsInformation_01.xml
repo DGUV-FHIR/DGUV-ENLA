@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ Author: LSc
+ Datum: 19.11.2026
+
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_MedikationsInformation_01.xml" dient der Validierung
+ folgenden Szenarios (Standardfall):
+
+ P: Maximalbefüllung einer Instanz MedikationsInformation (Meta-Daten, Narrativ, Status, Medikation m. Referenz auf MedikatArzneimittel,
+    Referenz auf verunfallte Person, 2 strukturierte und 1 Freitextdosierung)
+-->
+
+<MedicationStatement xmlns="http://hl7.org/fhir">
+    <!--Meta-Daten-->
+    <id value="cf72d600-1c4d-44bf-a8b3-ec100f1a4947" />
+    <meta>
+        <profile value="http://fhir.dguv.de/ENLA/MedicationStatement/DGUV-ENLA-PR-MedikationsInformation" />
+    </meta>
+
+    <!-- Narrativ -->
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <h1>Hier finden Sie das Beispiel einer MedikationsInformation für eine verunfallte Person mit Referenz auf MedikationArzneimittel</h1>
+        </div>
+    </text>
+
+    <!-- Status der Medikationsinformation -->
+    <status value="active" />
+
+    <!-- Referenz auf Medikation Wirkstoff -->
+    <medicationReference>
+        <reference value="http://fhir.dguv.de/ENLA/Medication/4b28cbef-80e7-4838-b15b-b2d9dfc4461b"/>
+    </medicationReference>
+
+    <!-- Referenz auf versicherte Person -->
+    <subject>
+        <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>     
+    </subject>
+     
+    <!-- Dosierungen zur Medikation Arzneimittel -->
+    <!-- 1. strukturierte Dosierung: spätnachmittags -->
+    <dosage>
+        <!-- Kennzeichnung als strukturierte Dosierung -->
+        <text value="Strukturierte Dosierung" />
+        <!-- Konkrete Anwendungshinweise für Patienten -->
+        <patientInstruction value="Die Einnahmehinweise zum Wirkstoff bitte genau einhalten. Keine Selbstmedikation !" />
+
+        <!-- Zeit, wann das Medikament verabreicht werden soll -->
+        <timing>
+            <code>
+                <!-- Kodierte Beschreibung der Zeitangaben -->
+                <coding>
+                    <system value="http://hl7.org/fhir/event-timing" />
+                    <version value="4.0.1" />
+                    <code value="AFT.late" />
+                    <display value="Late Afternoon">
+                        <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-AnzeigenameDeutsch">
+                            <valueString value="spätnachmittags" />
+                        </extension>
+                    </display>
+                </coding>
+            </code>
+        </timing>
+
+        <!-- Verabreichungsweg -->
+        <route>
+            <!-- Kodierte Beschreibung des Verabreichungswegs -->
+            <coding>
+                    <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_Route_of_Administration_German" />
+                    <version value="1.0.0" />
+                    <code value="intramuskulaer" />
+                    <display value="intramuskulär" />
+                    <!-- <code value="26643006" />
+                    <display value="Oral route" /> -->
+                    <!-- Das zweite Wertepaar stammt aus dem VS. Problem: VS-Binding widerspricht CS ??? s. auch bei 2. strukt. Dosierung -->
+            </coding>
+            <!-- Freitextbeschreibung des Verabreichungswegs -->
+            <text value="In den Muskel spritzen!" />
+        </route>
+
+        <!-- Menge des verabreichten Medikaments -->
+        <doseAndRate>
+            <doseQuantity>
+                <value value="17.9" />
+                <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BMP_DOSIEREINHEIT" />
+                <code value="b" />
+            </doseQuantity>
+        </doseAndRate>
+    </dosage>
+
+    <!-- 2. strukturierte Dosierung: frühabends -->
+    <dosage>
+        <!-- Kennzeichnung als strukturierte Dosierung -->
+        <text value="Strukturierte Dosierung" />
+        <!-- Konkrete Anwendungshinweise für Patienten -->
+        <patientInstruction value="Die Einnahmehinweise bitte besonders genau einhalten !" />
+
+        <!-- Zeit, wann das Medikament verabreicht werden soll -->
+        <timing>
+            <code>
+                <!-- Kodierte Beschreibung der Zeitangaben -->
+                <coding>
+                    <system value="http://hl7.org/fhir/event-timing" />
+                    <version value="4.0.1" />
+                    <code value="EVE.early" />
+                    <display value="Early Evening">
+                        <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-AnzeigenameDeutsch">
+                            <valueString value="frühabends" />
+                        </extension>
+                    </display>
+                </coding>
+            </code>
+        </timing>
+
+        <!-- Verabreichungsweg -->
+        <route>
+            <!-- Kodierte Beschreibung des Verabreichungswegs -->
+            <coding>
+                    <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_Route_of_Administration_German" />
+                    <version value="1.0.0" />
+                    <code value="nasal" />
+                    <display value="nasal" />
+            </coding>
+            <!-- Freitextbeschreibung des Verabreichungswegs -->
+            <text value="Zerreiben und dann schnupfen !" />
+        </route>
+
+        <!-- Menge des verabreichten Medikaments -->
+        <doseAndRate>
+            <doseQuantity>
+                <value value="4.5" />
+                <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BMP_DOSIEREINHEIT" />
+                <code value="8" />
+            </doseQuantity>
+        </doseAndRate>
+    </dosage>
+
+    <!-- Freitextlich beschriebene Dosierung -->
+    <dosage>
+        <!-- Freitextbeschreibung der Dosierung -->
+        <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-DosierungFreitext">
+            <valueString value="Freitextliche Dosierungsbeschreibung einer MedikationRezeptur z. B. mit Einnahmehinweisen, Zeiten, Verabreichungsweg, Mengen, ..." />
+        </extension>
+        <!-- Kennzeichnung als Freitext-Dosierung -->
+        <text value="Freitextliche Dosierung" />
+    </dosage>
+
+</MedicationStatement>
