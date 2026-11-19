@@ -2,7 +2,7 @@
 
 <!--
  Author: LSc
- Datum: 17.11.2026
+ Datum: 19.11.2026
 
  Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_MedikationRezeptur_01.xml" dient der Validierung
  folgenden Szenarios (Standardfall):
@@ -74,7 +74,7 @@
   </amount>
 
   <!-- Informationen zu Bestandteilen (Rezeptur) -->
-  <!-- Therapeutisch wirksamer Bestandteil -->
+  <!-- Therapeutisch wirksamer 1. Bestandteil -->
   <ingredient>
 
     <!--Wirkstofftyp Extension-->
@@ -119,7 +119,7 @@
 
   </ingredient>
 
-  <!-- Verweis (!) auf einen anderen therapeutisch wirksamen Bestandteil (hier: Wirkstoff) -->
+  <!-- Verweis (!) auf einen 2. therapeutisch wirksamen Bestandteil (hier: Wirkstoff) -->
   <ingredient>
     <!-- Bestandteil -->
     <itemReference>
@@ -132,7 +132,7 @@
 
   </ingredient>
 
-  <!-- Therapeutisch nicht wirksamer Bestandteil -->
+  <!-- Therapeutisch nicht wirksamer 3. Bestandteil -->
   <ingredient>
     <!-- Bestandteil -->
     <itemCodeableConcept>
