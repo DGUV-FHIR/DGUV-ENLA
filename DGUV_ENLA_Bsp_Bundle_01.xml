@@ -442,9 +442,10 @@
                             </coding>
                         </code>
                         <entry>
-                            <reference value="http://fhir.dguv.de/ENLA/Observation/b77a0cc9-62ff-47c5-96b5-a964f313490d" />
+                            <reference value="http://fhir.dguv.de/ENLA/Observation/8d018e14-21b7-4982-b26f-d3b4812f7a1f" />
                         </entry>
-                    </section>  <!-- Entlassmanagement [Hilfsmittel] -->
+                    </section>
+                    <!-- Entlassmanagement [Hilfsmittel] -->
                     <section>
                         <code>
                             <coding>
@@ -455,6 +456,81 @@
                         </code>
                         <entry>
                             <reference value="http://fhir.dguv.de/ENLA/Observation/b77a0cc9-62ff-47c5-96b5-a964f313490d" />
+                        </entry>
+                    </section>
+                    <!-- Entlassmanagement [BesondereMassnahmen] -->
+                    <section>
+                        <code>
+                            <coding>
+                                <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                                <code value="BEMS" />
+                                <display value="Besondere Maßnahmen" />
+                            </coding>
+                        </code>
+                        <entry>
+                            <reference value="http://fhir.dguv.de/ENLA/Observation/3aecc20f-00e2-4d82-ae7b-a703118c9969" />
+                        </entry>
+                    </section>
+                    <!-- Entlassmanagement [PrognoseArbeitsfaehigkeit] -->
+                    <section>
+                        <code>
+                            <coding>
+                                <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                                <code value="PRAF" />
+                                <display value="Prognose Arbeitsfähigkeit" />
+                            </coding>
+                        </code>
+                        <!-- Entlassmanagement PrognoseArbeitsfaehigkeit [Arbeitsunfaehigkeit]-->
+                        <section>
+                            <code>
+                                <coding>
+                                    <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                                    <code value="ARUF" />
+                                    <display value="Arbeitsunfähigkeit" />
+                                </coding>
+                            </code>
+                            <entry>
+                                <reference value="http://fhir.dguv.de/ENLA/Observation/bbc56617-923d-4076-8bad-43cd861031c7" />
+                            </entry>
+                        </section>
+                        <!-- Entlassmanagement PrognoseArbeitsfaehigkeit [PrognoseWiederaufnahmeTaetigkeit]-->
+                        <section>
+                            <code>
+                                <coding>
+                                    <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                                    <code value="PRWT" />
+                                    <display value="Prognose Wiederaufnahme Tätigkeit" />
+                                </coding>
+                            </code>
+                            <entry>
+                                <reference value="http://fhir.dguv.de/ENLA/Observation/f8412800-04b9-446b-b83d-2d772af8099b" />
+                            </entry>
+                        </section>
+                        <!-- Entlassmanagement PrognoseArbeitsfaehigkeit [StufenweiseWiedereingliederung]-->
+                        <section>
+                            <code>
+                                <coding>
+                                    <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                                    <code value="STWG" />
+                                    <display value="Stufenweise Wiedereingliederung" />
+                                </coding>
+                            </code>
+                            <entry>
+                                <reference value="http://fhir.dguv.de/ENLA/Observation/e04aaff2-34c7-4dfa-80cf-b3c5d5a03058" />
+                            </entry>
+                        </section>
+                    </section>
+                    <!-- Entlassmanagement [WeiterbehandelnderArzt] -->
+                    <section>
+                        <code>
+                            <coding>
+                                <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                                <code value="WBAR" />
+                                <display value="Weiterbehandelnder Arzt" />
+                            </coding>
+                        </code>
+                        <entry>
+                            <reference value="http://fhir.dguv.de/ENLA/PractitionerRole/ebd25191-272a-4a2f-9b52-8733963b32b8" />
                         </entry>
                     </section>
                 </section>
@@ -1359,7 +1435,7 @@
                             <coding>
                                 <system value="http://fhir.de/CodeSystem/bfarm/ops" />
                                 <code value="1-203.1" />
-                                <display value="Invasive Funktionsdiagnostik des Nervensystems: Mit Stimulationselektroden, spinal;Invasive Funktionsdiagnostik des Nervensystems;Mit Stimulationselektroden, spinal" />
+                                <display value="Invasive Funktionsdiagnostik des Nervensystems: Mit Stimulationselektroden, spinal" />
                             </coding>
                         </valueCodeableConcept>
                     </extension>
@@ -1369,7 +1445,7 @@
                             <coding>
                                 <system value="http://fhir.de/CodeSystem/bfarm/ops" />
                                 <code value="1-20a.20" />
-                                <display value="Andere neurophysiologische Untersuchungen: Neurologische Untersuchung bei Bewegungsstörungen: Untersuchung der Pharmakosensitivität mit quantitativer Testung;Andere neurophysiologische Untersuchungen;Neurologische Untersuchung bei Bewegungsstörungen;Untersuchung der Pharmakosensitivität mit quantitativer Testung" />
+                                <display value="Andere neurophysiologische Untersuchungen: Neurologische Untersuchung bei Bewegungsstörungen: Untersuchung der Pharmakosensitivität mit quantitativer Testung" />
                             </coding>
                         </valueCodeableConcept>
                     </extension>
@@ -1938,7 +2014,7 @@
             </Observation>
         </resource>
     </entry>
-    <!-- ======= ENTRY 24 — Heilmittel (Observation) — Herkunft: DGUV_ENLA_Bsp_ ======= -->
+    <!-- ======= ENTRY 24 — Hilfsmittel (Observation) — Herkunft: DGUV_ENLA_Bsp_ ======= -->
     <entry>
         <fullUrl value="http://fhir.dguv.de/ENLA/Observation/b77a0cc9-62ff-47c5-96b5-a964f313490d" />
         <resource>
@@ -1949,17 +2025,17 @@
                 </meta>
 
                 <text>
-                    <status value="generated"/>
+                    <status value="generated" />
                     <div xmlns="http://www.w3.org/1999/xhtml">
                         <h1>Hier finden Sie ein Beispiel der Hilfsmittel einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
                     </div>
                 </text>
 
                 <!-- Observation status-->
-                <status value="final"/>
+                <status value="final" />
 
                 <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
-                <code>  
+                <code>
                     <coding>
                         <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
                         <code value="HILFSM" />
@@ -1969,7 +2045,7 @@
 
                 <!-- Referenz zur versicherten Person-->
                 <subject>
-                    <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
+                    <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
                 </subject>
 
                 <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
@@ -1989,10 +2065,10 @@
                 </performer>
 
                 <!-- verordnete Hilfsmittel-->
-                <valueCodeableConcept>  
+                <valueCodeableConcept>
                     <coding>
                         <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-IstVerordnet">
-                            <valueBoolean value="true"/>
+                            <valueBoolean value="true" />
                         </extension>
                         <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Hilfsmittel" />
                         <code value="PHM" />
@@ -2002,4 +2078,312 @@
             </Observation>
         </resource>
     </entry>
+    <!-- ======= ENTRY 24 — BesondereMassnahmen (Observation) — Herkunft: DGUV_ENLA_Bsp_ ======= -->
+    <entry>
+        <fullUrl value="http://fhir.dguv.de/ENLA/Observation/3aecc20f-00e2-4d82-ae7b-a703118c9969" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="3aecc20f-00e2-4d82-ae7b-a703118c9969" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-BesondereMassnahmen" />
+                </meta>
+
+                <text>
+                    <status value="generated" />
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel der BesondereMassnahmen einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
+                <!-- Observation status -->
+                <status value="final" />
+
+                <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
+                <code>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+                        <code value="BM" />
+                        <display value="BesondereMaßnahmen" />
+                    </coding>
+                </code>
+
+                <!-- Versicherte Person -->
+                <subject>
+                    <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </subject>
+
+                <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
+                <effectiveTiming>
+                    <code>
+                        <coding>
+                            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-MassnahmenZeitpunkt" />
+                            <code value="Festzul" />
+                            <display value="Durch Weiterbehandler festzulegen" />
+                        </coding>
+                    </code>
+                </effectiveTiming>
+
+
+                <!-- Behandelnde(-r) Ärtztin/Arzt -->
+                <performer>
+                    <reference value="http://fhir.dguv.de/ENLA/Practitioner/93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
+                </performer>
+
+                <!-- Möglichkeit einen Freitext einzugeben -->
+                <valueString value="BesondereMassnahme" />
+            </Observation>
+        </resource>
+    </entry>
+    <!-- ======= ENTRY 25 — Arbeitsunfaehigkeit (Observation) — Herkunft: DGUV_ENLA_Bsp_ ======= -->
+    <entry>
+        <fullUrl value="http://fhir.dguv.de/ENLA/Observation/bbc56617-923d-4076-8bad-43cd861031c7" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="bbc56617-923d-4076-8bad-43cd861031c7" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Arbeitsunfaehigkeit" />
+                </meta>
+
+                <text>
+                    <status value="generated" />
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel der Arbeitsunfähigkeit einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
+                <!-- Observation status -->
+                <status value="final" />
+
+                <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
+                <code>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+                        <code value="AU" />
+                        <display value="Arbeitsunfähigkeit" />
+                    </coding>
+                </code>
+
+                <!-- VersichertePerson-->
+                <subject>
+                    <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </subject>
+
+                <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
+                <effectiveDateTime value="2025-07-03" />
+
+                <!-- Behandelnde(-r) Ärtztin/Arzt-->
+                <performer>
+                    <reference value="http://fhir.dguv.de/ENLA/Practitioner/93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
+                </performer>
+                <!-- Art der Arbeitsunfaehigkeit -->
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Arbeitsunfaehigkeit" />
+                        <code value="AUBIS" />
+                        <display value="Arbeitsunfähig bis" />
+                    </coding>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <!-- ======= ENTRY 25 — PrognoseWiederaufnahmeTaetigkeit (Observation) — Herkunft: DGUV_ENLA_Bsp_ ======= -->
+    <entry>
+        <fullUrl value="http://fhir.dguv.de/ENLA/Observation/f8412800-04b9-446b-b83d-2d772af8099b" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="f8412800-04b9-446b-b83d-2d772af8099b" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-PrognoseWiederaufnahmeTaetigkeit" />
+                </meta>
+
+                <text>
+                    <status value="generated" />
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel der PrognoseWiederaufnahmeTaetigkeit einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
+                <!-- Observation status -->
+                <status value="final" />
+
+                <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
+                <code>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+                        <code value="PT" />
+                        <display value="PrognoseWiederaufnahmeTätigkeit" />
+                    </coding>
+                </code>
+
+                <!-- Referenz Versicherte Person -->
+                <subject>
+                    <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </subject>
+
+                <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
+                <effectiveDateTime value="2025-09-30T09:30:00+02:00" />
+
+                <!-- Behandelnde(-r) Ärtztin/Arzt-->
+                <performer>
+                    <reference value="http://fhir.dguv.de/ENLA/Practitioner/93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
+                </performer>
+
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-PrognoseWiederaufnahmeTaetigkeit" />
+                        <code value="WANM" />
+                        <display value="Die bisherige Tätigkeit kann voraussichtlich nicht wiederaufgenommen werden." />
+                    </coding>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <!-- ======= ENTRY 25 — StufenweiseWiedereingliederung (Observation) — Herkunft: DGUV_ENLA_Bsp_ ======= -->
+    <entry>
+        <fullUrl value="http://fhir.dguv.de/ENLA/Observation/e04aaff2-34c7-4dfa-80cf-b3c5d5a03058" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="e04aaff2-34c7-4dfa-80cf-b3c5d5a03058" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-stufenweiseWiedereingliederung" />
+                </meta>
+
+                <text>
+                    <status value="generated" />
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel der stufenweiseWiedereingliederung einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
+                <!-- Observation status -->
+                <status value="final" />
+
+                <!-- Kennzeichnung des ENLA-Teilberichtsinhalts -->
+                <code>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+                        <code value="WE" />
+                        <display value="Wiedereingliederung" />
+                    </coding>
+                </code>
+
+                <!-- Referenz auf Versicherte Person -->
+                <subject>
+                    <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+                </subject>
+
+                <!-- Relevante klinische(-r) Zeit/Zeitraum der Observation effective[x]-->
+                <effectiveDateTime value="2025-09-30T09:30:00+02:00" />
+
+                <!-- Behandelnde(-r) Ärtztin/Arzt-->
+                <performer>
+                    <reference value="http://fhir.dguv.de/ENLA/Practitioner/93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
+                </performer>
+
+                <!-- Code-System mit Wiedereingliederungsvarianten -->
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-stufenweiseWiedereingliederung" />
+                        <code value="Ja" />
+                        <display value="Ja, stufenweise Wiedereingliederung erforderlich" />
+                    </coding>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+    <!-- ======= ENTRY 25 — WeiterbehandelnderArz (PractitionerRole) — Herkunft: DGUV_ENLA_Bsp_ ======= -->
+    <entry>
+        <fullUrl value="http://fhir.dguv.de/ENLA/PractitionerRole/ebd25191-272a-4a2f-9b52-8733963b32b8" />
+        <resource>
+            <PractitionerRole xmlns="http://hl7.org/fhir">
+                <id value="ebd25191-272a-4a2f-9b52-8733963b32b8" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/PractitionerRole/DGUV-ENLA-PR-WeiterbehandelnderArzt" />
+                </meta>
+
+                <text>
+                    <status value="generated" />
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel der WeiterbehandelnderArzt einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
+                <!-- Behandelnde(-r) Ärtztin/Arzt-->
+                <practitioner>
+                    <reference value="http://fhir.dguv.de/ENLA/Practitioner/xxx25191-272a-4a2f-9b52-8733963b32b8" />
+                    
+                    <!-- http://fhir.dguv.de/ENLA/Practitioner/53192032-6365-4659-8cc2-f9a7df67a466     -->
+                </practitioner>
+
+                <!-- Weiterbehandelnde Einrichtung-->
+                <organization>
+                    <reference value="http://fhir.dguv.de/ENLA/Organization/c9643334-ed27-4327-9eff-baff968982a0" />
+                </organization>
+
+                <!-- Rolle der Einrichtung-->
+                <code>
+                    <coding>
+                        <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_Base_Role_Care" />
+                        <version value="1.7.0" />
+                        <code value="FA" />
+                        <display value="Fachärztin/-arzt" />
+                    </coding>
+                </code>
+
+                <!-- KBV Fachgruppe -->
+                <specialty>
+                    <coding>
+                        <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BAR2_ARZTNRFACHGRUPPE" />
+                        <version value="1.03" />
+                        <code value="57" />
+                        <display value="Physikalische und Rehabilitative Medizin/Physiotherapie" />
+                    </coding>
+                </specialty>
+            </PractitionerRole>
+        </resource>
+    </entry>
+     <!-- ======= ENTRY 25 — WeiterbehandelnderArzt (Practitioner) — Herkunft: DGUV_ENLA_Bsp_ ======= -->
+    <entry>
+        <fullUrl value="http://fhir.dguv.de/ENLA/Practitioner/xxx25191-272a-4a2f-9b52-8733963b32b8" />
+        <resource>
+             <Practitioner xmlns="http://hl7.org/fhir">
+                <id value="xxx25191-272a-4a2f-9b52-8733963b32b8" />
+                <meta>
+                    <profile value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringer" />
+                </meta>
+
+                <text>
+                    <status value="generated" />
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <h1>Hier finden Sie ein Beispiel des Leistungserbringers einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+                    </div>
+                </text>
+
+                <identifier>
+                    <type>
+                        <coding>
+                            <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+                            <code value="LANR" />
+                            <display value="Lifelong physician number" />
+                        </coding>
+                    </type>
+                    <system value="https://fhir.kbv.de/NamingSystem/KBV_NS_Base_ANR" />
+                    <value value="123456799" />
+                </identifier>
+                <name>
+                    <use value="official" />
+                    <family value="MusteraerztinWeiterbehandelnderArzt">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+                            <valueString value="Musteraerztin14" />
+                        </extension>
+                    </family>
+                    <given value="Marta" />
+                    <prefix value="Dr.">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+                            <valueCode value="AC" />
+                        </extension>
+                    </prefix>
+                </name>
+            </Practitioner>
+        </resource></entry>
 </Bundle>

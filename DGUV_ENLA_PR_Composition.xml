@@ -1768,5 +1768,319 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Composition.section:Entlassmanagement.section:BesondereMassnahmen">
+      <path value="Composition.section.section" />
+      <sliceName value="BesondereMassnahmen" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:BesondereMassnahmen.code">
+      <path value="Composition.section.section.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:BesondereMassnahmen.code.coding">
+      <path value="Composition.section.section.code.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:BesondereMassnahmen.code.coding.system">
+      <path value="Composition.section.section.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:BesondereMassnahmen.code.coding.code">
+      <path value="Composition.section.section.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="BEMS" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:BesondereMassnahmen.code.coding.display">
+      <path value="Composition.section.section.code.coding.display" />
+      <min value="1" />
+      <fixedString value="Besondere Maßnahmen" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:BesondereMassnahmen.entry">
+      <path value="Composition.section.section.entry" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-BesondereMassnahmen" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:BesondereMassnahmen.entry.reference">
+      <path value="Composition.section.section.entry.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:PrognoseArbeitsfaehigkeit">
+      <path value="Composition.section.section" />
+      <sliceName value="PrognoseArbeitsfaehigkeit" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:PrognoseArbeitsfaehigkeit.code">
+      <path value="Composition.section.section.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:PrognoseArbeitsfaehigkeit.code.coding">
+      <path value="Composition.section.section.code.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:PrognoseArbeitsfaehigkeit.code.coding.system">
+      <path value="Composition.section.section.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:PrognoseArbeitsfaehigkeit.code.coding.code">
+      <path value="Composition.section.section.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="PRAF" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:PrognoseArbeitsfaehigkeit.code.coding.display">
+      <path value="Composition.section.section.code.coding.display" />
+      <min value="1" />
+      <fixedString value="Prognose Arbeitsfähigkeit" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:PrognoseArbeitsfaehigkeit.section">
+      <path value="Composition.section.section.section" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code.coding.code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="2" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:PrognoseArbeitsfaehigkeit.section:Arbeitsunfaehigkeit">
+      <path value="Composition.section.section.section" />
+      <sliceName value="Arbeitsunfaehigkeit" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:PrognoseArbeitsfaehigkeit.section:Arbeitsunfaehigkeit.code">
+      <path value="Composition.section.section.section.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:PrognoseArbeitsfaehigkeit.section:Arbeitsunfaehigkeit.code.coding">
+      <path value="Composition.section.section.section.code.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:PrognoseArbeitsfaehigkeit.section:Arbeitsunfaehigkeit.code.coding.system">
+      <path value="Composition.section.section.section.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:PrognoseArbeitsfaehigkeit.section:Arbeitsunfaehigkeit.code.coding.code">
+      <path value="Composition.section.section.section.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="ARUF" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:PrognoseArbeitsfaehigkeit.section:Arbeitsunfaehigkeit.code.coding.display">
+      <path value="Composition.section.section.section.code.coding.display" />
+      <min value="1" />
+      <fixedString value="Arbeitsunfähigkeit" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:PrognoseArbeitsfaehigkeit.section:Arbeitsunfaehigkeit.entry">
+      <path value="Composition.section.section.section.entry" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Arbeitsunfaehigkeit" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:PrognoseArbeitsfaehigkeit.section:Arbeitsunfaehigkeit.entry.reference">
+      <path value="Composition.section.section.section.entry.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:PrognoseArbeitsfaehigkeit.section:PrognoseWiederaufnahmeTaetigkeit">
+      <path value="Composition.section.section.section" />
+      <sliceName value="PrognoseWiederaufnahmeTaetigkeit" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:PrognoseArbeitsfaehigkeit.section:PrognoseWiederaufnahmeTaetigkeit.code">
+      <path value="Composition.section.section.section.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:PrognoseArbeitsfaehigkeit.section:PrognoseWiederaufnahmeTaetigkeit.code.coding">
+      <path value="Composition.section.section.section.code.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:PrognoseArbeitsfaehigkeit.section:PrognoseWiederaufnahmeTaetigkeit.code.coding.system">
+      <path value="Composition.section.section.section.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:PrognoseArbeitsfaehigkeit.section:PrognoseWiederaufnahmeTaetigkeit.code.coding.code">
+      <path value="Composition.section.section.section.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="PRWT" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:PrognoseArbeitsfaehigkeit.section:PrognoseWiederaufnahmeTaetigkeit.code.coding.display">
+      <path value="Composition.section.section.section.code.coding.display" />
+      <min value="1" />
+      <fixedString value="Prognose Wiederaufnahme Tätigkeit" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:PrognoseArbeitsfaehigkeit.section:PrognoseWiederaufnahmeTaetigkeit.entry">
+      <path value="Composition.section.section.section.entry" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-PrognoseWiederaufnahmeTaetigkeit" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:PrognoseArbeitsfaehigkeit.section:PrognoseWiederaufnahmeTaetigkeit.entry.reference">
+      <path value="Composition.section.section.section.entry.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:PrognoseArbeitsfaehigkeit.section:StufenweiseWiedereingliederung">
+      <path value="Composition.section.section.section" />
+      <sliceName value="StufenweiseWiedereingliederung" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:PrognoseArbeitsfaehigkeit.section:StufenweiseWiedereingliederung.code">
+      <path value="Composition.section.section.section.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:PrognoseArbeitsfaehigkeit.section:StufenweiseWiedereingliederung.code.coding">
+      <path value="Composition.section.section.section.code.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:PrognoseArbeitsfaehigkeit.section:StufenweiseWiedereingliederung.code.coding.system">
+      <path value="Composition.section.section.section.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:PrognoseArbeitsfaehigkeit.section:StufenweiseWiedereingliederung.code.coding.code">
+      <path value="Composition.section.section.section.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="STWG" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:PrognoseArbeitsfaehigkeit.section:StufenweiseWiedereingliederung.code.coding.display">
+      <path value="Composition.section.section.section.code.coding.display" />
+      <min value="1" />
+      <fixedString value="Stufenweise Wiedereingliederung" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:PrognoseArbeitsfaehigkeit.section:StufenweiseWiedereingliederung.entry">
+      <path value="Composition.section.section.section.entry" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-stufenweiseWiedereingliederung" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:PrognoseArbeitsfaehigkeit.section:StufenweiseWiedereingliederung.entry.reference">
+      <path value="Composition.section.section.section.entry.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:WeiterbehandelnderArzt">
+      <path value="Composition.section.section" />
+      <sliceName value="WeiterbehandelnderArzt" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:WeiterbehandelnderArzt.code">
+      <path value="Composition.section.section.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:WeiterbehandelnderArzt.code.coding">
+      <path value="Composition.section.section.code.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:WeiterbehandelnderArzt.code.coding.system">
+      <path value="Composition.section.section.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:WeiterbehandelnderArzt.code.coding.code">
+      <path value="Composition.section.section.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="WBAR" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:WeiterbehandelnderArzt.code.coding.display">
+      <path value="Composition.section.section.code.coding.display" />
+      <min value="1" />
+      <fixedString value="Weiterbehandelnder Arzt" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:WeiterbehandelnderArzt.entry">
+      <path value="Composition.section.section.entry" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.dguv.de/ENLA/PractitionerRole/DGUV-ENLA-PR-WeiterbehandelnderArzt" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:Entlassmanagement.section:WeiterbehandelnderArzt.entry.reference">
+      <path value="Composition.section.section.entry.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
   </differential>
 </StructureDefinition>

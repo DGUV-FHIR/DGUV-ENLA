@@ -419,9 +419,10 @@
                 </coding>
             </code>
             <entry>
-                <reference value="http://fhir.dguv.de/ENLA/Observation/b77a0cc9-62ff-47c5-96b5-a964f313490d" />
+                <reference value="http://fhir.dguv.de/ENLA/Observation/8d018e14-21b7-4982-b26f-d3b4812f7a1f" />
             </entry>
-        </section>  <!-- Entlassmanagement [Hilfsmittel] -->
+        </section>
+        <!-- Entlassmanagement [Hilfsmittel] -->
         <section>
             <code>
                 <coding>
@@ -433,6 +434,81 @@
             <entry>
                 <reference value="http://fhir.dguv.de/ENLA/Observation/b77a0cc9-62ff-47c5-96b5-a964f313490d" />
             </entry>
+        </section>
+        <!-- Entlassmanagement [BesondereMassnahmen] -->
+        <section>
+            <code>
+                <coding>
+                    <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                    <code value="BEMS" />
+                    <display value="Besondere Maßnahmen" />
+                </coding>
+            </code>
+            <entry>
+                <reference value="http://fhir.dguv.de/ENLA/Observation/3aecc20f-00e2-4d82-ae7b-a703118c9969" />
+            </entry>
+        </section>
+        <!-- Entlassmanagement [PrognoseArbeitsfaehigkeit] -->
+        <section>
+            <code>
+                <coding>
+                    <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                    <code value="PRAF" />
+                    <display value="Prognose Arbeitsfähigkeit" />
+                </coding>
+            </code>
+            <!-- Entlassmanagement PrognoseArbeitsfaehigkeit [Arbeitsunfaehigkeit]-->
+            <section>
+                <code>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                        <code value="ARUF" />
+                        <display value="Arbeitsunfähigkeit" />
+                    </coding>
+                </code>
+                <entry>
+                    <reference value="http://fhir.dguv.de/ENLA/Observation/bbc56617-923d-4076-8bad-43cd861031c7" />
+                </entry>
+            </section>
+            <!-- Entlassmanagement PrognoseArbeitsfaehigkeit [PrognoseWiederaufnahmeTaetigkeit]-->
+            <section>
+                <code>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                        <code value="PRWT" />
+                        <display value="Prognose Wiederaufnahme Tätigkeit" />
+                    </coding>
+                </code>
+                <entry>
+                    <reference value="http://fhir.dguv.de/ENLA/Observation/f8412800-04b9-446b-b83d-2d772af8099b" />
+                </entry>
+            </section>
+             <!-- Entlassmanagement PrognoseArbeitsfaehigkeit [StufenweiseWiedereingliederung]-->
+            <section>
+                <code>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                        <code value="STWG" />
+                        <display value="Stufenweise Wiedereingliederung" />
+                    </coding>
+                </code>
+                <entry>
+                    <reference value="http://fhir.dguv.de/ENLA/Observation/e04aaff2-34c7-4dfa-80cf-b3c5d5a03058" />
+                </entry>
+            </section>
+        </section>
+         <!-- Entlassmanagement [WeiterbehandelnderArzt] -->
+        <section>
+            <code>
+                    <coding>
+                        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-CompositionSections" />
+                        <code value="WBAR" />
+                        <display value="Weiterbehandelnder Arzt" />
+                    </coding>
+                </code>
+                <entry>
+                    <reference value="http://fhir.dguv.de/ENLA/PractitionerRole/ebd25191-272a-4a2f-9b52-8733963b32b8" />
+                </entry>
         </section>
     </section>
 </Composition>

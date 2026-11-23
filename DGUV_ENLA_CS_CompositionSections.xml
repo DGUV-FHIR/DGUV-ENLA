@@ -133,6 +133,10 @@
     <display value="Pflegekasse" />
   </concept>
   <concept>
+    <code value="PRAF" />
+    <display value="Prognose Arbeitsfähigkeit" />
+  </concept>
+  <concept>
     <code value="PRWT" />
     <display value="Prognose Wiederaufnahme Tätigkeit" />
   </concept>
