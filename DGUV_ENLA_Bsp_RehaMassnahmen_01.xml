@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ Author: FMa / LSc
+ Datum: 10.11.2026
+
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_RehaMassnahmen_01.xml" dient der Validierung
+ folgenden Szenarios (Standardfall):
+ 
+ P: Maximalbefüllung einer Instanz RehaMassnahme (Meta-Daten, Narrativ, Berichtsstatus, 
+    Observationprofiltyp, Referenz auf verunfallte Person, Startzeit, Referenz auf behandelnden Arzt,
+    strukturierte Angabe der Reha-Maßnahme ggf. mit Verschreibungsvermerk (hier: verordnet), Freitextbeschreibung Reha-Maßnahme)
+-->
+
+<Observation xmlns="http://hl7.org/fhir">
+    <!--Meta-Daten-->
+    <id value="0f9b10f1-b311-49e8-b395-608303bdaa2d" />
+    <meta>
+        <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-RehaMassnahmen" />
+    </meta>
+
+    <!--Narrativ-->
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <h1>Hier finden Sie ein Beispiel der RehaMassnahmen einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+        </div>
+    </text>
+
+    <!-- Berichtsstatus -->
+    <status value="final"/>
+
+    <!-- Kennzeichnung des ENLA-Observationprofiltyps -->
+    <code>  
+        <coding>
+            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+            <code value="RM" />
+            <display value="RehaMaßnahmen" />
+        </coding>
+    </code>
+
+    <!-- Referenz auf versicherte Person -->
+    <subject>
+        <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
+    </subject>
+
+    <!-- Anwendungsbeginn Reha-Maßnahme -->
+    <effectiveTiming>
+        <code>  
+            <coding>
+                <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-MassnahmenZeitpunkt" />
+                <code value="Azpkt" />
+                <display value="Anderer Zeitpunkt" />
+            </coding>
+        </code>
+    </effectiveTiming>
+
+    <!-- Behandelnde(-r) D-Ärztin/Arzt, Referenz auf Rolle -->
+    <performer>
+        <reference value="http://fhir.dguv.de/ENLA/PractitionerRole/93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
+    </performer>
+
+    <!-- Angaben zur Reha-Maßnahme -->
+    <valueCodeableConcept>  
+        <!-- Strukturierte Angabe einer Reha-Maßnahme (hier: verordnet) -->
+        <coding>
+                <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-IstVerordnet">
+                   <valueBoolean value="true"/>
+                </extension>
+            <!-- Reha-Maßnahmen-Beschreibung als Code -->
+            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-RehaMassnahmen" />
+            <code value="EAP" />
+            <display value="Erweiterte Ambulante Physiotherapie (EAP)" />
+        </coding>
+        <!-- Reha-Maßnahmen-Beschreibung als Freitext -->
+        <text value="Beschreibung der Reha-Massnahme als Freitext"/> 
+    </valueCodeableConcept>
+</Observation>

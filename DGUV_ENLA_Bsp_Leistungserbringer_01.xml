@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ Author: FMa / LSc
+ Datum: 18.11.2026
+
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_Leistungserbringer_01.xml" dient der Validierung
+ folgenden Szenarios (Standardfall):
+ 
+ P: Maximalbefüllung einer Instanz Leistungserbringer (Meta-Daten, Narrativ, Identifikatoren: LANR, ZANR, PRN,
+    ausführlicher Name)
+-->
+
+<Practitioner xmlns="http://hl7.org/fhir">
+    <!--Meta-Daten-->
+    <id value="53192032-6365-4659-8cc2-f9a7df67a466" />
+    <meta>
+        <profile value="http://fhir.dguv.de/ENLA/Practitioner/DGUV-ENLA-PR-Leistungserbringer"/> 
+    </meta>
+
+    <!--Narrativ-->
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <h1>Hier finden Sie das Beispiel eines Leistungserbringers, der sich um eine verunfallte Person kümmert.</h1>
+        </div>
+    </text>
+
+    <!-- Identifikatoren für die Person des Leistungserbringers -->
+    <!-- Lebenslange Arztnummer -->
+    <identifier> 
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+                <code value="LANR" />
+                <display value="Lifelong physician number" />
+            </coding>
+        </type>
+        <system value="https://fhir.kbv.de/NamingSystem/KBV_NS_Base_ANR" />
+        <value value="123456799" />
+    </identifier>
+
+    <!-- Zahnarztnummer -->
+    <!-- Noch abhaken lassen: Im Profil DGUV_Basis/ENLA_PR_Leistungserbringer/OPER_PR_Autor in identifier:ZANR.type.coding.system
+         ein falsches CodeSystem in Pattern austauschen (auf drei Ebenen) !!!
+         Ist: "http://terminology.hl7.org/CodeSystem/v2-0203", Soll: "http://fhir.de/CodeSystem/identifier-type-de-basis" -->
+    <identifier> 
+        <type>
+            <coding>
+                <system value="http://fhir.de/CodeSystem/identifier-type-de-basis" />
+                <code value="ZANR" />
+                <display value="Zahnarztnummer" />
+            </coding>
+        </type>
+        <system value="http://fhir.de/sid/kzbv/zahnarztnummer" />
+        <value value="987654311" />
+    </identifier>
+
+    <!-- Telematik-ID -->
+    <identifier> 
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+                <code value="PRN" />
+                <display value="Provider number" />
+            </coding>
+        </type>
+        <system value="https://gematik.de/fhir/sid/telematik-id" />
+        <value value="1-234567890123456789" />
+    </identifier>
+
+  <!-- Ausführlicher Name des Leistungserbringers -->
+  <name>
+    <use value="official" />
+
+    <!-- Nachname mit Ergänzungen -->
+    <family value="Dr. med. Baron zu Vorwald sen. FH. MdL">
+      <extension url="http://fhir.de/StructureDefinition/humanname-namenszusatz">
+        <valueString value="Baron" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+        <valueString value="Vorwald" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix">
+        <valueString value="zu" />
+      </extension>
+    </family>
+
+    <!-- Vorname -->
+    <given value="Waldemar" />
+
+    <!-- Akademischer Titel -->
+    <prefix value="Dr. med.">
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+        <valueCode value="AC" />
+      </extension>
+    </prefix>
+
+    <!-- Weitere Zusätze -->
+    <suffix value="sen." />
+    <suffix value="FH." />
+    <suffix value="MdL" />
+
+  </name>
+
+</Practitioner>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ Author: FMa / LSc
+ Datum: 10.11.2026
+
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_WeiterbehandelnderArzt_01.xml" dient der Validierung
+ folgenden Szenarios (Standardfall):
+ 
+ P: Maximalbefüllung einer Instanz WeiterbehandelnderArzt (Meta-Daten, Narrativ, Referenz auf Leistungserbringer (weiterbehandelnder Arzt),
+    Referenz auf weiterbehandelnde Organisation, Rolle des weiterbeh. Arztes in weiterbeh. Organisation, KBV-Fachgruppe des weiterbeh. Arztes,
+    Telefon-Nr., E-Mail)
+-->
+
+<PractitionerRole xmlns="http://hl7.org/fhir">
+    <!--Meta-Daten-->
+    <id value="ebd25191-272a-4a2f-9b52-8733963b32b8"/>
+    <meta>
+        <profile value="http://fhir.dguv.de/ENLA/PractitionerRole/DGUV-ENLA-PR-WeiterbehandelnderArzt" />
+    </meta>
+
+    <!--Narrativ-->
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+        <h1>Hier finden Sie das Beispiel eines die verunfallte Person weiterbehandelnden Arztes.</h1>
+        </div>
+    </text>
+
+    <!-- Referenz auf den Leistungserbringer mit der Rolle weiterbehandelnder Arzt -->
+    <practitioner>
+        <reference value="http://fhir.dguv.de/ENLA/Practitioner/53192032-6365-4659-8cc2-f9a7df67a466" />
+    </practitioner>
+
+    <!-- Referenz auf die weiterbehandelnde Organisation -->
+    <organization>
+        <reference value="http://fhir.dguv.de/ENLA/Organization/c9643334-ed27-4327-9eff-baff968982a0" />
+    </organization>
+
+    <!-- Rolle des weiterbeh. Arztes in der weiterbeh. Organisation -->
+    <code>
+        <coding>
+            <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_Base_Role_Care" />
+            <version value="1.7.0"/>
+            <code value="FA" />
+            <display value="Fachärztin/-arzt" />
+        </coding>
+    </code>
+
+    <!-- KBV-Fachgruppe des weiterbeh. Arztes -->
+    <specialty>
+        <coding>
+            <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BAR2_ARZTNRFACHGRUPPE" />
+            <version value="1.03"/>
+            <code value="57" />
+            <display value="Physikalische und Rehabilitative Medizin/Physiotherapie" />
+        </coding>
+    </specialty>
+
+    <!-- Kontaktdaten des weiterbehandelnden Arztes -->
+    <!-- Telefonnummer -->
+    <telecom>
+      <system value="phone"/>
+      <value value="0049177/00000000"/>
+    </telecom>
+    <!-- E-Mail -->
+    <telecom>
+      <system value="email"/>
+      <value value="dr.irgendwer@zweiteskrankenhaus.de"/>
+    </telecom>
+
+</PractitionerRole>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ Author: FMa / LSc
+ Datum: 10.11.2026
+
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_Behandlungsverlauf_01.xml" dient der Validierung
+ folgenden Szenarios (Standardfall):
+ 
+ P: Maximalbefüllung einer Instanz Behandlungsverlauf (Meta-Daten, Narrativ, Besonderheiten, Berichtsstatus, 
+    Observationprofiltyp, Referenz auf verunfallte Person, Zeitpunkt, Referenz auf behandelnden Arzt,
+    Behandlungsverlauf, Referenz auf OP-Bericht)
+-->
+
+<Observation xmlns="http://hl7.org/fhir">
+    <!--Meta-Daten-->
+    <id value="DGUV-ENLA-Bsp-Behandlungsverlauf" />
+    <meta>
+        <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Behandlungsverlauf" />
+    </meta>
+
+    <!--Narrativ-->
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <h1>Hier finden Sie ein Beispiel des Behandlungsverlauf einer verunfallten Person entsprechend des VersichertePerson-Profils der DGUV</h1>
+        </div>
+    </text>      
+
+    <!-- 2 Besonderheiten im Behandlungsverlauf -->
+    <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-Besonderheiten">
+        <valueString value="Komplikation" />
+    </extension>
+    <extension url="http://fhir.dguv.de/ENLA/Extension/DGUV-ENLA-EX-Besonderheiten">
+        <valueString value="Psychische Belastungssymtome nach dem Unfall" />
+    </extension>
+
+    <!-- Berichtsstatus -->
+    <status value="final"/>
+    
+    <!-- Kennzeichnung des ENLA-Observationprofiltyps -->
+    <code>
+        <coding>
+            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+            <code value="BV" />
+            <display value="Behandlungsverlauf" />
+        </coding>
+    </code>
+
+    <!-- Referenz auf versicherte Person -->
+    <subject>
+        <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+    </subject>
+
+    <!-- Relevante(r) klinische(r) Zeit(Zeitraum) der Observation effective[x]-->
+    <effectiveDateTime value="2025-09-30T09:30:00+02:00"/>
+
+    <!-- Behandelnde(-r) D-Ärztin/Arzt, Referenz auf Rolle -->
+    <performer>
+        <reference value="http://fhir.dguv.de/ENLA/PractitionerRole/93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
+    </performer>
+
+    <!-- Behandlungsverlauf als Freitext -->
+    <valueString value="Beschreibung des Behandlungsverlaufs als Freitext" />
+
+    <!-- Optional: Referenz auf OP-Bericht, falls vorhanden -->
+    <derivedFrom>
+        <reference value="http://fhir.dguv.de/ENLA/DocumentReference/c7b24835-f7b8-4480-a0fe-c0653d6c4050" />
+    </derivedFrom>
+
+</Observation>

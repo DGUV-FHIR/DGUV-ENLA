@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ Author: FMa / LSc
+ Datum: 10.11.2026
+
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_Entlassbefunde_01.xml" dient der Validierung
+ folgenden Szenarios (Standardfall):
+ 
+ P: Maximalbefüllung einer Instanz Entlassbefund (Meta-Daten, Narrativ, Berichtsstatus, Befundtypklassifikation,
+    Observationprofiltyp, Referenz auf verunfallte Person, Zeitpunkt, Referenz auf behandelnden Arzt, Entlassbefund)
+-->
+
+<Observation xmlns="http://hl7.org/fhir">
+    <!--Meta-Daten-->
+    <id value="4f518fd0-15dd-471a-ab4e-fe5ab3fe979e" />
+    <meta>
+        <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-Entlassbefunde" />
+    </meta>
+
+    <!--Narrativ-->
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <h1>Hier finden Sie das Beispiel für einen Entlassbefund der verunfallten Person.</h1>
+        </div>
+    </text>
+
+    <!-- Berichtsstatus -->
+    <status value="final" />
+
+    <!-- Klassifikation des Befundtyps -->
+    <category>
+        <coding>
+            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-BefundKategorie" />
+                <code value="vitalparameter" />
+                <display value="Vitalparameter" />
+        </coding>
+    </category>
+
+    <!-- Kennzeichnung des ENLA-Observationprofiltyps -->
+    <code>
+        <coding>
+            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+            <code value="Entlass" />
+            <display value="Entlassungsbefund" />
+        </coding>
+    </code>
+
+    <!-- Referenz auf versicherte Person -->
+    <subject>
+        <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+    </subject>
+
+    <!-- Relevante(r) klinische(r) Zeit(Zeitraum) der Observation effective[x]-->
+    <effectiveDateTime value="2025-09-30T09:30:00+02:00"/>
+
+    <!-- Behandelnde(-r) D-Ärztin/Arzt, Referenz auf Rolle -->
+    <performer>
+        <reference value="http://fhir.dguv.de/ENLA/PractitionerRole/93ad5198-d79b-4436-9e1e-aaa69acb2d08"/>
+    </performer>    
+
+    <!-- Befund als Freitext -->
+    <valueString value="Inhalt des Entlassbefundes als Freitext" />
+</Observation>

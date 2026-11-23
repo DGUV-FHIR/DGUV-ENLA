@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ Author: LSc
+ Datum: 09.11.2026
+
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_Aufenthaltsinformationen_03.xml" dient der Validierung
+ folgenden Szenarios:
+
+ P: Ausgehend von Standardfall:
+    Aufnahmeart: EB UND kein admitSource.text vorhanden (KEINE Constraintverletzung dguv-hospital-2)
+-->
+
+<Encounter xmlns="http://hl7.org/fhir">
+  <!-- Meta-Daten -->
+  <id value="a33633b7-ab47-4341-b4e9-c856bb5e5878"/>
+  <meta>
+    <profile value="http://fhir.dguv.de/ENLA/Encounter/DGUV-ENLA-PR-Aufenthaltsinformationen"/>
+  </meta>
+
+  <!-- Narrativ -->
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h1>Hier finden Sie ein Beispiel für stationäre Aufenthaltsinformationen entsprechend dem Profil Aufenthaltsinformationen der DGUV.</h1>
+    </div>
+  </text>
+
+  <!-- Fallnummer -->
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="VN"/>
+        <display value="Visit number"/>
+      </coding>
+    </type>
+    <system value="http://irgendwas.org/fhir/sid/fallnummer"/>
+    <value value="FALL-2026-0004711"/>
+  </identifier>
+
+  <!-- Status des Aufenthalts -->
+  <status value="finished"/>
+
+  <!-- Art des Aufenthalts -->
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+    <code value="IMP"/>
+    <display value="inpatient encounter"/>
+  </class>
+
+  <!-- Verweis auf die versicherte Person -->
+  <subject>
+    <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba"/>
+  </subject>
+
+  <!-- Aufenthaltszeitraum -->
+  <period>
+    <start value="2026-05-03"/>
+    <end value="2026-05-14"/>
+  </period>
+
+  <!-- Details zum stationären Aufenthalt -->
+  <hospitalization>
+    <!-- Aufnahmeart -->
+    <admitSource>
+      <coding>
+        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Aufnahmeart"/>
+        <code value="EB"/>
+        <display value="Erstbehandlung"/>
+      </coding>
+    </admitSource>
+
+    <!-- Entlassungs- oder Verlegungsgrund -->
+    <dischargeDisposition>
+      <coding>
+        <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-EntlassungsVerlegungsgrund"/>
+        <code value="01"/>
+        <display value="Behandlung regulär beendet"/>
+      </coding>
+      <text value="Entlassung in die häusliche Weiterbehandlung"/>
+    </dischargeDisposition>
+  </hospitalization>
+</Encounter>

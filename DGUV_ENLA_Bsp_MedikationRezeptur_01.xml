@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ Author: LSc
+ Datum: 19.11.2026
+
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_MedikationRezeptur_01.xml" dient der Validierung
+ folgenden Szenarios (Standardfall):
+
+ P: Maximalbefüllung einer Instanz MedikationRezeptur (Meta-Daten, Narrativ, Kennzeichnung als Verordnungskategorie "Rezeptur",
+    Status, Hersteller, Abgabeform, Menge, therap. aktiver Bestandteil mit Wirkstofftyp/Wirkstoff/Stärke, Referenz auf akt. Bestandteil,
+    nicht akt. Bestandteil, Chargenangaben)
+-->
+
+<Medication xmlns="http://hl7.org/fhir">
+  <!--Meta-Daten-->
+  <id value="347b8239-6420-4b3a-a873-6b62e1fa1b0f"/>
+  <meta>
+    <profile value="http://fhir.dguv.de/ENLA/Medication/DGUV-ENLA-PR-MedikationRezeptur"/>
+  </meta>
+
+  <!-- Narrativ -->
+  <text>
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+          <h1>Hier finden Sie das Beispiel der Beschreibung einer Medikation als Rezeptur für eine verunfallte Person.</h1>
+      </div>
+  </text>
+
+  <!-- Dokumentation der Medikation -->
+  <code>
+    <!-- Nutzung für Kodierung der Verordnungskategorie; Arzneimittel-/Medikamentdokumentation bei Rezeptur überflüssig -->
+    <coding>
+      <!--System-->
+      <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_ERP_Medication_Type"/>
+      <!--Code rezeptur-->
+      <code value="rezeptur"/>
+    </coding>
+    <!-- Dokumentation der Rezeptur als Freitext -->
+    <text value="Freitextliche Beschreibung der Rezeptur, d. h. der Zubereitungsweise."/>
+  </code>
+
+  <!-- Status der Medikation -->
+  <status value="active"/>
+
+  <!-- Hersteller als Freitext -->
+  <manufacturer>
+    <display value="Beispiel Apotheke GmbH"/>
+  </manufacturer>
+
+  <!--Abgabeform-->
+  <form>
+    <!--Abgabeform im EDQM-Format -->
+    <coding>
+      <system value="http://standardterms.edqm.eu"/>
+      <code value="10504000"/>
+      <display value="Ointment"/>
+    </coding>
+  </form>
+
+  <!--Menge-->
+  <amount>
+    <numerator>
+      <value value="12.37"/>
+      <unit value="Gramm"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="g"/>
+    </numerator>
+    <denominator>
+      <value value="1"/>
+      <unit value="kilogram"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="kg"/>
+    </denominator>
+  </amount>
+
+  <!-- Informationen zu Bestandteilen (Rezeptur) -->
+  <!-- Therapeutisch wirksamer 1. Bestandteil -->
+  <ingredient>
+
+    <!--Wirkstofftyp Extension-->
+    <extension url="https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstofftyp">
+      <valueCoding>
+        <system value="https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/CodeSystem/wirkstofftyp"/>
+        <code value="MIN"/>
+        <display value="multiple ingredients"/>
+      </valueCoding>
+    </extension>
+
+    <!--Bestandteil-->
+    <itemCodeableConcept>
+      <!-- Kodierung des Bestandteils als ATC-Code -->
+      <coding>
+        <system value="http://fhir.de/CodeSystem/bfarm/atc"/>
+        <code value="A10BA02"/>
+        <display value="Metformin"/>
+      </coding>
+      <!-- Beschreibung des Bestandteils als Freitext -->
+      <text value="Metformin zur Hemmung der Glucose-Neubildung (Gluconeogenese) in der Leber"/>
+    </itemCodeableConcept>
+
+    <!-- Kennzeichnung als im Sinne der Therapie wirksamer Bestandteil -->
+    <isActive value="true"/>
+
+    <!--Stärke-->
+    <strength>
+      <numerator>
+        <value value="1.37"/>
+        <unit value="Milligramm"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mg"/>
+      </numerator>
+      <denominator>
+        <value value="1"/>
+        <unit value="Gramm"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="g"/>
+      </denominator>
+    </strength>
+
+  </ingredient>
+
+  <!-- Verweis (!) auf einen 2. therapeutisch wirksamen Bestandteil (hier: Wirkstoff) -->
+  <ingredient>
+    <!-- Bestandteil -->
+    <itemReference>
+      <!-- Referenz auf Bestandteil -->
+      <reference value="http://fhir.dguv.de/ENLA/Medication/8947dca1-69fd-4184-a55f-8f7f32b0a914"/>
+    </itemReference>
+
+    <!-- Kennzeichnung als im Sinne der Therapie wirksamer Bestandteil -->
+    <isActive value="true"/>
+
+  </ingredient>
+
+  <!-- Therapeutisch nicht wirksamer 3. Bestandteil -->
+  <ingredient>
+    <!-- Bestandteil -->
+    <itemCodeableConcept>
+      <!-- Beschreibung des Bestandteils als Freitext -->
+      <text value="Mikrokristalline Cellulose (Füllmittel)"/>
+    </itemCodeableConcept>
+
+    <!-- Kennzeichnung als im Sinne der Therapie NICHT wirksamer Bestandteil -->
+    <isActive value="false"/>
+
+  </ingredient>
+
+  <!-- Angaben zur Charge -->
+  <batch>
+  <!-- Chargennummer als Freitext -->
+    <lotNumber value="CH123456"/>
+  </batch>
+
+</Medication>

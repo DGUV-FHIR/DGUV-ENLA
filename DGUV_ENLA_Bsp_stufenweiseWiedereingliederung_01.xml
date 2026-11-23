@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ Author: FMa / LSc
+ Datum: 11.11.2026
+
+ Die vorliegende Beispiel-Datei "DGUV_ENLA_Bsp_stufenweiseWiedereingliederung_01.xml" dient der Validierung
+ folgenden Szenarios (Standardfall):
+ 
+ P: Maximalbefüllung einer Instanz stufenweiseWiedereingliederung (Meta-Daten, Narrativ, Berichtsstatus,
+    Observationprofiltyp, Referenz auf verunfallte Person, Zeitpunkt, Referenz auf behandelnden Arzt, Wiedereingliederungsvariante)
+-->
+
+<Observation xmlns="http://hl7.org/fhir">
+    <!--Meta-Daten-->
+    <id value="e04aaff2-34c7-4dfa-80cf-b3c5d5a03058" />
+    <meta>
+        <profile value="http://fhir.dguv.de/ENLA/Observation/DGUV-ENLA-PR-stufenweiseWiedereingliederung" />
+    </meta>
+
+    <!--Narrativ-->
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <h1>Hier finden Sie das Beispiel der einer Variante der stufenweisen Wiedereingliederung einer verunfallten Person.</h1>
+        </div>
+    </text>    
+
+    <!-- Berichtsstatus -->
+    <status value="final"/>
+
+    <!-- Kennzeichnung des ENLA-Observationprofiltyps -->
+    <code>
+        <coding>
+            <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-Teilberichtsinhalt" />
+            <code value="WE" />
+            <display value="Wiedereingliederung" />
+        </coding>
+    </code>
+
+    <!-- Referenz auf versicherte Person -->
+    <subject>
+        <reference value="http://fhir.dguv.de/ENLA/Patient/482bb42d-a37b-45f7-8893-0abe669bd8ba" />
+    </subject>
+
+    <!-- Relevante(r) klinische(r) Zeit(Zeitraum) der Observation effective[x] -->
+    <effectiveDateTime value="2025-09-30T09:30:00+02:00"/>
+
+    <!-- Behandelnde(-r) D-Ärztin/Arzt, Referenz auf Rolle -->
+    <performer>
+        <reference value="http://fhir.dguv.de/ENLA/PractitionerRole/93ad5198-d79b-4436-9e1e-aaa69acb2d08" />
+    </performer>
+
+    <!-- Angabe einer Variante der stufenweisen Wiedereingliederung -->
+    <valueCodeableConcept>
+        <coding>
+                <system value="http://fhir.dguv.de/ENLA/CodeSystem/DGUV-ENLA-CS-stufenweiseWiedereingliederung" />
+                <code value="Ja" />
+                <display value="Ja, stufenweise Wiedereingliederung erforderlich" />
+        </coding>
+    </valueCodeableConcept>
+</Observation>
